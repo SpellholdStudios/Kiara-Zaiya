@@ -24,11 +24,30 @@ ALWAYS
     COPY ~Kiara-Zaiya/ids/spell.ids~ ~override/spell.ids~
   END
 
+
+		/* --------------------------------------------------------------------------------------------- *
+		 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
+		 *    No exception, everything needs to be converted                                             *
+		 *    setup.tra contains in game texts as well as installation texts and needs to be converted   *
+		 * --------------------------------------------------------------------------------------------- */
+		ACTION_DEFINE_ARRAY kz#noconvert BEGIN END
+		// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+		ACTION_DEFINE_ARRAY kz#reload BEGIN dialogs kzsetup END
+
+		LAF HANDLE_CHARSETS
+			INT_VAR
+				infer_charsets = 1
+			STR_VAR
+				tra_path = EVAL ~%MOD_FOLDER%/lang~
+				noconvert_array = kz#noconvert
+				reload_array = kz#reload
+		END
+
+
 END
-///////////////////////////////////////////////////////////////
 
 // AUTO_TRA tells WeiDU to use by default the TRA file having the same name as
-// dialog or script being compiled in the kiara-zaiya/%language% directory,
+// dialog or script being compiled in the kiara-zaiya/<language> directory,
 // where <language> is the name of the language selected by the user (second word
 // in the LANGUAGE definition below).
 // This removes the need to use COMPILE-USING directive for the COMPILE action
@@ -64,9 +83,9 @@ LANGUAGE ~Russian (Gingerrr & aerie.ru. Updated by Prowler)~
 /* ======================================= *
  *    Kiara-Zaiya mod  (main component)    *
  * ======================================= */
-BEGIN @1
+BEGIN @1 // ~Kiara-Zaiya for BG2 SOA~
 
-REQUIRE_FILE ~Data/25Dialog.bif~ @2
+REQUIRE_FILE ~Data/25Dialog.bif~ @2 // ~You do not appear to have Throne of Bhaal installed.~
 
 // Isaya : additional code for V1.6.1, retrieved from BG2Fixpack
 // Addition of STATE_REALLY_DEAD state, used by several scripts modified by Lollorian
@@ -588,9 +607,9 @@ APPEND ~interdia.2da~
 //INSTALL CUSTOM SOUNDSET FOR KIARA-ZAIYA
 ////////////////////////////////////////////////////////////////////////////////////
 
-BEGIN @150
+BEGIN @150 // ~Custom Kiara-Zaiya soundset (available separately).~
 
-REQUIRE_FILE ~Kiara-Zaiya\Sounds\Oggdec.exe~ @189
+REQUIRE_FILE ~Kiara-Zaiya\Sounds\Oggdec.exe~ @189 // ~You do not seem to have the custom soundset installed!!! It can be found separately on the Kiara-Zaiya website.~
 
 AT_EXIT ~Kiara-Zaiya\Sounds\Install.bat~
 AT_UNINSTALL ~Kiara-Zaiya\Sounds\Uninst.bat~
@@ -714,7 +733,7 @@ COPY ~Kiara-Zaiya\Creatures\Zaiya.cre~ ~override\Zaiya.cre~
 /////////////////////////////////////////////////////////////////////////////////////
 //ALTERNATE MONK HIGH LEVEL ABILITIES BY TG MAESTRO
 ////////////////////////////////////////////////////////////////////////////////////
-BEGIN @129
+BEGIN @129 // ~Alternate High level abilities by TG Maestro~
 
 //remove later
 
@@ -758,7 +777,7 @@ COPY ~Kiara-Zaiya\HLA\SOLAR01.spl~ ~override\SOLAR01.spl~
 ////////////////////////////////////////////////////////////////////////////////////
 //ORIGINAL AMARALIS BATTLE IN CHAPTER 2 AND 6
 ////////////////////////////////////////////////////////////////////////////////////
-BEGIN @143
+BEGIN @143 // ~Original Amaralis battles~
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
 COPY ~Kiara-Zaiya\Amaralis\C6HROTH.cre~ ~override\C6HROTH.cre~
@@ -796,7 +815,7 @@ END
 ////////////////////////////////////////////////////////////////////////////////////
 //TOUGHER VAMPKIA - MONK LEVEL 20, DOES LEVEL DRAIN AND HAS SOME OTHER UNDEAD POWERS
 ////////////////////////////////////////////////////////////////////////////////////
-BEGIN @261 /* ~Tougher Kiara vampire~ */
+BEGIN @261 // ~Tougher Kiara vampire~
 
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
@@ -809,7 +828,7 @@ COPY ~Kiara-Zaiya\VampKia\vampk3.itm~ ~override\Vampk3.itm~
 /////////////////////////////////////////////////////////////////////////////////////
 //Revised Suldallanessar: real tough
 ////////////////////////////////////////////////////////////////////////////////////
-BEGIN @262 /* ~Revised Suldalanessar~ */
+BEGIN @262 // ~Revised Suldalanessar~
 
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
@@ -860,7 +879,7 @@ COMPILE ~Kiara-Zaiya\Sulda\SUSCENE3.BAF~
 /////////////////////////////////////////////////////////////////////////////////////
 //JAO AND CO
 ////////////////////////////////////////////////////////////////////////////////////
-BEGIN @250
+BEGIN @250 // ~Jao and party for SOA: another tough fight~
 
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
@@ -892,7 +911,7 @@ Monk~ */
 /////////////////////////////////////////////////////////////////////////////////////
 //IMPROVED IRENICUS AT THE TREE OF LIFE
 ////////////////////////////////////////////////////////////////////////////////////
-BEGIN @260
+BEGIN @260 // ~Tougher Irenicus at the tree of life~
 
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
