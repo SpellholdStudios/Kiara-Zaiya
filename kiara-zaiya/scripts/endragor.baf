@@ -1,0 +1,11 @@
+IF
+  InParty("Kiara")  // ~Kiara~
+  Global("ENDRACREATE","AR1403",0)
+  Global("SPRITE_IS_DEADSHADEL","GLOBAL",1)
+  Global("JERLIAQUEST","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ENDRACREATE","AR1403",1)
+    CreateCreature("Endragor",[487.884],15)  // ~Endragor~
+END
+

@@ -1,0 +1,171 @@
+IF
+  InParty(Myself)
+  AreaCheck("AR5500")//amkethran
+  See(Player1)
+  Global("KZTOBBALTH","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KZTOBBALTH","LOCALS",1)
+    StartDialogNoSet([PC])
+END
+
+
+//Make the romance active
+IF
+  Global("ExpLoveTalk","LOCALS",0)
+  Alignment("Kiara",LAWFUL_NEUTRAL)
+  GlobalGT("LoveTalk","LOCALS",46)
+  Global("KiaraRomanceActive","GLOBAL",2)  
+  InParty(Myself)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("KiaraRomance","GLOBAL",300)
+    SetGlobal("ExpLoveTalk","LOCALS",1)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("KiaraRomance","GLOBAL")
+  Global("KiaraRomanceActive","GLOBAL",2)
+  PartyRested()
+  Detect(Player1)
+  CombatCounter(0)
+  OR(5)
+    Global("ExpLoveTalk","LOCALS",1)
+    Global("ExpLoveTalk","LOCALS",5)
+    Global("ExpLoveTalk","LOCALS",9)
+    Global("ExpLoveTalk","LOCALS",15)
+    Global("ExpLoveTalk","LOCALS",17)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("KiaraRomance","GLOBAL",10)
+END
+
+
+//KIARA
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("KiaraRomance","GLOBAL")
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  !AreaType(DUNGEON)
+  See(Player1)
+  !See([ENEMY])
+  !Range([NEUTRAL],10)
+  CombatCounter(0)
+//3 is reserved for Osan
+//7 is reserved to Saradush
+//11 is before resting
+//13 is after rest
+//17 happens after the challenges
+  OR(4)
+    Global("ExpLoveTalk","LOCALS",1)
+    Global("ExpLoveTalk","LOCALS",5)
+    Global("ExpLoveTalk","LOCALS",9)
+    Global("ExpLoveTalk","LOCALS",15)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ExpLoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+//Osan
+IF
+  Global("LovedOne","GLOBAL",16)
+  Global("ExpLoveTalk","LOCALS",3)
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  Detect(Player1)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ExpLoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+//saradush talk
+IF
+  Global("SaradushSacked","GLOBAL",1)
+  Global("ExpLoveTalk","LOCALS",7)
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  Detect(Player1)
+  PartyRested()
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ExpLoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+//PICNIC
+IF
+  Global("ExpLoveTalk","LOCALS",9)
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  Detect(Player1)
+  AreaType(Outdoor)
+  PartyRested()
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ExpLoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+//After the rest
+IF
+  Global("ExpLoveTalk","LOCALS",13)
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  See(Player1)
+  PartyRested()
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ExpLoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+
+//After the last challenge
+IF
+  Global("ChallengesDone","GLOBAL",1)
+  Global("ExpLoveTalk","LOCALS",17)
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  See(Player1)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ExpLoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("KiaraRomance","GLOBAL")
+//12 is coded in the Kiar25D baf file as happens before rest
+//The Bkiar25.d file takes care of incrementation so, script
+//reacts after rest
+  OR(8)
+    Global("ExpLoveTalk","LOCALS",2)
+    Global("ExpLoveTalk","LOCALS",4)
+    Global("ExpLoveTalk","LOCALS",6)
+    Global("ExpLoveTalk","LOCALS",8)
+    Global("ExpLoveTalk","LOCALS",10)
+    Global("ExpLoveTalk","LOCALS",12)
+    Global("ExpLoveTalk","LOCALS",14)
+    Global("ExpLoveTalk","LOCALS",16)
+  THEN
+  RESPONSE #100
+    IncrementGlobal("ExpLoveTalk","LOCALS",1)
+    RealSetGlobalTimer("KiaraRomance","GLOBAL",2400)
+END

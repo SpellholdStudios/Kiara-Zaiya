@@ -1,0 +1,25 @@
+IF
+  InParty(Myself)
+  Global("ZAIMISS","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ZAIMISS","GLOBAL",2)
+    DestroyItem("Misc84")  // ~Boo~
+    ApplySpellRES("BooCha",Myself)  // <Invalid Strref -1>
+    SetGlobal("KiaMinsc","GLOBAL",1)
+    RealSetGlobalTimer("KiaMinscT","GLOBAL",300)
+    StartDialogNoSet([PC])
+END
+
+IF
+  InParty(Myself)
+  Global("ZAIMISS","GLOBAL",3)
+  GlobalTimerExpired("BOOCHA","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("ZAIMISS","GLOBAL",5)
+    DestroyItem("Misc7a")  // ~Chicken~
+    ApplySpellRES("BooCha1",Myself)  // <Invalid Strref -1>
+    Wait(1)
+END
+

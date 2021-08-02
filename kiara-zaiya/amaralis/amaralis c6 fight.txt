@@ -1,0 +1,40 @@
+13 kensai / 18 level mage
+
+Buffing when entering the area (Amaralis must have them memorized):
+1. Protection from magic energy  Lvl (6)
+1. Protection from acid (lvl 5)
+1. Protection from electricity (Lvl 5)
+1. Protection from cold (lvl 3)
+1. Protection from fire (lvl 3)
+1. Spirit Armor (lvl 4)
+1. Stoneskins (Lvl 4)
+
+Equipment:
+5 scrolls of protection from magic weapons
+2 scrolls of spell trap
+2 scrolls of death fog
+Ring of wizardry (extra 5-6-7)
+1 divine sword: immunity to divination for 1 hour every day +2 AC + 25% MDR
+
+Does not need to be memorized prior casting so not in his spellbook:
+Chain contingency: Spell trap/Spell Immunity Divination/Protection from magic energy
+Minor Contingency: Improved Invisibility 
+Sequencer defensive (3 LVL 6 spells at 18): Spell immunity conjuration/Fire shield red/Protection from magic weapons
+Spell Trigger (3 LVL 6 spells):  Dispel magic + greater malison + chaos 
+
+LVL        MEM	SPELLS
+9 	= 1	 = wail of the banshee (time stop would have been a killer)
+8 	= 3 	 = 2 ABDH + 1 Pierce shield
+7 	= 3+1 	 = 2 Rubay ray of reversal + mordenkainen sword + finger of death 
+6 	= 3+1	 = 1 True sight + 2 improved haste  + 1 protection from magic energy
+5 	= 5+1	 = 2 breach + 1 chaos + 1 spell immunity + 1 protection from acid + 1 protection from electricity
+4 	= 5	 = 2 stoneskins + 1 spirit armor + 2 greater invisibility (all defensive)
+3 	= 5 	 = 1 protection from fire + 1 protection from cold + 1 flame arrow + 1 dispel magic +1 slow
+2 	= 5 	 = 4 mirror image + 1 Vocalize
+1 	= 5	 = 5 magic missiles (nothing much here)
+
+Innates:
+4 kai
+
+
+Currently spells are cast in reverse 

@@ -1,0 +1,225 @@
+IF
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+   Enemy()
+END
+
+IF
+  GlobalTimerExpired("KZASSRestT","LOCALS")
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,CLERIC_HEAL)
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep1","LOCALS",0)
+    SetGlobal("Prep2","LOCALS",0)
+    SetGlobal("SpellTriger","LOCALS",0)
+    Rest()
+    Wait(1)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See([PC])
+  Global("KZNinjaTalk","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KZNinjaTalk","LOCALS",1)
+    DisplayStringHead(Myself,99999)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Or(2)
+    See([PC])
+    Detect([PC])
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep","LOCALS",1)
+    SetGlobalTimer("KZASSRestT","GLOBAL",SIX_HOURS)
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
+    ReallyForceSpell(Myself,WIZARD_SPELL_SHIELD)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_FIRE)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_ACID)
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("KZASSRestT","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Or(2)
+    See([PC])
+    Detect([PC])
+  Global("Prep1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep1","LOCALS",1)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+// Isaya : removed, two times the same timer
+//    SetGlobalTimer("CASTSPELL","LOCALS",1)
+    ReallyForceSpell(Myself,WIZARD_SPELL_IMMUNITY_DIVINATION) 
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS) 
+    DisplayString(Myself,26328)
+    SetInterrupt(FALSE)
+    UseItem("Potn10",Myself)  // ~Potion of Invisibility~
+    UseItem("Potn06",Myself)  // ~Potion of cloud giant strength~
+    UseItem("SCRL9L",Myself) //Spell trap
+    SetInterrupt(TRUE)          
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("MAGICW","LOCALS")
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  CheckStat(Myself,0,185)
+  HaveSpell(WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  !Range(LastSeenBy(Myself),8)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    SetGlobalTimer("MAGICW","LOCALS",FOUR_ROUNDS)
+    Spell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+END
+
+IF
+  !GlobalTimerNotExpired("CASTSPELL","LOCALS")
+  !StateCheck(Myself,STATE_INVISIBLE)
+  HasItem("Potn10",Myself)  // ~Potion of Invisibility~
+  Range(NearestEnemyOf(Myself),8)
+THEN
+  RESPONSE #100
+    UseItem("Potn10",Myself)  // ~Potion of Invisibility~
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    Spell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)  
+END
+
+IF
+    !GlobalTimerExpired("CASTSPELL","LOCALS")
+    Allegiance(Myself,ENEMY)
+    StateCheck(Myself,STATE_INVISIBLE)
+    Or(5)
+    See(NearestEnemyOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+    OR(2)
+	 CheckStat(LastSeenBy(Myself),0,STONESKINS)
+    CheckStatLT(LastSeenBy(Myself),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  THEN 
+    RESPONSE #100
+      MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+    !GlobalTimerExpired("KZASSRestT","LOCALS")
+    GlobalTimerExpired("CASTSPELL","LOCALS")
+    Allegiance(Myself,ENEMY)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    Global("SpellTriger","LOCALS",0)
+  THEN 
+    RESPONSE #100
+      SetGlobal("SpellTriger","LOCALS",1)
+      DisplayString(Myself,39968)    
+      ReallyForceSpell(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]),WIZARD_GREATER_MALISON)
+      Wait(1)
+      ReallyForceSpell(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]),WIZARD_BLINDNESS)
+      ReallyForceSpell(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]),WIZARD_HOLD_PERSON)
+END
+
+IF
+    !GlobalTimerExpired("KZASSRestT","LOCALS")
+    GlobalTimerExpired("CASTSPELL","LOCALS")
+    Allegiance(Myself,ENEMY)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    OR(2)
+	 CheckStatGT(NearestEnemyOfType([PC.0.0.MAGE_ALL]),0,STONESKINS)
+       CheckStatGT(NearestEnemyOfType([PC.0.0.MAGE_ALL]),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    HaveSpell(WIZARD_BREACH)    
+  THEN 
+    RESPONSE #100
+    Spell(NearestEnemyOfType([PC.0.0.MAGE_ALL]),WIZARD_BREACH)
+END
+
+IF
+  Global("Prep","LOCALS",1)
+  OR(5)
+    See(NearestEnemyOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+    Range(LastSeenBy(Myself),8)
+    StateCheck(Myself,STATE_INVISIBLE)
+  !CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReavaluate(LastSeenBy(Myself),15)
+END
+
+IF
+  Global("Prep","LOCALS",1)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  OR(5)
+    See(NearestEnemyOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+  Global("Prep","LOCALS",1)
+  !Range(LastSeenBy(Myself),8)
+  !HasItem("shld24",LastSeenBy(Myself))
+THEN
+  RESPONSE #100
+    EquipRanged()
+    AttackReavaluate(LastSeenBy(Myself),15)
+END
+
+IF
+  Global("Prep","LOCALS",1)
+  OR(3)
+    See(NearestEnemyOf(Myself))
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+    StateCheck(Myself,STATE_INVISIBLE)
+    Range(LastSeenBy(Myself),8)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReavaluate(LastSeenBy(Myself),15)
+END
+
+IF
+  Global("Prep","LOCALS",1)
+  See(NearestEnemyOf(Myself))
+  !Range(LastAttackerOf(Myself),8)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    EquipRanged()
+    AttackReavaluate(LastSeenBy(Myself),15)
+END
+
+IF
+  Global("Prep","LOCALS",1)
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself),8)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReavaluate(LastSeenBy(Myself),15)
+END

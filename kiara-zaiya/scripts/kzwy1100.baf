@@ -1,0 +1,10 @@
+IF
+  Global("ZaiyaFindKiara","GLOBAL",2)
+  Global("KZWYCreated","AR1100",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KZWYCreated","AR1100",1)
+    CreateCreature("KZWYVERN",[1179.2936],15)  // ~Poisonous Wyvern~
+    Continue()
+END
+

@@ -1,0 +1,104 @@
+/////////////////////////////////////////////////////////////
+//TEST SCRIPT JUST FOR THE SPELL AND ITS EFFECTS
+/////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////
+//LESSER DEMON LORD STATS
+//200HP, -8AC, 20 STR
+//Detect invisibility by script
+//Immune to spell level upto 3
+//Immune to non magical weapons
+//Immune to stun, imprisonment,... 
+/////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////
+//Buffing time
+////////////////////////////////////////
+IF
+  Allegiance(Myself,ENEMY)
+  See([PC])
+  Delay(1)
+  Global("LDLBUFF","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LDLBUFF","LOCALS",1)
+    ApplySpell(Myself,WIZARD_TRUE_SIGHT)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS) 
+    ForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+    ForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    ForceSpellRES("KZLDLPOL", NearestEnemyOfType([PC]))
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    SetGlobalTimer("LDLCastPoly","LOCALS",FIVE_ROUNDS)
+    SetGlobalTimer("LDLPFMW","LOCALS",FOUR_ROUNDS)
+    Continue()
+END
+
+/////////////////////////////////////////
+//Random protection and sometimes none
+/////////////////////////////////////////
+IF
+  GlobalTimerExpired("LDLPFMW","LOCALS")
+  Allegiance(Myself,ENEMY)
+  See([PC])
+THEN
+  RESPONSE #33
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS) 
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    SetGlobalTimer("LDLCastPoly","LOCALS",FIVE_ROUNDS)
+    SetGlobalTimer("LDLPFMW","LOCALS",FOUR_ROUNDS)
+    Continue()
+  RESPONSE #33
+    ApplySpell(Myself,WIZARD_MANTLE)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    SetGlobalTimer("LDLCastPoly","LOCALS",ONE_ROUND)
+    SetGlobalTimer("LDLPFMW","LOCALS",FOUR_ROUNDS)
+    Continue()
+  RESPONSE #34
+    Continue()
+END
+
+////////////////////////////////////////////////////////////
+//Polymorph other into demon knights
+//Every 30 seconds he has another chance
+////////////////////////////////////////////////////////////
+//Target firts low save vs polymorph
+IF
+  GlobalTimerExpired("LDLCastPoly","LOCALS")
+  Allegiance(Myself,ENEMY)
+OR(7)
+    See(NearestEnemyOfType([PC]))
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN]))
+    See(NearestEnemyOfType([PC.0.0.RANGER]))
+  CheckStatGT(LastSeenBy(Myself),5,SAVEVSPOLY)
+THEN
+  RESPONSE #100
+    ForceSpellRES("KZLDLPOL", LastSeenBy(Myself))
+    SetGlobalTimer("LDLCastPoly","LOCALS",FIVE_ROUNDS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    Continue()
+END
+
+//In case their save vs spell are really good
+IF
+  GlobalTimerExpired("LDLCastPoly","LOCALS")
+  Allegiance(Myself,ENEMY)
+OR(7)
+    See(NearestEnemyOfType([PC])) 
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN]))
+    See(NearestEnemyOfType([PC.0.0.RANGER]))
+THEN
+  RESPONSE #100
+    ForceSpellRES("KZLDLPOL", LastSeenBy(Myself))
+    SetGlobalTimer("LDLCastPoly","LOCALS",FIVE_ROUNDS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    Continue()
+END
+

@@ -1,0 +1,7 @@
+IF
+Allegiance(Myself,NEUTRAL)
+ActuallyInCombat()
+THEN
+RESPONSE #100
+Enemy()
+END

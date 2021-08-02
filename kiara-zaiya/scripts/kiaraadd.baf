@@ -1,0 +1,19 @@
+IF
+  InParty(Myself)
+  BreakingPoint()
+THEN
+  RESPONSE #100
+    SetLeavePartyDialogueFile()
+    LeaveParty()
+    StartDialogNoSet([PC])
+END
+
+IF
+  !InParty(Myself)
+  ReputationLT(Player1,19)
+  Global("KUNHAPPY","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("KUNHAPPY","GLOBAL",0)
+END
+

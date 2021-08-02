@@ -1,0 +1,664 @@
+///////////////////////////////////////////////////////////////////
+//MAHARAJA IN SULDALANESSAR
+//IMPROVEMENT : 
+//IMMUNE TO SPELL LEVEL 9 INSTEAD OF 7
+//MORE HP
+//MORE SPELLS INCLUDING FROM LEVEL 1 TO 9
+//
+///////////////////////////////////////////////////////////////////
+IF
+  OnCreation()
+  GlobalGT("RakCloud","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("RakCloud","GLOBAL",0)
+END
+
+//IF
+//See(NearestEnemyOf(Myself))
+//Allegiance(Myself,ENEMY)
+//Global("RakshasaChange","LOCALS",0)
+//THEN
+//RESPONSE #30
+//    Polymorph(RAKSHASA)
+//    SetGlobal("RakshasaChange","LOCALS",1)
+//END
+
+//////////////////////////////////////////////////////////////////
+//MAHARAJAH TACTICS
+/////////////////////////////////////////////////////////////////
+IF
+  Global("RAKMASTART","LOCALS",1)
+  GlobalTimerExpired("RAKMARestT","GLOBAL")
+THEN
+  RESPONSE #100
+    Wait(2)
+    ReallyForceSpell(Myself,CLERIC_HEAL)
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep1","LOCALS",0)
+    SetGlobal("Prep2","LOCALS",0)
+    SetGlobal("TRAPS","LOCALS",0)
+    SetGlobal("InsideStopTime","LOCALS",0)
+    SetGlobal("KZABI","LOCALS",0)
+    SetGlobal("KZBLIND","LOCALS",0)
+    SetGlobal("DispelSecondMage","LOCALS",0)
+    SetGlobal("Dispel1SecondMage","LOCALS",0)
+    SetGlobal("SpellTriger","LOCALS",0)
+    Rest()
+    Wait(1)
+    Continue()
+END
+
+IF
+  OR(2)
+    Detect([PC])
+    See([PC])
+  Global("Prep1","LOCALS",0)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("RAKMARestT","LOCALS",SIX_HOURS)
+    ApplySpell(Myself,WIZARD_TRUE_SIGHT)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    SetGlobal("Prep1","LOCALS",1)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",0)
+  Range(NearestEnemyOf(Myself),120)
+  Detect(NearestEnemyOf(Myself))
+  !Allegiance(NearestEnemyOf(Myself),ENEMY)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CastSpell","LOCALS",FOUR_ROUNDS)
+    SetGlobalTimer("InsideStopTime","LOCALS",FOUR_ROUNDS)
+    SetGlobalTimer("MAGICW","LOCALS",FOUR_ROUNDS)
+    SetGlobal("Prep","LOCALS",1)
+    ReallyForceSpell(Myself,WIZARD_TIME_STOP)
+    Continue()
+END
+
+//Dispel protections during time stop
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("DispelSecondMage","LOCALS",0)
+  See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+  OR(3)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE_ALL]),0,WIZARD_SPELL_TRAP)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE_ALL]),1,WIZARD_SPELL_TURNING)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE_ALL]),1,WIZARD_SPELL_DEFLECTION)
+  HaveSpell(WIZARD_SPELL_STRIKE)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobal("DispelSecondMage","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)
+END
+
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("Dispel1SecondMage","LOCALS",0)
+  See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+  OR(2)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE_ALL]),0,STONESKINS)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE_ALL]),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  HaveSpell(WIZARD_BREACH)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobal("Dispel1SecondMage","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_BREACH)
+END
+
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  OR(7)
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+  OR(8)
+    StateCheck(LastSeenBy(Myself),STATE_BLESS)
+    StateCheck(LastSeenBy(Myself),STATE_CHANT)
+    StateCheck(LastSeenBy(Myself),STATE_DRAWUPONHOLYMIGHT)
+    StateCheck(LastSeenBy(Myself),STATE_BLUR)
+    StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    HasBounceEffects(LastSeenBy(Myself))
+    HasImmunityEffects(LastSeenBy(Myself))
+  Global("SpellTrigger","LOCALS",0)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,39968)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_CHAOS)
+    SetGlobal("SpellTrigger","LOCALS",1)
+END
+
+//abi dazim
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+ OR(7)
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+  !HasItemEquiped("Clck26",LastSeenBy(Myself))  
+  !HasItemEquiped("Belt10",LastSeenBy(Myself))
+  HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    Spell(LastSeenBy(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    SetGlobalTimer("MAGICW","LOCALS",ONE_ROUND)
+END
+
+
+//end of time stop somehow
+///////////////////////////////////////////////////
+//DEFENSIVE TIME
+//USE PROMAGIC PROTECTIONS
+///////////////////////////////////////////////////
+IF
+  !GlobalTimerNotExpired("MAGICW","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  CheckStat(Myself,0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  HaveSpell(WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    SetGlobalTimer("MAGICW","LOCALS",FOUR_ROUNDS)
+    Spell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+END
+
+//////////////////////////////////////////////////
+//OFFENSIVE TIME = IGNORE THE MAGE AS IMMUNE 
+//CONCENTRATE ON THE DAMN FIGHTERS
+//////////////////////////////////////////////////
+
+//WAIL OF THE BANSHEE
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  CheckStatGT(LastSeenBy(Myself),2,SAVEVSDEATH)  
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_WAIL_OF_THE_BANSHEE)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_WAIL_OF_THE_BANSHEE)
+END
+
+
+//Blindness on nearest fighter
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(4) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.MONK]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_BLINDNESS)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)
+    ApplySpell(LastSeenBy(Myself),CLERIC_DOOM)
+    ApplySpell(LastSeenBy(Myself),CLERIC_DOOM)
+END
+
+
+//BLACK BLADE OF DISASTER
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("Blakblad","LOCALS",0)
+  HaveSpell(WIZARD_BLACK_BLADE_OF_DISASTER)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    SetGlobal("blakblad","LOCALS",1)
+    Spell(Myself,WIZARD_BLACK_BLADE_OF_DISASTER)
+    ApplySpell(Myself,WIZARD_IMPROVED_HASTE)
+    EquipMostDamagingMelee()
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+
+//abi dazim
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  CheckStatLT(LastSeenBy(Myself),50,MAGICDAMAGERESISTANCE)
+  !CheckStat(LastSeenBy(Myself),7,186)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+END
+
+
+//FINGER OF DEATH
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  CheckStatGT(LastSeenBy(Myself),3,SAVEVSSPELL)  
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+//PRISMATIC SPRAY
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_PRISMATIC_SPRAY)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_PRISMATIC_SPRAY)
+END
+
+//DISINTEGRATE
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  CheckStatGT(LastSeenBy(Myself),4,SAVEVSSPELL)  
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !CheckStat(LastSeenBy(Myself),7,186)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_DISINTEGRATE)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_DISINTEGRATE)
+END
+
+
+//death fog
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  CheckStatLT(LastSeenBy(Myself),50,MAGICDAMAGERESISTANCE)
+  !CheckStat(LastSeenBy(Myself),7,186)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_DEATH_FOG)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_DEATH_FOG)
+END
+
+//SECOND ROUND OF DISPELLING
+
+//dispel magic
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  OR(7)
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+  OR(8)
+    StateCheck(LastSeenBy(Myself),STATE_BLESS)
+    StateCheck(LastSeenBy(Myself),STATE_CHANT)
+    StateCheck(LastSeenBy(Myself),STATE_DRAWUPONHOLYMIGHT)
+    StateCheck(LastSeenBy(Myself),STATE_BLUR)
+    StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    HasBounceEffects(LastSeenBy(Myself))
+    HasImmunityEffects(LastSeenBy(Myself))
+  Global("SpellTrigger","LOCALS",0)
+   HaveSpell(WIZARD_DISPEL_MAGIC)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+END
+
+//CHAOS 
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !HasBounceEffects(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_CHAOS)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_CHAOS)
+END
+
+//MAZE ON NEAREST FIGHTER
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("Maze","LOCALS",0)
+  OR(4)
+  See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+  See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+  See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  See(NearestEnemyOfType([PC.0.0.MONK]))
+  HaveSpell(WIZARD_MAZE)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobal("Maze","LOCALS",1)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_MAZE)
+END
+
+//CHAIN LIGHTNING
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTELECTRICITY)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_CHAIN_LIGHTNING)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_CHAIN_LIGHTNING)
+END
+
+//CONE OF COLD
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTCOLD)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_CONE_OF_COLD)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_CONE_OF_COLD)
+END
+
+//ICE STORM
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTCOLD)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_ICE_STORM)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_ICE_STORM)
+END
+
+//CLOUD KILL
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTACID)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_CLOUDKILL)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_CLOUDKILL)
+END
+
+//Magic Missile
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !GlobalTimerExpired("RAKMARestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,MAGE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_MAGIC_MISSILE)
+END
+
+
+
+//FIRST FIND LOW SAVE VS DEATH SINCE THEY ROLL AT +4
+//AND NO PROTECTIONS = IDEAL TARGET
+IF
+  !GlobalTimerExpired("CASTSPELL","LOCALS")
+  ActionListEmpty()
+  OR(7)
+    See(NearestEnemyOf(Myself))
+    See(MostDamagedOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See([PC.0.0.THIEF_ALL])
+    See([PC.0.0.DRUID_ALL])
+    See(WorstAC)
+  !CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+  !CheckStatGT(Myself,0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,FIGHTER)
+    EquipMostDamagingMelee()
+    Attack(LastSeenBy(Myself))
+END
+
+//FIRST FIND LOW SAVE VS DEATH SINCE THEY ROLL AT +4
+//AND NO PROTECTIONS = IDEAL TARGET
+IF
+  !GlobalTimerExpired("CASTSPELL","LOCALS")
+  ActionListEmpty()
+  OR(5)
+    See(NearestEnemyOf(Myself))
+    See(MostDamagedOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+  !CheckStatGT(Myself,0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,FIGHTER)
+    EquipMostDamagingMelee()
+    Attack(LastSeenBy(Myself))
+END
+
+
+IF
+  !GlobalTimerExpired("CASTSPELL","LOCALS")
+  ActionListEmpty()
+  OR(5)
+    See(NearestEnemyOf(Myself))
+    See(MostDamagedOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+THEN
+  RESPONSE #100
+    ChangeClass(Myself,FIGHTER)
+    EquipMostDamagingMelee()
+    Attack(LastSeenBy(Myself))
+END
+
+
+//end of my wn script

@@ -1,0 +1,60 @@
+IF
+  Global("ZaiyaFindKiara","GLOBAL",4)
+  Global("KiaraCreated","AR1004",0)
+  !InParty("Kiara")  // ~Kiara~
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraCreated","AR1004",1)
+    CreateCreature("Kiara",[303.389],15)  // ~Kiara~
+    Continue()
+END
+
+IF
+  Global("KiaraCreated","AR1004",1)
+  Global("KiaraExpAdded","AR1004",0)
+  XPGT(Player1,1500000)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraExpAdded","AR1004",1)
+    AddXPObject("Kiara",750000)
+END
+
+IF
+  Global("KiaraCreated","AR1004",1)
+  Global("KiaraExpAdded","AR1004",0)
+  XPGT(Player1,1000000)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraExpAdded","AR1004",1)
+    AddXPObject("Kiara",500000)
+END
+
+IF
+  Global("KiaraCreated","AR1004",1)
+  Global("KiaraExpAdded","AR1004",0)
+  XPGT(Player1,500000)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraExpAdded","AR1004",1)
+    AddXPObject("Kiara",250000)
+END
+
+IF
+  Global("KiaraCreated","AR1004",1)
+  Global("KiaraExpAdded","AR1004",0)
+  XPGT(Player1,300000)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraExpAdded","AR1004",1)
+    AddXPObject("Kiara",100000)
+END
+
+IF
+  Global("KiaraCreated","AR1004",1)
+  Global("KiaraExpAdded","AR1004",0)
+  XPLT(Player1,300001)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraExpAdded","AR1004",1)
+END
+

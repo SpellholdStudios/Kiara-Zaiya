@@ -1,0 +1,13 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    FadeToColor([30.0],0)
+    Wait(3)
+    FadeFromColor([30.0],0)
+    RestParty()
+    EndCutSceneMode()
+    SetGlobal("ExpLoveTalk","LOCALS",13)  
+END
+

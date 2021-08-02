@@ -1,0 +1,17 @@
+IF
+  Global("KiaraDead","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraDead","GLOBAL",1)
+    CutSceneId("Kiara")  // 
+    ClearAllActions()
+    StartCutSceneMode()
+    FaceObject(Player1)
+    Wait(1)
+    ReallyForceSpell(Myself,CLERIC_FLAME_STRIKE)
+    ReallyForceSpell(Myself,WIZARD_DISINTEGRATE2_IGNORE_RESISTANCE)
+    Wait(2)
+    EndCutSceneMode()
+    SetGlobal("DemonNotDeal","GLOBAL",1)
+END
+

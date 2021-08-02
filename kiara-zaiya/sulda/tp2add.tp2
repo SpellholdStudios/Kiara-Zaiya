@@ -1,0 +1,7 @@
+BEGIN ~Revised Suldalanessar~
+COPY ~Kiara-Zaiya\Sulda\KZ#DMLRD.cre~ ~override\KZ#DMLRD.cre~
+COPY ~Kiara-Zaiya\Sulda\KZLDLPOL.spl~ ~override\KZLDLPOL.spl~
+COPY ~Kiara-Zaiya\Sulda\PLYUDDEA.eff~ ~override\PLYUDDEA.eff~
+COMPILE ~Kiara-Zaiya\Sulda\KZ#DMTES.BAF~
+EXTEND_BOTTOM ~AR0300.bcs~ ~Kiara-Zaiya\Suld\KZAPPEND2.BAF~ ~~
+

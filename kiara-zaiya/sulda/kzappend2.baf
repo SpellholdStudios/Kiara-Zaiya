@@ -1,0 +1,11 @@
+IF
+  Delay(3)
+  Global("TestLDLSpawn","GLOBAL",0)
+  CombatCounter(0)
+  GlobalGT("Chapter","GLOBAL",5)
+THEN
+  RESPONSE #100
+    IncrementGlobal("TestLDLSpawn","GLOBAL",1)
+    CreateCreatureObjectOffScreen("KZ#DMLRD",Player1,0,0,0)  
+END
+

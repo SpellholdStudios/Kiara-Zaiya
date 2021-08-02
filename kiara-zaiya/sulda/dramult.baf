@@ -1,0 +1,103 @@
+///////////////////////////////////////////////////////////////
+//MULTICOLOR DRAGON IN SULDALLANESSAR WITH BLACK DRAGON
+//
+///////////////////////////////////////////////////////////////
+
+//BUFFING
+IF
+  See(NearestEnemyOf(Myself))
+  Global("RemoveMagic","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,DRAGON_STONE_SKIN)
+    ForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+    SetGlobal("StoneSkin","LOCALS",1)
+    SetGlobal("RemoveMagic","LOCALS",1)
+END
+
+//REINITIALIZE IF PARTY WENT OUTSIDE
+IF
+  !Detect([PC])
+  HPLT(Myself,50)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("RemoveMagic","LOCALS",0)
+    SetGlobal("WingBuffet","LOCALS",0)
+    SetGlobal("Haste","LOCALS",0)
+    SetGlobal("DRAGONFEAR","LOCALS",0)
+    ForceSpell(Myself,CLERIC_HEAL)
+END
+
+//PRISMATIC SPRAY INSTEAD OF 
+IF
+  GlobalTimerExpired("DRAGONBREATH","LOCALS")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    SetGlobal("WingBuffet","LOCALS",0)
+    ForceSpell(LastSeenBy(Myself),WIZARD_PRISMATIC_SPRAY)
+    ReallyForceSpell(LastSeenBy(Myself),RED_DRAGON_HIT)
+    SetGlobalTimer("DRAGONBREATH","LOCALS",THREE_ROUNDS)
+    SetGlobalTimer("CASTSPELL","LOCALS",THREE_ROUNDS)
+END
+
+//WING BUFFET TO KEEP THEM AT BAY
+IF
+ Allegiance(Myself,ENEMY)
+ Range(NearestEnemyOf(Myself),25)
+ !GlobalTimerNotExpired("Buffet","LOCALS")
+THEN
+ RESPONSE #100
+  ForceSpell(NearestEnemyOf(Myself),DRAGON_WING_BUFFET)
+  SetGlobalTimer("Buffet","LOCALS",ONE_ROUND)
+  Continue()	// continue after innate actions
+END
+
+IF
+  GlobalTimerNotExpired("CASTSPELL","LOCALS")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_HASTE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),DRAGON_SILENCE)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_CHARM_PERSON)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),DRAGON_FEAR)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+END
+
+IF
+  !GlobalTimerExpired("CASTSPELL","LOCALS")
+  ActionListEmpty()
+  OR(5)
+    See(NearestEnemyOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(LastSeenBy(Myself))
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+

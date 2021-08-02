@@ -1,0 +1,219 @@
+IF
+  GlobalTimerExpired("HrothRestT","GLOBAL")
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,CLERIC_HEAL)
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep1","LOCALS",0)
+    SetGlobal("HEALTIME","LOCALS",0)
+    Continue()
+END
+
+IF
+  OR(2)
+    Detect([PC])
+    InMyArea(Player1)
+  Global("Prep1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HrothRestT","GLOBAL",SIX_HOURS)
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    SetGlobal("Prep1","LOCALS",1)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,NEUTRAL)
+  Global("AttackC6ama","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Enemy()
+    Continue()
+END
+
+IF
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  HasItem("potn10",Myself)  // ~Potion of Invisibility~
+  !StateCheck(Myself,STATE_INVISIBLE)
+  Global("PtnPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tnPrep","OCALSP",1)
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    UseItem("potn10",Myself)  // ~Potion of Invisibility~
+    Continue()
+END
+
+IF
+  Global("HEALTIME","LOCALS",1)
+  OR(4)
+    HPPercentGT(Myself,50)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    Range(NearestEnemyOf(Myself),4)
+THEN
+  RESPONSE #100
+    SetGlobal("HEALTIME","LOCALS",0)
+END
+
+IF
+  GlobalTimerExpired("HPOTION","LOCALS")
+  HPPercentLT(Myself,50)
+  Allegiance(Myself,ENEMY)
+  HasItem("potn10",Myself)  // ~Potion of Invisibility~
+  !StateCheck(Myself,STATE_INVISIBLE)
+  Global("HEALTIME","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    UseItem("potn10",Myself)  // ~Potion of Invisibility~
+    RunAwayFrom(LastAttackerOf(Myself),60)
+    SetGlobal("HEALTIME","LOCALS",1)
+    Wait(2)
+END
+
+IF
+  Global("HEALTIME","LOCALS",1)
+  Range(NearestEnemyOf(Myself),20)
+THEN
+  RESPONSE #100
+    RunAwayFrom(LastAttackerOf(Myself),60)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Global("HEALTIME","LOCALS",1)
+  GlobalTimerExpired("HPOTION","LOCALS")
+  HPPercentLT(Myself,50)
+  HasItem("potn52",Myself)  // ~Potion of Extra Healing~
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("potn52",Myself)  // ~Potion of Extra Healing~
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("HPOTION","LOCALS")
+  !Global("HEALTIME","LOCALS",1)
+  Allegiance(Myself,ENEMY)
+  See([PC])
+  See(SecondNearestEnemyOf(Myself))
+  HasItem("POTN27",Myself)  // ~Potion of Firebreath~
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    UseItem("POTN27",SecondNearestEnemyOf(Myself))  // ~Potion of Firebreath~
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Range("Kiara",5)  // ~Kiara~
+  See("Kiara")  // ~Kiara~
+  !Global("HEALTIME","LOCALS",1)
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    ApplySpell(Myself,BARBARIAN_RAGE)
+    ApplySpell(Myself,WARRIOR_HARDINESS)
+    ApplySpell(Myself,CLERIC_CHAOTIC_COMMANDS)
+    SetGlobal("Prep","LOCALS",1)
+    AttackOneRound("Kiara")
+    Continue()
+END
+
+IF
+  !Global("HEALTIME","LOCALS",1)
+  See(NearestEnemyOf(Myself))
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    ApplySpell(Myself,BARBARIAN_RAGE)
+    ApplySpell(Myself,WARRIOR_HARDINESS)
+    ApplySpell(Myself,CLERIC_CHAOTIC_COMMANDS)
+    SetGlobal("Prep","LOCALS",1)
+    EquipMostDamagingMelee()
+    AttackOneRound(NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Global("HEALTIME","LOCALS",1)
+  See([PC])
+  Range(NearestEnemyOf(Myself),20)
+  !StateCheck(Myself,STATE_HASTED)
+  HaveSpell(WARRIOR_GREATER_WHIRLWIND)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    Spell(Myself,WARRIOR_GREATER_WHIRLWIND)
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+
+IF
+  GlobalTimerExpired("HPOTION","LOCALS")
+  Allegiance(Myself,ENEMY)
+  !Global("HEALTIME","LOCALS",1)
+  See([PC])
+  Range(NearestEnemyOf(Myself),20)
+  CheckStatLT(Myself,21,STR)
+  HaveSpell(BARBARIAN_RAGE)
+THEN
+  RESPONSE #100
+    Spell(Myself,BARBARIAN_RAGE)
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+
+IF
+  Range([PC],4)
+  CheckStat(NearestEnemyOf(Myself),4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    SelectWeaponAbility(SLOT_WEAPON2,0)
+    Continue()
+END
+
+IF
+  Range([PC],4)
+  !CheckStat(NearestEnemyOf(Myself),4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    SelectWeaponAbility(SLOT_WEAPON1,0)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Global("HEALTIME","LOCALS",1)
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+
+IF
+  !Global("AttackC6Ama","GLOBAL",0)
+  !Global("HEALTIME","LOCALS",1)
+  Allegiance(Myself,ENEMY)
+  !Range([PC],20)
+  ActionListEmpty()
+THEN
+  RESPONSE #100
+    Wait(11)
+    MoveToObject(Player1)
+END
+

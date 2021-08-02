@@ -1,0 +1,10 @@
+IF
+  Global("ZaiyaFindKiara","GLOBAL",1)
+  Global("PraxCreated","AR0700",0)
+THEN
+  RESPONSE #100
+    SetGlobal("PraxCreated","AR0700",1)
+    CreateCreature("Prax",[483.2384],15)  // ~Prax~
+    Continue()
+END
+

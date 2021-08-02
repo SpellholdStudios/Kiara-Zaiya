@@ -1,0 +1,60 @@
+IF
+  Global("ZaiyaCreated","AR0405",0)
+  !InParty("Zaiya")  // ~Zaiya~
+  !Alignment(Player1,MASK_EVIL)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiyaCreated","AR0405",1)
+    CreateCreature("Zaiya",[1417.1051],15)  // ~Zaiya~
+    Continue()
+END
+
+IF
+  Global("ZaiyaCreated","AR0405",1)
+  Global("ZaiyaExpAdded","AR0405",0)
+  XPGT(Player1,1500000)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiyaExpAdded","AR0405",1)
+    AddXPObject("Zaiya",750000)
+END
+
+IF
+  Global("ZaiyaCreated","AR0405",1)
+  Global("ZaiyaExpAdded","AR0405",0)
+  XPGT(Player1,1000000)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiyaExpAdded","AR0405",1)
+    AddXPObject("Zaiya",500000)
+END
+
+IF
+  Global("ZaiyaCreated","AR0405",1)
+  Global("ZaiyaExpAdded","AR0405",0)
+  XPGT(Player1,500000)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiyaExpAdded","AR0405",1)
+    AddXPObject("Zaiya",250000)
+END
+
+IF
+  Global("ZaiyaCreated","AR0405",1)
+  Global("ZaiyaExpAdded","AR0405",0)
+  XPGT(Player1,300000)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiyaExpAdded","AR0405",1)
+    AddXPObject("zaiya",100000)
+END
+
+IF
+  Global("ZaiyaCreated","AR0405",1)
+  Global("ZaiyaExpAdded","AR0405",0)
+  XPLT(Player1,300001)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiyaExpAdded","AR0405",1)
+END
+

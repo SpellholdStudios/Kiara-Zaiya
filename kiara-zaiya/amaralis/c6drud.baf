@@ -1,0 +1,329 @@
+IF
+  GlobalTimerExpired("FenilRestT","GLOBAL")
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,CLERIC_HEAL)
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep1","LOCALS",0)
+    SetGlobal("C6Other","LOCALS",0)
+    SetGlobal("C6Earth","LOCALS",0)
+    SetGlobal("C6DPlague","LOCALS",0)
+    SetGlobal("C6Elemental","LOCALS",0)
+    SetGlobal("C6DVal","LOCALS",0)
+    Rest()
+    Wait(1)
+    Continue()
+END
+
+IF
+  OR(2)
+    Detect([PC])
+    InMyArea(Player1)
+  Global("prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("FenilRestT","GLOBAL",SIX_HOURS)
+    ReallyForceSpell(Myself,CLERIC_BARKSKIN)
+    ReallyForceSpell(Myself,CLERIC_IRONSKIN)
+    ReallyForceSpell(Myself,CLERIC_CHAOTIC_COMMANDS)
+    ReallyForceSpell(Myself,CLERIC_PROTECTION_FROM_FIRE)
+    ReallyForceSpell(Myself,CLERIC_RESIST_COLD)
+    ReallyForceSpell(Myself,CLERIC_DEATH_WARD)
+    ReallyForceSpell("Amaralis",CLERIC_DEATH_WARD)
+    SetGlobal("prep","LOCALS",1)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,NEUTRAL)
+  Global("AttackC6ama","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Enemy()
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  HasItem("POTN10",Myself)  // ~Potion of Invisibility~
+  !StateCheck(Myself,STATE_INVISIBLE)
+  Global("Prep1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep1","LOCALS",1)
+    ApplySpell(Myself,CLERIC_SHIELD_OF_THE_ARCHONS)
+    UseItem("POTN10",Myself)  // ~Potion of Invisibility~
+    Wait(3)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  InParty("Valen")  // Valen
+  !Range("Valen",10)  // Valen
+  Global("C6DVal","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("C6DVal","LOCALS",1)
+    MoveToObject("Valen")
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Global("C6DVal","LOCALS",1)
+  Range("Valen",20)  // Valen
+THEN
+  RESPONSE #100
+    Spell(Myself,CLERIC_SUNRAY)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(SixthNearestEnemyOf(Myself))
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SixthNearestEnemyOf(Myself),0,SANCTUARY)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(FifthNearestEnemyOf(Myself))
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(FifthNearestEnemyOf(Myself),0,SANCTUARY)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(FourthNearestEnemyOf(Myself))
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(FourthNearestEnemyOf(Myself),0,SANCTUARY)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(NearestEnemyOf(Myself))
+  !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOf(Myself),0,SANCTUARY)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.BARD]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.BARD]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(NearestEnemyOfType([GOODCUTOFF.0.0.DRUID_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.DRUID_ALL]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.DRUID_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(SecondNearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SecondNearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),0,SANCTUARY)
+  See(SecondNearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(SecondNearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SecondNearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),0,SANCTUARY)
+  See(SecondNearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  See(LastSeenBy(Myself))
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+  !Gender(LastSeenBy(Myself),SUMMONED)
+  !Race(LastSeenBy(Myself),SOLAR)
+  !Race(LastSeenBy(Myself),ANTISOLAR)
+  HaveSpell(CLERIC_INSECT_PLAGUE)
+  Global("C6DPlague","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("C6DPlague","LOCALS",1)
+    Spell(LastSeenBy(Myself),CLERIC_INSECT_PLAGUE)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Global("C6DPlague","LOCALS",1)
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  See(LastSeenBy(Myself))
+  HaveSpell(CLERIC_ELEMENTAL_SWARM)
+  Global("C6Elemental","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("C6Elemental","LOCALS",1)
+    Spell(LastSeenBy(Myself),CLERIC_ELEMENTAL_SWARM)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !Global("C6DPlague","LOCALS",1)
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  See(LastSeenBy(Myself))
+  HaveSpell(CLERIC_ANIMAL_SUMMONING_3)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself),CLERIC_ANIMAL_SUMMONING_3)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !Global("C6DPlague","LOCALS",1)
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  See(LastSeenBy(Myself))
+  !CheckStatGT(LastSeenBy(Myself),50,RESISTELECTRICITY)
+  HaveSpell(CLERIC_CALL_LIGHTNING)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself),CLERIC_CALL_LIGHTNING)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !Global("C6DPlague","LOCALS",1)
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  See(NearestEnemyOf(Myself))
+  !HasItemEquiped("RING09",LastSeenBy(Myself))  // LastSeenBy(Myself)
+  HaveSpell(CLERIC_ENTANGLE)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself),CLERIC_ENTANGLE)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !Global("C6DPlague","LOCALS",1)
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  See(NearestEnemyOf(Myself))
+  CheckStat(LastSeenBy(Myself),0,WIZARD_RESIST_FEAR)
+  HaveSpell(CLERIC_CLOAK_OF_FEAR)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself),CLERIC_CLOAK_OF_FEAR)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Global("C6DPlague","LOCALS",1)
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  See(NearestEnemyOf(Myself))
+  !HaveSpell(CLERIC_INSECT_PLAGUE)
+  !HaveSpell(CLERIC_ELEMENTAL_SWARM)
+  !HaveSpell(0)
+  !HaveSpell(CLERIC_CALL_LIGHTNING)
+  !HaveSpell(CLERIC_ENTANGLE)
+  !HaveSpell(CLERIC_CLOAK_OF_FEAR)
+  HaveSpell(CLERIC_FLAME_BLADE)
+THEN
+  RESPONSE #100
+    Spell(Myself,CLERIC_FLAME_BLADE)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Global("C6DPlague","LOCALS",1)
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  See(LastSeenBy(Myself))
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself),12)
+END
+
+IF
+  ActionListEmpty()
+  Range([PC],120)
+  OR(6)
+    CheckStatGT(LastSeenBy(Myself),50,RESISTMAGIC)
+    CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    Gender(LastSeenBy(Myself),SUMMONED)
+    Race(LastSeenBy(Myself),SOLAR)
+    Race(LastSeenBy(Myself),ANTISOLAR)
+    Allegiance(LastSeenBy(Myself),ENEMY)
+THEN
+  RESPONSE #100
+    MoveToObject(WeakestOf)
+END
+
+IF
+  ActionListEmpty()
+  !GlobalTimerExpired("FenilRestT","LOCALS")
+  !Global("AttackC6Ama","GLOBAL",0)
+  !Range([PC],120)
+THEN
+  RESPONSE #100
+    Wait(12)
+    MoveToObject(Player1)
+END
+

@@ -1,0 +1,683 @@
+//////////////////////////////////////////////////////////////
+//21/21 assassin-mage
+//
+//Part of the script is borrowed from tactic
+//THE MAGE CAN SEE THROUGH INVISIBILITY AND IS IMMUNE TO:
+//Stun, imprisonment, horror..
+//Immune upto level 3 spells (no dispel + no sanchuduku effect)
+//////////////////////////////////////////////////////////////
+
+//REINITIALIZE IN CASE PARTY RESTED
+IF
+  !GlobalTimerNotExpired("KZASSRestT","LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep1","LOCALS",0)
+    SetGlobal("Prep2","LOCALS",0)
+    SetGlobal("SpellTriger","LOCALS",0)
+    Rest()
+    Wait(1)
+    Continue()
+END
+
+//PRE-FIGHT BUFFING AS ANYONE SHOULD DO
+IF
+  !Allegiance(Myself,ENEMY)
+  Or(2)
+    See([PC])
+    Detect([PC])
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep","LOCALS",1)
+    SetGlobalTimer("KZASSRestT","LOCALS",SIX_HOURS)
+    ReallyForceSpell(Myself,CLERIC_HEAL)
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
+    ApplySpell(Myself,WIZARD_SPELL_SHIELD)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_FIRE)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_ACID)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_COLD)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_ELECTRICITY)
+    Continue()
+END
+
+//INITIAL MAGE CONTINGENCY
+IF
+  !GlobalTimerExpired("KZASSRestT","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Or(2)
+    See([PC])
+    Detect([PC])
+  Global("Prep1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep1","LOCALS",1)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    SetGlobalTimer("MAGICW","LOCALS",ONE_ROUND)
+    DisplayString(Myself,26328) // Chain Contingency
+    ApplySpell(Myself,WIZARD_IMPROVED_ALACRUTY) 
+    ApplySpell(Myself,WIZARD_TIME_STOP) 
+    ApplySpell(Myself,WIZARD_ABSOLUTE_IMMUNITY) 
+    SetGlobalTimer("InsideStopTime","LOCALS",FOUR_ROUNDS)
+    SetInterrupt(FALSE)
+    UseItem("Potn06",Myself)  // ~Potion of cloud giant strength~
+    UseItem("SCRL9L",Myself) //Spell trap
+    SetInterrupt(FALSE)          
+    Continue()
+END
+
+//A QUICK BUFF DURING TIME STOP
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("FurtherPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("FurtherPrep","LOCALS",1)
+    Spell(Myself,WIZARD_MIRROR_IMAGE)
+    Spell(Myself,WIZARD_BLUR)
+    Spell(Myself,WIZARD_SPELL_IMMUNITY_ABJURATION)    
+    Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
+END
+
+//Mordenkainen - bring in some friends
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("MordyAttack","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MordyAttack","LOCALS",1)
+    Spell(NearestEnemyOf(Myself),WIZARD_MORDENKAINENS_SWORD)
+END
+
+//Dispel protection - spellstrike on mage
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("DispelSecondMage","LOCALS",0)
+  See(NearestEnemyOfType([PC.0.0.MAGE]))
+  OR(3)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE]),0,WIZARD_SPELL_TRAP)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE]),1,WIZARD_SPELL_TURNING)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE]),1,WIZARD_SPELL_DEFLECTION)
+  HaveSpell(WIZARD_SPELL_STRIKE)
+THEN
+  RESPONSE #100
+    SetGlobal("DispelSecondMage","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)
+END
+
+//Spellstrike on sorcerer
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("DispelSecondMage","LOCALS",0)
+  See(NearestEnemyOfType([PC.0.0.SORCERER]))
+  OR(3)
+    CheckStatGT(NearestEnemyOf([PC.0.0.SORCERER]),0,WIZARD_SPELL_TRAP)
+    CheckStatGT(NearestEnemyOf([PC.0.0.SORCERER]),1,WIZARD_SPELL_TURNING)
+    CheckStatGT(NearestEnemyOf([PC.0.0.SORCERER]),1,WIZARD_SPELL_DEFLECTION)
+  HaveSpell(WIZARD_SPELL_STRIKE)
+THEN
+  RESPONSE #100
+    SetGlobal("DispelSecondMage","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)
+END
+
+//breach
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("Dispel1SecondMage","LOCALS",0)
+  See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+  OR(2)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE_ALL]),0,STONESKINS)
+    CheckStatGT(NearestEnemyOf([PC.0.0.MAGE_ALL]),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  HaveSpell(WIZARD_BREACH)
+THEN
+  RESPONSE #100
+    SetGlobal("Dispel1SecondMage","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_BREACH)
+END
+
+//Sequencer: Malison-dispel-chaos
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  OR(7)
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+  OR(8)
+    StateCheck(LastSeenBy(Myself),STATE_BLESS)
+    StateCheck(LastSeenBy(Myself),STATE_CHANT)
+    StateCheck(LastSeenBy(Myself),STATE_DRAWUPONHOLYMIGHT)
+    StateCheck(LastSeenBy(Myself),STATE_BLUR)
+    StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    HasBounceEffects(LastSeenBy(Myself))
+    HasImmunityEffects(LastSeenBy(Myself))
+  Global("SpellTrigger","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,39968)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_CHAOS)
+    SetGlobal("SpellTrigger","LOCALS",1)
+END
+
+//ENERGY DRAIN ON MAGE OR SORCERER - TWICE PLEASE
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  GlobalLT("ENDRAIN","LOCALS",2)
+  OR(2)
+    See(NearestEnemyOfType([PC.0.0.MAGE]))
+    See(NearestEnemyOfType([PC.0.0.SORCERER]))
+THEN
+  RESPONSE #100
+    IncrementGlobal("KZENDRAIN","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_ENERGY_DRAIN)
+END
+
+
+//abi dazim - target clerics
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("KZabi","LOCALS",0)
+  See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+  !HasItemEquiped("Clck26",NearestEnemyOfType([PC.0.0.CLERIC_ALL]))  
+  !HasItemEquiped("Belt10",NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+THEN
+  RESPONSE #100
+    IncrementGlobal("KZabi","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+END
+
+//abi dazim target druids
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("KZABI","LOCALS",0)
+  See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+  !HasItemEquiped("Clck26",NearestEnemyOfType([PC.0.0.DRUID_ALL]))  
+  !HasItemEquiped("Belt10",NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+THEN
+  RESPONSE #100
+    SetGlobal("KZABI","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+END
+
+//Abi dazim - target thief
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("KZABI","LOCALS",0)
+  See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+  !HasItemEquiped("Clck26",NearestEnemyOfType([PC.0.0.THIEF_ALL]))  
+  !HasItemEquiped("Belt10",NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+THEN
+  RESPONSE #100
+    SetGlobal("KZABI","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+END
+
+//Blindness on fighters
+IF
+  !GlobalTimerExpired("InsideStopTime","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  Global("KZBLIND","LOCALS",0)
+  OR(3)
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+THEN
+  RESPONSE #100
+    SetGlobal("KZBLIND","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)
+END
+
+
+//USELESS PIECE
+IF
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    NoAction()
+END
+//////////////////////////////////////////////////////////////////
+//PROTECTIONS ARE ALWAYS FIRST PRIORITY, MAKES FIGHTS LAST LONGER
+//////////////////////////////////////////////////////////////////
+IF
+  GlobalTimerExpired("MAGICW","LOCALS")
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  CheckStat(Myself,0,185)
+  HaveSpell(WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    SetGlobalTimer("MAGICW","LOCALS",FOUR_ROUNDS)
+    Spell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("MAGICW","LOCALS")
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+  CheckStatLT(Myself,1,WIZARD_STONESKINS)
+  !HaveSpell(WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  HaveSpell(WIZARD_STONE_SKIN)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    SetGlobalTimer("MAGICW","LOCALS",FOUR_ROUNDS)
+    Spell(Myself,WIZARD_STONE_SKIN)
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("IMMUNITY","LOCALS")
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_SPELL_IMMUNITY)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    SetGlobalTimer("IMMUNITY","LOCALS",TWO_TURNS)
+    Spell(Myself,WIZARD_SPELL_IMMUNITY_DIVINATION)
+END
+
+//////////////////////////////////////////////////////////
+//INVISIBILITY AND BACKSTAB
+//////////////////////////////////////////////////////////
+IF
+  !GlobalTimerNotExpired("CASTSPELL","LOCALS")
+  !StateCheck(Myself,STATE_INVISIBLE)
+  HasItem("Potn10",Myself)  // ~Potion of Invisibility~
+  Range(NearestEnemyOf(Myself),8)
+THEN
+  RESPONSE #100
+    UseItem("Potn10",Myself)  // ~Potion of Invisibility~
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("CASTSPELL","LOCALS")
+  !StateCheck(Myself,STATE_INVISIBLE)
+  HaveSpell(WIZARD_INVISIBILITY) 
+  Range(NearestEnemyOf(Myself),8)
+THEN
+  RESPONSE #100
+    Spell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)  
+    Continue()
+END
+
+//MOVE AWAY IF DANGER IS TOO CLOSE AND UNPROTECTED
+IF
+  !StateCheck(Myself,STATE_INVISIBLE) 
+  !GlobalTimerExpired("CASTSPELL","LOCALS")
+  CheckStat(Myself,0,185)//unprotected
+  OR(3)
+    HasItem("Potn10",Myself)  // ~Potion of Invisibility~
+    HaveSpell(WIZARD_INVISIBILITY)   
+    HaveSpell(WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)   
+  Range(NearestEnemyOf(Myself),8)
+THEN
+  RESPONSE #100
+    RunAwayFromNearestEnemyOf(Myself,30)
+END
+
+//FIND A TARGET FOR BACKSTAB
+IF
+    !GlobalTimerExpired("CASTSPELL","LOCALS")
+    Allegiance(Myself,ENEMY)
+    StateCheck(Myself,STATE_INVISIBLE)
+    Or(5)
+      See(NearestEnemyOf(Myself))
+      See([PC.0.0.CLERIC_ALL])
+      See([PC.0.0.MAGE_ALL])
+      See(WorstAC)
+      See(MostDamagedOf(Myself))
+    OR(2)
+	 CheckStat(LastSeenBy(Myself),0,STONESKINS)
+       CheckStatLT(LastSeenBy(Myself),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  THEN 
+    RESPONSE #100
+      MoveToObject(LastSeenBy(Myself))
+END
+
+//BREACH IS ESSENTIAL TO ALL GOOD BACKSTABBER
+IF
+    !GlobalTimerExpired("KZASSRestT","LOCALS")
+    GlobalTimerExpired("CASTSPELL","LOCALS")
+    Allegiance(Myself,ENEMY)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    OR(2)
+	 CheckStatGT(NearestEnemyOfType([PC.0.0.MAGE_ALL]),0,STONESKINS)
+       CheckStatGT(NearestEnemyOfType([PC.0.0.MAGE_ALL]),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    HaveSpell(WIZARD_BREACH)    
+  THEN 
+    RESPONSE #100
+    Spell(LastSeenBy(Myself),WIZARD_BREACH)
+    Continue()
+END
+
+//ABI DAZIM
+IF
+  !GlobalTimerExpired("KZASSRestT","LOCALS")
+  !StateCheck(Myself,STATE_INVISIBLE)
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  CheckStatLT(LastSeenBy(Myself),50,MAGICDAMAGERESISTANCE)
+  !CheckStat(LastSeenBy(Myself),7,186)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+END
+
+//MORDY
+IF
+  !GlobalTimerExpired("KZASSRestT","LOCALS")
+  !StateCheck(Myself,STATE_INVISIBLE)
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_MORDENKAINENS_SWORD)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_MORDENKAINENS_SWORD)
+END
+
+//FINGER OF DEATH
+IF
+  !GlobalTimerExpired("KZASSRestT","LOCALS")
+  !StateCheck(Myself,STATE_INVISIBLE)
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !Gender(LastSeenBy(Myself),SUMMONED)
+  !CheckStat(LastSeenBy(Myself),7,186)
+  CheckStat(LastSeenBy(Myself),0,SCRIPTINGSTATE2)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  CheckStat(LastSeenBy(Myself),0,173)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+//FLESH TO STONE - NOT MEMORIZED
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerExpired("KZASSRestT","LOCALS")
+  !StateCheck(Myself,STATE_INVISIBLE)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !CheckStat(LastSeenBy(Myself),7,186)
+   CheckStat(LastSeenBy(Myself),0,SCRIPTINGSTATE2)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  CheckStat(LastSeenBy(Myself),0,173)
+  HaveSpell(WIZARD_FLESH_TO_STONE)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_FLESH_TO_STONE)
+END
+
+//DISINTEGRATE
+IF
+  GlobalTimerExpired("CASTSPELL","LOCALS")
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerExpired("KZASSRestT","LOCALS")
+  !StateCheck(Myself,STATE_INVISIBLE)
+  OR(7) 
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.THIEF_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN_ALL]))
+    See(NearestEnemyOfType([PC.0.0.RANGER_ALL]))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !CheckStat(LastSeenBy(Myself),7,186)
+   CheckStat(LastSeenBy(Myself),0,SCRIPTINGSTATE2)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  CheckStat(LastSeenBy(Myself),0,173)
+  HaveSpell(WIZARD_DISINTEGRATE)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("CASTSPELL","LOCALS",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_DISINTEGRATE)
+END
+
+//DEATH FOG ON NEAREST SPELLCASTER
+IF
+    !GlobalTimerExpired("KZASSRestT","LOCALS")
+    GlobalTimerExpired("CASTSPELL","LOCALS")
+    Allegiance(Myself,ENEMY)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    OR(3) 
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+    HaveSpell(WIZARD_DEATH_FOG)    
+  THEN 
+    RESPONSE #100
+    Spell(LastSeenBy(Myself),WIZARD_DEATH_FOG)
+    Continue()
+END
+
+
+//MM ON NEAREST MAGE
+IF
+    !GlobalTimerExpired("KZASSRestT","LOCALS")
+    GlobalTimerExpired("CASTSPELL","LOCALS")
+    Allegiance(Myself,ENEMY)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    OR(3) 
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+    HaveSpell(WIZARD_MAGIC_MISSILE)    
+  THEN 
+    RESPONSE #100
+    Spell(LastSeenBy(Myself),WIZARD_MAGIC_MISSILE)
+    Continue()
+END
+
+//BLINDNESS ON NEAREST FIGHTER
+IF
+    !GlobalTimerExpired("KZASSRestT","LOCALS")
+    GlobalTimerExpired("CASTSPELL","LOCALS")
+    Allegiance(Myself,ENEMY)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    OR(3) 
+    See(NearestEnemyOfType([PC.0.0.FIGTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN]))
+    See(NearestEnemyOfType([PC.0.0.RANGER]))
+    See(NearestEnemyOfType([PC.0.0.MONK]))
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+    HaveSpell(WIZARD_BLINDNESS)    
+  THEN 
+    RESPONSE #100
+    Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)
+    Continue()
+END
+
+//SEQUENCER
+IF
+    !GlobalTimerExpired("KZASSRestT","LOCALS")
+    GlobalTimerExpired("CASTSPELL","LOCALS")
+    Allegiance(Myself,ENEMY)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    OR(4)
+      See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+      See(NearestEnemyOfType([PC.0.0.RANGER]))
+      See(NearestEnemyOfType([PC.0.0.PALADIN]))
+      See(NearestEnemyOfType([PC.0.0.MONK]))
+    Global("SpellTriger","LOCALS",0)
+  THEN 
+    RESPONSE #100
+      SetGlobal("SpellTriger","LOCALS",1)
+      DisplayString(Myself,39968)    
+      ReallyForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+      Wait(1)
+      ReallyForceSpell(LastSeenBy(Myself),WIZARD_BLINDNESS)
+      ReallyForceSpell(LastSeenBy(Myself),WIZARD_HOLD_PERSON)
+      Continue()
+END
+
+//ATTACK THE WEAK
+IF
+  OR(5)
+    See(NearestEnemyOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+    Range(LastSeenBy(Myself),8)
+    StateCheck(Myself,STATE_INVISIBLE)
+  !CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(LastSeenBy(Myself))
+END
+
+//IF ENEMY ARE FAR, USE THOSE PARALYTIC BOLTS
+IF
+  !StateCheck(Myself,STATE_INVISIBLE)
+  OR(5)
+    See(NearestEnemyOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+  !Range(LastSeenBy(Myself),8)
+  !HasItem("shld24",LastSeenBy(Myself))
+THEN
+  RESPONSE #100
+    EquipRanged()
+    Attack(LastSeenBy(Myself))
+END
+
+//ATTACK ANYONE
+IF
+  OR(3)
+    See(NearestEnemyOf(Myself))
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+    StateCheck(Myself,STATE_INVISIBLE)
+    Range(LastSeenBy(Myself),8)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(LastSeenBy(Myself))
+END
+
+//ATTACK ANYONE WITH RANGE
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself),8)
+THEN
+  RESPONSE #100
+    EquipRanged()
+    Attack(NearestEnemyOf(Myself))
+END
+
+//ATTACK ANYONE WITH BACKSTAB
+IF
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself),8)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  Allegiance(Myself,Enemy)
+  !See([PC])
+  !Detect([PC])
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Player1,WIZARD_DIMENSION_DOOR)   
+    ReallyForceSpell(Player1,WIZARD_INVISIBILITY)
+END

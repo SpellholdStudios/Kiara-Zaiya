@@ -1,0 +1,25 @@
+// Isaya : compatibility with TDD and other mods that give access to Small Teeth Pass
+// before chapter 6
+// Add check for chapter 6 or more
+IF
+  InParty("Kiara")  // ~Kiara~
+  GlobalGT("Chapter","GLOBAL",5)
+  Global("C6AmaCreated","AR1700",0)
+THEN
+  RESPONSE #100
+    SetGlobal("C6AmaCreated","AR1700",1)
+    CreateCreature("C6ama",[3075.1000],10)  // ~Amaralis~
+    Continue()
+END
+
+IF
+  InParty("Kiara")  // ~Kiara~
+  GlobalGT("Chapter","GLOBAL",5)
+  DifficultyGT(EASIEST)
+  Global("C6HrothCreated","AR1700",0)
+THEN
+  RESPONSE #100
+    SetGlobal("C6HrothCreated","AR1700",1)
+    CreateCreature("C6Hroth",[3041.1018],10)  // ~Horth'Kar~
+    Continue()
+END

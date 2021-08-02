@@ -1,0 +1,12 @@
+IF
+THEN
+  RESPONSE #100
+    CutSceneId("Kiara")  // 
+    ClearAllActions()
+    StartCutSceneMode()
+    CreateCreatureObjectOffset("Jerlia",Player1,[100.80])
+    SmallWait(1)
+    CreateVisualEffectObject("SPMON1","Jerlia")
+    EndCutSceneMode()
+END
+

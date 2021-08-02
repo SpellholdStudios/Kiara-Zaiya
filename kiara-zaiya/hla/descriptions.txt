@@ -1,0 +1,46 @@
+THIS TEXT FILE WAS PARTLY PREPARED BY TG MAESTRO
+
+
+Monk new abilities (as from level 20):
+
+***DRAGON FIST***:  
+High level Monks have the ability to focus Ki energies in their bodies in many ways. When using this ability all attacks made by the Monk in the next round will remove the targets Specific Protection (save vs. spell at -2) and one Magical Protection up to 8. level (no save). The victim must save vs. breath to avoid losing all Physical Protections. Creatures hit by Dragon Fist must also save vs. death at -4, or their Magic Resistance will be reduced by 19% for 6 rounds. This effect is cumulative. Dragon Fist always removes the strongest Protection spell from the target.
+
+***SHADOWLESS KICK***: 
+This ability gives the Monk a one-time attack. This overwhelming assault is always successful, there is no need for a saving throw. The target suffers 5D8 crushing damage and falls unconscious for 1 round (no save). If the opponent fails its saving throw vs. breath at -4, the power of the kick will knock him back for a considerable distance.
+
+***CHANT***: 
+This ability gives the Monk powerful protections - both physical and magical - for a very short time. It increases Slashing, Piercing, Crushing and Missile resistances to 60%, increases Fire, Cold, Lightning resistances with 20% and gives 10% Magic Damage resistance. The effects of this ability last for 3 rounds.
+
+***SHADOW STANCE***: 
+Achieving absolute control over their bodies, experienced Monks can use this ability to turn into an ethereal state where they become completely invisible and blured to their enemies. If the Monk makes an attack, or breaks the invisibility by any other means, he/she will become partially visible. Until the ability expires, the Monk gains 6 points bonus to AC, and another 4 points bonus to his AC vs. Missile weapons. The ability lasts 5 rounds.
+
+***EVASION***: 
+The natural sense of preservation becomes heightened with the use of the Evasion ability. Evasion gives a bonus of 3 to AC and 2 to all saving throws. The effect lasts for 3 rounds.
+
+***GREATER EVASION***: Greater Evasion 
+A more powerful version of Evasion, this ability is only available to thieves and monks. It decreases AC by 4 and adds 3 to all saving throws. In addition, Greater Evasion allows one to move so quickly that his movement rate is increased by 2 and always escapes breath spells and spell-like abilities (only takes half damage). Greater Evasion lasts for 5 rounds.
+
+***TIGER STRIKE***: 
+With this ability, the monk gains the ability to strike a mighty blow, knocking an opponent back for a considerable distance and stunning the opponent for 1 round. All attacks made in the first round are critical hits. The ability lasts for 2 rounds. Large creatures such as a dragons or giants will not be knocked back or stunned. Requires: Power Attack, Critical Strike
+
+***FASTER THAN THE EYE***
+The monk gains the ability to move at an incredible speed. 
+
+***SOLAR STANCE***:
+The Monk gains the ability to focus his Ki energy and release it all at once, a fireball exploding from his body and doing 6d10 fire damage and possibly knocking opponents back for a considerable distance save vs breath at -4, rendering them unconscious for 1 round. Requires: shadowless kick
+
+
+Original fighter HLA also included:
+
+***POWER ATTACK***:
+A Power Attack allows the monk to strike blows so forceful that they stun an opponent for 2 rounds if he fails his save vs. death at a -4 penalty . The ability lasts for 2 rounds.
+
+***CRITICAL STRIKE***:
+A high level monk's intimate knowledge of vital spots on opponents allows him to, once per day, concentrate all of the attacks in one round to strike a vital area every time. With this ability, every attack roll made in the next round is a natural 20, a critical hit.
+
+***DEATHBLOW****
+See TOB manual
+
+***GREATER DEATHBLOW***
+See TOB manual

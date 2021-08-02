@@ -1,0 +1,10 @@
+IF
+  Global("ZaiyaFindKiara","GLOBAL",4)
+  Global("AmaevilCreated","AR1004",0)
+THEN
+  RESPONSE #100
+    SetGlobal("AmaevilCreated","AR1004",1)
+    CreateCreature("Amaevil",[582.497],15)  // ~Amaralis~
+    Continue()
+END
+

@@ -1,0 +1,6 @@
+//Interjection avec Volo
+
+@0 = ~Parlez-moi de Zaiya.~
+@1 = ~Autrefois enfant perdue de Maztica, affaiblie et maudite, hésitante et timide, qui ratait ses sorts la plupart du temps, Zaiya est devenue une magicienne puissante capable de déployer ses sorts contre les ennemis de <CHARNAME> avec une habile détermination. Prends garde, aventurier, ses bourdes ne tournent plus en ta faveur et tu pourrais bien voir un démon à ses côtés.~ ~Autrefois enfant perdue de Maztica, affaiblie et maudite, hésitante et timide, qui ratait ses sorts la plupart du temps, Zaiya est devenue une magicienne puissante capable de déployer ses sorts contre les ennemis de <CHARNAME> avec une habile détermination. Prends garde, aventurière, ses bourdes ne tournent plus en ta faveur et tu pourrais bien voir un démon à ses côtés.~
+@2 = ~J'espérais que ma malédiction ne serait pas mentionnée dans votre livre, Volo.~
+@3 = ~Je désapprouve fortement. La tragédie conduit souvent à la grandeur et à la légende. Ne pas mentionner votre affliction ne ferait que rabaisser les réelles dimensions de votre personnage.~

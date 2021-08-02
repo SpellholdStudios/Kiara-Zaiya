@@ -1,0 +1,11 @@
+IF
+  !Dead("Zaiya")
+  Global("KZTOBEdwinZai","GLOBAL",1)
+  !AreaType(DUNGEON)
+  See("Edwin")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("KZTOBEdwinZai","GLOBAL",1)	
+    Interact("Edwin")
+END

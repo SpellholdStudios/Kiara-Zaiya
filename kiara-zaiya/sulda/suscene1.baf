@@ -1,0 +1,17 @@
+//REPLACED UNDEAD WITH 1 LICH AND 2 VAMPIRE ILITHIDS
+IF
+  Entered([ANYONE])
+THEN
+  RESPONSE #100
+    CreateCreature("SUELFW2",[1099.3042],8)
+    CreateCreature("SUELFW1",[1413.3012],8)
+    CreateCreature("SUELFW3",[1378.3110],8)
+    CreateCreature("SUELFW13",[1118.3106],8)
+    CreateCreature("LICH01",[1259.2912],8)
+    CreateCreature("KZ#FVAMP",[1394.2900],8)
+    CreateCreature("KZ#FVAMP",[1132.2892],8)
+    TriggerActivation("Scene1a",FALSE)
+    TriggerActivation("Scene1b",FALSE)
+    TriggerActivation("Scene1c",FALSE)
+END
+

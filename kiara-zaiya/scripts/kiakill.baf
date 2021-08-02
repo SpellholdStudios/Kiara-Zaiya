@@ -1,0 +1,16 @@
+IF
+THEN
+  RESPONSE #100
+    CutSceneId("Kiara")  // 
+    LeaveParty()
+    ClearAllActions()
+    Wait(1)
+    FaceObject("Demlord")
+    Wait(1)
+    ReallyForceSpell(Myself,CLERIC_FLAME_STRIKE)
+    ReallyForceSpell(Myself,WIZARD_DISINTEGRATE2_IGNORE_RESISTANCE)
+    Wait(2)
+    EndCutSceneMode()
+    SetGlobal("DemonNotDeal","GLOBAL",1)
+END
+

@@ -1,0 +1,1022 @@
+IF
+  Die()
+  Global("KTRUEEVIL","GLOBAL",1)
+THEN
+  RESPONSE #100
+    DestroySelf()
+END
+
+IF
+  !InPartyAllowDead("Zaiya")  // ~Zaiya~
+  Dead("Zaiya")  // ~Zaiya~
+  !Global("KiaraVampire","GLOBAL",5)
+  CombatCounter(0)
+  Global("NOTSEEZAIYA","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("NOTSEEZAIYA","GLOBAL",1)
+    LeaveParty()
+    SetLeavePartyDialogueFile()
+END
+
+IF
+  Global("SPRITE_IS_DEADVALYGAR","GLOBAL",1)
+  Global("KIAVAL","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KIAVAL","GLOBAL",1)
+    IncrementGlobal("P1EVIL","GLOBAL",3)
+END
+
+IF
+  Global("KIATEST1","LOCALS",0)
+  Global("SPAWNWELTHER","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("KIATEST1","LOCALS",1)
+    IncrementGlobal("P1EVIL","GLOBAL",1)
+END
+
+IF
+  !Global("KiaraRomanceActice","GLOBAL",3)
+  InParty(Myself)
+  See(Player1)
+  GlobalLT("P1EVIL","GLOBAL",4)
+  GlobalLT("Chapter","GLOBAL",4)
+  GlobalGT("LoveTalk","LOCALS",30)
+  GlobalGT("KIACHA","GLOBAL",1)
+  Global("KIAUHAPPY","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KIAUHAPPY","LOCALS",1)
+    RealSetGlobalTimer("KiaraReact","GLOBAL",5)
+    Wait(2)
+END
+
+IF
+  RealGlobalTimerExpired("KiaraReact","GLOBAL")
+  !Global("KiaraRomanceActice","GLOBAL",3)
+  InParty(Myself)
+  See(Player1)
+  GlobalLT("P1EVIL","GLOBAL",4)
+  GlobalLT("Chapter","GLOBAL",4)
+  GlobalGT("LoveTalk","LOCALS",30)
+  Global("KIAUHAPPY","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("KIAUHAPPY","LOCALS",2)
+    StartDialogNoSet([PC])
+END
+
+IF
+  RealGlobalTimerExpired("KiaraPardon","GLOBAL")
+  !Global("KiaraRomanceActice","GLOBAL",3)
+  InParty(Myself)
+  See(Player1)
+  Global("KIAUHAPPY","LOCALS",3)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("KiaraRomance","GLOBAL",3000)
+    SetGlobal("KIAUHAPPY","LOCALS",4)
+    StartDialogNoSet([PC])
+END
+
+IF
+  !Dead("Kiara")  // ~Kiara~
+  InParty("Zaiya")  // ~Zaiya~
+  !AreaCheck("AR2500")
+  OR(6)
+    AreaCheck("AR1300")
+    AreaCheck("AR1100")
+    AreaCheck("AR1400")
+    AreaCheck("AR1700")
+    AreaType(FOREST)
+    AreaCheck("AR2601")
+  GlobalGT("CHAPTER","GLOBAL",5)
+  !See([ENEMY])
+  !Range([NEUTRAL],50)
+  CombatCounter(0)
+  GlobalLT("P1EVIL","GLOBAL",13)
+  GlobalGT("P1EVIL","GLOBAL",9)
+  Global("KiaraSucceed","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraSucceed","GLOBAL",1)
+    ChangeAlignment(Player1,NEUTRAL_EVIL)
+    ReputationInc(-2)
+END
+
+IF
+  Global("KiaraSucceed","GLOBAL",0)
+  Global("SPRITE_IS_DEADHPRELATE","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraSucceed","GLOBAL",1)
+    ChangeAlignment(Player1,NEUTRAL_EVIL)
+    ReputationInc(-2)
+END
+
+IF
+  !Dead("Kiara")  // ~Kiara~
+  InParty("Zaiya")  // ~Zaiya~
+  !AreaCheck("AR2500")
+  OR(6)
+    AreaCheck("AR1300")
+    AreaCheck("AR1100")
+    AreaCheck("AR1400")
+    AreaCheck("AR1700")
+    AreaType(FOREST)
+    AreaCheck("AR2601")
+  GlobalGT("CHAPTER","GLOBAL",5)
+  !See([ENEMY])
+  !Range([NEUTRAL],50)
+  CombatCounter(0)
+  GlobalLT("P1EVIL","GLOBAL",13)
+  GlobalGT("P1EVIL","GLOBAL",9)
+  Global("KiaraSucceed","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraSucceed","GLOBAL",1)
+    ChangeAlignment(Player1,CHAOTIC_EVIL)
+    ReputationInc(-4)
+END
+
+IF
+  !Dead("Kiara")  // ~Kiara~
+  InParty("Zaiya")  // ~Zaiya~
+  !AreaCheck("AR2500")
+  OR(6)
+    AreaCheck("AR1300")
+    AreaCheck("AR1100")
+    AreaCheck("AR1400")
+    AreaCheck("AR1700")
+    AreaType(FOREST)
+    AreaCheck("AR2601")
+  GlobalGT("CHAPTER","GLOBAL",5)
+  !See([ENEMY])
+  !Range([NEUTRAL],50)
+  CombatCounter(0)
+  GlobalLT("P1EVIL","GLOBAL",13)
+  GlobalGT("P1EVIL","GLOBAL",9)
+  Global("KiaraSucceed","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraFail","GLOBAL",1)
+END
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("PastPhaere","LOCALS",0)
+  OR(2)
+    Global("PhaereInnuendo","GLOBAL",2)
+    Global("PhaereInnuendo","GLOBAL",3)
+  !Range("Phaere",6)  // Phaere
+  OR(2)
+    Global("KiaraRomanceActive","GLOBAL",1)
+    Global("KiaraRomanceActive","GLOBAL",2)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("PastPhaere","LOCALS",1)
+    StartDialogNoSet([PC])
+END
+
+IF
+  !InParty(Myself)
+  Global("KiaraVampire","GLOBAL",4)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraVampire","GLOBAL",5)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Global("LoveTalk","LOCALS",0)
+  InParty(Myself)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("KiaraRomance","GLOBAL",300)
+    SetGlobal("CheckKiaraMatch","GLOBAL",1)
+    SetGlobal("LoveTalk","LOCALS",1)
+    SetGlobal("KiaraRomanceActive","GLOBAL",1)
+    Continue()
+END
+
+IF
+  Global("CheckKiaraMatch","GLOBAL",1)
+  Gender(Player1,MALE)
+  OR(3)
+    Race(Player1,HUMAN)
+    Race(Player1,ELF)
+    Race(Player1,HALF_ELF)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraMatch","GLOBAL",1)
+    SetGlobal("CheckKiaraMatch","GLOBAL",2)
+END
+
+IF
+  Global("CheckKiaraMatch","GLOBAL",1)
+  Gender(Player1,FEMALE)
+  OR(4)
+    Race(Player1,HALFORC)
+    Race(Player1,GNOME)
+    Race(Player1,HALFLING)
+    Race(Player1,DWARF)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraMatch","GLOBAL",0)
+    SetGlobal("CheckKiaraMatch","GLOBAL",2)
+END
+
+IF
+  Global("KiaraKOTimerSet","GLOBAL",0)
+  Global("KickedOut","LOCALS",1)
+  OR(2)
+    Global("KiaraRomanceActive","GLOBAL",1)
+    Global("KiaraRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("KiaraRomanceExpired","LOCALS",ONE_DAY)
+    SetGlobal("KiaraKOTimerSet","GLOBAL",1)
+END
+
+IF
+  Global("KiaraKOTimerSet","GLOBAL",1)
+  GlobalTimerExpired("KiaraRomanceExpired","LOCALS")
+  Global("KickedOut","LOCALS",1)
+  OR(2)
+    Global("KiaraRomanceActive","GLOBAL",1)
+    Global("KiaraRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraKOTimerSet","GLOBAL",2)
+    SetGlobal("KiaraRomanceActive","GLOBAL",3)
+END
+
+IF
+  Global("KiaraKOTimerSet","GLOBAL",1)
+  GlobalTimerExpired("KiaraRomanceExpired","LOCALS")
+  Global("KickedOut","LOCALS",0)
+  OR(2)
+    Global("KiaraRomanceActive","GLOBAL",1)
+    Global("KiaraRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraKOTimerSet","GLOBAL",0)
+END
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  Global("SolaTalk","GLOBAL",12)
+  Global("SolaPCTalk","GLOBAL",0)
+  Global("FWKiaraObjectsSolaufein","LOCALS",0)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  OR(2)
+    Global("JaheiraRomanceActive","GLOBAL",1)
+    Global("JaheiraRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  OR(2)
+    Global("AerieRomanceActive","GLOBAL",1)
+    Global("AerieRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("AerieRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  OR(2)
+    Global("NaliaRomanceActive","GLOBAL",1)
+    Global("NaliaRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  OR(2)
+    Global("ViconiaRomanceActive","GLOBAL",1)
+    Global("ViconiaRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  OR(2)
+    Global("TashiaRomanceActive","GLOBAL",1)
+    Global("TashiaRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("TashiaRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  OR(2)
+    Global("ValenRomanceActive","GLOBAL",1)
+    Global("ValenRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("ValenRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  OR(2)
+    Global("ImoenRomanceActive","GLOBAL",1)
+    Global("ImoenRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("ImoenRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  GlobalGT("LoveTalk","LOCALS",22)
+  OR(2)
+    Global("KiaraRomanceActive","GLOBAL",1)
+    Global("KiaraRomanceActive","GLOBAL",2)
+  OR(7)
+    Global("JaheiraRomanceActive","GLOBAL",2)
+    Global("AerieRomanceActive","GLOBAL",2)
+    Global("NaliaRomanceActive","GLOBAL",2)
+    Global("ViconiaRomanceActive","GLOBAL",2)
+    Global("TashiaRomanceActive","GLOBAL",2)
+    Global("ValenRomanceActive","GLOBAL",2)
+    Global("ImoenRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  GlobalGT("CHAPTER","GLOBAL",4)
+  GlobalLT("LoveTalk","LOCALS",36)
+  OR(2)
+    Global("KiaraRomanceActive","GLOBAL",1)
+    Global("KiaraRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  GlobalGT("CHAPTER","GLOBAL",4)
+  GlobalGT("LoveTalk","LOCALS",35)
+  Global("KiaraRomanceActive","GLOBAL",2)
+  Global("KFIXROM","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KFIXROM","LOCALS",1)
+    SetGlobal("LoveTalk","LOCALS",43)
+END
+
+IF
+  InParty(Myself)
+  PartyRested()
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  GlobalLT("CHAPTER","GLOBAL",5)
+  !AreaType(DUNGEON)
+  See(Player1)
+  CombatCounter(0)
+  Global("LoveTalk","LOCALS",39)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  PartyRested()
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  GlobalLT("CHAPTER","GLOBAL",5)
+  !AreaType(DUNGEON)
+  See(Player1)
+  CombatCounter(0)
+  Global("LoveTalk","LOCALS",49)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  PartyRested()
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  GlobalGT("CHAPTER","GLOBAL",5)
+  !AreaType(DUNGEON)
+  See(Player1)
+  CombatCounter(0)
+  OR(1)
+    Global("LoveTalk","LOCALS",85)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("KiaraRomance","GLOBAL")
+  PartyRested()
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  GlobalLT("CHAPTER","GLOBAL",5)
+  See(Player1)
+  !AreaType(DUNGEON)
+  CombatCounter(0)
+  OR(18)
+    Global("LoveTalk","LOCALS",1)
+    Global("LoveTalk","LOCALS",3)
+    Global("LoveTalk","LOCALS",5)
+    Global("LoveTalk","LOCALS",7)
+    Global("LoveTalk","LOCALS",9)
+    Global("LoveTalk","LOCALS",11)
+    Global("LoveTalk","LOCALS",13)
+    Global("LoveTalk","LOCALS",15)
+    Global("LoveTalk","LOCALS",17)
+    Global("LoveTalk","LOCALS",19)
+    Global("LoveTalk","LOCALS",21)
+    Global("LoveTalk","LOCALS",23)
+    Global("LoveTalk","LOCALS",25)
+    Global("LoveTalk","LOCALS",27)
+    Global("LoveTalk","LOCALS",29)
+    Global("LoveTalk","LOCALS",31)
+    Global("LoveTalk","LOCALS",35)
+    Global("LoveTalk","LOCALS",41)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("KiaraRomance","GLOBAL",30)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("KiaraRomance","GLOBAL")
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  GlobalLT("CHAPTER","GLOBAL",5)
+  !AreaType(DUNGEON)
+  See(Player1)
+  !See([ENEMY])
+  !Range([NEUTRAL],10)
+  CombatCounter(0)
+  OR(11)
+    Global("LoveTalk","LOCALS",1)
+    Global("LoveTalk","LOCALS",3)
+    Global("LoveTalk","LOCALS",5)
+    Global("LoveTalk","LOCALS",7)
+    Global("LoveTalk","LOCALS",9)
+    Global("LoveTalk","LOCALS",11)
+    Global("LoveTalk","LOCALS",13)
+    Global("LoveTalk","LOCALS",15)
+    Global("LoveTalk","LOCALS",17)
+    Global("LoveTalk","LOCALS",19)
+    Global("LoveTalk","LOCALS",21)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("KiaraRomance","GLOBAL")
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  GlobalLT("CHAPTER","GLOBAL",5)
+  !AreaType(DUNGEON)
+  See(Player1)
+  !See([ENEMY])
+  !Range([NEUTRAL],10)
+  CombatCounter(0)
+  OR(7)
+    Global("LoveTalk","LOCALS",23)
+    Global("LoveTalk","LOCALS",25)
+    Global("LoveTalk","LOCALS",27)
+    Global("LoveTalk","LOCALS",29)
+    Global("LoveTalk","LOCALS",31)
+    Global("LoveTalk","LOCALS",35)
+    Global("LoveTalk","LOCALS",41)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+IF
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  InParty("Zaiya")  // ~Zaiya~
+  !AreaCheck("AR2500")
+  OR(6)
+    AreaCheck("AR1300")
+    AreaCheck("AR1100")
+    AreaCheck("AR1400")
+    AreaCheck("AR1700")
+    AreaType(FOREST)
+    AreaCheck("AR2601")
+  GlobalGT("CHAPTER","GLOBAL",5)
+  InParty(Myself)
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  See(Player1)
+  !See([ENEMY])
+  !Range([NEUTRAL],50)
+  CombatCounter(0)
+  Global("LoveTalk","LOCALS",43)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+IF
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  InParty("Zaiya")  // ~Zaiya~
+  !AreaCheck("AR2500")
+  OR(6)
+    AreaCheck("AR1300")
+    AreaCheck("AR1100")
+    AreaCheck("AR1400")
+    AreaCheck("AR1700")
+    AreaType(FOREST)
+    AreaCheck("AR2601")
+  GlobalGT("CHAPTER","GLOBAL",5)
+  InParty(Myself)
+  Global("KiaraRomanceActive","GLOBAL",3)
+  See(Player1)
+  !Range([NEUTRAL],50)
+  CombatCounter(0)
+  Global("KEXPLAIN","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KEXPLAIN","GLOBAL",1)
+    ActionOverride(Myself,StartDialogNoSet(Player1))
+END
+
+IF
+  Global("LoveTalk","LOCALS",45)
+  Alignment(Myself,LAWFUL_NEUTRAL)
+  Global("DemonNotDeal","GLOBAL",20)
+  Global("ALTEREND","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ALTEREND","LOCALS",1)
+    SetGlobal("LoveTalk","LOCALS",81)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("KiaraRomance","GLOBAL")
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  GlobalGT("CHAPTER","GLOBAL",5)
+  GlobalGT("LoveTalk","LOCALS",44)
+  !AreaType(DUNGEON)
+  See(Player1)
+  !See([ENEMY])
+  !Range([NEUTRAL],10)
+  CombatCounter(0)
+  Global("LoveTalk","LOCALS",81)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("KiaraRomance","GLOBAL")
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  GlobalGT("CHAPTER","GLOBAL",5)
+  GlobalGT("LoveTalk","LOCALS",44)
+  !AreaType(DUNGEON)
+  See(Player1)
+  !See([ENEMY])
+  !Range([NEUTRAL],10)
+  CombatCounter(0)
+  Global("LoveTalk","LOCALS",45)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    PlaySong(%Kiara%)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("KiaraRomance","GLOBAL")
+  OR(29)
+    Global("LoveTalk","LOCALS",2)
+    Global("LoveTalk","LOCALS",4)
+    Global("LoveTalk","LOCALS",6)
+    Global("LoveTalk","LOCALS",8)
+    Global("LoveTalk","LOCALS",10)
+    Global("LoveTalk","LOCALS",12)
+    Global("LoveTalk","LOCALS",14)
+    Global("LoveTalk","LOCALS",16)
+    Global("LoveTalk","LOCALS",18)
+    Global("LoveTalk","LOCALS",20)
+    Global("LoveTalk","LOCALS",22)
+    Global("LoveTalk","LOCALS",24)
+    Global("LoveTalk","LOCALS",26)
+    Global("LoveTalk","LOCALS",28)
+    Global("LoveTalk","LOCALS",30)
+    Global("LoveTalk","LOCALS",32)
+    Global("LoveTalk","LOCALS",34)
+    Global("LoveTalk","LOCALS",36)
+    Global("LoveTalk","LOCALS",38)
+    Global("LoveTalk","LOCALS",40)
+    Global("LoveTalk","LOCALS",42)
+    Global("LoveTalk","LOCALS",44)
+    Global("LoveTalk","LOCALS",46)
+    Global("LoveTalk","LOCALS",48)
+    Global("LoveTalk","LOCALS",50)
+    Global("LoveTalk","LOCALS",52)
+    Global("LoveTalk","LOCALS",82)
+    Global("LoveTalk","LOCALS",84)
+    Global("LoveTalk","LOCALS",86)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    RealSetGlobalTimer("KiaraRomance","GLOBAL",3000)
+END
+
+IF
+  LevelGT(Myself,5)
+  Global("KiaShadow1","GLOBAL",0)
+THEN
+  RESPONSE #100
+    AddSpecialAbility("SHDST01")  // ~Shadow Stance!~
+    SetGlobal("KiaShadow1","GLOBAL",1)
+END
+
+IF
+  LevelGT(Myself,9)
+  Global("KiaSnake3","GLOBAL",0)
+THEN
+  RESPONSE #100
+    AddSpecialAbility("SNAKE01")  // ~Snake Stance!~
+    SetGlobal("KiaSnake3","GLOBAL",1)
+END
+
+IF
+  LevelGT(Myself,15)
+  Global("KiaSnake4","GLOBAL",0)
+THEN
+  RESPONSE #100
+    AddSpecialAbility("SNAKE01")  // ~Snake Stance!~
+    SetGlobal("KiaSnake4","GLOBAL",1)
+END
+
+IF
+  LevelGT(Myself,18)
+  Global("KiaSolar1","GLOBAL",0)
+THEN
+  RESPONSE #100
+    AddSpecialAbility("SOLAR01")  // ~Solar Stance!~
+    SetGlobal("KiaSolar1","GLOBAL",1)
+END
+
+IF
+  Global("DragSt","GLOBAL",1)
+THEN
+  RESPONSE #100
+    AddSpecialAbility("DRAGO01")  // ~Dragon Stance!~
+    SetGlobal("DragSt","GLOBAL",2)
+END
+
+IF
+  InParty(Myself)
+  Global("KiaWarning","AR0502",0)
+  AreaCheck("AR0502")
+THEN
+  RESPONSE #100
+    SetGlobal("KiaWarning","AR0502",1)
+    ActionOverride(Myself,StartDialogNoSet(Player1))
+END
+
+IF
+  OR(2)
+    GlobalGT("LoveTalk","LOCALS",44)
+    Global("KEXPLAIN","GLOBAL",2)
+  Global("DelordCreate","GLOBAL",0)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    SetGlobal("DelordCreate","GLOBAL",1)
+    FadeToColor([1.0],0)
+    CreateCreatureObjectOffset("DELORD",Player1,[0.120])
+    SmallWait(3)
+    FadeFromColor([30.0],0)
+    FaceObject(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("KQUEST","LOCALS",0)
+  Global("P1DEAL","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("KQUEST","LOCALS",1)
+    AddJournalEntry(@30,QUEST)
+END
+
+IF
+  InParty(Myself)
+  Global("P1DEAL","GLOBAL",1)
+  Dead("Amaralis")  // Amaralis
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    EraseJournalEntry(@30)  // ~Kill Amaralis:Despite Kiara's treachery, I accepted the Demon Lord's offer to kill Amaralis. Amaralis, master slaver of Athkatla has currently set camp in the small teeth pass area and I have only ten days to do the bidding of the Demon Lord.~
+    AddJournalEntry(@30,QUEST_DONE)
+    SetGlobal("P1DEAL","GLOBAL",2)
+    FadeToColor([1.0],0)
+    CreateCreatureObjectOffset("DELORD",Player1,[0.120])
+    SetGlobal("DelordCreate","GLOBAL",1)
+    SmallWait(3)
+    FadeFromColor([30.0],0)
+    SmallWait(1)
+    FaceObject(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("P1DEAL","GLOBAL",1)
+  !Dead("Amaralis")  // Amaralis
+  GlobalTimerExpired("DemonQuest","GLOBAL")
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    SetGlobal("P1DEAL","GLOBAL",2)
+    FadeToColor([1.0],0)
+    CreateCreatureObjectOffset("DELORD",Player1,[0.120])
+    SmallWait(3)
+    FadeFromColor([30.0],0)
+    SmallWait(1)
+    FaceObject(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("KQUEST1","LOCALS",0)
+  Global("P2DEAL","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("KQUEST1","LOCALS",1)
+    AddJournalEntry(@31,QUEST)
+END
+
+IF
+  !AreaType(CITY)
+  AreaType(OUTDOOR)
+  InParty(Myself)
+  Global("P2DEAL","GLOBAL",1)
+  Global("SPRITE_IS_DEADHPRELATE","GLOBAL",1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    EraseJournalEntry(@31)  // ~Kill Prelate Wessalen:I have accepted the Demon Lord's request to kill prelate Wessalen of the Order of the Radiant Heart in the hope that it would save Kiara from a gruesome fate. The Demon Lord gave me three days to commit this monstrous act.~
+    AddJournalEntry(@32,QUEST_DONE)
+    SetGlobal("P2DEAL","GLOBAL",2)
+    FadeToColor([1.0],0)
+    CreateCreatureObjectOffset("DELORD",Player1,[0.120])
+    SmallWait(3)
+    FadeFromColor([30.0],0)
+    SmallWait(1)
+    FaceObject(Player1)
+END
+
+IF
+  !AreaType(CITY)
+  AreaType(OUTDOOR)
+  InParty(Myself)
+  Global("P2DEAL","GLOBAL",1)
+  !Global("SPRITE_IS_DEADHPRELATE","GLOBAL",1)
+  GlobalTimerExpired("DemonQuest","GLOBAL")
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    SetGlobal("P2DEAL","GLOBAL",2)
+    FadeToColor([1.0],0)
+    CreateCreatureObjectOffset("DELORD",Player1,[0.120])
+    SmallWait(3)
+    FadeFromColor([30.0],0)
+    SmallWait(1)
+    FaceObject(Player1)
+END
+
+IF
+  Global("DemonDeal","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,HELL_GAIN_STR)
+    ApplySpell(Myself,HELL_GAIN_STR)
+    ApplySpell(Myself,HELL_GAIN_STR)
+    ApplySpell(Myself,HELL_GAIN_STR)
+    ApplySpell(Myself,HELL_GREED_EVIL)
+    AddXPObject(Myself,100000)
+    AddXPObject(Player1,50000)
+    DestroyItem("Clckk1")  // ~Osan's Monk Robe~
+    CreateItem("Clckk2",1,1,1)  // ~Osan's Monk Robe~
+    SetGlobal("DemonDeal","GLOBAL",2)
+    Wait(3)
+END
+
+IF
+  Global("DemonDeal","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("DemonDeal","GLOBAL",4)
+    Interact(Player1)
+END
+
+IF
+  Global("ZaiyaOut","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiyaOut","GLOBAL",2)
+    LeaveParty()
+    SetLeavePartyDialogueFile()
+END
+
+IF
+  InParty(Myself)
+  Delay(20)
+  GlobalLT("KIACHA","GLOBAL",2)
+  Global("KIALEAV","GLOBAL",0)
+  AreaCheck("AR1600")
+THEN
+  RESPONSE #100
+    Wait(10)
+    SetGlobal("KIALEAV","GLOBAL",1)
+    StartDialogNoSet([PC])
+END
+
+IF
+  InParty(Myself)
+  GlobalLT("Chapter","GLOBAL",3)
+  Global("SPRITE_IS_DEADAMARALIS","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("SPRITE_IS_DEADAMARALIS","GLOBAL",0)
+END
+
+IF
+  GlobalGT("Chapter","GLOBAL",1)
+  Global("HideWatcher","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("HideWatcher","LOCALS",1)
+    HideAreaOnMap("AR3000")
+END
+
+IF
+  InParty(Myself)
+  Delay(20)
+  !Detect([ENEMY])
+  IfValidForPartyDialogue("Nalia")  // Nalia
+  GlobalGT("LoveTalk","LOCALS",2)
+  Global("KiaTalkNalia","AR0400",0)
+  AreaCheck("AR0400")
+THEN
+  RESPONSE #100
+    SetGlobal("KiaTalkNalia","AR0400",1)
+    Interact("Nalia")
+END
+
+IF
+  InParty(Myself)
+  Delay(30)
+  !Detect([ENEMY])
+  IfValidForPartyDialogue("Yoshimo")  // Yoshimo
+  GlobalGT("LoveTalk","LOCALS",2)
+  Global("KiaTalkYoshimo","AR0300",0)
+  AreaCheck("AR0300")
+THEN
+  RESPONSE #100
+    SetGlobal("KiaTalkYoshimo","AR0300",1)
+    Interact("Yoshimo")
+END
+
+IF
+  InParty(Myself)
+  Delay(20)
+  !Detect([ENEMY])
+  IfValidForPartyDialogue("Jaheira")  // Jaheira
+  GlobalGT("LoveTalk","LOCALS",2)
+  Global("KiaTalkJaheira","AR1900",0)
+  AreaCheck("AR1900")
+THEN
+  RESPONSE #100
+    SetGlobal("KiaTalkJaheira","AR1900",1)
+    Interact("Jaheira")
+END
+
+IF
+  InParty(Myself)
+  Delay(20)
+  !Detect([ENEMY])
+  IfValidForPartyDialogue("Imoen2")  // Imoen2
+  GlobalGT("LoveTalk","LOCALS",2)
+  Global("KiaTalkImoen","AR1600",0)
+  AreaCheck("AR1600")
+THEN
+  RESPONSE #100
+    SetGlobal("KiaTalkImoen","AR1600",1)
+    Interact("Imoen2")
+END
+
+IF
+  InParty(Myself)
+  Delay(20)
+  !Detect([ENEMY])
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  IfValidForPartyDialogue("Viconia")  // Viconia
+  GlobalGT("LoveTalk","LOCALS",12)
+  Global("KiaTalkViconia","AR0700",0)
+  AreaCheck("AR0700")
+THEN
+  RESPONSE #100
+    SetGlobal("KiaTalkViconia","AR0700",1)
+    Interact("Viconia")
+END
+
+IF
+  InParty(Myself)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  RealGlobalTimerExpired("KiaMinscT","GLOBAL")
+  IfValidForPartyDialogue("Minsc")  // Minsc
+  PartyHasItem("Zachik")  // ~Boo~
+  Global("KiaMinsc","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaMinsc","GLOBAL",2)
+    Interact("Minsc")
+END
+
+IF
+  Global("JERLIAQUEST","GLOBAL",1)
+  Global("J1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("J1","LOCALS",1)
+    AddJournalEntry(@29,QUEST)
+END
+
+IF
+  Global("JERLIAQUEST","GLOBAL",2)
+  Global("J1","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("J1","LOCALS",2)
+    AddJournalEntry(@29,QUEST_DONE)
+    EraseJournalEntry(@29)  // ~Jerlia's soul:I met a strange ghost named Jerlia in one of the graveyard crypts. She claims a demon stole her soul and she can not be put at rest until she gets it back. Although, she wasn't quite clear as to where I could find the demon, she said he could be hiding near a temple or in a cave.~
+END
+

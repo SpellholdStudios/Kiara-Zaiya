@@ -1,0 +1,9 @@
+//CREATE SOME DRAGON PROTECTORS
+IF
+  Global("KZNinjaExist","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KZNinjaExist","GLOBAL",1)
+    CreateCreature("KZNINJA",[357.430],0)
+END
+

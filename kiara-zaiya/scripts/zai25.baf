@@ -1,0 +1,17 @@
+
+//LAST PART. HAPPENS AFTER A REST
+IF
+  InParty(Myself)
+  PartyRested()
+  See("Edwin")
+  !StateCheck("Edwin",STATE_SLEEPING)
+  InParty("Edwin")	
+  Global("KZTOBEdwinZai","GLOBAL",3)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("KZTOBEdwinZai","GLOBAL",1)
+    Interact("Edwin")
+END
+
+

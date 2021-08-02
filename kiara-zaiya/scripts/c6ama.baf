@@ -1,0 +1,25 @@
+IF
+  Die()
+THEN
+  RESPONSE #100
+    DestroySelf()
+    AddXPObject(Player1,25000)
+    AddXPObject(Player2,25000)
+    AddXPObject(Player3,25000)
+    AddXPObject(Player4,25000)
+    AddXPObject(Player5,25000)
+    AddXPObject(Player6,25000)
+END
+
+IF
+  Global("AttackC6Ama","GLOBAL",1)
+  InMyArea(Player1)
+  Global("ResetAma","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ResetAma","GLOBAL",0)
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep1","LOCALS",0)
+    SetGlobal("Prep2","LOCALS",0)
+END
+

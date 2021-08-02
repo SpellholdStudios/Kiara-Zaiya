@@ -1,0 +1,252 @@
+IF
+  GlobalTimerExpired("AmaRestTimer","LOCALS")
+  Detect([PC])
+THEN
+  RESPONSE #100
+    SetGlobal("PrepAmaevil","LOCALS",0)
+    SetGlobal("AmaTrigger","LOCALS",0)
+    SetGlobal("AmaPrep2","LOCALS",0)
+    SetGlobal("AmaHaste","LOCALS",0)
+    SetGlobal("AStone","LOCALS",0)
+    SetGlobal("AmaTriggerM","LOCALS",0)
+    DisplayStringHead(Myself,@42)  // ~ You dare challenge me again?~
+    ApplySpell(Myself,CLERIC_HEAL)
+    Rest()
+    SmallWait(1)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("PrepAmaevil","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaRestTimer","LOCALS",TWO_HOURS)
+    DisplayString(Myself,26328)  // ~Chain Contingency~
+    ReallyForceSpell(Myself,WIZARD_SPELL_SHIELD)
+    DisplayString(Myself,@37)  // ~ Chain Contingency - Spell Shield~
+    ReallyForceSpell(Myself,WIZARD_SPELL_TURNING)
+    ReallyForceSpell(Myself,WIZARD_IMPROVED_MANTLE)
+    DisplayString(Myself,@38)  // ~ Chain Contingency - Improved Mantle~
+    ReallyForceSpell(Myself,WIZARD_SPELL_DEFLECTION)
+    DisplayString(Myself,@39)  // ~ Chain Contingency - Spell Deflection~
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    DisplayString(Myself,29736)  // ~Contingency - Stoneskin~
+    SetGlobal("PrepAmaEvil","LOCALS",1)
+    Continue()
+END
+
+IF
+  !HPPercentLT(Myself,30)
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_TRUE_SIGHT)
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  See(NearestEnemyOf(Myself))
+  StateCheck(Myself,STATE_SILENCED)
+  HaveSpell(WIZARD_VOCALIZE)
+  Global("PrepAmaevil","LOCALS",1)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_VOCALIZE)
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  See(NearestEnemyOf(Myself))
+  SpellCast([ANYONE],CLERIC_INSECT_PLAGUE)
+  Global("PrepAmaevil","LOCALS",1)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  !HPPercentLT(Myself,30)
+  CheckStatLT(Myself,1,STONESKINS)
+  Global("PrepAmaevil","LOCALS",1)
+  HaveSpell(WIZARD_STONE_SKIN)
+  !GlobalGT("AStone","LOCALS",3)
+THEN
+  RESPONSE #100
+    IncrementGlobal("AStone","LOCALS",1)
+    DisplayString(Myself,29736)  // ~Contingency - Stoneskin~
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    Continue()
+END
+
+IF
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  Global("PrepAmaevil","LOCALS",1)
+  Global("AmaHaste","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("AmaHaste","LOCALS",1)
+    ApplySpell(Myself,KENSAI_KIA)
+    ApplySpell(Myself,WIZARD_IMPROVED_HASTE)
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    EquipMostDamagingMelee()
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("AmaCast","LOCALS")
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  !StateCheck(NearestEnemyOfType([0.0.0.MAGE_ALL]),STATE_MIRRORIMAGE)
+  !CheckStat(NearestEnemyOfType([0.0.0.MAGE_ALL]),6,WIZARD_SPELL_IMMUNITY)
+  CheckStatLT(NearestEnemyOfType([0.0.0.MAGE_ALL]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(NearestEnemyOfType([0.0.0.MAGE_ALL]),1,WIZARD_SPELL_TURNING)
+  Global("PrepAmaevil","LOCALS",1)
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+  Global("AmaTriggerM","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("AmaTriggerM","LOCALS",1)
+    DisplayStringHead(Myself,@148)  // ~ Poor mage...You left it unprotected...Careless fool!~
+    DisplayString(Myself,25951)  // ~Spell Sequencer~
+    ActionOverride(Myself,ReallyForceSpell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_MAGIC_MISSILE))
+    ActionOverride(Myself,ReallyForceSpell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_MAGIC_MISSILE))
+    ActionOverride(Myself,ReallyForceSpell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_MAGIC_MISSILE))
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  OR(6)
+    StateCheck(Player1,STATE_REALLY_DEAD)
+    StateCheck(Player2,STATE_REALLY_DEAD)
+    StateCheck(Player3,STATE_REALLY_DEAD)
+    StateCheck(Player4,STATE_REALLY_DEAD)
+    StateCheck(Player5,STATE_REALLY_DEAD)
+    StateCheck(Player6,STATE_REALLY_DEAD)
+  Global("AmaComment","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("AmaComment","LOCALS",1)
+    DisplayStringHead(Myself,@149)  // ~ I hope this dead corpse was just an acquaintance and not a dear friend?~
+END
+
+IF
+  GlobalTimerExpired("AmaCast","LOCALS")
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  See(NearestEnemyOf(Myself))
+  Global("PrepAmaevil","LOCALS",1)
+  HaveSpell(WIZARD_SLOW)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_SLOW))
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("AmaCast","LOCALS")
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  See(NearestEnemyOf(Myself))
+  Global("PrepAmaevil","LOCALS",1)
+  Global("AmaTrigger","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("AmaTrigger","LOCALS",1)
+    DisplayString(Myself,25951)  // ~Spell Sequencer~
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MONSTER_SUMMONING_3)
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_CHAOS)
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("AmaCast","LOCALS")
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  See(NearestEnemyOf(Myself))
+  Global("PrepAmaevil","LOCALS",1)
+  HaveSpell(WIZARD_CONE_OF_COLD)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_CONE_OF_COLD))
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("AmaCast","LOCALS")
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_RESIST_FEAR)
+  Global("PrepAmaevil","LOCALS",1)
+  HaveSpell(WIZARD_HORROR)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_HORROR))
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("AmaCast","LOCALS")
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  Global("PrepAmaevil","LOCALS",1)
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,25951)  // ~Spell Sequencer~
+    ActionOverride(Myself,Spell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_MAGIC_MISSILE))
+    SetGlobalTimer("AmaCast","LOCALS",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("AmaCast","LOCALS")
+  !HPPercentLT(Myself,30)
+  !GlobalTimerExpired("AmaRestTimer","LOCALS")
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  Global("PrepAmaevil","LOCALS",1)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+END
+

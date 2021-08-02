@@ -1,0 +1,1117 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Global("KiaCombat","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaCombat","GLOBAL",1)
+    SetGlobal("KiaPrep","LOCALS",0)
+    SetGlobal("KAssess","LOCALS",0)
+    SetGlobal("KiaTarget","LOCALS",0)
+    SetGlobal("KiaPotn","LOCALS",0)
+    SetGlobal("KiaRem","LOCALS",0)
+    SetGlobal("KReturnCbt","LOCALS",0)
+    SetGlobal("KPotionT","LOCALS",0)
+    SetGlobal("KWhirl","LOCALS",0)
+    SetGlobalTimer("MONKTIMER","GLOBAL",TEN_HOURS)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",3)
+  OR(2)
+    Detect([EVILCUTOFF])
+    !CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("KCActive","GLOBAL",1)
+    SetGlobalTimer("MONKTIMER","GLOBAL",TWO_ROUNDS)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  LevelLT(NearestEnemyOf(Myself),4)
+  !Range(NearestEnemyOf(Myself),10)
+THEN
+  RESPONSE #100
+    SetGlobal("KCActive","GLOBAL",5)
+    MoveToObject(NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(GroupOf([EVILCUTOFF]))
+  OR(4)
+    LevelGT(NearestEnemyOf(Myself),3)
+    LevelGT(SecondNearestEnemyOf(Myself),3)
+    LevelGT(ThirdNearestEnemyOf(Myself),3)
+    LevelGT(FourthNearestEnemyOf(Myself),3)
+  Global("KCActive","GLOBAL",5)
+  Global("KAssess","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KAssess","LOCALS",1)
+    SetGlobal("KCActive","GLOBAL",1)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,50,RESISTMAGIC)
+  LevelGT(NearestEnemyOfType([0.0.0.MAGE_ALL]),17)
+  HaveSpellRES("SHDST01")
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,73943)  // ~Shadow Stance!~
+    SpellRES("SHDST01",Myself)  // ~Shadow Stance!~
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  CheckStatGT(NearestEnemyOfType([0.0.0.MAGE_ALL]),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  !HaveSpellRES("DRAGF01")
+  !Detect(SecondNearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@44)  // ~ My fighting skills are useless! ~
+    SetGlobal("KCActive","GLOBAL",0)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Range(NearestEnemyOf(Myself),4)
+THEN
+  RESPONSE #100
+    MoveToObject(NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  OR(5)
+    CheckStatGT(NearestEnemyOf(Myself),0,WIZARD_SPELL_TRAP)
+    CheckStatGT(NearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+    CheckStatGT(NearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+    CheckStatGT(NearestEnemyOf(Myself),0,STONESKINS)
+    CheckStatGT(NearestEnemyOf(Myself),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  HaveSpellRES("DRAGF01")
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,72915)  // ~Dragon Fist~
+    ActionOverride(Myself,SpellRES("DRAGF01",Myself))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackOneRound(NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  NumCreatureGT([ENEMY],2)
+  See(NearestEnemyOf(Myself))
+  Range(SecondNearestEnemyOf(Myself),10)
+  !HPPercentLT(Myself,30)
+  HaveSpellRES("SOLAR01")
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,72906)  // ~Solar Stance!~
+    ActionOverride(Myself,SpellRES("SOLAR01",Myself))  // ~Solar Stance!~
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  Range(NearestEnemyOf(Myself),10)
+  See(NearestEnemyOf(Myself))
+  !Detect(SecondNearestEnemyOf(Myself))
+  CheckStatLT(NearestEnemyOf(Myself),51,RESISTMAGIC)
+  HaveSpellRES("SHADK01")
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,73942)  // ~Shadowless Kick!~
+    SpellRES("SHADK01",NearestEnemyOf(Myself))  // SHADK01
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  HaveSpellRES("SNAKE01")
+  !StateCheck(Myself,STATE_HASTED)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,73941)  // ~Faster Than the Eye!~
+    ActionOverride(Myself,SpellRES("SNAKE01",Myself))  // ~Snake Stance!~
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+    Continue()
+END
+
+IF
+  LevelLT(NearestEnemyOf(Myself),9)
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WARRIOR_DEATHBLOW)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    ActionOverride(Myself,Spell(Myself,WARRIOR_DEATHBLOW))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  LevelLT(NearestEnemyOf(Myself),13)
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WARRIOR_GREATER_DEATHBLOW)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    ActionOverride(Myself,Spell(Myself,WARRIOR_GREATER_DEATHBLOW))
+    SetGlobalTimer("MONKTIMER","GLOBAL",TWO_ROUNDS)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  CheckStatGT(NearestEnemyOf(Myself),5,SAVEVSSPELL)
+  HaveSpell(MONK_QUIVERING_PALM)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,72936)  // ~Hyo-o-cha!~
+    ActionOverride(Myself,Spell(Myself,MONK_QUIVERING_PALM))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  HaveSpellRES("DRAGO01")
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,@45)  // ~ Dragon Stance! ~
+    ActionOverride(Myself,SpellRES("DRAGO01",Myself))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  CheckStatLT(NearestEnemyOf(Myself),6,SAVEVSSPELL)
+  HaveSpell(MONK_QUIVERING_PALM)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,72936)  // ~Hyo-o-cha!~
+    ActionOverride(Myself,Spell(Myself,MONK_QUIVERING_PALM))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  HaveSpellRES("SHADK01")
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,73942)  // ~Shadowless Kick!~
+    SpellRES("SHADK01",NearestEnemyOf(Myself))  // SHADK01
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !StateCheck(Myself,STATE_HASTED)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  LevelGT(Myself,19)
+  !HaveSpellRES("SNAKE01")
+  HaveSpell(WARRIOR_WHIRLWIND)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,73941)  // ~Faster Than the Eye!~
+    ActionOverride(Myself,Spell(Myself,WARRIOR_WHIRLWIND))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !StateCheck(Myself,STATE_HASTED)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  LevelGT(Myself,19)
+  HaveSpell(WARRIOR_GREATER_WHIRLWIND)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,73941)  // ~Faster Than the Eye!~
+    ActionOverride(Myself,Spell(Myself,WARRIOR_GREATER_WHIRLWIND))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  HaveSpell(WARRIOR_SMITE)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(Myself,WARRIOR_SMITE))
+    SetGlobalTimer("MONKTIMER","GLOBAL",TWO_ROUNDS)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  HaveSpell(WARRIOR_CRITICAL_STRIKE)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(Myself,WARRIOR_CRITICAL_STRIKE))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),6)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself,STATE_HASTED)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  HaveSpell(MONK_STUNNING_BLOW)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,72937)  // ~Kyai-ya!~
+    Spell(Myself,MONK_STUNNING_BLOW)
+    SetGlobalTimer("MONKTIMER","GLOBAL",10)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",5)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  HaveSpell(MONK_STUNNING_BLOW)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,72937)  // ~Kyai-ya!~
+    Spell(Myself,MONK_STUNNING_BLOW)
+    SetGlobalTimer("MONKTIMER","GLOBAL",10)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself,STATE_HASTED)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  HaveSpell(WARRIOR_POWER_ATTACK)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    DisplayStringHead(Myself,72937)  // ~Kyai-ya!~
+    Spell(Myself,WARRIOR_POWER_ATTACK)
+    SetGlobalTimer("MONKTIMER","GLOBAL",10)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    SetGlobalTimer("MONKTIMER","GLOBAL",1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",5)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPrep","LOCALS",1)
+    SetGlobalTimer("MONKTIMER","GLOBAL",1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  CombatCounter(0)
+  Global("KiaCombat","GLOBAL",1)
+  !Detect([EVILCUTOFF])
+  OR(2)
+    Global("KCActive","GLOBAL",2)
+    Global("KCActive","GLOBAL",5)
+THEN
+  RESPONSE #100
+    SetGlobal("KCActive","GLOBAL",1)
+END
+
+IF
+  CombatCounter(0)
+  Global("KiaCombat","GLOBAL",1)
+  OR(1)
+    !Detect([EVILCUTOFF])
+THEN
+  RESPONSE #100
+    SetGlobal("KiaCombat","GLOBAL",0)
+    SetGlobal("KAssess","LOCALS",0)
+    SetGlobal("KiaPrep","LOCALS",0)
+    SetGlobal("KiaPotn","LOCALS",0)
+    SetGlobal("KiaRem","LOCALS",0)
+    SetGlobal("KReturnCbt","LOCALS",0)
+    SetGlobal("KPotionT","LOCALS",0)
+    SetGlobal("KWhirl","LOCALS",0)
+    SetGlobalTimer("MONKTIMER","GLOBAL",TEN_HOURS)
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  Global("KCActive","GLOBAL",1)
+  HPPercentLT(Myself,50)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(MONK_LAY_ON_HANDS)
+  !Global("KiaPrep","LOCALS",0)
+  Global("KiaPotn","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPotn","LOCALS",1)
+    DisplayStringHead(Myself,72808)  // ~I need healing!~
+    ActionOverride(Myself,Spell(Myself,MONK_LAY_ON_HANDS))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  HPPercentLT(Myself,50)
+  See(NearestEnemyOf(Myself))
+  !HaveSpell(MONK_LAY_ON_HANDS)
+  HasItem("Potn55",Myself)  // ~Potion of Superior Healing~
+  !Global("KiaPrep","LOCALS",0)
+  Global("KiaPotn","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPotn","LOCALS",1)
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("Potn55",Myself)  // ~Potion of Superior Healing~
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  HPPercentLT(Myself,50)
+  See(NearestEnemyOf(Myself))
+  !HaveSpell(MONK_LAY_ON_HANDS)
+  !HasItem("Potn55",Myself)  // ~Potion of Superior Healing~
+  HasItem("Potn52",Myself)  // ~Potion of Extra Healing~
+  !Global("KiaPrep","LOCALS",0)
+  Global("KiaPotn","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaPotn","LOCALS",1)
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("Potn52",Myself)  // ~Potion of Extra Healing~
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  Global("KCActive","GLOBAL",1)
+  OR(5)
+    CheckStatGT(NearestEnemyOf(Myself),0,WIZARD_SPELL_TRAP)
+    CheckStatGT(NearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+    CheckStatGT(NearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+    CheckStatGT(NearestEnemyOf(Myself),0,STONESKINS)
+    CheckStatGT(NearestEnemyOf(Myself),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpellRES("DRAGF01")
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,72915)  // ~Dragon Fist~
+    ActionOverride(Myself,SpellRES("DRAGF01",Myself))  // DRAGF01
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackOneRound(NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Range(NearestEnemyOf(Myself),10)
+THEN
+  RESPONSE #100
+    MoveToObject(NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  NumCreatureGT([ENEMY],2)
+  See(NearestEnemyOf(Myself))
+  Global("KCActive","GLOBAL",1)
+  Range(SecondNearestEnemyOf(Myself),10)
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpellRES("SOLAR01")
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,72906)  // ~Solar Stance!~
+    ActionOverride(Myself,SpellRES("SOLAR01",Myself))  // ~Solar Stance!~
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  LevelLT(NearestEnemyOf(Myself),9)
+  See(NearestEnemyOf(Myself))
+  See(SecondNearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),8)
+  Range(SecondNearestEnemyOf(Myself),8)
+  OR(2)
+    Global("KCActive","GLOBAL",5)
+    Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpell(WARRIOR_WAR_CRY)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(Myself,WARRIOR_WAR_CRY))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !StateCheck(Myself,STATE_HASTED)
+  !HPPercent(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  HaveSpellRES("SNAKE01")
+  !Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,73941)  // ~Faster Than the Eye!~
+    ActionOverride(Myself,SpellRES("SNAKE01",Myself))  // ~Snake Stance!~
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  LevelLT(NearestEnemyOf(Myself),9)
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpell(WARRIOR_DEATHBLOW)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(Myself,WARRIOR_DEATHBLOW))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  LevelLT(NearestEnemyOf(Myself),13)
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WARRIOR_GREATER_DEATHBLOW)
+  !Global("KiaPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(Myself,WARRIOR_GREATER_DEATHBLOW))
+    SetGlobalTimer("MONKTIMER","GLOBAL",TWO_ROUNDS)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(NearestEnemyOf(Myself),50,RESISTMAGIC)
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpellRES("SHADK01")
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,73942)  // ~Shadowless Kick!~
+    SpellRES("SHADK01",NearestEnemyOf(Myself))  // SHADK01
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  CheckStatGT(NearestEnemyOf(Myself),8,SAVEVSSPELL)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpell(MONK_QUIVERING_PALM)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,72936)  // ~Hyo-o-cha!~
+    ActionOverride(Myself,Spell(Myself,MONK_QUIVERING_PALM))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpellRES("DRAGO01")
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@45)  // ~ Dragon Stance! ~
+    ActionOverride(Myself,SpellRES("DRAGO01",Myself))  // ~Dragon Stance!~
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !StateCheck(Myself,STATE_HASTED)
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  LevelGT(Myself,19)
+  !Global("KiaPrep","LOCALS",0)
+  !HaveSpellRES("SNAKE01")
+  HaveSpell(WARRIOR_WHIRLWIND)
+  Global("KWhirl","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KWhirl","LOCALS",1)
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    DisplayStringHead(Myself,73941)  // ~Faster Than the Eye!~
+    ActionOverride(Myself,Spell(Myself,WARRIOR_WHIRLWIND))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+    Continue()
+END
+
+IF
+  !StateCheck(Myself,STATE_HASTED)
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !Global("KiaPrep","LOCALS",0)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !HaveSpellRES("SNAKE01")
+  !HaveSpell(WARRIOR_WHIRLWIND)
+  HaveSpell(WARRIOR_GREATER_WHIRLWIND)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,73941)  // ~Faster Than the Eye!~
+    ActionOverride(Myself,Spell(Myself,WARRIOR_GREATER_WHIRLWIND))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  CheckStatLT(NearestEnemyOf(Myself),9,SAVEVSSPELL)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpell(MONK_QUIVERING_PALM)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,72936)  // ~Hyo-o-cha!~
+    ActionOverride(Myself,Spell(Myself,MONK_QUIVERING_PALM))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpellRES("TIGER01")
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,72916)  // ~Tiger Strike~
+    ActionOverride(Myself,SpellRES("TIGER01",Myself))  // TIGER01
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpell(WARRIOR_CRITICAL_STRIKE)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(Myself,WARRIOR_CRITICAL_STRIKE))
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpell(MONK_STUNNING_BLOW)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,72937)  // ~Kyai-ya!~
+    ActionOverride(Myself,Spell(Myself,MONK_STUNNING_BLOW))
+    SetGlobalTimer("MONKTIMER","GLOBAL",TWO_ROUNDS)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",5)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpell(MONK_STUNNING_BLOW)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,72937)  // ~Kyai-ya!~
+    ActionOverride(Myself,Spell(Myself,MONK_STUNNING_BLOW))
+    SetGlobalTimer("MONKTIMER","GLOBAL",TWO_ROUNDS)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  Global("KCActive","GLOBAL",1)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  HaveSpell(WARRIOR_POWER_ATTACK)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,72937)  // ~Kyai-ya!~
+    ActionOverride(Myself,Spell(Myself,WARRIOR_POWER_ATTACK))
+    SetGlobalTimer("MONKTIMER","GLOBAL",10)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  OR(2)
+    Global("KCActive","GLOBAL",1)
+    Global("KCActive","GLOBAL",5)
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  See(NearestEnemyOf(Myself))
+  !Global("KiaPrep","LOCALS",0)
+  !HaveSpellRES("SNAKE01")
+  !HaveSpell(MONK_STUNNING_BLOW)
+  !HaveSpell(WARRIOR_POWER_ATTACK)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MONKTIMER","GLOBAL",1)
+    AttackOneRound(NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !Global("KCActive","GLOBAL",2)
+  OR(3)
+    StateCheck(NearestEnemyOf(Myself),STATE_INVISIBLE)
+    StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+    !See(LastSeenBy(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  ActionListEmpty()
+  HasItem("clckk2",Myself)  // ~Osan's Monk Robe~
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,CLERIC_TRUE_SIGHT)
+    SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !Global("KCActive","GLOBAL",2)
+  See(NearestEnemyOf(Myself))
+  !HPPercentLT(Myself,30)
+  !CheckStatLT(Myself,7,INT)
+  GlobalTimerNotExpired("MONKTIMER","GLOBAL")
+  !Global("KiaPrep","LOCALS",0)
+  ActionListEmpty()
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,8,INT)
+  !HaveSpellRES("SHDST01")
+  HasItem("Potn10",Myself)  // ~Potion of Invisibility~
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,49763)  // ~I require assistance~
+    UseItem("Potn10",Myself)  // ~Potion of Invisibility~
+    RunAwayFrom(LastAttackerOf(Myself),150)
+    Wait(4)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,8,INT)
+  HaveSpellRES("SHDST01")
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,73943)  // ~Shadow Stance!~
+    ActionOverride(Myself,SpellRES("SHDST01",Myself))  // ~Shadow Stance!~
+    RunAwayFrom(LastAttackerOf(Myself),150)
+    Wait(4)
+    Continue()
+END
+
+IF
+  HPPercentLT(Myself,30)
+  Global("KCActive","GLOBAL",1)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  !HaveSpellRES("FASTER2")
+  !HaveSpellRES("SHDST01")
+  !HasItem("potn10",Myself)  // ~Potion of Invisibility~
+  Global("KPotionT","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KPotionT","LOCALS",1)
+    SetGlobal("KCActive","GLOBAL",2)
+    DisplayStringHead(Myself,49763)  // ~I require assistance~
+    MoveToObject("Zaiya")
+    Wait(4)
+    Hide()
+    Continue()
+END
+
+IF
+  HPPercentLT(Myself,30)
+  Global("KCActive","GLOBAL",1)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  !HaveSpellRES("FASTER2")
+  !HaveSpellRES("SHDST01")
+  HasItem("potn10",Myself)  // ~Potion of Invisibility~
+  Global("KPotionT","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KPotionT","LOCALS",1)
+    SetGlobal("KCActive","GLOBAL",2)
+    UseItem("potn10",Myself)  // ~Potion of Invisibility~
+    DisplayStringHead(Myself,49763)  // ~I require assistance~
+    SmallWait(1)
+    MoveToObject("Zaiya")
+    Wait(4)
+    Continue()
+END
+
+IF
+  HPPercentLT(Myself,30)
+  Global("KCActive","GLOBAL",1)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  !HaveSpellRES("FASTER2")
+  HaveSpellRES("SHDST01")
+  Global("KPotionT","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KPotionT","LOCALS",1)
+    SetGlobal("KCActive","GLOBAL",2)
+    DisplayStringHead(Myself,73943)  // ~Shadow Stance!~
+    SpellRES("SHDST01",Myself)  // ~Shadow Stance!~
+    DisplayStringHead(Myself,49763)  // ~I require assistance~
+    SmallWait(1)
+    MoveToObject("Zaiya")
+    Wait(4)
+    Continue()
+END
+
+IF
+  HPPercentLT(Myself,30)
+  Global("KCActive","GLOBAL",1)
+  HaveSpellRES("FASTER2")
+  Global("KPotionT","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KPotionT","LOCALS",1)
+    SetGlobal("KCActive","GLOBAL",2)
+    SpellRES("FASTER2","Zaiya")  // FASTER2
+    DisplayStringHead(Myself,49763)  // ~I require assistance~
+    Wait(4)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",2)
+  Global("KPotionT","LOCALS",1)
+  HasItem("potn55",Myself)  // ~Potion of Superior Healing~
+  !CombatCounter(0)
+  HPPercentLT(Myself,40)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("potn55",Myself)  // ~Potion of Superior Healing~
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",2)
+  Global("KPotionT","LOCALS",1)
+  !HasItem("potn55",Myself)  // ~Potion of Superior Healing~
+  HasItem("potn52",Myself)  // ~Potion of Extra Healing~
+  !CombatCounter(0)
+  HPPercentLT(Myself,40)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("potn52",Myself)  // ~Potion of Extra Healing~
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",2)
+  Global("KPotionT","LOCALS",1)
+  !HasItem("potn55",Myself)  // ~Potion of Superior Healing~
+  !HasItem("potn52",Myself)  // ~Potion of Extra Healing~
+  HasItem("potn08",Myself)  // ~Potion of Healing~
+  !CombatCounter(0)
+  HPPercentLT(Myself,40)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("potn08",Myself)  // ~Potion of Healing~
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",2)
+  Global("KPotionT","LOCALS",1)
+  !HasItem("potn55",Myself)  // ~Potion of Superior Healing~
+  !HasItem("potn52",Myself)  // ~Potion of Extra Healing~
+  !HasItem("potn08",Myself)  // ~Potion of Healing~
+  HasItem("potn42",Myself)  // ~Potion of Regeneration ~
+  !CombatCounter(0)
+  HPPercentLT(Myself,40)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("potn42",Myself)  // ~Potion of Regeneration ~
+    Continue()
+END
+
+IF
+  HPPercentGT(Myself,40)
+  Global("KCActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("KReturnCbt","LOCALS",1)
+    MoveToObject(Player1)
+    Continue()
+END
+
+IF
+  Global("KReturnCbt","LOCALS",1)
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    SetGlobal("KCActive","GLOBAL",1)
+    SetGlobal("KiaCombat","GLOBAL",1)
+    SetGlobal("KiaPrep","LOCALS",1)
+    SetGlobal("KHeal","LOCALS",0)
+    SetGlobal("KPotionT","LOCALS",0)
+    SetGlobal("KReturnCbt","LOCALS",0)
+    SetGlobalTimer("MONKTIMER","GLOBAL",TWO_ROUNDS)
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+    Continue()
+END
+
+IF
+  Global("KReturnCbt","LOCALS",1)
+  !See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    SetGlobal("KiaCombat","GLOBAL",0)
+    SetGlobal("KAssess","LOCALS",0)
+    SetGlobal("KiaPrep","LOCALS",0)
+    SetGlobal("KiaPotn","LOCALS",0)
+    SetGlobal("KiaRem","LOCALS",0)
+    SetGlobal("KReturnCbt","LOCALS",0)
+    SetGlobal("KPotionT","LOCALS",0)
+    SetGlobal("KWhirl","LOCALS",0)
+    SetGlobalTimer("MONKTIMER","GLOBAL",TEN_HOURS)
+    Continue()
+END
+
+IF
+  Global("KCActive","GLOBAL",1)
+  HPPercentLT(Myself,30)
+  CombatCounter(0)
+  !See(NearestEnemyOf(Myself))
+  HaveSpell(MONK_LAY_ON_HANDS)
+THEN
+  RESPONSE #100
+    Spell(Myself,MONK_LAY_ON_HANDS)
+    Continue()
+END
+

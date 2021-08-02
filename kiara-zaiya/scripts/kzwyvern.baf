@@ -1,0 +1,52 @@
+IF
+  Detect(NearestEnemyOf(Myself))
+  Global("KWYVPREP","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KWYVPREP","LOCALS",1)
+    SetGlobalTimer("KWYVTIME","LOCALS",SIX_HOURS)
+    SetGlobalTimer("KWYBREATH","LOCALS",FIVE_ROUNDS)
+    SetGlobalTimer("KWYVCAST","LOCALS",ONE_ROUND)
+    ReallyForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+    ReallyForceSpell(Myself,DRAGON_STONE_SKIN)
+    ReallyForceSpellRES("KZWYVERN",NearestEnemyOf(Myself))  // ~Stinking Cloud~
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  GlobalTimerExpired("KWYVTIME","LOCALS")
+  Global("KWYVPREP","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("KWYVPREP","LOCALS",0)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  GlobalTimerExpired("KWYBREATH","LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("KWYBREATH","LOCALS",FIVE_ROUNDS)
+    ReallyForceSpellRES("KZWYVERN",NearestEnemyOf(Myself))  // ~Stinking Cloud~
+  RESPONSE #100
+    SetGlobalTimer("KWYBREATH","LOCALS",FIVE_ROUNDS)
+    ReallyForceSpellRES("KZWYVERN",FourthNearestEnemyOf(Myself))  // ~Stinking Cloud~
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("KWYVDISP","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KWYVDISP","LOCALS",1)
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_DISPEL_MAGIC)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  ActionListEmpty()
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+END
+

@@ -1,0 +1,86 @@
+WU-JE PARTY
+
+IMMUNITY TO STUN, FOR ALL OF THEM AND 5O% magic damage resistance
+MONK 25TH LEVEL 
+MAGE 21ST LEVEL
+
+
+OPENING MOVES
+
+ASSASSIN ATTACKS KIARA AND BACKSTAB FOR 7 BACKSTAB DAMAGE. HE SHOULD BE EQUIPPED WITH PARALYTIC BOLTS TOO.
+
+MAGE CASTS PROTECTION FROM MAGIC ON ZAIYA (KEEP HER OUT OF PLAY), THEN:
+SEE THROUGH INVISIBILITY BY SCRIPT
+Mage 24th level abjurer (stoneskin + protection from fire + protection from acid + protection from cold)
+Lvl 9 (4): Timestop + Improved Alacrity + Spell trap + Spellstrike
+Lvl 8 (4): ABDHW + 
+Lvl 7 (5): 3 Mordenkainen +  1 protection from the elements + Ruby ray of reversal + Finger of death
+Lvl 6 (6): 4 PFMW + 1 Protection from magic energy + 1 true sight 
+Lvl 5 (6): 3 Immunity + 2 chaos + 1 Undead summon + 2 Lower resistance
+Lvl 4 (6): Stoneskin + Improved invisibility + Greater Malison
+Lvl 3 (6): Hold person + 2 Slow + 2 Remove magic
+Lvl 2 (6): Mirror Image + 
+Lvl 1 (6): 3 MM + 3 blindness
+
+Buffering
+Time stop
+Improved alacrity
+Protection from magic weapons
+Cast Protection from Magic on Zaiya
+
+Minor contingency
+Spell trap
+
+During time stop, which is 36 seconds = 4 rounds and imporved alacrity last 2 rounds and robe of vecna
+Spell : mirror image - instant
+Spell : stoneskin - instant
+Spell: minor globe - instant
+Spell : improved invisibility
+Spell: protection from magic damage - 2 seconds
+
+Dispel protection
+Spell: Spellstrike on second mage = 5 seconds
+Spell: Breach on second mage = 1 seconds
+
+Start summoning mordenkainen
+Spell: Mordenkainen = 4 seconds
+Spell: Mordenkainen = 4 seconds
+END OF IMPROVED ALACRUTY
+Spell: ABDHW = 4 seconds on nearest fighter-druid/cleric or thief without girdle or protection from MDR
+Spell: ABDHW = 4 seconds
+WAIT 3
+Spell trigger
+Really force spell : Protection from magic weapons
+Really force spell : Spell Immunity from abjuration
+Really force spell : Spell shield
+END OF TIME STOP
+
+Spell sequencer after timestop
+Greater malison + dispel magic + blindness on nearest fighter (not Kiara)
+
+Spell trigger
+2 magic missile on a druid or cleric
+
+Spell : Blindness on nearest fighter
+
+Spell: Death fog
+
+Spell: ABDWH on druid or cleric or thief or fighter
+Spell : ABDHW on druid or cleric or thief or fighter
+
+
+MONK ATTACKS PLAYER1 (IF FIGHTER MAGE OR MAGE) WITH DRAGON FIST, THEN QUIVERING PALM.
+MONK should be 25th level 140 HP, -8 AC, Wuje should take a potion of cloud giant strength + potion of absorbtion (100% immunity to electricity + 10% crushing attack) + potion of magic blocking (after time stop as for 5 rounds imbiber immune to level 5 spells) + potion of magic shielding .
+Equipment : copy of ring of gaxx, WU-JE bracers (20% chance of decreasing the thaco of its attacker by 4 no save for 2 round)
+
+Attacks anybody not protected by stoneskin or PFWM except Zaiya
+
+ASSASSIN/MAGE 13/14 level, 140 HP, gulps potion of cloud giant strength
+Equipment celestial fury (undroppable) + crossbow and paralytic bolts (should target anyone without the shield)
+Lvl 7 (1):  Spell turning
+Lvl 6 (2):  PFWMX2
+Lvl 5 (4):  2X Breach + 2 X Immunity_Illusion
+Lvl 4 (4):  Improved Invisibility x 4 
+Lvl 3 (5):  Hold+
+Lvl 2 (5):  Invisibility X3 + Mirror image X2
+Lvl 1 (5):  MM+Blindness 

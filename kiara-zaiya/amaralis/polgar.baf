@@ -1,0 +1,332 @@
+IF
+  GlobalTimerExpired("PolRestT","GLOBAL")
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,CLERIC_HEAL)
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep1","LOCALS",0)
+    SetGlobal("PtnPrep","LOCALS",0)
+    SetGlobal("HEALTIME","LOCALS",0)
+    Continue()
+END
+
+IF
+  OR(2)
+    Detect([PC])
+    InMyArea(Player1)
+  Global("Prep1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep1","LOCALS",1)
+    SetGlobalTimer("PolRestT","GLOBAL",SIX_HOURS)
+    SetGlobalTimer("PPOTION","LOCALS",7)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,NEUTRAL)
+  Global("Attackc6Ama","Global",1)
+THEN
+  RESPONSE #100
+    Enemy()
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("PPOTION","LOCALS")
+  Allegiance(Myself,ENEMY)
+  HasItem("POTN10",Myself)  // ~Potion of Invisibility~
+  !StateCheck(Myself,STATE_INVISIBLE)
+  Global("PtnPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("PtnPrep","LOCALS",1)
+    SetGlobalTimer("PPOTION","LOCALS",7)
+    UseItem("POTN10",Myself)  // ~Potion of Invisibility~
+    Continue()
+END
+
+IF
+  Global("HEALTIME","LOCALS",1)
+  OR(3)
+    HPPercentGT(Myself,50)
+    Range(NearestEnemyOf(Myself),10)
+    !StateCheck(Myself,STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    SetGlobal("HEALTIME","LOCALS",0)
+END
+
+IF
+  GlobalTimerExpired("HPOTION","LOCALS")
+  HPPercentLT(Myself,80)
+  Allegiance(Myself,ENEMY)
+  HasItem("potn10",Myself)  // ~Potion of Invisibility~
+  !StateCheck(Myself,STATE_INVISIBLE)
+  Global("HEALTIME","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HPOTION","LOCALS",ONE_ROUND)
+    UseItem("potn10",Myself)  // ~Potion of Invisibility~
+    RunAwayFrom(LastAttackerOf(Myself),60)
+    SetGlobal("HEALTIME","LOCALS",1)
+    Wait(1)
+END
+
+IF
+  Global("HEALTIME","LOCALS",1)
+  Range(NearestEnemyOf(Myself),20)
+THEN
+  RESPONSE #100
+    RunAwayFrom(LastAttackerOf(Myself),60)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Global("HEALTIME","LOCALS",1)
+  GlobalTimerExpired("HPOTION","LOCALS")
+  HPPercentLT(Myself,50)
+  HasItem("potn52",Myself)  // ~Potion of Extra Healing~
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HPOTION","LOCALS",ONE_ROUND)
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("potn52",Myself)  // ~Potion of Extra Healing~
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(SixthNearestEnemyOf(Myself))
+  !CheckStat(SixthNearestEnemyOf(Myself),0,STONESKINS)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SixthNearestEnemyOf(Myself),0,SANCTUARY)
+  !Gender(NearestEnemyOf(Myself),SUMMONED)
+  !Race(NearestEnemyOf(Myself),SOLAR)
+  !Race(NearestEnemyOf(Myself),ANTISOLAR)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(FifthNearestEnemyOf(Myself))
+  !CheckStat(FifthNearestEnemyOf(Myself),0,STONESKINS)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(FifthNearestEnemyOf(Myself),0,SANCTUARY)
+  !Gender(NearestEnemyOf(Myself),SUMMONED)
+  !Race(NearestEnemyOf(Myself),SOLAR)
+  !Race(NearestEnemyOf(Myself),ANTISOLAR)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(FourthNearestEnemyOf(Myself))
+  !CheckStat(FourthNearestEnemyOf(Myself),0,STONESKINS)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(FourthNearestEnemyOf(Myself),0,SANCTUARY)
+  !Gender(NearestEnemyOf(Myself),SUMMONED)
+  !Race(NearestEnemyOf(Myself),SOLAR)
+  !Race(NearestEnemyOf(Myself),ANTISOLAR)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(ThirdNearestEnemyOf(Myself))
+  !CheckStat(ThirdNearestEnemyOf(Myself),0,STONESKINS)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+  !Gender(NearestEnemyOf(Myself),SUMMONED)
+  !Race(NearestEnemyOf(Myself),SOLAR)
+  !Race(NearestEnemyOf(Myself),ANTISOLAR)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(SecondNearestEnemyOf(Myself))
+  !CheckStat(SecondNearestEnemyOf(Myself),0,STONESKINS)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+  !Gender(NearestEnemyOf(Myself),SUMMONED)
+  !Race(NearestEnemyOf(Myself),SOLAR)
+  !Race(NearestEnemyOf(Myself),ANTISOLAR)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(NearestEnemyOf(Myself))
+  !CheckStat(NearestEnemyOf(Myself),0,STONESKINS)
+  !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOf(Myself),0,SANCTUARY)
+  !Gender(NearestEnemyOf(Myself),SUMMONED)
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.BARD]),0,STONESKINS)
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.BARD]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.BARD]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.DRUID_ALL]),0,STONESKINS)
+  !StateCheck(NearestEnemyOfType([GOODCUTOFF.0.0.DRUID_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.DRUID_ALL]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.DRUID_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),0,STONESKINS)
+  !StateCheck(SecondNearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SecondNearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),0,SANCTUARY)
+  See(SecondNearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),0,STONESKINS)
+  !StateCheck(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),0,STONESKINS)
+  !StateCheck(SecondNearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SecondNearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),0,SANCTUARY)
+  See(SecondNearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),0,STONESKINS)
+  !StateCheck(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !Global("HEALTIME","LOCALS",1)
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  See(LastSeenBy(Myself))
+  !Class(LastSeenBy(Myself),MONK)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTPOISON)
+  CheckStat(LastSeenBy(Myself),0,STONESKINS)
+  !HasItemEquiped("RING46",LastSeenBy(Myself))
+  !HasItemEquiped("RING39",LastSeenBy(Myself))
+  !HasItemEquiped("AMUL22",LastSeenBy(Myself))
+  !Gender(LastSeenBy(Myself),SUMMONED)
+  !Race(NearestEnemyOf(Myself),SOLAR)
+  !Race(NearestEnemyOf(Myself),ANTISOLAR)
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,ARCHER_CALL_SHOT)
+    ApplySpell(Myself,WARRIOR_WHIRLWIND)
+    SetGlobal("Prep","LOCALS",1)
+    SmallWait(1)
+    EquipRanged()
+    AttackOneRound(LastSeenBy(Myself))
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !Class(LastSeenBy(Myself),MONK)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTPOISON)
+  !CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+  !HasItemEquiped("RING46",LastSeenBy(Myself))
+  !HasItemEquiped("RING39",LastSeenBy(Myself))
+  !HasItemEquiped("AMUL22",LastSeenBy(Myself))
+  !Gender(LastSeenBy(Myself),SUMMONED)
+  !Race(NearestEnemyOf(Myself),SOLAR)
+  !Race(NearestEnemyOf(Myself),ANTISOLAR)
+  See(LastSeenBy(Myself))
+  !Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    EquipRanged()
+    AttackReevaluate(LastSeenBy(Myself),15)
+END
+
+IF
+  ActionListEmpty()
+  Allegiance(Myself,ENEMY)
+  Range([PC],120)
+  InParty("Zaiya")  // ~Zaiya~
+  !Dead("Zaiya")  // ~Zaiya~
+  OR(11)
+    !See(LastSeenBy(Myself))
+    Gender(LastSeenBy(Myself),SUMMONED)
+    Race(NearestEnemyOf(Myself),SOLAR)
+    Race(NearestEnemyOf(Myself),ANTISOLAR)
+    Allegiance(LastSeenBy(Myself),ENEMY)
+    CheckStatGT(LastSeenBy(Myself),50,RESISTPOISON)
+    Class(LastSeenBy(Myself),MONK)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    HasItemEquiped("RING46",LastSeenBy(Myself))
+    HasItemEquiped("RING39",LastSeenBy(Myself))
+    !HasItemEquiped("AMUL22",LastSeenBy(Myself))
+THEN
+  RESPONSE #100
+    MoveToObject("Zaiya")
+END
+
+IF
+  !Global("AttackC6Ama","GLOBAL",0)
+  !Range([PC],120)
+  ActionListEmpty()
+THEN
+  RESPONSE #100
+    Wait(12)
+    MoveToObject(Player1)
+END
+
+IF
+  ActionListEmpty()
+THEN
+  RESPONSE #100
+    RandomWalk()
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+

@@ -1,0 +1,13 @@
+IF
+  Entered([ANYONE])
+THEN
+  RESPONSE #100
+    CreateCreature("SUELFW7",[3397.807],6)
+    CreateCreature("SUELFW8",[3345.867],6)
+    CreateCreature("SUELFW4",[3452.787],6)
+    CreateCreature("SUELFW14",[3533.780],6)
+    CreateCreature("KZ#DMLRD",[3186.657],14)
+    TriggerActivation("Scene4a",FALSE)
+    TriggerActivation("Scene4b",FALSE)
+END
+

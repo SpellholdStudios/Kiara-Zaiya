@@ -1,0 +1,16 @@
+IF
+  OR(3)
+    AreaCheck("AR2800")
+    AreaCheck("AR2806")
+    AreaCheck("AR2807")
+  CombatCounter(0)
+  InParty(Myself)
+  !Dead("Zaiya")  // ~Zaiya~
+  InParty("Zaiya")  // ~Zaiya~
+  Global("ZaiTalkCernd","GLOBAL",10)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiTalkCernd","GLOBAL",11)
+    Interact("Zaiya")
+END
+

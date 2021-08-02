@@ -1,0 +1,20 @@
+IF
+  See(Player1)
+  Global("JERLIAQUEST","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("JERLIAQUEST","GLOBAL",3)
+    CreateVisualEffectObject("SPMON1",Myself)
+    Wait(2)
+    Continue()
+END
+
+IF
+  Global("JERLIAQUEST","GLOBAL",3)
+  Global("JerliaEXP","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("JerliaEXP","LOCALS",1)
+    StartDialogNoSet([PC])
+END
+

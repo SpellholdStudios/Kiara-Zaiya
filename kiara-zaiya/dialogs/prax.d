@@ -1,0 +1,141 @@
+BEGIN PRAX
+
+IF ~NumTimesTalkedTo(0)
+!Dead("Prax")~ THEN BEGIN 0
+  SAY @5600 = @5601 = @5602
+  IF ~~ THEN REPLY @5603 GOTO 1
+  IF ~~ THEN REPLY @5604 GOTO 1
+END
+
+IF ~~ THEN BEGIN 1
+  SAY @5605
+  IF ~~ THEN REPLY @5606 GOTO 2
+  IF ~~ THEN REPLY @5607 GOTO 2a
+END
+
+IF ~~ THEN BEGIN 2
+  SAY @5608
+  IF ~~ THEN REPLY @5609 GOTO 3
+  IF ~~ THEN REPLY @5610 GOTO 3
+END
+
+IF ~~ THEN BEGIN 2a
+  SAY @5611
+  IF ~~ THEN REPLY @5609 GOTO 3
+  IF ~~ THEN REPLY @5610 GOTO 3
+END
+
+
+IF ~~ THEN BEGIN 3
+  SAY @5612 = @5613
+  IF ~~ THEN REPLY @5614 GOTO 4
+  IF ~~ THEN REPLY @5615 GOTO 3a
+END
+
+IF ~~ THEN BEGIN 3a
+  SAY @5616
+  IF ~~ THEN REPLY @5617 GOTO 3b
+  IF ~RandomNum(3,1)~ THEN REPLY @5618 GOTO 15
+  IF ~RandomNum(3,2)~ THEN REPLY @5618 GOTO 16
+  IF ~RandomNum(3,3)~ THEN REPLY @5618 GOTO 17
+END
+
+IF ~~ THEN BEGIN 3b
+SAY @5619
+IF ~~ THEN REPLY @5620 GOTO 4
+END 
+
+IF ~~ THEN BEGIN 4
+  SAY @5621
+  IF ~~ THEN REPLY @5622 DO ~RevealAreaOnMap("AR1100")~ GOTO 5
+END
+
+IF ~~ THEN BEGIN 5
+  SAY @5623
+  IF ~~ THEN DO ~SetGlobal("ZaiyaFindKiara","GLOBAL",2) GiveItemCreate("SCRL08",Player1,2,0,0)~ EXIT
+END
+
+IF ~True()
+Dead("Kzwyvern")
+!Global("ZaiyaFindKiara","GLOBAL",4)
+!Global("PraxMoney","GLOBAL",1)~ THEN BEGIN 6
+  SAY @5624
+  IF ~~ THEN REPLY @5625 GOTO 7
+  IF ~~ THEN REPLY @5626  GOTO 7 	
+END
+
+IF ~~ THEN BEGIN 7
+SAY @5627
+IF ~~ THEN REPLY @5628 GOTO 8
+IF ~~ THEN REPLY @5629 GOTO 8
+END
+
+IF ~~ THEN BEGIN 8
+SAY @5630
+IF ~CheckStatLT(Player1,16,CHR)~ THEN REPLY @5631 GOTO 9
+IF ~CheckStatGT(Player1,15,CHR)~ THEN REPLY @5631 GOTO 9a
+IF ~~ THEN REPLY @5632 GOTO 9
+IF ~PartyGoldGT(5001)~ THEN REPLY @5633 GOTO 10
+END
+
+IF ~~ THEN BEGIN 9
+SAY @5634
+IF ~PartyGoldGT(1) PartyGoldLT(5000)~ THEN REPLY @5635 DO ~SetGlobal("PraxMoney","GLOBAL",1)~ EXIT
+IF ~PartyGoldGT(4999)~ THEN REPLY @5633 GOTO 10
+END
+
+IF ~~ THEN BEGIN 9a
+SAY @5636
+IF ~PartyGoldGT(1) PartyGoldLT(2000)~ THEN REPLY @5635 DO ~SetGlobal("PraxMoney","GLOBAL",2)~ EXIT
+IF ~PartyGoldGT(1999)~ THEN REPLY @5637 GOTO 10a
+END
+
+IF ~~ THEN BEGIN 10
+  SAY @5638
+  IF ~~ THEN DO ~TakePartyGold(5000) SetGlobal("ZaiyaFindKiara","GLOBAL",4) EscapeArea()~ EXIT
+END
+
+
+IF ~~ THEN BEGIN 10a
+  SAY @5638
+  IF ~~ THEN DO ~TakePartyGold(2000) SetGlobal("ZaiyaFindKiara","GLOBAL",4) EscapeArea()~ EXIT
+END
+
+
+IF ~True()
+Global("PraxMoney","GLOBAL",1)
+PartyGoldGT(4999)~ THEN BEGIN 11
+  SAY @5639
+  IF ~~ THEN REPLY @5625 DO ~SetGlobal("PraxMoney","GLOBAL",3)~ GOTO 10
+END
+
+IF ~True()
+Global("PraxMoney","GLOBAL",2)
+PartyGoldGT(1999)~ THEN BEGIN 12
+  SAY @5639
+  IF ~~ THEN REPLY @5625 DO ~SetGlobal("PraxMoney","GLOBAL",3)~ GOTO 10a
+END
+
+
+IF ~~ THEN BEGIN 15
+SAY @5640
+IF ~~ THEN DO ~Enemy()
+UseItem("POTN10",Myself)
+EquipMostDamagingMelee()
+AttackReevaluate(NearestEnemyOf(Myself),15)~ EXIT
+END
+
+IF ~~ THEN BEGIN 16
+SAY @5641
+IF ~~ THEN DO ~EscapeArea()~ EXIT
+END
+
+IF ~~ THEN BEGIN 17
+SAY @5640
+IF ~~ THEN DO ~Enemy() 
+CreateItem("SCRLPX",1,1,1) 
+SetGlobal("ZaiyaFindKiara","GLOBAL",4)
+UseItem("POTN10",Myself)
+EquipMostDamagingMelee()
+AttackReevaluate(NearestEnemyOf(Myself),15)~ EXIT
+END

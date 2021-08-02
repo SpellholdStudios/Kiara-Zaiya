@@ -1,0 +1,121 @@
+IF
+  Allegiance(Myself,NEUTRAL)
+  Global("AttackC6ama","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Enemy()
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("HrothRestT","LOCALS")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,CLERIC_HEAL)
+    SetGlobal("Prep","LOCALS",0)
+    Rest()
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HrothRestT","LOCALS",TWO_HOURS)
+    ApplySpell(Myself,BARBARIAN_RAGE)
+    ApplySpell(Myself,CLERIC_CHAOTIC_COMMANDS)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_EVIL)
+    ApplySpell(Myself,WARRIOR_HARDINESS)
+    SetGlobal("Prep","LOCALS",1)
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("HrothRestT","LOCALS")
+  CheckStatLT(Myself,21,STR)
+  HaveSpell(BARBARIAN_RAGE)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,BARBARIAN_RAGE)
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("HrothRestT","LOCALS")
+  Range(NearestEnemyOf(Myself),4)
+  DifficultyGT(EASY)
+  !StateCheck(Myself,STATE_HASTED)
+  HaveSpell(WARRIOR_GREATER_WHIRLWIND)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(Myself,WARRIOR_GREATER_WHIRLWIND))
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("HrothRestT","LOCALS")
+  Range(NearestEnemyOf(Myself),4)
+  DifficultyGT(EASY)
+  CheckStatLT(Myself,30,RESISTSLASHING)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,ApplySpell(Myself,WARRIOR_HARDINESS))
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("HrothRestT","LOCALS")
+  HPPercentLT(Myself,60)
+  HasItem("potn52",Myself)  // ~Potion of Extra Healing~
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    ActionOverride(Myself,UseItem("potn52",Myself))  // ~Potion of Extra Healing~
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("HrothRestT","LOCALS")
+  See(NearestEnemyOf(Myself))
+  ActionListEmpty()
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+
+IF
+  !GlobalTimerExpired("HrothRestT","LOCALS")
+  Allegiance(Myself,ENEMY)
+  !Global("AttackC6Ama","GLOBAL",0)
+  !Dead("Kiara")  // ~Kiara~
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    MoveToObject("Kiara")
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("HrothRestT","LOCALS")
+  Allegiance(Myself,ENEMY)
+  !Global("AttackC6Ama","GLOBAL",0)
+  !Range([PC],4)
+  Dead("Kiara")  // ~Kiara~
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+

@@ -1,0 +1,9 @@
+//CREATE SOME DRAGON PROTECTORS
+IF
+  Entered([ANYONE])
+THEN
+  RESPONSE #100
+//    CreateCreature("SUELFW5",[3420.3247],0)
+//    CreateCreature("SUELFW6",[3504.3251],0)
+END
+

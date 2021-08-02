@@ -1,0 +1,113 @@
+IF
+  Global("DemonDeal","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("DemonDeal","GLOBAL",3)
+    ApplySpell(Myself,WIZARD_SHADOW_DOOR)
+    Wait(1)
+    DestroySelf()
+END
+
+IF
+  See(Player1)
+  !Global("DelordCreate","GLOBAL",2)
+  !GlobalGT("DemonDeal","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateVisualEffectObject("SPSUMGTE",Myself)
+    Wait(2)
+    Continue()
+END
+
+IF
+  See(Player1)
+  !Global("DelordCreate","GLOBAL",2)
+  !GlobalGT("DemonDeal","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,StartDialogNoSet([PC]))
+END
+
+IF
+  See(Player1)
+  Global("P1DEAL","GLOBAL",2)
+  Dead("Amaralis")  // Amaralis
+THEN
+  RESPONSE #100
+    CreateVisualEffectObject("SPSUMGTE",Myself)
+    Wait(2)
+    Continue()
+END
+
+IF
+  See(Player1)
+  Global("P1DEAL","GLOBAL",2)
+  Dead("Amaralis")  // Amaralis
+THEN
+  RESPONSE #100
+    SetGlobal("P1DEAL","GLOBAL",3)
+    ActionOverride(Myself,StartDialogNoSet([PC]))
+END
+
+IF
+  See(Player1)
+  Global("P1DEAL","GLOBAL",2)
+  !Dead("Amaralis")  // Amaralis
+  GlobalTimerExpired("DemonQuest","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("P1DEAL","GLOBAL",5)
+    StartDialogNoSet([PC])
+END
+
+IF
+  See(Player1)
+  Global("P2DEAL","GLOBAL",2)
+  Global("SPRITE_IS_DEADHPRELATE","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateVisualEffectObject("SPSUMGTE",Myself)
+    Wait(2)
+    Continue()
+END
+
+IF
+  See(Player1)
+  Global("P2DEAL","GLOBAL",2)
+  Global("SPRITE_IS_DEADHPRELATE","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("P2DEAL","GLOBAL",3)
+    ActionOverride(Myself,StartDialogNoSet([PC]))
+END
+
+IF
+  See(Player1)
+  Global("P2DEAL","GLOBAL",2)
+  GlobalLT("SPRITE_IS_DEADHPRELATE","GLOBAL",1)
+  GlobalTimerExpired("DemonQuest","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("P2DEAL","GLOBAL",5)
+    StartDialogNoSet([PC])
+END
+
+IF
+  See(Player1)
+  Global("DemonDeal","GLOBAL",5)
+THEN
+  RESPONSE #100
+    SetGlobal("DemonDeal","GLOBAL",6)
+    StartDialogNoSet([PC])
+END
+
+IF
+  See(Player1)
+  Global("DemonDeal","GLOBAL",7)
+  Global("KnightsInKeep","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DemonDeal","GLOBAL",8)
+    StartDialogNoSet([PC])
+END
+

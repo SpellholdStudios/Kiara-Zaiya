@@ -1,0 +1,324 @@
+/////////////////////////////////////////////////////////////
+//LESSER DEMON LORD STATS
+//160HP, -8AC, 20 STR
+//Detect invisibility by script
+//Immune to spell level upto 3 - change
+//Immune to non magical weapons and to enchanted weapons 
+//upto 4 - original 
+//Immune to stun, imprisonment,... - some minor changes
+//SPECIAL POWERS: Polymorphs party members according to
+//gender (Male=Demon knight Female=Succubus
+/////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////
+//Buffing time
+////////////////////////////////////////
+IF
+  Allegiance(Myself,ENEMY)
+  See([PC])
+  Delay(1)
+  Global("LDLBUFF","LOCALS",0)
+  Gender(LastSeenby(Myself),MALE)
+THEN
+  RESPONSE #100
+    SetGlobal("KZDMKNIGHT","GLOBAL",1)
+    SetGlobal("LDLBUFF","LOCALS",1)
+    ApplySpell(Myself,WIZARD_TRUE_SIGHT)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS) 
+    ApplySpell(Myself,WIZARD_SPELL_SHIELD)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    ReallyForceSpellRES("KZLDLPOL", NearestEnemyOfType([PC]))
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    SetGlobalTimer("LDLCastPoly","LOCALS",FOUR_ROUNDS)
+    SetGlobalTimer("LDLPFMW","LOCALS",FOUR_ROUNDS)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See([PC])
+  Delay(1)
+  Global("LDLBUFF","LOCALS",0)
+  Gender(LastSeenby(Myself),FEMALE)
+THEN
+  RESPONSE #100
+    SetGlobal("KZDMKNIGHT","GLOBAL",1)
+    SetGlobal("LDLBUFF","LOCALS",1)
+    ApplySpell(Myself,WIZARD_TRUE_SIGHT)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS) 
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    ReallyForceSpellRES("KZLDLPO1", NearestEnemyOfType([PC]))
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    SetGlobalTimer("LDLCastPoly","LOCALS",FOUR_ROUNDS)
+    SetGlobalTimer("LDLPFMW","LOCALS",FOUR_ROUNDS)
+    Continue()
+END
+
+/////////////////////////////////////////
+//Random protection and sometimes none
+//Takes two rounds to dispel him!
+/////////////////////////////////////////
+IF
+  GlobalTimerExpired("LDLPFMW","LOCALS")
+  Allegiance(Myself,ENEMY)
+  See([PC])
+THEN
+ RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS) 
+    ApplySpell(Myself,WIZARD_SPELL_SHIELD)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    SetGlobalTimer("LDLCastPoly","LOCALS",ONE_ROUND)
+    SetGlobalTimer("LDLPFMW","LOCALS",FOUR_ROUNDS)
+    Continue()
+ RESPONSE #100
+    Continue()
+END
+
+////////////////////////////////////////////////////////////
+//Polymorph male into demon knights and female into
+//Succubus. Female should be much harder. FUN!
+//Every turn he has another chance
+//On killing the demon knight or succubus 
+//the party member reappears
+////////////////////////////////////////////////////////////
+//Target first low save vs polymorph - 
+IF
+  GlobalTimerExpired("LDLCastPoly","LOCALS")
+  Allegiance(Myself,ENEMY)
+OR(7)
+    See(NearestEnemyOfType([PC]))
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN]))
+    See(NearestEnemyOfType([PC.0.0.RANGER]))
+  CheckStatGT(LastSeenBy(Myself),5,SAVEVSPOLY)
+    Gender(LastSeenby(Myself),MALE)
+THEN
+  RESPONSE #100
+    ReallyForceSpellRES("KZLDLPOL",LastSeenBy(Myself))
+    SetGlobalTimer("LDLCastPoly","LOCALS",FOUR_ROUNDS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    Continue()
+END
+
+//Target first low save vs polymorph - 
+IF
+  GlobalTimerExpired("LDLCastPoly","LOCALS")
+  Allegiance(Myself,ENEMY)
+OR(7)
+    See(NearestEnemyOfType([PC]))
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN]))
+    See(NearestEnemyOfType([PC.0.0.RANGER]))
+  CheckStatGT(LastSeenBy(Myself),5,SAVEVSPOLY)
+    Gender(LastSeenby(Myself),FEMALE)
+THEN
+  RESPONSE #100
+    ReallyForceSpellRES("KZLDLPO1",LastSeenBy(Myself))
+    SetGlobalTimer("LDLCastPoly","LOCALS",FOUR_ROUNDS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    Continue()
+END
+
+//In case their save vs spell are really good
+IF
+  GlobalTimerExpired("LDLCastPoly","LOCALS")
+  Allegiance(Myself,ENEMY)
+OR(7)
+    See(NearestEnemyOfType([PC])) 
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN]))
+    See(NearestEnemyOfType([PC.0.0.RANGER]))
+    Gender(LastSeenby(Myself),MALE)
+THEN
+  RESPONSE #100
+    ReallyForceSpellRES("KZLDLPOL",LastSeenBy(Myself))
+    SetGlobalTimer("LDLCastPoly","LOCALS",FOUR_ROUNDS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("LDLCastPoly","LOCALS")
+  Allegiance(Myself,ENEMY)
+OR(7)
+    See(NearestEnemyOfType([PC])) 
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN]))
+    See(NearestEnemyOfType([PC.0.0.RANGER]))
+    Gender(LastSeenby(Myself),FEMALE)
+THEN
+  RESPONSE #100
+    ReallyForceSpellRES("KZLDLPO1",LastSeenBy(Myself))
+    SetGlobalTimer("LDLCastPoly","LOCALS",FOUR_ROUNDS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+    Continue()
+END
+////////////////////////////////////////////////////////////
+//Spell ramdom
+////////////////////////////////////////////////////////////
+//First target low saves
+IF
+  GlobalTimerExpired("LDLCast","LOCALS")
+  OR(8)
+    See(NearestEnemyOf(Myself))
+    See(NearestEnemyOfType([PC]))  
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN]))
+    See(NearestEnemyOfType([PC.0.0.RANGER]))
+  CheckStatGT(LastSeenBy(Myself),6,SAVEVSSPELL)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_WAIL_OF_THE_BANSHEE)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),CLERIC_DOOM)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_NPC_SYMBOL_STUN)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_BLINDNESS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),TANARI_PARALYZE)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_SECRET_WORD)//REMOVE SPELL IMMUNITY
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_BREACH)//REMOVE PRO-MAGIC
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_CHAOS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_SUN_FIRE)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)//27 HP
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+END
+
+//If no low saves found
+IF
+  GlobalTimerExpired("LDLCast","LOCALS")
+  OR(8)
+    See(NearestEnemyOf(Myself))
+    See(NearestEnemyOfType([PC]))  
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.FIGHTER_ALL]))
+    See(NearestEnemyOfType([PC.0.0.PALADIN]))
+    See(NearestEnemyOfType([PC.0.0.RANGER]))
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_WAIL_OF_THE_BANSHEE)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_NPC_SYMBOL_STUN)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),TANARI_PARALYZE)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_CHAOS)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+  RESPONSE #100
+    ForceSpell(Myself,WIZARD_SUN_FIRE)
+    SetGlobalTimer("LDLCast","LOCALS",ONE_ROUND)
+END
+
+//////////////////////////////////////////////////////////
+//PRIORITY IS TO ATTACK THE UNPROTECTED WEAK
+IF
+  !GlobalTimerExpired("CASTSPELL","LOCALS")
+  ActionListEmpty()
+  OR(5)
+    See(NearestEnemyOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+  !CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+  !CheckStatGT(LastSeenBy(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(LastSeenBy(Myself))
+END
+
+//IF NO UNPROTECTED WEAK
+IF
+  !GlobalTimerExpired("CASTSPELL","LOCALS")
+  ActionListEmpty()
+  OR(5)
+    See(NearestEnemyOf(Myself))
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.MAGE_ALL])
+    See(WorstAC)
+    See(MostDamagedOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(LastSeenBy(Myself))
+END
+
+//IF NOTHING FOUND
+IF
+  See(NearestEnemyOf(Myself))
+  Allegiance(Myself,ENEMY)
+  ActionListEmpty()
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+//NO PC FOUND
+IF
+  See(NearestEnemyOf(Myself))
+  Allegiance(Myself,ENEMY)
+  !Detect([PC])
+  ActionListEmpty()
+  !StateCheck(Player1,STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+     ReallyForceSpell(Player1,WIZARD_DIMENSION_DOOR)   
+END
+
+////////////////////////////////////////////////////////////
+//TO BEAT HIM:
+//SPELL IMMUNITY ALTERATION AND CROM FAYR
+////////////////////////////////////////////////////////////

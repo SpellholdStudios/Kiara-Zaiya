@@ -1,0 +1,373 @@
+//premier lovetalk
+@0    = ~(Scrutant le ciel du regard et le visage baigné par un soleil radieux, Kiara fredonne un air inconnu.)~
+@1    = ~Je ne t'ai jamais vue comme ça auparavant, Kiara.~
+@2    = ~Cet air semble familier mais je ne le reconnais pas. Vient-il de ta patrie ?~
+@3    = ~(Ne pas déranger Kiara)~
+@4    = ~(Comme si un enchantement venait de se briser, Kiara se tourne vers vous avec une mine surprise.) Désolée, que disais-tu ?~
+@5    = ~Je ne t'avais jamais vue comme ça auparavant, tu as l'air plutôt heureuse aujourd'hui.~
+@6    = ~Je m'interrogeais sur l'air que tu étais en train de chanter. Il me paraît familier, mais en même temps, je ne parviens pas à mettre un nom dessus.~
+@7    = ~Je ne t'avais jamais vue comme ça auparavant. A quoi penses-tu, Kiara ?~
+@8    = ~(Kiara semble presque en transe ; les yeux perdus à l'horizon, elle demeure immobile. Après quelques minutes, comme si un enchantement venait de se briser, elle tourne lentement son regard vers vous et sourit.)~
+@9    = ~Cet air que tu fredonnais me semble familier, mais je ne le reconnais pas.~
+@10   = ~Je ne t'avais jamais vue comme ça auparavant. A quoi penses-tu, Kiara ?~
+@11   = ~Je me sens jubiler de cette liberté retrouvée, et avant tout grâce à toi, mon amour. Il y a six mois, le monde était sombre et déprimant, dénué de la plus légère lueur d'espoir. Tout cela paraît tellement irréel... et tout est arrivé si vite.~
+@12   = ~Je comprends tes sentiments. Cela doit être un grand soulagement que d'être libérée.~
+@13   = ~Cet air que tu fredonnais me semblait familier, mais je ne le reconnais pas.~
+@14   = ~C'est une vieille chanson de notre monastère. Je me demande comment tu aurais pu l'entendre auparavant. Avaient-ils des chansons similaires à Château-Suif ?~
+@15   = ~L'est, l'ouest, le nord, le sud...~
+@16   = ~Dis-moi, tu joues aux devinettes ou tu viens d'apprendre à parler kobold ?~
+@17   = ~(en riant) Pas du tout ! Mais cet air me rappelle quatre prêtres de Château-Suif qui chantaient tournés vers chacun des points cardinaux : Est, Ouest, Nord, et Sud.~
+@18   = ~Le kobold ressemblerait plutôt à : Aaaarg, whoaf, whoaf.~
+@19   = ~On dirait que j'ai ravivé les bons souvenirs d'une époque révolue.~
+@20   = ~J'avais coutume de considérer Château-Suif comme mon foyer, mais je l'ai perdu.~
+@21   = ~Ne laisse pas la mélancolie t'obscurcir l'esprit, je suis sûre qu'après tout ceci nous pourrons trouver une jolie ville et un endroit confortable pour reposer nos pieds devant un feu.~
+@22   = ~Et tu peux ajouter, faire l'amour toute la journée sur une peau d'ours.~
+@23   = ~Je pourrais m'y faire dès à présent, bien que je doute que personne me laisse en paix par les temps qui courent.~
+@24   = ~Une fourrure d'ours ! C'est rustique, mais avec toi je me contenterai de n'importe quoi, pourvu que cela te rende heureux.~
+@25   = ~Peut-être plus tard, mon amour.~
+
+
+//2e lovetalk, après la rencontre avec l'esprit dans les montagnes
+@26   = ~<CHARNAME>, penses-tu vraiment que j'ai laissé tomber Osan ?~
+@27   = ~D'après le récit que tu m'as fait, non.~
+@28   = ~Pourquoi ? C'est ce que tu as fait ?~
+@29   = ~Pourquoi se tourner vers le passé ? Nous avons aujourd'hui plus de sujets de crainte que jamais.~
+@30   = ~Alors pourquoi est-ce que je me sens coupable ?~
+@31   = ~Penses-tu vraiment que tu as tué Osan ?~
+@32   = ~Tu ne devrais pas laisser cette fausse apparition d'Osan affaiblir ton jugement. Le passé n'est rien d'autre que cela, le passé ! Nous affrontons maintenant des menaces plus sérieuses qui requièrent toutes tes forces.~
+@33   = ~Non ! Bien sûr que non. Nous nous aimions profondément, mais rien n'aurait pu le sauver.~
+@34   = ~Hé bien, pourquoi alors se retourner vers le passé ? Nous avons aujourd'hui plus de sujets de crainte que jamais.~
+@35   = ~C'est bon à entendre ; maintenant, tu devrais passer à autre chose.~
+@36   = ~Il m'a fallu des années pour surmonter cela et alors que j'avais enfin tiré un trait sur mon passé, voilà soudain qu'il ressurgit.~
+@37   = ~Je sais combien cela doit être douloureux, mais tu n'es pas à blâmer... et tu n'es pas seule non plus.~
+@38   = ~Songe que le moment de ta vengeance se rapproche... Ce sera une façon d'honorer la mémoire d'Osan.~
+@39   = ~Heureuse de voir que tu partages mon sentiment... Néanmoins, tu dois me penser faible...~
+@40   = ~Oui, et je suis ravi de te trouver quelques faiblesses...~
+@41   = ~Oui, mais après tout, cela ne fait que montrer que tu es humaine.~
+@42   = ~Oui, tu devrais être plus prudente avant de provoquer notre mort à tous.~
+@43   = ~Tu as raison, bien que quelquefois j'aie l'impression qu'une telle vengeance peut s'avérer insipide. Néanmoins, tu dois me penser faible...~
+@44   = ~Oui, et après tout ce qu'il t'est arrivé par le passé je suis ravi de te trouver enfin quelques faiblesses...~
+@45   = ~Oui, mais après tout, cela ne fait que montrer que tu es humaine.~
+@46   = ~Peut-être est-ce une esclave de plaisir obéissante et lascive que tu veux, plutôt qu'une compagne pour combattre à tes côtés.~
+@47   = ~Je n'ai jamais voulu dire ça, Kiara. Je t'aime comme tu es. J'ai simplement précisé que j'ai apprécié de voir davantage qu'une moinesse combattante insensible.~
+@48   = ~La pensée m'a traversé l'esprit, mais non. Je te préfère comme tu es.~
+@49   = ~Est-ce une proposition ?~
+@50   = ~Une pensée rassurante, mais je devine que tu ne serais pas tout à fait mécontent de la voir revenir.~
+@51   = ~Tu as raison, avançons alors.~
+@52   = ~Hé bien, je peux encore te surprendre.~
+
+// 3e lovetalk : a baby ?
+@53   = ~(d'une voix assurée). Je voudrais porter un enfant de toi...~
+@54   = ~Quoi ?... Maintenant !~
+@55   = ~Penses-tu vraiment que porter un enfant soit sage dans notre position ? Tous les enfants de Bhaal encore en vie ont juré ma mort.~
+@56   = ~Je ne cèderai pas à toutes tes lunatiques fantaisies.~
+@57   = ~Adoptons Zaiya, elle se comporte parfois comme une enfant et s'est montrée plutôt utile.~
+@58   = ~Notre relation est parfaite comme elle est. Je ne vois pas l'intérêt de la ruiner avec un enfant.~
+@59   = ~Désolé, je ne peux avoir d'enfant... Mon héritage me rend physiquement impuissant.~
+@60   = ~Es-tu enceinte ?~
+@61   = ~(d'une voix encore plus forte) Précisément ici. Précisément maintenant !~
+@62   = ~Zaiya, emmène au loin les spectateurs, s'il te plaît.~
+@63   = ~Es-tu folle ?~
+@64   = ~Euh... Ne devrions-nous pas trouver un endroit un peu plus confortable, une auberge, par exemple ?~
+@65   = ~Tu me taquines, n'est-ce pas ?~
+@66   = ~(en riant) Tu es un diable de femme et j'adore ça.~
+@67   = ~Pourquoi commencerais-je par demander ? Je suis sérieuse, <CHARNAME>.~
+@68   = ~Quoi !... Maintenant !~
+@69   = ~Adoptons Zaiya, elle est parfois puérile mais s'est montrée plutôt utile.~
+@70   = ~Désolé, je ne peux pas avoir d'enfant... Euh... Mon héritage me rend physiquement impuissant.~
+@71   = ~(en riant). Si Zaiya était notre fille, je ne suis pas certaine que cela ne tournerait pas à l'inceste.~
+@72   = ~Sérieusement, je pense à un enfant de nous.~
+@73   = ~Tu ne semblais pas impuissant la dernière fois que nous avons essayé. Quand je parle d'avoir un enfant, je suis néanmoins sérieuse.~
+@74   = ~Damnation, tu m'as percé à jour. Mais penses-tu réellement que porter un enfant soit sage dans notre position ?~
+@75   = ~Très bien, alors, adoptons Zaiya, elle est parfois puérile mais s'est montrée plutôt utile comme mage.~
+@76   = ~Au moins en as-tu supporté l'idée – je veux dire – d' avoir des enfants.~
+@77   = ~Actuellement, mon esprit se concentre sur autre chose, Kiara. Tous les enfants de Bhaal encore en vie ont juré ma mort.~
+@78   = ~Pas vraiment, mais ne devrions-nous pas en discuter en privé ?~
+@79   = ~Je ne fais que te taquiner, alors ne t'excite pas tout de suite. Je veux savoir si tu y as pensé ne serait-ce qu'une fois.~
+@80   = ~Non, mais je suis prêt à y réfléchir.~
+@81   = ~Une fois, mais j'ai balayé l'idée de mon esprit aussi vite que j'ai pu.~
+@82   = ~Oui, j'aimerais avoir des enfants moi aussi, mais je pense que le moment est terriblement mal choisi. Nous devrions attendre que cette épreuve soit finie.~
+@83   = ~Tu es fervent quand il s'agit de partager mon lit, mais tu ne vas pas plus loin que tu ne veux. Si tu n'es pas disposé à prendre en considération le voeu le plus cher d'une femme, alors tu pourrais aussi bien passer quelques nuits froides à y réfléchir.~
+@84   = ~Neuf mois passeront avant la naissance, et toute cette histoire d'enfant de Bhaal sera finie. D'ici là, nous nous serons installés.~
+@85   = ~Mais n'oublie pas que tu auras à te battre durant ta grossesse. Une décision aussi hâtive serait particulièrement insensée pour toi et le bébé.~
+@86   = ~Ne vas-tu pas un peu vite en besogne ? Ne devrions-nous pas nous marier d'abord ?~
+@87   = ~Pour être honnête, je ne veux pas d'enfant, ni maintenant, ni plus tard.~
+@88   = ~Je pourrais me reposer dans notre antichambre de temps en temps et en outre, ce ne sera pas vraiment un problème durant les premiers mois. Le bébé sera bien en sécurité dans ce robuste utérus qui est le mien.~
+@89   = ~Je ne suis toujours pas convaincu.~
+@90   = ~Je suis encore indécis, ne peux-tu me donner un peu de temps pour y réfléchir ?~
+@91   = ~Ton engagement dans notre relation est plus que suffisant. Je n'ai pas besoin d'une preuve d'amour supplémentaire.~
+@92   = ~Mais n'oublie pas que tu auras à te battre durant ta grossesse. Une telle décision serait particulièrement insensée pour toi et le bébé.~
+@93   = ~Alors prends un peu de temps, si tu le dois. Ce sera peut-être l'engagement le plus difficile que tu auras eu à prendre jusqu'ici, mais si tu m'aimes vraiment tu comprendras que c'est mon souhait le plus cher.~
+
+//4e lovetalk, après le massacre de Saradush
+@94   = ~J'espère que tu ne te reproches pas le massacre de Saradush...~
+@95   = ~Pourquoi devrais-je être accablé de culpabilité ?~
+@96   = ~Je me sens partiellement responsable, mais au fond de moi, je sais que mon héritage est le réel coupable.~
+@97   = ~Je suis ravi que quelqu'un ait fait le sale boulot. Je n'étais pas enclin à accomplir moi-même cette tâche ingrate.~
+@98   = ~Tous ces enfants de Bhaal abattus comme du bétail insouciant. Hommes, femmes et enfants confondus. C'est une pensée profondément perturbante.~
+@99   = ~Bien que l'on ne puisse t'en blâmer directement, il est indéniable que tu joues un rôle actif dans les événements en cours.~
+@100  = ~Je n'ai rien fait de plus que de tenter de sauver la cité, même si nous sommes arrivés trop tard... Je le regrette.~
+@101  = ~Je ne suis pas indifférent à leur horrible destin, même s'il n'y a pas grand chose à faire.~
+@102  = ~Quelqu'un a retiré de mes épaules un devoir qui était d'éliminer ceux que j'aurais eus à tuer de toute façon. Je lui en suis plutôt reconnaissant.~
+@103  = ~Tu exerces encore un certain contrôle sur ton héritage, il serait stupide de blâmer le destin ou autrui de tes propres actes.~
+@104  = ~Oui, bien que j'aie l'impression qu'il soit plus difficile de la contrôler en ces temps troublés, l'envie de tuer et de frapper mes ennemis se fait plus violente...~
+@105  = ~Je n'ai qu'un faible contrôle sur la volonté de mon père, les enfants de Bhaal de Saradush devaient être tués...~
+@106  = ~C'est ce que tu ressens à l'égard de tous ces innocents massacrés de sang froid ? Quel était leur crime, à part d'être nés porteurs du mauvais sang au mauvais moment ?~
+@107  = ~Ton héritage a fait de toi ce que je méprise le plus, et que les dieux me préservent de te rejoindre dans cette folie.~
+@108  = ~J'espère que tu vas un jour t'éveiller de cet épouvantable cauchemar et retrouver tes esprits.~
+@109  = ~Je suis heureuse de voir que tu n'es pas devenu un tueur impitoyable qui étanche sa soif dans le sang des enfants de Bhaal.~
+@110  = ~Je ressens la même chose, Kiara, et c'est pourquoi j'apprécie de t'avoir à mes côtés.~
+@111  = ~Pour être honnête, je crois que j'ai plutôt apprécié toutes ces morts.~
+@112  = ~Aussi longtemps que tu te raccrocheras à quelques principes clairs, tu ne failliras pas et sauras maintenir à distance le côté meurtrier de ton héritage.~
+@113  = ~Et quel genre de principe devrais-je observer ?~
+@114  = ~Oui, je ne laisserai pas l'instinct de mon père décider de mes principes et forcer un bain de sang que je ne désire pas.~
+@115  = ~Non, l'héritage de mon père est entre mes mains et je ne m'arrêterai pas si près de mon but, même si cela implique de massacrer les faibles.~
+@116  = ~J'ai tenté de mon mieux, autrefois, de faire éclore le monstre en toi, mais tu as résisté.~
+@117  = ~J'espère que cette folie n'a pas altéré tes sentiments.~
+@118  = ~En effet, Kiara, et c'est pourquoi j'apprécie de t'avoir à mes côtés.~
+@119  = ~Non, l'héritage de mon père est entre mes mains et je ne m'arrêterai pas si près de mon but, même si cela implique de disposer des faibles.~
+@120  = ~Je suis heureuse d'avoir trouvé une personne aussi exceptionnelle que toi. Je suis heureuse que ta détermination parvienne à dominer l'instinct de ton père.~
+@121  = ~Je resterai à tes côtés aussi longtemps que tu le souhaiteras.~
+
+//5e: pique-nique
+@122  = ~Ne trouves-tu pas que c'est l'endroit idéal pour un pique-nique ? Rien que toi et moi...~
+@123  = ~C'est sombre et déprimant par ici. Seul un spectre pourrait trouver l'endroit romantique.~
+@124  = ~C'est une invitation ?~
+@125  = ~On dirait que je suis bon pour une de tes délicieuses surprises.~
+@126  = ~Dans l'espoir de t'égayer, j'ai acheté quelques chandelles et des friandises. Tout est dans mon sac, à attendre que nous en profitions.~
+@127  = ~J'ai plutôt faim, et je pourrais manger un cheval.~
+@128  = ~Je ne suis pas d'humeur à un pique-nique romantique.~
+@129  = ~Je ne peux pas attendre pour goûter le dessert.~
+@130  = ~(Kiara et vous dégustez un délicieux canard rôti au vin dans une sauce aux framboises sauvages). Profiter de quelques moments de paix avec un verre de cet excellent vin Thayen, n'est-ce pas formidable ?~
+@131  = ~Absolument ! Ce vin est merveilleux. Où l'as-tu obtenu ?~
+@132  = ~As-tu préparé ce plat ?~
+@133  = ~Mais je n'en ai pas apporté !~
+@134  = ~Ah ! Mais si. Puisque tu es le dessert.~
+@135  = ~(en riant). Je savais que tu avais faim, mais tu aurais plutôt dû dire que tu dépérissais !~
+@136  = ~Je suis désolée mais nous allons devoir écourter notre déjeuner. J'ai promis à Zaiya de l'aider à traduire quelques passages difficiles de son dernier livre.~
+@137  = ~Bon, contente-toi d'apporter le plat principal alors.~
+@138  = ~Tu viens de me couper l'appétit.~
+@139  = ~Je sais que tu es impatient de finir cette guerre, mais tu as l'air épuisé, et tu devrais manger et te reposer.~
+@140  = ~Tu as probablement raison.~
+@141  = ~Nous n'avons pas le temps de nous reposer, nous devrions continuer à avancer.~
+@142  = ~(J'ai tellement mal aux pieds, tout cela finira-t-il jamais ?)~
+@143  = ~Je l'ai volé dans la cave à vin de  Gromnyr, à Saradush !~
+@144  = ~Habile petite voleuse !~
+@145  = ~Impossible !~
+@146  = ~Il n'en aura plus besoin, maintenant, et cela constitue une excellente rémunération, après les ennuis que nous avons eus.~
+@147  = ~Ne demandez jamais à une femme tous ses secrets à la fois.~
+@148  = ~Ne me dis pas que tu as engagé un cuisinier troll et qu'il est embusqué quelque part pour nous manger lorsque nous dormirons ?~
+@149  = ~Mais oui. Alors finis donc ton verre et allons-y.~
+@150  = ~C'était délicieux, nous devrions le faire plus souvent.~
+@151  = ~La nourriture était délicieuse et je suppose que tu l'as préparée toi-même ?~
+@152  = ~(en riant). Noooon. Zaiya a tué le canard ce matin avec une paire de projectiles magiques et il s'est trouvé que le volatile est tombé tout rôti dans des buissons de framboises. Je n'ai eu qu'à ajouter le vin à une recette déjà excellente.~
+@153  = ~Tu n'es pas sérieuse, n'est-ce pas ?~
+
+
+// 6e lovetalk : la question du bébé revient
+@154  = ~Vu que c'est l'heure de se coucher, t'es-tu décidé, mon amour ?~
+@155  = ~A quel sujet ?~
+@156  = ~Non, par l'enfer !~
+@157  = ~Je serais plutôt heureux d'avoir un enfant de toi.~
+@158  = ~Euh... Tu veux dire, à propos d'avoir un enfant ou pas ?~
+@159  = ~Désolé, je n'ai pas trouvé le temps d'y réfléchir.~
+@160  = ~Tu ne sais que trop de quoi je parle, mon amour. N'essaie pas de te défiler.~
+@161  = ~Pourquoi veux-tu me charger de plus grandes responsabilités alors que des milliers de vies dépendent déjà de mon succès ou de mon échec ?~
+@162  = ~Je n'ai aucune idée de ce dont tu parles.~
+@163  = ~Tu veux dire, à propos de l'opportunité ou non d'avoir un enfant ?~
+@164  = ~Je te taquinais, mais au fond rien ne me plairait davantage que d'avoir un enfant de toi.~
+@165  = ~La responsabilité ne t'effraie pas ?~
+@166  = ~Je ferai tout pour te rendre heureuse, mon amour.~
+@167  = ~Oui, je dois admettre que cela me fait peur.~
+@168  = ~Cela t'effraie, n'est-ce pas ? Nous parlons d'avoir un bébé et le grand enfant de Bhaal se défile comme un gamin qui a vu un revenant.~
+@169  = ~ Dois-je demander à Zaiya de lancer une résistance à la peur sur toi ou vas-tu réussir à soutenir une conversation sérieuse sur ce sujet ?~
+@170  = ~J'abandonne. S'il te plaît...~
+@171  = ~J'admets ma défaite et oui, je suis prêt pour une conversation sérieuse.~
+@172  = ~Notre renommée, notre pouvoir et la richesse accumulée nous attireront toujours des dizaines et des dizaines d'ennemis longtemps après la fin de ce cauchemar. On trouve toujours une raison pour remettre à plus tard ce que l'on ne désire pas.~
+@173  = ~En grattant sous la surface, tu trouveras simplement la peur de l'inconnu. Tu penses peut-être que l'équilibre de ta vie sera rompu, ou peut-être ressens-tu la peur de ne pas réussir à être père.~
+@174  = ~Tu n'as pas besoin d'accéder à la divinité pour vivre éternellement. Le Seigneur du Meurtre a justement laissé son essence afin de survivre, et tu peux en faire autant. Chacun de tes enfants portera un peu de ton essence et pour finir, s'il est élevé et éduqué avec soin, ton héritage et tes souvenirs.~
+@175  = ~Il y a là quelque vérité, mais je ne ne me suis pas décidé clairement pour une voie. Désolé, je n'aurai pas d'enfant pour le moment.~
+@176  = ~Tu as raison, Kiara. Si un enfant peut te rendre heureuse ; alors qui suis-je pour te le refuser ?~
+@177  = ~Un joli petit discours, Kiara, mais ils pourraient finir prématurément orphelins.~
+@178  = ~C'est ce que je craignais. N'importe quel prétexte te sera bon pour me refuser la maternité.~
+@179  = ~Je... je ne veux certainement pas te perdre, Kiara. Si c'est ton voeu le plus cher, alors je ne vois pas comment je pourrais te le refuser.~
+@180  = ~Désolé, je ne peux toujours pas.~
+@181  = ~Puisse cette nuit apporter une nouvelle floraison et de nouveaux espoirs dans nos vies. Viens, mon aimé, je veux sentir la douceur de ton étreinte...~
+@182  = ~J'ai le sentiment que tu nous refuses tout futur et qu'ainsi, tu as fait diverger nos chemins.~
+
+//7e lovetalk : morning joke
+@183  = ~Tu te réveilles enfin... J'espère que tu as bien dormi la nuit dernière.~
+@184  = ~Très bien merci, pourquoi poses-tu la question ?~
+@185  = ~Il y a eu un problème la nuit dernière ?~
+@186  = ~Tu as ronflé comme un cerf en rut... C'est à peine si j'ai dormi.~
+@187  = ~Désolé si je t'ai dérangée, mais pourquoi ne pas m'avoir réveillé ? ~
+@188  = ~Après tes prouesses de l'autre soir, j'étais trop fatiguée. La dernière chose que je voulais était de tirer de son sommeil un cerf en rut.~
+@189  = ~Ahem... Maintenant que je suis réveillé, peut-être pourrais-je te montrer...~
+@190  = ~Ne te consume pas tout de suite, mon cher élémentaire de feu. Garde ton énergie pour cette nouvelle journée.~
+
+
+//8e: la fin d'une longue route
+@191  = ~La fin de la route est proche et je parcours les dernières lieues avec appréhension... J'aimerais que le temps puisse s'arrêter un moment.~
+@192  = ~N'aie crainte, Kiara. Nous conquerrons tout sur notre passage.~
+@193  = ~Y a-t-il quelque chose qui t'inquiète ?~
+@194  = ~Mélissane et ses plans, quels qu'ils soient, échoueront.~
+@195  = ~Demande à Zaiya de lancer un arrêt du temps et ton voeu sera exaucé.~
+@196  = ~Tes pouvoirs n'ont pas atteint leur point culminant, et néanmoins j'en viens à me demander si le fossé entre nous n'est pas en train de s'élargir au point que notre relation en devienne impossible.~
+@197  = ~J'aime me considérer comme ton plus fort soutien, mais ta destinée appelle l'inévitable...~
+@198  = ~Je ne suis pas de taille à lutter contre le flux de pouvoir qui coule dans tes veines.~
+@199  = ~C'est là que tu te trompes, Kiara, tu auras toujours ta place à mes côtés.~
+@200  = ~Je t'aime, Kiara, rien d'autre n'a d'importance.~
+@201  = ~Tu es ma moinesse favorite, Kiara, et tu le resteras toujours.~
+@202  = ~Peut-être as-tu raison. Il n'y a pas de place pour toi dans ma destinée.~
+@203  = ~Je ne suis pas d'humeur à plaisanter.~
+@204  = ~Une douce récompense pour quelqu'un qui a commis tant d'erreurs par le passé. T'avoir trouvé est une bénédiction, <CHARNAME>.~
+@205  = ~Alors allons-y, <CHARNAME>, ta destinée t'attend.~
+@206  = ~Peut-être souhaites-tu devenir le futur objet de mes méditations, ou même de mon adoration ?~
+@207  = ~Je n'ai pas d'autre désir que d'être à tes côtés, Kiara.~
+@208  = ~Non, tu es libre d'agir comme tu l'entends, Kiara, bien que tu aies raison ; je sens bien, moi aussi, qu'il sera difficile de te garder à mes côtés.~
+@209  = ~J'apprécierais, sans aucun doute. Un dieu dépourvu d'adorateurs serait comme une nuit sans étoiles.~
+@210  = ~Tu auras toujours une place à part dans mon coeur, tu n'auras pas besoin de ma vénération. J'ai cependant l'impression que cela exige de mettre un terme à notre relation. Allons donc, <CHARNAME>, et affrontons l'inéluctable.~
+
+//Kiara et Zaiya
+@211  = ~Kiara, je crains de ne jamais trouver de remède à mon affliction. De nombreux mois ont passé depuis que cette affreuse malédiction s'est emparée de moi.~
+@212  = ~Tu devrais regarder le bon côté des choses. Nous traversons de nouveaux pays, rencontrons de nouvelles personnes. Je suis certaine que nous finirons par trouver un remède.~
+@213  = ~Nous avons traversé tout Amn sans rien trouver d'encourageant. En outre, le génie a dit qu'il y avait une réponse à Maztica, mais il n'a jamais mentionné Féérune. Je me sens plutôt désespérée, à vagabonder ainsi dans ces contrées.~
+@214  = ~Tu devrais laisser le destin décider. Jusqu'ici, la chance a été de notre côté.~
+@215  = ~Comme c'est égoïste de ta part. Tu veux dire que TU as été la chanceuse qui a trouvé moyen d'échapper à la griffe du mal, et trouvé l'amour dans le même temps.~
+@216  = ~Je t'en prie, comprends-moi, nous ne pouvons pas quitter <CHARNAME>. Ces temps sont troublés et il a un besoin désespéré de notre soutien et de notre aide.~
+@217  = ~Ton amour pour <CHARNAME> t'aveugle, Kiara. Un jour, il pourrait bien accéder à des pouvoirs qui sont hors de ton atteinte et t'abandonner à ton propre destin.~
+@218  = ~Une hypothèse grotesque que je ne partage pas. Un peu de patience résoudra tout cela.~
+@219  = ~Ton jugement est trop impulsif pour que l'on puisse débattre.~
+@220  = ~Je dois m'excuser, Zaiya, mais je ne peux renoncer à ces avantages pour sauter dans le premier bateau pour Maztica.~
+@221  = ~Comprends-moi, Kiara, je vis avec la pensée que je vais devoir supporter ta compagnie jusqu'à la fin de ma vie de mortelle, et il semble ne pas y avoir de main charitable pour m'accorder une remise de peine. Je me sens prisonnière d'un lien dont je suis lasse. Je suis devenue jalouse et suis profondément blessée de te voir heureuse avec <CHARNAME>. Je souhaite avoir ma propre vie, Kiara, et ne pas être le chien fidèle qui suit ses maîtres.~
+@222  = ~Je... Je... ne sais pas quoi dire. Je n'ai jamais pensé que tu en viendrais à me haïr à ce point....~
+@223  = ~Tu prends soin de ma santé, Kiara, mais tu as négligé mon propre ressenti.~
+@224  = ~Des soeurs devraient savoir se pardonner et ne pas se garder des rancunes absurdes. Je voudrais passer plus de temps près de toi et renouveler notre vieux lien d'amitié.~
+@225  = ~(Kiara tend la main). Je t'en prie, prends ma main, Zaiya. Marchons ensemble un moment et discutons. Tu te souviens de ton vieux maître, à  Afyal...~
+@226  = ~(Zaiya tend la main en hésitant). Oui.~
+@227  = ~Ne serait-il pas fier de voir son ancienne domestique arpenter Féérune comme une belle déesse ?~
+@228  = ~Essaies-tu d'apaiser mon humeur avec de la flatterie ?~
+@229  = ~Oui. J'avoue que j'essaie de te corrompre avec de douces paroles, mais un sort d'enchantement n'y réussirait pas davantage, n'est-ce pas ?~
+@230  = ~(avec un petit rire). Aucune chance. J'ai développé une résistance naturelle à tes abominations.~
+@231  = ~Je pense néanmoins que le pauvre homme te regarderait d'un air ahuri pendant un moment, de même que la plupart des gens que tu as connus.~
+@232  = ~Oh oui, sûrement. J'ai acquis une certaine confiance en mes compétences et ne regarde plus mes poussées entropiques avec mépris, mais avec fierté.~
+@233  = ~Je te promets, Zaiya, qu'un jour nous retournerons dans ton pays libérées de cette malédiction. Tous admireront la fille prodigue d'Afyal.~
+@234  = ~Merci, Kiara.~
+
+//Banter avec Korgan
+@235  = ~Pourquoi me regardes-tu, Korgan ?~
+@236  = ~On dirait que tu t'es beaucoup radoucie. J'préférais de loin tes yeux ardents à ce regard de mouton.~
+@237  = ~Je suis ravie de voir que ta langue tourbillonne toujours autant que ta hache. Mais, dis-moi, à quoi te sert cette troisième jambe ? Parviens-tu à marcher ?~
+@238  = ~De quoi parles-tu, fillette ?~
+@239  = ~Si je me souviens bien de notre dernière conversation, tu te vantais de ce que ton... hum... était aussi grand que le manche de ta hache. Vu que ta hache fait à peu près ta taille, je me demandais juste comment tu réussissais à marcher avec un appendice aussi développé.~
+@240  = ~Essaies-tu de te moquer de moi, fillette ? Parce que ma hache me démange, pendant qu'on parle.~
+@241  = ~Non, je suis terriblement sérieuse.~
+@242  = ~Hé bien, je me le suis attaché le long de la jambe gauche.~
+@243  = ~ça doit être assez douloureux par moments.~
+@244  = ~Hé, tu voudrais pas me masser la jambe, des fois ?~
+
+// Banter avec Jaheira
+@245  = ~Je te dois des excuses, Jaheira. Par le passé, j'ai pu en dire davantage que je n'en avais réellement l'intention... Je sais que j'ai heurté tes sentiments.~
+@246  = ~(Jaheira sourit dédaigneusement.) Essaies-tu réellement de me charrier, ou bien la douce démone s'est-elle réellement transformée en mouton ? Tu as fait plus de mal à ceux qui t'entouraient que tous nos ennemis réunis. Quoi que tu puisses vouloir dire pour justifier tes actions passées, cela tombera dans les oreilles d'une sourde.~
+@247  = ~Mon passé ne peut être annulé et peut-être ne serons-nous jamais amies, mais nous avons quelque chose en commun qui plaide pour la compréhension et le respect mutuel.~
+@248  = ~Et que pourrions-nous donc avoir en commun ?~
+@249  = ~Notre dévouement à la cause de <CHARNAME>. Un lien né du combat et de nos vies quotidiennes qui transcende le besoin de querelles nuisibles.~
+@250  = ~Si ce n'est pas le cas, pourquoi guéris-tu mes blessures après la bataille ou soignes-tu mes maladies quand je suis fatiguée ? J'en déduis simplement qu'en dépit de ta haine tu as consacré ta vie actuelle à de plus grands desseins.~
+@251  = ~Le fait d'avoir des objectifs communs peut difficilement entraîner une trêve de mes sentiments profonds à ton égard. Tout au plus suis-je prête à reconnaître que tu as quelque peu amélioré tes manières ces derniers temps, mais ne t'attends pas à de la gentillesse.~
+@252  = ~Ne perdons pas notre temps et admettons que le fossé entre nous est trop grand pour pouvoir être traversé.~
+@253  = ~Les failles peuvent toujours être traversées, mais encore faut-il que quelqu'un soit prêt à bâtir des ponts. Je ne peux et ne veux pas t'y forcer.~
+
+//Banter avec Viconia
+@254  = ~Viconia, le moins que l'on puisse dire est que tu n'as pas beaucoup changé ces derniers mois.. .J'aurais cru que le temps passé en surface t'aurait un peu dégrossie.~
+@255  = ~Le sang des drows coule dans mes veines, Kiara, et rien ne changera jamais cela.~
+@256  = ~Tu as trouvé refuge dans ce groupe, Viconia, et à moins de changer d'attitude tu pourrais te trouver de nouveau en une situation bien difficile, un jour.~
+@257  = ~Cette réflexion mérite mon attention, Kiara, même si je me pense plutôt capable de surmonter l'adversité...~
+@258  = ~As-tu un peu réfléchi à ce que tu ferais lorsque nous en aurons terminé ? Peut-être rejoindras-tu Drizzt dans son combat ?~
+@259  = ~Certainement pas ! Ma peau frissonne de dégoût à cette seule idée. Il déshonore tous ceux de ma race.~
+@260  = ~Alors, peut-être une vie plus retirée, consacrée à la vénération de Shar ?~
+@261  = ~Pourquoi t'en soucier, Kiara ? Les surfacins resteront toujours inconscients des usages des drows... et nous des leurs.~
+
+//Banter avec Sarevok
+@262  = ~On m'avait dit que tu étais une démone des Abysses. Mais je ne vois rien de plus qu'une moinesse qui endure les vicissitudes d'une vie mortelle.~
+@263  = ~Les gens ont souvent tendance à exagérer la vérité.~
+@264  = ~Je suis intrigué. Ce surnom fantaisiste doit avoir une raison d'être.~
+@265  = ~Autrefois, j'ai fait un pacte avec un démon....~
+@266  = ~Exquis... Je brûle d'impatience d'en entendre davantage.~
+@267  = ~Je lui ai promis de détourner un enfant de Bhaal de la bonté et de l'amener vers les forces du mal - en échange d'une vengeance contre un vieil ennemi personnel.~
+@268  = ~La vengeance est toujours une puissante motivation. Je devine aussi que l'enfant de Bhaal en question était <CHARNAME>... mais tu as donc échoué...~
+@269  = ~Je suis plutôt heureuse que la machination du démon ait échoué. Me voici soulagée d'un lourd fardeau.~
+@270  = ~Je suis surpris que le démon t'ait libérée si facilement, après ton échec.~
+@271  = ~Un bon Samaritain m'a dégagée de ses griffes. Mais même depuis lors, on me surnomme la démone rouge.~
+@272  = ~Un récit intrigant.~
+
+//Banter avec Keldorn
+@273  = ~Dis-moi donc, vieux chevalier, quels sont tes projets de retraite ? Jardiner ou rester assis dans la plus proche taverne à relater tes exploits, un verre de bière à la main ?~
+@274  = ~(Le mal à ce qu'il semble ne peut jamais être chassé). Me raillez-vous, Kiara ? ~
+@275  = ~Tu es prompt à juger les gens à travers l'oeil de Helm, mais à vrai dire je ne faisais que te taquiner.~
+@276  = ~Pendant un moment, j'ai marché. Les vieux chevaliers ne font pas vraiment de projets de retraite, mais une chose est sûre, je me sens bien mieux avec une épée à la main qu'avec une bêche ou une binette. Et pour ce qui est du vieux chevalier ivrogne, vantard et bagarreur, dans quelque sombre et infâme taverne, j'envie rarement une fin aussi misérable. Tout ce que j'espère, pour l'instant, est de voir un jour mes enfants grandir.~
+@277  = ~Et j'espère sincèrement que tu le pourras.~
+
+//Banter avec Jan
+@278  = ~Jan, parle-moi de ta cousine Bertha dont les mains sont aussi grandes que les pieds. Était-ce un canular, ou as-tu inventé l'histoire spécialement pour moi ?~
+@279  = ~Hé bien, Kiki ... Hum... J'espère que ça ne t'ennuie pas, ou dois-je t'appeler 'la démone rouge qui harasse les gnomes sans défense' ?~
+@280  = ~Appelle-moi simplement Kiara. La démone rouge qui harasse les gnomes sans défense prouverait que les voeux pieux peuvent devenir réalité.~
+@281  = ~Tenons-nous en à Kiki. C'est suffisamment court pour ma mémoire toujours défaillante. Quoi qu'il en soit, l'histoire de Bertha est vraie ; en fait, sa mère avait épousé un halfeling, mais pas un halfeling normal. Il avait des pieds immenses et touffus comme un duvet d'araignée. D'habitude il les cachait derrière des bottes immenses qui ne le quittaient jamais, même au lit, en tout cas c'est ce que dit la légende. Une fois, je suis allé chez lui mais personne ne répondait à mes appels, alors j'ai jeté un coup d'oeil innocent à travers la porte de sa chambre... Je dois dire que les gens exagèrent souvent quand ils racontent des histoires.~
+@282  = ~Tu veux dire que ses pieds étaient plus petits que tu ne t'y attendais.~
+@283  = ~Non. Ses pieds étaient énormes, mais il ôtait ses bottes avant de dormir.~
+@284  = ~Je suis encore perplexe. Comment Bertha a-t-elle eu des mains aussi grandes que ses pieds ?~
+@285  = ~Oh mais c'est la meilleure partie de l'histoire. Un jour, les parents étaient en route pour le marché avec la petite Bertha afin d'acheter quelques navets, quand ils rencontrèrent l'Oncle  Dimpfeltrop...~
+@286  = ~(L'air ennuyée et bâillant à dessein). Je n'ai pas la patience d'attendre la suite. Peut-être une autre fois, je me sens un peu fatiguée maintenant.~
+
+//Banter avec Imoen
+@287  = ~Tu connais <CHARNAME> depuis tellement longtemps. Je t'envie.~
+@288  = ~(rit). Si tu le connaissais depuis aussi longtemps que moi, peut-être aurais-tu pitié de moi. Je suis ravie que tu aies changé, Kiara. Chaque fois que je vous regardais, toi et mon frère, ça me donnait des frissons dans le dos.~
+@289  = ~Tu désapprouvais et c'est compréhensible. Est-ce toujours le cas maintenant ?~
+@290  = ~Disons que ta liberté conditionnelle a été prolongée et que je réfléchis à ta complète réhabilitation.~
+@291  = ~Bon, je réfléchis au meilleur moyen de sortir rapidement de ta prison. Garde la clef en lieu sûr, je ne veux pas rester enfermée éternellement.~
+@292  = ~Non, je ne faisais que te taquiner.~
+
+//Banter avec Anomen
+@293  = ~Dans mon souvenir, tu préférais de beaucoup une vie d'aventure à une vie paisible ; ton empressement n'a-t-il pas un peu faibli après les épreuves endurées par ce groupe ?~
+@294  = ~La ferveur de mon dévouement à la cause de <CHARNAME> est toujours intacte. Mais je me lasse de tout ce sang répandu, et désire quelquefois que cette guerre s'achève.~
+@295  = ~Le bilan en a été lourd, en effet. Mais, dis-moi, as-tu songé à reprendre les affaires de ton père quand cette aventure serait finie ?~
+@296  = ~La propriété et les affaires de mon père sont porteurs de trop nombreux souvenirs pénibles. J'ai déjà tout vendu à l'ennemi de mon père, et donné à l'Ordre la majeure partie de l'argent.~
+@297  = ~L'Ordre a dû beaucoup apprécier. T'ont-ils promis quoi que ce soit en retour ?~
+@298  = ~Je n'ai demandé aucune faveur en retour, bien qu'ils aient promis de faire bon usage de cet or. Ils vont bientôt inaugurer un orphelinat qui portera mon nom.~
+@299  = ~Le Coeur Radieux est vraiment noble et tu devrais en être fier. Mais cet argent ne te manquera-t-il pas à ton retour ?~
+@300  = ~Mes talents de clerc et ma masse me suffiront pour secourir l'Ordre, quoi qu'il requière de moi. Du reste, j'ai encore un peu d'argent de côté.~
+
+//Banter avec Nalia
+@301  = ~Qui considères-tu comme pauvre, Nalia ?~
+@302  = ~Toute personne qui n'a pas assez d'argent pour subsister.~
+@303  = ~J'ai vu beaucoup de mendiants dotés de deux bras et de deux jambes, aptes au travail. Ils pourraient participer au chargement des navires, cultiver des terres ou devenir pêcheurs. Ou le Conseil pourrait les employer pour construire ou améliorer des routes.~
+@304  = ~Je ne veux pas entendre une autre de tes ridicules théories sur l'esclavage !~
+@305  = ~Non, ils seraient payés, bien sûr.~
+@306  = ~Ton idée est absurde de toute façon.~
+@307  = ~Pourquoi ?~
+@308  = ~Les Mages Cagoulés fournissent des dizaines et des dizaines de golems pour l'entretien des routes.~
+@309  =~En fait, cela explique pourquoi les gens restent pauvres, mais aussi pourquoi les routes d'Amn sont aussi dangereuses.~
+
+//Banter avec Edwin et Zaiya
+@310  = ~Edwin, Ton arrogance et ta confiance vaniteuse en tes talents appellent un défi.~
+@311  = ~(Hé Hé... Je ne vois pas comment ces pathétiques simiens pourraient jamais gagner, acceptons). Qu'as-tu en tête, Kiara ?~
+@312  = ~Un duel de magie entre toi et Zaiya.~
+@313  = ~Quoi ! Ne devrais-tu pas me consulter avant de m'exposer à être blessée ?~
+@314  = ~(Kiara continue de regarder Edwin). Alors, qu'en dis-tu, Edwin ?~
+@315  = ~(La pauvre fille va probablement rater son sort). Excellente idée. A condition que ce soit un affrontement loyal, c'est-à-dire que nous laissions à terre tout équipement susceptible de donner un avantage.~
+@316  = ~Je suggère que tu conserves ton *équipement* bien hors de vue, Edwin, tu pourrais pétrifier cette pauvre Zaiya avant qu'elle n'ait la moindre chance. ~
+@317  = ~ Mais oui, vous porterez tous deux les mêmes robes et aurez un peu de temps pour vous préparer.~
+@318  = ~ Es-tu folle, Kiara, le Thayen a plus de sorts dans son répertoire que je ne pourrais en rêver.~
+@319  = ~(murmure à l'oreille de Zaiya). Fais-moi confiance, cet idiot n'a quasiment aucune chance.~
+@320  = ~Alors, quelles sont les règles, Kiara ? Le combat cessera-t-il au premier sang, ou devrons-nous lutter jusqu'à la mort ?~
+@321  = ~Ni l'un ni l'autre...~
+@322  = ~Alors, quoi ?~
+@323  = ~Le combat s'achève lorsque l'un d'entre vous se métamorphose en Edwina.~
+@324  = ~J'aurais dû deviner. Tu ne cherchais qu'à te moquer de moi, Kiara.~
+@325  = ~Très bien, on dirait que tu as renoncé à ce défi et concédé la victoire à Zaiya.~
+
+//Banter avec Aerie
+@326  = ~Aerie, ne bouge pas ! Il y a une bestiole dans tes cheveux !~
+@327  = ~Hein ! Où ça ?~
+@328  = ~Laisse-moi l'ôter pour toi. (Kiara s'approche d'Aerie et retire son épingle à cheveux)~
+@329  = ~Oh ! Pourquoi as-tu fait cela ? Tu as emmêlé mes cheveux, Kiara.~
+@330  = ~Désolée, je ne pouvais pas m'empêcher de faire quelque chose de stupide aujourd'hui.~

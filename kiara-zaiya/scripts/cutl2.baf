@@ -1,0 +1,13 @@
+IF
+  InParty("Kiara")  // ~Kiara~
+  Global("KiaraRomanceActive","GLOBAL",2)
+  Global("LoveTalk","LOCALS",48)
+THEN
+  RESPONSE #100
+    CutSceneId("Kiara")  // 
+    TextScreen("KIARAL2")
+    SmallWait(1)
+    SetGlobal("LoveTalk","LOCALS",49)
+    StartCutScene("Cut34a")
+END
+

@@ -1,0 +1,54 @@
+// Isaya : reordered according to SNDSLOT.IDS
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Zaiya")  // 
+    SetName(@27)  // ~Zaiya~
+    SetPlayerSound(Myself,@91,INITIAL_MEETING)  // ~Nothing~
+    SetPlayerSound(Myself,@225,HAPPY)  // ~I enjoy traveling with you so. This must be what freedom feels like.~
+    SetPlayerSound(Myself,@226,UNHAPPY_ANNOYED)  // ~My time could be spent much more satisfactorily with my books. I do not like this.~
+    SetPlayerSound(Myself,@227,UNHAPPY_SERIOUS)  // ~I cannot approve of the path we are following. My time could best be spent elsewhere.~
+    SetPlayerSound(Myself,@228,UNHAPPY_BREAKING_POINT)  // ~I have enough of all this pain and suffering inflicted upon others. Be cursed <CHARNAME>!~
+    SetPlayerSound(Myself,@93,LEADER)  // ~I'm not so sure this is my place, but I am willing to try my best~
+    SetPlayerSound(Myself,@94,TIRED)  // ~Oh please can we stop? I feel like sleeping right here.~
+    SetPlayerSound(Myself,@95,BORED)  // ~Are we here for long?...Perhaps I can resume my readings of this excellent book on polymorph.  ~
+    SetPlayerSound(Myself,@92,BATTLE_CRY1)  // ~I'll ex-spell them to hell...~
+    SetPlayerSound(Myself,@125,BATTLE_CRY2)  // ~~
+    SetPlayerSound(Myself,@126,BATTLE_CRY3)  // ~~
+    SetPlayerSound(Myself,@96,DAMAGE)  // ~Awwh!~
+    SetPlayerSound(Myself,@104,DYING)  // ~Aaaaah...~
+    SetPlayerSound(Myself,@103,HURT)  // ~Ouch!~
+    SetPlayerSound(Myself,@105,AREA_FOREST)  // ~Ah! If memory serves the elves call this tree Calvernon ..Did I say anything wrong?  ...Stop staring at me please!~
+    SetPlayerSound(Myself,@106,AREA_CITY)  // ~I wonder if we'll find some time to visit the library.~
+    SetPlayerSound(Myself,@107,AREA_DUNGEON)  // ~I can't see a *thing* in this dark place, anybody could lend me a torch?~
+    SetPlayerSound(Myself,@108,AREA_DAY)  // ~It looks like another great day.~
+    SetPlayerSound(Myself,@109,AREA_NIGHT)  // ~It's getting *real* late. Shouldn't we be in bed by now?~
+    SetPlayerSound(Myself,@97,SELECT_COMMON1)  // ~Yes?~
+    SetPlayerSound(Myself,@98,SELECT_COMMON2)  // ~You need a wild mage?~
+    SetPlayerSound(Myself,@99,SELECT_COMMON3)  // ~You are calling me?~
+// Isaya : since there were two INITIAL_MEETING, the second with "", I decided to assign it to COMMON4 and COMMON5
+    SetPlayerSound(Myself,@128,SELECT_COMMON4)  // ~~
+    SetPlayerSound(Myself,@128,SELECT_COMMON5)  // ~~
+    SetPlayerSound(Myself,@127,SELECT_COMMON6)  // ~~
+    SetPlayerSound(Myself,@100,SELECT_ACTION1)  // ~I'll do it right away...~
+    SetPlayerSound(Myself,@101,SELECT_ACTION2)  // ~Always ready to lend a hand...~
+    SetPlayerSound(Myself,@102,SELECT_ACTION3)  // ~That's all too easy...~
+    SetPlayerSound(Myself,@110,SELECT_ACTION4)  // ~~
+    SetPlayerSound(Myself,@111,SELECT_ACTION5)  // ~~
+    SetPlayerSound(Myself,@112,SELECT_ACTION6)  // ~~
+    SetPlayerSound(Myself,@113,SELECT_ACTION7)  // ~~
+    SetPlayerSound(Myself,@114,REACT_TO_DIE_GENERAL)  // ~~
+    SetPlayerSound(Myself,@115,SELECT_RARE1)  // ~Could I finish my reading first? ~
+    SetPlayerSound(Myself,@116,SELECT_RARE2)  // ~~
+    SetPlayerSound(Myself,@117,CRITICAL_HIT)  // ~*Yes!* Just call me Drizzt! ~
+    SetPlayerSound(Myself,@118,CRITICAL_MISS)  // ~Hum...clumsy again.~
+    SetPlayerSound(Myself,@119,TARGET_IMMUNE)  // ~Let me try some wild magic!~
+    SetPlayerSound(Myself,@120,INVENTORY_FULL)  // ~With Kiara asking me to carry some of her stuff too, sorry I have enough already!~
+    SetPlayerSound(Myself,@121,PICKED_POCKET)  // ~~
+    SetPlayerSound(Myself,@122,HIDDEN_IN_SHADOWS)  // ~~
+    SetPlayerSound(Myself,@123,SPELL_DISRUPTED)  // ~My spell has been interrupted...~
+    SetPlayerSound(Myself,@124,SET_A_TRAP)  // ~~
+    SetPlayerSound(Myself,@28,EXISTANCE5)  // ~When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerun. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.~
+END
+

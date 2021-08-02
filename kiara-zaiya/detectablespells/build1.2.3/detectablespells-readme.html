@@ -1,0 +1,578 @@
+<html>
+	<head>
+		<title>
+			Detectable Spells
+		</title>
+	</head>
+<body>
+	<h1>
+		detectablespells-readme.txt
+	</h1>
+<p>
+	<hr>
+<p>
+	<strong>
+		<u>
+			COMPATIBLE GAMES:
+	</strong>
+	</u>
+<p>
+[x] Baldur's Gate II: Shadows of Amn
+	<br>
+[x] Baldur's Gate II: Throne of Bhaal
+<p>
+	<hr>
+<p>
+<b><u>Contact Information:</b></u>
+<p>
+<b>Creator Name:</b> Eric Kerr (aka Cirerrek)<br>
+<b>Creator E-mail:</b> [<a href="mailto:cirerrek@hotmail.com">cirerrek@hotmail.com</a>]<br>
+<b>Web URL:</b> [<a href="http://home.earthlink.net/~cirerrek/">http://home.earthlink.net/~cirerrek/</a>]<br>
+<b>Last Modified:</b> March 21, 2003
+<p>
+	<hr>
+<p>
+	<h3>
+		What it does:
+	</h3>
+<p>
+Detectable Spells was originally created by Vulgar Zildrah and Kensai Ryu.
+<p>
+It allows you to use a CheckStat, CheckstatGT or LT trigger
+to look for certain spells in effect on an object. The names
+used for checkstat match the Spell.ids names of the spells to SOME extent.
+<p>
+So to check if the last object seen has a protection from evil spell active
+and display the text 'Protected from evil' above the object running the script's
+head, use the following script:
+<p>
+IF
+CheckStatGT(LastSeenBy(Myself),0,PROTECTION_FROM_EVIL)
+THEN
+RESPONSE #100
+DisplayStringHead(Myself,14769)    //'Protected from evil'
+END
+<p>
+Obviously this gives us a lot more ability to script for spell defenses
+that are active on objects.
+<p>
+	<hr>
+<p>
+	<h3>
+		Known Issues:
+	</h3>
+<p>
+Occasionally it has been found that certain spells will trigger
+an incorrect state.  For example:
+<p>
+If two spells are cast that are Stats in the same entry, only the
+lasts spell cast will be detectable, I site SCRIPTINGSTATE5 as a prime example.
+<p>
+To offset this potential conflict, an attempt was made to assign the more 'powerful'
+spells a higher value in its respective Stat entry.
+<p>
+	<hr>
+<p>
+	<center>
+		<table width="80%" cellspacing="0" border="1" cellpadding="2">
+<tr>
+	<th colspan=3 bgcolor="#C0C0C0">
+		<font color="#FFFFFF">
+			Additions/Modifications to STATS.IDS
+		</font>
+	</th>
+</tr>
+<tr>
+	<td>
+		156
+	</td>
+	<td align="center">
+		SCRIPTINGSTATE1
+	</td>
+	<td>
+		<ul>
+			<li>Magnet
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		157
+	</td>
+	<td align="center">
+		SCRIPTINGSTATE2
+	</td>
+	<td>
+		<ul>
+			<li>Deathward
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		158
+	</td>
+	<td align="center">
+		SCRIPTINGSTATE3
+	</td>
+	<td>
+		<ul>
+			<li>Negative Plane Protection
+       		<li>Barbarian Rage
+       		<li>Boon of Lathander
+		</ul>
+	</td>
+<tr>
+	<td>
+		159
+	</td>
+	<td align="center">
+		SCRIPTINGSTATE4
+	</td>
+	<td>
+		<ul>
+			<li>Berserker Enrage Value =1
+        	<li>Minsc Berserk Value=1
+        	<li>Barbarian Rage Value=1
+        	<li>Boon of Lathander Value=1
+        	<li>Kensai Kai Value=2
+        	<li>Mazzy Invoke Courage Value=3
+        	<li>Warrior Whirlwind=4
+        	<li>Warrior Greater Whirlwind=5
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		160
+	</td>
+	<td align="center">
+		SCRIPTINGSTATE5
+	</td>
+	<td>
+		<ul>
+			<li>Cleric's Barkskin Value=1
+       		<li>Wizard Shield Value=2
+       		<li>Wizard Armor Value=3
+       		<li>Ghost Armor Value=4
+       		<li>Spirit Armor Value=5
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		161
+	</td>
+	<td align="center">
+		WIZARD_SPELL_DEFLECTION
+	</td>
+	<td>
+		<ul>
+			<li>Minor Spell Deflection Value=1
+       		<li>Spell Deflection Value=2
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		162
+	</td>
+	<td align="center">
+		WIZARD_SPELL_TURNING
+	</td>
+	<td>
+		<ul>
+			<li>Minor Spell Turning Value=1
+       		<li>Spell Turning Value=2
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		163
+	</td>
+	<td align="center">
+		WIZARD_PROTECTION_FROM_ENERGY
+	</td>
+</tr>
+<tr>
+	<td>
+		164
+	</td>
+	<td align="center">
+		WIZARD_SPELL_TRAP
+	</td>
+</tr>
+<tr>
+	<td>
+		165
+	</td>
+	<td align="center">
+		WIZARD_IMPROVED_ALACRITY
+	</td>
+</tr>
+<tr>
+	<td>
+		166
+	</td>
+	<td align="center">
+		PROTECTION_FROM_EVIL
+	</td>
+	<td>
+		<ul>
+			<li>Includes innate abilities
+   		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		167
+	</td>
+	<td align="center">
+		TRUE_SIGHT
+	</td>
+	<td>
+		<ul>
+			<li>Includes innate abilities
+   		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		168
+	</td>
+	<td align="center">
+		CLERIC_CHAOTIC_COMMANDS
+	</td>
+</tr>
+<tr>
+	<td>
+		169
+	</td>
+	<td align="center">
+		CLERIC_MAGIC_RESISTANCE
+	</td>
+</tr>
+<tr>
+	<td>
+		170
+	</td>
+	<td align="center">
+		CLERIC_INSECT_PLAGUE
+	</td>
+</tr>
+<tr>
+	<td>
+		171
+	</td>
+	<td align="center">
+		CLERIC_BLADE_BARRIER
+	</td>
+</tr>
+<tr>
+	<td>
+		172
+	</td>
+	<td align="center">
+		CLERIC_PHYSICAL_MIRROR
+	</td>
+</tr>
+<tr>
+	<td>
+		173
+	</td>
+	<td align="center">
+		CLERIC_SHIELD_OF_THE_ARCHONS
+	</td>
+</tr>
+<tr>
+	<td>
+		174
+	</td>
+	<td align="center">
+		CLERIC_REGENERATION
+	</td>
+</tr>
+<tr>
+	<td>
+		175
+	</td>
+	<td align="center">
+		CLERIC_CREEPING_DOOM
+	</td>
+</tr>
+<tr>
+	<td>
+		176
+	</td>
+	<td align="center">
+		WIZARD_PROTECTION_FROM_PETRIFICATION
+	</td>
+</tr>
+<tr>
+	<td>
+		177
+	</td>
+	<td align="center">
+		WIZARD_SPELL_SHIELD
+	</td>
+</tr>
+<tr>
+	<td>
+		178
+	</td>
+	<td align="center">
+		WIZARD_RESIST_FEAR
+	</td>
+</tr>
+<tr>
+	<td>
+		179
+	</td>
+	<td align="center">
+		WIZARD_PROTECTION_FROM_NORMAL_MISSILES
+	</td>
+</tr>
+<tr>
+	<td>
+		180
+	</td>
+	<td align="center">
+		WIZARD_GREATER_MALISON
+	</td>
+</tr>
+<tr>
+	<td>
+		181
+	</td>
+	<td align="center">
+		WIZARD_PROTECTION_FROM_NORMAL_WEAPONS
+	</td>
+</tr>
+<tr>
+	<td>
+		182
+	</td>
+	<td align="center">
+		WIZARD_TENSERS_TRANSFORMATION
+	</td>
+</tr>
+<tr>
+	<td>
+		183
+	</td>
+	<td align="center">
+		WIZARD_PROTECTION_FROM_MAGIC_ENERGY
+	</td>
+</tr>
+<tr>
+	<td>
+		184
+	</td>
+	<td align="center">
+		WIZARD_MISLEAD
+	</td>
+</tr>
+<tr>
+	<td>
+		185
+	</td>
+	<td align="center">
+		WIZARD_PROTECTION_FROM_MAGIC_WEAPONS
+	</td>
+	<td>
+		<ul>
+			<li>Mantle Value=1
+       		<li>Improved Mantle Value=2
+       		<li>Absolute Immunity Value=3
+       		<li>Protection from Magic Weapons Value=4
+   		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		186
+	</td>
+	<td align="center">
+		WIZARD_SPELL_IMMUNITY
+	</td>
+	<td>
+		<ul>
+			<li>Abjuration Value=1
+       		<li>Conjuration Value=2
+       		<li>Divination Value=3
+       		<li>Enchantment Value=4
+       		<li>Illusionary Value=5
+       		<li>Evocation Value=6
+       		<li>Necromancy Value=7
+       		<li>Alteration Value=8
+   		</ul>
+	</td>
+</tr>
+<tr>
+	<td>
+		187
+	</td>
+	<td align="center">
+		WIZARD_PROTECTION_FROM_THE_ELEMENTS
+	</td>
+</tr>
+<tr>
+	<td>
+		199
+	</td>
+	<td align="center">
+		STONESKINSGOLEM
+	</td>
+</tr>
+<tr>
+	<td>
+		200
+	</td>
+	<td align="center">
+		LEVELDRAIN
+	</td>
+</tr>
+</table>
+</center>
+<p>
+<hr>
+<p>
+<center>
+<table width="80%" cellspacing="0" border="1" cellpadding="2">
+<tr><th colspan=3 bgcolor="#C0C0C0"><font color="#FFFFFF">Included Spell Files</font></th></tr>
+<tr><th colspan=3>Class Spells</th></tr>
+<tr>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Code</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Name</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell.IDS Reference</font></th>
+</tr>
+<tr><td>SPCL144</td><td>Kensai Kia</td><td>KENSAI_KIA</td></tr>
+<tr><td>SPCL152</td><td>Barbarian Rage</td><td>BARBARIAN_RAGE</td></tr>
+<tr><td>SPCL213</td><td>Paladin Protection from Evil</td><td>PALADIN_PROTECTION_FROM_EVIL</td></tr>
+<tr><td>SPCL232</td><td>Inquisitor True Sight</td><td>INQUIS_TRUE_SIGHT</td></tr>
+<tr><td>SPCL321</td><td>Berserker Enrage</td><td>BERSERKER_ENRAGE--BERSERKER_RAGE</td></tr>
+<tr><td>SPCL321D</td><td>Beserker Enrage Cool Down</td></tr>
+<tr><td>SPCL732</td><td>Helm True Sight</td><td>HELM_TRUESIGHT</td></tr>
+<tr><td>SPCL741</td><td>Boon of Lathander</td><td>LATHANDER_BOON</td></tr>
+<tr><td></td></tr>
+<tr><th colspan=3>Innate Spells</th></tr>
+<tr>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Code</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Name</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell.IDS Reference</font></th>
+</tr>
+<tr><td>SPIN117</td><td>Minsc's Berserk</td><td>MINSC_BERSERK--INNATE_BERZERK</td></tr>
+<tr><td>SPIN121</td><td>Innate Protection from Evil</td><td>INNATE_PROTECTION_FROM_EVIL</td></tr>
+<tr><td>SPIN676</td><td>Mazzy's Invoke Courage</td><td>INVOKE_COURAGE</td></tr>
+<tr><td>SPIN684</td><td>Kuo-Toan True Sight</td><td>KOA_TRUE_SIGHT_NO_VIS</td></tr>
+<tr><td>SPIN686</td><td>Protection from Magic Weapons</td><td>PROTECTION_MAGIC_WEAPON_NOEFF</td></tr>
+<tr><td>SPIN710</td><td>Spell Deflection</td><td>SPELL_DEFLECTION_NO_VISUAL</td></tr>
+<tr><td>SPIN920</td><td>Beholder Minor Spell Turning</td><td>BEHOLDER_SPELL_TURNING</td></tr>
+<tr><td>SPIN696</td><td>Moon Dog Sight</td><td>MOONDOG_SIGHT</td></tr>
+<tr><td></td></tr>
+<tr><th colspan=3>Priest Spells</th></tr>
+<tr>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Code</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Name</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell.IDS Reference</font></th>
+</tr>
+<tr><td>SPPR107</td><td>Protection from Evil</td><td>CLERIC_PROTECTION_FROM_EVIL</td></tr>
+<tr><td>SPPR202</td><td>Barkskin</td><td>CLERIC_BARKSIN</td></tr>
+<tr><td>SPPR408</td><td>Protection from Evil 10'</td><td>CLERIC_PROTECTION_FROM_EVIL_10_FOOT</td></tr>
+<tr><td>SPPR505</td><td>True Sight</td><td>CLERIC_TRUE_SIGHT</td></tr>
+<tr><td>SPPR508</td><td>Chaotic Commands</td><td>CLERIC_CHAOTIC_COMMANDS</td></tr>
+<tr><td>SPPR509</td><td>Magic Resistance</td><td>CLERIC_MAGIC_RESISTANCE</td></tr>
+<tr><td>SPPR517</td><td>Insect Plague</td><td>CLERIC_INSECT_PLAGUE</td></tr>
+<tr><td>SPPR603</td><td>Blade Barrier</td><td>CLERIC_BLADE_BARRIER</td></tr>
+<tr><td>SPPR613</td><td>Physical Mirror</td><td>CLERIC_PHYSICAL_MIRROR</td></tr>
+<tr><td>SPPR698</td><td>NPC Blade Barrier</td><td>NPC_BLADE_BARRIER</td></tr>
+<tr><td>SPPR701</td><td>Shield of the Archons</td><td>CLERIC_SHIELD_OF_THE_ARCHONS</td></tr>
+<tr><td>SPPR711</td><td>Regeneration</td><td>CLERIC_REGENERATE</td></tr>
+<tr><td>SPPR717</td><td>Creeping Doom</td><td>CLERIC_CREEPING_DOOM</td></tr>
+<tr><td>SPPR950</td><td>True Sight2</td><td>CLERIC_TRUE_SIGHT2</td></tr>
+<tr><td></td></tr>
+<tr><th colspan=3>Wizard Spells</th></tr>
+<tr>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Code</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Name</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell.IDS Reference</font></th>
+</tr>
+<tr><td>SPWI102</td><td>Armor</td><td>WIZARD_ARMOR</td></tr>
+<tr><td>SPWI108</td><td>Protection from Petrification</td><td>WIZARD_PROTECTION_FROM_PETRIFICATION</td></tr>
+<tr><td>SPWI113</td><td>Protection from Evil</td><td>WIZARD_PROTECTION_FROM_EVIL</td></tr>
+<tr><td>SPWI114</td><td>Shield</td><td>WIZARD_SHIELD</td></tr>
+<tr><td>SPWI210</td><td>Resist Fear</td><td>WIZARD_RESIST_FEAR</td></tr>
+<tr><td>SPWI311</td><td>Protection from Normal Missles</td><td> WIZARD_PROTECTION_FROM_NORMAL_MISSILES</td></tr>
+<tr><td>SPWI317</td><td>Ghost Armor</td><td>WIZARD_GHOST_ARMOR</td></tr>
+<tr><td>SPWI318</td><td>Minor Spell Deflection</td><td>WIZARD_MINOR_SPELL_DEFLECTION</td></tr>
+<tr><td>SPWI412</td><td>Greater Malison</td><td>WIZARD_GREATER_MALISON</td></tr>
+<tr><td>SPWI414</td><td>Spirit Armor</td><td>WIZARD_SPIRIT_ARMOR</td></tr>
+<tr><td>SPWI511</td><td>Protection from Normal Weapons</td><td>WIZARD_PROTECTION_FROM_NORMAL_WEAPONS</td></tr>
+<tr><td>SPWI519</td><td>Spell Shield</td><td>WIZARD_SPELL_SHIELD</td></tr>
+<tr><td>SPWI522</td><td>Minor Spell Turning</td><td>WIZARD_MINOR_SPELL_TURNING</td></tr>
+<tr><td>SPWI590</td><td>Spell Immunity: Abjuration</td><td>WIZARD_SPELL_IMMUNITY_ABJURATION</td></tr>
+<tr><td>SPWI591</td><td>Spell Immunity: Conjuration</td><td>WIZARD_SPELL_IMMUNITY_CONJURATION</td></tr>
+<tr><td>SPWI592</td><td>Spell Immunity: Divination</td><td>WIZARD_SPELL_IMMUNITY_DIVINATION</td></tr>
+<tr><td>SPWI593</td><td>Spell Immunity: Enchantment</td><td>WIZARD_SPELL_IMMUNITY_ENCHANTMENT</td></tr>
+<tr><td>SPWI594</td><td>Spell Immunity: Illusionist</td><td>WIZARD_SPELL_IMMUNITY_ILLUSIONIST</td></tr>
+<tr><td>SPWI595</td><td>Spell Immunity: Invocation</td><td>WIZARD_SPELL_IMMUNITY_INVOCATION</td></tr>
+<tr><td>SPWI596</td><td>Spell Immunity: Necromancy</td><td>WIZARD_SPELL_IMMUNITY_NECROMANCY</td></tr>
+<tr><td>SPWI597</td><td>Spell Immunity: Alteration</td><td>WIZARD_SPELL_IMMUNITY_ALTERATION</td></tr>
+<tr><td>SPWI603</td><td>Tenser's Transformation</td><td>WIZARD_TENSERS_TRANSFORMATION</td></tr>
+<tr><td>SPWI606</td><td>Protection from Magic Energy</td><td>WIZARD_PROTECTION_FROM_MAGIC_ENERGY</td></tr>
+<tr><td>SPWI607</td><td>Mislead</td><td>WIZARD_MISLEAD</td></tr>
+<tr><td>SPWI609</td><td>True Sight</td><td>WIZARD_TRUE_SIGHT</td></tr>
+<tr><td>SPWI611</td><td>Protection from Magic Weapons</td><td>WIZARD_PROTECTION_FROM_MAGIC_WEAPONS</td></tr>
+<tr><td>SPWI613</td><td>Improved Haste</td><td>WIZARD_IMPROVED_HASTE</td></tr>
+<tr><td>SPWI618</td><td>Spell Deflection</td><td>WIZARD_SPELL_DEFLECTION</td></tr>
+<tr><td>SPWI701</td><td>Spell Turning</td><td>WIZARD_SPELL_TURNING</td></tr>
+<tr><td>SPWI702</td><td>Protection from the Elements</td><td>WIZARD_PROTECTION_FROM_THE_ELEMENTS</td></tr>
+<tr><td>SPWI708</td><td>Mantle</td><td>WIZARD_MANTLE</td></tr>
+<tr><td>SPWI802</td><td>Spell Deflection</td><td>WIZARD_SPELL_DEFLECTION</td></tr>
+<tr><td>SPWI803</td><td>Protection from Energy</td><td>WIZARD_PROTECTION_FROM_ENERGY</td></tr>
+<tr><td>SPWI808</td><td>Improved Mantle</td><td>WIZARD_IMPROVED_MANTLE</td></tr>
+<tr><td>SPWI902</td><td>Spell Trap</td><td>WIZARD_SPELL_TRAP</td></tr>
+<tr><td>SPWI907</td><td>Absolute Immunity</td><td>WIZARD_ABSOLUTE_IMMUNITY</td></tr>
+<tr><td>SPWI921</td><td>Improved Alacrity</td><td>WIZARD_IMPROVED_ALACRITY</td></tr>
+<tr><td></td></tr>
+<tr><th colspan="3">High Level</th></tr>
+<tr>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Code</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell Name</font></th>
+	<th bgcolor="#C0C0C0"><font color="#FFFFFF">Spell.IDS Reference</font></th>
+</tr>
+<tr><td>SPCL900</td><td>Whirlwind</td><td>WARRIOR_WHIRLWIND</td></tr>
+<tr><td>SPCL901</td><td>Greater Whirlwind</td><td>WARRIOR_GREATER_WHIRLWIND</td></tr>
+</table>
+</center>
+<p>
+Please note that the Spell Codes are correct for the individual spells, but the Spell Names
+may or not be correct and should be considered my interpretation of what the name of the spell
+should be.  Many of the Spell.IDS References listed in the table above are CUSTOM, meaning
+I or others have manually altered the Spell.IDS file to change the name of existing spells or
+to add names of spells that did not have Spell.IDS references as shipped with the game.  When
+attempting to script the spells, you should reference you own Spell.IDS file to determine 
+the correct method to script the spells.
+<p>
+	<hr>
+<p>
+		<strong>
+			<u>
+				Version History:
+			</u>
+		</strong>
+<p>
+	<strong>
+		Version 1.2.3
+	</strong>
+<p>
+	<ul>
+		<li>Added SPIN696
+	</ul>
+<p>
+<hr>
+<p>
+[<a href="Detectable_Spells_v1.2.3.zip">Download Detectable Spells v1.2.3</a>]
+</body>
+</html>

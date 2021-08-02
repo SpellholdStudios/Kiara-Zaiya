@@ -1,0 +1,14 @@
+IF
+  !Dead("Kiara")
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  Global("KiaraMatch","GLOBAL",1)
+  !AreaType(DUNGEON)
+  See(Player1)
+  CombatCounter(0)
+  Global("ExpLovetalk","LOCALS",11)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ExpLoveTalk","LOCALS",1)
+    Interact(Player1)
+END

@@ -1,0 +1,10 @@
+IF
+  InParty("Kiara")  // ~Kiara~
+  Global("JERLIACREATE","AR0807",0)
+  Global("SPRITE_IS_DEADSHADEL","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("JERLIACREATE","AR0807",1)
+    CreateCreature("Jerlia",[316.291],15)  // ~Jerlia~
+END
+

@@ -1,0 +1,56 @@
+IF
+  !Dead("Kiara")  // ~Kiara~
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  Global("KiaraMatch","GLOBAL",1)
+  GlobalLT("Chapter","GLOBAL",5)
+  !AreaType(DUNGEON)
+  !AreaType(OUTDOOR)
+  See(Player1)
+  CombatCounter(0)
+  !Global("SuspendRo","LOCALS",1)
+  OR(2)
+    Global("Lovetalk","LOCALS",33)
+    Global("LoveTalk","LOCALS",37)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    Interact(Player1)
+END
+
+IF
+  !Dead("Kiara")  // ~Kiara~
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  Global("KiaraMatch","GLOBAL",1)
+  GlobalGT("Chapter","GLOBAL",5)
+  !AreaType(DUNGEON)
+  !AreaType(OUTDOOR)
+  See(Player1)
+  CombatCounter(0)
+  OR(1)
+    Global("LoveTalk","LOCALS",47)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    Interact(Player1)
+END
+
+IF
+  !Dead("Kiara")  // ~Kiara~
+  !Global("KiaraRomanceActive","GLOBAL",0)
+  !Global("KiaraRomanceActive","GLOBAL",3)
+  Global("KiaraMatch","GLOBAL",1)
+  GlobalGT("Chapter","GLOBAL",5)
+  !AreaType(DUNGEON)
+  !AreaType(OUTDOOR)
+  See(Player1)
+  CombatCounter(0)
+  OR(1)
+    Global("LoveTalk","LOCALS",83)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LoveTalk","LOCALS",1)
+    Interact(Player1)
+END
+

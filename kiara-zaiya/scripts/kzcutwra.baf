@@ -1,0 +1,11 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    CreateVisualEffect("SPFLESHS",[1454.1398])
+    Wait(1)
+    CreateCreature("osan",[1454.1398],14)
+    ActionOverride("osan",StartDialogNoSet(Player1))
+END
+

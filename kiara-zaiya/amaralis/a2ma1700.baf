@@ -1,0 +1,51 @@
+// Isaya : compatibility with TDD and other mods that give access to Small Teeth Pass
+// before chapter 6
+// Add check for chapter 6 or more
+// Add check for Kiara presence (as in Amap1700.baf)
+IF
+  InParty("Kiara")  // ~Kiara~
+  GlobalGT("Chapter","GLOBAL",5)
+  InActiveArea(Player1)
+  Global("C6FenilCreated","AR1700",0)
+THEN
+  RESPONSE #100
+    SetGlobal("C6FenilCreated","AR1700",1)
+    CreateCreature("C6Fenil",[3198.1058],10)  // ~Fenilla~
+    Continue()
+END
+
+IF
+  InParty("Kiara")  // ~Kiara~
+  GlobalGT("Chapter","GLOBAL",5)
+  InActiveArea(Player1)
+  Global("C6MorticCreated","AR1700",0)
+THEN
+  RESPONSE #100
+    SetGlobal("C6MorticCreated","AR1700",1)
+    CreateCreature("C6Mortic",[3055.1113],10)  // ~Morticia~
+    Continue()
+END
+
+IF
+  InParty("Kiara")  // ~Kiara~
+  GlobalGT("Chapter","GLOBAL",5)
+  InActiveArea(Player1)
+  Global("C6KeriaCreated","AR1700",0)
+THEN
+  RESPONSE #100
+    SetGlobal("C6KeriaCreated","AR1700",1)
+    CreateCreature("c6Keria",[2894.1055],10)  // ~Keria~
+    Continue()
+END
+
+IF
+  InParty("Kiara")  // ~Kiara~
+  GlobalGT("Chapter","GLOBAL",5)
+  InActiveArea(Player1)
+  Global("C6PolgarCreated","AR1700",0)
+THEN
+  RESPONSE #100
+    SetGlobal("C6PolgarCreated","AR1700",1)
+    CreateCreature("C6Polgar",[3127.1018],10)  // ~Polgar~
+    Continue()
+END

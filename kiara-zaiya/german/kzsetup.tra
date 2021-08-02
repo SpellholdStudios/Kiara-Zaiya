@@ -1,0 +1,343 @@
+@1   = ~Kiara-Zaiya fuer BG2 SvA~ 
+@2   = ~Thron des Bhaal scheint nicht installiert zu sein.~
+@3   = ~Kiara~ 
+@4   = ~Wenn Ihr Kiara nach ihrer Vergangenheit fragt, erklärt sie Euch, dass sie in Koryo in Karatur geboren wurde, weit östlich von Faerûn. Nach dem tragischen Tod ihrer Eltern wurde sie von einem örtlichen Kloster gerettet und, auch wenn es für ein Mädchen selten ist, als Mönch aufgezogen. Sie verbrachte dort die meiste Zeit ihrer Jugend und lernte grundlegende Fertigkeiten im Kämpfen, Zubereitung von Kräutern und Meditation. Auch wenn die Träne in ihrem Auge Euch ein tragisches Ereignis mutmaßen lässt, wurde sie aus einem undursichtigen Grund in jungem Alter von dort vertrieben. Sie reiste westlich und traf einige Händler entlang der Straße, welche sie erst nach Tu Lung begleiteten, bevor sie sich an Bord eines Schiffes begaben, welches zur Stadt Medina al Afyal segelte. Dies ist ein Abenteuer, von dem sie besonders begeistert spricht. Sie erwähnte, dass sie bei ihrer Ankunft in Afyal auf Zaiya traf, bevor sie von Piraten entführt und als Skaven nach Athkatla verkauft wurden. Ihr seht, wie sich ihr Gesicht unter ihrer Kapuze verdunkelt und wisst, dass sie nichts weiter sagen wird.~
+@5   = ~Schlangen-Haltung!~ 
+@6   = ~Atemlos~
+@7   = ~Mond-Haltung!~
+@8   = ~Drachen-Haltung!~ 
+@9   = ~Sonnen-Haltung!~
+@10  = ~Schatten-Haltung!~ 
+@11  = ~Schatten-Haltung!
+
+Mit dem Erreichen absoluter Kontrolle über ihren Körper können erfahrene Mönche die Fähigkeit nutzen, sich in einen ätherischen Zustand zu versetzen und so ihren Feinden komplett unsichtbar und verschwommen zu erscheinen. Wenn der Mönch angreifen oder auf andere Weise auf sich aufmerksam machen sollte, so wird er teilweise sichtbar. Bis die Fähigkeit aufgehoben wird, erhält der Mönch -6 auf seine Rüstungsklasse, und weitere -4 auf die Rüstungsklasse gegen Geschoßwaffen. Die Fähigkeit hält 5 Runden lang an.~
+@12  = ~Boo~
+@13  = ~Zaiyas unglückliche Unbändige Woge verwandelte Boo in ein Huhn. Sein ständiges Gegluckse macht den armen Minsk noch völlig verrückt, wenn er das nicht schon vorher war.~ 
+@14  = ~Osans Mönchsrobe~
+@15  = ~Diese Robe gehörte Kiaras erster Liebe Osan.
+
+SPEZIFISCHE EIGENSCHAFTEN:
+
+Magieresistenz: +10%
+Rüstungsklasse: +1
+Rettungswürfe: +1~ 
+@16  = ~Diese Robe gehörte Kiaras erster Liebe Osan. The Dämonenfürst besiegelte Kiaras Schicksal und durchtränkte diese Robe mit mächtiger Magie.
+
+SPEZIFISCHE EIGENSCHAFTEN:
+
+Magieresistenz: +15%
+Rüstungsklasse: +2
+Rettungswürfe: +2
+Besondere Fähigkeiten:
+Der Träger ist immun gegen Entzug von Lebenskraft und regeneriert alle 6 Sekunden 1 Trefferpunkt.
+Der Träger kann einmal täglich den Zauber "Wahrer Blick" einsetzen.~
+@17  = ~Kiaras Leiche~
+@18  = ~Kiara wurde von Bodhi gefangen genommen und mit Vampirismus infiziert, so dass ihr gezwungen wart, sie zu töten. Es gibt vielleicht eine Möglichkeit, sie wieder zu erwecken, aber Ihr habt im Moment keine Ahnung, wie man das anstellen könnte.~
+@19  = ~Jerlias Seele~ 
+@20  = ~Dies ist das Herz, welches der Dämon behielt, um Jerlias Geist daran zu hindern, sich zu befreien.~
+@21  = ~Ionenstein~ 
+@22  = ~Gelber Ionenstein~ 
+@23  = ~Dieser kleine Stein schwebt in Bahnen um den Kopf des Eigentümers. Einfach ausrüsten, um ihn in seinen Orbit zu verstzen. Diese offensichtsich magischen Steine haben verschiedene Eigenschaften, je nach dem, welche Farbe der Stein hat.~
+@24  = ~Dieser Ionenstein ist sehr begehrt und macht den Träger immun gegen sämtliche Einschränkungen seiner Beweglichkeit, sei sie magischer oder normaler Natur. Dies betrifft auch die Zauber "Hast" und "Verlangsamen".
+
+Auf einer Seite des Steines lässt sich klar die Form eines Auges erkennen mit der Aufschrift AO darunter.~ 
+@25  = ~Handelsnotizen~
+@26  = ~Prax führte gut Buch über seine Verkäufe und Ihr findet schnell den Namen Kiara darin. Wie es aussieht, wurde sie an Amaralis verkauft und in sein Haus im Regierungsviertel gebracht. Der Rest der Aufzeichnung gibt nur detailierte Beträge seine Einkünfte wieder.~
+@27  = ~Zaiya~
+@28  = ~Wenn Ihr Zaiya nach ihrer Vergangenheit fragt, erzählt sie Euch, dass sie in der Nähe von Medina al Afyal in Zakhara, südöstlich von Faerûn, geboren wurde. Nachdem sie ihr Elternhaus verlassen hatte, wurde sie Dienstmädchen eines mächtigem Erzmagiers, dessen Spezialität Gifte waren. Sie verbrachte die meiste Zeit ihrer Jugend mit ihm und fühlte sich schnell zu einer neuen Form der Magie hingezogen: Unbändige Magie. Sie begann heimlich aus der Büchersammlung des Magiers zu lernen, obwohl dieser ihr solche Studien strengstens verboten hatte. Während eines ihrer Studien zog sie sich ihre Krankheit zu und trotz zahlloser Versuche hat sie nie ein Heilmittel gefunden. Mehr sagt sie nicht.~
+@29  = ~Jerlias Seele:
+
+Ich traf einen seltsamen Geist namens Jerlia in einer der Friedhofsgruften. Sie behauptet ein Dämon hätte ihre Seele gestohlen und würde nicht ruhen können, bis sie sie wieder hat. Auch wenn sie sich nicht sicher war, wo man den Dämon finden kann, vermutet sie ihn in der Nähe eines Tempels oder in einer Höhle.~
+@30  = ~Tötet Amaralis:
+
+Trotz Kiaras Verrat nahm ich den Vorschlag des Dämonenfürsten an, Amaralis zu töten. Amaralis, führender Sklavenhändler in Athklata, hat gegenwärtig sein Lager am Pass über die kleinen Zähne aufgeschlagen. Der Dämonenfürst hat mir zehn Tage eingeräumt, um es hinter mich zu bringen.~
+@31  = ~Tötet Prälat Wessalen:
+
+Ich habe mich damit einverstaden erklärt, der Aufforderung des Dämonenfürsten zu folgen und den Prälat Wessalen vom Orden der Strahlenden Herzen  zu töten, in der Hoffnung, es wird Kiara vor ihrem grauenvollem Schicksal retten. Der Dämonenfürst gab mir drei Tage, um diese monströse Tat zu begehen.~
+@32  = ~Prälat Wessalen ist tot:
+
+Ich tötete Prälat Wessalen und machte mich damit zum Feind vom Orden der Strahlenden Herzen. Das hat zur Folge, dass ich jetzt als Quelle des Bösen betrachtet werde. Kiaras Leben zu schonen hat sich als kostspielig erwiesen.~
+@33  = ~Finde Zaiyas Freundin:
+
+Ich traf eine junge Frau namens Zaiya, welche, wie es scheint, an einer seltsamen Krankheit leidet. Sie erklärte mir, dass ihre Freundin Kiara die einzige ist, die ihren Zustand stabilsieren kann. Vielleicht können wir einige Hinweise von einem Mann namens Prax bekommen. Er befindet sich in der Nähe des Zirkus in Athkatla. Sie warnte mich vor ihrem Zustand und meinte, dass wir nur noch wenige Tage hätten, bevor sie stirbt.~
+@34  = ~Oh nein! Eine Unbändige Woge! Etwas Schlimmes muss passiert sein.~
+@35  = ~Wenn der Magier wirklich über fünfhundert Jahre alt ist, dann lasst uns besser vorsichtig vorgehen. Er hatte eine Menge Zeit, seinen Zaubern den nötigen Feinschliff zu geben.~
+@36  = ~Ihr habt vielleicht die Schlacht gewonnen, aber der Krieg ist noch nicht vorbei!~
+@37  = ~Kombinierter Notfall - Zauberschild~
+@38  = ~Kombinierter Notfall - Verbesserter Schutzmantel~
+@39  = ~Kombinierter Notfall - Zauberabwehr~
+@40  = ~Armseliger Magier... Ihr habt es schutzlos gelassen, unvorsichtiger Narr!~ ~Armselige Magierin... Ihr habt es schutzlos gelassen, unvorsichtige Närrin!~
+@41  = ~Ich hoffe, dieser tote Körper war nur ein Bekannter und kein Freund.~
+@42  = ~Ihr wagt es, mich erneut herauszufordern?~
+@43  = ~Damit Ihr es wisst, der Tod wartet auf jene, die ihren Eid brechen.~
+@44  = ~Mein Angriff hat keine Wirkung!~
+@45  = ~Drachen-Haltung!~
+@46  = ~Prax~
+@47  = ~Amaralis~
+@48  = ~Dämonenfürst~
+@49  = ~Vampir Kiara~
+@50  = ~Horth'Kar~
+@51  = ~Jerlia~
+@52  = ~Endragor~
+@53  = ~Ich bin so froh, dass Ihr mich gefunden habt. Ich muss eine Freundin finden...~
+@54  = ~Fürchte mich! Denn meine Hände bringen den Tod!~ [KIARAA]
+@55  = ~Ich freue mich, dass Ihr ebenfalls diesen Rückschluß gezogen habt. Ich war beunruhigt, dass Ihr nicht bemerkt habt, dass ich der geborene Anführer bin.~ [KIARAB]
+@56  = ~Aaaaah... Ich kann meine Beine nicht mehr fühlen... wäre jemand so lieb, meine Füsse zu massieren?~ [KIARAC]
+@57  = ~Hat irgendjemand ein gutes Buch gelesen oder möchte eine gute Geschichte erzählen? (seufzt)... Vielleicht wäre stille Meditation das Beste.~ [KIARAD]
+@58  = ~Nein! Ich bin zu stark, um so zu sterben.~ [KIARAE]
+@59  = ~Was ist Euer Begehr?~ [KIARAF]
+@60  = ~Wie kann ich Euch helfen?~ [KIARAG]
+@61  = ~Ja...~ [KIARAH]
+@62  = ~Wenn Ihr darauf besteht.~ [KIARAI]
+@63  = ~Ich habe schon schlimmeres getan.~ [KIARAJ]
+@64  = ~Muss ich alles aufheben und tragen?~ [KIARAK]
+@65  = ~Aaaaah~ [KIARAL]
+@66  = ~Arrrrggg~ [KIARAM]
+@67  = ~Ich mag den Wald nicht. Es fühlt sich so an, als würde mich hinter jedem Baum jemand beobachten.~ [KIARAN]
+@68  = ~Ah! Endlich,... wir sind an einem zivilisiertem Ort... Könnten wir in einem Laden in der Nähe Halt machen? Ich könnte wirklich ein paar neue Schuhe gebrauchen. Seht, meine Schuhe haben überall Löcher in der Sohle.~ [KIARAO]
+@69  = ~Müssen wir uns wirklich durch diesen dreckigen Ort graben? Was habe ich davon, außer schmutziger Kleidung?~ [KIARAP]
+@70  = ~Wie soll ich mich konzentrieren, wenn mir die Sonne in die Augen scheint.~ [KIARAQ]
+@71  = ~Ich bevorzuge die warme Umarmung der Nacht.~ [KIARAR]
+@72  = ~Nun gut, wenn ich der Einzige bin, der Eure dreckige Arbeit ausführen kann.~ [KIARAS]
+@73  = ~Wenn Ihr fragen müsst, seit wenigstens höflich.~ [KIARAT]
+@74  = ~Testet meine Geduld nicht zu sehr.~ [KIARAU]
+@75  = ~Ich bin zu grosszügig zu Euch.~ [KIARAV]
+@76  = ~So ein Jammer, aber das bedeutet mehr für den Rest von uns.~ [KIARAW]
+@77  = ~Ich werde für Euch kämpfen, aber niemals kochen oder putzen.~ [KIARAX]
+@78  = ~Behandelt mich mit dem Respekt, den ich verdiene, und ich werde es in Erwägung ziehen.~ [KIARAY]
+@79  = ~Ich wette, Ihr denkt, Frauen sind schwach.~ [KIARAZ]
+@80  = ~Wie konnte mein mächtiger Treffer versagen?~ [KIARA1]
+@81  = ~Das kann nicht wahr sein!~ [KIARA2]
+@82  = ~Es tut mir Leid, ich werde es nicht tragen, *interessiert* es jemanden, diese *Dinge* von dem Boden aufzuheben?~ [KIARA3]
+@83  = ~Ähm, ich war schon immer gut, meine Hände in Sachen zu stecken, wo sie nicht hingehören.~ [KIARA4]
+@84  = ~Ähmmmm... Ich fühle mich so gut, wenn mich die Wärme der Dunkelheit umhüllt.~ [KIARA5]
+@85  = ~Meine Konzentration wurde unterbrochen.~ [KIARA6]
+@86  = ~Zart und tödlich wie eine Seidenspinne.~ [KIARA7]
+@87  = ~Keine Gnade! Kein Mitleid! Erschlagt sie alle!~ [KIARA8]
+@88  = ~Kiaaiiiiii~ [KIARA9]
+@89  = ~Was wünscht Ihr?~ [KIARA0]
+@90  = ~Ich denke, eine kleine Sache mehr wird nicht schaden.~ [KIARA_]
+@91  = ~Nichts~
+@92  = ~Ich werde sie zur Hölle zaubern...~ [ZAYAA]
+@93  = ~Ich bin nicht sicher, ob das mein Platz ist, aber ich werde mein Bestes versuchen.~ [ZAYAB]
+@94  = ~Bitte, können wir anhalten? Ich fühle mich, als könnte ich hier auf der Stelle einschlafen~ [ZAYAC]
+@95  = ~Sind wir länger hier?... Vielleicht könnte ich dann weiter in meinem exzellenten "Buch der Gestaltenwandlung" lesen.~ [ZAYAD]
+@96  = ~Awwh!~ [ZAYAE]
+@97  = ~Ja?~ [ZAYAF]
+@98  = ~Ihr braucht einen Wilden Magier?~ [ZAYAG]
+@99  = ~Ihr habt mich gerufen?~ [ZAYAH]
+@100 = ~Ich werde es sofort erledigen...~ [ZAYAI]
+@101 = ~Immer zur Stelle, um eine helfende Hand zu reichen...~ [ZAYAJ]
+@102 = ~Das ist alles zu einfach...~ [ZAYAK]
+@103 = ~Autsch!~ [ZAYAL]
+@104 = ~Aaaaah...~ [ZAYAM]
+@105 = ~Ah! Wenn meine Erinnerung mich nicht trügt, nennen die Elfen diesen Baum Calvernon... Habe ich etwas falsches gesagt?... Bitte hört auf, mich so anzustarren!~ [ZAYAN]
+@106 = ~Ich frage mich, ob wir Zeit haben werden, eine Bibliothek zu besuchen.~ [ZAYAO]
+@107 = ~Ich kann an diesem dunklen Ort nichts sehen, kann mir jemand eine Fackel leihen?~ [ZAYAP]
+@108 = ~Es sieht wie ein neuer schöner Tag aus.~ [ZAYAQ]
+@109 = ~Es ist wirklich spät geworden. Sollten wir nicht im Bett sein?~ [ZAYAR]
+// Isaya : transfered from tp2 file: no translation required
+@110 = ~~ [ZAYAS] //ACTION4
+@111 = ~~ [ZAYAT] //ACTION5
+@112 = ~~ [ZAYAU] //ACTION6
+@113 = ~~ [ZAYAV] //ACTION7
+@114 = ~~ [ZAYAW] //DIE GENERAL
+// Isaya : end
+@115 = ~Kann ich zuerst zu Ende lesen?~ [ZAYAX]
+// Isaya : transfered from tp2 file: no translation required
+@116 = ~~ [ZAYAY] //RARE2
+// Isaya : end
+@117 = ~*Ja!* Nennt mich Drizzt!~ [ZAYAZ]
+@118 = ~Ähm... schon wieder ich Tolpatsch.~ [ZAYA1]
+@119 = ~Lasst mich einige wilde Magie probieren.!~ [ZAYA2]
+@120 = ~Da Kiara mich gebeten hat, ebenfalls einen Teil ihres Gepäcks zu tragen, habe ich leider jetzt schon genug!~ [ZAYA3]
+// Isaya : transfered from tp2 file: no translation required
+@121 = ~~ [ZAYA4] //PICKED POCKET
+@122 = ~~ [ZAYA5] //HIDE IN SHADOWS
+// Isaya : end
+@123 = ~Mein Zauber wurde unterbrochen...~ [ZAYA6]
+// Isaya : transfered from tp2 file: no translation required
+@124 = ~~ [ZAYA7] //SET A TRAP
+@125 = ~~ [ZAYA8] //BATTLE CRY2
+@126 = ~~ [ZAYA9] //BATTLE CRY3
+@127 = ~~ [ZAYA0] //COMMON6
+@128 = ~~ [ZAYA_] //ACTION8
+// Isaya : end
+@129 = ~Alternative Hochstufige Faehigkeiten von TG Maestro~
+@130 = ~Drachenfaust!~
+@131 = ~Drachenfaust!
+
+Mönche mit hochstufigen Fähigkeiten sind in der Lage, Lebensenergie in ihren Körpern auf viele Weisen zu bündeln. Wenn er diese Fähigkeit verwendet, werden in der folgenden Runde alle Angriffe des Mönchs den Spezifischen Schutz des Ziels entfernen (Rettunswurf gegen Zauber bei-2) und einen Magieschutz bis zur 8. Stufe (kein Rettungswurf). Das Opfer muss einen Rettungswurf gegen den Atem ausfühen, um zu vermeiden, den ganzen Körperlichen Schutz zu verlieren. Durch die Drachenfaust getroffene Wesen müssen auch einen Rettungswurf gegen Tod bei -4 ausführen, oder ihr Magiewiderstand wird um 19 % für 6 Runden reduziert. Diese Wirkung ist kumulativ. Drachenfaust entfernt immer den stärksten Schutzzauber des Ziels.~
+@132 = ~Schattenloser Stoß!~
+@133 = ~Schattenloser Stoß
+
+Diese Fähigkeit gibt dem Mönch einen einmaligen Angriff. Dieser überwältigende Angriff ist immer erfolgreich, es gibt keine Notwendigkeit für einen Rettungswurf. Das Ziel erleidet 5D8 Schaden durch zerschmettern und wird für 1 Runde bewusstlos (kein Rettungswurf). Wenn dem Gegner ein Rettungswurf gegen den Atem  bei -4 misslingt, wirft die Kraft des Stoßes ihn eine beträchtliche Entfernung zurück.~
+@134 = ~Tiger-Schlag!~
+@135 = ~Tiger-Schlag!
+
+Mit der Fähigkeit Tiger-Schlag gewinnt der Mönch die Fähigkeit, einen mächtigen Schlag zu auszufühen, der einen Gegner eine beträchtliche Entfernung zurückzuwerfen und den Gegner für 1 Runde zu betäuben. Alle in der ersten Runde gemachten Angriffe sind kritische Treffer. Die Fähigkeit hält 2 Runden an.
+
+Große Wesen wie Drachen oder Riesen werden nicht zurückgeworfen oder betäubt.
+
+Erfordert: Kraft-Angriff, Kritischer Schlag~
+@136 = ~Gesang!~
+@137 = ~Gesang!
+
+Diese Fähigkeit gibt dem Mönch mächtigen Schutz - sowohl körperlich als auch magisch - für sehr kurze Zeit. Er steigert den Widerstand gegen aufschlitzen, durchbohren, Zerschmettern und Fernkampfwaffen um 60 %, vergrößert Feuer-, Kälte-, Blitz- und Magiewiderstand um 20 % und bietet Widerstand gegen Magieschäden von 10 %. Die Wirkungendieser Fähigkeit halten 2 Runden an.~
+@138 = ~Schneller als das Auge!~
+@139 = ~Schneller als das Auge!~
+@140 = ~Schneller als das Auge!
+
+Der Mönch gewinnt die Fähigkeit, sich mit einer unglaublichen Geschwindigkeit zu bewegen.~
+@141 = ~Sonnen-Haltung!
+
+Der Mönch gewinnt die Fähigkeit, seine Lebensnergie zu bündeln und sie alle sofort freizugeben, ein Feuerball explodiert von seinem Körper und Rettungswurf gegen Atem -4, sie für 1 Runde bewusstlos machend.
+
+Erfordert: schattenloser Stoß~
+@142 = ~Golem Raum in De Arnise für SvA.~
+@143 = ~Original Amaralis Kampf~
+@144 = ~Fenilla~
+@145 = ~Morticia~
+@146 = ~Polgar~
+@147 = ~Keria~
+@148 = ~Armer Magier... Ihr habt ihn ungesichert zurückgelassen... Unaufmerksamer Narr!~ ~Arme Magierin... Ihr habt sie ungesichert zurückgelassen... Unaufmerksamer Narr!~
+@149 = ~Ich hoffe dieser tote Körper war nur ein Bekannter und kein enger Freund?~ ~Ich hoffe dieser tote Körper war nur eine Bekannte und keine enge Freundin?~
+@150 = ~Kiara-Zaiya Soundset (seperat erhaeltlich)~
+@151 = ~Ihr werdet durch meine Hand sterben.~ [FEMALE4A]
+@152 = ~Natürlich, ich bin die beste Wahl.~ [FEMALE4B]
+@153 = ~Ich muss bald rasten. Ich bin schwach, wenn ich müde bin.~ [FEMALE4C]
+@154 = ~Es gibt bessere Dinge als hier zu sitzen und zu warten.~ [FEMALE4D]
+@155 = ~Ah... ich brauche so schnell wie möglich Heilung.~ [FEMALE4E]
+@156 = ~Ja?~ [FEMALE4F]
+@157 = ~Was ist los?~ [FEMALE4G]
+@158 = ~Sprecht!~ [FEMALE4H]
+@159 = ~Es wird erledigt.~ [FEMALE4I]
+@160 = ~Natürlich.~ [FEMALE4J]
+@161 = ~Ohne Zweifel.~ [FEMALE4K]
+@162 = ~Aaah~ [FEMALE4L]
+@163 = ~Arrrrg~ [FEMALE4M]
+@164 = ~Ah! Wenn ich mich recht erinnere, nennen die Elfen diesen Baum Calvernon... Sagte ich irgendetwas Falsches?... Hört bitte auf, mich  anzustarren!~
+@165 = ~Ich frage mich, ob wir Zeit finden werden, die Bibliothek zu besuchen.~
+@166 = ~Ich kann nicht einen *Gegenstand* an diesem dunklen Ort sehen, könnte mir irgendjemand eine Fackel leihen?~
+@167 = ~Es sieht wie ein weiterer großer Tag aus.~
+@168 = ~Es wird *wirklich* spät. Sollten wir nicht bereits im Bett  liegen?~
+@169 = ~Schnell und präzise.~ [FEMALE4S]
+@170 = ~Ohne zu zögern.~ [FEMALE4T]
+@171 = ~Das wird nicht lange dauern.~ [FEMALE4U]
+@172 = ~Wenn es getan werden muss.~ [FEMALE4V]
+// Isaya : transfered from tp2 file: no translation required
+@173 = ~~ [FEMALE4W]
+@174 = ~Ich höre zu~ [FEMALE4X]
+@175 = ~Sagt mir, was ich tun soll.~ [FEMALE4Y]
+@176 = ~Ja!~ [FEMALE4Z]
+@177 = ~Ah, nächstes Mal.~ [FEMALE41]
+@178 = ~Meine Waffe ist nicht zu gebrauchen.~ [FEMALE42]
+@179 = ~Ich kann nicht mehr tragen. Den Gegenstand habe ich abgelegt.~ [FEMALE43]
+@180 = ~Er hat meinen Diebstahl nicht bemerkt.~ [FEMALE44]
+@181 = ~Ich bin versteckt, wir können fortfahren.~ [FEMALE45]
+@182 = ~Meine Magie wurde unterbrochen.~ [FEMALE46]
+@183 = ~Seid vorsichtig, diese Falle ist gestellt und fertig.~ [FEMALE47]
+@184 = ~Der Tod wird Euch zu sich nehmen.~ [FEMALE48]
+@185 = ~Weicht zurück oder fallt vor mir.~ [FEMALE49]
+@186 = ~Ich warte auf Eure Anweisungen.~ [FEMALE40]
+@187 = ~Ich stimme zu.~ [FEMALE4_]
+@188 = ~Bevor Ihr installiert, oeffnet bitte die Readme-Datei im Kiara-Zaiya Ordner und seht, welche Komponenten Ihr installieren wollt.~
+@189 = ~Ihr scheint das Soundset nicht installiert zu haben!!! Es ist seperat auf der Webseite von Kiara-Zaiya zu finden.~
+@190 = ~Ha ha ha haaa~ [Female2a]
+@191 = ~Jeder hier wird von meinen Führungsqualitäten profitieren.~ [Female2b]
+@192 = ~Wisst Ihr, ich könnte wirklich ein wenig Ruhe vertragen.~ [Female2c]
+@193 = ~So kommen wir nicht weiter, lasst uns doch irgendetwas tun.~ [Female2d]
+@194 = ~Meine Wunden könnten etwas Aufmerksamkeit vertragen.~ [Female2e]
+@195 = ~Ummm~ [Female2f]
+@196 = ~Ich warte.~ [Female2g]
+@197 = ~Ja.~ [Female2h]
+@198 = ~Nichts lieber als das.~ [Female2i]
+@199 = ~Sehr gut.~ [Female2j]
+@200 = ~Was immer Ihr wünscht.~ [Female2k]
+@201 = ~Ah~ [Female2l]
+@202 = ~Arggg~ [Female2m]
+@203 = ~Wenn Ihr es sagt.~ [Female2s]
+@204 = ~Natürlich.~ [Female2t]
+@205 = ~Wenn es das ist, was Ihr wollt.~ [Female2u]
+@206 = ~Was immer Ihr verlangt.~ [Female2v]
+@207 = ~Was möchtet Ihr?~ [Female2x]
+@208 = ~Erzählt mir mehr darüber.~ [Female2y]
+@209 = ~Hat das etwa weh getan?~ [Female2z]
+@210 = ~Oh! Flinker Teufel!~ [Female21]
+@211 = ~Mein Angriff zeigt keine Wirkung.~ [Female22]
+@212 = ~Ich kann nicht mehr tragen, Ihr hebt das für mich auf, nicht wahr?~ [Female23]
+@213 = ~Rein und raus, und keiner bemerkt es.~ [Female24]
+@214 = ~Ich habe mich gut versteckt.~ [Female25]
+@215 = ~Oh, mein Spruch ist verwirkt.~ [Female26]
+@216 = ~Vorsicht, ist meine Falle gestellt.~ [Female27]
+@217 = ~Ihr würdet doch keine Frau schlagen, oder?~ [Female28]
+@218 = ~Das wird sicher Spaß machen!~ [Female29]
+@219 = ~Ist das alles?~ [Female2_]
+@220 = ~Fragt nur.~ [Female20]
+@221 = ~Ich habe eine wunderbare und freudige Zeit, wenn ich an Eurer Seite bin.~ [KHappy]
+@222 = ~Soviel Gutes zu tun ist unerträglich. Ich bin ein Mönch und kein Wohltätigkeitsbasar.~
+@223 = ~Mein Training lässt mich viel ertragen, aber auch ich habe meine Grenzen.~
+@224 = ~Ändert Euren Weg, oder ich werde meine Fäuste mit Eurem Blut färben.~
+@225 = ~Ich freue mich, mit Euch zu reisen. So muss sich Freiheit anfühlen.~
+@226 = ~Ich könnte meine Zeit besser mit meinen Büchern verbringen. Ich mag das nicht.~
+@227 = ~Ich kann den Weg, den wir gehen, nicht billigen. Meine Zeit könnte besser anderswo genutzt werden.~
+@228 = ~Ich habe genug von dem Schmerz und dem Leiden anderer. Seid verflucht, <CHARNAME>!~
+@230 = ~Giftiger Lindwurm~
+@246 = ~Das Gottesschwert ~
+@247 = ~Das Gottesschwert ~
+@248 = ~Diese Schwerter werden auch als zweischneidige Schwerter, Kriegsschwerter oder Militärschwerter bezeichnet. Es gibt keine einheitliche Form des Langschwertes. Seine Form und Länge sind von Kultur zu Kultur unterschiedlich und können selbst innerhalb einer Kultur je nach Zeitalter variieren. Das grundlegendste Merkmal aller Langschwerter ist ihre Länge, die zwischen 90 und 120 cm beträgt. Im letzteren Fall nimmt die Klinge 1 m der Gesamtlänge ein. Die meisten Langschwerter besitzen eine zweischneidige Klinge mit einer scharfen Spitze. Trotz dieser Spitze ist das Langschwert nicht zum Stoßen, sondern zum Schwingen vorgesehen. 
+
+SPEZIFISCHE EIGENSCHAFTEN:
+
+Schaden: 1W8
+Schadenasrt: aufschlitzen
+Gewicht: 4
+Geschwindigkeitsfaktor: 5
+Fertigkeiten: Langschwert
+Typ: 1-händig
+Mindestkraft: 6
+Kann nicht verwendet werden von:
+ Druiden
+ Klerikern
+ Magiern~
+@249 = ~Das Gottesschwert ist eines derer, über das man sich in den Reichen die meisten Gedanken macht, weil es völlige Immunität gegen die Wahrsagung für 1 Stunde bereitstellen kann.
+
+SPEZIFISCHE EIGENSCHAFTEN:
+
+Thaco: +3
+Schaden: 1WD8+3
+Schadensart: aufschlitzen
+Gewicht: 4
+Geschwindigkeitsfaktor: 2
+Fertigkeiten: Langschwert
+Typ: 1-händig
+Mindestkraft: 6
+Besondere Fähigkeiten:
+Magiewiderstand 25 %
++2 Rüstungsklasse
+Besondere Verwendung:
+Kann einmal pro Tag den Zauber Immunität gegen Wahrsagung wirken. Die Immunität hält 1 Stunde an. 
+Kann nicht verwendet werden von:
+ Druiden
+ Klerikern
+ Magiern~
+@250 = ~Jao und Gruppe fuer SvA: ein weiterer harter Kampf~
+@251 = ~Jao~
+@252 = ~Ninja~
+@253 = ~Wuje~
+@254 = ~Armschützer~
+@255 = ~Mönch-Armschützer
+
+Diese außergewöhnlichen Armschützer wurden von der Mörder-Innung für Wuje geschmiedet.
+
+EIGENSCHAFTEN:
+
++2 zu Faust ETW0 und Schaden
+Bei jedem Versuch, den Träger dieser Armschützer zu treffen, gibt es eine Chance von 10%, dass die Armschützer Verderben und Blindheit auf den Angreifer wirken.
+
+Kann nur verwendet werden von:
+
+Mönchen~
+@260 = ~Zaeherer Irenicus beim Baum des Lebens~
+@261 = ~Zaeherer Kiara Vampir~
+@262 = ~Ueberarbeitetes Suldalanessar~

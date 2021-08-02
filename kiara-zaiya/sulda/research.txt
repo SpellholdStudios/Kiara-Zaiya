@@ -1,0 +1,34 @@
+TRAPS IN AREA 2800
+1. scene1a, 1b, 1c SUSCENE1 
+2. scene 2a, 2b, 2c SUSCENE2
+3. scene 3a, 3b, 3c, 3d SUSCENE3
+4. scene 4a, 4b SUSCEN4
+5. Highlevel trap0 : SPWNRAK
+6. Highlevel trap2 : SPWNGOL
+7. Highlevel trap3 : SPWNGOL
+
+SUSCENE1 = SPAWNS 3 ELFS VERSUS SUUNDEAD (SKELETON WARRIOR)
+Archlich + Mummies + Bone skelleton + Skeleton warriors
+
+SUSCENE2 = SPAWNS 3 ELFS VERSUS SURAKW (RAKSHASA?)
+
+SUSCENE3 = SPAWNS 4 ELFS VERSUS 2 TROLLS
+Replace with two mariliths (TOB)
+
+SPWNRAK = SPAWNS MAHARAJH DEPENDING ON LEVEL 
+Modify Rakshasa mage immune to level 9, himself level 18 mage
+
+SPWNGOL = SPAWNS GOLEMS DEPENDING ON LEVEL (ADAMANTITE + STONE)
+4 X Demon Knight + Lesser Demon Lord
+
+DRAGON FIGHT
+Qilkwik is an assassin mage that is there to steal the cup from the dragon but it seems you interrupted him
+
+Lesser Demon Lord notes:
+1. PFMW
+2. HOLD
+3. DEMON_FEAR
+4. 
+5. DEATH_GAZE REPLACES CREATURE TARGETED (151 IN THE LIST) WITH A SKELETTON WARRIOR
+(SAVE VS SPELL -2)
+Immunity to stun, imprisonmentm, fear, 

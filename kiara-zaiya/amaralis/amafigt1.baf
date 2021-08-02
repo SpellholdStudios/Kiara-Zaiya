@@ -1,0 +1,1060 @@
+IF
+  GlobalTimerExpired("AmaRestT","GLOBAL")
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,CLERIC_HEAL)
+    SetGlobal("AMAWAIT","GLOBAL",0)
+    SetGlobal("AmaTrue","LOCALS",0)
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep1","LOCALS",0)
+    SetGlobal("Prep2","LOCALS",0)
+    SetGlobal("Prep3","LOCALS",0)
+    SetGlobal("SpellTriger","LOCALS",0)
+    SetGlobal("Amatrigg","LOCALS",0)
+    Rest()
+    Wait(2)
+    Continue()
+END
+
+IF
+  InMyArea(Player1)
+  Global("Prep1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaRestT","GLOBAL",SIX_HOURS)
+    SetGlobal("Prep1","LOCALS",1)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    ReallyForceSpell(Myself,WIZARD_SPIRIT_ARMOR)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_FIRE)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_COLD)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_ACID)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_ELECTRICITY)
+    ReallyForceSpellRES("ALTEIMU",Myself)  // ~Immunity: Alteration~
+    Wait(5)
+END
+
+IF
+  Global("Prep1","LOCALS",1)
+THEN
+  RESPONSE #100
+    GiveItemCreate("POTN07",Myself,1,0,0)  // ~Potion of Storm Giant Strength~
+    UseItem("POTN07",Myself)  // ~Potion of Storm Giant Strength~
+    SetGlobal("Prep1","LOCALS",2)
+END
+
+IF
+  Global("AttackC6Ama","GLOBAL",0)
+  Detect([PC])
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    CreateCreature("GIBBER01",[2416.2248],0)  // ~Gibberling~
+    CreateCreature("GIBBER01",[2918.2067],0)  // ~Gibberling~
+    CreateCreature("GIBBER01",[3176.1631],0)  // ~Gibberling~
+    CreateCreature("GIBBER01",[3015.1359],0)  // ~Gibberling~
+    CreateCreature("GIBBER01",[3040.898],0)  // ~Gibberling~
+    CreateCreature("GIBBER01",[3045.1207],0)  // ~Gibberling~
+    SmallWait(1)
+    Continue()
+END
+
+IF
+  Global("AttackC6Ama","GLOBAL",0)
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    SelectWeaponAbility(SLOT_WEAPON1,0)
+    SelectWeaponAbility(SLOT_WEAPON0,0)
+    StartDialogNoSet([PC])
+    Continue()
+END
+
+IF
+  Global("AttackC6Ama","GLOBAL",0)
+  See([PC])
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    SelectWeaponAbility(SLOT_WEAPON1,0)
+    SelectWeaponAbility(SLOT_WEAPON0,0)
+    StartDialogNoSet([PC])
+    Continue()
+END
+
+IF
+  Range(NearestEnemyOf(Myself),120)
+  !Global("AttackC6Ama","GLOBAL",0)
+  Allegiance(Myself,ENEMY)
+  !StateCheck(Myself,STATE_NORMAL)
+  HaveSpell(WIZARD_IMPROVED_INVISIBILITY)
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep","LOCALS",1)
+    SetGlobalTimer("Amatimer","GLOBAL",ONE_ROUND)
+    DisplayString(Myself,40252)  // ~Contingency - Protection from Magical Weapons~
+    ReallyForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+    Wait(3)
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Range(NearestEnemyOf(Myself),120)
+  !Global("AttackC6Ama","GLOBAL",0)
+  Allegiance(Myself,ENEMY)
+  !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+  HaveSpell(WIZARD_IMPROVED_INVISIBILITY)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,40252)  // ~Contingency - Protection from Magical Weapons~
+    SetGlobalTimer("Amatimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Myself,WIZARD_IMPROVED_INVISIBILITY))
+END
+
+IF
+  OR(6)
+    !Exists("C6Keria")  // Keria
+    Global("SPRITE_IS_DEADC6KERIA","GLOBAL",1)
+    Range(NearestEnemyOf(Myself),120)
+    AttackedBy([ANYTHING],DEFAULT)
+    XPGT(Player1,3300000)
+    Difficulty(HARDEST)
+  Global("AMAWAIT","GLOBAL",0)
+  Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    SetGlobal("AMAWAIT","GLOBAL",1)
+    Continue()
+END
+
+IF
+  !Global("AttackC6Ama","GLOBAL",0)
+  Detect(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),120)
+  !Global("AMAWAIT","GLOBAL",0)
+  Global("Prep3","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep3","LOCALS",1)
+    SetGlobalTimer("Amatimer","GLOBAL",ONE_ROUND)
+    SetGlobalTimer("TRAPS","LOCALS",TWO_TURNS)
+    DisplayString(Myself,26328)  // ~Chain Contingency~
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
+    ReallyForceSpell(Myself,WIZARD_SPELL_IMMUNITY_CONJURATION)
+    ReallyForceSpell(Myself,WIZARD_SPELL_TRAP)
+END
+
+IF
+  Global("Prep3","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep3","LOCALS",2)
+    RunAwayFrom(NearestEnemyOf(Myself),30)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("AmaTimer","GLOBAL")
+  See(NearestEnemyOf(Myself))
+  Global("Prep3","LOCALS",2)
+  Global("Amatrigg","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Amatrigg","LOCALS",1)
+    DisplayString(Myself,25951)  // ~Spell Sequencer~
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    SetGlobalTimer("AMAGIC","LOCALS",FOUR_ROUNDS)
+    ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+    ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_RED)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    GiveItemCreate("POTN55",Myself,3,0,0)  // ~Potion of Superior Healing~
+END
+
+IF
+  !GlobalTimerExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  Global("Prep3","LOCALS",2)
+  !CheckStat(Myself,4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  HasItemEquiped("SCRL7O",Myself)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,RunAwayFrom(NearestEnemyOf(Myself),30))
+END
+
+IF
+  !GlobalTimerExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  Global("Prep3","LOCALS",2)
+  CheckStat(Myself,0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  CheckStat(Myself,0,STONESKINS)
+  !HasItemEquiped("SCRL7O",Myself)
+  HaveSpell(WIZARD_STONE_SKIN)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,RunAwayFrom(NearestEnemyOf(Myself),30))
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Global("Prep3","LOCALS",2)
+  !GlobalTimerExpired("Amatimer","GLOBAL")
+  CheckStat(Myself,0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  CheckStat(Myself,0,STONESKINS)
+  !StateCheck(Myself,STATE_NORMAL)
+  !HasItemEquiped("SCRL7O",Myself)
+  !HaveSpell(WIZARD_STONE_SKIN)
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,RunAwayFrom(NearestEnemyOf(Myself),30))
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AMAWAIT","GLOBAL",0)
+  !CheckStat(Myself,4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  Global("Prep3","LOCALS",2)
+  HasItemEquiped("SCRL7O",Myself)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,UseItem("SCRL7O",Myself))  // ~Protection From Magic Weapons~
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("AmaTimer","GLOBAL")
+  Detect(NearestEnemyOf(Myself))
+  CheckStat(Myself,0,STONESKINS)
+  HaveSpell(WIZARD_STONE_SKIN)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Myself,WIZARD_STONE_SKIN))
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("AmaTimer","GLOBAL")
+  Detect(NearestEnemyOf(Myself))
+  !CheckStat(Myself,4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  !HasItemEquiped("SCRL7O",Myself)
+  !StateCheck(Myself,STATE_MIRRORIMAGE)
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Myself,WIZARD_MIRROR_IMAGE))
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("AmaTimer","GLOBAL")
+  Detect(NearestEnemyOf(Myself))
+  HPPercentLT(Myself,60)
+  OR(3)
+    StateCheck(Myself,STATE_MIRRORIMAGE)
+    CheckStatGT(Myself,1,STONESKINS)
+    CheckStat(Myself,4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  HasItem("POTN55",Myself)  // ~Potion of Superior Healing~
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,UseItem("POTN55",Myself))  // ~Potion of Superior Healing~
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  GlobalTimerExpired("TRAPS","LOCALS")
+  !Global("AMAWAIT","GLOBAL",0)
+  CheckStat(Myself,0,WIZARD_SPELL_TRAP)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  Global("Prep3","LOCALS",2)
+  HasItemEquiped("SCRL9L",Myself)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("TRAPS","LOCALS",TWO_TURNS)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,UseItem("SCRL9L",Myself))  // ~Spell Trap~
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  Allegiance(Myself,ENEMY)
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+  HaveSpell(WIZARD_TRUE_SIGHT)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Myself,WIZARD_TRUE_SIGHT))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  Allegiance(Myself,ENEMY)
+  StateCheck(Myself,STATE_SILENCED)
+  HaveSpell(WIZARD_VOCALIZE)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ApplySpell(Myself,WIZARD_VOCALIZE)
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  OR(3)
+    See(NearestEnemyOfType([GOODCUTOFF.0.0.0.0.SUMMONED]))
+    Gender(NearestEnemyOf(Myself),SUMMONED)
+    Race(NearestEnemyOf(Myself),SWORD)
+  HasItemEquiped("SCRL7R",Myself)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #1
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    DisplayString(Myself,26328)  // ~Chain Contingency~
+    ActionOverride(Myself,UseItem("SCRL7R",NearestEnemyOf(Myself)))  // ~Death Fog~
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),80)
+  !StateCheck(Myself,STATE_HASTED)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_IMPROVED_HASTE)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Myself,WIZARD_IMPROVED_HASTE))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  See(Player1)
+  !CheckStat(Player1,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player1,1,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player1,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player1,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player1,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_PIERCE_MAGIC)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player1,WIZARD_PIERCE_MAGIC))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  See(Player2)
+  !CheckStat(Player2,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player2,1,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player2,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player2,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player2,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_PIERCE_MAGIC)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player2,WIZARD_PIERCE_MAGIC))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  See(Player3)
+  !CheckStat(Player3,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player3,1,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player3,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player3,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player3,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_PIERCE_MAGIC)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player3,WIZARD_PIERCE_MAGIC))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  See(Player4)
+  !CheckStat(Player4,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player4,1,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player4,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player4,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player4,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_PIERCE_MAGIC)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player4,WIZARD_PIERCE_MAGIC))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  See(Player5)
+  !CheckStat(Player5,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player5,1,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player5,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player5,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player5,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_PIERCE_MAGIC)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player5,WIZARD_PIERCE_MAGIC))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  See(Player6)
+  !CheckStat(Player1,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player6,1,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player6,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player6,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player6,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_PIERCE_MAGIC)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player6,WIZARD_PIERCE_MAGIC))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player1)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  !CheckStat(Player1,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player1,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player1,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player1,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player1,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player1,WIZARD_RUBY_RAY_OF_REVERSAL))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player2)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  !CheckStat(Player2,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player2,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player2,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player2,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player2,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player2,WIZARD_RUBY_RAY_OF_REVERSAL))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player3)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  !CheckStat(Player3,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player3,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player3,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player3,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player3,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player3,WIZARD_RUBY_RAY_OF_REVERSAL))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player4)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  !CheckStat(Player4,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player4,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player4,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player4,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player4,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player4,WIZARD_RUBY_RAY_OF_REVERSAL))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player5)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  !CheckStat(Player5,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player5,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player5,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player5,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player5,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player5,WIZARD_RUBY_RAY_OF_REVERSAL))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player6)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  !CheckStat(Player6,1,WIZARD_SPELL_IMMUNITY)
+  OR(4)
+    CheckStatGT(Player6,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player6,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player6,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player6,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Player6,WIZARD_RUBY_RAY_OF_REVERSAL))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  See(NearestEnemyOf(Myself))
+  CheckStatGT(NearestEnemyOf(Myself),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  HaveSpell(WIZARD_BREACH)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_BREACH))
+END
+
+IF
+  OR(9)
+    !Gender(SixthNearestEnemyOf(Myself),SUMMONED)
+    !StateCheck(SixthNearestEnemyOf(Myself),STATE_BLESS)
+    !StateCheck(SixthNearestEnemyOf(Myself),STATE_CHANT)
+    !StateCheck(SixthNearestEnemyOf(Myself),STATE_DRAWUPONHOLYMIGHT)
+    !StateCheck(SixthNearestEnemyOf(Myself),STATE_BLUR)
+    !StateCheck(SixthNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+    !CheckStat(SixthNearestEnemyOf(Myself),0,STONESKINS)
+    HasBounceEffects(SixthNearestEnemyOf(Myself))
+    HasImmunityEffects(SixthNearestEnemyOf(Myself))
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SixthNearestEnemyOf(Myself),0,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  OR(9)
+    !Gender(FifthNearestEnemyOf(Myself),SUMMONED)
+    !StateCheck(FifthNearestEnemyOf(Myself),STATE_BLESS)
+    !StateCheck(FifthNearestEnemyOf(Myself),STATE_CHANT)
+    !StateCheck(FifthNearestEnemyOf(Myself),STATE_DRAWUPONHOLYMIGHT)
+    !StateCheck(FifthNearestEnemyOf(Myself),STATE_BLUR)
+    !StateCheck(FifthNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+    !CheckStat(FifthNearestEnemyOf(Myself),0,STONESKINS)
+    HasBounceEffects(FifthNearestEnemyOf(Myself))
+    HasImmunityEffects(FifthNearestEnemyOf(Myself))
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(FifthNearestEnemyOf(Myself),0,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  OR(9)
+    !Gender(FourthNearestEnemyOf(Myself),SUMMONED)
+    !StateCheck(FourthNearestEnemyOf(Myself),STATE_BLESS)
+    !StateCheck(FourthNearestEnemyOf(Myself),STATE_CHANT)
+    !StateCheck(FourthNearestEnemyOf(Myself),STATE_DRAWUPONHOLYMIGHT)
+    !StateCheck(FourthNearestEnemyOf(Myself),STATE_BLUR)
+    !StateCheck(FourthNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+    !CheckStat(FourthNearestEnemyOf(Myself),0,STONESKINS)
+    HasBounceEffects(FourthNearestEnemyOf(Myself))
+    HasImmunityEffects(FourthNearestEnemyOf(Myself))
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(FourthNearestEnemyOf(Myself),0,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  OR(9)
+    !Gender(ThirdNearestEnemyOf(Myself),SUMMONED)
+    !StateCheck(ThirdNearestEnemyOf(Myself),STATE_BLESS)
+    !StateCheck(ThirdNearestEnemyOf(Myself),STATE_CHANT)
+    !StateCheck(ThirdNearestEnemyOf(Myself),STATE_DRAWUPONHOLYMIGHT)
+    !StateCheck(ThirdNearestEnemyOf(Myself),STATE_BLUR)
+    !StateCheck(ThirdNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+    !CheckStat(ThirdNearestEnemyOf(Myself),0,STONESKINS)
+    HasBounceEffects(ThirdNearestEnemyOf(Myself))
+    HasImmunityEffects(ThirdNearestEnemyOf(Myself))
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  OR(9)
+    !Gender(SecondNearestEnemyOf(Myself),SUMMONED)
+    !StateCheck(SecondNearestEnemyOf(Myself),STATE_BLESS)
+    !StateCheck(SecondNearestEnemyOf(Myself),STATE_CHANT)
+    !StateCheck(SecondNearestEnemyOf(Myself),STATE_DRAWUPONHOLYMIGHT)
+    !StateCheck(SecondNearestEnemyOf(Myself),STATE_BLUR)
+    !StateCheck(SecondNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+    !CheckStat(SecondNearestEnemyOf(Myself),0,STONESKINS)
+    HasBounceEffects(SecondNearestEnemyOf(Myself))
+    HasImmunityEffects(SecondNearestEnemyOf(Myself))
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  OR(9)
+    !Gender(SecondNearestEnemyOf(Myself),SUMMONED)
+    !StateCheck(NearestEnemyOf(Myself),STATE_BLESS)
+    !StateCheck(NearestEnemyOf(Myself),STATE_CHANT)
+    !StateCheck(NearestEnemyOf(Myself),STATE_DRAWUPONHOLYMIGHT)
+    !StateCheck(NearestEnemyOf(Myself),STATE_BLUR)
+    !StateCheck(NearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+    !CheckStat(NearestEnemyOf(Myself),0,STONESKINS)
+    HasBounceEffects(NearestEnemyOf(Myself))
+    HasImmunityEffects(NearestEnemyOf(Myself))
+  !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOf(Myself),0,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  Global("Prep3","LOCALS",2)
+  Global("SpellTrigger","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("SpellTrigger","LOCALS",1)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    DisplayString(Myself,26243)  // ~Spell Trigger~
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_CHAOS)
+END
+
+IF
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SixthNearestEnemyOf(Myself),0,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(FifthNearestEnemyOf(Myself),0,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(FourthNearestEnemyOf(Myself),0,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOf(Myself),0,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !StateCheck(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),STATE_IMPROVEDINVISIBILITY)
+  CheckStat(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]),0,SANCTUARY)
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]))
+  False()
+THEN
+  RESPONSE #100
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  HasImmunityEffects(LastSeenBy(Myself))
+  HaveSpell(WIZARD_DISPEL_MAGIC)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  CheckStatGT(LastSeenBy(Myself),2,SAVEVSDEATH)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_WAIL_OF_THE_BANSHEE)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(LastSeenBy(Myself),WIZARD_WAIL_OF_THE_BANSHEE))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  CheckStatLT(LastSeenBy(Myself),50,MAGICDAMAGERESISTANCE)
+  HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(LastSeenBy(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  HaveSpell(WIZARD_MORDENKAINENS_SWORD)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(LastSeenBy(Myself),WIZARD_MORDENKAINENS_SWORD))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  Global("Prep3","LOCALS",2)
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(LastSeenBy(Myself),WIZARD_FINGER_OF_DEATH))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !HasImmunityEffects(LastSeenBy(Myself))
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  HaveSpell(WIZARD_CHAOS)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(LastSeenBy(Myself),WIZARD_CHAOS))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  HaveSpell(KENSAI_KIA)
+  Range([PC],4)
+  CheckStat(NearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  !StateCheck(NearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStat(NearestEnemyOf(Myself),0,STONESKINS)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Amatimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(Myself,KENSAI_KIA))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  !HasBounceEffects(LastSeenBy(Myself))
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    ActionOverride(Myself,Spell(LastSeenBy(Myself),WIZARD_MAGIC_MISSILE))
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  !HasBounceEffects(LastSeenBy(Myself))
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  HaveSpell(WIZARD_FLAME_ARROW)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  Range(LastSeenBy(Myself),10)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  HaveSpellRES("SPIN106")
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    SpellRES("SPIN106",LastSeenBy(Myself))  // ~Vampiric Touch~
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  !HasImmunityEffects(LastSeenBy(Myself))
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  HaveSpellRES("SPIN105")
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    SpellRES("SPIN105",LastSeenBy(Myself))  // ~Horror~
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+  !HasImmunityEffects(LastSeenBy(Myself))
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself))
+  HaveSpellRES("SPIN104")
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    SpellRES("SPIN104",LastSeenBy(Myself))  // ~Larloch's Minor Drain~
+END
+
+IF
+  ActionListEmpty()
+  OR(3)
+    See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([PC.0.0.SORCERER]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+  Allegiance(LastSeenBy(Myself),GOODCUTOFF)
+  Global("Prep3","LOCALS",2)
+  !CheckStat(LastSeenBy(Myself),4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself),12)
+    Continue()
+END
+
+IF
+  ActionListEmpty()
+  OR(3)
+    See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+    See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+  Allegiance(LastSeenBy(Myself),GOODCUTOFF)
+  !CheckStat(LastSeenBy(Myself),4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself),12)
+    Continue()
+END
+
+IF
+  See(WorstAC)
+  ActionListEmpty()
+  Allegiance(LastSeenBy(Myself),GOODCUTOFF)
+  !CheckStat(LastSeenBy(Myself),4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself),12)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOfType([PC]))
+  ActionListEmpty()
+  Allegiance(LastSeenBy(Myself),GOODCUTOFF)
+  !CheckStat(LastSeenBy(Myself),4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself),12)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Allegiance(LastSeenBy(Myself),GOODCUTOFF)
+  ActionListEmpty()
+  !CheckStat(LastSeenBy(Myself),4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself),12)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Global("Prep3","LOCALS",2)
+  InMyArea(Player1)
+  ActionListEmpty()
+  !CheckStat(Player1,4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    AttackReevaluate(Player1,12)
+    Continue()
+END
+
+IF
+  ActionListEmpty()
+  !Global("AMAWAIT","GLOBAL",0)
+  Allegiance(Myself,ENEMY)
+  !Global("AttackC6Ama","GLOBAL",0)
+  !Range([PC],120)
+  Global("Prep","LOCALS",1)
+  Global("Prep3","LOCALS",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+

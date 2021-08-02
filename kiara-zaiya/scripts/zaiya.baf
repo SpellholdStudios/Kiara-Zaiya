@@ -1,0 +1,567 @@
+IF
+  Global("CerndBaby","GLOBAL",2)
+  Delay(20)
+  InParty("Cernd")  // Cernd
+  See("Cernd")  // Cernd
+  !StateCheck("Cernd",STATE_SLEEPING)  // Cernd
+  Global("ZaiTalkCernd","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiTalkCernd","GLOBAL",1)
+    RealSetGlobalTimer("ZaiCernd","LOCALS",4500)
+    Interact(Player1)
+END
+
+IF
+  RealGlobalTimerExpired("ZaiCernd","LOCALS")
+  InParty("Cernd")  // Cernd
+  See("Cernd")  // Cernd
+  !StateCheck("Cernd",STATE_SLEEPING)  // Cernd
+  !GlobalGT("ZaiTalkCernd","GLOBAL",9)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ZaiTalkCernd","GLOBAL",1)
+    RealSetGlobalTimer("ZaiCernd","LOCALS",4500)
+    Interact(Player1)
+END
+
+IF
+  Dead("Kiara")  // ~Kiara~
+  Global("MBUG1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MBUG1","LOCALS",1)
+    SetGlobal("KCActive","GLOBAL",0)
+END
+
+IF
+  !Dead("Kiara")  // ~Kiara~
+  Global("MBUG1","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MBUG1","LOCALS",0)
+END
+
+IF
+  !InParty(Myself)
+  Global("KickedOut","LOCALS",0)
+  See(Player1)
+  AreaCheck("AR0405")
+  Global("ZAYPC","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ZAYPC","GLOBAL",1)
+    StartDialogNoSet([PC])
+END
+
+IF
+  !InPartyAllowDead("Kiara")  // ~Kiara~
+  Dead("Kiara")  // ~Kiara~
+  CombatCounter(0)
+  !Global("ZJOINEVIL","GLOBAL",1)
+  Global("NOTSEEKIARA","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("NOTSEEKIARA","GLOBAL",1)
+    SetGlobal("ZaiyaCursed","GLOBAL",1)
+    StartDialogNoSet([PC])
+END
+
+IF
+  InParty(Myself)
+  Global("ZQUEST","LOCALS",0)
+  Global("ZaiyaJoined","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ZQUEST","LOCALS",1)
+    AddJournalEntry(@33,QUEST)
+END
+
+IF
+  GlobalGT("ZaiyaCursed","GLOBAL",0)
+  GlobalLT("ZaiyaCursed","GLOBAL",8)
+  Global("ZDayOfCurse","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ZDayOfCurse","LOCALS",2)
+    SetGlobalTimer("ZCurseTimer","LOCALS",ONE_DAY)
+END
+
+IF
+  GlobalGT("ZaiyaCursed","GLOBAL",0)
+  GlobalLT("ZaiyaCursed","GLOBAL",8)
+  GlobalTimerExpired("ZCurseTimer","LOCALS")
+  LocalsLT("ZCastCurse","ZDayOfCurse")
+  GlobalLT("ZDayOfCurse","LOCALS",14)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ZCastCurse","LOCALS",1)
+    ApplySpell(Myself,JAHEIRA_WEAKNESS)
+END
+
+IF
+  GlobalGT("ZaiyaCursed","GLOBAL",0)
+  GlobalLT("ZaiyaCursed","GLOBAL",8)
+  GlobalTimerExpired("ZCurseTimer","LOCALS")
+  LocalsEqual("ZCastCurse","ZDayOfCurse")
+  GlobalLT("ZDayOfCurse","LOCALS",14)
+THEN
+  RESPONSE #100
+    IncrementGlobal("ZDayOfCurse","LOCALS",1)
+    SetGlobal("ZCastCurse","LOCALS",0)
+    SetGlobalTimer("ZCurseTimer","LOCALS",ONE_DAY)
+END
+
+IF
+  GlobalGT("ZaiyaCursed","GLOBAL",0)
+  GlobalLT("ZaiyaCursed","GLOBAL",8)
+  GlobalTimerExpired("ZCurseTimer","LOCALS")
+  LocalsEqual("ZCastCurse","ZDayOfCurse")
+  Global("ZDayOfCurse","LOCALS",14)
+THEN
+  RESPONSE #100
+    LeaveParty()
+    Kill(Myself)
+END
+
+IF
+  GlobalGT("ZaiyaCursed","GLOBAL",0)
+  GlobalLT("ZaiyaCursed","GLOBAL",8)
+  InParty("Kiara")  // ~Kiara~
+  GlobalLT("KiaraVampire","GLOBAL",1)
+THEN
+  RESPONSE #100
+    EraseJournalEntry(@33)  // ~Find Zaiya's friend:I met a young girl named Zaiya, who seems to suffer from a strange affliction. She told me that her friend Kiara is the only one able to stabilize her condition. We might be able to find some clues as to Kiara's location by asking a man named Prax, near a circus in Athkatla. She cautioned me about her state and that we have only a few days before she dies.~
+    AddJournalEntry(@33,QUEST_DONE)
+    SetGlobal("ZaiyaCursed","GLOBAL",8)
+    SetGlobal("FOUNDKIARA","LOCALS",1)
+END
+
+IF
+  GlobalGT("ZaiyaCursed","GLOBAL",0)
+  GlobalLT("ZaiyaCursed","GLOBAL",8)
+  InParty("Kiara")  // ~Kiara~
+  GlobalGT("KiaraVampire","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiyaCursed","GLOBAL",8)
+END
+
+IF
+  Global("KiaraOut","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaraOut","GLOBAL",2)
+    LeaveParty()
+    SetLeavePartyDialogueFile()
+END
+
+IF
+  Global("DemonNotDeal","GLOBAL",2)
+  !Global("KTRUEEVIL","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiyaCursed","GLOBAL",1)
+    SetGlobal("DemonNotDeal","GLOBAL",3)
+    Interact(Player1)
+END
+
+IF
+  Global("KiaraVampire","GLOBAL",1)
+  CombatCounter(0)
+  See(Player1)
+  InParty(Myself)
+  Global("KiaVampTalk","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("KiaVampTalk","LOCALS",1)
+    SetGlobal("ZaiyaCursed","GLOBAL",1)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  InParty(Myself)
+  InParty("Kiara")  // ~Kiara~
+  InParty("Minsc")  // Minsc
+  CombatCounter(0)
+  AreaCheck("AR0800")
+  Delay(20)
+  Global("ZAIMISS","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ZAIMISS","GLOBAL",1)
+    SetGlobalTimer("BOOCHA","GLOBAL",ONE_DAY)
+    ApplySpellRES("SPWM145",Myself)  // ~Polymorph Other~
+    DisplayStringHead(Myself,@34)  // ~Oh no! A wild surge! Something horrible must have happened.~
+    Wait(5)
+END
+
+IF
+  AreaCheck("AR1302")
+  Dead("Torgal")  // ~TorGal~
+  InParty("Nalia")  // Nalia
+  InParty(Myself)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  CombatCounter(0)
+  Global("ZaiTalkNalia","AR1302",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiTalkNalia","AR1302",1)
+    Interact(Player1)
+END
+
+IF
+  See("Lavok")  // Lavok
+  AreaCheck("AR0411")
+  Global("ZaiLavok","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("ZaiLavok","LOCALS",1)
+    DisplayStringHead(Myself,@35)  // ~If the mage is truly over five hundred years old, let us be cautious. He must have had all the time to hone his magic skills to perfection.~
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    ApplySpell(Myself,WIZARD_SPELL_TRAP)
+    ApplySpell(Myself,WIZARD_MIRROR_IMAGE)
+    SetGlobal("Prep","LOCALS",1)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  StateCheck(Myself,STATE_SILENCED)
+  HaveSpell(WIZARD_VOCALIZE)
+THEN
+  RESPONSE #100
+    Spell(Myself,WIZARD_VOCALIZE)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+  HaveSpell(WIZARD_TRUE_SIGHT)
+THEN
+  RESPONSE #100
+    Spell(Myself,WIZARD_TRUE_SIGHT)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  Allegiance(Myself,ENEMY)
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+  !HaveSpell(WIZARD_TRUE_SIGHT)
+  Delay(10)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_TRUE_SIGHT)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,1,STONESKINS)
+  Global("Prep2","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,3302)  // ~Chain Contingency - Spell Turning~
+    ApplySpell(Myself,WIZARD_SPELL_TURNING)
+    DisplayString(Myself,40240)  // ~Chain Contingency - Mislead~
+    ApplySpell(Myself,WIZARD_MISLEAD)
+    DisplayString(Myself,29736)  // ~Contingency - Stoneskin~
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    SetGlobal("Prep2","LOCALS",1)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,1,STONESKINS)
+  Global("Prep2","LOCALS",1)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,40252)  // ~Contingency - Protection from Magical Weapons~
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    SetGlobal("Prep2","LOCALS",2)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  !HasBounceEffects(Myself)
+  !HasImmunityEffects(Myself)
+  HaveSpell(WIZARD_SPELL_TURNING)
+THEN
+  RESPONSE #100
+    Spell(Myself,WIZARD_SPELL_TURNING)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  Global("SpellTrigger","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,39968)  // ~Spell Trigger - Fired~
+    DisplayString(Myself,40249)  // ~Spell Trigger - Dispel Magic~
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_DISPEL_MAGIC)
+    DisplayString(Myself,45727)  // ~Spell Trigger - Death Spell~
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_DEATH_SPELL)
+    DisplayString(Myself,45728)  // ~Spell Trigger - Flesh to Stone Spell~
+    ReallyForceSpell(SecondNearestEnemyOf(Myself),WIZARD_FLESH_TO_STONE)
+    SetGlobal("SpellTrigger","LOCALS",1)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_NPC_SYMBOL_STUN)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_NPC_SYMBOL_STUN)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_TIME_STOP)
+THEN
+  RESPONSE #100
+    Spell(Myself,WIZARD_TIME_STOP)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  HaveSpell(WIZARD_SPELL_STRIKE)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_METEOR_SWARM)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,WIZARD_PROTECTION_FROM_FIRE)
+    Spell(NearestEnemyOf(Myself),WIZARD_METEOR_SWARM)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_WAIL_OF_THE_BANSHEE)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_WAIL_OF_THE_BANSHEE)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_SHADOW_DOOR)
+THEN
+  RESPONSE #100
+    Spell(Myself,WIZARD_SHADOW_DOOR)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_SUMMON_EFREET)
+THEN
+  RESPONSE #100
+    Spell(Myself,WIZARD_SUMMON_EFREET)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FLESH_TO_STONE)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_FLESH_TO_STONE)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DISINTEGRATE)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_DISINTEGRATE)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DOMINATION)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_DOMINATION)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FIRE_SHIELD_RED)
+THEN
+  RESPONSE #100
+    Spell(Myself,WIZARD_FIRE_SHIELD_RED)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_SLOW)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_SLOW)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FLAME_ARROW)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_FLAME_ARROW)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MELF_ACID_ARROW)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_MELF_ACID_ARROW)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_LARLOCH_MINOR_DRAIN)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_LARLOCH_MINOR_DRAIN)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_POLYMORPH_OTHER)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_POLYMORPH_OTHER)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_HOLD_PERSON)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_HOLD_PERSON)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHAOS)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_CHAOS)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MONSTER_SUMMONING_3)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_MONSTER_SUMMONING_3)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CONFUSION)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_CONFUSION)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MONSTER_SUMMONING_2)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_MONSTER_SUMMONING_2)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_HORROR)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_HORROR)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(0)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  !Range([PC],40)
+  ActionListEmpty()
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+
+IF
+  Global("ZJOINEVIL","GLOBAL",1)
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+

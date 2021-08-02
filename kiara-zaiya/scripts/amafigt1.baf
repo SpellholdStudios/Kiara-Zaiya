@@ -1,0 +1,550 @@
+IF
+  Global("AttackC6Ama","GLOBAL",0)
+  See([PC])
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    Continue()
+END
+
+IF
+  Global("AttackC6Ama","GLOBAL",0)
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    Continue()
+END
+
+IF
+  GlobalTimerExpired("AmaRestT","GLOBAL")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,CLERIC_HEAL)
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep2","LOCALS",0)
+    SetGlobal("SpellTriger","LOCALS",0)
+    Rest()
+    Continue()
+END
+
+IF
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("AmaRestT","GLOBAL",TWO_HOURS)
+    SetGlobal("Prep","LOCALS",1)
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    ApplySpell(Myself,CLERIC_CHAOTIC_COMMANDS)
+    ApplySpell(Myself,WIZARD_SPELL_TRAP)
+    ApplySpell(Myself,WIZARD_SPELL_SHIELD)
+    ApplySpell(Myself,WIZARD_MIRROR_IMAGE)
+    ApplySpell(Myself,WIZARD_FIRE_SHIELD_RED)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    SetGlobalTimer("Amatimer","GLOBAL",ONE_ROUND)
+    EquipMostDamagingMelee()
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Global("AttackC6Ama","GLOBAL",0)
+  AttackedBy([ANYTHING],DEFAULT)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    MoveToObject(Player1)
+    Continue()
+END
+
+IF
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  StateCheck(Myself,STATE_SILENCED)
+  HaveSpell(WIZARD_VOCALIZE)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_VOCALIZE)
+    Continue()
+END
+
+IF
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+  HaveSpell(WIZARD_TRUE_SIGHT)
+  !CheckStatGT(Myself,0,0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_TRUE_SIGHT)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+  !HaveSpell(WIZARD_TRUE_SIGHT)
+  !CheckStatGT(Myself,0,0)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_TRUE_SIGHT)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,1,STONESKINS)
+  Global("Prep2","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep2","LOCALS",1)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_EVIL)
+    DisplayString(Myself,3302)  // ~Chain Contingency - Spell Turning~
+    ApplySpell(Myself,WIZARD_SPELL_TURNING)
+    ApplySpell(Myself,WIZARD_SPELL_SHIELD)
+    DisplayString(Myself,29736)  // ~Contingency - Stoneskin~
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    DisplayString(Myself,40252)  // ~Contingency - Protection from Magical Weapons~
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(2)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,1,STONESKINS)
+  Global("Prep2","LOCALS",1)
+  HaveSpell(WIZARD_STONE_SKIN)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep2","LOCALS",2)
+    ActionOverride(Myself,Spell(Myself,WIZARD_STONE_SKIN))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(2)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  CheckStatLT(Myself,1,STONESKINS)
+  Global("Prep2","LOCALS",2)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_TENSERS_TRANSFORMATION)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(Myself,WIZARD_TENSERS_TRANSFORMATION))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(2)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself,STATE_HASTED)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,KENSAI_KIA)
+    ApplySpell(Myself,WIZARD_IMPROVED_HASTE)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  See(NearestEnemyOfType([GOODCUTOFF.0.0.0.0.SUMMONED]))
+  HaveSpell(WIZARD_DEATH_SPELL)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #1
+    ActionOverride(Myself,Spell(NearestEnemyOfType([GOODCUTOFF.0.0.0.0.SUMMONED]),WIZARD_DEATH_SPELL))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(2)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player1)
+  Global("SpellTrigger","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  OR(4)
+    CheckStatGT(Player1,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player1,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player1,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player1,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("SpellTrigger","LOCALS",1)
+    DisplayString(Myself,39968)  // ~Spell Trigger - Fired~
+    ReallyForceSpell(Player1,WIZARD_RUBY_RAY_OF_REVERSAL)
+    ReallyForceSpell(Player1,WIZARD_POWER_WORD_SILENCE)
+    ReallyForceSpell(Player1,WIZARD_BREACH)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player2)
+  Global("SpellTrigger","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  OR(4)
+    CheckStatGT(Player2,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player2,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player2,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player2,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("SpellTrigger","LOCALS",1)
+    DisplayString(Myself,39968)  // ~Spell Trigger - Fired~
+    ReallyForceSpell(Player2,WIZARD_RUBY_RAY_OF_REVERSAL)
+    ReallyForceSpell(Player2,WIZARD_POWER_WORD_SILENCE)
+    ReallyForceSpell(Player2,WIZARD_BREACH)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player2)
+  Global("SpellTrigger","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  OR(4)
+    CheckStatGT(Player3,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player3,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player3,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player3,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("SpellTrigger","LOCALS",1)
+    DisplayString(Myself,39968)  // ~Spell Trigger - Fired~
+    ReallyForceSpell(Player3,WIZARD_RUBY_RAY_OF_REVERSAL)
+    ReallyForceSpell(Player3,WIZARD_POWER_WORD_SILENCE)
+    ReallyForceSpell(Player3,WIZARD_BREACH)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player4)
+  Global("SpellTrigger","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  OR(4)
+    CheckStatGT(Player4,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player4,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player4,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player4,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("SpellTrigger","LOCALS",1)
+    DisplayString(Myself,39968)  // ~Spell Trigger - Fired~
+    ReallyForceSpell(Player4,WIZARD_RUBY_RAY_OF_REVERSAL)
+    ReallyForceSpell(Player4,WIZARD_POWER_WORD_SILENCE)
+    ReallyForceSpell(Player4,WIZARD_BREACH)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player5)
+  Global("SpellTrigger","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  OR(4)
+    CheckStatGT(Player5,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player5,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player5,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player5,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("SpellTrigger","LOCALS",1)
+    DisplayString(Myself,39968)  // ~Spell Trigger - Fired~
+    ReallyForceSpell(Player5,WIZARD_RUBY_RAY_OF_REVERSAL)
+    ReallyForceSpell(Player5,WIZARD_POWER_WORD_SILENCE)
+    ReallyForceSpell(Player5,WIZARD_BREACH)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  Allegiance(Myself,ENEMY)
+  See(Player6)
+  Global("SpellTrigger","LOCALS",0)
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  OR(4)
+    CheckStatGT(Player2,0,WIZARD_SPELL_TURNING)
+    CheckStatGT(Player6,0,WIZARD_SPELL_IMMUNITY)
+    CheckStatGT(Player6,0,WIZARD_SPELL_TRAP)
+    CheckStatGT(Player6,0,WIZARD_SPELL_DEFLECTION)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("SpellTrigger","LOCALS",1)
+    DisplayString(Myself,39968)  // ~Spell Trigger - Fired~
+    ReallyForceSpell(Player6,WIZARD_RUBY_RAY_OF_REVERSAL)
+    ReallyForceSpell(Player6,WIZARD_POWER_WORD_SILENCE)
+    ReallyForceSpell(Player6,WIZARD_BREACH)
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  See(NearestEnemyOf(Myself))
+  OR(2)
+    CheckStatGT(NearestEnemyOf(Myself),1,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    CheckStatGT(NearestEnemyOf(Myself),0,STONESKINS)
+  HaveSpell(WIZARD_BREACH)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_BREACH))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  HPPercentLT(Myself,50)
+  HasItem("potn52",Myself)  // ~Potion of Extra Healing~
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,UseItem("potn52",Myself))  // ~Potion of Extra Healing~
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(2)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_WAIL_OF_THE_BANSHEE)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_WAIL_OF_THE_BANSHEE))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(4)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(StrongestOf)
+  HaveSpell(WIZARD_MAZE)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_MAZE))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(3)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_GREATER_MALISON)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_GREATER_MALISON))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  !HasBounceEffects(NearestEnemyOf(Myself))
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_IMMUNITY)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(NearestEnemyOf(Myself),50,RESISTMAGIC)
+  HaveSpell(WIZARD_FLESH_TO_STONE)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_FLESH_TO_STONE))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(SecondNearestEnemyOf(Myself))
+  !HasBounceEffects(NearestEnemyOf(Myself))
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_IMMUNITY)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearestEnemyOf(Myself),50,RESISTMAGIC)
+  HaveSpell(WIZARD_FLESH_TO_STONE)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(SecondNearestEnemyOf(Myself),WIZARD_FLESH_TO_STONE))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(ThirdNearestEnemyOf(Myself))
+  !HasBounceEffects(NearestEnemyOf(Myself))
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_IMMUNITY)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),50,RESISTMAGIC)
+  HaveSpell(WIZARD_FLESH_TO_STONE)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(ThirdNearestEnemyOf(Myself),WIZARD_FLESH_TO_STONE))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(SecondNearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_SUMMON_EFREET)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(Myself,WIZARD_SUMMON_EFREET))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  See(SecondNearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHAOS)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(NearestEnemyOf(Myself),WIZARD_CHAOS))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("Amatimer","GLOBAL")
+  !Global("AttackC6Ama","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  Range(SecondNearestEnemyOf(Myself),20)
+  HaveSpell(WIZARD_CLOUDKILL)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Myself,Spell(SecondNearestEnemyOf(Myself),WIZARD_CLOUDKILL))
+    SetGlobalTimer("AmaTimer","GLOBAL",ONE_ROUND)
+    Wait(1)
+    AttackReevaluate(NearestEnemyOf(Myself),12)
+    Continue()
+END
+
+IF
+  GlobalTimerNotExpired("Amatimer","GLOBAL")
+  See(NearestEnemyOf(Myself))
+  ActionListEmpty()
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+
+IF
+  ActionListEmpty()
+  !Global("AttackC6Ama","GLOBAL",0)
+  !Range([PC],10)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+

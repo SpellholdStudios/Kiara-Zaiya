@@ -1,0 +1,239 @@
+IF
+  GlobalTimerExpired("MortiRestT","LOCALS")
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Prep1","LOCALS",0)
+    SetGlobal("HEALTIME","LOCALS",0)
+    SetGlobal("PtnPrep","LOCALS",0)
+    ApplySpell(Myself,CLERIC_HEAL)
+    Rest()
+    Continue()
+END
+
+IF
+  OR(2)
+    Detect([PC])
+    InMyArea(Player1)
+  Global("Prep1","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep1","LOCALS",1)
+    SetGlobalTimer("MortiRestT","GLOBAL",SIX_HOURS)
+    SetGlobalTimer("MPOTION","LOCALS",7)
+    Continue()
+END
+
+IF
+  Allegiance(Myself,NEUTRAL)
+  Global("AttackC6ama","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Enemy()
+    Continue()
+END
+
+IF
+  !GlobalTimerExpired("MortiRestT","LOCALS")
+  Allegiance(Myself,ENEMY)
+  GlobalTimerExpired("MPOTION","LOCALS")
+  !StateCheck(Myself,STATE_INVISIBLE)
+  HasItem("potn10",Myself)  // ~Potion of Invisibility~
+  Global("PtnPrep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("PtnPrep","LOCALS",1)
+    SetGlobalTimer("MPOTION","LOCALS",7)
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("potn10",Myself)  // ~Potion of Invisibility~
+    Continue()
+END
+
+IF
+  Global("HEALTIME","LOCALS",1)
+  OR(3)
+    HPPercentGT(Myself,50)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    Range(NearestEnemyOf(Myself),4)
+THEN
+  RESPONSE #100
+    SetGlobal("HEALTIME","LOCALS",0)
+END
+
+IF
+  GlobalTimerExpired("HPOTION","LOCALS")
+  HPPercentLT(Myself,50)
+  Allegiance(Myself,ENEMY)
+  HasItem("potn10",Myself)  // ~Potion of Invisibility~
+  !StateCheck(Myself,STATE_INVISIBLE)
+  Global("HEALTIME","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    UseItem("potn10",Myself)  // ~Potion of Invisibility~
+    RunAwayFrom(LastAttackerOf(Myself),60)
+    SetGlobal("HEALTIME","LOCALS",1)
+    Wait(2)
+END
+
+IF
+  Range(NearestEnemyOf(Myself),20)
+  Global("HEALTIME","LOCALS",1)
+THEN
+  RESPONSE #100
+    RunAwayFrom(LastAttackerOf(Myself),60)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Global("HEALTIME","LOCALS",1)
+  GlobalTimerExpired("HPOTION","LOCALS")
+  HPPercentLT(Myself,50)
+  HasItem("potn52",Myself)  // ~Potion of Extra Healing~
+THEN
+  RESPONSE #100
+    SetGlobalTimer("HPOTION","LOCALS",7)
+    DisplayStringHead(Myself,46150)  // ~quaffs a potion~
+    UseItem("potn52",Myself)  // ~Potion of Extra Healing~
+    Continue()
+END
+
+IF
+  !Global("HEALTIME","LOCALS",1)
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),10)
+  Global("Prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MortiRestT","LOCALS",TWO_HOURS)
+    SetGlobal("Prep","LOCALS",1)
+    UseItem("Potn07",Myself)  // ~Potion of Storm Giant Strength~
+    SetGlobalTimer("MPOTION","LOCALS",7)
+    ApplySpell(Myself,BARBARIAN_RAGE)
+    ApplySpell(Myself,CLERIC_CHAOTIC_COMMANDS)
+    ApplySpell(Myself,WARRIOR_HARDINESS)
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+    Continue()
+END
+
+IF
+  !Global("HEALTIME","LOCALS",1)
+  !GlobalTimerExpired("MortiRestT","LOCALS")
+  GlobalTimerExpired("MPOTION","LOCALS")
+  HasItem("Potn07",Myself)  // ~Potion of Storm Giant Strength~
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep","LOCALS",2)
+    SetGlobalTimer("MPOTION","LOCALS",7)
+    UseItem("Potn07",Myself)  // ~Potion of Storm Giant Strength~
+    Continue()
+END
+
+// Isaya : these blocks are useless
+//IF
+//  Allegiance(Myself,ENEMY)
+//  See(NearestEnemyOf(Myself))
+//  !Gender(NearestEnemyOf(Myself),SUMMONED)
+//  CheckStat(NearestEnemyOf(Myself),0,STONESKINS)
+//  CheckStat(NearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+//  False()
+//THEN
+//  RESPONSE #100
+//END
+//
+//IF
+//  Allegiance(Myself,ENEMY)
+//  See(SecondNearestEnemyOf(Myself))
+//  !Gender(SecondNearestEnemyOf(Myself),SUMMONED)
+//  CheckStat(SecondNearestEnemyOf(Myself),0,STONESKINS)
+//  CheckStat(SecondNearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+//  False()
+//THEN
+//  RESPONSE #100
+//END
+//
+//IF
+//  Allegiance(Myself,ENEMY)
+//  See(ThirdNearestEnemyOf(Myself))
+//  !Gender(ThirdNearestEnemyOf(Myself),SUMMONED)
+//  CheckStat(ThirdNearestEnemyOf(Myself),0,STONESKINS)
+//  CheckStat(ThirdNearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+//  False()
+//THEN
+//  RESPONSE #100
+//END
+//
+//IF
+//  Allegiance(Myself,ENEMY)
+//  See(FourthNearestEnemyOf(Myself))
+//  !Gender(FourthNearestEnemyOf(Myself),SUMMONED)
+//  CheckStat(FourthNearestEnemyOf(Myself),0,STONESKINS)
+//  CheckStat(FourthNearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+//  False()
+//THEN
+//  RESPONSE #100
+//END
+
+IF
+  ActionListEmpty()
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerExpired("MortiRestT","LOCALS")
+  Range([PC],120)
+  OR(4)
+    !See(LastSeenBy(Myself))
+    Gender(LastSeenBy(Myself),SUMMONED)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    CheckStatGT(LastSeenBy(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    MoveToObject(WeakestOf)
+  RESPONSE #100
+    MoveToObject(StrongestOf)
+END
+
+IF
+  Range([PC],4)
+  CheckStat(NearestEnemyOf(Myself),4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    SelectWeaponAbility(SLOT_WEAPON2,0)
+    Continue()
+END
+
+IF
+  Range([PC],4)
+  !CheckStat(NearestEnemyOf(Myself),4,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    SelectWeaponAbility(SLOT_WEAPON1,0)
+    Continue()
+END
+
+IF
+  !Global("HEALTIME","LOCALS",1)
+  !GlobalTimerExpired("MortiRestT","LOCALS")
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !Gender(LastSeenBy(Myself),SUMMONED)
+  CheckStat(LastSeenBy(Myself),0,STONESKINS)
+  CheckStat(LastSeenBy(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(LastSeenBy(Myself),15)
+END
+
+IF
+  !Global("HEALTIME","LOCALS",1)
+  ActionListEmpty()
+  !GlobalTimerExpired("MortiRestT","LOCALS")
+  !Global("AttackC6Ama","GLOBAL",0)
+  !Range([PC],10)
+THEN
+  RESPONSE #100
+    Wait(12)
+    MoveToObject(Player1)
+END
+
