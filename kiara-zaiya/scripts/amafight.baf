@@ -9,7 +9,7 @@ THEN
     SetGlobal("AmaHasted","LOCALS",0)
     SetGlobal("AStone","LOCALS",0)
     SetGlobal("AmaTriggerM","LOCALS",0)
-    DisplayStringHead(Myself,@42)  // ~ You dare challenge me again?~
+    DisplayStringHead(Myself,@42)  // ~You dare challenge me again?~
     ApplySpell(Myself,CLERIC_HEAL)
     Rest()
     SmallWait(1)
@@ -26,10 +26,10 @@ THEN
     SetGlobal("AmaCast","LOCALS",4)
     DisplayString(Myself,26328)  // ~Chain Contingency~
     ReallyForceSpell(Myself,WIZARD_SPELL_SHIELD)
-    DisplayString(Myself,@37)  // ~ Chain Contingency - Spell Shield~
+    DisplayString(Myself,@37)  // ~Chain Contingency - Spell Shield~
     ReallyForceSpell(Myself,WIZARD_SPELL_TURNING)
     ReallyForceSpell(Myself,WIZARD_IMPROVED_MANTLE)
-    DisplayString(Myself,@38)  // ~ Chain Contingency - Improved Mantle~
+    DisplayString(Myself,@38)  // ~Chain Contingency - Improved Mantle~
     ReallyForceSpell(Myself,WIZARD_SPELL_DEFLECTION)
     DisplayString(Myself,@39)  // ~ Chain Contingency - Spell Deflection~
     ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
@@ -135,7 +135,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("AmaTriggerM","LOCALS",1)
-    DisplayStringHead(Myself,@40)  // ~ Poor mage...You left it unprotected careless fool!~
+    DisplayStringHead(Myself,@40)  // ~ Poor mage... You left it unprotected careless fool!~
     DisplayString(Myself,25951)  // ~Spell Sequencer~
     ActionOverride(Myself,ReallyForceSpell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_MAGIC_MISSILE))
     ActionOverride(Myself,ReallyForceSpell(NearestEnemyOfType([0.0.0.MAGE_ALL]),WIZARD_MAGIC_MISSILE))
@@ -158,7 +158,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("AmaComment","LOCALS",1)
-    DisplayStringHead(Myself,@41)  // ~ I hope this dead corpse was just an acquaintance and not just a friend?~
+    DisplayStringHead(Myself,@41)  // ~I hope this dead corpse was just an acquaintance and not just a friend?~
 END
 
 IF

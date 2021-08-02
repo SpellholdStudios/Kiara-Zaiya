@@ -79,7 +79,7 @@ IF
   !Detect(SecondNearestEnemyOf(Myself))
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@44)  // ~ My fighting skills are useless! ~
+    DisplayStringHead(Myself,@44)  // ~My fighting skills are useless!~
     SetGlobal("KCActive","GLOBAL",0)
     Continue()
 END

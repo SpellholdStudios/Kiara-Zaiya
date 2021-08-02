@@ -1,7 +1,7 @@
 IF
-Allegiance(Myself,NEUTRAL)
-ActuallyInCombat()
+  Allegiance(Myself,NEUTRAL)
+  ActuallyInCombat()
 THEN
-RESPONSE #100
-Enemy()
+  RESPONSE #100
+    Enemy()
 END
