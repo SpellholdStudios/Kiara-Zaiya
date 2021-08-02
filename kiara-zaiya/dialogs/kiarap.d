@@ -1,6 +1,7 @@
 BEGIN KIARAP
 
 // ZAIYA LEAVES REP UNDER 3 - KIARA LEAVES TOO
+// -------------------------------------------
 IF ~Global("ZUNHAPPY","GLOBAL",1)
 Global("ZaiyaOut","GLOBAL",2) ~ THEN BEGIN ZAIOUT0
 SAY @3200
@@ -104,7 +105,8 @@ IF ~~ THEN BEGIN KVP8
   IF ~~ THEN DO ~JoinParty()~ EXIT
 END
 
-//KIARA OUT FIRST
+// KIARA OUT FIRST
+// ---------------
 IF ~GlobalLT("ZaiyaOut","GLOBAL",1) HappinessGT(Myself,-290)~ THEN BEGIN KOUT
   SAY @369
   IF ~~ THEN REPLY @370 DO ~JoinParty()~ EXIT
@@ -112,14 +114,16 @@ IF ~GlobalLT("ZaiyaOut","GLOBAL",1) HappinessGT(Myself,-290)~ THEN BEGIN KOUT
 ~ THEN REPLY @371 GOTO 7
 END
 
-//ZAIYA OUT FIRST
+// ZAIYA OUT FIRST
+// ---------------
 IF ~Global("ZaiyaOut","GLOBAL",2) !Global("KiaraOut","GLOBAL",2) HappinessGT(Myself,-290)~ THEN BEGIN KOUT
   SAY @372
    IF ~Global("TODOCKS","GLOBAL",0)~ THEN DO ~SetGlobal("KickedOut","LOCALS",1) SetGlobal("KiaraOut","GLOBAL",2)~ EXIT
    IF ~Global("TODOCKS","GLOBAL",1)~ THEN DO ~SetGlobal("KickedOut","LOCALS",1) SetGlobal("KiaraOut","GLOBAL",2) EscapeAreaMove("AR0300",1518,3562,14)~ EXIT
 END
 
-//REJOIN KIARA FIRST DOCK AREA AND REP OVER 3
+// REJOIN KIARA FIRST DOCK AREA AND REP OVER 3
+// -------------------------------------------
 IF ~True() !Global("ZUNHAPPY","GLOBAL",1) AreaCheck("AR0300") HappinessGT(Myself,-290) Global("KiaraOut","GLOBAL",2)~ THEN BEGIN 1 
   SAY @373
   IF ~~ THEN REPLY @374 GOTO 2
@@ -138,9 +142,9 @@ IF ~~ THEN BEGIN 3
   SAY @377 
   IF ~~ THEN EXIT
 END
-//
 
-//REJOIN KIARA FIRST NOT DOCKS
+// REJOIN KIARA FIRST NOT DOCKS
+// ----------------------------
 IF ~True() !AreaCheck("AR0300") HappinessGT(Myself,-290) Global("KiaraOut","GLOBAL",2)~ THEN BEGIN 1a 
   SAY @378
   IF ~~ THEN REPLY @379 GOTO 2
@@ -158,9 +162,9 @@ IF ~~ THEN BEGIN 3a
   SAY @382 
   IF ~~ THEN EXIT
 END
-//
 
-//REPUTATION OVER 18 THEN KIARA ZAIYA LEAVE FOR GOOD
+// REPUTATION OVER 18 THEN KIARA ZAIYA LEAVE FOR GOOD
+// --------------------------------------------------
 IF ~Global("KiaraOut","GLOBAL",0)
  HappinessLT(Myself,-289)~ THEN BEGIN 4
   SAY @384 

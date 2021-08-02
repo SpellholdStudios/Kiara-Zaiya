@@ -60,7 +60,10 @@ SAY @25 /* ~Perhaps later my love.~ */
 IF ~~ THEN EXIT
 END
 
-//AFTER THE WRAITH ENCOUNTER IN MARCHING MOUNTAINS
+
+/* ================================================== *
+ *  AFTER THE WRAITH ENCOUNTER IN MARCHING MOUNTAINS  *
+ * ================================================== */
 
 IF ~Global("ExpLoveTalk","LOCALS",4)
 Global("KiaraRomanceActive","GLOBAL",2)~ THEN BEGIN 10
@@ -125,6 +128,7 @@ IF ~~ THEN EXIT
 END
 
 // Planning for children. Does <CHARNAME> want children? 
+// -----------------------------------------------------
 IF ~Global("ExpLoveTalk","LOCALS",6)
 Global("KiaraRomanceActive","GLOBAL",2)~ THEN BEGIN 20
 SAY @53 /* ~(with an assertive voice). I would like to bear a child from you...~ */
@@ -217,7 +221,9 @@ IF ~~ THEN EXIT
 END
 
 
-//AFTER SARADUSH MASSACRE 
+/* ========================= *
+ *  AFTER SARADUSH MASSACRE  *
+/* ========================= */
 
 IF ~Global("ExpLoveTalk","LOCALS",8)
 Global("KiaraRomanceActive","GLOBAL",2)~ THEN BEGIN 29
@@ -314,7 +320,8 @@ SAY @142 /* ~(My feet hurt so much, won't this ever stop?). ~ */
 IF ~~ THEN EXIT
 END
 
-//Wine talk
+// Wine talk
+// ---------
 IF ~~ THEN BEGIN 42
 SAY @143 /* ~I stole it from Gromnyr's wine cellar in Saradush!~ */
 IF ~~ THEN REPLY @144 /* ~You cunning little thief!~ */ GOTO 44
@@ -394,7 +401,8 @@ SAY @182 /* ~I feel you've denied us a future and thus separated our paths.~ */
 IF ~~ THEN DO ~SetGlobal("KiaraRomanceActive","GLOBAL",3)~ EXIT
 END
 
-//Morning joke - quickie
+// Morning joke - quickie
+// ----------------------
 IF ~Global("ExpLoveTalk","LOCALS",14)
 Global("KiaraRomanceActive","GLOBAL",2)~ THEN BEGIN 60
 SAY @183 /* ~Finally you awake...I hope you slept well last night.~ */
@@ -418,6 +426,7 @@ IF ~~ THEN EXIT
 END
 
 // The end of a long road - fear and apprehension
+// ----------------------------------------------
 IF ~Global("ExpLoveTalk","LOCALS",16)
 Global("KiaraRomanceActive","GLOBAL",2)~ THEN BEGIN 64
 SAY @191 /* ~The end of the road is near and I walk the last mile with apprehension...I wish the time would stop for a while.~ */
@@ -462,7 +471,9 @@ SAY @210 /* ~You will always have a special place in my heart, you will not need
 IF ~~ THEN DO ~SetGlobal("KiaraRomanceActive","GLOBAL",3)~ EXIT
 END
 
-//END OF LOVETALK
+// END OF LOVETALK
+
+
 CHAIN
 IF ~InParty("Kiara")
 See("Kiara")

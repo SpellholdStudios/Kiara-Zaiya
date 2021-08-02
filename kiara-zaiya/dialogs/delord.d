@@ -78,7 +78,8 @@ SAY @5230
 IF ~~ THEN DO ~CreateVisualEffectObject("SPPORTAL",Myself) DestroySelf()~ EXIT
 END
 
-//DEMON COMES BACK ->AMARALIS DEAD 
+// DEMON COMES BACK -> AMARALIS DEAD 
+// ---------------------------------
 IF ~True() GlobalGT("P1DEAL","GLOBAL",1) Dead("Amaralis") !GlobalGT("P2DEAL","GLOBAL",0)~ THEN BEGIN 11a
 SAY @5231
 IF ~~ THEN REPLY @5232 GOTO 12a
@@ -90,20 +91,23 @@ IF ~~ THEN REPLY @5234 EXTERN DELORD 12b
 IF ~~ THEN REPLY @5229 DO ~SetGlobal("DemonNotDeal","GLOBAL",2) CreateVisualEffectObject("SPPORTAL",Myself) DestroySelf() StartCutScene("KiaKill")~ EXIT
 END
 
-//DEMON COMES BACK ->AMARALIS NOT DEAD OR FAILED TO PERFORM THE EVIL QUEST
+// DEMON COMES BACK -> AMARALIS NOT DEAD OR FAILED TO PERFORM THE EVIL QUEST
+// -------------------------------------------------------------------------
 IF ~True() GlobalGT("P1DEAL","GLOBAL",1) OR(2) !Dead("Amaralis") !Global("SPRITE_IS_DEADHPRELATE","GLOBAL",1)~ THEN BEGIN 13a
 SAY @5235
 IF ~~ THEN DO ~SetGlobal("DemonNotDeal","GLOBAL",2) CreateVisualEffectObject("SPPORTAL",Myself) DestroySelf() StartCutScene("KiaKill")~ EXIT
 END
 
-//DEMON COMES BACK
+// DEMON COMES BACK
+// ----------------
 IF ~True() GlobalGT("P2DEAL","GLOBAL",1) Global("SPRITE_IS_DEADHPRELATE","GLOBAL",1)~ THEN BEGIN 14a
 SAY @5236
 IF ~~ THEN GOTO 9
 END
 
 
-//RESUME
+// RESUME
+// ------
 IF ~~ THEN BEGIN 6
   SAY @5237 
   IF ~~ THEN REPLY @5238 GOTO 7

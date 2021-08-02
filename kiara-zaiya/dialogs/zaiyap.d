@@ -1,6 +1,7 @@
 BEGIN ZaiyaP
 
-//REP FALLS BELOW 3 ZAIYA LEAVES FOR GOOD
+// REP FALLS BELOW 3: ZAIYA LEAVES FOR GOOD
+// ----------------------------------------
 IF ~Global("KickedOut","LOCALS",0)
 Global("ZaiyaOut","GLOBAL",0)
  HappinessLT(Myself,-289)~ THEN BEGIN 4
@@ -9,6 +10,7 @@ Global("ZaiyaOut","GLOBAL",0)
 END
 
 // KIARA LEAVES IN BRYNNLAW/DROW RITUAL/REP OVER 18
+// ------------------------------------------------
 IF ~OR(3)
 AreaCheck("AR2201") 
 AreaCheck("AR1600") 
@@ -19,7 +21,8 @@ SAY @3200
 IF ~~ THEN DO ~SetGlobal("ZaiyaOut","GLOBAL",1) EscapeArea()~ EXIT
 END
 
-//ZAIYA KICKED OUT WHISLT KIARA WAS VAMPIRE
+// ZAIYA KICKED OUT WHISLT KIARA WAS VAMPIRE
+// -----------------------------------------
 IF ~GlobalGT("KiaraVampire","GLOBAL",0) !Global("KiaraVampire","Global",6)~ THEN BEGIN ZAIOUT1
 SAY @3201
 IF ~!PartyHasItem("MISCBKI")~ THEN DO ~SetGlobal("ZaiyaOut","GLOBAL",1) SetGlobal("Zaiyaleave","GLOBAL",1) EscapeArea()~ EXIT
@@ -27,13 +30,15 @@ IF ~PartyHasItem("MISCBKI")~ THEN DO ~SetGlobal("ZaiyaOut","GLOBAL",1) DestroyIt
 END
 
 
-//Kicked out in area where Kiara is
+// Kicked out in area where Kiara is
+// ---------------------------------
 IF ~Global("KiaraOut","GLOBAL",2) AreaCheck("AR1004") GlobalLT("FOUNDKIARA","LOCALS",1)~ THEN BEGIN ZAIOUT2
 SAY @3202
 IF ~~ THEN DO ~SetGlobal("ZaiyaOut","GLOBAL",1) EscapeArea()~ EXIT
 END
 
-//kicked out before Kiara found but not in area where Kiara is
+// Kicked out before Kiara found but not in area where Kiara is
+// ------------------------------------------------------------
 IF ~Global("ZaiyaOut","GLOBAL",0) !AreaCheck("AR1004") GlobalLT("FOUNDKIARA","LOCALS",1)~ THEN BEGIN ZAIOUT3
 SAY @3203
 IF ~~ THEN REPLY @3204 DO ~JoinParty()~ EXIT
@@ -41,14 +46,16 @@ IF ~!Global("ZaiyaFindKiara","GLOBAL",4)~ THEN REPLY @3205 GOTO ZAIDIE
 IF ~Global("ZaiyaFindKiara","GLOBAL",4)~ THEN REPLY @3205 GOTO ZAIDIE1
 END
 
-//Kiara kicked out first
+// Kiara kicked out first
+// ----------------------
 IF ~Global("KiaraOut","GLOBAL",2) Global("ZaiyaOut","GLOBAL",0)~ THEN BEGIN ZLeave1
 SAY @3206
   IF ~Global("TODOCKS","GLOBAL",1)~ THEN DO ~SetGlobal("ZaiyaOut","GLOBAL",2) EscapeAreaMove("AR0300",1556,3579,14)~ EXIT
   IF ~Global("TODOCKS","GLOBAL",0)~ THEN DO ~SetGlobal("ZaiyaOut","GLOBAL",2)~ EXIT
 END
 
-//Zaiya out first
+// Zaiya out first
+// ---------------
 IF ~Global("ZaiyaOut","LOCALS",0) GlobalLT("KiaraOut","GLOBAL",1)~ THEN BEGIN ZLeave2
 SAY @3207
   IF ~~ THEN REPLY @3208 DO ~JoinParty()~ EXIT
@@ -65,7 +72,8 @@ SAY @3210
 IF ~~ THEN DO ~DestroySelf()~ EXIT
 END
 
-//DON'T REJOIN IF KIARA LEFT FOR REP
+// DON'T REJOIN IF KIARA LEFT FOR REP
+// ----------------------------------
 IF ~True() AreaCheck("AR0300") HappinessGT(Myself,-290)~ THEN BEGIN 1
   SAY @3211
   IF ~~ THEN REPLY @3212 GOTO 2

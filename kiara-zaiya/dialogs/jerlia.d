@@ -88,6 +88,3 @@ IF ~~ THEN BEGIN 26
 SAY @5429 = @5430 = @5431
 IF ~~ THEN DO ~SetGlobal("DemonNotDeal","GLOBAL",20) ChangeAlignment("Kiara",LAWFUL_NEUTRAL)  CreateVisualEffectObject("SPCLOUD1",Myself) DestroySelf()~ EXTERN BKIARA KiaJerl1
 END
-
-
-

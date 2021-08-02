@@ -1,6 +1,7 @@
 BEGIN OSAN
 
-//OSAN	
+// OSAN
+// ----
 IF ~True()~ THEN BEGIN 0
   SAY @0 /* ~Kiara? Is that you?~ */
   IF ~~ THEN EXTERN Kiar25j KzOsan1
@@ -21,7 +22,8 @@ IF ~~ THEN BEGIN KzOsan6
   IF ~~ THEN EXTERN Kiar25j KzOsan7
 END
 
-//KIARA
+// KIARA
+// -----
 APPEND Kiar25j
   IF ~~ THEN BEGIN KzOsan1
     SAY @4 /* ~Osan? No, this can not be...You are...dead...~ */   

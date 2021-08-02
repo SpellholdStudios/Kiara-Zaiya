@@ -1,6 +1,8 @@
 BEGIN BZAIYA
 
-//DEMON DEAL KIARA DEAD
+/* ======================= *
+ *  DEMON DEAL KIARA DEAD  *
+ * ======================= */
 
 IF ~Global("DemonNotDeal","GLOBAL",3)~ THEN BEGIN ZaiMourn2
 SAY @3700
@@ -23,8 +25,9 @@ COPY_TRANS Player1 33
 END
 
 
-
-//PLAYER1
+/* ========= *
+ *  PLAYER1  *
+ * ========= */
 EXTEND_BOTTOM player1 33
   IF ~InParty("Zaiya") Global("ZaiLifeTree1","GLOBAL",0)~ THEN DO ~SetGlobal("ZaiLifeTree1","GLOBAL",1)~ EXTERN player1 ZIrenLifeTree1
 END
@@ -58,7 +61,10 @@ Global("ZaiTalkCernd","GLOBAL",1)~ THEN BZAIYA ZaiCernd0
 @3718
 EXIT
 
-//CERND - ZAIYA BY BRI NO1
+
+/* ========================== *
+ *  CERND - ZAIYA BY BRI NO1  *
+ * ========================== */
 CHAIN IF ~Global("CERNDBABY","GLOBAL",2) 
 Global("ZaiTalkCernd","GLOBAL",3)~ THEN BZAIYA ZaiCernd1
 @3850 DO ~SetGlobal("ZaiTalkCernd","GLOBAL",4)~
@@ -80,7 +86,9 @@ Global("ZaiTalkCernd","GLOBAL",3)~ THEN BZAIYA ZaiCernd1
 @3863
 EXIT
 
-//CERND - ZAIYA BY BRI NO2
+/* ========================== *
+ *  CERND - ZAIYA BY BRI NO2  *
+ * ========================== */
 CHAIN IF ~Global("CERNDBABY","GLOBAL",2) 
 Global("ZaiTalkCernd","GLOBAL",5)~ THEN BZAIYA ZaiCernd2
 @3864 DO ~SetGlobal("ZaiTalkCernd","GLOBAL",6)~
@@ -98,7 +106,9 @@ Global("ZaiTalkCernd","GLOBAL",5)~ THEN BZAIYA ZaiCernd2
 @3871
 EXIT
 
-//CERND - ZAIYA BY BRI NO3
+/* ========================== *
+ *  CERND - ZAIYA BY BRI NO3  *
+ * ========================== */
 CHAIN IF ~Global("CERNDBABY","GLOBAL",2) 
 Global("ZaiTalkCernd","GLOBAL",7)~ THEN BZAIYA ZaiCernd3
 @3872 DO ~SetGlobal("ZaiTalkCernd","GLOBAL",8)~
@@ -112,7 +122,9 @@ Global("ZaiTalkCernd","GLOBAL",7)~ THEN BZAIYA ZaiCernd3
 @3876
 EXIT
 
-//CERND - ZAIYA BY BRI NO4
+/* ========================== *
+ *  CERND - ZAIYA BY BRI NO4  *
+ * ========================== */
 CHAIN IF ~Global("CERNDBABY","GLOBAL",2) 
 Global("ZaiTalkCernd","GLOBAL",9)~ THEN BZAIYA ZaiCernd4
 @3877 DO ~SetGlobal("ZaiTalkCernd","GLOBAL",10)~
@@ -130,7 +142,9 @@ Global("ZaiTalkCernd","GLOBAL",9)~ THEN BZAIYA ZaiCernd4
 @3884
 EXIT
 
-//CERND - ZAIYA BY BRI NO5 TRIGGERED BY TREE OF LIFE OR SULDA AREA
+/* ==================================================================== *
+ *  CERND - ZAIYA BY BRI NO5 - TRIGGERED BY TREE OF LIFE OR SULDA AREA  *
+ * ==================================================================== */
 CHAIN IF ~Global("ZaiTalkCernd","GLOBAL",12)~ THEN BZAIYA ZaiCernd5
 @3886 DO ~SetGlobal("ZaiTalkCernd","GLOBAL",13)~
 == CERNDJ 
@@ -153,7 +167,7 @@ END BKIARA KIACERND1
 
 
 
-//CHAIN
+// CHAIN
 CHAIN IF ~Global("ZaiTalkNalia","AR1302",1)~ THEN BZAIYA ZAINALIA1
 @3713 DO ~SetGlobal("ZaiTalkNalia","AR1302",2)~
 == BNALIA 
@@ -271,7 +285,7 @@ CHAIN Ppdesh ZaiDesh1
 == PPDESH
 @3780
 == BZAIYA
-@3702 DO ~ReallyForceSpell(Myself,WIZARD_ALARM)~ //does not work
+@3702 DO ~ReallyForceSpell(Myself,WIZARD_ALARM)~ // does not work
 == PPDESH
 @3703
 END PPDESH 17
@@ -379,7 +393,9 @@ CHAIN BZAIYA ZAIMISS2
 EXIT
 
 
-//SHIP DISEMBARK BRINLAW
+/* ======================== *
+ *  SHIP DISEMBARK BRINLAW  *
+ * ======================== */
 EXTEND_BOTTOM PPSAEM 14
 IF ~InParty("Zaiya")~ THEN DO ~SetGlobal("AsylumPlot","GLOBAL",2)
 SetGlobalTimer("SaemonHasArrived","GLOBAL",600)
@@ -400,7 +416,10 @@ The Shadow Thieves were the ones who attacked Irenicus in the dungeon that I awo
 Aran feels partly responsible for Imoen's kidnapping, and told me that she and Irenicus were taken to the same place: an island asylum for mages called Spellhold.  The gold I supplied was used to book passage to the isle, and it is there that I will find the answers I seek.  Aran warns me, though, that the asylum is a veritable fortress meant to contain insane wizards and other 'deviants'... and even gaining entry will be a feat unto itself.  Regardless, passage with a privateer named Saemon Havarian has been booked and I am on my way...~ */ FLAGS 128 EXTERN ~BZAIYA~ ZaiSaem2
 END
 
-//DESHARIK SEND TO ASYLUM
+
+/* ========================= *
+ *  DESHARIK SEND TO ASYLUM  *
+ * ========================= */
 EXTEND_TOP Ppdesh 12
   IF ~InParty("Zaiya")~ THEN REPLY @3818 EXTERN Ppdesh ZaiDesh1
 END
@@ -491,8 +510,10 @@ APPEND player1
 END
 END
 
-//MINSC-ZAIYA 
 
+/* ============= *
+ *  MINSC-ZAIYA  *
+ * ============= */
 APPEND MINSCJ
 IF ~Global("ZAIMISS","GLOBAL",2) HasItem("ZACHIK",Myself)~ THEN BEGIN ZAIMISS1
 SAY @3830 

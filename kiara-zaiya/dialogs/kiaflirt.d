@@ -24,8 +24,6 @@ SAY @2500
  IF ~RandomNum(2,1)~ THEN REPLY @2506 DO ~IncrementGlobal("FWKiaraFlirt","GLOBAL",1)~ GOTO KiaraRump1
  IF ~RandomNum(2,2)~ THEN REPLY @2506 DO ~IncrementGlobal("FWKiaraFlirt","GLOBAL",1)~ GOTO KiaraRump2
 
-
-  
  IF ~~ THEN REPLY @2507 EXIT
 END 
 

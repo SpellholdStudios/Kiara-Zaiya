@@ -51,8 +51,8 @@ IF ~~ THEN BEGIN ZSLVA3
 END
 END
 
-//INTERJECT BODHI
-
+// INTERJECT BODHI
+// ---------------
 INTERJECT_COPY_TRANS BODHI 1 BODZAI1
 == ZAIYAJ IF ~InParty("Zaiya") !Dead("Zaiya")~ THEN 
 @3415
@@ -66,8 +66,8 @@ INTERJECT_COPY_TRANS BODHI 1 BODZAI1
 @3419
 END
 
-//INTERJECT TOLGERIAS
-
+// INTERJECT TOLGERIAS
+// -------------------
 INTERJECT_COPY_TRANS TOLGER 75 ZaiTolg1
 == ZAIYAJ IF ~InParty("Zaiya") !Dead("Zaiya")~ THEN 
 @3420
@@ -76,12 +76,14 @@ INTERJECT_COPY_TRANS TOLGER 75 ZaiTolg1
 END 
 
 // INTERJECT Mirand Temple district
+// --------------------------------
 INTERJECT_COPY_TRANS CLMOM 8 ZaiMir1
 == ZAIYAJ IF ~InParty("ZAIYA") !Dead("Zaiya")~ THEN 
 @3422
 END
 
 // INTERJECT DAO GENIE TRADEMEET
+// -----------------------------
 INTERJECT_COPY_TRANS TRGENI01 2 ZaiDao1
 == ZAIYAJ IF ~InParty("ZAIYA") !Dead("Zaiya")~ THEN 
 @3423 
@@ -97,7 +99,8 @@ INTERJECT_COPY_TRANS TRGENI01 2 ZaiDao1
 @3428
 END
 
-// INTERJECT ELHAN 
+// INTERJECT ELHAN
+// ---------------
 EXTEND_TOP C6Elhan2 59 
 IF ~!InParty("Zaiya")~ THEN EXTERN VICONIJ 120
 END
@@ -126,6 +129,7 @@ INTERJECT_COPY_TRANS Ppireni2 51 ZaiPpir2
 END
 
 //ARAN LINVAIL
+// -----------
 EXTEND_TOP Aran 40
 IF ~!InParty("Zaiya")~ THEN GOTO 41
 END
@@ -137,7 +141,8 @@ INTERJECT_COPY_TRANS Aran 40 ZaiAran1
 @3435
 END
 
-//SAEMON
+// SAEMON
+// ------
 EXTEND_TOP Ppsaem2 19
 IF ~!InParty("Zaiya")~ THEN GOTO 20
 END 
@@ -152,7 +157,8 @@ INTERJECT_COPY_TRANS Daleson 13 ZaiDale1
 @3437
 END
 
-//NEW ADDITIONS
+// NEW ADDITIONS
+// -------------
 INTERJECT BHCRYPT 0 ZaiCKng1
 == ZAIYAJ IF ~InParty("Zaiya") !Dead("Zaiya")~ THEN 
 @3438
@@ -226,8 +232,8 @@ INTERJECT RNGWLF01 17 ZaiRWlf01
 @3455
 END ZAIYAJ ZaiWlf1
 
-//DROW SLAVES
-
+// DROW SLAVES
+// -----------
 INTERJECT_COPY_TRANS DASLAVE1 4 ZaiSLAV1
 == ZAIYAJ IF ~InParty("Zaiya") !Dead("Zaiya")~ THEN 
 @3456

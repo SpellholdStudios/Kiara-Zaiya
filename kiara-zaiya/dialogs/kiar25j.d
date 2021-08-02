@@ -1,13 +1,15 @@
 BEGIN KIAR25J
 
 
-//WRAITH DIALOG
+// WRAITH DIALOG
+// -------------
 IF ~~ THEN BEGIN KzKiarWraith2
   SAY @0 /* ~Tell me Ghost, what pain could I possibly endure when I face a fate worse than death?~ */
   IF ~~ THEN EXTERN HGWRA01 24
 END
 
-//ARRIVAL IN AMKETHRAN
+// ARRIVAL IN AMKETHRAN
+// --------------------
 IF ~InParty(Myself) AreaCheck("AR5500") See(Player1) Global("KZTOBBALTH","LOCALS",1)~ THEN BEGIN KBalthTalk1
 SAY @1 /* ~Amkethran, an opportunity to finish with the bastard once and for all.~ */
 IF ~~ THEN REPLY @2 /* ~Kiara, I know how anxious you must be to have your revenge, I urge you not start a confrontation before we find out more about the other Bhaalspawn.~ */ GOTO KBalthTalk2
@@ -20,7 +22,8 @@ IF ~~ THEN DO ~SetGlobal("KZTOBBALTH","LOCALS",2)~ EXIT
 END
 
 
-//SOLAR CHOICE
+// SOLAR CHOICE
+// ------------
 IF ~~ THEN BEGIN Krom1
 SAY @5 /* ~<CHARNAME>, your moment has finally arrived...Accept this incredible gift...Become a god!~ */
 IF ~~ THEN REPLY @6 /* ~I won't. I am staying, with you.~ */ GOTO 0
@@ -66,7 +69,7 @@ COPY_TRANS FINSOL01 27
 END
 
 // PC Activate Combat
-
+// ------------------
 IF ~True() InParty(Myself)~ THEN BEGIN KiaCombat
 SAY @2067
 IF ~~ THEN REPLY @2068 DO ~SetGlobal("KCActive","GLOBAL",1)~ EXIT
@@ -76,9 +79,9 @@ IF ~~ THEN REPLY @2072 DO ~StartCutScene("KiaFix")~ EXIT
 END
 
 
-///////////////////////////////
-//IN GAME INTERJECTIONS
-///////////////////////////////
+/* ======================= *
+ *  IN GAME INTERJECTIONS  *
+ * ======================= */
 INTERJECT BALTH 22 KZBalth1
 == KIAR25J IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @24 /* ~Such blatant lies! You sought power and domination all your life and certainly secretly desired the taint for yourself.~ */
@@ -117,9 +120,9 @@ INTERJECT SAREV25A 38 KZSarev1
 @36 /* ~You are lucky no harm was done, else you would have begged me to send you back to the tortures of hell.~ */
 END SAREV25A 39 
 
-////////////////////////////////////////////////
-//EXTEND AND APPEND AT THE END AS USUAL
-////////////////////////////////////////////////
+/* ======================================= *
+ *  EXTEND AND APPEND AT THE END AS USUAL  *
+ * ======================================= */
 
 EXTEND_BOTTOM FINSOL01 27
   IF ~IsValidForPartyDialog("Kiara")
@@ -154,7 +157,8 @@ REPLACE FINSOL01
 END
 
 
-//WRAITH EXTENSIONS
+// WRAITH EXTENSIONS
+// -----------------
 EXTEND_BOTTOM HGWRA01 24
   IF ~Global("LovedOne","GLOBAL",16)~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
@@ -174,7 +178,8 @@ APPEND HGWRA01
 END
 
 
-//VOLO
+// VOLO
+// ----
 EXTEND_TOP SARVOLO 9
 IF ~InParty("Kiara")~ THEN REPLY @40 /* ~Tell me about Kiara.~ */ GOTO KiaraVolo
 END
