@@ -28,40 +28,42 @@ END
 ///////////////////////////////////////////////////////////////
 
 // AUTO_TRA tells WeiDU to use by default the TRA file having the same name as
-// dialog or script being compiled in the Kiara-Zaiya/<language> directory,
+// dialog or script being compiled in the kiara-zaiya/%language% directory,
 // where <language> is the name of the language selected by the user (second word
 // in the LANGUAGE definition below).
 // This removes the need to use COMPILE-USING directive for the COMPILE action
 // when the .d and .tra file have the same name
-AUTO_TRA ~Kiara-Zaiya/%s~
+AUTO_TRA ~kiara-zaiya/lang/%s~
 
 LANGUAGE ~American English~
-         ~English~
-         ~Kiara-Zaiya/English/Dialogs.tra~
-         ~Kiara-Zaiya/English/KZsetup.tra~
+         ~english~
+         ~kiara-zaiya/lang/english/dialogs.tra~
+         ~kiara-zaiya/lang/english/kzsetup.tra~
 
 LANGUAGE ~Francais (par Elgaern, Bloody.Mary et Lothringen des d'Oghmatiques)~
-         ~Francais~
-         ~Kiara-Zaiya/Francais/Dialogs.tra~
-         ~Kiara-Zaiya/Francais/KZsetup.tra~
+         ~french~
+         ~kiara-zaiya/lang/french/dialogs.tra~
+         ~kiara-zaiya/lang/french/kzsetup.tra~
 
-LANGUAGE ~Castellano (por Saemon)~
-         ~Castellano~
-         ~Kiara-Zaiya/Castellano/Dialogs.tra~
-         ~Kiara-Zaiya/Castellano/KZsetup.tra~
+LANGUAGE ~Espanol (traduccion por Saemon)~
+         ~spanish~
+         ~kiara-zaiya/lang/spanish/dialogs.tra~
+         ~kiara-zaiya/lang/spanish/kzsetup.tra~
 
 LANGUAGE ~Deutsch (Uebersetzung von Leonardo Watson)~
-         ~German~
-         ~Kiara-Zaiya/German/Dialogs.tra~
-         ~Kiara-Zaiya/German/KZsetup.tra~
+         ~german~
+         ~kiara-zaiya/lang/german/dialogs.tra~
+         ~kiara-zaiya/lang/german/kzsetup.tra~
 
 LANGUAGE ~Russian (Gingerrr & aerie.ru. Updated by Prowler)~
-         ~Russian~
-         ~Kiara-Zaiya/Russian/Dialogs.tra~
-         ~Kiara-Zaiya/Russian/KZsetup.tra~
-///////////////////////////////////////////////////////////////
-//KIARA-ZAIYA MOD
-///////////////////////////////////////////////////////////////
+         ~russian~
+         ~kiara-zaiya/lang/russian/dialogs.tra~
+         ~kiara-zaiya/lang/russian/kzsetup.tra~
+
+
+/* ======================================= *
+ *    Kiara-Zaiya mod  (main component)    *
+ * ======================================= */
 BEGIN @1
 
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
