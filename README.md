@@ -2,12 +2,12 @@
 ![Latest Release](https://img.shields.io/github/v/release/GwendolyneFreddy/Kiara-Zaiya?include_prereleases&color=darkred)<a name="top" id="top"> </a>
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Kiara-Zaiya?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macOS%20%7C%20linux%20%7C%20Project%20Infinity&color=informational)
-![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20German%20%7C%20Russian&color=limegreen)
+![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Russian%20%7C%20Spanish&color=limegreen)
 
 ![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BGII%20%7C%20BGT%20%7C%20BG2%3AEE%20%7C%20EET&color=dodgerblue)
 
 
-<div align="center"><h1></a>Kiara Zaiya NCPs (WIP)C</h1>
+<div align="center"><h1></a>Kiara Zaiya NPCs (WIP)</h1>
 
 <h3>A mod hosted at Spellhold Studios for Baldur's Gate II:ToB (classical and EE games),<br>
 Baldur's Gate Trilogy and EET<h3>
@@ -43,7 +43,18 @@ Baldur's Gate Trilogy and EET<h3>
 
 ##### Version 2.0.0 &nbsp;(August , 2021)
 
+- Renamed *Setup-Kiara-Zaiya.tp2* -> *kiara-zaiya.tp2* and moved it into top mod folder to support AL|EN's "Project Infinity".
+- Added native EE and EET compatibility (thanks Austin!):.
+    - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
+    - Added chapters continuity for EET games.
 - Removed useless :file_folder: "*backup*" folder.
+- Reorganized mod architecture tree: created folders to sort files according to their types.
 - Lower cased files.
+- Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
 - Updated WeiDU installer to v247.
 - Uploaded mod to official Spellhold Studios GitHub mirror account.
+
+
+
+TODO
+- !StateCheck("Valygar",STATE_SLEEPING)

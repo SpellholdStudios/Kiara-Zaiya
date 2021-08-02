@@ -24,6 +24,28 @@ ALWAYS
     COPY ~Kiara-Zaiya/ids/spell.ids~ ~override/spell.ids~
   END
 
+		/* ----------------------------------------- *
+		 *    Determines which game is installed.    *
+		 * ----------------------------------------- */
+
+		OUTER_SET is_tob   = (GAME_IS ~bgt tob tutu tutu_totsc~) ? 1 : 0     // based on vanilla ToB engine
+		OUTER_SET is_bg2ee = (GAME_IS "bg2ee") ? 1 : 0                       // b2gee
+		OUTER_SET is_eet   = (GAME_IS "eet") ? 1 : 0                         // eet
+		OUTER_SET is_ee    = (GAME_IS ~bg2ee eet~) ? 1 : 0                   // EE game
+
+		/* ------------------------------------------- *
+		 *    EET chapters continuity compatibility    *
+		 * ------------------------------------------- */
+		ACTION_IF is_eet BEGIN
+			OUTER_SET bg2_chapter = 12
+		END ELSE BEGIN
+			OUTER_SET bg2_chapter = 0
+		END
+		OUTER_FOR (i = 1 ; i <= 10 ; ++i) BEGIN
+			OUTER_SET bg2_chapter = bg2_chapter + 1
+			OUTER_SPRINT name_source ~bg2_chapter_%i%~
+			OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+		END
 
 		/* --------------------------------------------------------------------------------------------- *
 		 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
@@ -293,21 +315,24 @@ COPY ~Kiara-Zaiya\Creatures\Zaiya.cre~ ~override\Zaiya.cre~
   SAY SPELL_DISRUPTED @182
   SAY SET_A_TRAP @183
 
-COMPILE ~Kiara-Zaiya\Dialogs\Kiara.d~
-        ~Kiara-Zaiya\Dialogs\Kiaraj.d~
-        ~Kiara-Zaiya\Dialogs\Kiarap.d~
-        ~Kiara-Zaiya\Dialogs\KiaFlirt.d~
-        ~Kiara-Zaiya\Dialogs\Zaiya.d~
-        ~Kiara-Zaiya\Dialogs\Zaiyap.d~
-        ~Kiara-Zaiya\Dialogs\ZaiyaJ.d~
-        ~Kiara-Zaiya\Dialogs\Bkiara.d~
-        ~Kiara-Zaiya\Dialogs\BZaiya.d~
-        ~Kiara-Zaiya\Dialogs\Prax.d~
-        ~Kiara-Zaiya\Dialogs\Amaevil.d~
-        ~Kiara-Zaiya\Dialogs\C6ama.d~
-        ~Kiara-Zaiya\Dialogs\Delord.d~
-        ~Kiara-Zaiya\Dialogs\Vampkia.d~
-        ~Kiara-Zaiya\Dialogs\Jerlia.d~
+/* ------------------------- *
+ *  Compiling SoA Dialogues  *
+ * ------------------------- */
+COMPILE EVALUATE_BUFFER ~kiara-zaiya/dialogs/kiara.d~
+        ~kiara-zaiya/dialogs/kiaraj.d~
+        ~kiara-zaiya/dialogs/kiarap.d~
+        ~kiara-zaiya/dialogs/kiaflirt.d~
+        ~kiara-zaiya/dialogs/zaiya.d~
+        ~kiara-zaiya/dialogs/zaiyaj.d~
+        ~kiara-zaiya/dialogs/zaiyap.d~
+        ~kiara-zaiya/dialogs/bkiara.d~
+        ~kiara-zaiya/dialogs/bzaiya.d~
+        ~kiara-zaiya/dialogs/prax.d~
+        ~kiara-zaiya/dialogs/amaevil.d~
+        ~kiara-zaiya/dialogs/c6ama.d~
+        ~kiara-zaiya/dialogs/delord.d~
+        ~kiara-zaiya/dialogs/vampkia.d~
+        ~kiara-zaiya/dialogs/jerlia.d~
 
 COPY ~Kiara-Zaiya\Sounds\MxKiara.mus~ ~Music\MxKiara.mus~
 ADD_MUSIC 	~Kiara~    	~Music\MxKiara.mus~
@@ -512,21 +537,21 @@ UNLESS ~4820~
 // At the time of writing, the spanish translation is in progress, so it may help.
 // Despite the presence of AUTO_TRA, that shall involve the file in the selected language,
 // this form is used to ensure of the precedence of the languages.
-// COMPILE ~Kiara-Zaiya\Dialogs\BZAI25.d~
+// COMPILE ~kiara-zaiya/dialogs\BZAI25.d~
 //   USING ~Kiara-Zaiya/English/BZAI25.tra~ ~Kiara-Zaiya/%s/BZAI25.tra~
-// COMPILE ~Kiara-Zaiya\Dialogs\ZAI25J.d~
+// COMPILE ~kiara-zaiya/dialogs\ZAI25J.d~
 //   USING ~Kiara-Zaiya/English/ZAI25J.tra~ ~Kiara-Zaiya/%s/ZAI25J.tra~
-// COMPILE ~Kiara-Zaiya\Dialogs\BKIAR25.d~
+// COMPILE ~kiara-zaiya/dialogs\BKIAR25.d~
 //   USING ~Kiara-Zaiya/English/BKIAR25.tra~ ~Kiara-Zaiya/%s/BKIAR25.tra~
-// COMPILE ~Kiara-Zaiya\Dialogs\KIAR25J.d~
+// COMPILE ~kiara-zaiya/dialogs\KIAR25J.d~
 //   USING ~Kiara-Zaiya/English/KIAR25J.tra~ ~Kiara-Zaiya/%s/KIAR25J.tra~
-// COMPILE ~Kiara-Zaiya\Dialogs\Osan.d~
+// COMPILE ~kiara-zaiya/dialogs\Osan.d~
 //   USING ~Kiara-Zaiya/English/Osan.tra~ ~Kiara-Zaiya/%s/Osan.tra~
-COMPILE ~Kiara-Zaiya\Dialogs\BZAI25.d~
-		~Kiara-Zaiya\Dialogs\ZAI25J.d~
-		~Kiara-Zaiya\Dialogs\BKIAR25.d~
-		~Kiara-Zaiya\Dialogs\KIAR25J.d~
-		~Kiara-Zaiya\Dialogs\Osan.d~
+COMPILE ~kiara-zaiya/dialogs\BZAI25.d~
+		~kiara-zaiya/dialogs\ZAI25J.d~
+		~kiara-zaiya/dialogs\BKIAR25.d~
+		~kiara-zaiya/dialogs\KIAR25J.d~
+		~kiara-zaiya/dialogs\Osan.d~
 
 //THEN THE NEW BAF FILE
 // Isaya : update in V1.6.2, so that the Kiara romance music is played in ToB

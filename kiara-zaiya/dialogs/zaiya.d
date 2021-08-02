@@ -1,5 +1,5 @@
 // FIRST MEETING
-
+// -------------
 BEGIN Zaiya
 
 IF ~True()
@@ -36,8 +36,8 @@ END
 
 IF ~~ THEN BEGIN ZJoin
   SAY @3016 
-  IF ~GlobalLT("chapter","GLOBAL",4)~ THEN REPLY @3017 GOTO ZJoined
-  IF ~GlobalLT("chapter","GLOBAL",7)~ THEN REPLY @3018 GOTO ZJoined1
+  IF ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)~ THEN REPLY @3017 GOTO ZJoined
+  IF ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN REPLY @3018 GOTO ZJoined1
 END
 
 IF ~~ THEN BEGIN ZJoined
@@ -64,4 +64,3 @@ IF ~~ THEN DO ~Kill(Myself)~ EXIT
 END
 
 // KICKED OUT
-

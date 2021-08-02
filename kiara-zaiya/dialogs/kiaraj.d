@@ -1,6 +1,7 @@
 BEGIN KIARAJ
 
-//PHAERE
+// PHAERE
+// ------
 IF ~See(Player1)
 !StateCheck(Player1,STATE_SLEEPING)
 OR(2)
@@ -25,7 +26,8 @@ Global("PhaereInnuendo","GLOBAL",2)
   IF ~~ THEN DO ~SetGlobal("PastPhaere","LOCALS",2)~ EXIT
 END
 
-//SOLA CONFLICT
+// SOLA CONFLICT
+// -------------
 IF WEIGHT #-2 ~Global("KiaraRomanceActive","GLOBAL",2)
 Global("SolaTalk","GLOBAL",12)
 Global("SolaPCTalk","GLOBAL",0)
@@ -55,13 +57,15 @@ IF ~~ THEN DO ~SetGlobal("KiaraRomanceActive","GLOBAL",3) SetGlobal("KTRUEEVIL",
 END
 
 
-//ZAIYA DEAD
+// ZAIYA DEAD
+// ----------
 IF ~Global("NOTSEEZAIYA","GLOBAL",1)~ THEN BEGIN KIAZAIDEAD
 SAY @2015 
 IF ~~ THEN DO ~SetGlobal("KiaraOut","GLOBAL",1) SetGlobal("KickedOut","LOCALS",1) LeaveParty() EscapeArea()~ EXIT
 END
 
-//NO ROMANCE: KIARA EXPLAINS
+// NO ROMANCE: KIARA EXPLAINS
+// --------------------------
 IF ~Global("KEXPLAIN","GLOBAL",1) 
 InParty("Kiara")~ THEN BEGIN KEXPLA1
 SAY @2016
@@ -105,6 +109,7 @@ IF ~~ THEN REPLY @2036 GOTO KEXPLA8
 END
 
 // Tanner warning
+// --------------
 IF ~AreaCheck("AR0502") Global("KiaEnterTanner","AR0502",0) InParty("Kiara")~ THEN BEGIN KiaTanner1
 SAY @2038
   IF ~Global("ToldInspector","GLOBAL",0)~ THEN DO ~SetGlobal("KiaEnterTanner","AR0502",1) ActionOverride(Myself,FindTraps())~ EXIT
@@ -116,7 +121,8 @@ IF ~~ THEN BEGIN KiaTanner2
   IF ~~ THEN EXIT
 END
 
-//KIARA'S WARNING 
+// KIARA'S WARNING 
+// ---------------
 IF ~Global("KIAUHAPPY","LOCALS",2)~ THEN BEGIN KUH1
   SAY @2040
   IF ~~ THEN REPLY @2041 GOTO KUH2
@@ -133,7 +139,8 @@ IF ~~ THEN BEGIN KUH3
   IF ~~ THEN DO ~SetGlobal("KIAUHAPPY","LOCALS",3) RealSetGlobalTimer("KiaraRomance","GLOBAL",6000) RealSetGlobalTimer("KiaraPardon","GLOBAL",3000) SetGlobal("SuspendRo","LOCALS",1)~ EXIT
 END
 
-//KIARA COMPLAINS
+// KIARA COMPLAINS
+// ---------------
 IF ~Global("KIAUHAPPY","LOCALS",4)~ THEN BEGIN KUH10
   SAY @2045
   IF ~~ THEN REPLY @2046 GOTO KUH11
@@ -151,14 +158,16 @@ IF ~~ THEN BEGIN KUH12
    IF ~~ THEN DO ~SetGlobal("KIAUHAPPY","LOCALS",5) SetGlobal("KiaraRomanceActive","GLOBAL",3)~ EXIT
 END
 
-//KIARA LEAVES IN BRYNNLAW IF NOT ENOUGH QUESTS
+// KIARA LEAVES IN BRYNNLAW IF NOT ENOUGH QUESTS
+// ---------------------------------------------
 IF ~Global("KIALEAV","GLOBAL",1)~ THEN BEGIN KLEFT1
   SAY @2054 = @2055
   IF ~~ THEN DO ~SetGlobal("KiaraOut","GLOBAL",1) LeaveParty() 
 EscapeArea()~ EXIT
 END
 
-//END GARREN AND OTHERS
+// END: GARREN AND OTHERS
+// ----------------------
 IF ~Global("DomainPaladinBattle","GLOBAL",2)~ THEN BEGIN KiaGarr1
 SAY @2056
 IF ~~ THEN EXTERN GARREN 2
@@ -197,7 +206,7 @@ END
 
 
 // PC Activate Combat
-
+// ------------------
 IF ~True() InParty(Myself)~ THEN BEGIN KiaCombat
 SAY @2067
 IF ~~ THEN REPLY @2068 DO ~SetGlobal("KCActive","GLOBAL",1)~ EXIT
@@ -207,7 +216,7 @@ IF ~Global("KiaraRomanceActive","GLOBAL",1)
 !Global("KiaraRomanceActive","GLOBAL",2)
 !Global("KiaraRomanceActive","GLOBAL",3)
 GlobalGT("LoveTalk","LOCALS",2) 
-!GlobalGT("Chapter","GLOBAL",4)   	
+!GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)   	
 !AreaType(DUNGEON)        
 IsGabber(Player1)
 Gender(Player1,MALE)	
@@ -223,7 +232,8 @@ CombatCounter(0)~ THEN REPLY @2071  GOTO chat2
 IF ~~ THEN REPLY @2072 DO ~StartCutScene("KiaFix")~ EXIT
 END
 
-//CHAIN
+// CHAIN
+// -----
 CHAIN IF ~~ THEN KIARAJ KEXPLA8
 @2037 
 == BZAIYA IF ~IsValidForPartyDialog("Zaiya")~ THEN
@@ -269,8 +279,8 @@ CHAIN IF ~~ THEN KIARAJ KEXPLA8
 EXIT 
 
 
-
-//USTA NATHA (SILVER DRAGON)
+// USTA NATHA (SILVER DRAGON)
+// --------------------------
 ADD_TRANS_TRIGGER UDSILVER 34 ~OR(3) !InParty("Kiara") Dead("Kiara") Gender(Player1,FEMALE)~
 EXTEND_BOTTOM UDSILVER 34
 IF ~!InParty("Viconia") InParty("KIARA") !Dead("Kiara") Gender(Player1,MALE)~ THEN REPLY @2073 DO ~SetGlobal("spoke2","LOCALS",1)~ EXTERN UDSILVER KiaUDS1
@@ -295,7 +305,8 @@ IF ~~ THEN EXTERN KIARAJ KiaUDS2
 END
 END
 
-//USTA NATHA (CITY GATES)
+// USTA NATHA (CITY GATES)
+// -----------------------
 ADD_TRANS_TRIGGER UDDOOR01 3 ~OR(3) !InParty("Kiara") Dead("Kiara") Gender(Player1,FEMALE)~
 EXTEND_BOTTOM UDDOOR01 3
 IF ~!InParty("Viconia") InParty("KIARA") !Dead("Kiara") Gender(Player1,MALE)~ THEN EXTERN KIARAJ KiaUDDO1
@@ -317,9 +328,8 @@ Dead("Kiara")
 Gender(Player1,MALE)~ THEN GOTO 0
 END
 
-
-// salvanas
-
+// Salvanas
+// --------
 CHAIN IF ~~ THEN KIARAJ SLVA2
 @2078
 == SALVANAS
@@ -342,13 +352,15 @@ END
 END
 
 
-// Interject Rylock the harper
+// INTERJECT Rylock the harper
+// ---------------------------
 INTERJECT RYLOCK 18 KiaRyl1
 == KIARAJ IF ~InParty("Kiara") !InParty("Jaheira") !Dead("Kiara")~ THEN 
 @2082
 END RYLOCK 19
 
-// INTERJECT Tiris trademeet
+// INTERJECT Tiris Trademeet
+// -------------------------
 EXTEND_TOP trskin02 16
 IF ~!InParty("Kiara")~ THEN GOTO 17
 END
@@ -359,25 +371,28 @@ INTERJECT_COPY_TRANS trskin02 16 KiaTiri1
 END
 
 // INTERJECT Renal Bloodscalp
+// --------------------------
 INTERJECT RENAL 22 KiaRen1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2084
 END RENAL 58
 
 // INTERJECT Daar Trademeet
+// ------------------------
 INTERJECT_COPY_TRANS JUGDAR01 2 KiaJugD1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2085
 END
 
-
 // INTERJECT Lieutenant Aegisfield
+// -------------------------------
 INTERJECT_COPY_TRANS INSPECT 13 KiaInsp1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2086
 END
 
 // INTERJECT Claire
+// ----------------
 INTERJECT_COPY_TRANS Pirmur10 11 KiaClar1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2087
@@ -408,25 +423,29 @@ INTERJECT_COPY_TRANS SCSARLES 8 KiaSarles1
 @2096
 END
 
-//LOGAN (BEFORE ENTERING CRYPT
+// LOGAN (BEFORE ENTERING CRYPT
+// ----------------------------
 INTERJECT Celogan 86 KiaLogan1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2097
 END Celogan 87
 
-//SHARK
+// SHARK
+// -----
 INTERJECT SAHKNG01 15  KiaShark1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2098
 END SAHKNG01 16
 
-//GAAL (SEWERS TEMPLE)
+// GAAL (SEWERS TEMPLE)
+// --------------------
 INTERJECT Gaal 7 KiaGaal1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2099
 END Gaal 27
 
-//TARNOR
+// TARNOR
+// ------
 ADD_TRANS_TRIGGER TARNOR 1 ~!InParty("Kiara")~
 INTERJECT TARNOR 1 KiaTarnor1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
@@ -441,14 +460,16 @@ INTERJECT TARNOR 1 KiaTarnor1
 @2104
 END TARNOR 2
 
-//TIRDIR GRAVEYARD DISTRICT
+// TIRDIR GRAVEYARD DISTRICT
+// -------------------------
 INTERJECT Tirdir 7 KiaTird1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2060
 END Tirdir 8
 //END NEW BANTER
 
-//GARREN AFTER KILLING KNIGHTS
+// GARREN AFTER KILLING KNIGHTS
+// ----------------------------
 ADD_TRANS_TRIGGER GARREN 0 ~OR(2) !InParty("Kiara") Dead("Kiara")~
 EXTEND_BOTTOM GARREN 0
 IF ~InParty("Kiara") !Dead("Kiara") Global("KGARR1","GLOBAL",0)~ THEN REPLY @2105 DO ~SetGlobal("KGARR1","GLOBAL",1) SetGlobal("DomainPaladinBattle","GLOBAL",2)~ EXTERN KIARAJ KiaGarr1
@@ -459,18 +480,21 @@ INTERJECT GARREN 22 KiaGarr1
 @2106
 END GARREN 23
 
-//GLAICAS DE ARNISE KEEP
+// GLAICAS DE ARNISE KEEP
+// ----------------------
 EXTEND_BOTTOM KPGLAI01 0
 IF ~InParty("Kiara") !Dead("Kiara")~ THEN DO ~Enemy()~ EXTERN KIARAJ KiaGlai1
 END
 
-//RYAN TRAWL - RADIANT ORDER
+// RYAN TRAWL - RADIANT ORDER
+// --------------------------
 INTERJECT KAYL2 9 KiaKayl1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2107
 END KAYL2 10
 
-//SAEMON NO SHIP
+// SAEMON NO SHIP
+// --------------
 INTERJECT_COPY_TRANS PPSAEM3 1 KiaSaem1
 == KIARAJ IF ~InParty("Kiara") !Dead("Kiara")~ THEN 
 @2108
@@ -489,7 +513,8 @@ AddexperienceParty(6500)
 EscapeArea()~ EXTERN KIARAJ KiaTird2
 END
 
-//RAELIS
+// RAELIS
+// ------
 EXTEND_TOP RAELIS 2
 IF ~PartyHasItem("MISC6X") 
 OR(2) 
@@ -502,8 +527,8 @@ IF ~InParty("KIARA")
 !Dead("Kiara")~ THEN EXTERN KIARAJ KiaRael1
 END
 
-
-//GITHYANKI ILITHID CITY UNDERDRAK
+// GITHYANKI ILITHID CITY UNDERDARK
+// --------------------------------
 EXTEND_TOP UDSIMYAZ 26
 IF ~OR(2) 
 !InParty("Kiara") 
@@ -528,7 +553,8 @@ INTERJECT_COPY_TRANS UDDUER03 6 KiaDUER1
 @2111
 END
 
-//PA'NAI
+// PA'NAI
+// ------
 INTERJECT SPPAIN 23 KiaPanai1
 == KIARAJ IF ~LevelGT("Kiara",10) InParty("Kiara") !Dead("Kiara")~ THEN 
 @2112
@@ -559,4 +585,3 @@ AddXPObject(Player5,25000)
 AddXPObject(Player6,25000)~ GOTO 11
    END
 END
-

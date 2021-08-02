@@ -119,9 +119,7 @@ IF WEIGHT #2 ~!Global("KiaraRomanceActive","GLOBAL",3)
 END
 
 IF ~~ THEN BEGIN 13
-  SAY @550 = @551
-    =
-@552
+  SAY @550 = @551 = @552
   IF ~~ THEN REPLY @553 GOTO 17
   IF ~~ THEN REPLY @554 GOTO 17
   IF ~~ THEN REPLY @555 GOTO 15
@@ -340,7 +338,7 @@ IF ~~ THEN BEGIN 37
 END
 
 IF ~~ THEN BEGIN 39
-  SAY @661 = @662 //Seifer's first edit finished - 29th May 2003
+  SAY @661 = @662 // Seifer's first edit finished - 29th May 2003
   IF ~~ THEN REPLY @663 GOTO 41
   IF ~~ THEN REPLY @664 GOTO 42
   IF ~~ THEN REPLY @665 DO ~IncrementGlobal("KM","GLOBAL",1)~ GOTO 43
@@ -717,10 +715,7 @@ IF ~~ THEN REPLY @828 GOTO 87
 END
 
 IF ~~ THEN BEGIN 86
-  SAY @829 
-= @830 
-= @831
-= @832 
+  SAY @829 = @830 = @831 = @832
 IF ~~ THEN REPLY @833 GOTO 88
 IF ~~ THEN REPLY @834 GOTO 88a 
 IF ~~ THEN REPLY @835 GOTO 88b 
@@ -737,19 +732,17 @@ IF ~~ THEN BEGIN 88
 END
 
 IF ~~ THEN BEGIN 88a
-SAY @838
+  SAY @838
 IF ~~ THEN GOTO 89
 END
 
 IF ~~ THEN BEGIN 88b
-SAY @839
+  SAY @839
 IF ~~ THEN GOTO 89
 END
 
 IF ~~ THEN BEGIN 89
-SAY @840
-    =
-@841
+  SAY @840 = @841
 IF ~~ THEN REPLY @842 GOTO 90
 IF ~~ THEN REPLY @843 GOTO 91
 END
@@ -820,7 +813,8 @@ IF ~~ THEN BEGIN 97b
   IF ~~ THEN EXIT
 END
 
-//UPTO 102
+// UPTO 102
+// --------
 IF WEIGHT #12 ~!Global("KiaraRomanceActive","GLOBAL",3)
  Global("LoveTalk","LOCALS",26)
  !StateCheck(Player1,STATE_SLEEPING)~ THEN BEGIN 98
@@ -847,7 +841,7 @@ IF ~~ THEN REPLY @883 GOTO 102a
 END
 
 IF ~~ THEN BEGIN 101
-SAY @884 = @885 = @886 
+SAY @884 = @885 = @886
 IF ~~ THEN REPLY @887 DO ~SetGlobal("KiaraChallenge","LOCALS",1)~ GOTO 102c
 IF ~~ THEN REPLY @888 GOTO 102b
 END
@@ -889,8 +883,8 @@ IF ~~ THEN REPLY @901 EXIT
 END
 
 
-//UPTO 108
-
+// UPTO 108
+// --------
 IF WEIGHT #13 ~!Global("KiaraRomanceActive","GLOBAL",3)
  Global("LoveTalk","LOCALS",28)
  !StateCheck(Player1,STATE_SLEEPING)~ THEN BEGIN 103
@@ -1066,9 +1060,9 @@ SAY @969
 IF ~~ THEN EXIT
 END
 
-//HERE NEED TO GET AWAY A BIT, IT IS A CHALLENGE BUT NOW WE NEED SOME EMOTIONAL SIDE TOO, BEYOND THE CHALLENGE ITSELF.
-//OTHERWISE IT'S A BIT TOO COLD AND DOESN'T SMOOTHLY TRANSFER TO THE NEXT PART.
-//You really think that is neccessary?  At this point of time, the first night of passion hasn't actually happened yet.  The //manner that we have followed thus far is quite primal and matches an almost ritualistic mating process.  Here, I envisage //the emotion as being restrained by Kiara and only stirring in <charname>.  I'll leave this blank and add a section later //on to show you what I mean (Seif)
+// HERE NEED TO GET AWAY A BIT, IT IS A CHALLENGE BUT NOW WE NEED SOME EMOTIONAL SIDE TOO, BEYOND THE CHALLENGE ITSELF.
+// OTHERWISE IT'S A BIT TOO COLD AND DOESN'T SMOOTHLY TRANSFER TO THE NEXT PART.
+// You really think that is necessary?  At this point of time, the first night of passion hasn't actually happened yet. The manner that we have followed thus far is quite primal and matches an almost ritualistic mating process.  Here, I envisage the emotion as being restrained by Kiara and only stirring in <CHARNAME>. I'll leave this blank and add a section later on to show you what I mean (Seif)
 IF ~~ THEN BEGIN 110e
 SAY ~~
 IF ~~ THEN REPLY ~~ EXIT
@@ -1178,7 +1172,7 @@ SAY @1006
 IF ~~ THEN DO ~SetGlobal("KiaraRomanceActive","GLOBAL",3)~ EXIT
 END
 
-//See, here is where we accumulate more of the primal energy, more sexual tension hangs in the air and the player will //possibly get the impression a night of passion or some sort of passionate interlude will occur.  By keeping the emotion //out thus far they may be more susceptible to what comes in Kiara romance II.  From the pillow talk session we can begin to //add emotion for both of them.  Kiara the more so as she will realise the full force of her emotions for <charname>.
+// See, here is where we accumulate more of the primal energy, more sexual tension hangs in the air and the player will possibly get the impression a night of passion or some sort of passionate interlude will occur. By keeping the emotion out thus far they may be more susceptible to what comes in Kiara romance II. From the pillow talk session we can begin to add emotion for both of them. Kiara the more so as she will realise the full force of her emotions for <CHARNAME>.
 
 IF WEIGHT #16 ~!Global("KiaraRomanceActive","GLOBAL",3)
  Global("LoveTalk","LOCALS",34)
@@ -1190,21 +1184,13 @@ IF WEIGHT #16 ~!Global("KiaraRomanceActive","GLOBAL",3)
 END
 
 IF ~~ THEN BEGIN 115
-  SAY @1010
-    =
-@1011
-    =
-@1012
+  SAY @1010 = @1011 = @1012
    IF ~~ THEN REPLY @1013 DO ~IncrementGlobal("KM","GLOBAL",3)~ GOTO 117
    IF ~~ THEN REPLY @1014 DO ~IncrementGlobal("KM","GLOBAL",-3)~ GOTO 118a
 END
 
 IF ~~ THEN BEGIN 115a
-  SAY @1015
-    =
-@1016
-    =
-@1012
+  SAY @1015 = @1016 = @1012
    IF ~~ THEN REPLY @1017 DO ~IncrementGlobal("KM","GLOBAL",3)~ GOTO 117
    IF ~~ THEN REPLY @1014 DO ~IncrementGlobal("KM","GLOBAL",-3)~ GOTO 118a
 END
@@ -1229,8 +1215,8 @@ IF ~~ THEN BEGIN 118a
   IF ~~ THEN DO ~SetGlobal("LoveTalk","LOCALS",35)~ EXIT
 END
 
-//Penultimate acting from Kiara.
-
+// Penultimate acting from Kiara.
+// ------------------------------
 IF WEIGHT #17 ~!Global("KiaraRomanceActive","GLOBAL",3)
  Global("LoveTalk","LOCALS",36)
  !StateCheck(Player1,STATE_SLEEPING)~ THEN BEGIN 119
@@ -1323,7 +1309,7 @@ IF ~~ THEN BEGIN 127
   IF ~~ THEN DO ~StartCutSceneMode() StartCutScene("CUTL1")~ EXIT
 END
 
-//THIS is where the emotion should come flooding in.  Until now Kiara should have been leading <charname> on but a night //with him makes her realise how far fallen she is for him.  It also stands to reason that she recalls what she had with //Osan here.
+// THIS is where the emotion should come flooding in. Until now Kiara should have been leading <CHARNAME> on but a night with him makes her realise how far fallen she is for him. It also stands to reason that she recalls what she had with Osan here.
 
 IF WEIGHT #19 ~!Global("KiaraRomanceActive","GLOBAL",3)
  Global("LoveTalk","LOCALS",40)
@@ -1342,7 +1328,7 @@ SAY @1071
 IF ~~ THEN EXIT
 END
 
-//Here is where the player will begin to see the emotional development from the pair.  <charname> is open with his emotion //as expected but the somewhat cryptic response from Kiara sets the perfect scene for the next LT - Seif
+// Here is where the player will begin to see the emotional development from the pair. <CHARNAME> is open with his emotion as expected but the somewhat cryptic response from Kiara sets the perfect scene for the next LT - Seif
 
 IF WEIGHT #20 ~!Global("KiaraRomanceActive","GLOBAL",3)
  Global("LoveTalk","LOCALS",42)
@@ -1451,9 +1437,10 @@ IF ~Alignment(Player1,MASK_EVIL)~ THEN REPLY @1131 EXTERN KIARAJ KEXPLA8
 IF ~Alignment(Player1,MASK_EVIL)~ THEN REPLY @1132 EXTERN KIARAJ KEXPLA8
 END
 
-//DEMON LORD APPEARANCE
+// DEMON LORD APPEARANCE
 
-//RESUME ROMANCE KIARA EVIL/P1 EVIL
+// RESUME ROMANCE KIARA EVIL/P1 EVIL
+// ---------------------------------
 IF WEIGHT #22 ~!Global("KiaraRomanceActive","GLOBAL",3)
  Global("LoveTalk","LOCALS",46)
  !StateCheck(Player1,STATE_SLEEPING)~ THEN BEGIN 145
@@ -1561,8 +1548,8 @@ IF ~~ THEN BEGIN 149
   IF ~~ THEN EXIT
 END
 
-//ROMANCE2 PLAYER1_GOOD /KIARA LAWFUL_NEUTRAL 
-
+// ROMANCE2 PLAYER1_GOOD / KIARA LAWFUL_NEUTRAL
+// --------------------------------------------
 IF WEIGHT #25 ~!Global("KiaraRomanceActive","GLOBAL",3)
  Global("LoveTalk","LOCALS",82)
  !StateCheck(Player1,STATE_SLEEPING)~ THEN BEGIN 200
@@ -1737,10 +1724,11 @@ END
 
 
 
-//AT 84 SECOND NIGHT 86 WITH NEXT MORNING.
+// AT 84 SECOND NIGHT 86 WITH NEXT MORNING.
+// ----------------------------------------
 
-
-//DEMON DEAL
+// DEMON DEAL
+// ----------
 IF ~~ THEN BEGIN DEAL8
   SAY @1232
   IF ~~ THEN EXTERN DELORD 12
@@ -1768,8 +1756,8 @@ IF ~~ THEN BEGIN DEAL12
   IF ~~ THEN DO ~~ EXIT
 END
 
-//DEMON DEAL VOID JERLIA
-
+// DEMON DEAL VOID JERLIA
+// ----------------------
 IF ~~ THEN BEGIN KiaJerl1
 SAY @1240
 IF ~~ THEN REPLY @1241 EXIT
@@ -1777,8 +1765,9 @@ IF ~~ THEN REPLY @1242 EXIT
 IF ~~ THEN REPLY @1243 EXIT
 END
 
-//ROMANCE DIALOG QUESTS
-//VALYKILL
+// ROMANCE DIALOG QUESTS
+// VALYKILL
+// --------
 IF ~~ THEN BEGIN VALYKILL1
 SAY @1244
 IF ~~ THEN REPLY @1245 DO ~IncrementGlobal("KIACHA","GLOBAL",1)~ GOTO VALYKILL2
@@ -1827,7 +1816,8 @@ IF ~~ THEN REPLY @1266 DO ~IncrementGlobal("P1EVIL","GLOBAL",3)~ EXTERN VALYGAR 
 IF ~~ THEN REPLY @1267 DO ~IncrementGlobal("P1GOOD","GLOBAL",3)~ EXTERN VALYGAR FREEVALYK1
 END
 
-//SVNIRFEBLIN - KILL
+// SVNIRFEBLIN - KILL
+// ------------------
 IF ~~ THEN BEGIN SVIRKILL1
 SAY @1268
 IF ~~ THEN REPLY @1269 GOTO SVIRKILL2
@@ -1866,7 +1856,8 @@ IF ~~ THEN REPLY @1284 DO ~IncrementGlobal("P1GOOD","GLOBAL",3)~ EXTERN UDSVIR08
 IF ~~ THEN REPLY @1281 DO ~IncrementGlobal("P1EVIL","GLOBAL",3)~ EXTERN UDSVIR08 1
 END
 
-//NALIA'S AUNT
+// NALIA'S AUNT
+// ------------
 IF ~~ THEN BEGIN DELCKILL1
 SAY @1285
 IF ~~ THEN REPLY @1286 DO ~IncrementGlobal("KIACHA","GLOBAL",1) IncrementGlobal("P1EVIL","GLOBAL",1)~ EXTERN Delcia 9
@@ -1900,7 +1891,8 @@ IF ~~ THEN REPLY @1298 DO ~IncrementGlobal("P1EVIL","GLOBAL",1)~ EXTERN Delcia 9
 IF ~~ THEN REPLY @1299 DO ~IncrementGlobal("P1GOOD","GLOBAL",1)~ EXTERN DELCIA 15
 END
 
-//VITHAL (Underdark) at 43
+// VITHAL (Underdark) at 43
+// ------------------------
 IF ~~ THEN BEGIN UDVITHKILL1
 SAY @1300  
 IF ~~ THEN REPLY @1301 GOTO UDVITHKILL2
@@ -1942,7 +1934,8 @@ IF ~~ THEN REPLY @1322 DO ~IncrementGlobal("P1GOOD","GLOBAL",2)~ EXTERN UDVITH 4
 IF ~~ THEN REPLY @1323 DO ~IncrementGlobal("P1EVIL","GLOBAL",2)~ EXTERN UDVITH 49
 END
 
-//Elgea Ransom (Bridge distict) at 2
+// Elgea Ransom (Bridge distict) at 2
+// ----------------------------------
 IF ~~ THEN BEGIN ELGEARANS1
 SAY @1324 = @1325 
 IF ~~ THEN REPLY @1326 DO ~IncrementGlobal("KIACHA","GLOBAL",1)~ GOTO ELGEARANS2
@@ -1992,7 +1985,8 @@ IF ~~ THEN REPLY @1346 DO ~SetGlobal("KIATEST1","LOCALS",1) IncrementGlobal("P1E
 END
 
 
-//Firkraag at 14
+// Firkraag at 14
+// --------------
 IF ~~ THEN BEGIN GARRKILL1
 SAY @1352 = @1353 
 IF ~~ THEN REPLY @1354 DO ~IncrementGlobal("KIACHA","GLOBAL",1)~ GOTO GARRKILL2
@@ -2039,7 +2033,8 @@ IF ~~ THEN REPLY @1368 GOTO GARRKILL5
 IF ~~ THEN REPLY @1366 DO ~IncrementGlobal("P1EVIL","GLOBAL",3)~ EXTERN FIRKRA02 29 
 END
 
-//Lesser Demon (drow ritual):
+// Lesser Demon (drow ritual)
+// --------------------------
 IF ~~ THEN BEGIN DRAGST1
 SAY @1374 
 IF ~!Global("KiaraRomanceActive","Global",3)~ THEN REPLY @1375 GOTO DRAGST2
@@ -2101,7 +2096,8 @@ SAY @1401
 IF ~~ THEN DO ~IncrementGlobal("P1EVIL","GLOBAL",2)~ EXTERN UDDEMON Kiaratrade1
 END
 
-//DRIZZT
+// DRIZZT
+// ------
 IF ~~ THEN BEGIN KILLDRIZZ1
 SAY @1402
 IF ~Global("KiaraRomanceActive","GLOBAL",2)~ THEN REPLY @1403 GOTO KILLDRIZZ2
@@ -2146,7 +2142,8 @@ IF ~~ THEN REPLY @1424 EXTERN C6DRIZZ1 25
 IF ~~ THEN REPLY @1409 DO ~IncrementGlobal("P1EVIL","GLOBAL",3)~ EXTERN C6DRIZZ1 5
 END
 
-//BKIARA COMMENTS
+// BKIARA COMMENTS
+// ---------------
 IF ~~ THEN BEGIN fortuna2
   SAY @1425
   IF ~~ THEN EXIT
@@ -2168,7 +2165,7 @@ IF ~~ THEN BEGIN kdizzy2
   IF ~~ THEN EXIT
 END
 
-IF ~~ THEN BEGIN DangerKiara1 //SLAYER CHANGE1 comments after first change
+IF ~~ THEN BEGIN DangerKiara1 // SLAYER CHANGE1 comments after first change
   SAY @1431
   IF ~~ THEN EXIT
 END
@@ -2183,7 +2180,7 @@ IF ~~ THEN BEGIN chang1 // SLAYER CHANGE3 after first attack
   IF ~~ THEN DO ~ActionOverride(Player1,ReallyForceSpell(Myself,SLAYER_CHANGE))~ EXIT
 END
 
-IF ~~ THEN BEGIN endang1 // 
+IF ~~ THEN BEGIN endang1
   SAY @1435
   IF ~~ THEN EXIT
 END
@@ -2245,7 +2242,8 @@ IF ~~ THEN BEGIN KAMB3
   IF ~~ THEN EXTERN BODHIAMB KAMB4
 END
 
-//BHAALSPAWN FIGHT
+// BHAALSPAWN FIGHT
+// ----------------
 IF ~Global("KTRUEEVIL","GLOBAL",1)~ THEN BEGIN KiaBhaalF5
 SAY @1465
 IF ~~ THEN EXTERN BZAIYA KiaBhaalF6
@@ -2271,26 +2269,26 @@ Enemy()~ EXTERN BZAIYA KiaBhaalF8
 END
 
 
-//VALYGAR-CORRUPT CHARNAME1
-
-ADD_TRANS_TRIGGER VALYGAR 39 ~OR(2) !InParty("Kiara") GlobalGT("CHAPTER","GLOBAL",4)~
-EXTEND_TOP VALYGAR 39 //FORCE KILL VALY
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara VALYKILL1
+// VALYGAR-CORRUPT CHARNAME1
+// -------------------------
+ADD_TRANS_TRIGGER VALYGAR 39 ~OR(2) !InParty("Kiara") GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)~
+EXTEND_TOP VALYGAR 39 // FORCE KILL VALY
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara VALYKILL1
 END
 
-ADD_TRANS_TRIGGER VALYGAR 42 ~OR(2) !InParty("Kiara") GlobalGT("CHAPTER","GLOBAL",4)~
-EXTEND_TOP VALYGAR 42 //FORCE KILL VALY
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara VALYKILL1
+ADD_TRANS_TRIGGER VALYGAR 42 ~OR(2) !InParty("Kiara") GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)~
+EXTEND_TOP VALYGAR 42 // FORCE KILL VALY
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara VALYKILL1
 END
 
-ADD_TRANS_TRIGGER VALYGAR 45 ~OR(2) !InParty("Kiara") GlobalGT("CHAPTER","GLOBAL",4)~
-EXTEND_TOP VALYGAR 45 //FORCE KILL VALY
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara VALYKILL1
+ADD_TRANS_TRIGGER VALYGAR 45 ~OR(2) !InParty("Kiara") GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)~
+EXTEND_TOP VALYGAR 45 // FORCE KILL VALY
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara VALYKILL1
 END
 
-ADD_TRANS_TRIGGER VALYGAR 38 ~OR(2) !InParty("Kiara") GlobalGT("CHAPTER","GLOBAL",4)~
-EXTEND_TOP VALYGAR 38 //FORCE KILL VALY
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara VALYFREE1
+ADD_TRANS_TRIGGER VALYGAR 38 ~OR(2) !InParty("Kiara") GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)~
+EXTEND_TOP VALYGAR 38 // FORCE KILL VALY
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara VALYFREE1
 END
 
 APPEND VALYGAR 
@@ -2303,64 +2301,70 @@ SetGlobal("ValygarHome","GLOBAL",1)~ UNSOLVED_JOURNAL @1468 EXIT
 END
 END
 
-//SVNIFERBLIN
+// SVNIFERBLIN
+// -----------
 ADD_TRANS_TRIGGER UDSVIR08 3 ~!InParty("Kiara")~
-EXTEND_TOP UDSVIR08 3 //FORCE KILL SVIR
+EXTEND_TOP UDSVIR08 3 // FORCE KILL SVIR
   IF ~InParty("Kiara")~ THEN EXTERN Bkiara SVIRKILL1
 END
 
 ADD_TRANS_TRIGGER UDSVIR08 4 ~!InParty("Kiara")~
-EXTEND_TOP UDSVIR08 4 //FORCE KILL SVIR
+EXTEND_TOP UDSVIR08 4 // FORCE KILL SVIR
   IF ~InParty("Kiara")~ THEN EXTERN Bkiara SVIRKILL1
 END
 
-//NALIA'S AUNT
-EXTEND_TOP DELCIA 14 //FORCE KILL NALIA'S AUNT
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara DELCKILL1
+// NALIA'S AUNT
+// ------------
+EXTEND_TOP DELCIA 14 // FORCE KILL NALIA'S AUNT
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara DELCKILL1
 END
 
-ADD_TRANS_TRIGGER DELCIA 10 ~OR(2) !InParty("Kiara") GlobalGT("CHAPTER","GLOBAL",4)~
-EXTEND_TOP DELCIA 10 //FORCE KILL NALIA'S AUNT
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara DELCKILL1
+ADD_TRANS_TRIGGER DELCIA 10 ~OR(2) !InParty("Kiara") GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)~
+EXTEND_TOP DELCIA 10 // FORCE KILL NALIA'S AUNT
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara DELCKILL1
 END
 
-ADD_TRANS_TRIGGER DELCIA 39 ~OR(2) !InParty("Kiara") GlobalGT("CHAPTER","GLOBAL",4)~
-EXTEND_TOP DELCIA 39 //FORCE KILL NALIA'S AUNT
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara DELCKILL1
+ADD_TRANS_TRIGGER DELCIA 39 ~OR(2) !InParty("Kiara") GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)~
+EXTEND_TOP DELCIA 39 // FORCE KILL NALIA'S AUNT
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara DELCKILL1
 END
 
-ADD_TRANS_TRIGGER DELCIA 12 ~OR(2) !InParty("Kiara") GlobalGT("CHAPTER","GLOBAL",4)~
-EXTEND_TOP DELCIA 12 //FORCE KILL NALIA'S AUNT
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara DELCKILL1
+ADD_TRANS_TRIGGER DELCIA 12 ~OR(2) !InParty("Kiara") GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)~
+EXTEND_TOP DELCIA 12 // FORCE KILL NALIA'S AUNT
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara DELCKILL1
 END
 
-
-//VITHAL
+// VITHAL
+// ------
 ADD_TRANS_TRIGGER UDVITH 43 ~!InParty("Kiara")~
-EXTEND_TOP UDVITH 43 //FORCE KILL VITHAL
+EXTEND_TOP UDVITH 43 // FORCE KILL VITHAL
   IF ~InParty("Kiara")~ THEN EXTERN Bkiara UDVITHKILL1
 END
 
-//ELGEA
-ADD_TRANS_TRIGGER ELGEA 2 ~OR(2) !InParty("Kiara") GlobalGT("CHAPTER","GLOBAL",4)~
-EXTEND_TOP ELGEA 2 //FORCE RANSOM
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara ELGEARANS1
+// ELGEA
+// -----
+ADD_TRANS_TRIGGER ELGEA 2 ~OR(2) !InParty("Kiara") GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)~
+EXTEND_TOP ELGEA 2 // FORCE RANSOM
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara ELGEARANS1
 END
 
-//FIRKRAAG
-ADD_TRANS_TRIGGER FIRKRA02 14 ~OR(2) !InParty("Kiara") GlobalGT("CHAPTER","GLOBAL",4)~
-EXTEND_TOP FIRKRA02 14 //FORCE RANSOM
-  IF ~InParty("Kiara") GlobalLT("CHAPTER","GLOBAL",5)~ THEN EXTERN Bkiara GARRKILL1
+// FIRKRAAG
+// --------
+ADD_TRANS_TRIGGER FIRKRA02 14 ~OR(2) !InParty("Kiara") GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)~
+EXTEND_TOP FIRKRA02 14 // FORCE RANSOM
+  IF ~InParty("Kiara") GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN EXTERN Bkiara GARRKILL1
 END
 
-//Lesser Demon DROW RITUAL
+// Lesser Demon DROW RITUAL
+// ------------------------
 ADD_TRANS_TRIGGER UDDEMON 20 ~!InParty("Kiara")~
 EXTEND_TOP UDDEMON 20 //FORCE TRADE EGGS
   IF ~InParty("Kiara") Dead("Phaere")
                       PartyHasItem("MISC9t")~ THEN EXTERN Bkiara DRAGST1
 END
 
-//DRIZZT
+// DRIZZT
+// ------
 ADD_TRANS_TRIGGER C6DRIZZ1 24 ~!InParty("Kiara")~
 EXTEND_TOP C6DRIZZ1 24
 IF ~InParty("Kiara")~ THEN EXTERN BKIARA KILLDRIZZ1
@@ -2381,8 +2385,8 @@ EXTEND_TOP C6DRIZZ1 51
 IF ~InParty("Kiara")~ THEN EXTERN BKIARA KILLDRIZZ1
 END
 
-//PLAYER1
-
+// PLAYER1
+// -------
 ADD_TRANS_TRIGGER player1 3 ~!InParty("Kiara")~
 EXTEND_TOP player1 3 #1
   IF ~InParty("Kiara") !Dead("Kiara") Global("KCWEAK1","GLOBAL",0)~ THEN DO ~SetGlobal("KCWEAK1","GLOBAL",1) SetGlobal("SelfTalk","GLOBAL",2)~ EXTERN Bkiara Kweak1
@@ -2394,7 +2398,7 @@ EXTEND_TOP player1 5 #1
 END
 
 ADD_TRANS_TRIGGER player1 7 ~OR(2) !InParty("Kiara") Global("KiaraRomanceActive","GLOBAL",3)~
-EXTEND_TOP player1 7 //ENDANGER LOVED ONE start
+EXTEND_TOP player1 7 // ENDANGER LOVED ONE start
   IF ~OR(2)
 Global("KiaraRomanceActive","GLOBAL",1)
 Global("KiaraRomanceActive","GLOBAL",2)
@@ -2448,7 +2452,8 @@ Alignment("Kiara",LAWFUL_NEUTRAL) Global("KiaLifeTree4","GLOBAL",0)~ THEN DO ~Se
   END
 END
 
-//CHAIN
+// CHAIN
+// -----
 CHAIN IF WEIGHT #36 ~See("Korgan") 
 InParty("Korgan")
 !StateCheck("Korgan",STATE_SLEEPING)
@@ -2468,7 +2473,7 @@ Global("KiaraTalkKorgan","LOCALS",0)~ THEN BKIARA Kotalk1
 @501
 EXIT
 
-//CHAIN
+
 CHAIN IF ~Global("KiaMinsc","GLOBAL",2)~ THEN BKIARA KiaTalkMinsc1
 @1450 DO ~SetGlobal("KiaMinsc","GLOBAL",3)~
 == MINSCJ
@@ -2580,7 +2585,7 @@ InParty("Valygar")
 !StateCheck("Edwin",STATE_SLEEPING)	
 Global("KiaraTalkValy","GLOBAL",0)~ THEN BKIARA Valtalk1
 @498 DO ~SetGlobal("KiaraTalkValy","GLOBAL",1)~
-== VALYGARJ //This isn't with Valgars character at all.  We need to reword this.  Seifer
+== VALYGARJ // This isn't with Valgars character at all.  We need to reword this.  Seifer
 @1507 
 == BKIARA
 @1508
@@ -2750,7 +2755,8 @@ CHAIN BZAIYA KiaBhaalF6
 @1563
 END BKIARA KiaBhaalF7
 
-//MAZZYJ
+// MAZZYJ
+// ------
 ADD_TRANS_TRIGGER MAZZYJ 46 ~!InParty("Kiara")~
 EXTEND_TOP MAZZYJ 46 //BANTER
   IF ~InParty("Kiara") Global("KiaMazzy","GLOBAL",0)~ THEN DO ~SetGlobal("KiaMazzy","GLOBAL",1)~ EXTERN Bkiara KiaTalkMazzy1
@@ -2762,8 +2768,8 @@ EXTEND_TOP MAZZYJ 47 //BANTER
 END
 
 
-
-//EXTEND
+// EXTEND
+// ------
 EXTEND_BOTTOM TRGYP02 2
   IF ~!InPartySlot(LastTalkedToBy,0)
 Name("Kiara",LastTalkedToBy)~ THEN EXTERN TRGYP02 fortuna1
@@ -2801,7 +2807,8 @@ END
   END
 END
 
-//APPEND KELDORN
+// APPEND KELDORN
+// --------------
 APPEND BKELDOR
 IF WEIGHT #-99 ~GlobalGT("LADYMARIA","GLOBAL",3)
 InParty("Kiara") 
@@ -2847,14 +2854,16 @@ APPEND BVICONI
   END
 END
 
-//PHAERE
+// PHAERE
+// ------
 EXTEND_TOP UDPHAE01 106
   IF ~OR(2)
 Global("KiaraRomanceActive","GLOBAL",1)
 Global("KiaraRomanceActive","GLOBAL",2)~ THEN REPLY @1582 EXTERN UDPHAE01 110
 END
 
-//BODHI TURN KIARA VAMPIRE GRAVEYARD ENTRANCE
+// BODHI TURN KIARA VAMPIRE GRAVEYARD ENTRANCE
+// -------------------------------------------
 EXTEND_TOP BODHIAMB 5
   IF ~OR(2)
 !InParty("Kiara")
@@ -2894,7 +2903,8 @@ StartCutScene("KZCut53e")
 END
 END
 
-//BODHI TURNED KIARA CRYPT BANTER
+// BODHI TURNED KIARA CRYPT BANTER
+// -------------------------------
 EXTEND_TOP C6BODHI 21
   IF ~!Global("KiaraVampire","GLOBAL",2)~ THEN GOTO 22
 END
@@ -2929,17 +2939,9 @@ END
 
 APPEND BZAIYA
 IF WEIGHT #99 ~InParty("Zaiya") !Dead("Zaiya") Global("ZAISto","GLOBAL",1)~ THEN BEGIN ZaiSto1
-SAY @1594 
-= @1595 
-= @1596 
-= @1597 
-= @1598 
-= @1599 
-= @1600 = @1601
+SAY @1594 = @1595 = @1596 = @1597 = @1598 = @1599 = @1600 = @1601
 IF ~~ THEN DO ~SetGlobal("ZAISTO","GLOBAL",2)~ EXTERN BKIARA 82
 END
 END
 
-//Well, I've done what I can and hope that is is sufficient.  Valgar is provoked too easily but we can work on that.
-
-
+// Well, I've done what I can and hope that is is sufficient.  Valgar is provoked too easily but we can work on that.

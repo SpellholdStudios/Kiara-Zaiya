@@ -1,4 +1,4 @@
-<div align="center"><h1>Kiara Zaiya NCPs</h1>
+<div align="center"><h1>Kiara Zaiya NPCs</h1>
 </div>
 
 

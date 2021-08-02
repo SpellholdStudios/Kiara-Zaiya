@@ -29,8 +29,8 @@ END
 
 IF ~~ THEN BEGIN Join
   SAY @407
-  IF ~GlobalLT("chapter","GLOBAL",4)~ THEN REPLY @408 GOTO Joined1
-  IF ~GlobalLT("chapter","GLOBAL",7)~ THEN REPLY @409 GOTO Joined1
+  IF ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)~ THEN REPLY @408 GOTO Joined1
+  IF ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN REPLY @409 GOTO Joined1
   IF ~~ THEN REPLY @410 GOTO Joined1
 END
 
