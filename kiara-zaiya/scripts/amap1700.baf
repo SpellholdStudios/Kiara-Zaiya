@@ -3,7 +3,7 @@
 // Add check for chapter 6 or more
 IF
   InParty("Kiara")  // ~Kiara~
-  GlobalGT("Chapter","GLOBAL",5)
+  GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
   Global("C6AmaCreated","AR1700",0)
 THEN
   RESPONSE #100
@@ -14,7 +14,7 @@ END
 
 IF
   InParty("Kiara")  // ~Kiara~
-  GlobalGT("Chapter","GLOBAL",5)
+  GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
   DifficultyGT(EASIEST)
   Global("C6HrothCreated","AR1700",0)
 THEN

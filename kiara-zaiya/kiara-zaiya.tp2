@@ -338,41 +338,49 @@ COPY ~Kiara-Zaiya\Sounds\MxKiara.mus~ ~Music\MxKiara.mus~
 ADD_MUSIC 	~Kiara~    	~Music\MxKiara.mus~
 // Isaya note : compilation of Kiara.baf and Kiar25.baf must be AFTER the ADD_MUSIC in order to update the music code assigned at installation
 
-COMPILE ~Kiara-Zaiya\Scripts\Kiar1004.baf~
+/* ----------------------- *
+ *  Compiling SoA Scripts  *
+ * ----------------------- */
+COMPILE ~kiara-zaiya/scripts/kiar1004.baf~
 
 // Isaya : compile Kiara.baf with EVALUATE_BUFFER to get the strings properly taken from the setup.tra and
 // get the music variables automatically replaced. No need of REPLACE or REPLACE_TEXTUALLY anymore.
 // See Kiara.baf modification with the %Kiara% variable
-COMPILE EVALUATE_BUFFER ~Kiara-Zaiya\Scripts\Kiara.baf~
-COMPILE ~Kiara-Zaiya\Scripts\KiaraD.baf~
-        ~Kiara-Zaiya\Scripts\Zai0405.baf~
-        ~Kiara-Zaiya\Scripts\Zaiya.baf~
+COMPILE ~kiara-zaiya/scripts/kiara.baf~  EVALUATE_BUFFER
+COMPILE ~kiara-zaiya/scripts/kiarad.baf~ EVALUATE_BUFFER
+COMPILE ~kiara-zaiya/scripts/zai0405.baf~
+        ~kiara-zaiya/scripts/zaiya.baf~
 
-COMPILE ~Kiara-Zaiya\Scripts\KZWY1100.baf~
-        ~Kiara-Zaiya\Scripts\KZWyvern.baf~
-        ~Kiara-Zaiya\Scripts\Prax0700.baf~
-        ~Kiara-Zaiya\Scripts\Prax.baf~
-        ~Kiara-Zaiya\Scripts\Amae1004.baf~
+COMPILE ~kiara-zaiya/scripts/kzwy1100.baf~
+        ~kiara-zaiya/scripts/kzwyvern.baf~
+        ~kiara-zaiya/scripts/prax0700.baf~
+        ~kiara-zaiya/scripts/prax.baf~
+        ~kiara-zaiya/scripts/amae1004.baf~
+
 COPY ~Kiara-Zaiya\HLA\KZWYVERN.spl~ ~override\KZWYVERN.spl~
      ~Kiara-Zaiya\Items\KZWYVERN.itm~ ~override\KZWYVERN.itm~
-COMPILE ~Kiara-Zaiya\Scripts\Amaevil.baf~
-COMPILE ~Kiara-Zaiya\Scripts\AmaFight.baf~
-COMPILE ~Kiara-Zaiya\Scripts\AmaFigt1.baf~
-        ~Kiara-Zaiya\Scripts\Hrothfit.baf~
-        ~Kiara-Zaiya\Scripts\c6Ama.baf~
-        ~Kiara-Zaiya\Scripts\Delord.baf~
-        ~Kiara-Zaiya\Scripts\KiaKill.baf~
-COMPILE ~Kiara-Zaiya\Scripts\KiaKill1.baf~
-        ~Kiara-Zaiya\Scripts\KZCut53e.baf~
-        ~Kiara-Zaiya\Scripts\VampKia.baf~
-        ~Kiara-Zaiya\Scripts\CutL1.baf~
-        ~Kiara-Zaiya\Scripts\CutL2.baf~
-        ~Kiara-Zaiya\Scripts\CutL3.baf~
-        ~Kiara-Zaiya\Scripts\AR0807.baf~
-        ~Kiara-Zaiya\Scripts\CutJer.baf~
-        ~Kiara-Zaiya\Scripts\Jerlia.baf~
-COPY ~Kiara-Zaiya\Scripts\AR0807.are~ ~Override\AR0807.are~
-COMPILE ~Kiara-Zaiya\Scripts\KiarFigt.baf~
+
+COMPILE ~kiara-zaiya/scripts/amaevil.baf~
+COMPILE ~kiara-zaiya/scripts/amafight.baf~
+COMPILE ~kiara-zaiya/scripts/amafigt1.baf~
+        ~kiara-zaiya/scripts/hrothfit.baf~
+        ~kiara-zaiya/scripts/c6ama.baf~
+        ~kiara-zaiya/scripts/delord.baf~
+        ~kiara-zaiya/scripts/kiakill.baf~
+COMPILE ~kiara-zaiya/scripts/kiakill1.baf~
+        ~kiara-zaiya/scripts/kzcut53e.baf~
+        ~kiara-zaiya/scripts/vampkia.baf~
+        ~kiara-zaiya/scripts/cutl1.baf~
+        ~kiara-zaiya/scripts/cutl2.baf~
+        ~kiara-zaiya/scripts/cutl3.baf~
+        ~kiara-zaiya/scripts/ar0807.baf~
+        ~kiara-zaiya/scripts/cutjer.baf~
+        ~kiara-zaiya/scripts/jerlia.baf~
+
+COPY ~kiara-zaiya/scripts/AR0807.are~ ~Override\AR0807.are~
+
+COMPILE ~kiara-zaiya/scripts/kiarfigt.baf~
+
 COPY ~Kiara-Zaiya\Creatures\KZWyvern.cre~ ~override\KZWyvern.cre~
   SAY NAME1 @230
   SAY NAME2 @230
@@ -401,99 +409,99 @@ COPY ~Kiara-Zaiya\Creatures\Endragor.cre~ ~override\Endragor.cre~
   SAY NAME1 @52
   SAY NAME2 @52
 
-EXTEND_TOP ~Cernd.bcs~ ~Kiara-Zaiya\Scripts\KZCernd.baf~
+EXTEND_TOP ~cernd.bcs~ ~kiara-zaiya/scripts/kzcernd.baf~
 //I USE ACTION_IF IN CASE OF BAD ROLL OVER!
 //BACKUP WOULD STORE THESE AREAS AND RESTORE THEM,
 //WITH POSSIBLY MORE CREATURES CREATED!
 ACTION_IF NOT FILE_EXISTS ~override\AR1004.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~AR1004.bcs~ ~Kiara-Zaiya\Scripts\Kiar1004.baf~
+  EXTEND_BOTTOM ~AR1004.bcs~ ~kiara-zaiya/scripts/kiar1004.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\AR1004.bcs~ ~Kiara~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1004.bcs~ ~Kiara-Zaiya\Scripts\Kiar1004.baf~
+    EXTEND_BOTTOM ~AR1004.bcs~ ~kiara-zaiya/scripts/kiar1004.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\AR0405.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~AR0405.bcs~ ~Kiara-Zaiya\Scripts\Zai0405.baf~
+  EXTEND_BOTTOM ~AR0405.bcs~ ~kiara-zaiya/scripts/zai0405.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\AR0405.bcs~ ~Zaiya~ THEN BEGIN
-    EXTEND_BOTTOM ~AR0405.bcs~ ~Kiara-Zaiya\Scripts\Zai0405.baf~
+    EXTEND_BOTTOM ~AR0405.bcs~ ~kiara-zaiya/scripts/zai0405.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\AR1100.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~AR1100.bcs~ ~Kiara-Zaiya\Scripts\KZWY1100.baf~
+  EXTEND_BOTTOM ~AR1100.bcs~ ~kiara-zaiya/scripts/kZWY1100.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\AR1100.bcs~ ~KZWYVERN~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1100.bcs~ ~Kiara-Zaiya\Scripts\KZWY1100.baf~
+    EXTEND_BOTTOM ~AR1100.bcs~ ~kiara-zaiya/scripts/kZWY1100.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\AR0700.bcs~ THEN BEGIN
-  EXTEND_TOP ~AR0700.bcs~ ~Kiara-Zaiya\Scripts\Prax0700.baf~
+  EXTEND_TOP ~AR0700.bcs~ ~kiara-zaiya/scripts/Prax0700.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\AR0700.bcs~ ~Prax~ THEN BEGIN
-    EXTEND_TOP ~AR0700.bcs~ ~Kiara-Zaiya\Scripts\Prax0700.baf~
+    EXTEND_TOP ~AR0700.bcs~ ~kiara-zaiya/scripts/Prax0700.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\AR1004.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~AR1004.bcs~ ~Kiara-Zaiya\Scripts\Amae1004.baf~
+  EXTEND_BOTTOM ~AR1004.bcs~ ~kiara-zaiya/scripts/Amae1004.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\AR1004.bcs~ ~Amaevil~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1004.bcs~ ~Kiara-Zaiya\Scripts\Amae1004.baf~
+    EXTEND_BOTTOM ~AR1004.bcs~ ~kiara-zaiya/scripts/Amae1004.baf~
 END
 END
-ACTION_IF NOT FILE_EXISTS ~override\AR1700.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~Ar1700.bcs~ ~Kiara-Zaiya\Scripts\Amap1700.baf~
+ACTION_IF NOT FILE_EXISTS ~override\ar1700.bcs~ THEN BEGIN
+  EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/scripts/amap1700.baf~ EVALUATE_BUFFER
 END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override\AR1700.bcs~ ~c6ama~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1700.bcs~ ~Kiara-Zaiya\Scripts\Amap1700.baf~
+  ACTION_IF NOT FILE_CONTAINS ~override\ar1700.bcs~ ~c6ama~ THEN BEGIN
+    EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/scripts/amap1700.baf~ EVALUATE_BUFFER
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\AR1403.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~Ar1403.bcs~ ~Kiara-Zaiya\Scripts\Endragor.baf~
+  EXTEND_BOTTOM ~Ar1403.bcs~ ~kiara-zaiya/scripts/Endragor.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\AR1403.bcs~ ~EndraCreate~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1403.bcs~ ~Kiara-Zaiya\Scripts\Endragor.baf~
+    EXTEND_BOTTOM ~AR1403.bcs~ ~kiara-zaiya/scripts/Endragor.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\Kiara.bcs~ THEN BEGIN
-  EXTEND_TOP ~Kiara.bcs~ ~Kiara-Zaiya\Scripts\KiarFigt.baf~
+  EXTEND_TOP ~Kiara.bcs~ ~kiara-zaiya/scripts/kiarFigt.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\Kiara.bcs~ ~KiaCombat~ THEN BEGIN
-    EXTEND_TOP ~Kiara.bcs~ ~Kiara-Zaiya\Scripts\KiarFigt.baf~
+    EXTEND_TOP ~Kiara.bcs~ ~kiara-zaiya/scripts/kiarFigt.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\Bodhiamb.bcs~ THEN BEGIN
-  EXTEND_TOP ~Bodhiamb.bcs~ ~Kiara-Zaiya\Scripts\ExtBodhiAmb.baf~
+  EXTEND_TOP ~Bodhiamb.bcs~ ~kiara-zaiya/scripts/ExtBodhiAmb.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\Bodhiamb.bcs~ ~KiaraVampire~ THEN BEGIN
-    EXTEND_TOP ~Bodhiamb.bcs~ ~Kiara-Zaiya\Scripts\ExtBodhiAmb.baf~
+    EXTEND_TOP ~Bodhiamb.bcs~ ~kiara-zaiya/scripts/ExtBodhiAmb.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\Cleanse.bcs~ THEN BEGIN
-  EXTEND_TOP ~Cleanse.bcs~ ~Kiara-Zaiya\Scripts\KCleanse.baf~
+  EXTEND_TOP ~Cleanse.bcs~ ~kiara-zaiya/scripts/kCleanse.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\Cleanse.bcs~ ~MISCBKI~ THEN BEGIN
-    EXTEND_TOP ~Cleanse.bcs~ ~Kiara-Zaiya\Scripts\KCleanse.baf~
+    EXTEND_TOP ~Cleanse.bcs~ ~kiara-zaiya/scripts/kCleanse.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\VampAmb.bcs~ THEN BEGIN
-  EXTEND_TOP ~VampAmb.bcs~ ~Kiara-Zaiya\Scripts\KVampAmb.baf~
+  EXTEND_TOP ~VampAmb.bcs~ ~kiara-zaiya/scripts/kVampAmb.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\VampAmb.bcs~ ~KiaraVampire~ THEN BEGIN
-    EXTEND_TOP ~VampAmb.bcs~ ~Kiara-Zaiya\Scripts\KVampAmb.baf~
+    EXTEND_TOP ~VampAmb.bcs~ ~kiara-zaiya/scripts/kVampAmb.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\AR0809.bcs~ THEN BEGIN
-  EXTEND_TOP ~AR0809.bcs~ ~Kiara-Zaiya\Scripts\ExtAR0809.baf~
+  EXTEND_TOP ~AR0809.bcs~ ~kiara-zaiya/scripts/ExtAR0809.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\AR0809.bcs~ ~KiaraVampire~ THEN BEGIN
-    EXTEND_TOP ~AR0809.bcs~ ~Kiara-Zaiya\Scripts\ExtAR0809.baf~
+    EXTEND_TOP ~AR0809.bcs~ ~kiara-zaiya/scripts/ExtAR0809.baf~
 END
 END
 ACTION_IF NOT FILE_EXISTS ~override\Minsc.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~Minsc.bcs~ ~Kiara-Zaiya\Scripts\MinscZa.baf~
+  EXTEND_BOTTOM ~Minsc.bcs~ ~kiara-zaiya/scripts/MinscZa.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\Minsc.bcs~ ~ZAIMISS~ THEN BEGIN
-    EXTEND_BOTTOM ~Minsc.bcs~ ~Kiara-Zaiya\Scripts\MinscZa.baf~
+    EXTEND_BOTTOM ~Minsc.bcs~ ~kiara-zaiya/scripts/MinscZa.baf~
 END
 END
 
@@ -558,13 +566,13 @@ COMPILE ~kiara-zaiya/dialogs\BZAI25.d~
 // compile Kiar25.baf with EVALUATE_BUFFER to get the strings properly taken from the setup.tra and
 // get the music variables automatically replaced. No need of REPLACE or REPLACE_TEXTUALLY anymore.
 // See Kiar25.baf modification with the %Kiara% variable
-COMPILE EVALUATE_BUFFER ~Kiara-Zaiya\Scripts\Kiar25.baf~
-COMPILE ~Kiara-Zaiya\Scripts\Zai25.baf~ 
-        ~Kiara-Zaiya\Scripts\Zai25D.baf~
-        ~Kiara-Zaiya\Scripts\Kiar25D.baf~
-        ~Kiara-Zaiya\Scripts\KZCUTWRA.baf~
-        ~Kiara-Zaiya\Scripts\KZ#OSAN.baf~
-        ~Kiara-Zaiya\Scripts\KZ#CUT34.baf~
+COMPILE EVALUATE_BUFFER ~kiara-zaiya/scripts/kiar25.baf~
+COMPILE ~kiara-zaiya/scripts/zai25.baf~ 
+        ~kiara-zaiya/scripts/zai25d.baf~
+        ~kiara-zaiya/scripts/kiar25d.baf~
+        ~kiara-zaiya/scripts/kzcutwra.baf~
+        ~kiara-zaiya/scripts/kz#osan.baf~
+        ~kiara-zaiya/scripts/kz#cut34.baf~
 COPY ~Kiara-Zaiya\Creatures\osan.cre~ ~override\Osan.cre~
   SAY NAME1 ~Osan~
   SAY NAME2 ~Osan~
@@ -574,7 +582,7 @@ ACTION_IF NOT FILE_EXISTS ~override\AR6200.bcs~ THEN BEGIN
   COPY_EXISTING ~AR6200.bcs~ ~override\AR6200.bcs~
 END
 
-EXTEND_TOP ~AR6200.bcs~ ~Kiara-Zaiya\Scripts\ZAI6200.baf~
+EXTEND_TOP ~AR6200.bcs~ ~kiara-zaiya/scripts/zai6200.baf~
 COPY ~Kiara-Zaiya/Dialogs/ZAIEnd1.2da~ ~override/ZAIEnd1.2da~
   REPLACE ~99997~ @9103
 COPY ~Kiara-Zaiya/Dialogs/ZAIEnd2.2da~ ~override/ZAIEnd2.2da~
@@ -583,10 +591,10 @@ COPY ~Kiara-Zaiya/Dialogs/ZAIEnd3.2da~ ~override/ZAIEnd3.2da~
   REPLACE ~99999~ @9105
 
 ACTION_IF NOT FILE_EXISTS ~override\AR6200.bcs~ THEN BEGIN	  
-  EXTEND_TOP ~AR6200.bcs~ ~Kiara-Zaiya\Scripts\KIAR6200.baf~
+  EXTEND_TOP ~AR6200.bcs~ ~kiara-zaiya/scripts/kiar6200.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override\AR6200.bcs~ ~KIAREND1~ THEN BEGIN
-    EXTEND_TOP ~AR6200.bcs~ ~Kiara-Zaiya\Scripts\KIAR6200.baf~
+    EXTEND_TOP ~AR6200.bcs~ ~kiara-zaiya/scripts/kiar6200.baf~
 END
 END
 
