@@ -4,5 +4,6 @@ THEN
   RESPONSE #100
     SetGlobal("KiaraVampire","GLOBAL",2)
     CreateCreature("Vampkiar",[1473.332],2)  // ~Kiara Vampire~
+	Continue()
 END
 

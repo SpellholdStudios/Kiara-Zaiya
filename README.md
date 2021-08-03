@@ -14,7 +14,7 @@ Baldur's Gate Trilogy and EET<h3>
 
 </div><br>
 
-**Authors:** Davide Carta (original) - <a href="http://www.shsforums.net/user/701-seifer/">Seifer</a> and Jesara  
+**Authors:** <a href="http://www.shsforums.net/user/701-seifer/">Seifer</a> and Jesara  
 **Mod Website:** <a href="">Spellhold Studios</a>  
 **Mod Forum:** <a href="http://www.shsforums.net/forum/127-mod-resurrections/">Mods Resurrections</a>
 
@@ -53,6 +53,11 @@ Baldur's Gate Trilogy and EET<h3>
     - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
     - <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-49#entry587224">micbaldur's Zaiya epilogue fix</a>: fixed a typo in ZAI6200.baf causing one of Zaiya's epilogues not to show up.
     - .
+- Removed *pdialog.2da* appending for BG2 without ToB games (not supported).
+- Rewrote .bcs appending process (originally coded with so bad practice).
+- Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
+- .
+- .
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.
 - Lower cased files.

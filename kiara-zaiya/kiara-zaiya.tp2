@@ -622,7 +622,8 @@ ACTION_IF NOT FILE_EXISTS ~override\AR6200.bcs~ THEN BEGIN
   COPY_EXISTING ~AR6200.bcs~ ~override\AR6200.bcs~
 END
 
-EXTEND_TOP ~AR6200.bcs~ ~kiara-zaiya/scripts/zai6200.baf~
+EXTEND_TOP ~ar6200.bcs~ ~kiara-zaiya/scripts/zai6200.baf~
+EXTEND_TOP ~ar6200.bcs~ ~kiara-zaiya/scripts/kiar6200.baf~
 
 /* ----------- *
  *  Epilogues  *
@@ -634,14 +635,6 @@ COPY ~kiara-zaiya/2da/zaiend2.2da~ ~override~
 COPY ~kiara-zaiya/2da/zaiend3.2da~ ~override~
 	REPLACE ~99999~ @9105
 
-ACTION_IF NOT FILE_EXISTS ~override\AR6200.bcs~ THEN BEGIN	  
-  EXTEND_TOP ~AR6200.bcs~ ~kiara-zaiya/scripts/kiar6200.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override\AR6200.bcs~ ~KIAREND1~ THEN BEGIN
-    EXTEND_TOP ~AR6200.bcs~ ~kiara-zaiya/scripts/kiar6200.baf~
-END
-END
-
 COPY ~kiara-zaiya/2da/kiarend1.2da~ ~override.2da~
 	REPLACE ~99997~ @9100
 COPY ~kiara-zaiya/2da/kiarend2.2da~ ~override.2da~
@@ -650,35 +643,26 @@ COPY ~kiara-zaiya/2da/kiarend3.2da~ ~override.2da~
 	REPLACE ~99999~ @9102
 
 
-APPEND ~pdialog.2da~
-~KIARA        KIARAP           KIARAJ          KIARAD~
-UNLESS ~KIARA~
-UNLESS ~25POST~
+/* ------------------------------------------------------ *
+ *  Appending Kaira and Zaita dialogue files to the game  *
+ * ------------------------------------------------------ */
 
-APPEND ~pdialog.2da~
-~KIARA        KIARAP           KIARAJ          KIARAD         KIAR25P               KIAR25J                KIAR25D                   Kiar25~
-UNLESS ~KIARA~
-IF ~25POST~
+/* Removed as of v2.0.0 as ToB is pre-requisite
 
-UNLESS ~KIARA~
-APPEND ~interdia.2da~
-  ~KIARA      BKIARA       BKIAR25~
-  UNLESS ~KIARA~
+// BG2 game without ToB
+// --------------------
+APPEND ~pdialog.2da~ ~KIARA        KIARAP           KIARAJ          KIARAD~ UNLESS ~KIARA~ UNLESS ~25POST~
+APPEND ~pdialog.2da~ ~ZAIYA        ZAIYAP           ZAIYAJ          ZAIYAD~ UNLESS ~ZAIYA~ UNLESS ~25POST~
+*/
 
-APPEND ~pdialog.2da~
-~ZAIYA        ZAIYAP           ZAIYAJ          ZAIYAD~
-UNLESS ~ZAIYA~
-UNLESS ~25POST~
+// ToB based game
+// --------------
+APPEND ~pdialog.2da~  ~KIARA        KIARAP           KIARAJ          KIARAD         KIAR25P               KIAR25J                KIAR25D                   Kiar25~ UNLESS ~KIARA~ IF ~25POST~
+APPEND ~pdialog.2da~  ~ZAIYA        ZAIYAP           ZAIYAJ          ZAIYAD         ZAI25P                ZAI25J                 ZAI25D                    Zai25~  UNLESS ~ZAIYA~ IF ~25POST~
 
-APPEND ~pdialog.2da~
-~ZAIYA        ZAIYAP           ZAIYAJ          ZAIYAD         ZAI25P               ZAI25J                ZAI25D                   Zai25~
-UNLESS ~ZAIYA~
-IF ~25POST~
+APPEND ~interdia.2da~ ~KIARA      BKIARA       BKIAR25~ UNLESS ~KIARA~
+APPEND ~interdia.2da~ ~ZAIYA      BZAIYA       BZAI25~  UNLESS ~ZAIYA~
 
-UNLESS ~ZAIYA~
-APPEND ~interdia.2da~
-  ~ZAIYA      BZAIYA       BZAI25~
-  UNLESS ~ZAIYA~
 
 /////////////////////////////////////////////////////////////////////////////////////
 //INSTALL CUSTOM SOUNDSET FOR KIARA-ZAIYA

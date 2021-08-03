@@ -8,6 +8,7 @@ THEN
    RESPONSE #100
       SetGlobal("KiaraBio","GLOBAL",1)
       TextScreen("KIAREND1")
+      Continue()
 END
 
 IF
@@ -20,6 +21,7 @@ THEN
    RESPONSE #100
       SetGlobal("KiaraBio","GLOBAL",1)
       TextScreen("KIAREND2")
+      Continue()
 END
 
 IF
@@ -33,4 +35,5 @@ THEN
    RESPONSE #100
       SetGlobal("KiaraBio","GLOBAL",1)
       TextScreen("KIAREND3")
+      Continue()
 END
