@@ -44,9 +44,15 @@ Baldur's Gate Trilogy and EET<h3>
 ##### Version 2.0.0 &nbsp;(August , 2021)
 
 - Renamed *Setup-Kiara-Zaiya.tp2* -> *kiara-zaiya.tp2* and moved it into top mod folder to support AL|EN's "Project Infinity".
+- Replaced `REQUIRE_FILE` condition with `GAME_INCLUDES` to avoid installing the mod in inaccurate games.
 - Added native EE and EET compatibility (thanks Austin!):.
     - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
     - Added chapters continuity for EET games.
+    - Provided accurate sized NPC portraits for EE games.
+- Included all BWP Fixpack fixes:
+    - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
+    - .
+    - .
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.
 - Lower cased files.
@@ -58,3 +64,4 @@ Baldur's Gate Trilogy and EET<h3>
 
 TODO
 - !StateCheck("Valygar",STATE_SLEEPING)
+- genfix.baf, kiaraadd.baf, zaiyad.baf ???
