@@ -51,7 +51,7 @@ Baldur's Gate Trilogy and EET<h3>
     - Provided accurate sized NPC portraits for EE games.
 - Included all BWP Fixpack fixes:
     - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
-    - .
+    - <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-49#entry587224">micbaldur's Zaiya epilogue fix</a>: fixed a typo in ZAI6200.baf causing one of Zaiya's epilogues not to show up.
     - .
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.

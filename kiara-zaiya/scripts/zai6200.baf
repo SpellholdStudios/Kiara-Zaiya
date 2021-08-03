@@ -32,5 +32,5 @@ IF
 THEN
    RESPONSE #100
       SetGlobal("ZaiyaBio","GLOBAL",1)
-      TextScreen("ZAIREND3")
+      TextScreen("ZAIEND3")
 END
