@@ -44,7 +44,7 @@ Baldur's Gate Trilogy and EET<h3>
 ##### Version 2.0.0 &nbsp;(August , 2021)
 
 - Renamed *Setup-Kiara-Zaiya.tp2* -> *kiara-zaiya.tp2* and moved it into top mod folder to support AL|EN's "Project Infinity".
-- Replaced `REQUIRE_FILE` condition with `GAME_INCLUDES` to avoid installing the mod in inaccurate games.
+- Replaced `REQUIRE_FILE` condition with `REQUIRE_PREDICATE` to avoid installing the mod in inaccurate games.
 - Added native EE and EET compatibility (thanks Austin!):.
     - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
     - Added chapters continuity for EET games.
@@ -52,11 +52,13 @@ Baldur's Gate Trilogy and EET<h3>
 - Included all BWP Fixpack fixes:
     - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
     - <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-49#entry587224">micbaldur's Zaiya epilogue fix</a>: fixed a typo in ZAI6200.baf causing one of Zaiya's epilogues not to show up.
+    - *The Divine Sword* (amaswd.itm): Nightfarer's item description fix.
+    - .
     - .
 - Removed *pdialog.2da* appending for BG2 without ToB games (not supported).
 - Rewrote .bcs appending process (originally coded with so bad practice).
 - Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
-- .
+- Spells installation: removed useless `SAY NAME2` patches.
 - .
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.

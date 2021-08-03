@@ -227,65 +227,6 @@ COPY ~kiara-zaiya\creatures\kiara.cre~ ~override~
 	SAY SPELL_DISRUPTED @215
 	SAY SET_A_TRAP @216
 
-COPY ~Kiara-Zaiya\HLA\SNAKE01.spl~ ~override\SNAKE01.spl~
-  SAY NAME1 @5
-  SAY NAME2 @5
-COPY ~Kiara-Zaiya\HLA\KSLOW01.spl~ ~override\KSLOW01.spl~
-  SAY NAME1 @6
-  SAY NAME2 @6
-COPY ~Kiara-Zaiya\HLA\LUNAR01.spl~ ~override\LUNAR01.spl~
-  SAY NAME1 @7
-  SAY NAME2 @7
-COPY ~Kiara-Zaiya\HLA\DRAGO01.spl~ ~override\DRAGO01.spl~
-  SAY NAME1 @8
-  SAY NAME2 @8
-COPY ~Kiara-Zaiya\HLA\SOLAR01.spl~ ~override\SOLAR01.spl~
-  SAY NAME1 @9
-  SAY NAME2 @9
-COPY ~Kiara-Zaiya\HLA\SHDST01.spl~ ~override\SHDST01.spl~
-  SAY NAME1 @10
-  SAY NAME2 @10
-  SAY UNIDENTIFIED_DESC @11
-COPY ~Kiara-Zaiya\HLA\Boocha.spl~ ~Override\Boocha.spl~
-COPY ~Kiara-Zaiya\HLA\Boocha1.spl~ ~Override\Boocha1.spl~
-COPY ~Kiara-Zaiya\Items\Zachik.itm~ ~override\Zachik.itm~
-  SAY NAME1 @12
-  SAY NAME2 @12
-  SAY DESC @13
-
-COPY ~Kiara-Zaiya\Items\clckk1.itm~ ~override\clckk1.itm~
-  SAY NAME1 @14
-  SAY NAME2 @14
-  SAY DESC @15
-
-COPY ~Kiara-Zaiya\Items\clckk2.itm~ ~override\clckk2.itm~
-  SAY NAME1 @14
-  SAY NAME2 @14
-  SAY DESC @16
-COPY ~Kiara-Zaiya\Items\MISCBKI.itm~ ~override\MISCBKI.itm~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  SAY DESC @18
-COPY ~Kiara-Zaiya\Items\JERLIAHG.itm~ ~override\JERLIAHG.itm~
-  SAY NAME1 @19
-  SAY NAME2 @19
-  SAY DESC @20
-COPY ~Kiara-Zaiya\Items\FREEHLM1.itm~ ~override\FREEHLM1.itm~
-  SAY NAME1 @21
-  SAY NAME2 @22
-  SAY UNIDENTIFIED_DESC @23
-  SAY DESC @24
-COPY ~Kiara-Zaiya\Items\SCRLPX.itm~ ~override\SCRLPX.itm~
-  SAY NAME1 @25
-  SAY NAME2 @25
-  SAY UNIDENTIFIED_DESC @26
-COPY ~Kiara-Zaiya\Amaralis\ALTEIMU.spl~ ~override\ALTEIMU.spl~
-COPY ~Kiara-Zaiya\Items\AMASWD.itm~ ~override\AMASWD.itm~
-  SAY NAME1 @190
-  SAY NAME2 @191
-  SAY UNIDENTIFIED_DESC @192
-  SAY DESC @193
-
 // Isaya : version 1.6.2
 // Add the default soundset using FEMALE4
 COPY ~kiara-zaiya\creatures\zaiya.cre~ ~override~
@@ -338,6 +279,124 @@ COPY ~kiara-zaiya\creatures\zaiya.cre~ ~override~
 	SAY SPELL_DISRUPTED @182
 	SAY SET_A_TRAP @183
 
+// Poisonous Wyvern
+COPY ~kiara-zaiya\creatures\kzwyvern.cre~ ~override~
+	SAY NAME1 @230
+	SAY NAME2 @230
+// Prax
+COPY ~kiara-zaiya\creatures\prax.cre~ ~override~
+	SAY NAME1 @46
+	SAY NAME2 @46
+// Amaralis
+COPY ~kiara-zaiya\creatures\amaevil.cre~ ~override~
+     ~kiara-zaiya\creatures\c6ama.cre~   ~override~
+	SAY NAME1 @47
+	SAY NAME2 @47
+// Demon Lord
+COPY ~kiara-zaiya\creatures\delord.cre~ ~override~
+	SAY NAME1 @48
+	SAY NAME2 @48
+// Kiara Vampire
+COPY ~kiara-zaiya\creatures\vampkiar.cre~ ~override~
+	SAY NAME1 @49
+	SAY NAME2 @49
+// Horth'Kar
+COPY ~kiara-zaiya\creatures\c6hroth.cre~ ~override~
+	SAY NAME1 @50
+	SAY NAME2 @50
+// Jerlia
+COPY ~kiara-zaiya\creatures\jerlia.cre~ ~override~
+	SAY NAME1 @51
+	SAY NAME2 @51
+// Endragor
+COPY ~kiara-zaiya\creatures\endragor.cre~ ~override~
+	SAY NAME1 @52
+	SAY NAME2 @52
+
+
+/* ----------------------------- *
+ *  Installing items and spells  *
+ * ----------------------------- */
+
+// Snake Stance!
+COPY ~kiara-zaiya\hla\snake01.spl~ ~override~
+	SAY NAME1 @5
+// Winded
+COPY ~kiara-zaiya\hla\kslow01.spl~ ~override~
+	SAY NAME1 @6
+// Lunar Stance!
+COPY ~kiara-zaiya\hla\lunar01.spl~ ~override~
+	SAY NAME1 @7
+// Dragon Stance!
+COPY ~kiara-zaiya\hla\drago01.spl~ ~override~
+	SAY NAME1 @8
+// Solar Stance!
+COPY ~kiara-zaiya\hla\solar01.spl~ ~override~
+	SAY NAME1 @9
+// Shadow Stance!
+COPY ~kiara-zaiya\hla\shdst01.spl~ ~override~
+	SAY NAME1 @10
+	SAY UNIDENTIFIED_DESC @11
+
+COPY ~kiara-zaiya\hla\boocha.spl~  ~override~
+     ~kiara-zaiya\hla\boocha1.spl~ ~override~
+
+// Boo
+COPY ~kiara-zaiya\items\zachik.itm~ ~override~
+	SAY NAME1 @12
+	SAY NAME2 @12
+	SAY DESC @13
+// Osan's Monk Robe
+COPY ~kiara-zaiya\items\clckk1.itm~ ~override~
+	SAY NAME1 @14
+	SAY NAME2 @14
+	SAY DESC @15
+COPY ~kiara-zaiya\items\clckk2.itm~ ~override~
+	SAY NAME1 @14
+	SAY NAME2 @14
+	SAY DESC @16
+// Kiara's body
+COPY ~kiara-zaiya\items\miscbki.itm~ ~override~
+	SAY NAME1 @17
+	SAY NAME2 @17
+	SAY DESC @18
+// Jerlia's soul
+COPY ~kiara-zaiya\items\jerliahg.itm~ ~override~
+	SAY NAME1 @19
+	SAY NAME2 @19
+	SAY DESC @20
+// Yellow Ioun Stone
+COPY ~kiara-zaiya\items\freehlm1.itm~ ~override~
+	SAY NAME1 @21
+	SAY NAME2 @22
+	SAY UNIDENTIFIED_DESC @23
+	SAY DESC @24
+// Trade notes
+COPY ~kiara-zaiya\items\scrlpx.itm~ ~override~
+	SAY NAME1 @25
+	SAY NAME2 @25
+	SAY UNIDENTIFIED_DESC @26
+
+// Immunity: Alteration
+COPY ~kiara-zaiya\amaralis\alteimu.spl~ ~override~
+
+// The Divine Sword (BWP: Nightfarer's item description fix)
+COPY ~kiara-zaiya\items\amaswd.itm~ ~override~
+	SAY NAME1 @246
+	SAY NAME2 @247
+	SAY UNIDENTIFIED_DESC @248
+	SAY DESC @249
+
+
+/* ------------------------ *
+ *  Installing audio files  *
+ * ------------------------ */
+
+// Isaya note: Kiara.baf and Kiar25.baf must be compiled AFTER the ADD_MUSIC in order to update the music code assigned at installation
+COPY ~kiara-zaiya\sounds\mxkiara.mus~ ~music~
+ADD_MUSIC  ~Kiara~    	~music\mxkiara.mus~
+
+
 /* ------------------------- *
  *  Compiling SoA Dialogues  *
  * ------------------------- */
@@ -357,16 +416,12 @@ COMPILE EVALUATE_BUFFER ~kiara-zaiya/dialogs/kiara.d~
         ~kiara-zaiya/dialogs/vampkia.d~
         ~kiara-zaiya/dialogs/jerlia.d~
 
-COPY ~Kiara-Zaiya\Sounds\MxKiara.mus~ ~Music\MxKiara.mus~
-ADD_MUSIC 	~Kiara~    	~Music\MxKiara.mus~
-// Isaya note : compilation of Kiara.baf and Kiar25.baf must be AFTER the ADD_MUSIC in order to update the music code assigned at installation
-
 /* ----------------------- *
  *  Compiling SoA Scripts  *
  * ----------------------- */
 COMPILE ~kiara-zaiya/scripts/kiar1004.baf~
 
-// Isaya : compile Kiara.baf with EVALUATE_BUFFER to get the strings properly taken from the setup.tra and
+// Isaya: compile Kiara.baf with EVALUATE_BUFFER to get the strings properly taken from the setup.tra and
 // get the music variables automatically replaced. No need of REPLACE or REPLACE_TEXTUALLY anymore.
 // See Kiara.baf modification with the %Kiara% variable
 COMPILE ~kiara-zaiya/scripts/kiara.baf~  EVALUATE_BUFFER
@@ -380,8 +435,8 @@ COMPILE ~kiara-zaiya/scripts/kzwy1100.baf~
         ~kiara-zaiya/scripts/prax.baf~
         ~kiara-zaiya/scripts/amae1004.baf~
 
-COPY ~Kiara-Zaiya\HLA\KZWYVERN.spl~ ~override\KZWYVERN.spl~
-     ~Kiara-Zaiya\Items\KZWYVERN.itm~ ~override\KZWYVERN.itm~
+COPY ~kiara-zaiya\hla\kzwyvern.spl~   ~override~ // Stinking Cloud
+     ~kiara-zaiya\items\kzwyvern.itm~ ~override~
 
 COMPILE ~kiara-zaiya/scripts/amaevil.baf~
 COMPILE ~kiara-zaiya/scripts/amafight.baf~
@@ -418,34 +473,6 @@ EXTEND_BOTTOM ~ar0807.bcs~ ~kiara-zaiya\scripts\ar0807.baf~
 
 
 COMPILE ~kiara-zaiya/scripts/kiarfigt.baf~
-
-COPY ~Kiara-Zaiya\Creatures\KZWyvern.cre~ ~override\KZWyvern.cre~
-  SAY NAME1 @230
-  SAY NAME2 @230
-COPY ~Kiara-Zaiya\Creatures\Prax.cre~ ~override\Prax.cre~
-  SAY NAME1 @46
-  SAY NAME2 @46
-COPY ~Kiara-Zaiya\Creatures\Amaevil.cre~ ~override\Amaevil.cre~
-  SAY NAME1 @47
-  SAY NAME2 @47
-COPY ~Kiara-Zaiya\Creatures\Delord.cre~ ~override\Delord.cre~
-  SAY NAME1 @48
-  SAY NAME2 @48
-COPY ~Kiara-Zaiya\Creatures\Vampkiar.cre~ ~override\Vampkiar.cre~
-  SAY NAME1 @49
-  SAY NAME2 @49
-COPY ~Kiara-Zaiya\Creatures\c6ama.cre~ ~override\c6ama.cre~
-  SAY NAME1 @47
-  SAY NAME2 @47
-COPY ~Kiara-Zaiya\Creatures\C6HROTH.cre~ ~override\C6HROTH.cre~
-  SAY NAME1 @50
-  SAY NAME2 @50
-COPY ~Kiara-Zaiya\Creatures\Jerlia.cre~ ~override\Jerlia.cre~
-  SAY NAME1 @51
-  SAY NAME2 @51
-COPY ~Kiara-Zaiya\Creatures\Endragor.cre~ ~override\Endragor.cre~
-  SAY NAME1 @52
-  SAY NAME2 @52
 
 EXTEND_TOP ~cernd.bcs~ ~kiara-zaiya/scripts/kzcernd.baf~
 //I USE ACTION_IF IN CASE OF BAD ROLL OVER!
@@ -585,16 +612,11 @@ UNLESS ~4820~
 // At the time of writing, the spanish translation is in progress, so it may help.
 // Despite the presence of AUTO_TRA, that shall involve the file in the selected language,
 // this form is used to ensure of the precedence of the languages.
-// COMPILE ~kiara-zaiya/dialogs\BZAI25.d~
-//   USING ~kiara-zaiya/English/BZAI25.tra~ ~kiara-zaiya/%s/BZAI25.tra~
-// COMPILE ~kiara-zaiya/dialogs\ZAI25J.d~
-//   USING ~kiara-zaiya/English/ZAI25J.tra~ ~kiara-zaiya/%s/ZAI25J.tra~
-// COMPILE ~kiara-zaiya/dialogs\BKIAR25.d~
-//   USING ~kiara-zaiya/English/BKIAR25.tra~ ~kiara-zaiya/%s/BKIAR25.tra~
-// COMPILE ~kiara-zaiya/dialogs\KIAR25J.d~
-//   USING ~kiara-zaiya/English/KIAR25J.tra~ ~kiara-zaiya/%s/KIAR25J.tra~
-// COMPILE ~kiara-zaiya/dialogs\Osan.d~
-//   USING ~kiara-zaiya/English/Osan.tra~ ~kiara-zaiya/%s/Osan.tra~
+// COMPILE ~kiara-zaiya/dialogs\bzai25.d~   USING ~kiara-zaiya/english/bzai25.tra~ ~kiara-zaiya/%s/bzai25.tra~
+// COMPILE ~kiara-zaiya/dialogs\zai25j.d~   USING ~kiara-zaiya/english/zai25j.tra~ ~kiara-zaiya/%s/zai25j.tra~
+// COMPILE ~kiara-zaiya/dialogs\bkiar25.d~  USING ~kiara-zaiya/english/bkiar25.tra~ ~kiara-zaiya/%s/bkiar25.tra~
+// COMPILE ~kiara-zaiya/dialogs\kiar25j.d~  USING ~kiara-zaiya/english/kiar25j.tra~ ~kiara-zaiya/%s/kiar25j.tra~
+// COMPILE ~kiara-zaiya/dialogs\osan.d~     USING ~kiara-zaiya/english/osan.tra~ ~kiara-zaiya/%s/osan.tra~
 COMPILE ~kiara-zaiya/dialogs\bzai25.d~
         ~kiara-zaiya/dialogs\zai25j.d~
         ~kiara-zaiya/dialogs\bkiar25.d~
@@ -613,7 +635,7 @@ COMPILE ~kiara-zaiya/scripts/zai25.baf~
         ~kiara-zaiya/scripts/kzcutwra.baf~
         ~kiara-zaiya/scripts/kz#osan.baf~
         ~kiara-zaiya/scripts/kz#cut34.baf~
-COPY ~Kiara-Zaiya\Creatures\osan.cre~ ~override\Osan.cre~
+COPY ~kiara-zaiya\creatures\osan.cre~ ~override\Osan.cre~
   SAY NAME1 ~Osan~
   SAY NAME2 ~Osan~
 
@@ -796,41 +818,43 @@ COPY ~kiara-zaiya\creatures\zaiya.cre~ ~override~
 ////////////////////////////////////////////////////////////////////////////////////
 BEGIN @129 // ~Alternate High level abilities by TG Maestro~
 
-//remove later
+// Remove later
 
-COPY ~Kiara-Zaiya\HLA\SHDST01.spl~ ~override\SHDST01.spl~
-  SAY NAME1 @10
-  SAY NAME2 @10
-  SAY UNIDENTIFIED_DESC @11
-COPY ~Kiara-Zaiya\HLA\DRAGF01.spl~ ~override\DRAGF01.spl~
-  SAY NAME1 @130
-  SAY NAME2 @130
-  SAY UNIDENTIFIED_DESC @131
-COPY ~Kiara-Zaiya\HLA\SHADK01.spl~ ~override\SHADK01.spl~
-  SAY NAME1 @132
-  SAY NAME2 @132
-  SAY UNIDENTIFIED_DESC @133
-COPY ~Kiara-Zaiya\HLA\TIGER01.spl~ ~override\TIGER01.spl~
-  SAY NAME1 @134
-  SAY NAME2 @134
-  SAY UNIDENTIFIED_DESC @135
-COPY ~Kiara-Zaiya\HLA\CHANT02.spl~ ~override\CHANT02.spl~
-  SAY NAME1 @136
-  SAY NAME2 @136
-  SAY UNIDENTIFIED_DESC @137
-COPY ~Kiara-Zaiya\HLA\dragon1.eff~ ~override\dragon1.eff~
-COPY ~Kiara-Zaiya\HLA\dragon2.eff~ ~override\dragon2.eff~
-COPY ~Kiara-Zaiya\HLA\dragon3.eff~ ~override\dragon3.eff~
-COPY ~Kiara-Zaiya\HLA\dragon4.eff~ ~override\dragon4.eff~
-COPY ~Kiara-Zaiya\HLA\dragon5.eff~ ~override\dragon5.eff~
-COPY ~Kiara-Zaiya\HLA\dragon6.eff~ ~override\dragon6.eff~
-COPY ~Kiara-Zaiya\HLA\dragon7.eff~ ~override\dragon7.eff~
-COPY ~Kiara-Zaiya\HLA\LUMO0.2da~ ~override\LUMO0.2da~
-COPY ~Kiara-Zaiya\HLA\FASTER2.spl~ ~override\FASTER2.spl~
+COPY ~kiara-zaiya\hla\LUMO0.2da~ ~override\LUMO0.2da~
+
+// Shadow Stance!
+COPY ~kiara-zaiya\hla\shdst01.spl~ ~override~
+	SAY NAME1 @10
+	SAY UNIDENTIFIED_DESC @11
+// Dragon fist!
+COPY ~kiara-zaiya\hla\dragf01.spl~ ~override~
+	SAY NAME1 @130
+	SAY UNIDENTIFIED_DESC @131
+// Shadowless Kick!
+COPY ~kiara-zaiya\hla\shadk01.spl~ ~override~
+	SAY NAME1 @132
+	SAY UNIDENTIFIED_DESC @133
+// Tiger strike!
+COPY ~kiara-zaiya\hla\tiger01.spl~ ~override~
+	SAY NAME1 @134
+	SAY UNIDENTIFIED_DESC @135
+// Chant!
+COPY ~kiara-zaiya\hla\chant02.spl~ ~override~
+	SAY NAME1 @136
+	SAY UNIDENTIFIED_DESC @137
+COPY ~kiara-zaiya\hla\dragon1.eff~ ~override~
+COPY ~kiara-zaiya\hla\dragon2.eff~ ~override~
+COPY ~kiara-zaiya\hla\dragon3.eff~ ~override~
+COPY ~kiara-zaiya\hla\dragon4.eff~ ~override~
+COPY ~kiara-zaiya\hla\dragon5.eff~ ~override~
+COPY ~kiara-zaiya\hla\dragon6.eff~ ~override~
+COPY ~kiara-zaiya\hla\dragon7.eff~ ~override~
+
+COPY ~kiara-zaiya\hla\FASTER2.spl~ ~override\FASTER2.spl~
   SAY NAME1 @138
   SAY NAME2 @139
   SAY UNIDENTIFIED_DESC @140
-COPY ~Kiara-Zaiya\HLA\SOLAR01.spl~ ~override\SOLAR01.spl~
+COPY ~kiara-zaiya\hla\SOLAR01.spl~ ~override\SOLAR01.spl~
   SAY NAME1 @9
   SAY NAME2 @9
   SAY UNIDENTIFIED_DESC @141
