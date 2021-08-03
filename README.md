@@ -53,13 +53,15 @@ Baldur's Gate Trilogy and EET<h3>
     - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
     - <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-49#entry587224">micbaldur's Zaiya epilogue fix</a>: fixed a typo in ZAI6200.baf causing one of Zaiya's epilogues not to show up.
     - *The Divine Sword* (amaswd.itm): Nightfarer's item description fix.
+    - Lollorian's patched Revised Suldanessalar: patched "*ar2807.are*", "*uddeath.bcs*", "*demsuc.bcs*", "*suscene1.baf*" and "*suscene3.baf*" instead of overwriting them.
     - .
-    - .
+- kzninja.baf: fixed typos.
 - Removed *pdialog.2da* appending for BG2 without ToB games (not supported).
 - Rewrote .bcs appending process (originally coded with so bad practice).
 - Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
 - Spells installation: removed useless `SAY NAME2` patches.
 - .
+- TRAIfied last missing tp2 strref.
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.
 - Lower cased files.

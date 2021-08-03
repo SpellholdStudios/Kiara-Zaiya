@@ -6,7 +6,7 @@ THEN
   RESPONSE #100
     ReallyForceSpellDead(Myself,WIZARD_FREEDOM)
 END
-
+/*
 IF
   See([0.0.0.IMP])
 THEN
@@ -121,5 +121,4 @@ IF
 THEN
   RESPONSE #100
     AttackReevaluate(NearestEnemyOf(Myself),30)
-END
-
+END */

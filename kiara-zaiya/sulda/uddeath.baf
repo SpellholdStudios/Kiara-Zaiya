@@ -6,7 +6,7 @@ THEN
   RESPONSE #100
     ReallyForceSpellDead(Myself,WIZARD_FREEDOM)
 END
-
+/*
 IF
   Allegiance(Myself,NEUTRAL)
 THEN
@@ -68,4 +68,4 @@ THEN
   RESPONSE #40
     AttackReevaluate(NearestEnemyOf(Myself),15)
 END
-
+*/

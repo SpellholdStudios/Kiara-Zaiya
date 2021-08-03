@@ -27,7 +27,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("KZNinjaTalk","LOCALS",1)
-    DisplayStringHead(Myself,99999)
+    DisplayStringHead(Myself,@4000)
 END
 
 IF
@@ -166,7 +166,7 @@ IF
 THEN
   RESPONSE #100
     EquipMostDamagingMelee()
-    AttackReavaluate(LastSeenBy(Myself),15)
+    AttackReevaluate(LastSeenBy(Myself),15)
 END
 
 IF
@@ -184,7 +184,7 @@ IF
 THEN
   RESPONSE #100
     EquipRanged()
-    AttackReavaluate(LastSeenBy(Myself),15)
+    AttackReevaluate(LastSeenBy(Myself),15)
 END
 
 IF
@@ -199,7 +199,7 @@ IF
 THEN
   RESPONSE #100
     EquipMostDamagingMelee()
-    AttackReavaluate(LastSeenBy(Myself),15)
+    AttackReevaluate(LastSeenBy(Myself),15)
 END
 
 IF
@@ -210,7 +210,7 @@ IF
 THEN
   RESPONSE #100
     EquipRanged()
-    AttackReavaluate(LastSeenBy(Myself),15)
+    AttackReevaluate(LastSeenBy(Myself),15)
 END
 
 IF
@@ -221,5 +221,5 @@ IF
 THEN
   RESPONSE #100
     EquipMostDamagingMelee()
-    AttackReavaluate(LastSeenBy(Myself),15)
+    AttackReevaluate(LastSeenBy(Myself),15)
 END
