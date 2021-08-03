@@ -549,13 +549,15 @@ COMPILE ~Kiara-Zaiya/Scripts/KiaFix.baf~
 //SOUNDSET ZAIYA USING FEMALE4
 COMPILE ~Kiara-Zaiya/Scripts/ZaiFix.baf~
 
-
-COPY ~Kiara-Zaiya/Dialogs/Kiaral1.2da~ ~override/Kiaral1.2da~
-  REPLACE ~76011~ @9000
-COPY ~Kiara-Zaiya/Dialogs/Kiaral2.2da~ ~override/Kiaral2.2da~
-  REPLACE ~76012~ @9001
-COPY ~Kiara-Zaiya/Dialogs/Kiaral3.2da~ ~override/Kiaral3.2da~
-  REPLACE ~76013~ @9002
+/* ------------------- *
+ *  Kiara Love Scenes  *
+ * ------------------- */
+COPY ~kiara-zaiya/2da/kiaral1.2da~ ~override~
+	REPLACE ~76011~ @9000
+COPY ~kiara-zaiya/2da/kiaral2.2da~ ~override~
+	REPLACE ~76012~ @9001
+COPY ~kiara-zaiya/2da/kiaral3.2da~ ~override~
+	REPLACE ~76013~ @9002
 
 // Isaya : version 1.6.2
 // All scripts use MONK_LAY_ON_HANDS, not MONK_HEAL, so name the spell MONK_LAY_ON_HANDS
@@ -584,15 +586,15 @@ UNLESS ~4820~
 // Despite the presence of AUTO_TRA, that shall involve the file in the selected language,
 // this form is used to ensure of the precedence of the languages.
 // COMPILE ~kiara-zaiya/dialogs\BZAI25.d~
-//   USING ~Kiara-Zaiya/English/BZAI25.tra~ ~Kiara-Zaiya/%s/BZAI25.tra~
+//   USING ~kiara-zaiya/English/BZAI25.tra~ ~kiara-zaiya/%s/BZAI25.tra~
 // COMPILE ~kiara-zaiya/dialogs\ZAI25J.d~
-//   USING ~Kiara-Zaiya/English/ZAI25J.tra~ ~Kiara-Zaiya/%s/ZAI25J.tra~
+//   USING ~kiara-zaiya/English/ZAI25J.tra~ ~kiara-zaiya/%s/ZAI25J.tra~
 // COMPILE ~kiara-zaiya/dialogs\BKIAR25.d~
-//   USING ~Kiara-Zaiya/English/BKIAR25.tra~ ~Kiara-Zaiya/%s/BKIAR25.tra~
+//   USING ~kiara-zaiya/English/BKIAR25.tra~ ~kiara-zaiya/%s/BKIAR25.tra~
 // COMPILE ~kiara-zaiya/dialogs\KIAR25J.d~
-//   USING ~Kiara-Zaiya/English/KIAR25J.tra~ ~Kiara-Zaiya/%s/KIAR25J.tra~
+//   USING ~kiara-zaiya/English/KIAR25J.tra~ ~kiara-zaiya/%s/KIAR25J.tra~
 // COMPILE ~kiara-zaiya/dialogs\Osan.d~
-//   USING ~Kiara-Zaiya/English/Osan.tra~ ~Kiara-Zaiya/%s/Osan.tra~
+//   USING ~kiara-zaiya/English/Osan.tra~ ~kiara-zaiya/%s/Osan.tra~
 COMPILE ~kiara-zaiya/dialogs\bzai25.d~
         ~kiara-zaiya/dialogs\zai25j.d~
         ~kiara-zaiya/dialogs\bkiar25.d~
@@ -621,12 +623,16 @@ ACTION_IF NOT FILE_EXISTS ~override\AR6200.bcs~ THEN BEGIN
 END
 
 EXTEND_TOP ~AR6200.bcs~ ~kiara-zaiya/scripts/zai6200.baf~
-COPY ~Kiara-Zaiya/Dialogs/ZAIEnd1.2da~ ~override/ZAIEnd1.2da~
-  REPLACE ~99997~ @9103
-COPY ~Kiara-Zaiya/Dialogs/ZAIEnd2.2da~ ~override/ZAIEnd2.2da~
-  REPLACE ~99998~ @9104
-COPY ~Kiara-Zaiya/Dialogs/ZAIEnd3.2da~ ~override/ZAIEnd3.2da~
-  REPLACE ~99999~ @9105
+
+/* ----------- *
+ *  Epilogues  *
+ * ----------- */
+COPY ~kiara-zaiya/2da/zaiend1.2da~ ~override~
+	REPLACE ~99997~ @9103
+COPY ~kiara-zaiya/2da/zaiend2.2da~ ~override~
+	REPLACE ~99998~ @9104
+COPY ~kiara-zaiya/2da/zaiend3.2da~ ~override~
+	REPLACE ~99999~ @9105
 
 ACTION_IF NOT FILE_EXISTS ~override\AR6200.bcs~ THEN BEGIN	  
   EXTEND_TOP ~AR6200.bcs~ ~kiara-zaiya/scripts/kiar6200.baf~
@@ -636,12 +642,12 @@ END ELSE BEGIN
 END
 END
 
-COPY ~Kiara-Zaiya/Dialogs/KiarEnd1.2da~ ~override/KiarEnd1.2da~
-  REPLACE ~99997~ @9100
-COPY ~Kiara-Zaiya/Dialogs/KiarEnd2.2da~ ~override/KiarEnd2.2da~
-  REPLACE ~99998~ @9101
-COPY ~Kiara-Zaiya/Dialogs/KiarEnd3.2da~ ~override/KiarEnd3.2da~
-  REPLACE ~99999~ @9102
+COPY ~kiara-zaiya/2da/kiarend1.2da~ ~override.2da~
+	REPLACE ~99997~ @9100
+COPY ~kiara-zaiya/2da/kiarend2.2da~ ~override.2da~
+	REPLACE ~99998~ @9101
+COPY ~kiara-zaiya/2da/kiarend3.2da~ ~override.2da~
+	REPLACE ~99999~ @9102
 
 
 APPEND ~pdialog.2da~
