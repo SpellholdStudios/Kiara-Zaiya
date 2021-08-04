@@ -4,7 +4,7 @@
 // Add check for Kiara presence (as in Amap1700.baf)
 IF
   InParty("Kiara")  // ~Kiara~
-  GlobalGT("Chapter","GLOBAL",5)
+  GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
   InActiveArea(Player1)
   Global("C6FenilCreated","AR1700",0)
 THEN
@@ -16,7 +16,7 @@ END
 
 IF
   InParty("Kiara")  // ~Kiara~
-  GlobalGT("Chapter","GLOBAL",5)
+  GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
   InActiveArea(Player1)
   Global("C6MorticCreated","AR1700",0)
 THEN
@@ -28,7 +28,7 @@ END
 
 IF
   InParty("Kiara")  // ~Kiara~
-  GlobalGT("Chapter","GLOBAL",5)
+  GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
   InActiveArea(Player1)
   Global("C6KeriaCreated","AR1700",0)
 THEN
@@ -40,7 +40,7 @@ END
 
 IF
   InParty("Kiara")  // ~Kiara~
-  GlobalGT("Chapter","GLOBAL",5)
+  GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
   InActiveArea(Player1)
   Global("C6PolgarCreated","AR1700",0)
 THEN

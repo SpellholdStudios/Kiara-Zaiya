@@ -820,7 +820,7 @@ COPY ~kiara-zaiya\amaralis\c6fenil.cre~ ~override.cre~
 	SAY NAME1 @144
 	SAY NAME2 @144
 // Morticia
-COPY ~kiara-zaiya\amaralis\c6mortic.cre~ ~override\c6mortic.cre~
+COPY ~kiara-zaiya\amaralis\c6mortic.cre~ ~override~
 	SAY NAME1 @145
 	SAY NAME2 @145
 // Polgar
@@ -839,13 +839,8 @@ COMPILE ~kiara-zaiya\amaralis\amafight.baf~
         ~kiara-zaiya\amaralis\polgar.baf~
         ~kiara-zaiya\amaralis\keriafit.baf~
 
-ACTION_IF NOT FILE_EXISTS ~override/AR1700.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~AR1700.bcs~ ~kiara-zaiya/amaralis/A2ma1700.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/AR1700.bcs~ ~c6fenil~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1700.bcs~ ~kiara-zaiya/amaralis/A2ma1700.baf~
-END
-END
+
+EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/amaralis/a2ma1700.baf~
 
 
 /* ================================================================== *
