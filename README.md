@@ -48,6 +48,9 @@ Baldur's Gate Trilogy and EET<h3>
 - Added native EE and EET compatibility (thanks Austin!):.
     - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
     - Added chapters continuity for EET games.
+    - Added `ADD_JOURNAL` entries.
+    - ...
+    - ...
     - Provided accurate sized NPC portraits for EE games.
 - Included all BWP Fixpack fixes:
     - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
