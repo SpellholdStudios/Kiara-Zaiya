@@ -7,5 +7,6 @@ THEN
   RESPONSE #100
     SetGlobal("ENDRACREATE","AR1403",1)
     CreateCreature("Endragor",[487.884],15)  // ~Endragor~
+	Continue()
 END
 

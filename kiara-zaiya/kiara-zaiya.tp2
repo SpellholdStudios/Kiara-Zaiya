@@ -232,7 +232,7 @@ COPY ~kiara-zaiya/creatures/zaiya.cre~ ~override~
 	SAY NAME2 @27
 	SAY BIO @28
 	// Soundset
-  SAY INITIAL_MEETING @91
+	SAY INITIAL_MEETING @91
 	SAY HAPPY @225
 	SAY UNHAPPY_ANNOYED @226
 	SAY UNHAPPY_SERIOUS @227
@@ -425,21 +425,26 @@ COMPILE EVALUATE_BUFFER ~kiara-zaiya/dialogs/kiara.d~
 /* ----------------------- *
  *  Compiling SoA Scripts  *
  * ----------------------- */
-COMPILE ~kiara-zaiya/scripts/kiar1004.baf~
+// Gwendolyne fix: useless
+//COMPILE ~kiara-zaiya/scripts/kiar1004.baf~
 
 // Isaya: compile Kiara.baf with EVALUATE_BUFFER to get the strings properly taken from the setup.tra and
 // get the music variables automatically replaced. No need of REPLACE or REPLACE_TEXTUALLY anymore.
 // See Kiara.baf modification with the %Kiara% variable
 COMPILE ~kiara-zaiya/scripts/kiara.baf~  EVALUATE_BUFFER
 COMPILE ~kiara-zaiya/scripts/kiarad.baf~ EVALUATE_BUFFER
-COMPILE ~kiara-zaiya/scripts/zai0405.baf~
-        ~kiara-zaiya/scripts/zaiya.baf~
+// Gwendolyne fix: useless
+//COMPILE ~kiara-zaiya/scripts/zai0405.baf~
+COMPILE ~kiara-zaiya/scripts/zaiya.baf~
 
-COMPILE ~kiara-zaiya/scripts/kzwy1100.baf~
-        ~kiara-zaiya/scripts/kzwyvern.baf~
-        ~kiara-zaiya/scripts/prax0700.baf~
+// Gwendolyne fix: useless
+//COMPILE ~kiara-zaiya/scripts/kzwy1100.baf~
+COMPILE ~kiara-zaiya/scripts/kzwyvern.baf~
+// Gwendolyne fix: useless
+//        ~kiara-zaiya/scripts/prax0700.baf~
         ~kiara-zaiya/scripts/prax.baf~
-        ~kiara-zaiya/scripts/amae1004.baf~
+// Gwendolyne fix: useless
+//        ~kiara-zaiya/scripts/amae1004.baf~
 
 COPY ~kiara-zaiya/hla/kzwyvern.spl~   ~override~ // Stinking Cloud
      ~kiara-zaiya/items/kzwyvern.itm~ ~override~
@@ -479,99 +484,31 @@ EXTEND_BOTTOM ~ar0807.bcs~ ~kiara-zaiya/scripts/ar0807.baf~
 
 COMPILE ~kiara-zaiya/scripts/kiarfigt.baf~
 
-EXTEND_TOP ~cernd.bcs~ ~kiara-zaiya/scripts/kzcernd.baf~
+EXTEND_TOP    ~cernd.bcs~ ~kiara-zaiya/scripts/kzcernd.baf~
+EXTEND_BOTTOM ~minsc.bcs~ ~kiara-zaiya/scripts/minscza.baf~
+
+EXTEND_BOTTOM ~ar0405.bcs~ ~kiara-zaiya/scripts/zai0405.baf~
+EXTEND_TOP    ~ar0700.bcs~ ~kiara-zaiya/scripts/prax0700.baf~
+EXTEND_TOP    ~ar0809.bcs~ ~kiara-zaiya/scripts/extar0809.baf~
+EXTEND_BOTTOM ~ar1004.bcs~ ~kiara-zaiya/scripts/kiar1004.baf~
+EXTEND_BOTTOM ~ar1004.bcs~ ~kiara-zaiya/scripts/amae1004.baf~
+EXTEND_BOTTOM ~ar1100.bcs~ ~kiara-zaiya/scripts/kzwy1100.baf~
+EXTEND_BOTTOM ~ar1403.bcs~ ~kiara-zaiya/scripts/endragor.baf~
+EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/scripts/amap1700.baf~ EVALUATE_BUFFER
+
+EXTEND_TOP ~bodhiamb.bcs~ ~kiara-zaiya/scripts/extbodhiamb.baf~
+EXTEND_TOP ~cleanse.bcs~  ~kiara-zaiya/scripts/kcleanse.baf~
+EXTEND_TOP ~vampamb.bcs~  ~kiara-zaiya/scripts/kvampamb.baf~
+
+
 //I USE ACTION_IF IN CASE OF BAD ROLL OVER!
 //BACKUP WOULD STORE THESE AREAS AND RESTORE THEM,
 //WITH POSSIBLY MORE CREATURES CREATED!
-ACTION_IF NOT FILE_EXISTS ~override/AR1004.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~AR1004.bcs~ ~kiara-zaiya/scripts/kiar1004.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/AR1004.bcs~ ~Kiara~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1004.bcs~ ~kiara-zaiya/scripts/kiar1004.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/AR0405.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~AR0405.bcs~ ~kiara-zaiya/scripts/zai0405.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/AR0405.bcs~ ~Zaiya~ THEN BEGIN
-    EXTEND_BOTTOM ~AR0405.bcs~ ~kiara-zaiya/scripts/zai0405.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/AR1100.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~AR1100.bcs~ ~kiara-zaiya/scripts/kZWY1100.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/AR1100.bcs~ ~KZWYVERN~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1100.bcs~ ~kiara-zaiya/scripts/kZWY1100.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/AR0700.bcs~ THEN BEGIN
-  EXTEND_TOP ~AR0700.bcs~ ~kiara-zaiya/scripts/Prax0700.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/AR0700.bcs~ ~Prax~ THEN BEGIN
-    EXTEND_TOP ~AR0700.bcs~ ~kiara-zaiya/scripts/Prax0700.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/AR1004.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~AR1004.bcs~ ~kiara-zaiya/scripts/Amae1004.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/AR1004.bcs~ ~Amaevil~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1004.bcs~ ~kiara-zaiya/scripts/Amae1004.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/ar1700.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/scripts/amap1700.baf~ EVALUATE_BUFFER
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/ar1700.bcs~ ~c6ama~ THEN BEGIN
-    EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/scripts/amap1700.baf~ EVALUATE_BUFFER
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/AR1403.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~Ar1403.bcs~ ~kiara-zaiya/scripts/Endragor.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/AR1403.bcs~ ~EndraCreate~ THEN BEGIN
-    EXTEND_BOTTOM ~AR1403.bcs~ ~kiara-zaiya/scripts/Endragor.baf~
-END
-END
 ACTION_IF NOT FILE_EXISTS ~override/Kiara.bcs~ THEN BEGIN
   EXTEND_TOP ~Kiara.bcs~ ~kiara-zaiya/scripts/kiarFigt.baf~
 END ELSE BEGIN
   ACTION_IF NOT FILE_CONTAINS ~override/Kiara.bcs~ ~KiaCombat~ THEN BEGIN
     EXTEND_TOP ~Kiara.bcs~ ~kiara-zaiya/scripts/kiarFigt.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/Bodhiamb.bcs~ THEN BEGIN
-  EXTEND_TOP ~Bodhiamb.bcs~ ~kiara-zaiya/scripts/ExtBodhiAmb.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/Bodhiamb.bcs~ ~KiaraVampire~ THEN BEGIN
-    EXTEND_TOP ~Bodhiamb.bcs~ ~kiara-zaiya/scripts/ExtBodhiAmb.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/Cleanse.bcs~ THEN BEGIN
-  EXTEND_TOP ~Cleanse.bcs~ ~kiara-zaiya/scripts/kCleanse.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/Cleanse.bcs~ ~MISCBKI~ THEN BEGIN
-    EXTEND_TOP ~Cleanse.bcs~ ~kiara-zaiya/scripts/kCleanse.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/VampAmb.bcs~ THEN BEGIN
-  EXTEND_TOP ~VampAmb.bcs~ ~kiara-zaiya/scripts/kVampAmb.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/VampAmb.bcs~ ~KiaraVampire~ THEN BEGIN
-    EXTEND_TOP ~VampAmb.bcs~ ~kiara-zaiya/scripts/kVampAmb.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/AR0809.bcs~ THEN BEGIN
-  EXTEND_TOP ~AR0809.bcs~ ~kiara-zaiya/scripts/ExtAR0809.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/AR0809.bcs~ ~KiaraVampire~ THEN BEGIN
-    EXTEND_TOP ~AR0809.bcs~ ~kiara-zaiya/scripts/ExtAR0809.baf~
-END
-END
-ACTION_IF NOT FILE_EXISTS ~override/Minsc.bcs~ THEN BEGIN
-  EXTEND_BOTTOM ~Minsc.bcs~ ~kiara-zaiya/scripts/MinscZa.baf~
-END ELSE BEGIN
-  ACTION_IF NOT FILE_CONTAINS ~override/Minsc.bcs~ ~ZAIMISS~ THEN BEGIN
-    EXTEND_BOTTOM ~Minsc.bcs~ ~kiara-zaiya/scripts/MinscZa.baf~
 END
 END
 
@@ -608,7 +545,7 @@ UNLESS ~4820~
 //TOB PART COMPILATION
 /////////////////////////////////////////////////////////////////
 
-//START WITH DIALOGS
+// START WITH DIALOGS
 // Isaya: specify USING a specific tra file for texts now moved to tra files
 // As described in WeiDU tutorial on TRA files (7.8 in the documentation), specifying
 // several tra files allow handling missing @nn in the translation file. The original
@@ -818,13 +755,12 @@ COPY ~kiara-zaiya/creatures/zaiya.cre~ ~override~
 	SAY SET_A_TRAP @124
 
 
-/////////////////////////////////////////////////////////////////////////////////////
-//ALTERNATE MONK HIGH LEVEL ABILITIES BY TG MAESTRO
-////////////////////////////////////////////////////////////////////////////////////
+/* ======================================================= *
+ *    Alternate Monk High level abilities by TG Maestro    *
+ * ======================================================= */
 BEGIN @129 // ~Alternate High level abilities by TG Maestro~
 
 // Remove later
-
 COPY ~kiara-zaiya/hla/lumo0.2da~ ~override/LUMO0.2da~
 
 // Shadow Stance!
@@ -865,43 +801,43 @@ COPY ~kiara-zaiya/hla/solar01.spl~ ~override~
   SAY UNIDENTIFIED_DESC @141
 
 
-////////////////////////////////////////////////////////////////////////////////////
-// ORIGINAL AMARALIS BATTLE IN CHAPTER 2 AND 6
-////////////////////////////////////////////////////////////////////////////////////
+/* =================================================== *
+ *    Original Amaralis battles in chapters 2 and 6    *
+ * =================================================== */
 BEGIN @143 // ~Original Amaralis battles~
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
 // Amaralis
-COPY ~kiara-zaiya/amaralis/c6ama.cre~ ~override~
+COPY ~kiara-zaiya\amaralis\c6ama.cre~ ~override~
 	SAY NAME1 @47
 	SAY NAME2 @47
 // Horth'Kar
-COPY ~kiara-zaiya/amaralis/c6hroth.cre~ ~override~
+COPY ~kiara-zaiya\amaralis\c6hroth.cre~ ~override~
 	SAY NAME1 @50
 	SAY NAME2 @50
 // Fenilla
-COPY ~kiara-zaiya/amaralis/c6fenil.cre~ ~override.cre~
+COPY ~kiara-zaiya\amaralis\c6fenil.cre~ ~override.cre~
 	SAY NAME1 @144
 	SAY NAME2 @144
 // Morticia
-COPY ~kiara-zaiya/amaralis/c6mortic.cre~ ~override~
+COPY ~kiara-zaiya\amaralis\c6mortic.cre~ ~override\c6mortic.cre~
 	SAY NAME1 @145
 	SAY NAME2 @145
 // Polgar
-COPY ~kiara-zaiya/amaralis/c6polgar.cre~ ~override~
+COPY ~kiara-zaiya\amaralis\c6polgar.cre~ ~override~
 	SAY NAME1 @146
 	SAY NAME2 @146
 // Keria
-COPY ~kiara-zaiya/amaralis/c6keria.cre~ ~override~
+COPY ~kiara-zaiya\amaralis\c6keria.cre~ ~override~
 	SAY NAME1 @147
 	SAY NAME2 @147
 
-COMPILE ~kiara-zaiya/amaralis/amafight.baf~
-        ~kiara-zaiya/amaralis/amafigt1.baf~
-        ~kiara-zaiya/amaralis/morticia.baf~
-        ~kiara-zaiya/amaralis/c6drud.baf~
-        ~kiara-zaiya/amaralis/polgar.baf~
-        ~kiara-zaiya/amaralis/keriafit.baf~
+COMPILE ~kiara-zaiya\amaralis\amafight.baf~
+        ~kiara-zaiya\amaralis\amafigt1.baf~
+        ~kiara-zaiya\amaralis\morticia.baf~
+        ~kiara-zaiya\amaralis\c6drud.baf~
+        ~kiara-zaiya\amaralis\polgar.baf~
+        ~kiara-zaiya\amaralis\keriafit.baf~
 
 ACTION_IF NOT FILE_EXISTS ~override/AR1700.bcs~ THEN BEGIN
   EXTEND_BOTTOM ~AR1700.bcs~ ~kiara-zaiya/amaralis/A2ma1700.baf~
@@ -912,11 +848,12 @@ END
 END
 
 
-////////////////////////////////////////////////////////////////////////////////////
-//TOUGHER VAMPKIA - MONK LEVEL 20, DOES LEVEL DRAIN AND HAS SOME OTHER UNDEAD POWERS
-////////////////////////////////////////////////////////////////////////////////////
+/* ================================================================== *
+ *    Tougher Kiara vampire                                           *
+ *                                                                    *
+ *  MONK LEVEL 20, DOES LEVEL DRAIN AND HAS SOME OTHER UNDEAD POWERS  *
+ * ================================================================== */
 BEGIN @261 // ~Tougher Kiara vampire~
-
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
 COMPILE ~kiara-zaiya/vampkia/vampkia.baf~
@@ -926,11 +863,10 @@ COPY ~kiara-zaiya/vampkia/vampkiar.cre~ ~override~
 COPY ~kiara-zaiya/vampkia/vampk3.itm~ ~override~
 
 
-/////////////////////////////////////////////////////////////////////////////////////
-//Revised Suldallanessar: real tough
-////////////////////////////////////////////////////////////////////////////////////
+/* =========================== *
+ *    Revised Suldalanessar    *
+ * =========================== */
 BEGIN @262 // ~Revised Suldalanessar~
-
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
 // Isaya's note:
@@ -1003,11 +939,10 @@ COMPILE ~kiara-zaiya/sulda/kzninja.baf~
 EXTEND_TOP ~ar2807.bcs~ ~kiara-zaiya/sulda/kz#2807a.baf~
 
 
-/////////////////////////////////////////////////////////////////////////////////////
-//JAO AND CO
-////////////////////////////////////////////////////////////////////////////////////
+/* =========================== *
+ *    Jao and party for SOA    *
+ * =========================== */
 BEGIN @250 // ~Jao and party for SOA: another tough fight~
-
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
 EXTEND_TOP ~ar0300.bcs~ ~kiara-zaiya/wu-je/appendme.baf~ EVALUATE_BUFFER
@@ -1028,11 +963,10 @@ COPY ~kiara-zaiya/wu-je/kzBrac1.itm~ ~override/kzbrac1.itm~
 	SAY DESC @255
 
 
-/////////////////////////////////////////////////////////////////////////////////////
-//IMPROVED IRENICUS AT THE TREE OF LIFE
-////////////////////////////////////////////////////////////////////////////////////
-BEGIN @260 // ~Tougher Irenicus at the tree of life~
-
+/* ========================================== *
+ *    Tougher Irenicus at the Tree of life    *
+ * ========================================== */
+BEGIN @260 // ~Tougher Irenicus at the Tree of life~
 REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
 // TOUGH BUT STILL FEASIBLE
