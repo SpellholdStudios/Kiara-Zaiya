@@ -1,0 +1,531 @@
+/* ===================================================================== *
+ *         M A I N   C O M P O N E N T   I N S T A L L A T I O N         *
+ * ===================================================================== */
+
+SILENT
+
+/* ---------------------------------------------------------------- *
+ *  Isaya: additional code as of v1.6.1, retrieved from BG2Fixpack  *
+/* ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------------------------------------------- *
+ *   	ADDs CamDawg's custom state needed to fix Dead() triggers that don't use DVs. Thanks Cam!                         *
+ *                                     used by several scripts modified by Lollorian                                      *
+ * ---------------------------------------------------------------------------------------------------------------------- *
+ *  covers STATE_DEAD, STATE_ACID_DEATH, STATE_FLAME_DEATH, STATE_EXPLODING_DEATH, STATE_STONE_DEATH, STATE_FROZEN_DEATH  *
+ * ---------------------------------------------------------------------------------------------------------------------- */
+APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~ UNLESS ~^0x00000FC0[ %TAB]+STATE_REALLY_DEAD[ %TAB%%LNL%%MNL%%WNL%]~
+
+// Isaya : additional code for v1.6.2, retrieved from BG2Fixpack (ids_entries_gtimes.tph)
+// Addition of several time durations, used by several scripts
+// -----------------------------------------------------------
+APPEND ~GTIMES.IDS~   ~6 ONE_ROUND~           UNLESS ~ONE_ROUND~
+APPEND ~GTIMES.IDS~  ~12 TWO_ROUNDS~          UNLESS ~TWO_ROUNDS~
+APPEND ~GTIMES.IDS~  ~18 THREE_ROUNDS~        UNLESS ~THREE_ROUNDS~
+APPEND ~GTIMES.IDS~  ~24 FOUR_ROUNDS~         UNLESS ~FOUR_ROUNDS~
+APPEND ~GTIMES.IDS~  ~30 FIVE_ROUNDS~         UNLESS ~FIVE_ROUNDS~
+APPEND ~GTIMES.IDS~  ~36 SIX_ROUNDS~          UNLESS ~SIX_ROUNDS~
+APPEND ~GTIMES.IDS~  ~60 TEN_ROUNDS~          UNLESS ~TEN_ROUNDS~
+APPEND ~GTIMES.IDS~  ~60 ONE_TURN~            UNLESS ~ONE_TURN~
+APPEND ~GTIMES.IDS~ ~120 TWO_TURNS~           UNLESS ~TWO_TURNS~
+APPEND ~GTIMES.IDS~ ~300 ONE_HOUR~            UNLESS ~ONE_HOUR~
+APPEND ~GTIMES.IDS~ ~600 TWO_HOURS~           UNLESS ~TWO_HOURS~
+APPEND ~GTIMES.IDS~ ~1800 SIX_HOURS~          UNLESS ~SIX_HOURS~
+APPEND ~GTIMES.IDS~ ~2400 EIGHT_HOURS~        UNLESS ~EIGHT_HOURS~
+APPEND ~GTIMES.IDS~ ~3000 TEN_HOURS~          UNLESS ~TEN_HOURS~
+APPEND ~GTIMES.IDS~ ~3600 TWELVE_HOURS~       UNLESS ~TWELVE_HOURS~
+
+// Force WeiDU to reload altered IDS files
+// ---------------------------------------
+CLEAR_IDS_MAP
+
+// Isaya: end of additional code
+
+
+COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/Spl~ ~override~
+COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/TobSpl~ ~override~
+COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/Ids~ ~override~
+
+
+/* -------------------------- *
+ *  Installing NPC portraits  *
+ * -------------------------- */
+
+COPY ~%MOD_FOLDER%/portraits%ee_file%~ ~override~
+COPY ~%MOD_FOLDER%/portraits_others~   ~override~
+
+
+/* ------------------------ *
+ *  Installing audio files  *
+ * ------------------------ */
+
+// Installing music
+// ----------------
+// Isaya note: Kiara.baf and Kiar25.baf must be compiled AFTER ADD_MUSIC in order to update the music code assigned at installation
+MKDIR ~music/mxkiara~
+COPY ~kiara-zaiya/music/mxkiara.mus~ ~music~
+ADD_MUSIC ~Kiara~ ~music/mxkiara.mus~
+
+COPY ~kiara-zaiya/music/mxkiaraa.acm~ ~music/mxkiara~
+
+// Installing custom soundsets
+// ---------------------------
+LAF HANDLE_AUDIO END
+
+
+/* ---------------------- *
+ *  Installing creatures  *
+ * ---------------------- */
+
+// Kaira - Isaya (version 1.6.2): Add the default soundset using FEMALE2
+// ---------------------------------------------------------------------
+COPY ~kiara-zaiya/creatures/kiara.cre~ ~override~
+	SAY NAME1 @3
+	SAY NAME2 @3
+	SAY BIO @4
+	// Soundset
+	SAY INITIAL_MEETING @53
+	SAY HAPPY @221
+	SAY UNHAPPY_ANNOYED @222
+	SAY UNHAPPY_SERIOUS @223
+	SAY UNHAPPY_BREAKING @224
+	SAY LEADER @191
+	SAY TIRED @192
+	SAY BORED @193
+	SAY BATTLE_CRY1 @190
+	SAY BATTLE_CRY2 @217
+	SAY BATTLE_CRY3 @218
+	SAY DAMAGE @194
+	SAY DYING @202
+	SAY HURT @201
+	SAY AREA_FOREST @67
+	SAY AREA_CITY @68
+	SAY AREA_DUNGEON @69
+	SAY AREA_DAY @70
+	SAY AREA_NIGHT @71
+	SAY SELECT_COMMON1 @195
+	SAY SELECT_COMMON2 @196
+	SAY SELECT_COMMON3 @197
+	// Isaya: since there were two INITIAL_MEETING, the second with "Just ask.", I decided to assign it to COMMON4 and COMMON5
+	SAY SELECT_COMMON4 @220
+	SAY SELECT_COMMON5 @220
+	SAY SELECT_COMMON6 @219
+	SAY SELECT_ACTION1 @198
+	SAY SELECT_ACTION2 @199
+	SAY SELECT_ACTION3 @200
+	SAY SELECT_ACTION4 @203
+	SAY SELECT_ACTION5 @204
+	SAY SELECT_ACTION6 @205
+	SAY SELECT_ACTION7 @206
+	SAY REACT_TO_DIE_GENERAL @76
+	SAY SELECT_RARE1 @207
+	SAY SELECT_RARE2 @208
+	SAY CRITICAL_HIT @209
+	SAY CRITICAL_MISS @210
+	SAY TARGET_IMMUNE @211
+	SAY INVENTORY_FULL @212
+	SAY PICKED_POCKET @213
+	SAY HIDDEN_IN_SHADOWS @214
+	SAY SPELL_DISRUPTED @215
+	SAY SET_A_TRAP @216
+
+// Zaiya - Isaya (version 1.6.2): Add the default soundset using FEMALE4
+// ---------------------------------------------------------------------
+COPY ~kiara-zaiya/creatures/zaiya.cre~ ~override~
+	SAY NAME1 @27
+	SAY NAME2 @27
+	SAY BIO @28
+	// Soundset
+	SAY INITIAL_MEETING @91
+	SAY HAPPY @225
+	SAY UNHAPPY_ANNOYED @226
+	SAY UNHAPPY_SERIOUS @227
+	SAY UNHAPPY_BREAKING @228
+	SAY LEADER @152
+	SAY TIRED @153
+	SAY BORED @154
+	SAY BATTLE_CRY1 @151
+	SAY BATTLE_CRY2 @184
+	SAY BATTLE_CRY3 @185
+	SAY DAMAGE @155
+	SAY DYING @163
+	SAY HURT @162
+	SAY AREA_FOREST @105
+	SAY AREA_CITY @106
+	SAY AREA_DUNGEON @107
+	SAY AREA_DAY @108
+	SAY AREA_NIGHT @109
+	SAY SELECT_COMMON1 @97
+	SAY SELECT_COMMON2 @157
+	SAY SELECT_COMMON3 @158
+	// Isaya: since there were two INITIAL_MEETING, the second with "I agree.", I decided to assign it to COMMON4 and COMMON5
+	SAY SELECT_COMMON4 @187
+	SAY SELECT_COMMON5 @187
+	SAY SELECT_COMMON6 @186
+	SAY SELECT_ACTION1 @159
+	SAY SELECT_ACTION2 @160
+	SAY SELECT_ACTION3 @161
+	SAY SELECT_ACTION4 @169
+	SAY SELECT_ACTION5 @170
+	SAY SELECT_ACTION6 @171
+	SAY SELECT_ACTION7 @172
+	SAY REACT_TO_DIE_GENERAL @173
+	SAY SELECT_RARE1 @174
+	SAY SELECT_RARE2 @175
+	SAY CRITICAL_HIT @176
+	SAY CRITICAL_MISS @177
+	SAY TARGET_IMMUNE @178
+	SAY INVENTORY_FULL @179
+	SAY PICKED_POCKET @180
+	SAY HIDDEN_IN_SHADOWS @181
+	SAY SPELL_DISRUPTED @182
+	SAY SET_A_TRAP @183
+
+// Poisonous Wyvern
+// ----------------
+COPY ~kiara-zaiya/creatures/kzwyvern.cre~ ~override~
+	SAY NAME1 @230
+	SAY NAME2 @230
+
+// Prax
+// ----
+COPY ~kiara-zaiya/creatures/prax.cre~ ~override~
+	SAY NAME1 @46
+	SAY NAME2 @46
+
+// Amaralis
+// --------
+COPY ~kiara-zaiya/creatures/amaevil.cre~ ~override~
+     ~kiara-zaiya/creatures/c6ama.cre~   ~override~
+	SAY NAME1 @47
+	SAY NAME2 @47
+
+// Demon Lord
+// ----------
+COPY ~kiara-zaiya/creatures/delord.cre~ ~override~
+	SAY NAME1 @48
+	SAY NAME2 @48
+
+// Kiara Vampire
+// -------------
+COPY ~kiara-zaiya/creatures/vampkiar.cre~ ~override~
+	SAY NAME1 @49
+	SAY NAME2 @49
+
+// Horth'Kar
+// --------
+COPY ~kiara-zaiya/creatures/c6hroth.cre~ ~override~
+	SAY NAME1 @50
+	SAY NAME2 @50
+
+// Jerlia
+// ------
+COPY ~kiara-zaiya/creatures/jerlia.cre~ ~override~
+	SAY NAME1 @51
+	SAY NAME2 @51
+
+// Endragor
+// --------
+COPY ~kiara-zaiya/creatures/endragor.cre~ ~override~
+	SAY NAME1 @52
+	SAY NAME2 @52
+
+// Osan (ToB)
+// ----------
+COPY ~kiara-zaiya/creatures/osan.cre~ ~override~
+	SAY NAME1 @264
+	SAY NAME2 @264
+
+
+/* ----------------------------- *
+ *  Installing items and spells  *
+ * ----------------------------- */
+
+// Snake Stance!
+COPY ~kiara-zaiya/hla/snake01.spl~ ~override~
+	SAY NAME1 @5
+
+// Winded
+COPY ~kiara-zaiya/hla/kslow01.spl~ ~override~
+	SAY NAME1 @6
+
+// Lunar Stance!
+COPY ~kiara-zaiya/hla/lunar01.spl~ ~override~
+	SAY NAME1 @7
+
+// Dragon Stance!
+COPY ~kiara-zaiya/hla/drago01.spl~ ~override~
+	SAY NAME1 @8
+
+// Solar Stance!
+COPY ~kiara-zaiya/hla/solar01.spl~ ~override~
+	SAY NAME1 @9
+
+// Shadow Stance!
+COPY ~kiara-zaiya/hla/shdst01.spl~ ~override~
+	SAY NAME1 @10
+	SAY UNIDENTIFIED_DESC @11
+
+COPY ~kiara-zaiya/hla/boocha.spl~  ~override~
+     ~kiara-zaiya/hla/boocha1.spl~ ~override~
+
+// Boo
+COPY ~kiara-zaiya/items/zachik.itm~ ~override~
+	SAY NAME1 @12
+	SAY NAME2 @12
+	SAY DESC @13
+
+// Osan's Monk Robe
+COPY ~kiara-zaiya/items/clckk1.itm~ ~override~
+	SAY NAME1 @14
+	SAY NAME2 @14
+	SAY DESC @15
+COPY ~kiara-zaiya/items/clckk2.itm~ ~override~
+	SAY NAME1 @14
+	SAY NAME2 @14
+	SAY DESC @16
+
+// Kiara's body
+COPY ~kiara-zaiya/items/miscbki.itm~ ~override~
+	SAY NAME1 @17
+	SAY NAME2 @17
+	SAY DESC @18
+
+// Jerlia's soul
+COPY ~kiara-zaiya/items/jerliahg.itm~ ~override~
+	SAY NAME1 @19
+	SAY NAME2 @19
+	SAY DESC @20
+
+// Yellow Ioun Stone
+COPY ~kiara-zaiya/items/freehlm1.itm~ ~override~
+	SAY NAME1 @21
+	SAY NAME2 @22
+	SAY UNIDENTIFIED_DESC @23
+	SAY DESC @24
+
+// Trade notes
+COPY ~kiara-zaiya/items/scrlpx.itm~ ~override~
+	SAY NAME1 @25
+	SAY NAME2 @25
+	SAY UNIDENTIFIED_DESC @26
+
+// Immunity: Alteration
+COPY ~kiara-zaiya/amaralis/alteimu.spl~ ~override~
+
+// The Divine Sword (BWP: Nightfarer's item description fix)
+COPY ~kiara-zaiya/items/amaswd.itm~ ~override~
+	SAY NAME1 @246
+	SAY NAME2 @247
+	SAY UNIDENTIFIED_DESC @248
+	SAY DESC @249
+
+// Poisonous Wyvern: Stinking Cloud
+COPY ~kiara-zaiya/hla/kzwyvern.spl~   ~override~
+     ~kiara-zaiya/items/kzwyvern.itm~ ~override~
+
+
+/* -------------------------------------- *
+ *  Installing SoA dialogues and scripts  *
+ * -------------------------------------- */
+
+// Handling journal entries for EE games
+// -------------------------------------
+ACTION_IF is_ee BEGIN
+	ADD_JOURNAL @353 @1468 @1586 @1592 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/dialogs.tra~ 
+	ADD_JOURNAL @29 @30 @31 @32 @33    USING ~%MOD_FOLDER%/lang/%LANGUAGE%/kzsetup.tra~ 
+END
+
+// Isaya: version 1.6.2
+// All scripts use MONK_LAY_ON_HANDS, not MONK_HEAL, so name the spell MONK_LAY_ON_HANDS
+// Note: in ToB with patch, these definitions are already in spell.ids.
+/* Gwendolyne: removed spell.ids files patch as ToB has been set as a prerequisite.
+APPEND ~spell.ids~ ~4815 MONK_LAY_ON_HANDS~   UNLESS ~4815~
+APPEND ~spell.ids~ ~4811 MONK_STUNNING_BLOW~  UNLESS ~4811~
+APPEND ~spell.ids~ ~4820 MONK_QUIVERING_PALM~ UNLESS ~4820~
+*/
+
+// Compiling SoA dialogues
+// -----------------------
+COMPILE EVALUATE_BUFFER ~kiara-zaiya/dialogs/kiara.d~
+        ~kiara-zaiya/dialogs/kiaraj.d~
+        ~kiara-zaiya/dialogs/kiarap.d~
+        ~kiara-zaiya/dialogs/kiaflirt.d~
+        ~kiara-zaiya/dialogs/zaiya.d~
+        ~kiara-zaiya/dialogs/zaiyaj.d~
+        ~kiara-zaiya/dialogs/zaiyap.d~
+        ~kiara-zaiya/dialogs/bkiara.d~
+        ~kiara-zaiya/dialogs/bzaiya.d~
+        ~kiara-zaiya/dialogs/prax.d~
+        ~kiara-zaiya/dialogs/amaevil.d~
+        ~kiara-zaiya/dialogs/c6ama.d~
+        ~kiara-zaiya/dialogs/delord.d~
+        ~kiara-zaiya/dialogs/vampkia.d~
+        ~kiara-zaiya/dialogs/jerlia.d~
+
+// Compiling SoA scripts
+// ---------------------
+// Gwendolyne fix: useless
+//COMPILE ~kiara-zaiya/scripts/kiar1004.baf~
+
+// Isaya: compile Kiara.baf with EVALUATE_BUFFER to get the strings properly taken from kzsetup.tra and
+// get the music variable automatically replaced. No need of REPLACE or REPLACE_TEXTUALLY anymore.
+// See kiara.baf modification with the %Kiara% variable
+COMPILE ~kiara-zaiya/scripts/kiara.baf~  EVALUATE_BUFFER
+COMPILE ~kiara-zaiya/scripts/kiarad.baf~ EVALUATE_BUFFER
+// Gwendolyne fix: useless
+//COMPILE ~kiara-zaiya/scripts/zai0405.baf~
+COMPILE ~kiara-zaiya/scripts/zaiya.baf~
+
+// Gwendolyne fix: useless
+//COMPILE ~kiara-zaiya/scripts/kzwy1100.baf~
+//        ~kiara-zaiya/scripts/prax0700.baf~
+//        ~kiara-zaiya/scripts/amae1004.baf~
+COMPILE ~kiara-zaiya/scripts/kzwyvern.baf~
+        ~kiara-zaiya/scripts/prax.baf~
+
+COMPILE ~kiara-zaiya/scripts/amaevil.baf~
+        ~kiara-zaiya/scripts/amafight.baf~
+        ~kiara-zaiya/scripts/amafigt1.baf~
+        ~kiara-zaiya/scripts/hrothfit.baf~
+        ~kiara-zaiya/scripts/c6ama.baf~
+        ~kiara-zaiya/scripts/delord.baf~
+        ~kiara-zaiya/scripts/kiakill.baf~
+        ~kiara-zaiya/scripts/kiakill1.baf~
+        ~kiara-zaiya/scripts/kzcut53e.baf~
+        ~kiara-zaiya/scripts/vampkia.baf~
+        ~kiara-zaiya/scripts/cutl1.baf~
+        ~kiara-zaiya/scripts/cutl2.baf~
+        ~kiara-zaiya/scripts/cutl3.baf~
+//        ~kiara-zaiya/scripts/ar0807.baf~
+        ~kiara-zaiya/scripts/cutjer.baf~
+        ~kiara-zaiya/scripts/jerlia.baf~
+
+// BWP Fix: Lollorian's patched Crypt instead of overwriting it.
+COPY_EXISTING ~ar0807.are~ ~override~
+	READ_SHORT  0x5a "info_num"
+	READ_LONG   0x5c "info_off"
+	WRITE_ASCII 0x94 ~AR0807~ #8
+	FOR (index = 0 ; index < info_num ; ++index) BEGIN
+		READ_ASCII ("%info_off%" +        ("%index%" * 0xc4)) "info_name" (8)
+		PATCH_IF ("%info_name%" STRING_EQUAL_CASE "Tran0800") BEGIN
+			READ_BYTE  ("%info_off%" + 0x61 + ("%index%" * 0xc4)) "flags"
+			WRITE_BYTE ("%info_off%" + 0x61 + ("%index%" * 0xc4)) ("%flags%" BAND 0b11111101)
+		END
+	END
+BUT_ONLY
+EXTEND_BOTTOM ~ar0807.bcs~ ~kiara-zaiya/scripts/ar0807.baf~
+
+EXTEND_TOP    ~cernd.bcs~ ~kiara-zaiya/scripts/kzcernd.baf~
+EXTEND_BOTTOM ~minsc.bcs~ ~kiara-zaiya/scripts/minscza.baf~
+
+EXTEND_BOTTOM ~ar0405.bcs~ ~kiara-zaiya/scripts/zai0405.baf~
+EXTEND_TOP    ~ar0700.bcs~ ~kiara-zaiya/scripts/prax0700.baf~
+EXTEND_TOP    ~ar0809.bcs~ ~kiara-zaiya/scripts/extar0809.baf~
+EXTEND_BOTTOM ~ar1004.bcs~ ~kiara-zaiya/scripts/kiar1004.baf~
+EXTEND_BOTTOM ~ar1004.bcs~ ~kiara-zaiya/scripts/amae1004.baf~
+EXTEND_BOTTOM ~ar1100.bcs~ ~kiara-zaiya/scripts/kzwy1100.baf~
+EXTEND_BOTTOM ~ar1403.bcs~ ~kiara-zaiya/scripts/endragor.baf~
+EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/scripts/amap1700.baf~ EVALUATE_BUFFER
+
+EXTEND_TOP ~bodhiamb.bcs~ ~kiara-zaiya/scripts/extbodhiamb.baf~
+EXTEND_TOP ~cleanse.bcs~  ~kiara-zaiya/scripts/kcleanse.baf~
+EXTEND_TOP ~vampamb.bcs~  ~kiara-zaiya/scripts/kvampamb.baf~
+
+// Gwendolyne fix: useless
+//COMPILE ~kiara-zaiya/scripts/kiarfigt.baf~
+EXTEND_TOP ~kiara.bcs~ ~kiara-zaiya/scripts/kiarfigt.baf~
+
+
+// Kiara soundset (FEMALE2 clip sounds)
+COMPILE ~kiara-zaiya/scripts/kiafix.baf~
+
+// Zaiya soundset (FEMALE4 clip sounds)
+COMPILE ~kiara-zaiya/scripts/zaifix.baf~
+
+
+/* -------------------------------------- *
+ *  Installing ToB dialogues and scripts  *
+ * -------------------------------------- */
+
+// Compiling ToB dialogues
+// -----------------------
+// Isaya: specify USING a specific tra file for texts now moved to tra files
+// As described in WeiDU tutorial on TRA files (7.8 in the documentation), specifying several tra files allow handling missing @nn in the translation file. The original language file is specified first, as a fallback if the selected language doesn't have the string.
+// At the time of writing, the Spanish translation is in progress, so it may help.
+// Despite the presence of AUTO_TRA, that shall involve the file in the selected language, this form is used to ensure of the precedence of the languages.
+// COMPILE ~kiara-zaiya/dialogs/bzai25.d~   USING ~kiara-zaiya/english/bzai25.tra~  ~kiara-zaiya/lang/%s/bzai25.tra~
+// COMPILE ~kiara-zaiya/dialogs/zai25j.d~   USING ~kiara-zaiya/english/zai25j.tra~  ~kiara-zaiya/lang/%s/zai25j.tra~
+// COMPILE ~kiara-zaiya/dialogs/bkiar25.d~  USING ~kiara-zaiya/english/bkiar25.tra~ ~kiara-zaiya/lang/%s/bkiar25.tra~
+// COMPILE ~kiara-zaiya/dialogs/kiar25j.d~  USING ~kiara-zaiya/english/kiar25j.tra~ ~kiara-zaiya/lang/%s/kiar25j.tra~
+// COMPILE ~kiara-zaiya/dialogs/osan.d~     USING ~kiara-zaiya/english/osan.tra~    ~kiara-zaiya/lang/%s/osan.tra~
+COMPILE ~kiara-zaiya/dialogs/bzai25.d~
+        ~kiara-zaiya/dialogs/zai25j.d~
+        ~kiara-zaiya/dialogs/bkiar25.d~
+        ~kiara-zaiya/dialogs/kiar25j.d~
+        ~kiara-zaiya/dialogs/osan.d~
+
+// Compiling ToB scripts
+// ---------------------
+// Isaya: update in v1.6.2, so that the Kiara romance music is played in ToB, compile kiar25.baf with EVALUATE_BUFFER to get the strings properly taken from the kzsetup.tra and get the music variable automatically replaced. No need of REPLACE or REPLACE_TEXTUALLY anymore.
+// See kiar25.baf modification with the %Kiara% variable.
+COMPILE EVALUATE_BUFFER ~kiara-zaiya/scripts/kiar25.baf~
+COMPILE ~kiara-zaiya/scripts/zai25.baf~ 
+        ~kiara-zaiya/scripts/zai25d.baf~
+        ~kiara-zaiya/scripts/kiar25d.baf~
+        ~kiara-zaiya/scripts/kzcutwra.baf~
+        ~kiara-zaiya/scripts/kz#osan.baf~
+        ~kiara-zaiya/scripts/kz#cut34.baf~
+
+EXTEND_TOP ~ar6200.bcs~ ~kiara-zaiya/scripts/zai6200.baf~
+EXTEND_TOP ~ar6200.bcs~ ~kiara-zaiya/scripts/kiar6200.baf~
+
+
+/* ------------------- *
+ *  Kiara Love Scenes  *
+ * ------------------- */
+COPY ~kiara-zaiya/2da/kiaral1.2da~ ~override~
+	REPLACE ~76011~ @9000
+COPY ~kiara-zaiya/2da/kiaral2.2da~ ~override~
+	REPLACE ~76012~ @9001
+COPY ~kiara-zaiya/2da/kiaral3.2da~ ~override~
+	REPLACE ~76013~ @9002
+
+
+/* ----------- *
+ *  Epilogues  *
+ * ----------- */
+COPY ~kiara-zaiya/2da/zaiend1.2da~ ~override~
+	REPLACE ~99997~ @9103
+COPY ~kiara-zaiya/2da/zaiend2.2da~ ~override~
+	REPLACE ~99998~ @9104
+COPY ~kiara-zaiya/2da/zaiend3.2da~ ~override~
+	REPLACE ~99999~ @9105
+
+COPY ~kiara-zaiya/2da/kiarend1.2da~ ~override~
+	REPLACE ~99997~ @9100
+COPY ~kiara-zaiya/2da/kiarend2.2da~ ~override~
+	REPLACE ~99998~ @9101
+COPY ~kiara-zaiya/2da/kiarend3.2da~ ~override~
+	REPLACE ~99999~ @9102
+
+
+/* ------------------------------------------------------ *
+ *  Appending Kaira and Zaiya dialogue files to the game  *
+ * ------------------------------------------------------ */
+
+/* Removed as of v2.0.0 as ToB is pre-requisite
+
+// BG2 game without ToB
+// --------------------
+APPEND ~pdialog.2da~ ~KIARA        KIARAP           KIARAJ          KIARAD~ UNLESS ~KIARA~ UNLESS ~25POST~
+APPEND ~pdialog.2da~ ~ZAIYA        ZAIYAP           ZAIYAJ          ZAIYAD~ UNLESS ~ZAIYA~ UNLESS ~25POST~
+*/
+
+// ToB based game
+// --------------
+APPEND ~pdialog.2da~  ~KIARA        KIARAP           KIARAJ          KIARAD         KIAR25P               KIAR25J                KIAR25D                   Kiar25~ UNLESS ~KIARA~ IF ~25POST~
+APPEND ~pdialog.2da~  ~ZAIYA        ZAIYAP           ZAIYAJ          ZAIYAD         ZAI25P                ZAI25J                 ZAI25D                    Zai25~  UNLESS ~ZAIYA~ IF ~25POST~
+
+APPEND ~interdia.2da~ ~KIARA      BKIARA       BKIAR25~ UNLESS ~KIARA~
+APPEND ~interdia.2da~ ~ZAIYA      BZAIYA       BZAI25~  UNLESS ~ZAIYA~
