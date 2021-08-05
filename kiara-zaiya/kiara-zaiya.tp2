@@ -1,4 +1,4 @@
-BACKUP ~Kiara-Zaiya/backup~
+BACKUP ~kiara-zaiya/backup~
 AUTHOR ~olryx2@yahoo.co.uk~
 ASK_EVERY_COMPONENT
 
@@ -6,7 +6,7 @@ ASK_EVERY_COMPONENT
 // Version of the mod, appearing in the WeiDU.log
 VERSION ~v1.6.2~
 
-README ~Kiara-Zaiya/readme_KZ.chm~
+README ~kiara-zaiya/readme_KZ.chm~
 
 ALWAYS
 
@@ -120,7 +120,7 @@ LANGUAGE ~Russian (Gingerrr & aerie.ru. Updated by Prowler)~
 BEGIN @1 // ~Kiara-Zaiya for BG2 SOA~
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @2 // ~You do not appear to have Throne of Bhaal installed.~
 
-// Isaya : additional code for V1.6.1, retrieved from BG2Fixpack
+// Isaya: additional code as of v1.6.1, retrieved from BG2Fixpack
 
 // Addition of STATE_REALLY_DEAD state, used by several scripts modified by Lollorian
 /* ---------------------------------------------------------------------------------------------------------------------- *
@@ -153,7 +153,7 @@ APPEND ~GTIMES.IDS~ ~3600 TWELVE_HOURS~       UNLESS ~TWELVE_HOURS~
 // ---------------------------------------
 CLEAR_IDS_MAP
 
-// Isaya : end of additional code
+// Isaya: end of additional code
 
 
 COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/Spl~ ~override~
@@ -172,8 +172,7 @@ COPY ~%MOD_FOLDER%/portraits_others~   ~override~
  *  Installing creatures  *
  * ---------------------- */
 
-// Isaya : version 1.6.2
-// Add the default soundset using FEMALE2
+// Isaya (version 1.6.2): Add the default soundset using FEMALE2
 COPY ~kiara-zaiya/creatures/kiara.cre~ ~override~
 	SAY NAME1 @3
 	SAY NAME2 @3
@@ -201,7 +200,7 @@ COPY ~kiara-zaiya/creatures/kiara.cre~ ~override~
 	SAY SELECT_COMMON1 @195
 	SAY SELECT_COMMON2 @196
 	SAY SELECT_COMMON3 @197
-	// Isaya : since there were two INITIAL_MEETING, the second with "Just ask", I decided to assign it to COMMON4 and COMMON5
+	// Isaya: since there were two INITIAL_MEETING, the second with "Just ask", I decided to assign it to COMMON4 and COMMON5
 	SAY SELECT_COMMON4 @220
 	SAY SELECT_COMMON5 @220
 	SAY SELECT_COMMON6 @219
@@ -224,8 +223,7 @@ COPY ~kiara-zaiya/creatures/kiara.cre~ ~override~
 	SAY SPELL_DISRUPTED @215
 	SAY SET_A_TRAP @216
 
-// Isaya : version 1.6.2
-// Add the default soundset using FEMALE4
+// Isaya (version 1.6.2): Add the default soundset using FEMALE4
 COPY ~kiara-zaiya/creatures/zaiya.cre~ ~override~
 	SAY NAME1 @27
 	SAY NAME2 @27
@@ -253,7 +251,7 @@ COPY ~kiara-zaiya/creatures/zaiya.cre~ ~override~
 	SAY SELECT_COMMON1 @97
 	SAY SELECT_COMMON2 @157
 	SAY SELECT_COMMON3 @158
-// Isaya : since there were two INITIAL_MEETING, the second with "I agree", I decided to assign it to COMMON4 and COMMON5
+// Isaya: since there were two INITIAL_MEETING, the second with "I agree", I decided to assign it to COMMON4 and COMMON5
 	SAY SELECT_COMMON4 @187
 	SAY SELECT_COMMON5 @187
 	SAY SELECT_COMMON6 @186
@@ -389,10 +387,23 @@ COPY ~kiara-zaiya/items/amaswd.itm~ ~override~
  *  Installing audio files  *
  * ------------------------ */
 
-// Isaya note: Kiara.baf and Kiar25.baf must be compiled AFTER the ADD_MUSIC in order to update the music code assigned at installation
-COPY ~kiara-zaiya/sounds/mxkiara.mus~ ~music~
-ADD_MUSIC  ~Kiara~    	~music/mxkiara.mus~
+// Install music
+// -------------
+// Isaya note: Kiara.baf and Kiar25.baf must be compiled AFTER ADD_MUSIC in order to update the music code assigned at installation
+MKDIR ~music/mxkiara~
+COPY ~kiara-zaiya/music/mxkiara.mus~ ~music~
+ADD_MUSIC ~Kiara~ ~music/mxkiara.mus~
 
+COPY ~kiara-zaiya/music/mxkiaraa.acm~ ~music/mxkiara~
+
+// Install audio files
+// -------------------
+LAF HANDLE_AUDIO END
+
+
+/* ------------------------- *
+ *  Compiling SoA Dialogues  *
+ * ------------------------- */
 
 // Handle journal entries for EE games
 // -----------------------------------
@@ -401,10 +412,6 @@ ACTION_IF is_ee BEGIN
 	ADD_JOURNAL @29 @30 @31 @32 @33    USING ~%MOD_FOLDER%/lang/%LANGUAGE%/kzsetup.tra~ 
 END 
 
-
-/* ------------------------- *
- *  Compiling SoA Dialogues  *
- * ------------------------- */
 COMPILE EVALUATE_BUFFER ~kiara-zaiya/dialogs/kiara.d~
         ~kiara-zaiya/dialogs/kiaraj.d~
         ~kiara-zaiya/dialogs/kiarap.d~
@@ -615,13 +622,6 @@ APPEND ~interdia.2da~ ~ZAIYA      BZAIYA       BZAI25~  UNLESS ~ZAIYA~
 ////////////////////////////////////////////////////////////////////////////////////
 
 BEGIN @150 // ~Custom Kiara-Zaiya soundset (available separately).~
-
-/* --------------------- *
- *  Install audio files  *
- * --------------------- */
-
-LAF HANDLE_AUDIO END
-
 
 // Isaya (V1.6.2)
 // For custom soundsets, several texts differ from those of the basic soundset.

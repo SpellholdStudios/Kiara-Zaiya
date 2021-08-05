@@ -4,7 +4,7 @@
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macOS%20%7C%20linux%20%7C%20Project%20Infinity&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Russian%20%7C%20Spanish&color=limegreen)
 
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BGII%20%7C%20BGT%20%7C%20BG2%3AEE%20%7C%20EET&color=dodgerblue)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BGII:ToB%20%7C%20BGT%20%7C%20BG2%3AEE%20%7C%20EET&color=dodgerblue)
 
 
 <div align="center"><h1></a>Kiara Zaiya NPCs (WIP)</h1>
@@ -49,7 +49,7 @@ Baldur's Gate Trilogy and EET<h3>
     - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
     - Added chapters continuity for EET games.
     - Added `ADD_JOURNAL` entries.
-    - Rewrote soundset install procedure to use WeiDU's built-in `HANDLE_AUDIO` function.
+    - Rewrote soundset install procedure to use WeiDU's built-in `HANDLE_AUDIO` function, and converted music file to .acm.
     - ...
     - Provided accurate sized NPC portraits for EE games.
 - Included all BWP Fixpack fixes:
