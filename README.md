@@ -64,6 +64,7 @@ Baldur's Gate Trilogy and EET<h3>
 - Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
 - Spells installation: removed useless `SAY NAME2` patches.
 - .
+- Removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
 - TRAIfied last missing tp2 strref.
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.

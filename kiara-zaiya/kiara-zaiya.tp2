@@ -12,19 +12,18 @@ ALWAYS
 
 	ACTION_IF NOT VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once per install!
 
-// Isaya : the IDS files included in the mod are identical to those of ToB with the
-// latest patch. In principle, they should not be overwritten unless the official ToB patch
-// is not installed.
-  ACTION_IF NOT FILE_EXISTS ~override/action.ids~ THEN BEGIN
-    COPY ~Kiara-Zaiya/ids/action.ids~ ~override/action.ids~
-  END
-  ACTION_IF NOT FILE_EXISTS ~override/trigger.ids~ THEN BEGIN
-    COPY ~Kiara-Zaiya/ids/trigger.ids~ ~override/trigger.ids~
-  END
-  ACTION_IF NOT FILE_EXISTS ~override/spell.ids~ THEN BEGIN
-    COPY ~Kiara-Zaiya/ids/spell.ids~ ~override/spell.ids~
-  END
-
+// Isaya: the IDS files included in the mod are identical to those of ToB with the latest patch. In principle, they should not be overwritten unless the official ToB patch is not installed.
+/* Gwendolyne: removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
+		ACTION_IF NOT FILE_EXISTS ~override/action.ids~ THEN BEGIN
+			COPY ~Kiara-Zaiya/ids/action.ids~ ~override/action.ids~
+		END
+		ACTION_IF NOT FILE_EXISTS ~override/trigger.ids~ THEN BEGIN
+			COPY ~Kiara-Zaiya/ids/trigger.ids~ ~override/trigger.ids~
+		END
+		ACTION_IF NOT FILE_EXISTS ~override/spell.ids~ THEN BEGIN
+			COPY ~Kiara-Zaiya/ids/spell.ids~ ~override/spell.ids~
+		END
+*/
 		/* ----------------------------------------- *
 		 *    Determines which game is installed.    *
 		 * ----------------------------------------- */
@@ -519,19 +518,14 @@ COPY ~kiara-zaiya/2da/kiaral2.2da~ ~override~
 COPY ~kiara-zaiya/2da/kiaral3.2da~ ~override~
 	REPLACE ~76013~ @9002
 
-// Isaya : version 1.6.2
+// Isaya: version 1.6.2
 // All scripts use MONK_LAY_ON_HANDS, not MONK_HEAL, so name the spell MONK_LAY_ON_HANDS
 // Note : in ToB with patch, these definitions are already in
-APPEND ~Spell.ids~
-~4815 MONK_LAY_ON_HANDS~
-UNLESS ~4815~
-APPEND ~Spell.ids~
-~4811 MONK_STUNNING_BLOW~
-UNLESS ~4811~
-APPEND ~Spell.ids~
-~4820 MONK_QUIVERING_PALM~
-UNLESS ~4820~
-
+/* Gwendolyne: removed spell.ids files patch as ToB has been set as a prerequisite.
+APPEND ~spell.ids~ ~4815 MONK_LAY_ON_HANDS~   UNLESS ~4815~
+APPEND ~spell.ids~ ~4811 MONK_STUNNING_BLOW~  UNLESS ~4811~
+APPEND ~spell.ids~ ~4820 MONK_QUIVERING_PALM~ UNLESS ~4820~
+*/
 //////////////////////////////////////////////////////////////////
 //TOB PART COMPILATION
 /////////////////////////////////////////////////////////////////
