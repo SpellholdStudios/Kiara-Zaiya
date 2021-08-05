@@ -54,10 +54,10 @@ Baldur's Gate Trilogy and EET<h3>
     - Provided accurate sized NPC portraits for EE games.
 - Included all BWP Fixpack fixes:
     - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
-    - <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-49#entry587224">micbaldur's Zaiya epilogue fix</a>: fixed a typo in ZAI6200.baf causing one of Zaiya's epilogues not to show up.
+    - <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-49#entry587224">micbaldur's Zaiya epilogue fix</a>: fixed a typo in zai6200.baf causing one of Zaiya's epilogues not to show up.
     - *The Divine Sword* (amaswd.itm): Nightfarer's item description fix.
     - Lollorian's patched Revised Suldanessalar: patched "*ar2807.are*", "*uddeath.bcs*", "*demsuc.bcs*", "*suscene1.baf*" and "*suscene3.baf*" instead of overwriting them.
-    - .
+    - Fixed Ninja-To +1 wrong immunity to poison assignments: moved them from melee header to global effects.
 - kzninja.baf: fixed typos.
 - Removed *pdialog.2da* appending for BG2 without ToB games (not supported).
 - Rewrote .bcs appending process (originally coded with so bad practice).
@@ -77,3 +77,4 @@ Baldur's Gate Trilogy and EET<h3>
 TODO
 - !StateCheck("Valygar",STATE_SLEEPING)
 - genfix.baf, kiaraadd.baf, zaiyad.baf ???
+- Zaiya INITIAL_MEETING soundset @91???
