@@ -568,9 +568,10 @@ COMPILE ~kiara-zaiya/scripts/zai25.baf~
         ~kiara-zaiya/scripts/kzcutwra.baf~
         ~kiara-zaiya/scripts/kz#osan.baf~
         ~kiara-zaiya/scripts/kz#cut34.baf~
-COPY ~kiara-zaiya/creatures/osan.cre~ ~override/Osan.cre~
-	SAY NAME1 ~Osan~
-	SAY NAME2 ~Osan~
+
+COPY ~kiara-zaiya/creatures/osan.cre~ ~override~
+	SAY NAME1 @264
+	SAY NAME2 @264
 
 //TOB END MAKING SURE WE DON'T MESS UP OTHER MODS
 ACTION_IF NOT FILE_EXISTS ~override/AR6200.bcs~ THEN BEGIN	  
