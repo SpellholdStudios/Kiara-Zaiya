@@ -81,3 +81,35 @@ TODO
 - !StateCheck("Valygar",STATE_SLEEPING)
 - genfix.baf, kiaraadd.baf, zaiyad.baf ???
 - Zaiya INITIAL_MEETING soundset @91???
+- spwnrak.baf is overwritting vanilla file and is spawning KZ#raj01.cre which is not installed by the mod!
+
+
+
+##### Version 1.6.1 &nbsp;(unknown)
+
+- Moved Setup-Kiara-Zaiya.tp2 into the mod folder.
+- Added VERSION-flag
+- Changed to README command
+- Fixed text conflicts between the two main tra files causing Kiara leaving dialog to use several component names instead of the proper line.
+- Fixed typo causing the absence of a dialog line.
+- Sulda/KZ#Qilkw.BAF,KZNINJA.BAF and WU-JE/KZJAO.BAF: <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483485">Fixed `Myself` and `!Dead(Myself)`</a>.
+- <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483525">Fixed Sulda/KZ#DMLRD.BAF</a>
+- Fixed several warnings during installation.
+- Added French, Spanish, German and Russian translations.
+- TRAIfied dialogs and TP2 files for hardcoded English strings.
+- Updated WeiDU installer to v215.
+
+##### Version 1.6.2 &nbsp;(unknown)
+
+- Used a normal version identification.
+- Converted all bcs to baf, allowing the direct use of text references in the scripts and facilitating maintenance.
+- Reworked tp2 to compile them instead of copying the bcs.
+- Exploited the music variable in Kiara.baf directly (using EVALUATE_BUFFER when compiling).
+- Fixed the romance music in ToB (couldn't be played as the song number was not properly set).
+- Duplicated soundset fix patch scripts, for normal or custom soundsets.
+- Included soundset in CRE file (dialog fix not required now, although still available).
+- Included <a href="http://www.shsforums.net/topic/46469-bwp-and-mod-bugs-not-yet-fixed/?p=501418">Hoppy's suggested fixes for the Amaralis group in Small Teeth Pass</a> (Morticia, ...).
+- Replaced `Dead("Myself")` and `Dead("Player1")` with `StateCheck(...,STATE_REALLY_DEAD)` in many scripts (generalisation of Lollorian's work).
+- Fixed many warning in scripts, hopefully improving Kiara's fighting skills as well as opponents' and also a few cutscenes.
+- Updated WeiDU installer to v224.
+
