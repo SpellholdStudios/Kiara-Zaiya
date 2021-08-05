@@ -616,10 +616,12 @@ APPEND ~interdia.2da~ ~ZAIYA      BZAIYA       BZAI25~  UNLESS ~ZAIYA~
 
 BEGIN @150 // ~Custom Kiara-Zaiya soundset (available separately).~
 
-REQUIRE_FILE ~Kiara-Zaiya/Sounds/Oggdec.exe~ @189 // ~You do not seem to have the custom soundset installed!!! It can be found separately on the Kiara-Zaiya website.~
+/* --------------------- *
+ *  Install audio files  *
+ * --------------------- */
 
-AT_EXIT ~Kiara-Zaiya/Sounds/Install.bat~
-AT_UNINSTALL ~Kiara-Zaiya/Sounds/Uninst.bat~
+LAF HANDLE_AUDIO END
+
 
 // Isaya (V1.6.2)
 // For custom soundsets, several texts differ from those of the basic soundset.

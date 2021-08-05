@@ -49,7 +49,7 @@ Baldur's Gate Trilogy and EET<h3>
     - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
     - Added chapters continuity for EET games.
     - Added `ADD_JOURNAL` entries.
-    - ...
+    - Rewrote soundset install procedure to use WeiDU's built-in `HANDLE_AUDIO` function.
     - ...
     - Provided accurate sized NPC portraits for EE games.
 - Included all BWP Fixpack fixes:
@@ -65,10 +65,12 @@ Baldur's Gate Trilogy and EET<h3>
 - Spells installation: removed useless `SAY NAME2` patches.
 - .
 - Removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
+- Integrated custom soundset in the mod package.
 - TRAIfied last missing tp2 strref.
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.
 - Lower cased files.
+- Updated OggDec to v1.9.7 and added sox v14.4.1 for mac.
 - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
 - Updated WeiDU installer to v247.
 - Uploaded mod to official Spellhold Studios GitHub mirror account.
