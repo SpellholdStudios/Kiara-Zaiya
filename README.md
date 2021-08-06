@@ -63,7 +63,7 @@ Baldur's Gate Trilogy and EET<h3>
 - Rewrote .bcs appending process (originally coded with so bad practice).
 - Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
 - Spells installation: removed useless `SAY NAME2` patches.
-- .
+- ...
 - Removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
 - Integrated custom soundset in the mod package.
 - TRAIfied last missing tp2 strref.
@@ -81,23 +81,8 @@ TODO
 - !StateCheck("Valygar",STATE_SLEEPING)
 - genfix.baf, kiaraadd.baf, zaiyad.baf ???
 - Zaiya INITIAL_MEETING soundset @91???
-- spwnrak.baf is overwritting vanilla file and is spawning KZ#raj01.cre which is not installed by the mod!
+- spwnrak.baf is overwriting vanilla file and is spawning KZ#raj01.cre which is not installed by the mod!
 
-
-
-##### Version 1.6.1 &nbsp;(unknown)
-
-- Moved Setup-Kiara-Zaiya.tp2 into the mod folder.
-- Added VERSION-flag
-- Changed to README command
-- Fixed text conflicts between the two main tra files causing Kiara leaving dialog to use several component names instead of the proper line.
-- Fixed typo causing the absence of a dialog line.
-- Sulda/KZ#Qilkw.BAF,KZNINJA.BAF and WU-JE/KZJAO.BAF: <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483485">Fixed `Myself` and `!Dead(Myself)`</a>.
-- <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483525">Fixed Sulda/KZ#DMLRD.BAF</a>
-- Fixed several warnings during installation.
-- Added French, Spanish, German and Russian translations.
-- TRAIfied dialogs and TP2 files for hardcoded English strings.
-- Updated WeiDU installer to v215.
 
 ##### Version 1.6.2 &nbsp;(unknown)
 
@@ -113,3 +98,123 @@ TODO
 - Fixed many warning in scripts, hopefully improving Kiara's fighting skills as well as opponents' and also a few cutscenes.
 - Updated WeiDU installer to v224.
 
+##### Version 1.6.1 &nbsp;(unknown)
+
+- Moved Setup-Kiara-Zaiya.tp2 into the mod folder.
+- Added VERSION-flag
+- Changed to README command
+- Fixed text conflicts between the two main tra files causing Kiara leaving dialog to use several component names instead of the proper line.
+- Fixed typo causing the absence of a dialog line.
+- Sulda/KZ#Qilkw.BAF,KZNINJA.BAF and WU-JE/KZJAO.BAF: <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483485">Fixed `Myself` and `!Dead(Myself)`</a>.
+- <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483525">Fixed Sulda/KZ#DMLRD.BAF</a>
+- Fixed several warnings during installation.
+- Added French, Spanish, German and Russian translations.
+- TRAIfied dialogs and TP2 files for hardcoded English strings.
+- Updated WeiDU installer to v215.
+
+## 
+
+##### Version Beta 1 &nbsp;(Unknown)
+
+- Initial release.
+<div align="right"><a href="#top">Back to top</a></div>
+
+
+<hr>
+
+
+## <a name="intro" id="intro"></a>Overview
+
+<div align="right"><a href="#top">Back to top</a></div>
+
+
+<hr>
+
+
+## <a name="compat" id="compat"></a>Compatibility
+
+#### Games supported
+
+This mod is designed to work on the following Infinity Engine games: the original Baldur's Gate II (BG2 or just SoA) with the Throne of Bhaal (ToB) expansion, Baldur's Gate II: Enhanced Edition (BG2EE), the conversion projects <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a> and <a href="https://github.com/Gibberlings3/EET/releases">Enhanced Edition Trilogy (EET)</a>.
+
+## 
+
+#### Other Mods Compatibility
+
+
+## 
+
+#### Installation Order
+
+>Although it is not required for the Kiara-Zayia mod to function properly, classical game players are strongly recommended to download and install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
+
+<div align="right"><a href="#top">Back to top</a></div>
+
+
+<hr>
+
+
+## <a name="installation" id="installation"></a>Installation
+
+<div align="right"><a href="#top">Back to top</a></div>
+
+
+<hr>
+
+
+## <a name="details" id="details"></a>Details
+
+#### PNJs characteristics
+
+<table cellpadding=0 cellspacing=0 style="margin-top: 1%; margin-left: 80px">
+	<tr style= "line-height: 170%;">
+		<th>Portrait</th>
+		<th>Strength</th>
+		<th>Dexterity</th>
+		<th>Constitution</th>
+		<th>Intelligence</th>
+		<th>Wisdom</th>
+		<th>Charisma</th>
+	</tr>
+	<tr>
+		<td><img src="kiara-zaiya/readme/images/kiaram.jpg" title="Kiara"></td>
+		<td><div align="center">14</div></td>
+		<td><div align="center">17</div></td>
+		<td><div align="center">12</div></td>
+		<td><div align="center">15</div></td>
+		<td><div align="center">10</div></td>
+		<td><div align="center">16</div></td>
+	</tr>
+	<tr>
+		<td colspan="7">
+		<strong>Biography:</strong><br>
+		When asked about her past, Kiara tells you that she was born in the Kara Turian land of Koryo, far east of Faerûn. After the tragic death of her parents, she was rescued by a local monastery and although extremely rare for a girl, raised as a monk. She spent most of her youth there and learnt some basic fighting skills, herbal preparations and meditation. For an obscure reason, although from the tear in her eye you guess a tragic event, she was expelled from the monastery at an early age. She traveled to the west and met some merchants along the road which she escorted first to Tu Lung before embarking aboard a ship to the city of Medina al Afyal. This is an adventure she highly speaks of with an enthusiastic tone in her voice. On arrival at Afyal, she mentions she met Zaiya before being abducted by corsairs and sold as slaves in Athkatla. You see her face darken under her monk's hood; you know she will say no more.</td>
+	</tr>
+	<tr>
+		<td><img src="kiara-zaiya/readme/images/zaiyam.jpg" title="Zaiya"></td>
+		<td><div align="center">9</div></td>
+		<td><div align="center">16</div></td>
+		<td><div align="center">16</div></td>
+		<td><div align="center">17</div></td>
+		<td><div align="center">15</div></td>
+		<td><div align="center">10</div></td>
+	</tr>
+		<td colspan="7">
+		<strong>Biography:</strong><br>
+		When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerun. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.</td>
+	</tr>
+</table>
+
+<div align="right"><a href="#top">Back to top</a></div>
+
+
+## <a name="components" id="components"></a>Components
+
+The installer includes the following components. All optional components require the main component to be installed.
+
+<hr>
+
+
+## <a name="credits" id="credits"></a>Credits and Acknowledgements
+
+<div align="right"><a href="#top">Back to top</a></div>
