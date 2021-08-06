@@ -12,24 +12,24 @@
 @406  = ~Well then Zaiya, it looks like we'll have to leave.~
 @407  = ~I am most pleased by your decision. So what do we do now, <CHARNAME>?~
 @408  = ~Well Kiara, I should tell you I have a goal to rescue a friend of mine, Imoen. She has been captured by the Cowled Wizards.~
-@409  = ~Well Kiara, I am hunting a very powerful evil mage named Irenicus. ~
+@409  = ~Well Kiara, I am hunting a very powerful evil mage named Irenicus.~
 @410  = ~Well Kiara, I have no certain destination for now. Perhaps we shall encounter something soon.~
 @411  = ~We shall help you as best as we can, <CHARNAME>.~
 
 // Isaya: numbers changed from [250..290] to [350..390] in order to avoid conflicts with
 // identical numbers in KZSetup.tra file, causing problems in the compiled dialog
 //KIARAP.D: LEAVE/REJOIN
-@350  = ~You...you have saved me...but...What happened to Zaiya? No! You let her die?!~
+@350  = ~You... you have saved me... but... What happened to Zaiya? No! You let her die?!~
 @351  = ~You have... you have saved me once again. I am truly in your debt, my love.~
 @352  = ~No, I am in *your* debt. You restored my spirit with your beguiling ways long ago.~
 @353  = ~The Final Battle with Bodhi.
 
-While I had feared for some time that Bodhi's final revenge on me would be to take away Kiara forever, it seems that the information in the lorebook was right... Amaunator's idol has not only restored Kiara to life, but has removed the vampire curse from her, as well.  ~
+While I had feared for some time that Bodhi's final revenge on me would be to take away Kiara forever, it seems that the information in the lorebook was right... Amaunator's idol has not only restored Kiara to life, but has removed the vampire curse from her, as well.~
 @354  = ~Your weakness nearly cost us all our lives. I trust this will not happen again.~
 @355  = ~As well you should be, but I will not hold that against you. I only wish that you return to me.~
 @356  = ~I see. No, rest assured that it will not. So, do we travel as before, or do we go our separate ways?~
 @357  = ~Yes, get back in the group and let's go.~
-@358  = ~No, I do not need you just yet. ~
+@358  = ~No, I do not need you just yet.~
 @359  = ~I am... most glad to be returning to your company, <CHARNAME>.~
 @360  = ~And I am more than happy to have you return. Come, rejoin with me and we will see this quest through to its end, together.~
 @361  = ~Yes, well... As much as I regret to say it... I do not need you right now.~
@@ -41,7 +41,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @367  = ~Come Zaiya, let's go to the docks and find a ship to Maztica.~
 @368  = ~I do not often express such feelings, but I must say that... I would not wish to be parted from you again.~
 @369  = ~You want us to leave after all we have shared together?~
-@370  = ~No, I'm sorry.  Please rejoin the group.~
+@370  = ~No, I'm sorry. Please rejoin the group.~
 @371  = ~I'm afraid so, you and Zaiya should go.~
 @372  = ~You know I can't leave the poor girl on her own...~
 @373  = ~Hello <CHARNAME>, are you looking for a ship too?~
@@ -73,17 +73,17 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @496  = ~So tell me Anomen, why did you choose the Knight's order when your skills could have taken you further without their righteous interference?~ [MxKiaraB]
 @497  = ~I couldn't agree less Anomen.~
 @498  = ~Is this dark skin your natural color or did you forget to wash whilst hiding in your cabin, ranger?~ [MxKiaraB]
-@499  = ~There is no need to be upset...really...bungled wizard.~
+@499  = ~There is no need to be upset... really... bungled wizard.~
 @500  = ~Korgan, I heard that dwarves have impressive family jewels. Surely such truth must be exaggerated?~ [MxKiaraB]
 @501  = ~Not now Korgan. Let's catch up with the others.~
-@502  = ~Edwin, I heard magic is forbidden in Amn...I assume a it is a difficult place for a wizard.~ [MxKiaraB]
+@502  = ~Edwin, I heard magic is forbidden in Amn... I assume a it is a difficult place for a wizard.~ [MxKiaraB]
 @503  = ~Alas Edwin, had you been polymorphed into a toad, I might have found you much more attractive. Let that tell you about your sexual appeal.~
 @504  = ~<CHARNAME>, you know Amaralis will come back for *me*, don't you?~
 @505  = ~Who was he anyway?~
 @506  = ~Why would he come back? The fool almost got himself killed.~
 @507  = ~This is of no consequence. Pressing matters call for our attention. Let's cut the babble.~
 @508  = ~You may have found him alone in his house, but he was unprepared for you. Also you *must* be aware that he is the Master Slaver of Athkatla.~
-@509  = ~He and his Slaver's Guild do not forget humiliation easily.  Nor do they forgive it.~
+@509  = ~He and his Slaver's Guild do not forget humiliation easily. Nor do they forgive it.~
 @510  = ~You said he would come for *you*, so this is not all about revenge, Kiara, is it?~
 @511  = ~I can't simply believe that he would seek revenge alone.~
 @512  = ~For reasons unknown to me, Amaralis was led to believe that I hold some valuable information. He probably still believes this to be true.~
@@ -99,12 +99,12 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @522  = ~Such prying into one's privacy is becoming rather trying.~
 @523  = ~My apologies, I did not mean to encroach on your privacy.~
 @524  = ~How did you become an adventurer?~
-@525  = ~I was raised by my foster father Gorion in the library-fortress Candlekeep, near Baldur's Gate in the north. It became unsafe, so Gorion decided that we should leave our once-peaceful haven. However, soon after leaving Candlekeep, we were ambushed and Gorion was murdered.  As a result I was forced to take to the road.~
+@525  = ~I was raised by my foster father Gorion in the library-fortress Candlekeep, near Baldur's Gate in the north. It became unsafe, so Gorion decided that we should leave our once-peaceful haven. However, soon after leaving Candlekeep, we were ambushed and Gorion was murdered. As a result I was forced to take to the road.~
 @526  = ~I'm really not interested in discussing that.~
-@527  = ~Such a cruel loss!  Take solace, if it helps, in the fact I am no stranger to the emotions you must have felt. My parents were also murdered... Your past, it seems, resembles my own.~
+@527  = ~Such a cruel loss! Take solace, if it helps, in the fact I am no stranger to the emotions you must have felt. My parents were also murdered... Your past, it seems, resembles my own.~
 @528  = ~I will listen intently to your tale, should you feel the need to share some of your burden.~
 @529  = ~I'm sure it is. Leave me be.~
-@530  = ~I was born in the Kara-Turian land of Koryo, very far to the east of Faerun. My parents were humble peasants, living peacefully until the day...the day they were slaughtered in cold blood.~
+@530  = ~I was born in the Kara-Turian land of Koryo, very far to the east of Faerun. My parents were humble peasants, living peacefully until the day... the day they were slaughtered in cold blood.~
 @531  = ~What happened to them?~
 @532  = ~My condolences.~
 @533  = ~Oh, how tragic. But I have no intentions to listen further to such sordid tales.~
@@ -112,10 +112,10 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @535  = ~They had also hired wild tribes from the north, luring them with promises of wealth, and marched on our capital city of Tu Pe, burning and ransacking every farm, village, and city that stood in their path.~
 @536  = ~Women were raped and then enslaved for the pleasure of the Warlord and his troops, whilst men and boys were brutally slaughtered. Our farm was one of the first to be...~
 @537  = ~That's terrible. I am truly sorry.~
-@538  = ~If they were killed it means that they were weak.  In my opinion, they deserved exactly what they received. I've heard enough.~
+@538  = ~If they were killed it means that they were weak. In my opinion, they deserved exactly what they received. I've heard enough.~
 @539  = ~Yes, it was a terrible tragedy, but let me continue my tale..~
 @540  = ~My father had seen the approaching army and told me to hide under the haystack we kept for our livestock.~
-@541  = ~The events I witnessed that day are still ablaze in my heart.  The passage of time has done nothing to ease the pain I feel. My father was savagely murdered in front of me and my mother raped right before my eyes. Their screams of pain are still as vivid in my memory as they were that day.~
+@541  = ~The events I witnessed that day are still ablaze in my heart. The passage of time has done nothing to ease the pain I feel. My father was savagely murdered in front of me and my mother raped right before my eyes. Their screams of pain are still as vivid in my memory as they were that day.~
 @542  = ~How did you survive?~
 @543  = ~Surely, a terrible trauma for a young child.~
 @544  = ~Of course, my apologies. Some other time, perhaps.~
@@ -154,7 +154,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @577  = ~This is intriguing. Tell me more about a typical day at your monastery?~
 @578  = ~No. I've found that there is so much fun out there that I missed during my youth, and so many other things that were denied to me. Never. I could never go back to that.~
 @579  = ~Who is this Osan you mentioned?~
-@580  = ~Osan...was also a monk at the monastery, but.. Let's get going. I feel a cold chill in the air.~
+@580  = ~Osan... was also a monk at the monastery, but.. Let's get going. I feel a cold chill in the air.~
 @581  = ~The daily routine was set by Master Won Kwang and has seen no change since it was first established some 432 years ago. We rose before dawn and started two hours of exercise, then spent time in meditation before a frugal breakfast of rice porridge.~
 @582  = ~Studies then occupied the remainder of our mornings, except on holy days when we worshiped in the temples. An hour break was allowed before our midday snack, and the afternoon was spent practicing martial arts under the watchful eyes of the school masters.~
 @583  = ~At sunset we began to worship with the chants of Ki Rho Zsa, and we burned incense by the idols in the shrine that Wong Kwang built.~
@@ -188,7 +188,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @611  = ~If I am such an ugly duck, why have you been staring at me for the last two days?~
 @612  = ~Anyway, I guess the little *ugly* duck started to have a little fling?~
 @613  = ~Such strong words! I was not staring merely watching your fighting skills at times.~
-@614  = ~ Your own fantasies surely, but please do continue on your tale...~
+@614  = ~Your own fantasies surely, but please do continue on your tale...~
 @615  = ~I do admit I have been watching you from time to time. I hope you are not offended.~
 @616  = ~Such blunt lies! But let me continue my story of Osan.~
 @617  = ~Sure.~
@@ -196,19 +196,19 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @619  = ~One day, under the shade of the old oak tree, I gently pulled him to me, his head tilted towards mine. As I gazed into his eyes, a warm feeling embraced me from within.~
 @620  = ~I lowered my lips and kissed him. His lips parted, and my tongue caressed his, exploring him for the first time. Wanting to find his secrets, his passions.~
 @621  = ~We melted into each others arms, becoming one in our desires.~
-@622  = ~I...I don't know what to say. Why do you share such intimate moments of your life with me?~
+@622  = ~I... I don't know what to say. Why do you share such intimate moments of your life with me?~
 @623  = ~I don't see the point in this. Don't you have any sense of intimacy?~
-@624  = ~I am sorry but my interest falters...Let's stop this conversation here, shall we?~
+@624  = ~I am sorry but my interest falters... Let's stop this conversation here, shall we?~
 @625  = ~I will not allow such intimate conversation to take place in my party, Kiara.~
 @626  = ~Have you ever kissed someone, <CHARNAME>?~
 @627  = ~Well, my sister... On the cheek once...~
 @628  = ~Uh,... yes.... but I do not wish to expose any of my intimate moments as you do, Kiara.~
 @629  = ~Well, I kissed my sister's friend once...~
 @630  = ~If you're just going to answer a question with a question, I'd rather avoid further embarrassment.~
-@631  = ~That's hardly what I meant, <CHARNAME>, however I won't embarrass you further...(chuckle) Let's move on.~
-@632  = ~I have a sneaking suspicion you haven't...but this would further embarrass you, wouldn't it?~
+@631  = ~That's hardly what I meant, <CHARNAME>, however I won't embarrass you further... (chuckle) Let's move on.~
+@632  = ~I have a sneaking suspicion you haven't... but this would further embarrass you, wouldn't it?~
 @633  = ~And did you feel the passion stirring your body or was it a mere childish kiss?~
-@634  = ~It was passionate and wild...I often wonder what became of her...~
+@634  = ~It was passionate and wild... I often wonder what became of her...~
 @635  = ~I was kissing her good-bye when she left Candlekeep...~
 @636  = ~Do you want to hear about my first night with Osan?~
 @637  = ~If you care to share such intimate moments, why not?~
@@ -230,16 +230,16 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @653  = ~Most frustrating, I believe.~
 @654  = ~The road of adventure brings very few pleasures along its path. I attempt only to make the road more agreeable...~
 @655  = ~..and perhaps see if this muscle-hardened body of yours will ever quiver...~
-@656  = ~An attempt at which you will hardly succeed...But tell me what happened to you and Osan?~
-@657  = ~A goal that reveals an attraction...perhaps more...a desire for a strong man such as myself.~
-@658  = ~Possibly...Though you are quick to jump to conclusions. Let me tell you what happened to Osan and I...~
-@659  = ~Sure, enjoy the meditation and...the lonely nights.~
+@656  = ~An attempt at which you will hardly succeed... But tell me what happened to you and Osan?~
+@657  = ~A goal that reveals an attraction... perhaps more... a desire for a strong man such as myself.~
+@658  = ~Possibly... Though you are quick to jump to conclusions. Let me tell you what happened to Osan and I...~
+@659  = ~Sure, enjoy the meditation and... the lonely nights.~
 @660  = ~Sadly, yes.~
 @661  = ~Naked like worms, there was no way we could justify our presence in this cell. The head of our monastery called for the guards and had us dragged out to the main courtyard, still half naked.~
 @662  = ~He then ordered all monks to come and witness our punishment. I had never felt so humiliated in my life.~
 @663  = ~You had forsaken the trust of those who had cared for you. How could you let this happen with Osan?~
 @664  = ~If you ask me, you looked for trouble in the first place.~
-@665  = ~I'm sorry your first love experience turned to such a disaster. It should have been the best time of your life...I feel sorry for you.~
+@665  = ~I'm sorry your first love experience turned to such a disaster. It should have been the best time of your life... I feel sorry for you.~
 @666  = ~A person must bear the consequences of their actions. I'm sure you were aware you were living in a monastery.~
 @667  = ~Alright then, let's cut it off.~
 @668  = ~If this is how you feel we may as well stop it right here.~
@@ -264,7 +264,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @687  = ~A Bhaalspawn! You mean the head of your monastery was a Bhaalspawn?!~
 @688  = ~This much is true. I'm afraid we would be no match for the spawn of Bhaal.~
 @689  = ~A Bhaalspawn! The head of your monastery was a Bhaalspawn?~
-@690  = ~(In a low voice you hear Kiara responding.) Yes, a Bhaalspawn. (Kiara whispers) Balthazar, you owe me. One day you shall pay a heavy price.  Osan's blood shall be joined by your own.  On this I shall swear! (You see this conversation has strained her and that she will speak no more.)~
+@690  = ~(In a low voice you hear Kiara responding.) Yes, a Bhaalspawn. (Kiara whispers) Balthazar, you owe me. One day you shall pay a heavy price. Osan's blood shall be joined by your own. On this I shall swear! (You see this conversation has strained her and that she will speak no more.)~
 @691  = ~Tell me <CHARNAME>, I sensed from our previous talk that you have something in common with Bhaal and his offspring. Am I right?~
 @692  = ~Well, I guess that people who travel in my party have a right to know. So to answer your question, yes, I am one of Bhaal's children.~
 @693  = ~This is not an issue is not to be taken lightly, I do not wish to discuss it with you.~
@@ -289,7 +289,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @712  = ~What does your prophecy say about them?~
 @713  = ~Soon enough, the Bhaalspawn will rain destruction on the land, and afterwards the Lord of Murder will return to reclaim his throne. Pretty gloomy and about as clear as mud if you ask me.~
 @714  = ~Well, it's quite blurred and only a few high clerics understand it. I've never been able to understand nor memorize a word of it personally.~
-@715  = ~All I know is that it speaks about Bhaalspawn,  about death and about the possible resurrection of the Lord of Murder. But tell me about your prophecy. Is it clearer?~
+@715  = ~All I know is that it speaks about Bhaalspawn, about death and about the possible resurrection of the Lord of Murder. But tell me about your prophecy. Is it clearer?~
 @716  = ~Not really, it also says that soon enough, the Bhaalspawn will rain destruction upon the land and that afterwards the Lord of Murder will be restored.~
 @717  = ~It's quite frightening from either perspective. I think we should continue our journey.~
 @718  = ~I was not completely candid the other day, <CHARNAME>. Our prophecy speaks of something else...~
@@ -300,36 +300,36 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @723  = ~(For a moment, you stare at Kiara, frightened that this prophecy might hold some truth and that under the cover of her innocent stories, a person of great evil lies hidden within.) Do you imply that this woman is... *you*?~
 @724  = ~Get away from me, evil bitch! How do you expect me to believe a word of what you say after such covert lies?~
 @725  = ~Nobody can alter the path I have taken! I control the evil taint and shall not let some half truth guide my life!~
-@726  = ~I...I don't know. When I realized that you were one of them, it became clear to me that our prophecy could be playing itself out right now.~
+@726  = ~I... I don't know. When I realized that you were one of them, it became clear to me that our prophecy could be playing itself out right now.~
 @727  = ~Whether or not I am this woman our prophecy speaks of, I cannot say, as I have no answers to give you. It could be some other Bhaalspawn traveling with another woman from my land.~
 @728  = ~Such a coincidence is highly unlikely, don't you think?.~
 @729  = ~Another covert lie Kiara. I have had enough of your mind games and will not let myself manipulated any more!~
 @730  = ~I am sorry... I was foolish to bring this up. It appears we should take separate paths to avoid future conflicts. I feel I must leave your party.~
-@731  = ~My apologies, I let anger overcome me but it was not really justified.  The taint of Bhaal brings out the worst in those around me so often that anger has become almost commonplace.~
+@731  = ~My apologies, I let anger overcome me but it was not really justified. The taint of Bhaal brings out the worst in those around me so often that anger has become almost commonplace.~
 @732  = ~Good riddance, evil bitch.~
 @733  = ~Please do not get angry. I was merely relating what our prophecy says. I never said you'd be the one spoken of.~
 @734  = ~Ao alone knows how many Bhaalspawn were born. Perhaps hundreds, perhaps thousands.~
 @735  = ~Yes, you may be right, but what about the woman in this prophecy? The similarities are striking, and it is as though you were trying to portray us together.~
 @736  = ~Yes, you may be right. However, I would find such coincidence striking, don't you think?.~
 @737  = ~Only the future may tell us, <CHARNAME>. Let us continue our travels. (You have a vague feeling that you will sleep uneasily in the coming days.)~
-@738  = ~Tell me about your sister, <CHARNAME>? This Imoen we are to rescue...I would like to know more about her.~
+@738  = ~Tell me about your sister, <CHARNAME>? This Imoen we are to rescue... I would like to know more about her.~
 @739  = ~There isn't much to say really. We grew up together in Candlekeep and were both raised by Gorion. She is not really my sister but I like to think of her this way.~
-@740  = ~In all truth, she is only my half sister. My heart fills with joy when I think about her. Besides, she has been such a strong and helpful companion after Gorion's death that it breaks my heart to know she is now in the clutches of the Cowled wizards.  It is for her own sake as well as my own that I seek to rescue her.~
+@740  = ~In all truth, she is only my half sister. My heart fills with joy when I think about her. Besides, she has been such a strong and helpful companion after Gorion's death that it breaks my heart to know she is now in the clutches of the Cowled wizards. It is for her own sake as well as my own that I seek to rescue her.~
 @741  = ~I'd rather not talk of her right now.~
-@742  = ~You have some strong feelings about her...perhaps fraught with sexual desires.~
+@742  = ~You have some strong feelings about her... perhaps fraught with sexual desires.~
 @743  = ~I don't know where your mind is getting such ideas.~
 @744  = ~No, you are mistaken. I bear no such thoughts about Imoen and never will.~
 @745  = ~I love her deeply as a sister but would not bear such impure thoughts.~
 @746  = ~Your reluctance is understandable. Let's move on then.~
 @747  = ~If not your sister, then a handsome man such as yourself surely has someone he holds dear in his heart? ~
-@748  = ~Circumstances have deprived me of such favorable encounters. Most of my past is filled with blood and chaos, and my future does not look any brighter.  Hardly the most romantic lifestyle with which to attract women.~
+@748  = ~Circumstances have deprived me of such favorable encounters. Most of my past is filled with blood and chaos, and my future does not look any brighter. Hardly the most romantic lifestyle with which to attract women.~
 @749  = ~No, but even if I had I wouldn't tell you, Kiara.~
 @750  = ~I do, but I'm afraid such revelation is far too compromising.~
-@751  = ~Oh come on, I've revealed much more distressing secrets to you. Please...I'd so love to know. Tell me...~
+@751  = ~Oh come on, I've revealed much more distressing secrets to you. Please... I'd so love to know. Tell me...~
 @752  = ~Well, she is tall, has brown eyes and a muscular body...~
 @753  = ~I can tell you it is certainly not you.~
 @754  = ~Stop teasing! That description fits every woman in this party.~
-@755  = ~All right then, the truth and beyond...She is not from Faerun.~
+@755  = ~All right then, the truth and beyond... She is not from Faerun.~
 @756  = ~Well, it is certainly not you...~
 @757  = ~Zaiya?~
 @758  = ~She is attractive, but no. She spends far too much time with her books.~
@@ -355,14 +355,14 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @778  = ~I find it quite revolting but please move on with your tale.~
 @779  = ~I tasted it once too. It's not all that revolting.~
 @780  = ~Nothing I guess, but I had nowhere else to go, so I went to a familiar place.~
-@781  = ~Hmm,  makes sense.~
+@781  = ~Hmm, makes sense.~
 @782  = ~Eating rats and insects, this must have been utterly disgusting~
 @783  = ~Whilst on the road to the nearest village, I met a group of merchants that had concluded their trade in our capital city of Tu Pe and were traveling back to their Zakharian homeland in the south, an island called Afyal.~
 @784  = ~When they saw me traveling alone, they approached me and we starting talking. They had lost their ship and were trying to reach the port of Azuza in neighboring Tu Lung.~
 @785  = ~Of course, I did not reveal the full story of the monastery but just that I had had enough of a cloistered life and had decided to become an adventurer.~
 @786  = ~Why did you hide the truth from these merchants? I feel you had nothing to be ashamed of.~
 @787  = ~One can't be too cautious.~
-@788  = ~I guess.. They did not know your whole life.~
+@788  = ~I guess... They did not know your whole life.~
 @789  = ~It was the first offer of help I'd received, and I didn't want to frighten them. The fact that I was expelled from a reputable monastery in Koryo could have raised many suspicions on their part. Let me continue my tale...~
 @790  = ~The fact that I was expelled from a reputable monastery in Koryo could have raised a lot of suspicions on their part, but let me continue my tale...~
 @791  = ~They told me the road to Tu Lung was unsafe and that my fighting skills could prove useful to them. To convince me, they added that they would pay good money if I escorted them to Azusa.~
@@ -436,14 +436,14 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @859  = ~I am glad to hear it. Besides, I must tell you that Zaiya and I were abducted by corsairs but only meant to be sold in Athkatla. Amaralis was not really interested in me physically; he had other schemes in mind.~
 @860  = ~I hadn't found the time to thank you. I might as well do it now. (Kiara walks towards you and unexpectedly kisses your cheek.)~
 @861  = ~Don't blush, <CHARNAME>, it makes me feel embarrassed too. I simply wished to show you how grateful I am.~
-@862  = ~Well, I must admit that I did like that...I haven't had many women expressing their gratitude in such an open manner.~
-@863  = ~I am not really blushing...It's just getting a little hot, too much walking under the sun, I guess.~
+@862  = ~Well, I must admit that I did like that... I haven't had many women expressing their gratitude in such an open manner.~
+@863  = ~I am not really blushing... It's just getting a little hot, too much walking under the sun, I guess.~
 @864  = ~Don't do it so often in public, please.~
-@865  = ~It was really unnecessary...I help people in need whenever I can but I do seek any reward.~
+@865  = ~It was really unnecessary... I help people in need whenever I can but I do seek any reward.~
 @866  = ~Though we wouldn't want to do this too often. It will be far less appealing once you get accustomed to it.~
-@867  = ~Your shyness is touching. Such a strong man, braving the dangers of a dragon and the wrath of the slaver's guild, all this to come to my rescue...I almost feel that my signs of gratitude aren't enough for such a mighty masculine specimen...~
+@867  = ~Your shyness is touching. Such a strong man, braving the dangers of a dragon and the wrath of the slaver's guild, all this to come to my rescue... I almost feel that my signs of gratitude aren't enough for such a mighty masculine specimen...~
 @868  = ~Well, you should from time to time expect a bit of gratitude from those who you've helped.~
-@869  = ~You are a child of a destructive force. Enemies have fallen at your whim and those who know you, fear you.  But tell me, my Lord of Murder, have you the skill to add a sensual conquest to you marvelous exploits?~
+@869  = ~You are a child of a destructive force. Enemies have fallen at your whim and those who know you, fear you. But tell me, my Lord of Murder, have you the skill to add a sensual conquest to you marvelous exploits?~
 @870  = ~Have you a hand that can show a woman a rare tenderness as well as it levels its foes?~
 @871  = ~Have you an eye that knows the pleasurable parts of a body as well as it knows those that cause it pain?~
 @872  = ~Are you challenging me, Kiara?~
@@ -452,13 +452,13 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @875  = ~I would have gladly taken up the gauntlet, but this prophecy of yours has far too many implications.~
 @876  = ~I haven't really the time for such frivolous concerns.~
 @877  = ~That is, if you feel up to the task!~
-@878  = ~...I have gazed and marveled at your beauty for so long.. Nothing could be more pleasing, Kiara.~
+@878  = ~... I have gazed and marveled at your beauty for so long.. Nothing could be more pleasing, Kiara.~
 @879  = ~I would have gladly taken up the gauntlet but this prophecy of yours has far too many implications...~
 @880  = ~I have no such frivolous interests.~
 @881  = ~Who else but the one who openly challenges you, my Lord of Murder?~
-@882  = ~...I have gazed and marveled at your beauty. Nothing could be more pleasing, Kiara.~
+@882  = ~... I have gazed and marveled at your beauty. Nothing could be more pleasing, Kiara.~
 @883  = ~I have no such frivolous interest.~
-@884  = ~I promise you the challenge will be rewarding...for I shall make a domain for the conqueror of my heart where love shall rule, lust shall be queen and where he shall be king.~
+@884  = ~I promise you the challenge will be rewarding... for I shall make a domain for the conqueror of my heart where love shall rule, lust shall be queen and where he shall be king.~
 @885  = ~A heaven filled with love and joy where exquisite pleasures equally match the tender moments, where moments of great passion will follow in sweet and blissful oblivion...~
 @886  = ~A place where our sorrows shall dry in the heat of passion, where our burdens shall be become lighter than feathers and our pains will vanish in the many comforts of love...~
 @887  = ~A place where one could easily feel at ease and of which I shall be an ardent defender.~
@@ -471,7 +471,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @894  = ~Your heart must have turned to stone. Should I ask Zaiya to use a stone to flesh spell on you?~
 @895  = ~That won't be necessary. I'll take up your gauntlet, Kiara.~
 @896  = ~No, leave me be.~
-@897  = ~Not so fast, my fiery prince. Your kingship deserves a rule of hardship first...and I would certainly enjoy the pleasures of courtship before opening to you the doors of my heaven.~
+@897  = ~Not so fast, my fiery prince. Your kingship deserves a rule of hardship first... and I would certainly enjoy the pleasures of courtship before opening to you the doors of my heaven.~
 @898  = ~I shall indulge you with all the flame and passion of a true admirer of your loveliness...~
 @899  = ~I must warn you I have had little experience with the fairer sex, and am likely speak as a blunt tool.~
 @900  = ~We shall see, and I certainly look forward to it upon our next conversation, <CHARNAME>.~
@@ -498,7 +498,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @921  = ~It is sweet, but your words seem dubious rather than sincere.~
 @922  = ~I assure you I had no intentions of being deceptive. If you discerned frivolity in my attempt, it was not my prime intention.~
 @923  = ~A mere blunder. Did I ever tell you about my own past?~
-@924  = ~I did not force on you this challenge...If you find it too difficult, we can put an end to it right now. But do not be such a bad loser by falsely accusing me of toying with your mind.~
+@924  = ~I did not force on you this challenge... If you find it too difficult, we can put an end to it right now. But do not be such a bad loser by falsely accusing me of toying with your mind.~
 @925  = ~Yes, let's put an end to it.~
 @926  = ~You do have a real talent to bringing these tales alive, <CHARNAME>. If only half your tale is true then you would certainly deserve the highest honors.~
 @927  = ~I have not tried to embellish the tale. I only relate to you the truth about my own past...~
@@ -511,7 +511,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @934  = ~Your strong personality is truly appealing and I certainly don't envision a woman that couldn't match my skills.~
 @935  = ~Your sensuality and unabashed sexuality provide a tantalizing provocation for many men to which I am also sensitive.~
 @936  = ~Your mysterious past and this prophecy are intriguing...~
-@937  = ~You are certainly cunning and convincing at times Kiara...Very appealing considering we have to face so many dangers.~
+@937  = ~You are certainly cunning and convincing at times Kiara... Very appealing considering we have to face so many dangers.~
 @938  = ~I like your sense of humor Kiara.~
 @939  = ~None of them really describe you well.~
 @940  = ~A woman that could match the skills of the Bhaalspawn you say? Shall I answer the challenge next time?~
@@ -526,7 +526,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @949  = ~You should trust your instincts. If they lead you towards liking me even with your fears of what may or may not happen, then you should keep the challenge going.~
 @950  = ~I might need time to think over it.~
 @951  = ~You prove too great a danger.~
-@952  = ~Is that so? The Lord of Murder somehow feels threatened by a woman of humble condition.  Do you think that, perhaps I should leave?~
+@952  = ~Is that so? The Lord of Murder somehow feels threatened by a woman of humble condition. Do you think that, perhaps I should leave?~
 @953  = ~No, I am not afraid of you.~
 @954  = ~No, though I will keep a watchful eye on you, Kiara.~
 @955  = ~Didn't we say last time that I should prove I am your match, my Lord of Murder?~
@@ -555,12 +555,12 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @978  = ~You are a woman with rather expensive and ambitious tastes.~
 @979  = ~(A malicious smile flits across Kiara's face.) Then I take it that asking for half of Faerun is not overly ambitious for my Lord of Murder.~
 @980  = ~Are you serious?~
-@981  = ~Such a large empire may be to my taste but will leave us both very little time. I might settle for Amn and the Sword Coast. The climate here is mild and has proven to be quite...invigorating.~
-@982  = ~Amn and the Sword coast. Hum...We're sure to live in peace in both of them after all the clean up I've done over the past year.~
+@981  = ~Such a large empire may be to my taste but will leave us both very little time. I might settle for Amn and the Sword Coast. The climate here is mild and has proven to be quite... invigorating.~
+@982  = ~Amn and the Sword coast. Hum... We're sure to live in peace in both of them after all the clean up I've done over the past year.~
 @983  = ~Of course. Didn't you ask me what I wished for?~
 @984  = ~Am I not worth them?~
 @985  = ~I wouldn't want a jewel such as yourself be left without a proper mounting nor should I want my queen to be seen without her crown...~
-@986  = ~Joking aside <CHARNAME>, does your divine essence hold some ambitions of its own?  Do you seek to match the station of your father and use the divinity coursing through your body?~
+@986  = ~Joking aside <CHARNAME>, does your divine essence hold some ambitions of its own? Do you seek to match the station of your father and use the divinity coursing through your body?~
 @987  = ~Often, I have to refrain myself from the swarming desire to carve an empire of my own...~
 @988  = ~Yes, but I doubt that a refined woman such as yourself would like its murderous streak.~
 @989  = ~You shouldn't fetter nature's call. Let your taint be the guide to those less gifted in the ways of leadership.~
@@ -575,13 +575,13 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @998  = ~And nothing could be please me more but to have you rule at my side.~
 @999  = ~A sign of weakness?? Totally unexpected from a Bhaalspawn. I'd never thought that of you.~
 @1000 = ~I never imagined that you could lack ambition and thirst for power. Leave me be will you...~
-@1001 = ~Such ambitions are rightly yours, the power and prestige afforded by your blood ensure this...though nothing could please me more but to contribute to your glorious ascension, my Lord of Murder.~
+@1001 = ~Such ambitions are rightly yours, the power and prestige afforded by your blood ensure this... though nothing could please me more but to contribute to your glorious ascension, my Lord of Murder.~
 @1002 = ~And nothing could please me more than have you rule by my side.~
 @1003 = ~Your ambitions will kill you, Kiara. Seeking power can only lead to deception...~
 @1004 = ~As much as you do, I do not wish to unleash the powers of the dead god of murder, though with a bit of guidance its energy may prove useful if not worthy.~
 @1005 = ~Your words are music to my ears. It seems you are not far from winning this challenge of ours.~
 @1006 = ~I prefer deception to living the life of a heedless cattle grazing on mediocrity.~
-@1007 = ~Are you hungry, <CHARNAME>?  Come, let's sit at a table and have something to eat.~
+@1007 = ~Are you hungry, <CHARNAME>? Come, let's sit at a table and have something to eat.~
 @1008 = ~Very well, I feel quite hungry myself. Let's go and sit over there.~
 @1009 = ~I'm not hungry, but if you insist.~
 @1010 = ~(After being served a copious meal, you suddenly feel something tickling your right foot, rubbing and caressing it gently. At first you think of a rat, but Kiara is staring at you across the table with a suggestive smile. You realize that Kiara's bare foot is toying with yours.)~
@@ -604,7 +604,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1027 = ~Something is troubling me. Besides, I fail to understand how you are so eager to develop a new relationship when you lost your love Osan in such a brutal fashion.~
 @1028 = ~Leave me Kiara, I wish to be alone.~
 @1029 = ~I believe the loss of your foster father, Gorion, for whom you could do nothing was a tragedy enough. But facing a similar fate for your own sister must be truly horrible.~
-@1030 = ~It saddens me to see you at such a loss sometimes...and I wish I could do something to take some of your burdens..~
+@1030 = ~It saddens me to see you at such a loss sometimes... and I wish I could do something to take some of your burdens..~
 @1031 = ~Leave me be, Kiara~
 @1032 = ~Tell me, Kiara, how did you get over the loss of Osan? It seems you are no longer *affected* by his death.~
 @1033 = ~Fine <CHARNAME>, I thought we had some kind of bond and friendship developing. It saddens me to think you wish to cloister yourself rather than let others help you.~
@@ -641,34 +641,34 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1064 = ~Well, I might not be that tired after all...~
 @1065 = ~No, I am truly exhausted.~
 @1066 = ~Let's move to your room, but we can't forget a bottle of this excellent Thayvian wine.~
-@1067 = ~You are finally awake...The smile on your face tells me you are rather pleased this morning.~
-@1068 = ~Yes,  for a long time I've not had such pleasant dreams.~
+@1067 = ~You are finally awake... The smile on your face tells me you are rather pleased this morning.~
+@1068 = ~Yes, for a long time I've not had such pleasant dreams.~
 @1069 = ~Would you tell me about them?~
-@1070 = ~I dreamt you were a siren and that we made love on a sandy beach the whole night long.  Our pleasures were sated and for a moment, in the throes of passion, we became as one.  The physical manifestation of our emotions was acted out time and again under the starlit sky and the glowing moon..  It is a dream I have never experienced and the emotional consequences I feel from it are very real.~
+@1070 = ~I dreamt you were a siren and that we made love on a sandy beach the whole night long. Our pleasures were sated and for a moment, in the throes of passion, we became as one. The physical manifestation of our emotions was acted out time and again under the starlit sky and the glowing moon.. It is a dream I have never experienced and the emotional consequences I feel from it are very real.~
 @1071 = ~Except for the sand and my legs, the rest is true.. Emotions stir in me also, <CHARNAME>, although I am unsure of what they may be. Perhaps, the wine was a little strong, hmm?~
-@1072 = ~I need to tell you something, <CHARNAME>.  Memories and feelings have come flooding to the surface recently, mostly due to my relationship with you.  Have...have I told you that I think I'm falling in love with you?~
+@1072 = ~I need to tell you something, <CHARNAME>. Memories and feelings have come flooding to the surface recently, mostly due to my relationship with you. Have... have I told you that I think I'm falling in love with you?~
 @1073 = ~No, you haven't.~
 @1074 = ~Tell me then Kiara.~
 @1075 = ~A love declaration. I can't wait to hear it.~
 @1076 = ~After Osan died, I thought I'd never fall in love again and certainly I didn't want to, but I now find myself in exactly that scenario.~
 @1077 = ~You have proven more than a match to my every expectation and beyond. You are an exceptional being, <CHARNAME>.~
-@1078 = ~I tell you this for a reason, <CHARNAME>.  You should know that you bear great risks staying with me or even keeping me in your group.~
+@1078 = ~I tell you this for a reason, <CHARNAME>. You should know that you bear great risks staying with me or even keeping me in your group.~
 @1079 = ~I already felt you were trying to use me or needed me for some kind of trick of yours...~
 @1080 = ~Kiara, you'd already warned me through this prophecy of yours. Though I'd really would like an explanation as a matter of trust in our relationship.~
 @1081 = ~A great evil is behind this scheme and used me in order to get to you. He has placed a weight upon my shoulders, a weight that I do not wish to carry any longer. I..I am under penalty of death for either revealing to you my great burden or failing in the task I have been set.~
-@1082 = ~I really feel at a loss, <CHARNAME>. I truly love you and have no desire to hurt you. For me, death is the only honorable release.  I can brook no harm to you..~
+@1082 = ~I really feel at a loss, <CHARNAME>. I truly love you and have no desire to hurt you. For me, death is the only honorable release. I can brook no harm to you..~
 @1083 = ~No, I love you far too much to let go of you so easily, Kiara... But what should we do?~
-@1084 = ~Alone, I would probably take the risk but I cannot endanger those who have also placed their trust in my hands. I...I'm sorry.~
+@1084 = ~Alone, I would probably take the risk but I cannot endanger those who have also placed their trust in my hands. I... I'm sorry.~
 @1085 = ~Can you tell me more about this great evil and his scheme? Perhaps, I could help you.~
 @1086 = ~So, what can I do to relieve some of your burden?~
 @1087 = ~You certainly hid your ploy well...~
-@1088 = ~I understand my love...Please, remember me...~
+@1088 = ~I understand my love... Please, remember me...~
 @1089 = ~(Kiara walks back facing you. A tear in her eye runs down her cheek. She tries to smile but as you see it flicker off of her face you realize she is consigned to defeat. She clearly shakes in the knowledge that she is facing her final moments of life.)~
 @1090 = ~If I did so, the death penalty would be enacted immediately. Is it your wish my love?~
-@1091 = ~No, I love you too much to let go of you, Kiara...But again, I ask you. What should we do?~
+@1091 = ~No, I love you too much to let go of you, Kiara... But again, I ask you. What should we do?~
 @1092 = ~Alone, I would probably take the risk but I can not endanger those who have also placed their trust in my hands.~
-@1093 = ~Nothing...Nothing can be done. I just needed to tell you...I had to warn you...and in itself it proves to be a small relief.~
-@1094 = ~I truly wish I could tell you more. This damn thing is burning my lips and torturing my soul, but I can't...I just can't, <CHARNAME>.~
+@1093 = ~Nothing...Nothing can be done. I just needed to tell you... I had to warn you... and in itself it proves to be a small relief.~
+@1094 = ~I truly wish I could tell you more. This damn thing is burning my lips and torturing my soul, but I can't... I just can't, <CHARNAME>.~
 @1095 = ~I have faced many evils alone and you and I have faced many perils together. Why can't we just face this one?~
 @1096 = ~It could prove far too dangerous and this could endanger others too. You prove too great a risk.~
 @1097 = ~Well at first, I didn't know you, which made it easy to challenge your divine nature. But I have changed, <CHARNAME>, I swear to you on the blood of Osan and by the strength of my vengeance. I have changed.~
@@ -678,17 +678,17 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1101 = ~He is beyond mortal powers and any powers of this plane. Only a god or a demi god could possibly challenge him. He is far more dangerous than whatever creatures you have ever faced.~
 @1102 = ~It could prove far too dangerous then, and this could endanger others too. You prove too great a risk.~
 @1103 = ~I am not afraid of him regardless. I have the strength and determination of Bhaal in my veins and the woman I love by my side. I shall thwart whatever vile schemes he has devised.~
-@1104 = ~(Kiara falls in your arms and you hold her tight, uncertain of what your future holds.  Images and recent memories flood your memory and your body warms to the feelings of this new experience.  After all of the turmoil following the death of Gorion you finally feel you have found a kindred spirit.)~
+@1104 = ~(Kiara falls in your arms and you hold her tight, uncertain of what your future holds. Images and recent memories flood your memory and your body warms to the feelings of this new experience. After all of the turmoil following the death of Gorion you finally feel you have found a kindred spirit.)~
 @1105 = ~<CHARNAME>, the time has come. I shall tell you everything now...~
 @1106 = ~Sure, Kiara. I will listen to you.~
 @1107 = ~I wonder if I really want to hear the truth, Kiara.~
-@1108 = ~Then say it and delay no more.  I hope that this will explain why my mood has darkened and my mind now considers malevolent deeds it wouldn't have before...~
+@1108 = ~Then say it and delay no more. I hope that this will explain why my mood has darkened and my mind now considers malevolent deeds it wouldn't have before...~
 @1109 = ~You had warned me but I did not expect to fall prey to my taint. What have you done, Kiara?~
 @1110 = ~I should relate something else first..~
 @1111 = ~A while ago, soon after I was ousted from the monastery, I prayed to the gods for an opportunity for revenge on Balthazar.~
 @1112 = ~The answer came not from a source of holy divinity but in the form of a Demon Lord...~
 @1113 = ~He offered the possibility of revenge but this was weighted against my very own soul and an action of some sort.~
-@1114 = ~I was ready to do anything at that time to obtain revenge on Balthazar. My feelings were that strong. I...I accepted his offer.~
+@1114 = ~I was ready to do anything at that time to obtain revenge on Balthazar. My feelings were that strong. I... I accepted his offer.~
 @1115 = ~I can only imagine on what this action might be.~
 @1116 = ~What kind of deal did you accept?~
 @1117 = ~What kind of foul deal did you consent to?~
@@ -703,7 +703,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1126 = ~What will happen to you, Kiara?~
 @1127 = ~How?~
 @1128 = ~What is you next treachery, Kiara?~
-@1129 = ~I was young and naive, my heart rendered asunder by Osan's death...I deeply regret what I have done, but I cannot change the past.~
+@1129 = ~I was young and naive, my heart rendered asunder by Osan's death... I deeply regret what I have done, but I cannot change the past.~
 @1130 = ~(Kiara, crystal rivers of teardrops streaming down her lovely face, comes close to you, laying her head on your shoulder.)~
 @1131 = ~(Hug Kiara, murmuring soothing sounds.) Shush...~
 @1132 = ~(Push Kiara away.)~
@@ -737,7 +737,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1160 = ~Tell me, <CHARNAME>, that this is not true. You have been compelled to these acts! Surely deep in your heart you must have kept remnants of your kindness.~
 @1161 = ~Nothing is left except loathing and hatred.~
 @1162 = ~The sweet promises have proven to lead to a bitter reward, one fact I still dwell upon.~
-@1163 = ~I wish I could undo the past but this is impossible. I can make an attempt to salvage our relationship but only if you let me.  For this, for US to work, your soul as well as mine must be willing.~
+@1163 = ~I wish I could undo the past but this is impossible. I can make an attempt to salvage our relationship but only if you let me. For this, for US to work, your soul as well as mine must be willing.~
 @1164 = ~I have bitterly accepted performing these horrible deeds because I loved you, Kiara, and still I do, but I feel the trust I placed in you is gone.~
 @1165 = ~I don't think I can, Kiara.~
 @1166 = ~Then... just tell me you still love me still and love me purely, <CHARNAME>, and I shall be patient with your heart...~
@@ -749,14 +749,14 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1172 = ~<CHARNAME>, I miss a cozy night in your arms.~
 @1173 = ~Nothing could please me more.~
 @1174 = ~I cannot, Kiara.~
-@1175 = ~Let me show you some new tricks, my love...some mysterious and cunning tricks from my homeland.~
+@1175 = ~Let me show you some new tricks, my love... some mysterious and cunning tricks from my homeland.~
 @1176 = ~I wish we would stay in this bed forever.~
 @1177 = ~Unfortunately, we have still a lot to do, like finding Irenicus.~
 @1178 = ~I do wish it too. However, I have to get my soul back...~
 @1179 = ~(sigh) You're right. We'll find more occasions in the future, I guess.~
 @1180 = ~I have already forgiven you, Kiara. One must look at the future rather than the past.~
 @1181 = ~Your hatred for Balthazar blinded you and the Demon Lord clearly exploited that weakness. I am glad to see a new Kiara at my side.~
-@1182 = ~I am happy you feel this way. I...I...was so afraid to lose you, my love.~
+@1182 = ~I am happy you feel this way. I... I... was so afraid to lose you, my love.~
 @1183 = ~It was not love at first, was it? When did your feelings change, Kiara, or should I ask why?~
 @1184 = ~What did really happen when you met the Demon Lord, Kiara?~
 @1185 = ~Though you did warn me, I still find it hard to trust you, Kiara.~
@@ -772,17 +772,17 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1195 = ~I feel empty inside and have no wish to put any efforts in a relationship that, it seems, was doomed from its beginning.~
 @1196 = ~I love you more than life itself, <CHARNAME>.~
 @1197 = ~I guess it wasn't love at first sight, was it? When did your feeling change, Kiara?~
-@1198 = ~No, you're right, and looking at you from a new perspective, I still don't know why. You have too many scars, bathe too little, have grown a beard...I guess I fell in love with you, not your appearance.~
+@1198 = ~No, you're right, and looking at you from a new perspective, I still don't know why. You have too many scars, bathe too little, have grown a beard... I guess I fell in love with you, not your appearance.~
 @1199 = ~You don't look bad either!~
 @1200 = ~At least your sense of humor hasn't changed.~
 @1201 = ~Can't you be serious just once and answer without the agility of a snake?~
-@1202 = ~I met him right after leaving the monastery...I was in tears and lost. HE just appeared from nowhere. I was startled and afraid at first but HE soon assured HE meant me no harm.~
+@1202 = ~I met him right after leaving the monastery... I was in tears and lost. HE just appeared from nowhere. I was startled and afraid at first but HE soon assured HE meant me no harm.~
 @1203 = ~HE said he could help me in many ways but I had first to commit my soul to the abyss and swear allegiance to HIM.~
 @1204 = ~I did. Then HE said he would come back soon and assign the first of my tasks. I did not see HIM for months but HE reappeared just before I met Zaiya.~
 @1205 = ~Laughing, HE said HE had made some travel arrangements and that once I was at my destination, a powerful Bhaalspawn would come to my rescue.~
 @1206 = ~Then all I had to do was to convince him to commit evil deeds whilst traveling with this child of Bhaal, adding that I'd better not fail HIM.~
 @1207 = ~I guess from your story it wasn't love at first sight, was it? When did your feelings change, Kiara?~
-@1208 = ~Yes, you're right we all look awful...It just that I haven't seen a mirror in ages so I wouldn't really know how I look.~
+@1208 = ~Yes, you're right we all look awful... It just that I haven't seen a mirror in ages so I wouldn't really know how I look.~
 @1209 = ~But tell me, <CHARNAME>, how did you find yourself attracted to such an evil bitch?~
 @1210 = ~Ah! It is hard to tell...~
 @1211 = ~I did not perceive you as such, but rather saw a woman who needed help.~
@@ -793,28 +793,28 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1216 = ~I am glad you noticed that. *grin* Too much change all at once may prove hard on you. But tell me, <CHARNAME>, how did you find yourself attracted to such an evil bitch?~
 @1217 = ~There is such a powerful force emanating from you, <CHARNAME>, which combined with your kindness and patience makes you somebody quite unique.~
 @1218 = ~Bah! The *why?* is less important than the assurance such love exits.~
-@1219 = ~I needed help?...Hum perhaps...But you did as well as I recall.~
+@1219 = ~I needed help?... Hum perhaps... But you did as well as I recall.~
 @1220 = ~*grin* At least my charms did not kill you and we avoided the worst.~
 @1221 = ~I should ask Zaiya to change me into a lich. Then you'd probably find more meanings to the word "bitch".~
 @1222 = ~I should ask Zaiya to change me into a lich. Then you'd probably find more meanings to the expression "femme fatale".~
 @1223 = ~Yes, but I hope we find the time to indulge ourselves with more tenderness.~
-@1224 = ~But then it feels so good to be free...at last.~
+@1224 = ~But then it feels so good to be free... at last.~
 @1225 = ~Won't you invite me to your room, <CHARNAME>?~
 @1226 = ~Of course, I would be honored, Lady of my heart, if you deigned share my room.~
-@1227 = ~I am not so sure...but if you promise me not to snore...~
+@1227 = ~I am not so sure... but if you promise me not to snore...~
 @1228 = ~I am really tired, can't we just...~
 @1229 = ~You devil! Let me get some of that wine we had last time. I'm sure you'll sleep like baby...~
 @1230 = ~Goodnight then!~
 @1231 = ~I really do wish it too, but I have to get my soul back...~
 @1232 = ~There is no need for geas. My bond with <CHARNAME> is now far greater than the threat of death.~
-@1233 = ~It means that after Balthazar's death, he will come back for me and at that exact point in time, claim my soul. But until then, I am yours...We should enjoy such moments together as much as possible...~
-@1234 = ~Well, we could avoid Balthazar...he couldn't claim your soul then.~
-@1235 = ~I won't let it happen...We'll fight him, we'll fight him *together* if need be.~
-@1236 = ~We shall strive to keep fate at a distance...It could be many years before we meet this Balthazar~
+@1233 = ~It means that after Balthazar's death, he will come back for me and at that exact point in time, claim my soul. But until then, I am yours... We should enjoy such moments together as much as possible...~
+@1234 = ~Well, we could avoid Balthazar... he couldn't claim your soul then.~
+@1235 = ~I won't let it happen... We'll fight him, we'll fight him *together* if need be.~
+@1236 = ~We shall strive to keep fate at a distance... It could be many years before we meet this Balthazar~
 @1237 = ~We might be able to avoid him but who knows how Demon might choose to provoke the encounter...~
 @1238 = ~It is my fate, <CHARNAME>. I have sealed it with my own blood. Fighting such a powerful demon will certainly result in your own death. I do not want that, <CHARNAME>. Your fate, it seems, is far greater than that.~
-@1239 = ~I hope we can...I really do.~
-@1240 = ~I am so happy to be freed from this foul deal...Oh! <CHARNAME>, isn't this wonderful?~
+@1239 = ~I hope we can... I really do.~
+@1240 = ~I am so happy to be freed from this foul deal... Oh! <CHARNAME>, isn't this wonderful?~
 @1241 = ~Yes, Kiara it is and I am very happy for you.~
 @1242 = ~I have yet to decide on your treacherous attempt to pervert my soul.~
 @1243 = ~Leave me be, Kiara!~
@@ -857,7 +857,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1280 = ~A way that will lead to disaster. I'm so afraid of these drow, <CHARNAME>. This place really makes feel uneasy. Let's kill these gnomes as Phaere instructed us and get out of here.~
 @1281 = ~Fine, we shall do as you want if this can make you feel better.~
 @1282 = ~I said no, and my decision is final.~
-@1283 = ~I'm sorry, it's just that...this place is so scary and Phaere makes me so uneasy.~
+@1283 = ~I'm sorry, it's just that... this place is so scary and Phaere makes me so uneasy.~
 @1284 = ~You reason just does not make sense.~
 @1285 = ~What this women needs is a good slap in the face! Damn! If I wasn't a monk, you'd already see the red markings on both her cheeks.~
 @1286 = ~Go ahead, Kiara. I've had enough with this ungrateful bitch.~
@@ -872,7 +872,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1295 = ~No you're right, Kiara. I've had enough from this ungrateful bitch.~
 @1296 = ~I shall control my anger, for now.~
 @1297 = ~The ways you have chosen will obviously not lead to your fame, but rather to your shame.~
-@1298 = ~No you're right, Kiara. I've had enough of this ungrateful bitch.  We save her pampered hide from almost certain death and absolute ruin and for what?~
+@1298 = ~No you're right, Kiara. I've had enough of this ungrateful bitch. We save her pampered hide from almost certain death and absolute ruin and for what?~
 @1299 = ~I can control my anger, for now.~
 @1300 = ~*A small portion.* The wizard is clearly trying to swindle us.~
 @1301 = ~I disagree, though I would indeed prefer a bit more too.~
@@ -918,7 +918,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1341 = ~The lady's thanks is enough.~
 @1342 = ~Preposterous! I do not. We do not know the reward's amount yet, perhaps they only asked for a mere 1000 gold.~
 @1343 = ~You are mistaken, <CHARNAME>. I'd only want to see you fairly rewarded for the good actions you do.~
-@1344 = ~I do not seek rewards for the good actions I perform.  My reward is intrinsic in that I know I have made a difference for the better.~
+@1344 = ~I do not seek rewards for the good actions I perform. My reward is intrinsic in that I know I have made a difference for the better.~
 @1345 = ~The lady's thanks would seem enough to me.~
 @1346 = ~Very well, let's ask for a reward.~
 @1347 = ~Considering that you need a fair amount of coin, a reward for your good actions seems amiable enough.~
@@ -959,7 +959,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1382 = ~This Demon could prepare this ability for me in exchange for the eggs.~
 @1383 = ~I am asking it as a reward, <CHARNAME>.~
 @1384 = ~Why should I grant you this reward?~
-@1385 = ~Well, if you want it...I can't really refuse you.~
+@1385 = ~Well, if you want it... I can't really refuse you.~
 @1386 = ~For all that we have done together, my darling, and for all the good moments spent together. Let me have this ability as a gift if you truly love me.~
 @1387 = ~Very well, my love, if this is what you want, nothing could please me more.~
 @1388 = ~Please, Kiara, don't ask me to do this. Anything else, anything! But not this.~
@@ -970,12 +970,12 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1393 = ~Very well, then.~
 @1394 = ~No, I cannot even if this means ending the relationship.~
 @1395 = ~After all I have done for you, I ask for one reward and you refuse to grant it to me!~
-@1396 = ~I must have really fooled myself to ever believe you cared for me.  I hope you enjoy the lonely nights.~
+@1396 = ~I must have really fooled myself to ever believe you cared for me. I hope you enjoy the lonely nights.~
 @1397 = ~No wait, if this really how you feel then I agree...~
 @1398 = ~Fine with me.~
 @1399 = ~After all Zaiya and I have done for you, we ask for one reward and you refuse to grant it. We're leaving for good.~
 @1400 = ~No wait, I agree...~
-@1401 = ~Hold Demon, I wish for the secret of the dragon's powers...The Dragon Stance!~
+@1401 = ~Hold Demon, I wish for the secret of the dragon's powers... The Dragon Stance!~
 @1402 = ~Why do you let that arrogant drow treat you like a four year old child? Doesn't he know you outgrew Candlekeep and became a fearsome Bhaalspawn? Let us teach the drow a lesson!~
 @1403 = ~I do not wish to enter a fight with Drizzt.~
 @1404 = ~This 'drow' has been quite civil to us so far. I see no reason why we should begin an argument with him.~
@@ -1012,11 +1012,11 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1435 = ~We have to find out what's happening to you before you get us all killed.~
 @1436 = ~If we killed him, then where is your soul?~
 @1437 = ~I know where my interest lies, Bhaalspawn, and do not need to be reminded every minute.~
-@1438 = ~We shall get your soul back...At least I owe you that much.~
+@1438 = ~We shall get your soul back... At least I owe you that much.~
 @1439 = ~I owe you that much, <CHARNAME>. But even if I did not, I wouldn't let you face Irenicus alone.~
 @1440 = ~Besides, I have not many choices, have I?~
 @1441 = ~The mage is quite resilient and obstinate, but he can't just live forever, can he?~
-@1442 = ~I knew hell awaited me someday but...I never expected it to happen so soon.~
+@1442 = ~I knew hell awaited me someday but... I never expected it to happen so soon.~
 @1443 = ~I will not tolerate such insults, <CHARNAME>.~
 @1444 = ~Very well <CHARNAME>, enjoy the pleasures of drow females if this is your attraction.~
 @1445 = ~So, where was I?~
@@ -1024,7 +1024,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1447 = ~I'll not let you hurt him.~
 @1448 = ~(Kiara clenches her hand tightly, thrusting a fist into the air.) And you will find my fist an equal match to your sword.~
 @1449 = ~Jan, stop running like a chicken! I was teasing you! Where is your sense of humor?~
-@1450 = ~Boooooooooooo......Boooooooooo.......~ [MxKiaraB]
+@1450 = ~Boooooooooooo...... Boooooooooo.......~ [MxKiaraB]
 @1451 = ~Hold Rasheman, I was merely trying to help you get Boo back.~
 @1452 = ~Viconia, I have never encountered an elf such as yourself. Your dark skin, silver-white hair and fierce demeanor force my admiration for your kind. Would you tell me more about the drow?~ [MxKiaraB]
 @1453 = ~There is much to be desired in social skills of the drow. No wonder Viconia, you had to prostitute yourself to survive on the surface. This might be the only skill you ever really mastered.~
@@ -1041,12 +1041,12 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1464 = ~I do wish you luck with Gorf though.~
 @1465 = ~No! You don't have a choice. Come, let's fight.~
 @1466 = ~Die Bhaalspawn!~
-@1467 = ~This hiding place will work for me no further.  I must leave.  If you change your mind, you may find me through my servant at my home in Athkatla.  Fare you well until then.~
+@1467 = ~This hiding place will work for me no further. I must leave. If you change your mind, you may find me through my servant at my home in Athkatla. Fare you well until then.~
 @1468 = ~The hunt for Valygar Corthala.
 
-I have met Valygar Corthala in his cabin in the Umar Hills, hiding away from the Cowled Wizards who are hunting him.  According to Valygar, he is related to Lavok, an ancient necromancer who built the sphere five hundred years before...a sphere that disappeared shortly after it was completed and has just re-appeared.  The Cowled Wizards seem sure that Valygar is the key to accessing the place, the reason for their harassment of him.
+I have met Valygar Corthala in his cabin in the Umar Hills, hiding away from the Cowled Wizards who are hunting him. According to Valygar, he is related to Lavok, an ancient necromancer who built the sphere five hundred years before... a sphere that disappeared shortly after it was completed and has just re-appeared. The Cowled Wizards seem sure that Valygar is the key to accessing the place, the reason for their harassment of him.
 
-I have let Valygar go his own way, but he cannot stay any longer at the cabin now that it has been compromised.  He told me that if I should have need of him in the future, I can find him through his servant at his home in the Docks District in Athkatla.~
+I have let Valygar go his own way, but he cannot stay any longer at the cabin now that it has been compromised. He told me that if I should have need of him in the future, I can find him through his servant at his home in the Docks District in Athkatla.~
 @1469 = ~(You look down to the ground, gathering your thoughts before the inevitable.)~
 @1470 = ~Are you talkin' about the one I carry in me pants?~
 @1471 = ~Yes, Korgan.~
@@ -1084,7 +1084,7 @@ I have let Valygar go his own way, but he cannot stay any longer at the cabin no
 @1503 = ~Such as...~
 @1504 = ~I would not want to spoil such delicious surprise. Let's say it is big enough to startle those lovely eyes of yours.~
 @1505 = ~I can guess from the bulge in front of your robe, Edwin, the nature of your surprise.~
-@1506 = ~Oh really... Then why don't we make an appointment this evening, after midnight? My chambers...perhaps yours?~
+@1506 = ~Oh really... Then why don't we make an appointment this evening, after midnight? My chambers... perhaps yours?~
 @1507 = ~Such cheap insults are no surprise, coming from a harlot.~
 @1508 = ~What a delightful nickname, but tell me is the dirt just under your fingernails or in your mouth too, ranger?~
 @1509 = ~I shall not tolerate this further.~
@@ -1092,14 +1092,14 @@ I have let Valygar go his own way, but he cannot stay any longer at the cabin no
 @1511 = ~If you were a man and had the balls that comes with being such, you'd have long ago tasted the sharpness of my blade. My advice for now is stay away from me.~
 @1512 = ~What?~
 @1513 = ~Oh I know, so much happened since you were kidnapped by the Cowled wizards. My name is Kiara, but you might as well call me Kiki since we are soon to be *sisters*.~
-@1514 = ~No, this can not be...He would have never chosen such an evil... What have you done to him?~
+@1514 = ~No, this can not be... He would have never chosen such an evil... What have you done to him?~
 @1515 = ~I was just teasing you. I am merely his companion and do not entertain any marriage plan. I feel such bonds are unnecessary between us.~
 @1516 = ~Whoa, I've never been so scared in my life but I'm glad to hear he hasn't completely lost his wits.~
 @1517 = ~Sorry if I did scare you, but tell me Imoen, a bit of girl chit-chat, how was your brother when he was younger?~
 @1518 = ~A little devil, always playing pranks on others. Fortunately for him, Gorion was always quick to forgive. I must tell you of the day he sneaked into Candlekeep's library and made fun out of Ulraunt.~
 @1519 = ~Ulraunt, the head of Candlekeep, and Tethtoril, the first reader, were both absorbed in some books. <CHARNAME> and I were hiding under one of the tables with a chicken.~
-@1520 = ~When Tethtoril left, we placed the chicken on his chair. Ulraunt was still absorbed in his book and didn't notice our little sratagem.~
-@1521 = ~This is when <CHARNAME> called "Ulraunt! cukledoo Ulraunt cuckledoo please help me...cuckledoo I read this book when cuckledoo I've changed into a cuckledoo..."~
+@1520 = ~When Tethtoril left, we placed the chicken on his chair. Ulraunt was still absorbed in his book and didn't notice our little stratagem.~
+@1521 = ~This is when <CHARNAME> called "Ulraunt! cukledoo Ulraunt cuckledoo please help me... cuckledoo I read this book when cuckledoo I've changed into a cuckledoo..."~
 @1522 = ~Ulraunt really thought Tethtoril had been changed into a chicken and tried all kind of spells and incantations. 'Twas so very funny.~
 @1523 = ~If you keep an eye on me as you did on your wife, then I won't have much to fear.~
 @1524 = ~How dare you speak of my wife? Such impudence.~
@@ -1110,11 +1110,11 @@ I have let Valygar go his own way, but he cannot stay any longer at the cabin no
 @1529 = ~Are you trying to mock me, Kiara?~
 @1530 = ~(*evil grin*) No, a few words of encouragement or, perhaps, your epitaph before you face a foolish death.~
 @1531 = ~Keep the epitaph for yourself. Arvoreen will grant me victory over this Gorf and perhaps some strength leftover to allow me to teach you a lesson next.~
-@1532 = ~I look forward to it, though I am wondering what size would be appropriate for your coffin...A matchbox could be just right if Gorf squeezes you a bit.~
+@1532 = ~I look forward to it, though I am wondering what size would be appropriate for your coffin... A matchbox could be just right if Gorf squeezes you a bit.~
 @1533 = ~Make fun all you wish. Let's see how you laugh when time is ripe for you to face your own death.~
 @1534 = ~My own fate is sealed in solid rock. I have no fear when it comes to what lies ahead.~
 @1535 = ~That explains much about your disdain for others and your constant mockery. I wish we could help you. The kindness you have shown towards poor Zaiya tells me that within lies a good person, some remnants of your past love.~
-@1536 = ~...I am not a singer, I am an actor.~
+@1536 = ~... I am not a singer, I am an actor.~
 @1537 = ~I see... So how long have you been impersonating a bard?~
 @1538 = ~But I am one! I know enough battle songs to instill courage in your soul and fear to our enemies. ~
 @1539 = ~One who can not sing love songs can not truly call himself a bard, at most you are a thief. One who apparently would also fail poorly at stealing a woman's heart.~
@@ -1134,11 +1134,11 @@ I have let Valygar go his own way, but he cannot stay any longer at the cabin no
 @1553 = ~Oh no! I was not making any allusions to you... Her hands were much bigger than yours, almost bigger than her feet. The only trait you might share with her is an ill tempered manner.~
 @1554 = ~(Kiara gives Jan a slap on his head.)~
 @1555 = ~Ouch! Now what did you go and do that for?~
-@1556 = ~So you can be sure I'll not hesitate to beat you like your cousin Bertha. Here take that bag...and cover your head!~
+@1556 = ~So you can be sure I'll not hesitate to beat you like your cousin Bertha. Here take that bag... and cover your head!~
 @1557 = ~What?~
 @1558 = ~You heard me gnome, I've *seen* enough of you today.~
 @1559 = ~Kiara, surely we can not... This is wrong!~
-@1560 = ~He does not care much for you either and signed your death too. At least let's try to die with honor...on the battlefield.~
+@1560 = ~He does not care much for you either and signed your death too. At least let's try to die with honor... on the battlefield.~
 @1561 = ~But <CHARNAME> has done so much for us!~
 @1562 = ~Only to let us both down when it seemed so convenient. Listen Zaiya, it is a desperate fight, but would you rather suffer the tortures of your curse or die by the Bhaalspawn's hand?~
 @1563 = ~There are no choices left, it seems...~
@@ -1147,12 +1147,12 @@ I have let Valygar go his own way, but he cannot stay any longer at the cabin no
 @1566 = ~(Kiara has been deceptive but since the deal was made she has proven blameless. She somehow feels uneasy before your gaze and tries to give you a smile.)~
 @1567 = ~Kiara, your fate is sealed to mine, but let us at least face death with dignity.~
 @1568 = ~Kiara, at least redeem your treachery by putting up a good fight.~
-@1569 = ~(There is nothing more to be said.  Without a further word, you turn grimly back to the stairs before you.  Your soul awaits.)~
+@1569 = ~(There is nothing more to be said. Without a further word, you turn grimly back to the stairs before you. Your soul awaits.)~
 @1570 = ~(You raise your eyes only to find Kiara looking at you with a worried expression on her face. Memories of the recent events suddenly surface. The deal with a Demon Lord put you at unease. She notices your awkward hesitation and decides to speak first.)~
 @1571 = ~(You raise your eyes only to find Kiara looking at you with a worried expression on her face. The recent events have left scars that have barely started to heal. She notices your awkward hesitation, and decides to speak first.)~
 @1572 = ~You have much to hide, Kiara, and I'll be keeping a watchful eye on your actions. I fear I do not trust you.~ [MxKiaraB]
 @1573 = ~Kiki, you remind me of my cousin Bertha, who happened to have huge hands but was mostly known for beating her husband from time to time. The poor man felt so humiliated he used to wear a bag over his head when he went to the market for fear of being recognized... ~ [MxKiaraB]
-@1574 = ~<CHARNAME>...heeeelp!~
+@1574 = ~<CHARNAME>... Heeeelp!~
 @1575 = ~We should have gagged the women a long time ago. Not to mention installed a chastity belt on the wench to protect the men around us.~
 @1576 = ~<CHARNAME>, I'll not tolerate a harlot in our party much longer. Ask her to keep silent. She's piercing my sensitivity with her pathetic stories.~
 @1577 = ~You never had any sensitivity, Viconia, so let Kiara talk.~
@@ -1166,15 +1166,15 @@ I have let Valygar go his own way, but he cannot stay any longer at the cabin no
 @1585 = ~Ahh, but I do not speak for him, Kiara. I speak of you. This is a lesson, <CHARNAME>. Follow me and you will lose more than you could imagine. Starting now!~
 @1586 = ~The Final Battle with Bodhi.
 
-Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Kiara.  Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
-@1587 = ~You have taken too much already!  You will return both Imoen's soul and Kiara!~
+Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Kiara. Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible. I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+@1587 = ~You have taken too much already! You will return both Imoen's soul and Kiara!~
 @1588 = ~And you have delivered on that promise. Return Kiara and perhaps I will be merciful.~
-@1589 = ~I would have hunted you for your theft of Kiara alone.  She is very important to me.~
-@1590 = ~You place too much confidence in sentiment.  The theft of Kiara will not save you.~
+@1589 = ~I would have hunted you for your theft of Kiara alone. She is very important to me.~
+@1590 = ~You place too much confidence in sentiment. The theft of Kiara will not save you.~
 @1591 = ~She is lost to you, <CHARNAME>. Kiara has been quite receptive to my wiles. I doubt your fumbling could have inspired the loyalty I have taken with a bite and a gaze. ~
 @1592 = ~The Final Battle with Bodhi.
 
-Bodhi has turned Kiara into a vampire!  Or... or very nearly.  The process may not have been completed in the short time Bodhi has had her.  Hopefully something can be done or I will have lost her.  Perhaps the elven war sage might know some way of restoration... or Elhan... ~
+Bodhi has turned Kiara into a vampire! Or... or very nearly. The process may not have been completed in the short time Bodhi has had her. Hopefully something can be done or I will have lost her. Perhaps the elven war sage might know some way of restoration... or Elhan...~
 @1593 = ~My life and Kiara are one!~
 @1594 = ~I was born in a village near Medina al Afyal. I loved to learn and study but my parents were extremely poor and I could have never risen above my status as the island is governed by very strict social codes.~
 @1595 = ~My father one day went to seek help from a powerful elemental mage, a man named Korezam, who specialized in all kind of poisonous spells. All our animals had fallen sick and my father was hoping the mage would provide him with a remedy.~
@@ -1183,16 +1183,16 @@ Bodhi has turned Kiara into a vampire!  Or... or very nearly.  The process may n
 @1598 = ~One day, something awful happened. I was reading a book on powerful poisons and their effects when a wild surge occurred. I was cursed. Korezam tried several remove curse spells, but it was to no avail. He was getting old and was not able to move much from home and told me to go to Medina al Afyal and seek help in the temples, perhaps the potions would help or some genie.~
 @1599 = ~I visited nearly all the temples in Medina and used several potions prepared by skilful herbalists, but none of them worked and my condition worsened.~
 @1600 = ~Fortunately, I met Kiara in one of these temples, and she said she might be able to assist.~
-@1601 = ~Kiara has powerful healing hands and she is able to stabilize my condition from time to time by applying her hands over my body...It does not remove the curse but helps me live. Ever since, I stayed with her as her servant.~
+@1601 = ~Kiara has powerful healing hands and she is able to stabilize my condition from time to time by applying her hands over my body... It does not remove the curse but helps me live. Ever since, I stayed with her as her servant.~
 // KIARA - CERND BY BRI
-@1650 = ~Cernd, I must ask you about your intentions toward...Zaiya...~ [MxKiaraB] //kiara
+@1650 = ~Cernd, I must ask you about your intentions toward... Zaiya...~ [MxKiaraB] //kiara
 @1651 = ~What? Why? Has something gone amiss?~ //cernd
 @1652 = ~You tell me druid. I sense that you are infatuated with her, but I don't know whether I should allow you to continue to stand in her presence.~//KIA 
 @1653 = ~No matter what else may happen, she is my ward, and as such, is under my protection. It remains to be seen whether I will suffer your presence around her or not~ //KIA
-@1654 = ~And what do you propose to do? As Zaiya has pointed out to me, the smallest thought, the tiniest emotion, may grow, flourish, and blossom under even the most extreme circumstances. She is a fine woman, and fit to make her decisions...~ //CERMD
-@1655 = ~And she is still bound by her illness, lest you forget, druid, and any...emotional...disruption may cause her further harm. Consider this a warning, Cernd...tread lightly where Zaiya is concerned, or even MAINCHARA will save you from my wrath.~ //KIARA
-@1656 = ~I find your concern unnecessary, Kiara. Why, I thought the training of the monasteries included acceptance of the world as it is...and to transcend its boundaries.~ //CERND
-@1657 = ~I abandoned that portion of my life long ago, Cernd. Just remember, until a cure is discovered for Zaiya, I am the totality of her world...and you may be part of hers as well.~ //KIA 
+@1654 = ~And what do you propose to do? As Zaiya has pointed out to me, the smallest thought, the tiniest emotion, may grow, flourish, and blossom under even the most extreme circumstances. She is a fine woman, and fit to make her decisions...~ //CERND
+@1655 = ~And she is still bound by her illness, lest you forget, druid, and any... emotional... disruption may cause her further harm. Consider this a warning, Cernd... tread lightly where Zaiya is concerned, or even MAINCHARA will save you from my wrath.~ //KIARA
+@1656 = ~I find your concern unnecessary, Kiara. Why, I thought the training of the monasteries included acceptance of the world as it is... and to transcend its boundaries.~ //CERND
+@1657 = ~I abandoned that portion of my life long ago, Cernd. Just remember, until a cure is discovered for Zaiya, I am the totality of her world... and you may be part of hers as well.~ //KIA 
 @1658 = ~However, the world changes. A broken mirror never reflects again; fallen flowers never go back to the old branches...~ //KIA
 
 
@@ -1227,7 +1227,7 @@ Bodhi has turned Kiara into a vampire!  Or... or very nearly.  The process may n
 @2026 = ~And you have failed. I hope your punishment will match your treachery!~
 @2027 = ~And it seems you have succeeded. Your treachery deserves death.~
 @2028 = ~So, you were but a tool!~
-@2029 = ~My fate is sealed and my retribution is death, but HE might as well tell you himself...HE is on his way from the abyss.~
+@2029 = ~My fate is sealed and my retribution is death, but HE might as well tell you himself... HE is on his way from the abyss.~
 @2030 = ~Your betrayal certainly deserves death.~
 @2031 = ~How could you Kiara, when I had faith and trusted you?~
 @2032 = ~You needed little convincing to commit the evil acts. I have merely acted as a guide to your divine soul.~
@@ -1237,7 +1237,7 @@ Bodhi has turned Kiara into a vampire!  Or... or very nearly.  The process may n
 @2036 = ~Another treachery and I will kill you with my own hands.~
 @2037 = ~The Demon Lord will meet you now and explain his own motives.~
 @2038 = ~We are in the lair of this dreadful monster. This place looks horrible! We should be cautious and not rush after him. He could have laid some traps ahead. Here, let me scout our path for traps or snares.~
-@2039 = ~That foolish inspector who ran off... What was his name?  No matter.  We shall find his useless carcass somewhere about, I would think.~
+@2039 = ~That foolish inspector who ran off... What was his name? No matter. We shall find his useless carcass somewhere about, I would think.~
 @2040 = ~If you fail to consider my advice all the time, I might as well leave this party this minute, <CHARNAME>!~
 @2041 = ~What are you talking about, Kiara?~
 @2042 = ~And why should I?~
@@ -1246,10 +1246,10 @@ Bodhi has turned Kiara into a vampire!  Or... or very nearly.  The process may n
 @2045 = ~I must apologize to you...~
 @2046 = ~Very well, let's hear it.~
 @2047 = ~Selfish and self-centered as you are, I really don't see the point.~
-@2048 = ~I...I am truly sorry, <CHARNAME>, for what I said to you earlier. I have been harsh in my treatment of you when you sought to merely comfort me and offer me your support.~
+@2048 = ~I... I am truly sorry, <CHARNAME>, for what I said to you earlier. I have been harsh in my treatment of you when you sought to merely comfort me and offer me your support.~
 @2049 = ~I feel I am at a loss sometimes. My anger was not so much against you, but rather at the twisted fate that has been bestowed upon me.~
 @2050 = ~I hope we shall remain friends.~
-@2051 = ~Friends we are, Kiara...and maybe more someday.~
+@2051 = ~Friends we are, Kiara... and maybe more someday.~
 @2052 = ~Your excuse falls short of words. I shall have none of it.~
 @2053 = ~Very well.~
 @2054 = ~You have been rushing to rescue your sister and I understand the reasons, but Zaiya and I have to leave.~
@@ -1275,11 +1275,11 @@ Bodhi has turned Kiara into a vampire!  Or... or very nearly.  The process may n
 @2074 = ~Females are the dominant leaders amongst drow. I sense an evil woman at your side. You would be wise to let her speak for you.~
 @2075 = ~I am *not* drow and wouldn't know what to say.~
 @2076 = ~Address all drow males as your lesser and let that hatred I feel within your heart speak for you.~
-@2077 = ~Hel-lo beauty, no word better describe you! You are...absolutely stunning!~
+@2077 = ~Hel-lo beauty, no word better describe you! You are... absolutely stunning!~
 @2078 = ~Stunning? You surely know what describes me best.~
 @2079 = ~Indeed, my siren. Your voice is sweater than their songs and your beauty surpasses by far any of their queens.~
 @2080 = ~You have me conquered, honey. Bernard, room for two please! Let's move, after such a long time without a man, I don't want to lose a minute.~
-@2081 = ~Euh...sorry Lady, I'm a Eunuch!~
+@2081 = ~Euh... sorry Lady, I'm a Eunuch!~
 @2082 = ~Let's do the bidding of this Harper, <CHARNAME>. His unwillingness has stirred my curiosity, and besides I feel a bit rusty. A good fight can only help improve my fighting skills.~
 @2083 = ~<CHARNAME>, here is an opportunity to finish the job we started in Athkatla. We must find Rejiek and put an end to his evil deeds.~
 @2084 = ~<CHARNAME>, I wonder why he has chosen us to do his dirty work? Well, let's hope working for thieves will prove profitable.~
@@ -1311,7 +1311,7 @@ Bodhi has turned Kiara into a vampire!  Or... or very nearly.  The process may n
 @2110 = ~Yes, we will definitely need some luck in this dark place, though our skills will prove equally useful.~
 @2111 = ~You may need both so again I wish you fortune.~
 @2112 = ~Let them come. I do not fear their poisonous bite.~
-@2113 = ~No! This can not be... You already lost your soul and now your goodness...What is to be left of us? Will this nightmare ever stop?!~
+@2113 = ~No! This can not be... You already lost your soul and now your goodness... What is to be left of us? Will this nightmare ever stop?!~
 @2114 = ~You're horrid, Kiara! How you could betray the man who rescued you from these slavers is beyond belief.~
 @2115 = ~Boo is outraged to find his friend now walking side by side with the evil witch.~
 @2116 = ~Much is now explained of her strange ways. May she rot in the abyss.~
@@ -1329,7 +1329,8 @@ Bodhi has turned Kiara into a vampire!  Or... or very nearly.  The process may n
 @2128 = ~**I SHALL REVEAL THIS SECRET IF YOU CONSENT TO SURRENDER THE EGGS.**~
 @2129 = ~Here take the eggs.~
 
-//FLIRTPACK KIARA
+// KIARA FLIRTPACK
+// ---------------
 @2500 = ~Kiara is more than an exotic creature coming from faraway lands or a simple companion. Over the past weeks, you felt yourself attracted to her, your eyes mesmerized by her beauty.~
 @2501 = ~Give Kiara a supportive hug.~
 @2502 = ~Do pelvic thrusts in Kiara's general direction.~
@@ -1356,7 +1357,8 @@ Bodhi has turned Kiara into a vampire!  Or... or very nearly.  The process may n
 @2523 = ~(The slapping sound and the mark have not gone unnoticed by your companions, who start laughing.)~
 @2524 = ~TO BE DEVELOPED -NOT FUNCTIONAL-~
 
-//LOVESCENES KIARA -- Not proofed, til I get Bri's versions. -Jess
+// KIARA LOVE SCENES -- Not proofed, til I get Bri's versions. -Jess
+// -----------------------------------------------------------------
 @9000 =~Kiara's kisses feel almost desperate as you make your way to your room, her welcoming lips fluttering beneath yours like wounded doves. Her soft mouth forms a perfect seal around yours, her every breath merging with yours. She becomes lost in your kisses, clinging to you like a drowning woman would cling to a bit of driftwood. You find yourself no less adrift in her embrace, drowning together in the sea of shared passion. The taste of eagerness on your beloved's lips is sweet, anticipation quivering in every touch of mouth to mouth. Kiara's hands entwine her fingers with yours, the warmth of her passion ardently matching the flames of desire burning deep within you. The rising purr in the back of her throat reverberates against yours, matching the growing moan that quickly escapes your attempts to suppress it. The moment seems to last a lifetime, and yet is over all too quickly, the pressure of needing to breathe finally separating the two of you. 
 
 Kiara smiles up at you, a hint of shyness present in her luminescent eyes, then brushes back a loose strand of silken hair from her face, the fiery tendril smelling of the earth, of exotic hyacinth, of young clover. As she leans back against the door to your room, her normally graceful hands suddenly fumbling as they attempt to turn the knob, Kiara leans against you to steal one more kiss, melding her sinuous body against yours. She pulls you closer, teasing your tongue with her own, inviting you wordlessly to deepen the exquisite kiss, to explore her mouth and learn every bit of it, to search out the very depths of her soul. Alas, such poignant moments cannot last forever, and the kiss breaks as Kiara successfully opens the door. Her backward momentum pulls her away from you and breaks the mesmerizing dream you briefly shared. Kiara lowers her eyelashes, her full, luscious lips trembling slightly.
@@ -1373,7 +1375,7 @@ You lower your head to the irresistible swell of her breast, trailing kisses alo
 
 As you look into Kiara's eyes, she averts her gaze slightly, her hands gently nudging your head towards her lovely bare breasts. Kiara preens, arching her back, as your eyes drink in the beauty before them. An adorable mewling noise slips from her throat. "Please," she whispers. Obedient to her wishes, you cover each creamy breast with kisses. Kiara's heartbeat throbs beneath your wandering lips, her flesh heaving with each of her rasping, shallow gasp. "Slower.." she breathes, her voice barely audible even to your attentive ears.
 
-You are ever responsive to your lover's desires, running your fingers along the length of her arm and feeling the building hear beneath your callused fingertips. You slide one arm beneath hers, capturing her nearness and softly whisper her name. "Kiara...my Kiara.." Slowly your mouth makes its way towards her stiffened nipple, and you begin circling it with your tongue, teasing and caressing her flesh with your lips. The rippling shivers coursing through Kiara's body causes her breasts to jiggle pleasantly against your face.
+You are ever responsive to your lover's desires, running your fingers along the length of her arm and feeling the building hear beneath your callused fingertips. You slide one arm beneath hers, capturing her nearness and softly whisper her name. "Kiara... my Kiara..." Slowly your mouth makes its way towards her stiffened nipple, and you begin circling it with your tongue, teasing and caressing her flesh with your lips. The rippling shivers coursing through Kiara's body causes her breasts to jiggle pleasantly against your face.
 
 When you lift your mouth from her bosom, Kiara positions herself on top of you, massaging your skin with her breasts, alternately tickling you and inundating you with waves of pleasure and desire. Kiara shudders as you rise up to meet her, covering her neck and chest with your warm, wet tongue once again, taking your time to cover every inch of her full, creamy breasts. Feeling your firm body pressing against her, Kiara murmurs her need for you, begging you with eyes and soul for your touch. The simple words and eloquent silences act like air to a smoldering fire, fanning the flames of desire to a roaring blaze burning throughout your body. Freeing some of the raging passion, you take her face in your hands and pull Kiara's mouth to yours, devouring her lips and drawing her tongue deep into your mouth, suckling it lightly.
 
@@ -1438,7 +1440,7 @@ You sense urgency radiating from her, as she scans the bottom floor. You feel a 
 
 You race up the stairs, chasing after her, knowing that she isn’t that far in front of you. Your eyes adjust to the darkness easily and see that the entrance is empty. Suddenly, you feel a rush of air from behind you, from the back of the opened door, and you reach out with a hand, capturing Kiara by her arm, swinging her around until she stands in front of you. Her mouth opens, and you feel the hot breath escape her, and she licks her lips, as she whispers, "Are you worthy of my attention?"
 
-She reaches over, and starts to kiss your fingers, sliding her welcoming tongue along a digit. You almost lose yourself in passion when you feel a flare of pain, and see that Kiara has bit your hand. She smiles, as she continues, "Don't...take...me...for...granted..."
+She reaches over, and starts to kiss your fingers, sliding her welcoming tongue along a digit. You almost lose yourself in passion when you feel a flare of pain, and see that Kiara has bit your hand. She smiles, as she continues, "Don't... take... me... for... granted..."
 
 Her eyes widen, and you can see into the depths of those emerald pools. Her chest was heaves with her breathing. You step closer and fall into heaven as her firm breasts brushed against your chest. You feel her nipples harden through her clothing. Your find your restraint as Kiara's mesmerizing gaze entrances you, emptying you of all but the most basic thoughts. The single most thought in your mind is how it would feel to have her lips press on yours. You succumb to your desires and lean in.
 
@@ -1446,7 +1448,7 @@ As your lips close on hers, you hear a sound rise from the back of Kiara's throa
 
 So this was how passion tastes, you think to yourself, a taste of heaven. Your hands come up Kiara's fiery hair, still moist from her bath, and you pull her head back and greedily feast on her neck. Your lips can't cover enough skin, can't devour enough of her velvet, and can’t taste enough of her. She gasps as your teeth gently nip her shoulder. Kiara trembles in your arms, her presence inciting a flare of fiery passion within you. Her arms encircle your back, fingers digging into your waistband. Kiara presses herself closer, her lips came nibbling at the corners of your mouth. The hand in her hair gently pulls her back from you so that she faces you once more.
 
-"Never hesitate..." Kiara whispers, gazing into your face, strength showing on her features, "If I am to be yours...you are to be mine..."
+"Never hesitate..." Kiara whispers, gazing into your face, strength showing on her features, "If I am to be yours... you are to be mine..."
 
 She nips at you with her heart shaped mouth, and testily says, "I'd like a response from you..."
 
@@ -1456,7 +1458,7 @@ Kiara looks into your eyes, opening her mouth as if to say something, but your l
 
 All of a sudden, something much softer is in place over her womanhood. Smoothing over it and gliding effortlessly into her. On her and in her. Kiara closes her eyes again, arching her head backward as your tongue swept over her core, over and over again. Kiara's legs tense, and her legs clutch at you, and a scream breaks the night’s silence as the wave of pleasure that envelops her leaves her tingly in all her extremities, her eyes glassing over, her body still tense. 
 
-“Relax love..." you whisper to Kiara. You have her attention now. Her eyes clear, and she opens herself to you, her arms reaching behind your back to pull you down into herself. Up and down you move until Kiara lies gasping, her legs wrapping tightly around your waist. She arches her back as you increase your tempo, until you feel your own incipient insatiable build up, and you both explode with cries of pleasure.
+"Relax love..." you whisper to Kiara. You have her attention now. Her eyes clear, and she opens herself to you, her arms reaching behind your back to pull you down into herself. Up and down you move until Kiara lies gasping, her legs wrapping tightly around your waist. She arches her back as you increase your tempo, until you feel your own incipient insatiable build up, and you both explode with cries of pleasure.
 
 You collapse onto Kiara, and her arms come up, surrounding you, and pulling you close. She softly caresses your cheek, kissing away the beads of sweat, and whispers, "I love you..."~
 
@@ -1478,9 +1480,9 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3013 = ~My friend and I have been brought from a far land, east of Faerun, to be sold as slaves in Athkatla. All I know of this town is this jail in which you just found me. I beg of you, please help me.~ [ZAYAL5]
 @3014 = ~I am sorry. I have more urgent matters to attend to. You are free and I can not help you further.~
 @3015 = ~Very well. We need some more information, though. Do you know where she could be or perhaps somebody who might know her whereabouts?~
-@3016 = ~Oh, I'm so pleased that you are going to help me. My name is Zaiya, and I am from Afyal. ~ [ZAYAL6]
+@3016 = ~Oh, I'm so pleased that you are going to help me. My name is Zaiya, and I am from Afyal.~ [ZAYAL6]
 @3017 = ~Well met Zaiya, my name is <CHARNAME>. I should tell you I have a goal to rescue a friend of mine, Imoen. She has been captured by the Cowled Wizards.~
-@3018 = ~Well met Zaiya, my name is <CHARNAME>. I am hunting a very powerful evil mage named Irenicus. ~
+@3018 = ~Well met Zaiya, my name is <CHARNAME>. I am hunting a very powerful evil mage named Irenicus.~
 @3019 = ~So, we have similar goals to rescue a friend but I wish to stress that my quest is really urgent, <CHARNAME>. I will die unless we find my friend within ten days.~ [ZAYAL7]
 @3020 = ~I am doomed. I'd rather kill myself now rather than endure all this pain and suffering.~ [ZAYAL8]
 @3021 = ~I understand your desire for revenge but my quest is really urgent, <CHARNAME>. I will die unless we find my friend within ten days.~ 
@@ -1518,19 +1520,19 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 //ZAIYAJ.D: ZAIYA GAME INTERJECTIONS
 @3400 = ~<CHARNAME>, we must find a way of getting Kiara back! I can not live without her.~
 @3401 = ~Kiara is dead and you abandon me? You are truly despicable, <CHARNAME>.~
-@3402 = ~NO! How could this happen?...With Kiara dead, I, too, will die, and soon!~
+@3402 = ~NO! How could this happen?... With Kiara dead, I, too, will die, and soon!~
 @3403 = ~(Zaiya has an inquisitive look on her face.)~
 @3404 = ~Are you all right, Zaiya?~
 @3405 = ~You are right, Kiara. My fear of ghosts is not rational.~
 @3406 = ~Well, well, well! Isn't that a wild beauty? Where are you from my lovely queen?~
 @3407 = ~(Zaiya looks around her) Are you talking to me?~
 @3408 = ~Well, who else could have such lovely eyes? So, why don't you tell me all about you?~
-@3409 = ~I have a disease, a terrible disease, dreadful...I'm dying from it.~
-@3410 = ~Hum...Perhaps, a night in my arms could satisfy your last wish?~
+@3409 = ~I have a disease, a terrible disease, dreadful... I'm dying from it.~
+@3410 = ~Hum... Perhaps, a night in my arms could satisfy your last wish?~
 @3411 = ~A man who laughs at the face of death, I like that. Come in my arms and let's both share our last night together!~
-@3412 = ~You...You mean it's contagious...~
+@3412 = ~You... You mean it's contagious...~
 @3413 = ~Oh! Extremely. You might have it already just talking to me. So, why not just take a room..~
-@3414 = ~A healer! I need a healer!  Helpppppp!~
+@3414 = ~A healer! I need a healer! Helpppppp!~
 @3415 = ~I can see fresh blood around her mouth and smell the stench of death. I would not like her as my mistress.~
 @3416 = ~I have heard of your affliction. Where others have failed so lamentably, I would gladly offer to help you.~
 @3417 = ~And how could you be of help when the attempts renowned mages and reputable clerics failed?~
@@ -1539,11 +1541,11 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3420 = ~If we are to be bound to a task, wizard, we might as well know first the reason of such endeavor.~
 @3421 = ~I believe I was not talking to you girl. Let <CHARNAME> speak for himself.~
 @3422 = ~For a moment you had I fooled, but from looking at her daughter, her nose looks exactly like yours, so aquiline, so... Are you sure you never saw this woman before? (chuckle)~
-@3423 = ~This is most peculiar to find genies here in Trademeet, I...suddenly feel...so homesick.~ [MxKiaraB]
+@3423 = ~This is most peculiar to find genies here in Trademeet, I... suddenly feel... so homesick.~ [MxKiaraB]
 @3424 = ~A mortal familiar with the likes of us! Are you from Calimshan?~
 @3425 = ~No, I come from Afyal in the land of Zakhara.~
 @3426 = ~The land of our distant cousins. But you do not look well, girl. I sense a strange aura around you, one of evil.~
-@3427 = ~I...I have been cursed but have found no cure.~
+@3427 = ~I... I have been cursed but have found no cure.~
 @3428 = ~I was more talking about that dark companion at your side. Regarding your curse, unfortunately we can be of little help to you.~
 @3429 = ~You should focus on the real threat. That is Irenicus, and not a renegade drow that has been of great help to us in the underdark.~
 @3430 = ~We are at war with the drow. One can not be too cautious in present circumstances.~
@@ -1583,16 +1585,16 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3703 = ~See? Completely mad...~
 @3704 = ~You are on the surface, dark elf, and in no position to enforce your threats.~
 @3705 = ~Where is your sense of humor, gnome?~
-@3706 = ~Euh, yes. Thanks Korgan. I...I'll be careful... Kiara...Kiara!~
+@3706 = ~Euh, yes. Thanks Korgan. I... I'll be careful... Kiara... Kiara!~
 @3707 = ~Thank you, Jaheira. I'll try to follow your wise advice.~
 @3708 = ~I sincerely hope you do.~
 @3709 = ~Wherever Kiara goes, I follow. Don't ask me, ask her!~
 @3710 = ~How arrogant of you, Keldorn, to presume what others are, what they would think or feel. I refuse to listen to this.~
-@3711 = ~Why...I don't understand. Why did you not tell me?~
+@3711 = ~Why... I don't understand. Why did you not tell me?~
 @3712 = ~Say no more! It only adds to my pain...~
 @3713 = ~Why not sell the lands and the castle to the Roenalls and help the poor with the profits from the sale? Besides, it is likely the Roenalls would not seek to enforce your betrothal. You would gain handsomely.~ [MxZaiyaA]
 @3714 = ~Kiara has become a friend and I would not take leave unless she asked me to. Like you, Miss Nalia, the weight of culture and traditions is very difficult to overcome. I wish you luck with the Roenalls.~
-@3715 = ~I'm really sorry Minsc...It was an accident! I am so afraid of graveyards, and then...I had a hiccup and wild magic surged as if I had cast a spell! I didn't mean any harm to Boo, I swear to you.~
+@3715 = ~I'm really sorry Minsc... It was an accident! I am so afraid of graveyards, and then... I had a hiccup and wild magic surged as if I had cast a spell! I didn't mean any harm to Boo, I swear to you.~
 @3716 = ~These polymorphs don't last long and you should have your hamster back very soon...~
 @3717 = ~You should be grateful for what life gave you Cernd: a son. My curse forbids such fortune and deprives me of ever bearing a child of my own. This makes me feel so angry at you.~ [MxZaiyaA]
 @3718 = ~Well, thank you Cernd.~
@@ -1611,14 +1613,14 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3731 = ~You are an odd pair to say the least. Would you not leave Kiara if you could?~
 @3732 = ~Zaiya, this does not concern you. It is between <CHARNAME> and myself...~
 @3733 = ~Of course it does. I entrust my life each day to your skilful hands and you dared not tell me this horrible truth. How despicable of you!~
-@3734 = ~I am sorry Zaiya...I...~
+@3734 = ~I am sorry Zaiya... I...~
 @3735 = ~I pity you for your affliction but it seems the greater curse is to have to depend on this *harpy* for survival. She shows no love for those around her and I often wonder why she keeps you alive.~
 @3736 = ~She wasn't like this in the past, at least when I met her. The recent events of our abduction by slavers have affected her deeply, although she confessed Amaralis was quite civil to her.~
 @3737 = ~Regardless of the kindness she may have shown others in the past, I regard your mistress with great suspicion. She sought my death without due provocation nor obvious motive.~
 @3738 = ~Her attitude towards you baffles me too. After a good bath, you'd make a handsome man which my mistress is often prone to seek attention from.~
 @3739 = ~I see. Yet again my appearance is drawing far too much concern. But to straighten up the facts, the cabin was not a luxurious inn.~
-@3740 = ~Hmm...Sorry to ask. I'm just curious. Were there no rivers nearby?~
-@3741 = ~Ahem...Being caught naked and defenseless in the water would have been the least sensible thing to do.~
+@3740 = ~Hmm... Sorry to ask. I'm just curious. Were there no rivers nearby?~
+@3741 = ~Ahem... Being caught naked and defenseless in the water would have been the least sensible thing to do.~
 @3742 = ~No, unless the one catching you were some dryads or sorts.~
 @3743 = ~Dryads? I'm afraid I had none of these chasing me lately.~
 @3744 = ~Do you think the Cowled wizards will ever leave us in peace?~
@@ -1641,7 +1643,7 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3761 = ~But the child would have a father and he could take..~
 @3762 = ~Yes, exactly!~
 @3763 = ~Your anger and scorn are well deserved, but I can assure you I have not abandoned him. I shall return to him in good time to see him grow and act as any good father should.~
-@3764 = ~I hope you do Cernd...I sincerely hope so.~
+@3764 = ~I hope you do Cernd... I sincerely hope so.~
 @3765 = ~If we were ever to find a cure for your affliction, I am sure you would make a fine mother. And I would be glad if you came to the grove and spend some time with us after this is all over.~
 @3766 = ~Are you mocking me, Cernd?~
 @3767 = ~No, I would not dare. I am sure that your compassion and kindness would only serve the boy well.~
@@ -1669,15 +1671,15 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3789 = ~Yes...~
 @3790 = ~Then what if you were transformed into a turnip? Wouldn't that be better than a toad?~
 @3791 = ~Huh!~
-@3792 = ~Jan Turnip...How does that sound?~
+@3792 = ~Jan Turnip... How does that sound?~
 @3793 = ~Not so good, Zaiya.~
-@3794 = ~Look at the optimistic side of it. We might even be able to sell you for a good price...on the first gnomish market. I bet they'll never believe we found such a big turnip.~
+@3794 = ~Look at the optimistic side of it. We might even be able to sell you for a good price... on the first gnomish market. I bet they'll never believe we found such a big turnip.~
 @3795 = ~This isn't funny, Zaiya...~
 @3796 = ~I'm sorry to hear that. It never happened to me.~
 @3797 = ~I hope for you girlie, it won't. What we did to 'tis magician, ye don't want to know.~
 @3798 = ~What did you do to him?~
 @3799 = ~We hacked the bloody wizard into pieces and fed it to the crows. Ye are warned, girlie. Ye might turn me into a squirrel, but don't mess with the gold.~
-@3800 = ~I love these books. They...they are all I have..~
+@3800 = ~I love these books. They... they are all I have..~
 @3801 = ~You should take time to admire mother nature and breathe some fresh air, it would certainly improve your health.~
 @3802 = ~I might find a remedy to my curse in one of these books one day.~
 @3803 = ~I feel sorry for you, girl, and I sincerely hope you will find a way out of this curse.~
@@ -1696,7 +1698,7 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3816 = ~From what I have seen, your father does seem to bear the same stigmas. You would follow the same path if you let the desire of revenge guide your actions. Take some time to think over it.~
 @3817 = ~I will. My thanks, Zaiya.~
 @3818 = ~I have a wild mage in my party, who can summon squirrels, rabbits and even parrots if you like.~
-@3819 = ~I would have a word with you Zaiya...In private.~ [MxZaiyaA]
+@3819 = ~I would have a word with you Zaiya... In private.~ [MxZaiyaA]
 @3820 = ~<CHARNAME>, have you lost your wits? Can't you see that Zaiya's magic is a danger to us all?~ [MxZaiyaA]
 @3821 = ~<CHARNAME>, I fear Zaiya might transform one of us into a squirrel, a rabbit, or even worse a toad.~ [MxZaiyaA]
 @3822 = ~<CHARNAME>, ye know our magician girlie could ruin our party with it bloody' wild surges. I've had a bad experience with their kind, 'twas at a time I traveled with Polgo, a wild mage too. Damn fool. We lost all our gold on his first spell.~ [MxZaiyaA]
@@ -1720,33 +1722,33 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3852 = ~Why do you not recoil in horror around me? There are plenty who outright hate wild mages, yet you do not. If anything, you are quite accepting of my presence.~//zai
 @3853 = ~I find that very strange, considering how many other people look at me with fear.~ //zai
 @3854 = ~Why should I feel horror? It is true that your passage seems to presage chaos, but no more so than that of our Bhaalspawn companion. If one wishes to travel the ways of Balance, then one must accept the extremes as well as the middle-ground.~ //Cernd
-@3855 = ~Even if those extremes are...hazardous?~ //Zai
+@3855 = ~Even if those extremes are... hazardous?~ //Zai
 @3856 = ~(Cernd reaches into a pocket and pulls out a handful of seeds. The druid closes his eyes, and the seeds quickly sprout and blossom, flowering into bright yellow blooms, and then hands them to Zaiya.)~ //Cernd
-@3857 = ~Consider the yellow dandelion. Pretty, no?~ //Cernd
-@3858 = ~(Cernd places a hand on the dandelions, encompassing Zaiya's small hand with his larger one. The yellow sprouts then turn into white puff-balls.)~ //Cernd
-@3859 = ~And yet for the next generation, the seeds of the present must be blown away by the chaos of the storm... (Cernd lowers his head, and takes a deep breath, blowing half of the seeds away. He then beckons for Zaiya to do the rest.)~ //Cernd
+@3857 = ~Consider the yellow dandelion. Pretty, no?~ // Cernd
+@3858 = ~(Cernd places a hand on the dandelions, encompassing Zaiya's small hand with his larger one. The yellow sprouts then turn into white puff-balls.)~ // Cernd
+@3859 = ~And yet for the next generation, the seeds of the present must be blown away by the chaos of the storm... (Cernd lowers his head, and takes a deep breath, blowing half of the seeds away. He then beckons for Zaiya to do the rest.)~ // Cernd
 @3860 = ~Many people forget that chaos is nature's way of redressing an imbalance. Whether it is the fire that guts an overcrowded forest or a fierce storm that flattens a field, chaos may have a salubrious effect.~ 
-//Cernd
-@3861 = ~That may be, but even you have to admit that when my magic backfires and someone becomes a piece of poultry, that doesn't exactly aid the balance, now does it?~ //Zai
-@3862 = ~No, but neither does it take away from it.~ //Cernd
-@3863 = ~(Zaiya suddenly realizes Cernd's hand is on hers, and she rapidly pulls it away.)~ //Zai
-//Second Scene for Cernd-Zaiya
-@3864 = ~I believe I owe you an apology, Cernd.~ [MxZaiyaA] //Zai
-@3865 = ~Oh, hello Zaiya. I'm sorry; you caught me with my head in the clouds. Maybe you would care to clarify your thoughts, but what do you need to apologize for?~ //Cernd
-@3866 = ~I fear I spoke out of turn the last time we talked. It was not my intent to try and cast doubt on the course your life chose, for I do not know the intricacies of the druidic hierarchy. It seems to me that you do not serve nature, but rather the needs of those who presume to speak for nature.~ //Zai
+// Cernd
+@3861 = ~That may be, but even you have to admit that when my magic backfires and someone becomes a piece of poultry, that doesn't exactly aid the balance, now does it?~ // Zai
+@3862 = ~No, but neither does it take away from it.~ // Cernd
+@3863 = ~(Zaiya suddenly realizes Cernd's hand is on hers, and she rapidly pulls it away.)~ // Zai
+// Second Scene for Cernd-Zaiya
+@3864 = ~I believe I owe you an apology, Cernd.~ [MxZaiyaA] // Zai
+@3865 = ~Oh, hello Zaiya. I'm sorry; you caught me with my head in the clouds. Maybe you would care to clarify your thoughts, but what do you need to apologize for?~ // Cernd
+@3866 = ~I fear I spoke out of turn the last time we talked. It was not my intent to try and cast doubt on the course your life chose, for I do not know the intricacies of the druidic hierarchy. It seems to me that you do not serve nature, but rather the needs of those who presume to speak for nature.~ // Zai
 @3867 = ~Indeed, and I will readily agree that your insight has been like the rain that falls in the desert, bringing life to the parched earth.~ 
-//cernd
-@3868 = ~Though the terrain may lie barren, the seeds of life lie underneath, ready to sprout to life with proper nourishment. However, your motives are still obscured like the gathered rain clouds overhead..~ //cernd
-@3869 = ~Cernd, for one who serves nature, it seems you...what is that phrase? Ah yes, you don't see the forest for the trees. You left your son behind. You left your wife, Cernd, because of duty, which is a concept of humanity, not of nature. I can think of no stronger natural bond than that of family.~ //Zai
+// Cernd
+@3868 = ~Though the terrain may lie barren, the seeds of life lie underneath, ready to sprout to life with proper nourishment. However, your motives are still obscured like the gathered rain clouds overhead..~ // Cernd
+@3869 = ~Cernd, for one who serves nature, it seems you... what is that phrase? Ah yes, you don't see the forest for the trees. You left your son behind. You left your wife, Cernd, because of duty, which is a concept of humanity, not of nature. I can think of no stronger natural bond than that of family.~ // Zai
 @3870 = ~Need I point out that all manners of creatures do display loyalty to a hierarchy? What of wolves in a pack, or bees in a hive?~
-@3871 = ~I must have touched some emotion, for your analogies aren't clearly thought out...for animals, unlike humans, are loyal from instinct, and their bond is among the most primal, if strongest sort...the bond to one's family, to one's kind...~
+@3871 = ~I must have touched some emotion, for your analogies aren't clearly thought out... for animals, unlike humans, are loyal from instinct, and their bond is among the most primal, if strongest sort... the bond to one's family, to one's kind...~
 
-//Cernd-Zaiya third scene
+// Cernd-Zaiya third scene
 @3872 = ~Cernd...~ [MxZaiyaA] //zai
 @3873 = ~What is it now, Zaiya? Come you now to undermine one of my fundamental beliefs and cut me from the inside much as a wood bore fells the mightiest oak?~ //cernd
 @3874 = ~No Cernd, I come to do no such thing. I thought merely to apologize for my presumption, but I see that you are still angry at my words. Pardon, I will leave you be. I should have said nothing at all.~ //zai
 @3875 = ~Then why did you concern yourself with my affairs at all, Zaiya?~ //cernd
-@3876 = ~I...I don’t know Cernd.~ //zai
+@3876 = ~I... I don’t know Cernd.~ //zai
 //cernd-zaiya fourth scene
 @3877 = ~To whom do you answer, Cernd?~ [MxZaiyaA] //zai
 @3878 = ~Pardon Zaiya? I fear I may have missed your question.~ //cernd
@@ -1767,13 +1769,13 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3893 = ~Do I have to drag this out of you, Cernd?~ //zai
 @3894 = ~I have been contemplating your illness. I know that you and Kiara searched throughout the lands of the east for a cure, but have you scoured the lands of the west?~ //cernd
 @3895 = ~More specifically, there may be something in druidic lore that could cure your affliction.~ //cernd
-@3896 = ~(Not without a touch of reluctance, Zaiya pulls her hand from Cernd's.) I..…Cernd...I...I am impressed that you would do such for me…but..~//zai
-@3897 = ~(Zaiya hangs her head, a gleam of quiet desperation shining in her tear-filled eyes.) I have had too many instances of false hope. I am not...I won’t go.. dash..…Oh Cernd, just go away, would you?~
+@3896 = ~(Not without a touch of reluctance, Zaiya pulls her hand from Cernd's.) I..…Cernd... I... I am impressed that you would do such for me…but...~//zai
+@3897 = ~(Zaiya hangs her head, a gleam of quiet desperation shining in her tear-filled eyes.) I have had too many instances of false hope. I am not... I won’t go... dash... Oh Cernd, just go away, would you?~
 //END SOA Cernd-Zaiya banter
 
 //AMAEVIL.D: AMARALIS IN CHAPTER 2
 @5000 = ~Ah <CHARNAME>! I've heard of you! You *have* come for the tramp, have you?~
-@5001 = ~Yes slaver, I have.  Be warned, unless you release her immediately I shall be forced to kill you.~
+@5001 = ~Yes slaver, I have. Be warned, unless you release her immediately I shall be forced to kill you.~
 @5002 = ~I'll give you some advice slaver. Free her now and you might get out of here unharmed.~
 @5003 = ~You have no idea of whom you face. Your threats would mean nothing to a kobold, much less to me. I'll have your party of vagabonds and ruffians begging for mercy in no time. Prepare for your ultimate demise!~
 
@@ -1782,11 +1784,12 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @5101 = ~You are persistent in your arrogance, slaver. I shall have your head on a plate~
 @5102 = ~Back off lackey. You are a nuisance that I'll gladly crush under my boot.~
 @5103 = ~Bark all you want as you prepare for your death...~
-@5104 = ~Kiara, please join me...Together, we shall rule the world, nothing will ever stop us.~
-@5105 = ~Have it your way, then...Die with the other fools.~
-@5106 = ~A tempting offer but...No thanks!~
+@5104 = ~Kiara, please join me... Together, we shall rule the world, nothing will ever stop us.~
+@5105 = ~Have it your way, then... Die with the other fools.~
+@5106 = ~A tempting offer but... No thanks!~
 
-//DELORD.D: DEMON LORD
+// DELORD.D: DEMON LORD
+// --------------------
 @5200 = ~**KIARA YOU HAVE FAILED OUR CAUSE. IT IS TIME FOR YOU TO JOIN THE ABYSSsssss...**~ [DELORDL1]
 @5201 = ~Wait.~
 @5202 = ~(Remain silent.)~
@@ -1796,7 +1799,7 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @5206 = ~**SO, BHAALSPAWN, KIARA HAS FINALLY SUCCEEDED...**~ [DELORDL3]
 @5207 = ~I think I deserve an explanation.~
 @5208 = ~So, I have been manipulated all along...~
-@5209 = ~**VERY WELL...I SHALL EXPLAIN MYSELF, BHAALSPAWN.**~
+@5209 = ~**VERY WELL... I SHALL EXPLAIN MYSELF, BHAALSPAWN.**~
 @5210 = ~**A SURPRISING AND UNEXPECTED TWIST OF FATE YOU SHOULD BE GRATEFUL FOR, KIARA. YOUR DEAREST WISH MAY COME TRUE AFTER ALL.**~ [DELORDL4]
 @5211 = ~Now that you have what you came for, demon, I wish to know more about this whole deal.~
 @5212 = ~Why did you force this confrontation?~
@@ -1837,12 +1840,12 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @5247 = ~**SHE WILL BE GIVEN ADDITIONAL POWERS. WE ALSO EXTEND THE POSSIBILITY THAT ONE DAY KIARA MAY OBTAIN REVENGE UPON BALTHAZAR. HE HAS ALREADY LEFT KARA-TUR AND OVERTOOK ANOTHER MONASTERY IN A LOCATION I AM UNWILLING TO DISCLOSE AS OF YET.**~
 @5248 = ~You seem to know so much. I have many questions to ask you...~
 @5249 = ~**SILENCE MORTAL. MY INVOLMENT ALREADY EXTENDED BEYOND THE LIMITS OF WISDOM. FURTHER REVELATIONS WOULD ANGER THE GODS AND COMPROMISE MY OWN POSITION IN THE ABYSS, I WILL SAY NO MORE.**~
-@5250 = ~**KIARA, PREPARE TO RECEIVE YOUR GIFTS BUT REMEMBER...YOUR SOUL IS NOW OURS.**~
+@5250 = ~**KIARA, PREPARE TO RECEIVE YOUR GIFTS BUT REMEMBER... YOUR SOUL IS NOW OURS.**~
 @5251 = ~**WE SHALL RETURN AND CLAIM IT AFTER YOU HAVE HAD YOUR REVENGE.**~
 @5252 = ~**UNTIL SUCH TIME, YOU SHALL BELONG TO <CHARNAME> AND THE GEAS WE SHALL BESTOW UPON YOU, THE SEAL OF YOUR FATE TO THAT OF THIS BHAALSPAWN.**~
 @5253 = ~**SUCH PETTY RHETORIC IS IRRELEVANT. I SHALL BE THE ONLY ONE TO RELIEVE YOU FROM YOUR DUTY TOWARDS <PRO_HIMHER>. THE PENALTY FOR YOUR REPUDIATION IS DEATH. THE SAME FATE AWAITS YOU IF <PRO_HESHE> IS TO DIE. YOU HAD BETTER BE A TRUSTWORTHY SERVANT, KIARA.**~
 @5254 = ~**NO! THIS CAN NOT BE!**~
-@5255 = ~**JERLIA! YOU WERE TRAPPED...YOUR SOUL...**~
+@5255 = ~**JERLIA! YOU WERE TRAPPED... YOUR SOUL...**~
 @5256 = ~**NO!**~
 @5257 = ~**WHY WOULD I?**~
 @5258 = ~**VERY WELL, KIARA! BUT DO NOT PRESUME I SHALL BE LENIENT. DEATH AWAITS YOU.**~
@@ -1854,49 +1857,50 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @5264 = ~Killing Prelate Wessalen in cold blood is barbaric and I want no part in it, <CHARNAME>. I hope the girl is worth it.~
 @5265 = ~By Arvoreen, how could you accept!? I sincerely hope you do not commit such a monstrous act but your willingness to perform such deed is sufficient motive for me to take my leave.~
 @5266 = ~Me axe will gladly swing and chop that Wessalen for ye!~
-@5267 = ~How did this happen, Kiara? You...you could have told me! I am truly ashamed to have to follow you, Kiara. Stay away from me!~
+@5267 = ~How did this happen, Kiara? You... you could have told me! I am truly ashamed to have to follow you, Kiara. Stay away from me!~
 @5268 = ~Wait Demon! Grant me one last favor.~
 @5269 = ~If the Bhaalspawn does not wish to join the forces of evil, I shall gladly kill <PRO_HIMHER> for you!~
 @5270 = ~**I SHALL MEET YOU IN THREE DAYS BHAALSPAWN.**~
-//JERLIA.D: JERLIA
 
-@5400 = ~Please help! (sob) He stole my soul...(sob) I beg of you...(sob)...help me find my soul...~
+//JERLIA.D: JERLIA
+@5400 = ~Please help! (sob) He stole my soul... (sob) I beg of you... (sob)... help me find my soul...~
 @5401 = ~Have no fear. I will put you at rest. Die ghost!~
 @5402 = ~I'd be glad to help if you'd tell me more...~
 @5403 = ~I haven't the time for this.~
-@5404 = ~A demon stole my soul and has left me trapped here...(sob) Please return my soul...~
+@5404 = ~A demon stole my soul and has left me trapped here... (sob) Please return my soul...~
 @5405 = ~A demon? Where would I find such a demon in Amn?!~
 @5406 = ~Can you tell me more? I can not run blindly off to find your soul without some sort of lead.~
 @5407 = ~I shall not endanger my companions fighting a demon. Sorry I can't help you.~
-@5408 = ~Oh no please...(sob)...I need your help...(sob)~
+@5408 = ~Oh no please... (sob)... I need your help...(sob)~
 @5409 = ~All right then, tell me how I can help you.~
 @5410 = ~Find another stooge to find your soul. I can not help you.~
-@5411 = ~His name is Endragor...(sob)...But I don't know where he is now...~
+@5411 = ~His name is Endragor... (sob)... But I don't know where he is now...~
 @5412 = ~Where do you think the foul beast would be hiding?~
 @5413 = ~Forget it, I shall not look for a demon across the lands.~
-@5414 = ~He might be hiding by some old temple in the north...(sob)...perhaps a cave...I...I don't know...(sob)...I have been trapped here for so long.~
+@5414 = ~He might be hiding by some old temple in the north... (sob)... perhaps a cave... I... I don't know... (sob)... I have been trapped here for so long.~
 @5415 = ~Very well, we shall try and track him down and return with your soul.~
 @5416 = ~This is far too vague and I have no time for this.~
-@5417 = ~Please, you promised to help me...(sob)...~
-@5418 = ~You have my soul...You have saved me...Thank you dear <PRO_MANWOMAN>. Here take this stone. Its magical powers will protect you from most demon's attacks.~
+@5417 = ~Please, you promised to help me... (sob)...~
+@5418 = ~You have my soul... You have saved me... Thank you dear <PRO_MANWOMAN>. Here take this stone. Its magical powers will protect you from most demon's attacks.~
 @5419 = ~May AO the Overfather bless you and his ever watchful eye keep you safe.~
 @5420 = ~NO DEMON! Back off! This deal is void.~
 @5421 = ~My soul has been restored and my spirit freed. These two are clearly in love and I shall not let you pervert any more souls with your dark schemes. Go back whence you came Demon. In the name of AO, the Overfather, I command you!~
 @5422 = ~He shall leave you in peace from now on...~
 @5423 = ~Sorry, but who are you?~
-@5424 = ~I don't understand...What happened here?~
+@5424 = ~I don't understand... What happened here?~
 @5425 = ~I am Jerlia, one of AO's favored priestesses. I was once destined to enter the pantheon for my dedication to the Overfather until the Demon Lord decided otherwise and stole my soul.~
 @5426 = ~I have been roaming Amn heedlessly until you came and freed me.~
 @5427 = ~Ever since we met, I have kept an eye on you, waiting to repay HIM in kind. HIS treachery will be severely punished by The Overfather, who forbade any intervention in the Bhaalspawn saga.~
 @5428 = ~He is likely to be stripped from his status and title and will trouble you no more.~
 @5429 = ~As for Kiara, she was blinded by her hatred for Balthazar. The Demon Lord saw an opportunity to use her to get to you.~
-@5430 = ~In the end your love proved the strongest and I can feel that Kiara has changed at your side as she would have had you change at hers...I wish you well...~
+@5430 = ~In the end your love proved the strongest and I can feel that Kiara has changed at your side as she would have had you change at hers... I wish you well...~
 @5431 = ~Farewell, <CHARNAME>.~
 
-//PRAX.D: PRAX
+// PRAX.D: PRAX
+// ------------
 @5600 = ~Over here dear <PRO_SIRMAAM>! Perhaps, are you looking at purchasing some slaves?~
 @5601 = ~Ah! I recognize that lot there. I sold it to a friend of mine.~
-@5602 = ~Euh...that means you probably KILLED him.~
+@5602 = ~Euh... that means you probably KILLED him.~
 @5603 = ~Yes, your friend is dead, and if I don't get the information I want, a similar end awaits you.~
 @5604 = ~You have a shrewd mind, slaver, and lest you want to die, you will answer my questions.~
 @5605 = ~Such blunt terms and conditions. So what information could a simple merchant such as myself provide you with?~
@@ -1930,13 +1934,15 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @5633 = ~Fine, here take the 5000 gold and tell me where Kiara is.~
 @5634 = ~We are not trading here. My life is at stake.~
 @5635 = ~I do not have such an amount right now, but stay here. I'll be back later with the full amount.~
-@5636 = ~Yes, this amount should suffice to buy myself a new life somewhere...far from Amn.~
+@5636 = ~Yes, this amount should suffice to buy myself a new life somewhere... far from Amn.~
 @5637 = ~Fine, here take the 2000 gold and tell me where Kiara is.~
 @5638 = ~Kiara is being held in the government district, Delryn estate, by the Master Slaver of Athkatla. I would advise caution when approaching him. He is a fighter wizard of considerable power and influence.~
 @5639 = ~Do you have the money?~
 @5640 = ~I will not die without a fight.~
-@5641 = ~No...I'm too young to die...Help...~
-//TOB Ends
+@5641 = ~No... I'm too young to die... Help...~
+
+// Epilogues: TOB Ends
+// -------------------
 @9100 = ~After the Bhaalspawn saga events were behind them, Kiara and <CHARNAME> proved a match made in heavens. For a while, they settled in Athkatla and attempted to live a simple but cushy life. <CHARNAME> was soon offered a chair on the council of six after the sudden death of the Meisarch but declined upon Kiara's insistence. She could not fathom the idea of becoming a mere housewife and dragged <CHARNAME> on the road once again, tempting him with a visit to her homeland of Kara Tur.
 The legend purports that during a halt in Afyal the Demon lord visited Kiara once more only to disavow his word and take Kiara to the abyss. <CHARNAME> followed the Demon lord with the help of Cyric, the reigning God Of Murder, who had long waited for an opportunity to take revenge on the Demon Lord for his treachery. After the two of them united in the shadowy depths of the demon's plane, the legend goes on to say that the ensuing slaughter has left the abyss scarred for a thousand years. Kiara and <CHARNAME> single handed fought and killed countless demons including a fierce Demon prince, before escaping unscathed through Mount Doom. A persistent rumor speaks of Ardic promising Kiara and <CHARNAME> would rule the abyss after the end of their mortal existence. However, neither Kiara nor <CHARNAME> ever confirmed those accounts, when asked they simply stare at each other and start laughing.
 After mount doom, they proceeded to Kara Tur and Kiara led <CHARNAME> to her old monastery, once again a peaceful and restful place, free of Balthazar's fist rule. A place where Kiara was soon to give birth to a male heir that would proudly bear the name and heritage of his father, growing over the years into a fierce and renowned monk. Kiara, however, died in giving birth despite the monk's efforts to heal her. A long procession of mourners, from as far as Afyal, came to the monastery to pay tribute to the legend of Kiara, the monk who defeated the abyss. 
@@ -1950,15 +1956,10 @@ A year later and for no reason, she prompted a war with Amn that would surpass a
 Red Thay wizards, Paladins from the order of the Radiant heart, Harpers, Thieves, Cowled wizards and Elves at the head of which queen Ellesime herself, all set aside their grievances and joined the elite troops of Amn to face Kiara's army. The ensuing battle was one of epic proportion. Kiara and her army rushed into battle, spreading death like a wild fire, destroying a quarter of Amn’s forces on their first onslaught. Oblivious to magic and wielding death at the palm of their hands, Kiara's army of monks seemed almost invincible. Many in the ranks of Amn started to lose faith when according to numerous witnesses that day, something extraordinary happened. The legend tells Amn’s gruesome fate was salvaged by the premature death in battle of Kiara at the hand of an unknown foe. Some murmur the black hooded figure that suddenly appeared on the battlefield and stroked the death blow was one of the gods angered by Kiara's madness or perhaps a greater Demon, yet a persistent rumor speaks of the Lord of Murder himself. 
 Ever since, her name has been one of infamy that remains unspoken in history books, even prompting Volo to erase all accounts of Kiara from his own book on the great Bhaalspawn. But town folk Legends often supersede written scriptures, and many citizens of Faerun still speak of the Lord of Murder's vengeful fist and how Ao, the overfather himself, was forced to intervene, ordering The Lord of Murder to sever his murderous arm. Some go on to say that the Lord of Murder took Kiara at his right side for her body was never found on the battlefield, other place her in the abyss where her black soul suffers eternal torture.~
 
-@9103 = ~After the Bhaalspawn saga ended, Zaiya took the first ship sailing from Amn to Afyal. Half across the sea, a ship started to follow them at a distance and it became clear to all onboard it had to be pirates or slavers. Zaiya showing courage and determination whisked everyone to safety in the ship's hold, whilst she would be  standing firmly on the deck awaiting the pirate's boarding. Pirates who survived Zaiya's rage to tell the tale, speak of their amazement to see a frail woman at the helm of the ship, the main deck deserted. Almost certain the ship as much as the women was theirs, they shouted scornful insults at Zaiya but the women stood her ground. Zaiya shouted back not to attempt boarding lest they all wanted to die, which prompted much laughter in the pirate's flock whilst some already were rushing on the deck. A few minutes later, it was all over. The pirates were overrun by fear and jumped starboard, clinging onto the remaining planks of wood of their defunct ship. 
+@9103 = ~After the Bhaalspawn saga ended, Zaiya took the first ship sailing from Amn to Afyal. Half across the sea, a ship started to follow them at a distance and it became clear to all onboard it had to be pirates or slavers. Zaiya showing courage and determination whisked everyone to safety in the ship's hold, whilst she would be standing firmly on the deck awaiting the pirate's boarding. Pirates who survived Zaiya's rage to tell the tale, speak of their amazement to see a frail woman at the helm of the ship, the main deck deserted. Almost certain the ship as much as the women was theirs, they shouted scornful insults at Zaiya but the women stood her ground. Zaiya shouted back not to attempt boarding lest they all wanted to die, which prompted much laughter in the pirate's flock whilst some already were rushing on the deck. A few minutes later, it was all over. The pirates were overrun by fear and jumped starboard, clinging onto the remaining planks of wood of their defunct ship. 
 On arrival in Afyal, the news of Zaiya's exploits aboard the ship spread like wildfire and rumors soon came to all influential nobles of the city. They invited Zaiya at their table to hear of her tales of the great Bhaalspawn. Weary of her fame, month later Zaiya bought the house of her former master and lived a quiet life. On the news of Kiara's death, she rushed to Kyoro and tried to comfort <CHARNAME> as much as she could. She stayed for some time and took care of Kiara's offspring but it became obvious <CHARNAME> had grown old and his desire to leave for Amn prompted Zaiya to make the return journey to her own homeland where she once again settled in her own habits and house.~
-@9104 = ~After the Bhaalspawn saga ended, Zaiya took the first ship sailing from Amn to Afyal. Half across the sea, a ship started to follow them at a distance and it became clear to all onboard it had to be pirates or slavers. Zaiya showing courage and determination whisked everyone to safety in the ship's hold, whilst she would be  standing firmly on the deck awaiting the pirate's boarding. Pirates who survived Zaiya's rage to tell the tale, speak of their amazement to see a frail woman at the helm of the ship, the main deck deserted. Almost certain the ship as much as the women was theirs, they shouted scornful insults at Zaiya but the women stood her ground. Zaiya shouted back not to attempt boarding lest they all wanted to die, which prompted much laughter in the pirate's flock whilst some already were rushing on the deck. Soon, it was all over. The pirates were overrun by fear and jumped starboard, clinging onto the remaining planks of wood of their defunct ship. 
+@9104 = ~After the Bhaalspawn saga ended, Zaiya took the first ship sailing from Amn to Afyal. Half across the sea, a ship started to follow them at a distance and it became clear to all onboard it had to be pirates or slavers. Zaiya showing courage and determination whisked everyone to safety in the ship's hold, whilst she would be standing firmly on the deck awaiting the pirate's boarding. Pirates who survived Zaiya's rage to tell the tale, speak of their amazement to see a frail woman at the helm of the ship, the main deck deserted. Almost certain the ship as much as the women was theirs, they shouted scornful insults at Zaiya but the women stood her ground. Zaiya shouted back not to attempt boarding lest they all wanted to die, which prompted much laughter in the pirate's flock whilst some already were rushing on the deck. Soon, it was all over. The pirates were overrun by fear and jumped starboard, clinging onto the remaining planks of wood of their defunct ship. 
 On arrival in Afyal, the news of Zaiya's exploits aboard the ship spread like wildfire and rumors soon came to all influential nobles of the city. They invited Zaiya at their table to hear of her tales of the great Bhaalspawn. Weary of her fame, months later Zaiya bought the house of her former master and lived a quiet life until her end. People often came to her for spells, potions and magical trinklets which she sold to keep her living. Often she wondered what had happened to her old friend Kiara, but never tried to really find out.~
-@9105 = ~After the Bhaalspawn saga ended, Zaiya took the first ship sailing from Amn to Afyal. Half across the sea, a ship started to follow them at a distance and it became clear to all onboard it had to be pirates or slavers. Zaiya showing courage and determination whisked everyone to safety in the ship's hold, whilst she would be  standing firmly on the deck awaiting the pirate's boarding. Pirates who survived Zaiya's rage to tell the tale, speak of their amazement to see a frail woman at the helm of the ship, the main deck deserted. Almost certain the ship as much as the women was theirs, they shouted scornful insults at Zaiya but the women stood her ground. Zaiya shouted back not to attempt boarding lest they all wanted to die, which prompted much laughter in the pirate's flock whilst some already were rushing on the deck. Soon, it was all over. The pirates were overrun by fear and jumped starboard, clinging onto the remaining planks of wood of their defunct ship. 
+@9105 = ~After the Bhaalspawn saga ended, Zaiya took the first ship sailing from Amn to Afyal. Half across the sea, a ship started to follow them at a distance and it became clear to all onboard it had to be pirates or slavers. Zaiya showing courage and determination whisked everyone to safety in the ship's hold, whilst she would be standing firmly on the deck awaiting the pirate's boarding. Pirates who survived Zaiya's rage to tell the tale, speak of their amazement to see a frail woman at the helm of the ship, the main deck deserted. Almost certain the ship as much as the women was theirs, they shouted scornful insults at Zaiya but the women stood her ground. Zaiya shouted back not to attempt boarding lest they all wanted to die, which prompted much laughter in the pirate's flock whilst some already were rushing on the deck. Soon, it was all over. The pirates were overrun by fear and jumped starboard, clinging onto the remaining planks of wood of their defunct ship. 
 On arrival in Afyal, the news of Zaiya's exploits aboard the ship spread like wildfire and rumors soon came to all influential nobles of the city. They invited Zaiya at their table to hear of her tales of the great Bhaalspawn. Weary of her fame, months later Zaiya bought the house of her former master and lived a quiet life until her end. People often came to her for spells, potions and magical trinklets which she sold to keep her living. Often she wondered what had happened to her old friend Kiara, but never tried to really find out.~
  
-
-
-
-
-
