@@ -1,55 +1,54 @@
-// Isaya : reordered according to SNDSLOT.IDS
-// Isaya : since there were two INITIAL_MEETING, the second with "Just ask", I decided to assign it to COMMON4 and COMMON5
+// Isaya: reordered according to SNDSLOT.IDS
+// Isaya: since there were two INITIAL_MEETING, the second with "Just ask", I decided to assign it to COMMON4 and COMMON5
 IF
-  True()
+	True()
 THEN
-  RESPONSE #100
-    CutSceneId("Kiara")  // 
-    SetName(@3)  // ~Kiara~
-    SetPlayerSound(Myself,@53,INITIAL_MEETING)  // ~I am so glad you found me. I need to find a friend...~
-    SetPlayerSound(Myself,@221,HAPPY)  // ~I have such wonderful and pleasurable time being at your side.~
-    SetPlayerSound(Myself,@222,UNHAPPY_ANNOYED)  // ~Such goodness is insufferable. I am a monk not a charity order.~
-    SetPlayerSound(Myself,@223,UNHAPPY_SERIOUS)  // ~My training allows me to endure much, but even I have my limits.~
-    SetPlayerSound(Myself,@224,UNHAPPY_BREAKING_POINT)  // ~Change your ways, or I shall paint my fists crimson with your blood.~
-    SetPlayerSound(Myself,@55,LEADER)  // ~I am glad you came to that conclusion too. I was worried you wouldn't notice I was a natural leader~
-    SetPlayerSound(Myself,@56,TIRED)  // ~Aaaaah...I can't feel my legs anymore,... anybody kind enough to massage my feet?~
-    SetPlayerSound(Myself,@57,BORED)  // ~Anybody read a good book as of late or willing to share a good story? (sigh)...    Perhaps silent meditation would be best indeed.~
-    SetPlayerSound(Myself,@54,BATTLE_CRY1)  // ~Fear me! For I wield death at the palm of my hand!~
-    SetPlayerSound(Myself,@87,BATTLE_CRY2)  // ~No mercy! No pity! Slay them all!~
-    SetPlayerSound(Myself,@88,BATTLE_CRY3)  // ~Kiaaiiiiii~
-    SetPlayerSound(Myself,@58,DAMAGE)  // ~No! I'm too strong to die like this.~
-    SetPlayerSound(Myself,@66,DYING)  // ~Arrrrggg~
-    SetPlayerSound(Myself,@65,HURT)  // ~Aaaaah~
-    SetPlayerSound(Myself,@67,AREA_FOREST)  // ~I don't like the forest it feel too much though as I'm being watched from behind every tree.~
-    SetPlayerSound(Myself,@68,AREA_CITY)  // ~Ah! Finally,...we reach a civilized place... Could we stop at a nearby shop? I could *really* do with some new shoes. Look, mine have holes all over their sole.~
-    SetPlayerSound(Myself,@69,AREA_DUNGEON)  // ~Do we really have to crawl our way through this *filthy* place? What do I get for doing all this, except some dirty clothes?~
-    SetPlayerSound(Myself,@70,AREA_DAY)  // ~How am I supposed to maintain my focus with the sun in my eyes.~
-    SetPlayerSound(Myself,@71,AREA_NIGHT)  // ~I do so prefer the night's warm embrace.~
-    SetPlayerSound(Myself,@59,SELECT_COMMON1)  // ~What's your desire?~
-    SetPlayerSound(Myself,@60,SELECT_COMMON2)  // ~How can I help you?~
-    SetPlayerSound(Myself,@61,SELECT_COMMON3)  // ~Yes...~
-// Isaya : since there were two INITIAL_MEETING, the second with "I think one more little thing won't hurt", I decided to assign it to COMMON4 and COMMON5
-    SetPlayerSound(Myself,@90,SELECT_COMMON4)  // ~I think one more little thing won't hurt.~
-    SetPlayerSound(Myself,@90,SELECT_COMMON5)  // ~I think one more little thing won't hurt.~
-    SetPlayerSound(Myself,@89,SELECT_COMMON6)  // ~Something on your mind?~
-    SetPlayerSound(Myself,@62,SELECT_ACTION1)  // ~Since you insist.~
-    SetPlayerSound(Myself,@63,SELECT_ACTION2)  // ~I've done worse before.~
-    SetPlayerSound(Myself,@64,SELECT_ACTION3)  // ~Must I always fetch and carry.~
-    SetPlayerSound(Myself,@72,SELECT_ACTION4)  // ~Very well since I am the only capable to do your dirty work.~
-    SetPlayerSound(Myself,@73,SELECT_ACTION5)  // ~If you must ask at least be polite.~
-    SetPlayerSound(Myself,@74,SELECT_ACTION6)  // ~Don't try my patience too far.~
-    SetPlayerSound(Myself,@75,SELECT_ACTION7)  // ~I am entirely too generous with you.~
-    SetPlayerSound(Myself,@76,REACT_TO_DIE_GENERAL)  // ~Such a pity but that means more for the rest of us.~
-    SetPlayerSound(Myself,@77,SELECT_RARE1)  // ~I may fight for you but you can forget about cooking or cleaning.~
-    SetPlayerSound(Myself,@78,SELECT_RARE2)  // ~Treat me with the respect I deserve and perhaps I'll consider it.~
-    SetPlayerSound(Myself,@79,CRITICAL_HIT)  // ~I bet you thought women were weak.~
-    SetPlayerSound(Myself,@80,CRITICAL_MISS)  // ~How could I let my mighty strike fail me.~
-    SetPlayerSound(Myself,@81,TARGET_IMMUNE)  // ~This can't happen!~
-    SetPlayerSound(Myself,@82,INVENTORY_FULL)  // ~I'm sorry I won't carry it, if somebody *cared* to pick-up this *thing* from the ground.~
-    SetPlayerSound(Myself,@83,PICKED_POCKET)  // ~Hum I always was good at getting my hand into places where it did not belong.~
-    SetPlayerSound(Myself,@84,HIDDEN_IN_SHADOWS)  // ~Mmmmm... I feel so comfortable when cloaked in the warmth of darkness.~
-    SetPlayerSound(Myself,@85,SPELL_DISRUPTED)  // ~My concentration is shattered.~ 
-    SetPlayerSound(Myself,@86,SET_A_TRAP)  // ~Delicate and deadly as spider silk.~
-    SetPlayerSound(Myself,@4,EXISTANCE5)  // ~When asked about her past, Kiara tells you that she was born in the Kara Turian land of Koryo, far east of Faerûn. After the tragic death of her parents, she was rescued by a local monastery and although extremely rare for a girl, raised as a monk. She spent most of her youth there and learnt some basic fighting skills, herbal preparations and meditation. For an obscure reason, although from the tear in her eye you guess a tragic event, she was expelled from the monastery at an early age. She traveled to the west and met some merchants along the road which she escorted first to Tu Lung before embarking aboard a ship to the city of Medina al Afyal. This is an adventure she highly speaks of with an enthusiastic tone in her voice. On arrival at Afyal, she mentions she met Zaiya before being abducted by corsairs and sold as slaves in Athkatla. You see her face darken under her monk's hood; you know she will say no more.~
+	RESPONSE #100
+		CutSceneId("Kiara")
+		SetName(@3)  // ~Kiara~
+		SetPlayerSound(Myself,@53,INITIAL_MEETING)         // ~I am so glad you found me. I need to find a friend...~
+		SetPlayerSound(Myself,@221,HAPPY)                  // ~I have such wonderful and pleasurable time being at your side.~ [KHAPPY]
+		SetPlayerSound(Myself,@222,UNHAPPY_ANNOYED)        // ~Such goodness is insufferable. I am a monk, not a charity order.~
+		SetPlayerSound(Myself,@223,UNHAPPY_SERIOUS)        // ~My training allows me to endure much, but even I have my limits.~
+		SetPlayerSound(Myself,@224,UNHAPPY_BREAKING_POINT) // ~Change your ways, or I shall paint my fists crimson with your blood.~
+		SetPlayerSound(Myself,@55,LEADER)                  // ~I am glad you came to that conclusion too. I was worried you wouldn't notice I was a natural leader~ [KIARAB]
+		SetPlayerSound(Myself,@56,TIRED)                   // ~Aaaaah... I can't feel my legs anymore... Anybody kind enough to massage my feet?~ [KIARAC]
+		SetPlayerSound(Myself,@57,BORED)                   // ~Anybody read a good book as of late or willing to share a good story? (sigh)... Perhaps silent meditation would be best indeed.~ [KIARAD]
+		SetPlayerSound(Myself,@54,BATTLE_CRY1)             // ~Fear me! For I wield death at the palm of my hand!~ [KIARAA]
+		SetPlayerSound(Myself,@87,BATTLE_CRY2)             // ~No mercy! No pity! Slay them all!~ [KIARA8]
+		SetPlayerSound(Myself,@88,BATTLE_CRY3)             // ~Kiaaiiiiii!~ [KIARA9]
+		SetPlayerSound(Myself,@58,DAMAGE)                  // ~No! I'm too strong to die like this.~ [KIARAE]
+		SetPlayerSound(Myself,@66,DYING)                   // ~Arrrrggg!~ [KIARAM]
+		SetPlayerSound(Myself,@65,HURT)                    // ~Aaaaah!~ [KIARAL]
+		SetPlayerSound(Myself,@67,AREA_FOREST)             // ~I don't like the forest. It feel too much though as I'm being watched from behind every tree.~ [KIARAN]
+		SetPlayerSound(Myself,@68,AREA_CITY)               // ~Ah! Finally... We reach a civilized place... Could we stop at a nearby shop? I could *really* do with some new shoes. Look, mine have holes all over their sole.~ [KIARAO]
+		SetPlayerSound(Myself,@69,AREA_DUNGEON)            // ~Do we really have to crawl our way through this *filthy* place? What do I get for doing all this, except some dirty clothes?~ [KIARAP]
+		SetPlayerSound(Myself,@70,AREA_DAY)                // ~How am I supposed to maintain my focus with the sun in my eyes.~ [KIARAQ]
+		SetPlayerSound(Myself,@71,AREA_NIGHT)              // ~I do so prefer the night's warm embrace.~ [KIARAR]
+		SetPlayerSound(Myself,@59,SELECT_COMMON1)          // ~What's your desire?~ [KIARAF]
+		SetPlayerSound(Myself,@60,SELECT_COMMON2)          // ~How can I help you?~ [KIARAG]
+		SetPlayerSound(Myself,@61,SELECT_COMMON3)          // ~Yes...~ [KIARAH]
+		// Isaya: since there were two INITIAL_MEETING, the second with "I think one more little thing won't hurt.", I decided to assign it to COMMON4 and COMMON5
+		SetPlayerSound(Myself,@90,SELECT_COMMON4)          // ~I suppose one more little thing won't hurt.~ [KIARA_]
+		SetPlayerSound(Myself,@90,SELECT_COMMON5)          // ~I suppose one more little thing won't hurt.~ [KIARA_]
+		SetPlayerSound(Myself,@89,SELECT_COMMON6)          // ~Something on your mind?~ [KIARA0]
+		SetPlayerSound(Myself,@62,SELECT_ACTION1)          // ~Since you insist.~ [KIARAI]
+		SetPlayerSound(Myself,@63,SELECT_ACTION2)          // ~I've done worse before.~ [KIARAJ]
+		SetPlayerSound(Myself,@64,SELECT_ACTION3)          // ~Must I always fetch and carry?~ [KIARAK]
+		SetPlayerSound(Myself,@72,SELECT_ACTION4)          // ~Very well since I am the only capable to do your dirty work.~ [KIARAS]
+		SetPlayerSound(Myself,@73,SELECT_ACTION5)          // ~If you must ask at least be polite.~ [KIARAT]
+		SetPlayerSound(Myself,@74,SELECT_ACTION6)          // ~Don't try my patience too far.~ [KIARAU]
+		SetPlayerSound(Myself,@75,SELECT_ACTION7)          // ~I am entirely too generous with you.~ [KIARAV]
+		SetPlayerSound(Myself,@76,REACT_TO_DIE_GENERAL)    // ~Such a pity, but that means more for the rest of us.~ [KIARAW]
+		SetPlayerSound(Myself,@77,SELECT_RARE1)            // ~I may fight for you, but you can forget about cooking or cleaning.~ [KIARAX]
+		SetPlayerSound(Myself,@78,SELECT_RARE2)            // ~Treat me with the respect I deserve and perhaps I'll consider it.~ [KIARAY]
+		SetPlayerSound(Myself,@79,CRITICAL_HIT)            // ~I bet you thought women were weak.~ [KIARAZ]
+		SetPlayerSound(Myself,@80,CRITICAL_MISS)           // ~How could I let my mighty strike fail me?~ [KIARA1]
+		SetPlayerSound(Myself,@81,TARGET_IMMUNE)           // ~This can't happen!~ [KIARA2]
+		SetPlayerSound(Myself,@82,INVENTORY_FULL)          // ~I'm sorry I won't carry it. If somebody *cared* to pick-up this *thing* from the ground.~ [KIARA3]
+		SetPlayerSound(Myself,@83,PICKED_POCKET)           // ~Hum... I always was good at getting my hands into places where it did not belong.~ [KIARA4]
+		SetPlayerSound(Myself,@84,HIDDEN_IN_SHADOWS)       // ~Mmmmm... I feel so comfortable when cloaked in the warmth of darkness.~ [KIARA5]
+		SetPlayerSound(Myself,@85,SPELL_DISRUPTED)         // ~My concentration is shattered.~ [KIARA6]
+		SetPlayerSound(Myself,@86,SET_A_TRAP)              // ~Delicate and deadly as spider silk.~ [KIARA7]
+		SetPlayerSound(Myself,@4,EXISTANCE5)               // ~When asked about her past, Kiara tells you that she was born in the Kara Turian land of Koryo, far east of Faerûn. After the tragic death of her parents, she was rescued by a local monastery and although extremely rare for a girl, raised as a monk. She spent most of her youth there and learnt some basic fighting skills, herbal preparations and meditation. For an obscure reason, although from the tear in her eye you guess a tragic event, she was expelled from the monastery at an early age. She traveled to the west and met some merchants along the road which she escorted first to Tu Lung before embarking aboard a ship to the city of Medina al Afyal. This is an adventure she highly speaks of with an enthusiastic tone in her voice. On arrival at Afyal, she mentions she met Zaiya before being abducted by corsairs and sold as slaves in Athkatla. You see her face darken under her monk's hood; you know she will say no more.~
 END
-

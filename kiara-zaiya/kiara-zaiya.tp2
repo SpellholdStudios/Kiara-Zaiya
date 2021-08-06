@@ -114,132 +114,26 @@ LANGUAGE ~Russian (Gingerrr & aerie.ru. Updated by Prowler)~
          ~kiara-zaiya/lang/russian/kzsetup.tra~
 
 
-/* ======================================= *
- *    Kiara-Zaiya mod  (main component)    *
- * ======================================= */
-BEGIN @1 // ~Kiara-Zaiya for BG2 SOA~
+/* ========================================== *
+ *    Kiara-Zaiya for BG2 (main component)    *
+ * ========================================== */
+BEGIN @1                                 // ~Kiara-Zaiya for BG2~
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @2 // ~You do not appear to have Throne of Bhaal installed.~
+
+OUTER_SET kz_custom = 0
 
 INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
 
 
-/////////////////////////////////////////////////////////////////////////////////////
-//INSTALL CUSTOM SOUNDSET FOR KIARA-ZAIYA
-////////////////////////////////////////////////////////////////////////////////////
+/* ============================================================================ *
+ *    Kiara-Zaiya mod with custom soundsets (English only)  (main component)    *
+ * ============================================================================ */
+BEGIN @150                               // ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @2 // ~You do not appear to have Throne of Bhaal installed.~
 
-BEGIN @150 // ~Custom Kiara-Zaiya soundset (available separately).~
+OUTER_SET kz_custom = 1
 
-// Isaya (V1.6.2)
-// For custom soundsets, several texts differ from those of the basic soundset.
-// Since I integrated the texts inside the baf files, I had to create two alternate baf files for the custom soundsets (in the sounds directory).
-
-// Isaya: this scripts only differ from kiafix.baf and zaifix.baf in /scripts by some texts of the custom soundset
-COMPILE ~kiara-zaiya/sounds/kiafix.baf~
-        ~kiara-zaiya/sounds/zaifix.baf~
-
-// Isaya: version 1.6.2
-// Set Kiara specific soundset in the CRE file
-COPY ~kiara-zaiya/creatures/kiara.cre~ ~override~
-	SAY NAME1 @3
-	SAY NAME2 @3
-	SAY BIO @4
-	// Soundset
-	SAY INITIAL_MEETING @53
-	SAY HAPPY @221
-	SAY UNHAPPY_ANNOYED @222
-	SAY UNHAPPY_SERIOUS @223
-	SAY UNHAPPY_BREAKING @224
-	SAY LEADER @55
-	SAY TIRED @56
-	SAY BORED @57
-	SAY BATTLE_CRY1 @54
-	SAY BATTLE_CRY2 @87
-	SAY BATTLE_CRY3 @88
-	SAY DAMAGE @58
-	SAY DYING @66
-	SAY HURT @65
-	SAY AREA_FOREST @67
-	SAY AREA_CITY @68
-	SAY AREA_DUNGEON @69
-	SAY AREA_DAY @70
-	SAY AREA_NIGHT @71
-	SAY SELECT_COMMON1 @59
-	SAY SELECT_COMMON2 @60
-	SAY SELECT_COMMON3 @61
-	// Isaya: since there were two INITIAL_MEETING, the second with "I think one more little thing won't hurt.", I decided to assign it to COMMON4 and COMMON5
-	SAY SELECT_COMMON4 @90
-	SAY SELECT_COMMON5 @90
-	SAY SELECT_COMMON6 @89
-	SAY SELECT_ACTION1 @62
-	SAY SELECT_ACTION2 @63
-	SAY SELECT_ACTION3 @64
-	SAY SELECT_ACTION4 @72
-	SAY SELECT_ACTION5 @73
-	SAY SELECT_ACTION6 @74
-	SAY SELECT_ACTION7 @75
-	SAY REACT_TO_DIE_GENERAL @76
-	SAY SELECT_RARE1 @77
-	SAY SELECT_RARE2 @78
-	SAY CRITICAL_HIT @79
-	SAY CRITICAL_MISS @80
-	SAY TARGET_IMMUNE @81
-	SAY INVENTORY_FULL @82
-	SAY PICKED_POCKET @83
-	SAY HIDDEN_IN_SHADOWS @84
-	SAY SPELL_DISRUPTED @85
-	SAY SET_A_TRAP @86
-
-// Isaya: version 1.6.2
-// Set Zaiya specific soundset in the CRE file
-COPY ~kiara-zaiya/creatures/zaiya.cre~ ~override~
-	SAY NAME1 @27
-	SAY NAME2 @27
-	SAY BIO @28
-	// Soundset
-	SAY INITIAL_MEETING @91
-	SAY HAPPY @225
-	SAY UNHAPPY_ANNOYED @226
-	SAY UNHAPPY_SERIOUS @227
-	SAY UNHAPPY_BREAKING @228
-	SAY LEADER @93
-	SAY TIRED @94
-	SAY BORED @95
-	SAY BATTLE_CRY1 @92
-	SAY BATTLE_CRY2 @125
-	SAY BATTLE_CRY3 @126
-	SAY DAMAGE @96
-	SAY DYING @104
-	SAY HURT @103
-	SAY AREA_FOREST @105
-	SAY AREA_CITY @106
-	SAY AREA_DUNGEON @107
-	SAY AREA_DAY @108
-	SAY AREA_NIGHT @109
-	SAY SELECT_COMMON1 @97
-	SAY SELECT_COMMON2 @98
-	SAY SELECT_COMMON3 @99
-	// Isaya: since there were two INITIAL_MEETING, the second with "", I decided to assign it to COMMON4 and COMMON5
-	SAY SELECT_COMMON4 @128
-	SAY SELECT_COMMON5 @128
-	SAY SELECT_COMMON6 @127
-	SAY SELECT_ACTION1 @100
-	SAY SELECT_ACTION2 @101
-	SAY SELECT_ACTION3 @102
-	SAY SELECT_ACTION4 @110
-	SAY SELECT_ACTION5 @111
-	SAY SELECT_ACTION6 @112
-	SAY SELECT_ACTION7 @113
-	SAY REACT_TO_DIE_GENERAL @114
-	SAY SELECT_RARE1 @115
-	SAY SELECT_RARE2 @116
-	SAY CRITICAL_HIT @117
-	SAY CRITICAL_MISS @118
-	SAY TARGET_IMMUNE @119
-	SAY INVENTORY_FULL @120
-	SAY PICKED_POCKET @121
-	SAY HIDDEN_IN_SHADOWS @122
-	SAY SPELL_DISRUPTED @123
-	SAY SET_A_TRAP @124
+INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
 
 
 /* ======================================================= *
