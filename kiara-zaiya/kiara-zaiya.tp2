@@ -139,16 +139,21 @@ INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
 /* ======================================================= *
  *    Alternate Monk High level abilities by TG Maestro    *
  * ======================================================= */
-BEGIN @129 // ~Alternate High level abilities by TG Maestro~
+BEGIN @129 // ~Alternate Monk High level abilities by TG Maestro~
 
 // Remove later
-COPY ~kiara-zaiya/hla/lumo0.2da~ ~override/LUMO0.2da~
+COPY ~kiara-zaiya/hla/lumo0.2da~ ~override~
 
 // Shadow Stance!
-COPY ~kiara-zaiya/hla/shdst01.spl~ ~override~
-	SAY NAME1 @10
-	SAY UNIDENTIFIED_DESC @11
+// --------------
+ACTION_IF ((NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~0~)) AND (NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~1~))) BEGIN
+	COPY ~kiara-zaiya/hla/shdst01.spl~ ~override~
+		SAY NAME1 @10
+		SAY UNIDENTIFIED_DESC @11
+END
+	
 // Dragon fist!
+// ------------
 COPY ~kiara-zaiya/hla/dragf01.spl~ ~override~
 	SAY NAME1 @130
 	SAY UNIDENTIFIED_DESC @131
@@ -159,27 +164,37 @@ COPY ~kiara-zaiya/hla/dragon1.eff~ ~override~
      ~kiara-zaiya/hla/dragon5.eff~ ~override~
      ~kiara-zaiya/hla/dragon6.eff~ ~override~
      ~kiara-zaiya/hla/dragon7.eff~ ~override~
+
 // Shadowless Kick!
+// ----------------
 COPY ~kiara-zaiya/hla/shadk01.spl~ ~override~
 	SAY NAME1 @132
 	SAY UNIDENTIFIED_DESC @133
+
 // Tiger strike!
+// -------------
 COPY ~kiara-zaiya/hla/tiger01.spl~ ~override~
 	SAY NAME1 @134
 	SAY UNIDENTIFIED_DESC @135
+
 // Chant!
+// ------
 COPY ~kiara-zaiya/hla/chant02.spl~ ~override~
 	SAY NAME1 @136
 	SAY UNIDENTIFIED_DESC @137
+
 // Faster than the eye!
+// --------------------
 COPY ~kiara-zaiya/hla/faster2.spl~ ~override~
-  SAY NAME1 @138
-  SAY UNIDENTIFIED_DESC @140
+	SAY NAME1 @138
+	SAY UNIDENTIFIED_DESC @140
+
 // Solar Stance!
-COPY ~kiara-zaiya/hla/solar01.spl~ ~override~
-  SAY NAME1 @9
-  SAY NAME2 @9
-  SAY UNIDENTIFIED_DESC @141
+ACTION_IF ((NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~0~)) AND (NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~1~))) BEGIN
+	COPY ~kiara-zaiya/hla/solar01.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @141
+END
 
 
 /* =================================================== *
