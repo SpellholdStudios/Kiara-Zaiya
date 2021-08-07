@@ -27,7 +27,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("KZNinjaTalk","LOCALS",1)
-    DisplayStringHead(Myself,@4000)
+    DisplayStringHead(Myself,@282)  // ~Irenicus said they would come for the cup. I shall not fail my master.~
 END
 
 IF

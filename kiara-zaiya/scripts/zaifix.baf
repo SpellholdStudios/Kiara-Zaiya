@@ -4,50 +4,50 @@ IF
 THEN
 	RESPONSE #100
 		CutSceneId("Zaiya")
-		SetName(@27)  // ~Zaiya~
-		SetPlayerSound(Myself,@91,INITIAL_MEETING)         // ~Nothing~
-		SetPlayerSound(Myself,@225,HAPPY)                  // ~I enjoy traveling with you so. This must be what freedom feels like.~
-		SetPlayerSound(Myself,@226,UNHAPPY_ANNOYED)        // ~My time could be spent much more satisfactorily with my books. I do not like this.~
-		SetPlayerSound(Myself,@227,UNHAPPY_SERIOUS)        // ~I cannot approve of the path we are following. My time could best be spent elsewhere.~
-		SetPlayerSound(Myself,@228,UNHAPPY_BREAKING_POINT) // ~I have enough of all this pain and suffering inflicted upon others. Be cursed, <CHARNAME>!~
-		SetPlayerSound(Myself,@152,LEADER)                 // ~Of course. I'm the best choice.~ [FEMALE4B]
-		SetPlayerSound(Myself,@153,TIRED)                  // ~I must rest soon. I am weak when I am tired.~ [FEMALE4C]
-		SetPlayerSound(Myself,@154,BORED)                  // ~There are far better things to do than sit and wait.~ [FEMALE4D]
-		SetPlayerSound(Myself,@151,BATTLE_CRY1)            // ~You will fall by my hand!~ [FEMALE4A]
-		SetPlayerSound(Myself,@184,BATTLE_CRY2)            // ~Death shall take you.~ [FEMALE48]
-		SetPlayerSound(Myself,@185,BATTLE_CRY3)            // ~Retreat or fall before me.~ [FEMALE49]
-		SetPlayerSound(Myself,@155,DAMAGE)                 // ~Ah... I require healing as soon as possible.~ [FEMALE4E]
-		SetPlayerSound(Myself,@163,DYING)                  // ~Arrrrg!~ [FEMALE4M]
-		SetPlayerSound(Myself,@162,HURT)                   // ~Ah!~ [FEMALE4L]
-		SetPlayerSound(Myself,@105,AREA_FOREST)            // ~Ah! If memory serves, the elves call this tree Calvernon... Did I say anything wrong?... Stop staring at me please!~ [ZAYAN]
-		SetPlayerSound(Myself,@106,AREA_CITY)              // ~I wonder if we'll find some time to visit the library.~ [ZAYAO]
-		SetPlayerSound(Myself,@107,AREA_DUNGEON)           // ~I can't see a *thing* in this dark place. Can anybody lend me a torch?~ [ZAYAP]
-		SetPlayerSound(Myself,@108,AREA_DAY)               // ~It looks like another great day.~ [ZAYAQ]
-		SetPlayerSound(Myself,@109,AREA_NIGHT)             // ~It's getting *real* late. Shouldn't we be in bed by now?~ [ZAYAR]
-		SetPlayerSound(Myself,@97,SELECT_COMMON1)          // ~Yes?~ [ZAYAF]
-		SetPlayerSound(Myself,@157,SELECT_COMMON2)         // ~What is it?~ [FEMALE4G]
-		SetPlayerSound(Myself,@158,SELECT_COMMON3)         // ~Speak.~ [FEMALE4H]
+		SetName(@22)  // ~Zaiya~
+		SetPlayerSound(Myself,@146,INITIAL_MEETING)        // ~Nothing~
+		SetPlayerSound(Myself,@221,HAPPY)                  // ~I enjoy traveling with you so. This must be what freedom feels like.~
+		SetPlayerSound(Myself,@222,UNHAPPY_ANNOYED)        // ~My time could be spent much more satisfactorily with my books. I do not like this.~
+		SetPlayerSound(Myself,@223,UNHAPPY_SERIOUS)        // ~I cannot approve of the path we are following. My time could best be spent elsewhere.~
+		SetPlayerSound(Myself,@224,UNHAPPY_BREAKING_POINT) // ~I have enough of all this pain and suffering inflicted upon others. Be cursed, <CHARNAME>!~
+		SetPlayerSound(Myself,@185,LEADER)                 // ~Of course. I'm the best choice.~ [FEMALE4B]
+		SetPlayerSound(Myself,@186,TIRED)                  // ~I must rest soon. I am weak when I am tired.~ [FEMALE4C]
+		SetPlayerSound(Myself,@187,BORED)                  // ~There are far better things to do than sit and wait.~ [FEMALE4D]
+		SetPlayerSound(Myself,@184,BATTLE_CRY1)            // ~You will fall by my hand!~ [FEMALE4A]
+		SetPlayerSound(Myself,@217,BATTLE_CRY2)            // ~Death shall take you.~ [FEMALE48]
+		SetPlayerSound(Myself,@218,BATTLE_CRY3)            // ~Retreat or fall before me.~ [FEMALE49]
+		SetPlayerSound(Myself,@188,DAMAGE)                 // ~Ah... I require healing as soon as possible.~ [FEMALE4E]
+		SetPlayerSound(Myself,@196,DYING)                  // ~Arrrrg!~ [FEMALE4M]
+		SetPlayerSound(Myself,@195,HURT)                   // ~Ah!~ [FEMALE4L]
+		SetPlayerSound(Myself,@197,AREA_FOREST)            // ~Ah! If memory serves, the elves call this tree Calvernon... Did I say anything wrong?... Stop staring at me please!~
+		SetPlayerSound(Myself,@198,AREA_CITY)              // ~I wonder if we'll find some time to visit the library.~
+		SetPlayerSound(Myself,@199,AREA_DUNGEON)           // ~I can't see a *thing* in this dark place. Can anybody lend me a torch?~
+		SetPlayerSound(Myself,@200,AREA_DAY)               // ~It looks like another great day.~
+		SetPlayerSound(Myself,@201,AREA_NIGHT)             // ~It's getting *real* late. Shouldn't we be in bed by now?~
+		SetPlayerSound(Myself,@189,SELECT_COMMON1)         // ~Yes?~ [FEMALE4F]
+		SetPlayerSound(Myself,@190,SELECT_COMMON2)         // ~What is it?~ [FEMALE4G]
+		SetPlayerSound(Myself,@191,SELECT_COMMON3)         // ~Speak.~ [FEMALE4H]
 	// Isaya: since there were two INITIAL_MEETING, the second with "I agree.", I decided to assign it to COMMON4 and COMMON5
-		SetPlayerSound(Myself,@187,SELECT_COMMON4)         // ~I agree.~ [FEMALE4_]
-		SetPlayerSound(Myself,@187,SELECT_COMMON5)         // ~I agree.~ [FEMALE4_]
-		SetPlayerSound(Myself,@186,SELECT_COMMON6)         // ~I wait your instructions.~ [FEMALE40]
-		SetPlayerSound(Myself,@159,SELECT_ACTION1)         // ~It will be done.~ [FEMALE4I]
-		SetPlayerSound(Myself,@160,SELECT_ACTION2)         // ~Certainly.~ [FEMALE4J]
-		SetPlayerSound(Myself,@161,SELECT_ACTION3)         // ~Without doubt.~ [FEMALE4K]
-		SetPlayerSound(Myself,@169,SELECT_ACTION4)         // ~Quickly and precisely.~ [FEMALE4S]
-		SetPlayerSound(Myself,@170,SELECT_ACTION5)         // ~Without hesitation.~ [FEMALE4T]
-		SetPlayerSound(Myself,@171,SELECT_ACTION6)         // ~This will not take long.~ [FEMALE4U]
-		SetPlayerSound(Myself,@172,SELECT_ACTION7)         // ~If it must be done.~ [FEMALE4V]
-		SetPlayerSound(Myself,@173,REACT_TO_DIE_GENERAL)   // ~~ [FEMALE4W]
-		SetPlayerSound(Myself,@174,SELECT_RARE1)           // ~I am listening.~ [FEMALE4X]
-		SetPlayerSound(Myself,@175,SELECT_RARE2)           // ~Direct me as you will.~ [FEMALE4Y]
-		SetPlayerSound(Myself,@176,CRITICAL_HIT)           // ~Yes!~ [FEMALE4Z]
-		SetPlayerSound(Myself,@177,CRITICAL_MISS)          // ~Raugh! Next time.~ [FEMALE41]
-		SetPlayerSound(Myself,@178,TARGET_IMMUNE)          // ~My weapon is of no use.~ [FEMALE42]
-		SetPlayerSound(Myself,@179,INVENTORY_FULL)         // ~I can hold no more. That item has been dropped.~ [FEMALE43]
-		SetPlayerSound(Myself,@180,PICKED_POCKET)          // ~They did not notice my theft.~ [FEMALE44]
-		SetPlayerSound(Myself,@181,HIDDEN_IN_SHADOWS)      // ~I am hidden. We may proceed.~ [FEMALE45]
-		SetPlayerSound(Myself,@182,SPELL_DISRUPTED)        // ~My magic has been interrupted.~ [FEMALE46]
-		SetPlayerSound(Myself,@183,SET_A_TRAP)             // ~Be careful, this trap is set and ready.~ [FEMALE47]
-		SetPlayerSound(Myself,@28,EXISTANCE5)              // ~When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerun. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.~
+		SetPlayerSound(Myself,@220,SELECT_COMMON4)         // ~I agree.~ [FEMALE4_]
+		SetPlayerSound(Myself,@220,SELECT_COMMON5)         // ~I agree.~ [FEMALE4_]
+		SetPlayerSound(Myself,@219,SELECT_COMMON6)         // ~I wait your instructions.~ [FEMALE40]
+		SetPlayerSound(Myself,@192,SELECT_ACTION1)         // ~It will be done.~ [FEMALE4I]
+		SetPlayerSound(Myself,@193,SELECT_ACTION2)         // ~Certainly.~ [FEMALE4J]
+		SetPlayerSound(Myself,@194,SELECT_ACTION3)         // ~Without doubt.~ [FEMALE4K]
+		SetPlayerSound(Myself,@202,SELECT_ACTION4)         // ~Quickly and precisely.~ [FEMALE4S]
+		SetPlayerSound(Myself,@203,SELECT_ACTION5)         // ~Without hesitation.~ [FEMALE4T]
+		SetPlayerSound(Myself,@204,SELECT_ACTION6)         // ~This will not take long.~ [FEMALE4U]
+		SetPlayerSound(Myself,@205,SELECT_ACTION7)         // ~If it must be done.~ [FEMALE4V]
+		SetPlayerSound(Myself,@206,REACT_TO_DIE_GENERAL)   // ~~ [FEMALE4W]
+		SetPlayerSound(Myself,@207,SELECT_RARE1)           // ~I am listening.~ [FEMALE4X]
+		SetPlayerSound(Myself,@208,SELECT_RARE2)           // ~Direct me as you will.~ [FEMALE4Y]
+		SetPlayerSound(Myself,@209,CRITICAL_HIT)           // ~Yes!~ [FEMALE4Z]
+		SetPlayerSound(Myself,@210,CRITICAL_MISS)          // ~Raugh! Next time.~ [FEMALE41]
+		SetPlayerSound(Myself,@211,TARGET_IMMUNE)          // ~My weapon is of no use.~ [FEMALE42]
+		SetPlayerSound(Myself,@212,INVENTORY_FULL)         // ~I can hold no more. That item has been dropped.~ [FEMALE43]
+		SetPlayerSound(Myself,@213,PICKED_POCKET)          // ~They did not notice my theft.~ [FEMALE44]
+		SetPlayerSound(Myself,@214,HIDDEN_IN_SHADOWS)      // ~I am hidden. We may proceed.~ [FEMALE45]
+		SetPlayerSound(Myself,@215,SPELL_DISRUPTED)        // ~My magic has been interrupted.~ [FEMALE46]
+		SetPlayerSound(Myself,@216,SET_A_TRAP)             // ~Be careful, this trap is set and ready.~ [FEMALE47]
+		SetPlayerSound(Myself,@145,EXISTANCE5)             // ~When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerun. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.~
 END

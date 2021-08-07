@@ -1,26 +1,66 @@
-// Version information moved to the TP2 file (new VERSION field of WeiDU)
-@1    = ~Kiara-Zaiya for BG2 SOA~
+// Version information moved to the TP2 file (new VERSION flag of WeiDU)
+@1    = ~Kiara-Zaiya for BG2~
+@150  = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
+
+@129  = ~Alternate Monk High level abilities by TG Maestro~
+@142  = ~Golem room in De Arnise for SOA.~
+@143  = ~Original Amaralis battles~
+// Isaya: new texts moved from the TP2
+@261 = ~Tougher Kiara vampire~
+@262 = ~Revised Suldalanessar~
+// Isaya: end of new texts
+@250 = ~Jao and party for SOA: another tough fight~
+@260  = ~Tougher Irenicus at the tree of life~
+
 @2    = ~You do not appear to have Throne of Bhaal installed.~
-@3    = ~Kiara~
-@4    = ~When asked about her past, Kiara tells you that she was born in the Kara Turian land of Koryo, far east of Faerûn. After the tragic death of her parents, she was rescued by a local monastery and although extremely rare for a girl, raised as a monk. She spent most of her youth there and learnt some basic fighting skills, herbal preparations and meditation. For an obscure reason, although from the tear in her eye you guess a tragic event, she was expelled from the monastery at an early age. She traveled to the west and met some merchants along the road which she escorted first to Tu Lung before embarking aboard a ship to the city of Medina al Afyal. This is an adventure she highly speaks of with an enthusiastic tone in her voice. On arrival at Afyal, she mentions she met Zaiya before being abducted by corsairs and sold as slaves in Athkatla. You see her face darken under her monk's hood; you know she will say no more.~
-@5    = ~Snake Stance!~
-@6    = ~Winded~
-@7    = ~Lunar Stance!~
-@8    = ~Dragon Stance!~
-@9    = ~Solar Stance!~
-@10   = ~Shadow Stance!~
-@11   = ~Shadow Stance!
+@188  = ~Before you install, please open the readme file in the Kiara-Zaiya and see which components you want installed.~
+@189  = ~You do not seem to have the custom soundset installed!!! It can be found separately on the Kiara-Zaiya website.~
+
+
+/* =========== *
+ *  Creatures  *
+ * =========== */
+@21   = ~Kiara~
+@22   = ~Zaiya~
+@23   = ~Poisonous Wyvern~
+@24   = ~Prax~
+@25   = ~Amaralis~
+@26   = ~Demon Lord~
+@27   = ~Kiara Vampire~
+@28   = ~Horth'Kar~
+@29   = ~Jerlia~
+@30   = ~Endragor~
+@31   = ~Osan~
+
+
+/* ================== *
+ *  Spells and Items  *
+ * ================== */
+@41   = ~Snake Stance!~
+@42   = ~Winded~
+@43   = ~Lunar Stance!~
+@44   = ~Dragon Stance!~
+@45   = ~Solar Stance!~
+@46   = ~Solar Stance!
+
+The Monk gains the ability to focus his Ki energy and release it all at once, a fireball exploding from his body and doing 6d10 fire damage and possibly knocking opponents back for a considerable distance save vs breath at -4, rendering them unconscious for 1 round.
+
+Requires: shadowless kick~
+@47   = ~Shadow Stance!~
+@48   = ~Shadow Stance!
 Achieving absolute control over their bodies, experienced Monks can use this ability to turn into an ethereal state where they become completely invisible and blurred to their enemies. If the Monk makes an attack, or breaks the invisibility by any other means, he/she will become partially visible. Until the ability expires, the Monk gains 6 points bonus to AC, and another 4 points bonus to his AC vs. Missile weapons. The ability lasts 5 rounds.~
-@12   = ~Boo~
-@13   = ~Zaiya's unfortunate wild surge transformed Boo into a chicken. His constant cackling is driving poor Minsc insane, as if he wasn't already.~
-@14   = ~Osan's Monk Robe~
-@15   = ~This cloak belonged to Kiara's first lover Osan.
+
+@51   = ~Boo~
+@52   = ~Zaiya's unfortunate wild surge transformed Boo into a chicken. His constant cackling is driving poor Minsc insane, as if he wasn't already.~
+
+@53   = ~Osan's Monk Robe~
+@54   = ~This cloak belonged to Kiara's first lover Osan.
 
 STATISTICS:
 Magic Resistance: +10%
 Armor Class: +1
 Saving Throws: +1~
-@16   = ~This cloak belonged to Kiara's first lover Osan. The Demon Lord, sealing Kiara's fate, imbued this robe with powerful magic.
+@55   = ~This cloak belonged to Kiara's first lover Osan. The Demon Lord, sealing Kiara's fate, imbued this robe with powerful magic.
 
 STATISTICS:
 Magic Resistance: +10%
@@ -32,263 +72,27 @@ Equipped Abilities:
 Wearer regenerates 3 hit points every 6 seconds.
 Special use:
 Cast spell: True Sight once per day~
-@17   = ~Kiara's body~
-@18   = ~Kiara was abducted by Bodhi and infected with vampirism, forcing you to slay her. There may be some way to revive though you don't know how what it would be.~
-@19   = ~Jerlia's soul~
-@20   = ~This is the heart the demon kept, which prevented Jerlia's spirit to be free.~
-@21   = ~Ioun Stone~
-@22   = ~Yellow Ioun Stone~
-@23   = ~This is a small stone that floats in orbit around the owner's head. Simply equip the stone set it in its orbit. These obviously magical stones have different properties depending on their color.~
-@24   = ~Highly sought, this Ioun Stone renders it's wearer immune to everything magical or otherwise, that affects mobility in any way. This includes haste and slow spells.
+
+@56   = ~Kiara's body~
+@57   = ~Kiara was abducted by Bodhi and infected with vampirism, forcing you to slay her. There may be some way to revive though you don't know how what it would be.~
+
+@58   = ~Jerlia's soul~
+@59   = ~This is the heart the demon kept, which prevented Jerlia's spirit to be free.~
+
+@60   = ~Ioun Stone~
+@61   = ~Yellow Ioun Stone~
+@62   = ~This is a small stone that floats in orbit around the owner's head. Simply equip the stone set it in its orbit. These obviously magical stones have different properties depending on their color.~
+@63   = ~Highly sought, this Ioun Stone renders it's wearer immune to everything magical or otherwise, that affects mobility in any way. This includes haste and slow spells.
 
 You can also clearly see the shape an eye on one side of the stone and the inscription AO underneath.~
-@25   = ~Trade notes~
-@26   = ~Prax kept records of his sales on a scroll and you quickly find the name of Kiara on it. She has apparently been sold to Amaralis and was to be delivered to his home in the government district. The rest of the note only gives detailed amounts of his proceeds.~
-@27   = ~Zaiya~
-@28   = ~When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerun. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.~
-@29   = ~Jerlia's soul:
 
-I met a strange ghost named Jerlia in one of the graveyard crypts. She claims a demon stole her soul and she can not be put at rest until she gets it back. Although, she wasn't quite clear as to where I could find the demon, she said he could be hiding near a temple or in a cave.~
-@30   = ~Kill Amaralis:
+@64   = ~Trade notes~
+@65   = ~Prax kept records of his sales on a scroll and you quickly find the name of Kiara on it. She has apparently been sold to Amaralis and was to be delivered to his home in the government district. The rest of the note only gives detailed amounts of his proceeds.~
 
-Despite Kiara's treachery, I accepted the Demon Lord's offer to kill Amaralis. Amaralis, master slaver of Athkatla has currently set camp in the small teeth pass area and I have only ten days to do the bidding of the Demon Lord.~
-@31   = ~Kill Prelate Wessalen:
-
-I have accepted the Demon Lord's request to kill prelate Wessalen of the Order of the Radiant Heart in the hope that it would save Kiara from a gruesome fate. The Demon Lord gave me three days to commit this monstrous act.~
-@32   = ~Prelate Wessalen Dead:
-
-I killed prelate Wessalen and made myself the enemy of the Order of the Radiant Heart. In the process, I shall from now on be perceived as a force of evil in Faerun. Sparing Kiara's life has proven expensive.~
-@33   = ~Find Zaiya's friend:
-
-I met a young girl named Zaiya, who seems to suffer from a strange affliction. She told me that her friend Kiara is the only one able to stabilize her condition. We might be able to find some clues as to Kiara's location by asking a man named Prax, near a circus in Athkatla. She cautioned me about her state and that we have only a few days before she dies.~
-@34   = ~Oh no! A wild surge! Something horrible must have happened.~
-@35   = ~If the mage is truly over five hundred years old, let us be cautious. He must have had all the time to hone his magic skills to perfection.~
-@36   = ~You may have won a battle but the war is not yet over!~
-@37   = ~ Chain Contingency - Spell Shield~
-@38   = ~ Chain Contingency - Improved Mantle~
-@39   = ~ Chain Contingency - Spell Deflection~
-@40   = ~ Poor mage...You left it unprotected careless fool!~
-@41   = ~ I hope this dead corpse was just an acquaintance and not just a friend?~
-@42   = ~ You dare challenge me again?~
-@43   = ~ Let it be known that death awaits those who betray their oath.~
-@44   = ~ My fighting skills are useless! ~
-@45   = ~ Dragon Stance! ~
-@46   = ~Prax~
-@47   = ~Amaralis~
-@48   = ~Demon Lord~
-@49   = ~Kiara Vampire~
-@50   = ~Horth'Kar~
-@51   = ~Jerlia~
-@52   = ~Endragor~
-@53   = ~I am so glad you found me. I need to find a friend...~
-@54   = ~Fear me! For I wield death at the palm of my hand!~ [KIARAA]
-@55   = ~I am glad you came to that conclusion too. I was worried you wouldn't notice I was a natural leader~ [KIARAB]
-@56   = ~Aaaaah...I can't feel my legs anymore,... anybody kind enough to massage my feet?~ [KIARAC]
-@57   = ~Anybody read a good book as of late or willing to share a good story? (sigh)... Perhaps silent meditation would be best indeed.~ [KIARAD]
-@58   = ~No! I'm too strong to die like this.~ [KIARAE]
-@59   = ~What's your desire?~ [KIARAF]
-@60   = ~How can I help you?~ [KIARAG]
-@61   = ~Yes...~ [KIARAH]
-@62   = ~Since you insist.~ [KIARAI]
-@63   = ~I've done worse before.~ [KIARAJ]
-@64   = ~Must I always fetch and carry.~ [KIARAK]
-@65   = ~Aaaaah~ [KIARAL]
-@66   = ~Arrrrggg~ [KIARAM]
-@67   = ~I don't like the forest it feel too much though as I'm being watched from behind every tree.~ [KIARAN]
-@68   = ~Ah! Finally,...we reach a civilized place... Could we stop at a nearby shop? I could *really* do with some new shoes. Look, mine have holes all over their sole.~ [KIARAO]
-@69   = ~Do we really have to crawl our way through this *filthy* place? What do I get for doing all this, except some dirty clothes?~ [KIARAP]
-@70   = ~How am I supposed to maintain my focus with the sun in my eyes.~ [KIARAQ]
-@71   = ~I do so prefer the night's warm embrace.~ [KIARAR]
-@72   = ~Very well since I am the only capable to do your dirty work.~ [KIARAS]
-@73   = ~If you must ask at least be polite.~ [KIARAT]
-@74   = ~Don't try my patience too far.~ [KIARAU]
-@75   = ~I am entirely too generous with you.~ [KIARAV]
-@76   = ~Such a pity but that means more for the rest of us.~ [KIARAW]
-@77   = ~I may fight for you but you can forget about cooking or cleaning.~ [KIARAX]
-@78   = ~Treat me with the respect I deserve and perhaps I'll consider it.~ [KIARAY]
-@79   = ~I bet you thought women were weak.~ [KIARAZ]
-@80   = ~How could I let my mighty strike fail me.~ [KIARA1]
-@81   = ~This can't happen!~ [KIARA2]
-@82   = ~I'm sorry I won't carry it, if somebody *cared* to pick-up this *thing* from the ground.~ [KIARA3]
-@83   = ~Hum I always was good at getting my hand into places where it did not belong.~ [KIARA4]
-@84   = ~Mmmmm... I feel so comfortable when cloaked in the warmth of darkness.~ [KIARA5]
-@85   = ~My concentration is shattered.~ [KIARA6]
-@86   = ~Delicate and deadly as spider silk.~ [KIARA7]
-@87   = ~No mercy! No pity! Slay them all!~ [KIARA8]
-@88   = ~Kiaaiiiiii~ [KIARA9]
-@89   = ~Something on your mind?~ [KIARA0]
-@90   = ~I think one more little thing won't hurt.~ [KIARA_]
-@91   = ~Nothing~
-@92   = ~I'll ex-spell them to hell...~ [ZAYAA]
-@93   = ~I'm not so sure this is my place, but I am willing to try my best~ [ZAYAB]
-@94   = ~Oh please can we stop? I feel like sleeping right here.~ [ZAYAC]
-@95   = ~Are we here for long?...Perhaps I can resume my readings of this excellent book on polymorph.  ~ [ZAYAD]
-@96   = ~Awwh!~ [ZAYAE]
-@97   = ~Yes?~ [ZAYAF]
-@98   = ~You need a wild mage?~ [ZAYAG]
-@99   = ~You are calling me?~ [ZAYAH]
-@100  = ~I'll do it right away...~ [ZAYAI]
-@101  = ~Always ready to lend a hand...~ [ZAYAJ]
-@102  = ~That's all too easy...~ [ZAYAK]
-@103  = ~Ouch!~ [ZAYAL]
-@104  = ~Aaaaah...~ [ZAYAM]
-@105  = ~Ah! If memory serves the elves call this tree Calvernon ..Did I say anything wrong?  ...Stop staring at me please!~ [ZAYAN]
-@106  = ~I wonder if we'll find some time to visit the library.~ [ZAYAO]
-@107  = ~I can't see a *thing* in this dark place, anybody could lend me a torch?~ [ZAYAP]
-@108  = ~It looks like another great day.~ [ZAYAQ]
-@109  = ~It's getting *real* late. Shouldn't we be in bed by now?~ [ZAYAR]
-// Isaya : transfered from tp2 file: no translation required
-@110  = ~~ [ZAYAS] //ACTION4
-@111  = ~~ [ZAYAT] //ACTION5
-@112  = ~~ [ZAYAU] //ACTION6
-@113  = ~~ [ZAYAV] //ACTION7
-@114  = ~~ [ZAYAW] //DIE GENERAL
-// Isaya : end
-@115  = ~Could I finish my reading first? ~ [ZAYAX]
-// Isaya : transfered from tp2 file: no translation required
-@116  = ~~ [ZAYAY] //RARE2
-// Isaya : end
-@117  = ~*Yes!* Just call me Drizzt! ~ [ZAYAZ]
-@118  = ~Hum...clumsy again.~ [ZAYA1]
-@119  = ~Let me try some wild magic!~ [ZAYA2]
-@120  = ~With Kiara asking me to carry some of her stuff too, sorry I have enough already!~ [ZAYA3]
-// Isaya : transfered from tp2 file: no translation required
-@121  = ~~ [ZAYA4] //PICKED POCKET
-@122  = ~~ [ZAYA5] //HIDE IN SHADOWS
-// Isaya : end
-@123  = ~My spell has been interrupted...~ [ZAYA6]
-// Isaya : transfered from tp2 file: no translation required
-@124  = ~~ [ZAYA7] //SET A TRAP
-@125  = ~~ [ZAYA8] //BATTLE CRY2
-@126  = ~~ [ZAYA9] //BATTLE CRY3
-@127  = ~~ [ZAYA0] //COMMON6
-@128  = ~~ [ZAYA_] //ACTION8
-// Isaya : end
-@129  = ~Alternate High level abilities by TG Maestro~
-@130  = ~Dragon fist!~
-@131  = ~Dragon fist!
-High level Monks have the ability to focus Ki energies in their bodies in many ways. When using this ability all attacks made by the Monk in the next round will remove the targets Specific Protection (save vs. spell at -2) and one Magical Protection up to 8. level (no save). The victim must save vs. breath to avoid losing all Physical Protections. Creatures hit by Dragon Fist must also save vs. death at -4, or their Magic Resistance will be reduced by 19% for 6 rounds. This effect is cumulative. Dragon Fist always removes the strongest Protection spell from the target.~
-@132  = ~Shadowless Kick!~
-@133  = ~Shadowless Kick
-This ability gives the Monk a one-time attack. This overwhelming assault is always successful, there is no need for a saving throw. The target suffers 5D8 crushing damage and falls unconscious for 1 round (no save). If the opponent fails its saving throw vs. breath at -4, the power of the kick will knock him back for a considerable distance.~
-@134  = ~Tiger strike!~
-@135  = ~Tiger strike!
-With the Tiger strike ability, the monk gains the ability to strike a mighty blow, knocking an opponent back for a considerable distance and stunning the opponent for 1 round. All attacks made in the first round are critical hits. The ability lasts for 2 rounds.
-
-Large creatures such as a dragons or giants will not be knocked back or stunned.
-
-Requires: Power Attack, Critical Strike~
-@136  = ~Chant!~
-@137  = ~Chant!
-
-This ability gives the Monk powerful protections - both physical and magical - for a very short time. It increases Slashing, Piercing, Crushing and Missile resistances to 60%, increases Fire, Cold, Lightning resistances by 20% and gives 10% Magic Damage resistance. The effects of this ability last for 2 rounds~
-@138  = ~Faster than the eye!~
-@139  = ~Faster then the eye!~
-@140  = ~Faster than the eye!
-
-The monk gains the ability to move at an incredible speed.~
-@141  = ~Solar Stance!
-
-The Monk gains the ability to focus his Ki energy and release it all at once, a fireball exploding from his body and doing 6d10 fire damage and possibly knocking opponents back for a considerable distance save vs breath at -4, rendering them unconscious for 1 round .
-
-Requires: shadowless kick~
-@142  = ~Golem room in De Arnise for SOA.~
-@143  = ~Original Amaralis battles~
-@144  = ~Fenilla~
-@145  = ~Morticia~
-@146  = ~Polgar~
-@147  = ~Keria~
-@148  = ~ Poor mage...You left it unprotected...Careless fool!~
-@149  = ~ I hope this dead corpse was just an acquaintance and not a dear friend?~
-@150  = ~Custom Kiara-Zaiya soundset (available separately).~
-@151  = ~You will fall by my hand.~ [FEMALE4A]
-@152  = ~Of course, I'm the best choice.~ [FEMALE4B]
-@153  = ~I must rest soon, I am weak when I am tired.~ [FEMALE4C]
-@154  = ~There are far better things to do than sit and wait.~ [FEMALE4D]
-@155  = ~Ah..I require healing as soon as possible.~ [FEMALE4E]
-@156  = ~Yes?~ [FEMALE4F]
-@157  = ~What is it?~ [FEMALE4G]
-@158  = ~Speak!~ [FEMALE4H]
-@159  = ~It will be done.~ [FEMALE4I]
-@160  = ~Certainly.~ [FEMALE4J]
-@161  = ~Without doubt.~ [FEMALE4K]
-@162  = ~Aaah~ [FEMALE4L]
-@163  = ~Arrrrg~ [FEMALE4M]
-@164  = ~Ah! If memory serves the elves call this tree Calvernon ..Did I say anything wrong?  ...Stop staring at me please!~
-@165  = ~I wonder if we'll find some time to visit the library.~
-@166  = ~I can't see a *thing* in this dark place, anybody could lend me a torch?~
-@167  = ~It looks like another great day.~
-@168  = ~It's getting *real* late. Shouldn't we be in bed by now?~
-@169  = ~Quickly and precisely.~ [FEMALE4S]
-@170  = ~Without hesitation.~ [FEMALE4T]
-@171  = ~This will not take long.~ [FEMALE4U]
-@172  = ~If it must be done.~ [FEMALE4V]
-// Isaya : transfered from tp2 file: no translation required
-@173  = ~~ [FEMALE4W]
-@174  = ~I am listening.~ [FEMALE4X]
-@175  = ~Direct me as you will.~ [FEMALE4Y]
-@176  = ~Yes!~ [FEMALE4Z]
-@177  = ~Ah next time.~ [FEMALE41]
-@178  = ~My weapon is at no use.~ [FEMALE42]
-@179  = ~I can hold no more that item has been dropped.~ [FEMALE43]
-@180  = ~He did not notice my theft.~ [FEMALE44]
-@181  = ~I am hidden we may proceed.~ [FEMALE45]
-@182  = ~My magic has been interrupted.~ [FEMALE46]
-@183  = ~Be careful, this trap is set and ready.~ [FEMALE47]
-@184  = ~Death shall take you.~ [FEMALE48]
-@185  = ~Retreat or fall before me.~ [FEMALE49]
-@186  = ~I wait your instructions.~ [FEMALE40]
-@187  = ~I agree.~ [FEMALE4_]
-
-@188  = ~Before you install, please open the readme file in the Kiara-Zaiya and see which components you want installed.~
-
-//soundset Kiara using Female2!
-@189  = ~You do not seem to have the custom soundset installed!!! It can be found separately on the Kiara-Zaiya website.~
-@190  = ~ha ha ha haaa~ [Female2a] //battle cry1
-@191  = ~Everyone will benefit under my leadership.~ [Female2b] //leader
-@192  = ~Oh you know I could really use some rest.~ [Female2c] //Tired
-@193  = ~This is getting us nowhere, let us do something.~ [Female2d] //Bored
-@194  = ~My wounds could use some attention.~ [Female2e] //Damage
-@195  = ~Mmmm~ [Female2f] //Select1
-@196  = ~I'm waiting.~ [Female2g] //selct2
-@197  = ~Yes.~ [Female2h] //selct3
-@198  = ~Nothing to it.~ [Female2i] //Action1
-@199  = ~Very well.~ [Female2j] //action2
-@200  = ~What ever you want.~ [Female2k] //action3
-@201  = ~uh~ [Female2l] //Hurt
-@202  = ~Arggg~ [Female2m] //Dying 
-@203  = ~If you say so.~ [Female2s] //action4
-@204  = ~Of course~ [Female2t] //action5
-@205  = ~If that's what you want.~ [Female2u] //action6
-@206  = ~Whatever you desire.~ [Female2v] //action7
-@207  = ~What would you like~ [Female2x] //rare1
-@208  = ~Tell me all about it.~ [Female2y] //rare2
-@209  = ~Did that hurt?~ [Female2z] //Critical hit
-@210  = ~Ah! You wild bastard!~ [Female21] //miss
-@211  = ~My attack has no effect.~ [Female22] //target immune
-@212  = ~I just can't carry anymore, you'll pick that up for me won't you?~ [Female23] //Inventory full
-@213  = ~In and out and no one noticed.~ [Female24] //picked pocket
-@214  = ~I have hidden myself well.~ [Female25] //Hidden in shadows
-@215  = ~Whoof my spell has failed.~ [Female26] //Spell disrupted
-@216  = ~Careful now my trap is set.~ [Female27] //Set a trap
-@217  = ~You wouldn’t hurt a lady would you?~ [Female28] //Battlecry2
-@218  = ~This should be fun!~ [Female29] //battlecry3
-@219  = ~Is that all?~ [Female2_] //Select6
-@220  = ~Just ask.~ [Female20] //action8
-@221  = ~I have such wonderful and pleasurable time being at your side.~ [KHappy] //Kia Happy
-@222  = ~Such goodness is insufferable. I am a monk not a charity order.~ //Unhappy annoyed
-@223  = ~My training allows me to endure much, but even I have my limits.~ //Unhappy srious
-@224  = ~Change your ways, or I shall paint my fists crimson with your blood.~ //Unhappy breaking
-@225  = ~I enjoy traveling with you so. This must be what freedom feels like.~ //Zai happy
-@226  = ~My time could be spent much more satisfactorily with my books. I do not like this.~ //Unhappy annoyed
-@227  = ~I cannot approve of the path we are following. My time could best be spent elsewhere.~ //Unhappy serious
-@228  = ~I have enough of all this pain and suffering inflicted upon others. Be cursed <CHARNAME>!~ //Unhappy breaking
-@230  = ~Poisonous Wyvern~
-
-//NEW AMARALIS FIGHT ADDITIONS
-@246 = ~The Divine Sword~
-@247 = ~The Divine Sword~
-@248 = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords.  In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all long swords is their length, which ranges from 35 inches to 47 inches.  In the latter case, the blade is known to take up 40 inches of the total length.  Most long swords have a double-edged blade and a sharp point at the tip.  Despite the tip, the long sword is designed for slashing, not thrusting. 
+// New Amaralis fight additions
+// ----------------------------
+@66   = ~The Divine Sword~
+@67   = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords.  In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all long swords is their length, which ranges from 35 inches to 47 inches.  In the latter case, the blade is known to take up 40 inches of the total length.  Most long swords have a double-edged blade and a sharp point at the tip.  Despite the tip, the long sword is designed for slashing, not thrusting. 
 
 STATISTICS:
 
@@ -299,12 +103,11 @@ Speed Factor: 5
 Proficiency Type: Long Sword
 Type:  1-handed
 Requires: 6 Strength
-Not Usable By:
+Not usable by:
  Druid
  Cleric
- Mage
-~
-@249 = ~The Divine sword is one of the most thought after in the realms as it can provide complete immunity to divination for 1 hour.
+ Mage~
+@68   = ~The Divine sword is one of the most thought after in the realms as it can provide complete immunity to divination for 1 hour.
 
 STATISTICS:
 
@@ -321,30 +124,289 @@ Equipped Abilities:
 +2 AC
 Special use:
 Cast spell immunity to divination once per day. The immunity lasts 1 hour. 
-Not Usable By:
-Druid
-Cleric
-Mage
-~
+Not usable by:
+ Druid
+ Cleric
+ Mage~
 
-@250 = ~Jao and party for SOA: another tough fight~
-@251 = ~Jao~
-@252 = ~Ninja~
-@253 = ~Wuje~
+
+/* ================= *
+ *  Kiara soundsets  *
+ * ================= */
+@71   = ~When asked about her past, Kiara tells you that she was born in the Kara Turian land of Koryo, far east of Faerûn. After the tragic death of her parents, she was rescued by a local monastery and although extremely rare for a girl, raised as a monk. She spent most of her youth there and learnt some basic fighting skills, herbal preparations and meditation. For an obscure reason, although from the tear in her eye you guess a tragic event, she was expelled from the monastery at an early age. She traveled to the west and met some merchants along the road which she escorted first to Tu Lung before embarking aboard a ship to the city of Medina al Afyal. This is an adventure she highly speaks of with an enthusiastic tone in her voice. On arrival at Afyal, she mentions she met Zaiya before being abducted by corsairs and sold as slaves in Athkatla. You see her face darken under her monk's hood; you know she will say no more.~
+
+// Kiara custom soundset
+// ---------------------
+@72   = ~I am so glad you found me. I need to find a friend...~
+@73   = ~Fear me! For I wield death at the palm of my hand!~ [KIARAA]
+@74   = ~I am glad you came to that conclusion too. I was worried you wouldn't notice I was a natural leader~ [KIARAB]
+@75   = ~Aaaaah... I can't feel my legs anymore... Anybody kind enough to massage my feet?~ [KIARAC]
+@76   = ~Anybody read a good book as of late or willing to share a good story? (sigh)... Perhaps silent meditation would be best indeed.~ [KIARAD]
+@77   = ~No! I'm too strong to die like this.~ [KIARAE]
+@78   = ~What's your desire?~ [KIARAF]
+@79   = ~How can I help you?~ [KIARAG]
+@80   = ~Yes...~ [KIARAH]
+@81   = ~Since you insist.~ [KIARAI]
+@82   = ~I've done worse before.~ [KIARAJ]
+@83   = ~Must I always fetch and carry?~ [KIARAK]
+@84   = ~Aaaaah!~ [KIARAL]
+@85   = ~Arrrrggg!~ [KIARAM]
+@86   = ~I don't like the forest. It feel too much though as I'm being watched from behind every tree.~ [KIARAN]
+@87   = ~Ah! Finally... We reach a civilized place... Could we stop at a nearby shop? I could *really* do with some new shoes. Look, mine have holes all over their sole.~ [KIARAO]
+@88   = ~Do we really have to crawl our way through this *filthy* place? What do I get for doing all this, except some dirty clothes?~ [KIARAP]
+@89   = ~How am I supposed to maintain my focus with the sun in my eyes?~ [KIARAQ]
+@90   = ~I do so prefer the night's warm embrace.~ [KIARAR]
+@91   = ~Very well since I am the only capable to do your dirty work.~ [KIARAS]
+@92   = ~If you must ask at least be polite.~ [KIARAT]
+@93   = ~Don't try my patience too far.~ [KIARAU]
+@94   = ~I am entirely too generous with you.~ [KIARAV]
+@95   = ~Such a pity, but that means more for the rest of us.~ [KIARAW]
+@96   = ~I may fight for you, but you can forget about cooking or cleaning.~ [KIARAX]
+@97   = ~Treat me with the respect I deserve and perhaps I'll consider it.~ [KIARAY]
+@98   = ~I bet you thought women were weak.~ [KIARAZ]
+@99   = ~How could I let my mighty strike fail me?~ [KIARA1]
+@100  = ~This can't happen!~ [KIARA2]
+@100  = ~I'm sorry I won't carry it. If somebody *cared* to pick-up this *thing* from the ground.~ [KIARA3]
+@102  = ~Hum... I always was good at getting my hands into places where it did not belong.~ [KIARA4]
+@103  = ~Mmmmm... I feel so comfortable when cloaked in the warmth of darkness.~ [KIARA5]
+@104  = ~My concentration is shattered.~ [KIARA6]
+@105  = ~Delicate and deadly as spider silk.~ [KIARA7]
+@106  = ~No mercy! No pity! Slay them all!~ [KIARA8]
+@107  = ~Kiaaiiiiii!~ [KIARA9]
+@107  = ~Something on your mind?~ [KIARA0]
+@109  = ~I suppose one more little thing won't hurt.~ [KIARA_]
+
+// Kiara soundset using Female2!
+// -----------------------------
+@110  = ~Hahaha!~ [female2a] // Battle cry1
+@111  = ~Everyone will benefit under my leadership.~ [female2b] // Leader
+@112  = ~Oh, you know, I could really use some rest.~ [female2c] // Tired
+@113  = ~This is getting us nowhere. Let's do... something.~ [female2d] // Bored
+@114  = ~My wounds could use some attention.~ [female2e] // Damage
+@115  = ~Hmm?~ [female2f] // Select1
+@116  = ~I'm waiting.~ [female2g] // Select2
+@117  = ~Yes?~ [female2h] // Select3
+@118  = ~Nothing to it.~ [female2i] // Action1
+@119  = ~Very well.~ [female2j] // Action2
+@120  = ~Whatever you want.~ [female2k] // Action3
+@121  = ~Uh!~ [female2l] // Hurt
+@122  = ~Ugh!~ [female2m] // Dying
+@123  = ~If you say so.~ [female2s] // Action4
+@124  = ~Of course~ [female2t] // Action5
+@125  = ~If that's what you want.~ [female2u] // Action6
+@126  = ~Whatever you desire.~ [female2v] // Action7
+@127  = ~What would you like?~ [female2x] // Rare1
+@128  = ~Tell me all about it.~ [female2y] // Rare2
+@129  = ~Oh, did that hurt?~ [female2z] // Critical hit
+@130  = ~Ah! You wild bastard!~ [Female21] // Critical miss
+@131  = ~My attack has no effect.~ [Female22] // Target immune
+@132  = ~I just can't carry any more. You'll pick that up for me, won't you?~ [Female23] // Inventory full
+@133  = ~In and out and no one noticed.~ [Female24] // picked pocket
+@134  = ~I have hidden myself well.~ [Female25] // Hidden in shadows
+@135  = ~Oof! My spell has failed.~ [Female26] // Spell disrupted
+@136  = ~Careful now; my trap is set.~ [Female27] // Set a trap
+@137  = ~You wouldn’t hurt a lady, would you?~ [Female28] // Battlecry2
+@138  = ~This should be fun!~ [Female29] // Battlecry3
+@139  = ~Is that all?~ [Female2_] // Select6
+@140  = ~Just ask.~ [Female20] // Select4
+@141  = ~I have such wonderful and pleasurable time being at your side.~ [KHAPPY] // Happy
+@142  = ~Such goodness is insufferable. I am a monk, not a charity order.~ // Unhappy annoyed
+@143  = ~My training allows me to endure much, but even I have my limits.~ // Unhappy serious
+@144  = ~Change your ways, or I shall paint my fists crimson with your blood.~ // Unhappy breaking
+
+
+/* ================= *
+ *  Zaiya soundsets  *
+ * ================= */
+@145  = ~When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerun. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.~
+
+// Zaiya custom soundset
+// ---------------------
+	@146  = ~Nothing~
+@147  = ~I'll ex-spell them to hell...~ [ZAYAA]
+@148  = ~I'm not so sure this is my place, but I am willing to try my best~ [ZAYAB]
+@149  = ~Oh please can we stop? I feel like sleeping right here.~ [ZAYAC]
+@150  = ~Are we here for long? Perhaps I can resume my reading of this excellent book on polymorphing.~ [ZAYAD]
+@151  = ~Awwh!~ [ZAYAE]
+@152  = ~Yes?~ [ZAYAF]
+@153  = ~You need a wild mage?~ [ZAYAG]
+@154  = ~You are calling me?~ [ZAYAH]
+@155  = ~I'll do it right away...~ [ZAYAI]
+@156  = ~Always ready to lend a hand...~ [ZAYAJ]
+@156  = ~That's all too easy...~ [ZAYAK]
+@158  = ~Ouch!~ [ZAYAL]
+@159  = ~Aaaaah...~ [ZAYAM]
+@160  = ~Ah! If memory serves, the elves call this tree Calvernon... Did I say anything wrong?... Stop staring at me please!~ [ZAYAN]
+@161  = ~I wonder if we'll find some time to visit the library.~ [ZAYAO]
+@162  = ~I can't see a *thing* in this dark place. Can anybody lend me a torch?~ [ZAYAP]
+@163  = ~It looks like another great day.~ [ZAYAQ]
+@164  = ~It's getting *real* late. Shouldn't we be in bed by now?~ [ZAYAR]
+// Isaya: transfered from tp2 file - no translation required
+@165  = ~~ [ZAYAS] // ACTION4
+@166  = ~~ [ZAYAT] // ACTION5
+@167  = ~~ [ZAYAU] // ACTION6
+@168  = ~~ [ZAYAV] // ACTION7
+@169  = ~~ [ZAYAW] // DIE GENERAL
+@170  = ~~ [ZAYAY] // RARE2
+// Isaya: end of transfer
+@171  = ~Could I finish my reading first?~ [ZAYAX]
+@172  = ~*Yes!* Just call me Drizzt! ~ [ZAYAZ]
+@173  = ~Hum... Clumsy again.~ [ZAYA1]
+@174  = ~Let me try some wild magic!~ [ZAYA2]
+@175  = ~With Kiara asking me to carry some of her stuff too, sorry I have enough already!~ [ZAYA3]
+@176  = ~My spell has been interrupted...~ [ZAYA6]
+// Isaya: transfered from tp2 file - no translation required
+@177  = ~~ [ZAYA4] // PICKED POCKET
+@178  = ~~ [ZAYA5] // HIDE IN SHADOWS
+@179  = ~~ [ZAYA7] // SET A TRAP
+@180  = ~~ [ZAYA8] // BATTLE CRY2
+@181  = ~~ [ZAYA9] // BATTLE CRY3
+@182  = ~~ [ZAYA0] // COMMON6
+@183  = ~~ [ZAYA_] // COMMON4 and COMMON5
+// Isaya: end of transfer
+
+// Zaiya soundset using Female4!
+// -----------------------------
+@184  = ~You will fall by my hand!~ [FEMALE4A]
+@185  = ~Of course. I'm the best choice.~ [FEMALE4B]
+@186  = ~I must rest soon. I am weak when I am tired.~ [FEMALE4C]
+@187  = ~There are far better things to do than sit and wait.~ [FEMALE4D]
+@188  = ~Ah... I require healing as soon as possible.~ [FEMALE4E]
+@189  = ~Yes?~ [FEMALE4F]
+@190  = ~What is it?~ [FEMALE4G]
+@191  = ~Speak.~ [FEMALE4H]
+@192  = ~It will be done.~ [FEMALE4I]
+@193  = ~Certainly.~ [FEMALE4J]
+@194  = ~Without doubt.~ [FEMALE4K]
+@195  = ~Ah!~ [FEMALE4L]
+@196  = ~Arrrrg!~ [FEMALE4M]
+@197  = ~Ah! If memory serves the elves call this tree Calvernon... Did I say anything wrong?... Stop staring at me please!~ // same as @160, but without sound clip
+@198  = ~I wonder if we'll find some time to visit the library.~ // same as @161, but without sound clip
+@199  = ~I can't see a *thing* in this dark place. Can anybody lend me a torch?~ // same as @162, but without sound clip
+@200  = ~It looks like another great day.~ // same as @163, but without sound clip
+@201  = ~It's getting *real* late. Shouldn't we be in bed by now?~ // same as @164, but without sound clip
+@202  = ~Quickly and precisely.~ [FEMALE4S]
+@203  = ~Without hesitation.~ [FEMALE4T]
+@204  = ~This will not take long.~ [FEMALE4U]
+@205  = ~If it must be done.~ [FEMALE4V]
+@206  = ~~ [FEMALE4W] // Isaya: transfered from tp2 file - no translation required
+@207  = ~I am listening.~ [FEMALE4X]
+@208  = ~Direct me as you will.~ [FEMALE4Y]
+@209  = ~Yes!~ [FEMALE4Z]
+@210  = ~Raugh! Next time.~ [FEMALE41]
+@211  = ~My weapon is of no use.~ [FEMALE42]
+@212  = ~I can hold no more. That item has been dropped.~ [FEMALE43]
+@213  = ~They did not notice my theft.~ [FEMALE44]
+@214  = ~I am hidden. We may proceed.~ [FEMALE45]
+@215  = ~My magic has been interrupted.~ [FEMALE46]
+@216  = ~Be careful, this trap is set and ready.~ [FEMALE47]
+@217  = ~Death shall take you.~ [FEMALE48]
+@218  = ~Retreat or fall before me.~ [FEMALE49]
+@219  = ~I wait your instructions.~ [FEMALE40]
+@220  = ~I agree.~ [FEMALE4_]
+@221  = ~I enjoy traveling with you so. This must be what freedom feels like.~ // Happy
+@222  = ~My time could be spent much more satisfactorily with my books. I do not like this.~ // Unhappy annoyed
+@223  = ~I cannot approve of the path we are following. My time could best be spent elsewhere.~ // Unhappy serious
+@224  = ~I have enough of all this pain and suffering inflicted upon others. Be cursed, <CHARNAME>!~ // Unhappy breaking
+
+
+/* ========= *
+ *  Journal  *
+ * ========= */
+@231  = ~Jerlia's soul
+
+I met a strange ghost named Jerlia in one of the graveyard crypts. She claims a demon stole her soul and she can not be put at rest until she gets it back. Although, she wasn't quite clear as to where I could find the demon, she said he could be hiding near a temple or in a cave.~
+@232  = ~Kill Amaralis
+
+Despite Kiara's treachery, I accepted the Demon Lord's offer to kill Amaralis. Amaralis, master slaver of Athkatla has currently set camp in the small teeth pass area and I have only ten days to do the bidding of the Demon Lord.~
+@233  = ~Kill Prelate Wessalen
+
+I have accepted the Demon Lord's request to kill prelate Wessalen of the Order of the Radiant Heart in the hope that it would save Kiara from a gruesome fate. The Demon Lord gave me three days to commit this monstrous act.~
+@234  = ~Prelate Wessalen Dead
+
+I killed prelate Wessalen and made myself the enemy of the Order of the Radiant Heart. In the process, I shall from now on be perceived as a force of evil in Faerun. Sparing Kiara's life has proven expensive.~
+@235  = ~Find Zaiya's friend
+
+I met a young girl named Zaiya, who seems to suffer from a strange affliction. She told me that her friend Kiara is the only one able to stabilize her condition. We might be able to find some clues as to Kiara's location by asking a man named Prax, near a circus in Athkatla. She cautioned me about her state and that we have only a few days before she dies.~
+
+
+/* ========= *
+ *  Scripts  *
+ * ========= */
+@241  = ~Oh no! A wild surge! Something horrible must have happened.~
+@242  = ~If the mage is truly over five hundred years old, let us be cautious. He must have had all the time to hone his magic skills to perfection.~
+@243  = ~You may have won a battle but the war is not yet over!~
+@244  = ~Chain Contingency - Spell Shield~
+@245  = ~Chain Contingency - Improved Mantle~
+@246  = ~Chain Contingency - Spell Deflection~
+@247  = ~Poor mage... You left it unprotected... Careless fool!~
+@248  = ~I hope this dead corpse was just an acquaintance and not just a friend?~
+@249  = ~You dare challenge me again?~
+@43   = ~Let it be known that death awaits those who betray their oath.~
+@251  = ~My fighting skills are useless!~
+
+
+/* =================================================== *
+ *  Alternate Monk High level abilities by TG Maestro  *
+ * =================================================== */
+@261  = ~Dragon fist!~
+@262  = ~Dragon fist!
+
+High level Monks have the ability to focus Ki energies in their bodies in many ways. When using this ability all attacks made by the Monk in the next round will remove the targets Specific Protection (save vs. spell at -2) and one Magical Protection up to 8. level (no save). The victim must save vs. breath to avoid losing all Physical Protections. Creatures hit by Dragon Fist must also save vs. death at -4, or their Magic Resistance will be reduced by 19% for 6 rounds. This effect is cumulative. Dragon Fist always removes the strongest Protection spell from the target.~
+@263  = ~Shadowless Kick!~
+@264  = ~Shadowless Kick
+
+This ability gives the Monk a one-time attack. This overwhelming assault is always successful, there is no need for a saving throw. The target suffers 5D8 crushing damage and falls unconscious for 1 round (no save). If the opponent fails its saving throw vs. breath at -4, the power of the kick will knock him back for a considerable distance.~
+@265  = ~Tiger strike!~
+@266  = ~Tiger strike!
+
+With the Tiger strike ability, the monk gains the ability to strike a mighty blow, knocking an opponent back for a considerable distance and stunning the opponent for 1 round. All attacks made in the first round are critical hits. The ability lasts for 2 rounds.
+Large creatures such as a dragons or giants will not be knocked back or stunned.
+
+Requires: Power Attack, Critical Strike~
+@267  = ~Chant!~
+@268  = ~Chant!
+
+This ability gives the Monk powerful protections - both physical and magical - for a very short time. It increases Slashing, Piercing, Crushing and Missile resistances to 60%, increases Fire, Cold, Lightning resistances by 20% and gives 10% Magic Damage resistance. The effects of this ability last for 2 rounds.~
+@269  = ~Faster than the eye!~
+@270  = ~Faster than the eye!
+
+The monk gains the ability to move at an incredible speed.~
+
+
+/* =========================== *
+ *  Original Amaralis battles  *
+ * =========================== */
+@271  = ~Fenilla~
+@272  = ~Morticia~
+@273  = ~Polgar~
+@274  = ~Keria~
+
+@275  = ~I hope this dead corpse was just an acquaintance and not a dear friend?~
+
+
+/* ======================= *
+ *  Revised Suldalanessar  *
+ * ======================= */
+@281  = ~Lesser Demon Gaze~
+@282  = ~Irenicus said they would come for the cup. I shall not fail my master.~
+
+
+/* ============================================ *
+ *  Jao and party for SOA: another tough fight  *
+ * ============================================ */
+@291  = ~Jao~
+@292  = ~Ninja~
+@293  = ~Wuje~
 // Isaya: new texts moved from the TP2
-@254 = ~Bracers: protectors~
-@255 = ~Monk bracers
-These extraordinary bracers were forged by the assassin guild for Wuje.
+@294  = ~Bracers: protectors~
+@295  = ~Monk bracers
+These extraordinary bracers were forged by the assassins guild for Wuje.
 
-Statistics:
+STATISTICS:
 +2 to fist thaco and damage
 On each attempt to hit the wielder of these bracers, there is a 10% chance the bracers will cast doom and blindness on the attacker.
 
 Usable by:
-Monk~
-// Isaya: end of new texts
-@260 = ~Tougher Irenicus at the tree of life~
-// Isaya: new texts moved from the TP2
-@261 = ~Tougher Kiara vampire~
-@262 = ~Revised Suldalanessar~
+ Monk~
 // Isaya: end of new texts

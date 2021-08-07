@@ -4,50 +4,50 @@ IF
 THEN
 	RESPONSE #100
 		CutSceneId("Zaiya")
-		SetName(@27)  // ~Zaiya~
-		SetPlayerSound(Myself,@91,INITIAL_MEETING)         // ~Nothing~
-		SetPlayerSound(Myself,@225,HAPPY)                  // ~I enjoy traveling with you so. This must be what freedom feels like.~
-		SetPlayerSound(Myself,@226,UNHAPPY_ANNOYED)        // ~My time could be spent much more satisfactorily with my books. I do not like this.~
-		SetPlayerSound(Myself,@227,UNHAPPY_SERIOUS)        // ~I cannot approve of the path we are following. My time could best be spent elsewhere.~
-		SetPlayerSound(Myself,@228,UNHAPPY_BREAKING_POINT) // ~I have enough of all this pain and suffering inflicted upon others. Be cursed, <CHARNAME>!~
-		SetPlayerSound(Myself,@93,LEADER)                  // ~I'm not so sure this is my place, but I am willing to try my best~ [ZAYAB]
-		SetPlayerSound(Myself,@94,TIRED)                   // ~Oh please can we stop? I feel like sleeping right here.~ [ZAYAC]
-		SetPlayerSound(Myself,@95,BORED)                   // ~Are we here for long? Perhaps I can resume my reading of this excellent book on polymorphing.~ [ZAYAD]
-		SetPlayerSound(Myself,@92,BATTLE_CRY1)             // ~I'll ex-spell them to hell...~ [ZAYAA]
-		SetPlayerSound(Myself,@125,BATTLE_CRY2)            // ~~ [ZAYA8]
-		SetPlayerSound(Myself,@126,BATTLE_CRY3)            // ~~ [ZAYA9]
-		SetPlayerSound(Myself,@96,DAMAGE)                  // ~Awwh!~ [ZAYAE]
-		SetPlayerSound(Myself,@104,DYING)                  // ~Aaaaah...~ [ZAYAM]
-		SetPlayerSound(Myself,@103,HURT)                   // ~Ouch!~ [ZAYAL]
-		SetPlayerSound(Myself,@105,AREA_FOREST)            // ~Ah! If memory serves, the elves call this tree Calvernon... Did I say anything wrong?... Stop staring at me please!~ [ZAYAN]
-		SetPlayerSound(Myself,@106,AREA_CITY)              // ~I wonder if we'll find some time to visit the library.~ [ZAYAO]
-		SetPlayerSound(Myself,@107,AREA_DUNGEON)           // ~I can't see a *thing* in this dark place. Can anybody lend me a torch?~ [ZAYAP]
-		SetPlayerSound(Myself,@108,AREA_DAY)               // ~It looks like another great day.~ [ZAYAQ]
-		SetPlayerSound(Myself,@109,AREA_NIGHT)             // ~It's getting *real* late. Shouldn't we be in bed by now?~ [ZAYAR]
-		SetPlayerSound(Myself,@97,SELECT_COMMON1)          // ~Yes?~ [ZAYAF]
-		SetPlayerSound(Myself,@98,SELECT_COMMON2)          // ~You need a wild mage?~ [ZAYAG]
-		SetPlayerSound(Myself,@99,SELECT_COMMON3)          // ~You are calling me?~ [ZAYAH]
+		SetName(@22)  // ~Zaiya~
+		SetPlayerSound(Myself,@146,INITIAL_MEETING)        // ~Nothing~
+		SetPlayerSound(Myself,@221,HAPPY)                  // ~I enjoy traveling with you so. This must be what freedom feels like.~
+		SetPlayerSound(Myself,@222,UNHAPPY_ANNOYED)        // ~My time could be spent much more satisfactorily with my books. I do not like this.~
+		SetPlayerSound(Myself,@223,UNHAPPY_SERIOUS)        // ~I cannot approve of the path we are following. My time could best be spent elsewhere.~
+		SetPlayerSound(Myself,@224,UNHAPPY_BREAKING_POINT) // ~I have enough of all this pain and suffering inflicted upon others. Be cursed, <CHARNAME>!~
+		SetPlayerSound(Myself,@148,LEADER)                 // ~I'm not so sure this is my place, but I am willing to try my best~ [ZAYAB]
+		SetPlayerSound(Myself,@149,TIRED)                  // ~Oh please can we stop? I feel like sleeping right here.~ [ZAYAC]
+		SetPlayerSound(Myself,@150,BORED)                  // ~Are we here for long? Perhaps I can resume my reading of this excellent book on polymorphing.~ [ZAYAD]
+		SetPlayerSound(Myself,@147,BATTLE_CRY1)            // ~I'll ex-spell them to hell...~ [ZAYAA]
+		SetPlayerSound(Myself,@180,BATTLE_CRY2)            // ~~ [ZAYA8]
+		SetPlayerSound(Myself,@181,BATTLE_CRY3)            // ~~ [ZAYA9]
+		SetPlayerSound(Myself,@151,DAMAGE)                 // ~Awwh!~ [ZAYAE]
+		SetPlayerSound(Myself,@159,DYING)                  // ~Aaaaah...~ [ZAYAM]
+		SetPlayerSound(Myself,@158,HURT)                   // ~Ouch!~ [ZAYAL]
+		SetPlayerSound(Myself,@160,AREA_FOREST)            // ~Ah! If memory serves, the elves call this tree Calvernon... Did I say anything wrong?... Stop staring at me please!~ [ZAYAN]
+		SetPlayerSound(Myself,@161,AREA_CITY)              // ~I wonder if we'll find some time to visit the library.~ [ZAYAO]
+		SetPlayerSound(Myself,@162,AREA_DUNGEON)           // ~I can't see a *thing* in this dark place. Can anybody lend me a torch?~ [ZAYAP]
+		SetPlayerSound(Myself,@163,AREA_DAY)               // ~It looks like another great day.~ [ZAYAQ]
+		SetPlayerSound(Myself,@164,AREA_NIGHT)             // ~It's getting *real* late. Shouldn't we be in bed by now?~ [ZAYAR]
+		SetPlayerSound(Myself,@152,SELECT_COMMON1)         // ~Yes?~ [ZAYAF]
+		SetPlayerSound(Myself,@153,SELECT_COMMON2)         // ~You need a wild mage?~ [ZAYAG]
+		SetPlayerSound(Myself,@154,SELECT_COMMON3)         // ~You are calling me?~ [ZAYAH]
 		// Isaya: since there were two INITIAL_MEETING, the second with "", I decided to assign it to COMMON4 and COMMON5
-		SetPlayerSound(Myself,@128,SELECT_COMMON4)         // ~~ [ZAYA_]
-		SetPlayerSound(Myself,@128,SELECT_COMMON5)         // ~~ [ZAYA_]
-		SetPlayerSound(Myself,@127,SELECT_COMMON6)         // ~~ [ZAYA0]
-		SetPlayerSound(Myself,@100,SELECT_ACTION1)         // ~I'll do it right away...~ [ZAYAI]
-		SetPlayerSound(Myself,@101,SELECT_ACTION2)         // ~Always ready to lend a hand...~ [ZAYAJ]
-		SetPlayerSound(Myself,@102,SELECT_ACTION3)         // ~That's all too easy...~ [ZAYAK]
-		SetPlayerSound(Myself,@110,SELECT_ACTION4)         // ~~ [ZAYAS]
-		SetPlayerSound(Myself,@111,SELECT_ACTION5)         // ~~ [ZAYAT]
-		SetPlayerSound(Myself,@112,SELECT_ACTION6)         // ~~ [ZAYAU]
-		SetPlayerSound(Myself,@113,SELECT_ACTION7)         // ~~ [ZAYAV]
-		SetPlayerSound(Myself,@114,REACT_TO_DIE_GENERAL)   // ~~ [ZAYAW]
-		SetPlayerSound(Myself,@115,SELECT_RARE1)           // ~Could I finish my reading first?~ [ZAYAX]
-		SetPlayerSound(Myself,@116,SELECT_RARE2)           // ~~ [ZAYAY]
-		SetPlayerSound(Myself,@117,CRITICAL_HIT)           // ~*Yes!* Just call me Drizzt! ~ [ZAYAZ]
-		SetPlayerSound(Myself,@118,CRITICAL_MISS)          // ~Hum... Clumsy again.~ [ZAYA1]
-		SetPlayerSound(Myself,@119,TARGET_IMMUNE)          // ~Let me try some wild magic!~ [ZAYA2]
-		SetPlayerSound(Myself,@120,INVENTORY_FULL)         // ~With Kiara asking me to carry some of her stuff too, sorry I have enough already!~ [ZAYA3]
-		SetPlayerSound(Myself,@121,PICKED_POCKET)          // ~~ [ZAYA4]
-		SetPlayerSound(Myself,@122,HIDDEN_IN_SHADOWS)      // ~~ [ZAYA5]
-		SetPlayerSound(Myself,@123,SPELL_DISRUPTED)        // ~My spell has been interrupted...~ [ZAYA6]
-		SetPlayerSound(Myself,@124,SET_A_TRAP)             // ~~ [ZAYA7]
-		SetPlayerSound(Myself,@28,EXISTANCE5)              // ~When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerun. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.~
+		SetPlayerSound(Myself,@183,SELECT_COMMON4)         // ~~ [ZAYA_]
+		SetPlayerSound(Myself,@183,SELECT_COMMON5)         // ~~ [ZAYA_]
+		SetPlayerSound(Myself,@182,SELECT_COMMON6)         // ~~ [ZAYA0]
+		SetPlayerSound(Myself,@155,SELECT_ACTION1)         // ~I'll do it right away...~ [ZAYAI]
+		SetPlayerSound(Myself,@156,SELECT_ACTION2)         // ~Always ready to lend a hand...~ [ZAYAJ]
+		SetPlayerSound(Myself,@157,SELECT_ACTION3)         // ~That's all too easy...~ [ZAYAK]
+		SetPlayerSound(Myself,@165,SELECT_ACTION4)         // ~~ [ZAYAS]
+		SetPlayerSound(Myself,@166,SELECT_ACTION5)         // ~~ [ZAYAT]
+		SetPlayerSound(Myself,@167,SELECT_ACTION6)         // ~~ [ZAYAU]
+		SetPlayerSound(Myself,@168,SELECT_ACTION7)         // ~~ [ZAYAV]
+		SetPlayerSound(Myself,@169,REACT_TO_DIE_GENERAL)   // ~~ [ZAYAW]
+		SetPlayerSound(Myself,@171,SELECT_RARE1)           // ~Could I finish my reading first?~ [ZAYAX]
+		SetPlayerSound(Myself,@170,SELECT_RARE2)           // ~~ [ZAYAY]
+		SetPlayerSound(Myself,@172,CRITICAL_HIT)           // ~*Yes!* Just call me Drizzt! ~ [ZAYAZ]
+		SetPlayerSound(Myself,@173,CRITICAL_MISS)          // ~Hum... Clumsy again.~ [ZAYA1]
+		SetPlayerSound(Myself,@174,TARGET_IMMUNE)          // ~Let me try some wild magic!~ [ZAYA2]
+		SetPlayerSound(Myself,@175,INVENTORY_FULL)         // ~With Kiara asking me to carry some of her stuff too, sorry I have enough already!~ [ZAYA3]
+		SetPlayerSound(Myself,@177,PICKED_POCKET)          // ~~ [ZAYA4]
+		SetPlayerSound(Myself,@178,HIDDEN_IN_SHADOWS)      // ~~ [ZAYA5]
+		SetPlayerSound(Myself,@176,SPELL_DISRUPTED)        // ~My spell has been interrupted...~ [ZAYA6]
+		SetPlayerSound(Myself,@179,SET_A_TRAP)             // ~~ [ZAYA7]
+		SetPlayerSound(Myself,@145,EXISTANCE5)             // ~When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerun. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.~
 END

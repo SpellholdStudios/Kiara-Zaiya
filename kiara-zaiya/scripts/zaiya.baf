@@ -74,7 +74,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("ZQUEST","LOCALS",1)
-    AddJournalEntry(@33,QUEST)
+    AddJournalEntry(@235,QUEST)
 END
 
 IF
@@ -131,8 +131,8 @@ IF
   GlobalLT("KiaraVampire","GLOBAL",1)
 THEN
   RESPONSE #100
-    EraseJournalEntry(@33)  // ~Find Zaiya's friend:I met a young girl named Zaiya, who seems to suffer from a strange affliction. She told me that her friend Kiara is the only one able to stabilize her condition. We might be able to find some clues as to Kiara's location by asking a man named Prax, near a circus in Athkatla. She cautioned me about her state and that we have only a few days before she dies.~
-    AddJournalEntry(@33,QUEST_DONE)
+    EraseJournalEntry(@235)  // ~Find Zaiya's friend  I met a young girl named Zaiya, who seems to suffer from a strange affliction. She told me that her friend Kiara is the only one able to stabilize her condition. We might be able to find some clues as to Kiara's location by asking a man named Prax, near a circus in Athkatla. She cautioned me about her state and that we have only a few days before she dies.~
+    AddJournalEntry(@235,QUEST_DONE)
     SetGlobal("ZaiyaCursed","GLOBAL",8)
     SetGlobal("FOUNDKIARA","LOCALS",1)
 END
@@ -192,13 +192,13 @@ THEN
     SetGlobal("ZAIMISS","GLOBAL",1)
     SetGlobalTimer("BOOCHA","GLOBAL",ONE_DAY)
     ApplySpellRES("SPWM145",Myself)  // ~Polymorph Other~
-    DisplayStringHead(Myself,@34)  // ~Oh no! A wild surge! Something horrible must have happened.~
+    DisplayStringHead(Myself,@241)  // ~Oh no! A wild surge! Something horrible must have happened.~
     Wait(5)
 END
 
 IF
   AreaCheck("AR1302")
-  Dead("Torgal")  // ~TorGal~
+  Dead("Torgal")    // ~TorGal~
   InParty("Nalia")  // Nalia
   InParty(Myself)
   !StateCheck(Myself,STATE_REALLY_DEAD)
@@ -217,7 +217,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("ZaiLavok","LOCALS",1)
-    DisplayStringHead(Myself,@35)  // ~If the mage is truly over five hundred years old, let us be cautious. He must have had all the time to hone his magic skills to perfection.~
+    DisplayStringHead(Myself,@242)  // ~If the mage is truly over five hundred years old, let us be cautious. He must have had all the time to hone his magic skills to perfection.~
 END
 
 IF
@@ -273,7 +273,7 @@ IF
   !StateCheck(Myself,STATE_REALLY_DEAD)
 THEN
   RESPONSE #100
-    DisplayString(Myself,3302)  // ~Chain Contingency - Spell Turning~
+    DisplayString(Myself,3302)   // ~Chain Contingency - Spell Turning~
     ApplySpell(Myself,WIZARD_SPELL_TURNING)
     DisplayString(Myself,40240)  // ~Chain Contingency - Mislead~
     ApplySpell(Myself,WIZARD_MISLEAD)

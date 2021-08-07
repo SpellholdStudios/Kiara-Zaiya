@@ -80,79 +80,173 @@ LAF HANDLE_AUDIO END
 // Kaira - Isaya (version 1.6.2): Add the default soundset using FEMALE2
 // ---------------------------------------------------------------------
 COPY ~kiara-zaiya/creatures/kiara.cre~ ~override~
-	SAY NAME1 @3
-	SAY NAME2 @3
-	SAY BIO @4
+	SAY NAME1 @21
+	SAY NAME2 @21
+	SAY BIO @71
 	// Soundset
-	SAY INITIAL_MEETING @53
+	SAY INITIAL_MEETING @72
+	SAY HAPPY @141
+	SAY UNHAPPY_ANNOYED @142
+	SAY UNHAPPY_SERIOUS @143
+	SAY UNHAPPY_BREAKING @144
+	SAY AREA_FOREST @86
+	SAY AREA_CITY @87
+	SAY AREA_DUNGEON @88
+	SAY AREA_DAY @89
+	SAY AREA_NIGHT @90
+	SAY REACT_TO_DIE_GENERAL @95
+	PATCH_IF kz_custom BEGIN
+		SAY LEADER @74
+		SAY TIRED @75
+		SAY BORED @76
+		SAY BATTLE_CRY1 @73
+		SAY BATTLE_CRY2 @106
+		SAY BATTLE_CRY3 @107
+		SAY DAMAGE @77
+		SAY DYING @85
+		SAY HURT @84
+		SAY SELECT_COMMON1 @78
+		SAY SELECT_COMMON2 @79
+		SAY SELECT_COMMON3 @80
+		// Isaya: since there were two INITIAL_MEETING, the second with "I think one more little thing won't hurt.", I decided to assign it to COMMON4 and COMMON5
+		SAY SELECT_COMMON4 @109
+		SAY SELECT_COMMON5 @109
+		SAY SELECT_COMMON6 @108
+		SAY SELECT_ACTION1 @81
+		SAY SELECT_ACTION2 @82
+		SAY SELECT_ACTION3 @83
+		SAY SELECT_ACTION4 @91
+		SAY SELECT_ACTION5 @92
+		SAY SELECT_ACTION6 @93
+		SAY SELECT_ACTION7 @94
+		SAY SELECT_RARE1 @96
+		SAY SELECT_RARE2 @97
+		SAY CRITICAL_HIT @98
+		SAY CRITICAL_MISS @99
+		SAY TARGET_IMMUNE @100
+		SAY INVENTORY_FULL @101
+		SAY PICKED_POCKET @102
+		SAY HIDDEN_IN_SHADOWS @103
+		SAY SPELL_DISRUPTED @104
+		SAY SET_A_TRAP @105
+	END ELSE BEGIN
+		SAY LEADER @111
+		SAY TIRED @112
+		SAY BORED @113
+		SAY BATTLE_CRY1 @110
+		SAY BATTLE_CRY2 @137
+		SAY BATTLE_CRY3 @138
+		SAY DAMAGE @114
+		SAY DYING @122
+		SAY HURT @121
+		SAY SELECT_COMMON1 @115
+		SAY SELECT_COMMON2 @116
+		SAY SELECT_COMMON3 @117
+		// Isaya: since there were two INITIAL_MEETING, the second with "Just ask.", I decided to assign it to COMMON4 and COMMON5
+		SAY SELECT_COMMON4 @140
+		SAY SELECT_COMMON5 @140
+		SAY SELECT_COMMON6 @139
+		SAY SELECT_ACTION1 @118
+		SAY SELECT_ACTION2 @119
+		SAY SELECT_ACTION3 @120
+		SAY SELECT_ACTION4 @123
+		SAY SELECT_ACTION5 @124
+		SAY SELECT_ACTION6 @125
+		SAY SELECT_ACTION7 @126
+		SAY SELECT_RARE1 @127
+		SAY SELECT_RARE2 @128
+		SAY CRITICAL_HIT @129
+		SAY CRITICAL_MISS @130
+		SAY TARGET_IMMUNE @131
+		SAY INVENTORY_FULL @132
+		SAY PICKED_POCKET @133
+		SAY HIDDEN_IN_SHADOWS @134
+		SAY SPELL_DISRUPTED @135
+		SAY SET_A_TRAP @136
+	END
+
+// Zaiya - Isaya (version 1.6.2): Add the default soundset using FEMALE4
+// ---------------------------------------------------------------------
+COPY ~kiara-zaiya/creatures/zaiya.cre~ ~override~
+	SAY NAME1 @22
+	SAY NAME2 @22
+	SAY BIO @145
+	// Soundset
+	SAY INITIAL_MEETING @146
 	SAY HAPPY @221
 	SAY UNHAPPY_ANNOYED @222
 	SAY UNHAPPY_SERIOUS @223
 	SAY UNHAPPY_BREAKING @224
-	SAY AREA_FOREST @67
-	SAY AREA_CITY @68
-	SAY AREA_DUNGEON @69
-	SAY AREA_DAY @70
-	SAY AREA_NIGHT @71
-	SAY REACT_TO_DIE_GENERAL @76
 	PATCH_IF kz_custom BEGIN
-		SAY LEADER @55
-		SAY TIRED @56
-		SAY BORED @57
-		SAY BATTLE_CRY1 @54
-		SAY BATTLE_CRY2 @87
-		SAY BATTLE_CRY3 @88
-		SAY DAMAGE @58
-		SAY DYING @66
-		SAY HURT @65
-		SAY SELECT_COMMON1 @59
-		SAY SELECT_COMMON2 @60
-		SAY SELECT_COMMON3 @61
-		// Isaya: since there were two INITIAL_MEETING, the second with "I think one more little thing won't hurt.", I decided to assign it to COMMON4 and COMMON5
-		SAY SELECT_COMMON4 @90
-		SAY SELECT_COMMON5 @90
-		SAY SELECT_COMMON6 @89
-		SAY SELECT_ACTION1 @62
-		SAY SELECT_ACTION2 @63
-		SAY SELECT_ACTION3 @64
-		SAY SELECT_ACTION4 @72
-		SAY SELECT_ACTION5 @73
-		SAY SELECT_ACTION6 @74
-		SAY SELECT_ACTION7 @75
-		SAY SELECT_RARE1 @77
-		SAY SELECT_RARE2 @78
-		SAY CRITICAL_HIT @79
-		SAY CRITICAL_MISS @80
-		SAY TARGET_IMMUNE @81
-		SAY INVENTORY_FULL @82
-		SAY PICKED_POCKET @83
-		SAY HIDDEN_IN_SHADOWS @84
-		SAY SPELL_DISRUPTED @85
-		SAY SET_A_TRAP @86
+		SAY LEADER @148
+		SAY TIRED @149
+		SAY BORED @150
+		SAY BATTLE_CRY1 @147
+		SAY BATTLE_CRY2 @180
+		SAY BATTLE_CRY3 @181
+		SAY DAMAGE @151
+		SAY DYING @159
+		SAY HURT @158
+		SAY AREA_FOREST @160
+		SAY AREA_CITY @161
+		SAY AREA_DUNGEON @162
+		SAY AREA_DAY @163
+		SAY AREA_NIGHT @164
+		SAY SELECT_COMMON1 @152
+		SAY SELECT_COMMON2 @153
+		SAY SELECT_COMMON3 @154
+		// Isaya: since there were two INITIAL_MEETING, the second with "", I decided to assign it to COMMON4 and COMMON5
+		SAY SELECT_COMMON4 @183
+		SAY SELECT_COMMON5 @183
+		SAY SELECT_COMMON6 @182
+		SAY SELECT_ACTION1 @155
+		SAY SELECT_ACTION2 @156
+		SAY SELECT_ACTION3 @157
+		SAY SELECT_ACTION4 @165
+		SAY SELECT_ACTION5 @166
+		SAY SELECT_ACTION6 @167
+		SAY SELECT_ACTION7 @168
+		SAY REACT_TO_DIE_GENERAL @169
+		SAY SELECT_RARE1 @171
+		SAY SELECT_RARE2 @170
+		SAY CRITICAL_HIT @172
+		SAY CRITICAL_MISS @173
+		SAY TARGET_IMMUNE @174
+		SAY INVENTORY_FULL @175
+		SAY PICKED_POCKET @177
+		SAY HIDDEN_IN_SHADOWS @178
+		SAY SPELL_DISRUPTED @176
+		SAY SET_A_TRAP @179
 	END ELSE BEGIN
-		SAY LEADER @191
-		SAY TIRED @192
-		SAY BORED @193
-		SAY BATTLE_CRY1 @190
+		SAY LEADER @185
+		SAY TIRED @186
+		SAY BORED @187
+		SAY BATTLE_CRY1 @184
 		SAY BATTLE_CRY2 @217
 		SAY BATTLE_CRY3 @218
-		SAY DAMAGE @194
-		SAY DYING @202
-		SAY HURT @201
-		SAY SELECT_COMMON1 @195
-		SAY SELECT_COMMON2 @196
-		SAY SELECT_COMMON3 @197
-		// Isaya: since there were two INITIAL_MEETING, the second with "Just ask.", I decided to assign it to COMMON4 and COMMON5
+		SAY DAMAGE @188
+		SAY DYING @196
+		SAY HURT @195
+		SAY AREA_FOREST @197
+		SAY AREA_CITY @198
+		SAY AREA_DUNGEON @199
+		SAY AREA_DAY @200
+		SAY AREA_NIGHT @201
+		SAY SELECT_COMMON1 @189
+		SAY SELECT_COMMON2 @190
+		SAY SELECT_COMMON3 @191
+		// Isaya: since there were two INITIAL_MEETING, the second with "I agree.", I decided to assign it to COMMON4 and COMMON5
 		SAY SELECT_COMMON4 @220
 		SAY SELECT_COMMON5 @220
 		SAY SELECT_COMMON6 @219
-		SAY SELECT_ACTION1 @198
-		SAY SELECT_ACTION2 @199
-		SAY SELECT_ACTION3 @200
-		SAY SELECT_ACTION4 @203
-		SAY SELECT_ACTION5 @204
-		SAY SELECT_ACTION6 @205
-		SAY SELECT_ACTION7 @206
+		SAY SELECT_ACTION1 @192
+		SAY SELECT_ACTION2 @193
+		SAY SELECT_ACTION3 @194
+		SAY SELECT_ACTION4 @202
+		SAY SELECT_ACTION5 @203
+		SAY SELECT_ACTION6 @204
+		SAY SELECT_ACTION7 @205
+		SAY REACT_TO_DIE_GENERAL @206
 		SAY SELECT_RARE1 @207
 		SAY SELECT_RARE2 @208
 		SAY CRITICAL_HIT @209
@@ -165,148 +259,60 @@ COPY ~kiara-zaiya/creatures/kiara.cre~ ~override~
 		SAY SET_A_TRAP @216
 	END
 
-// Zaiya - Isaya (version 1.6.2): Add the default soundset using FEMALE4
-// ---------------------------------------------------------------------
-COPY ~kiara-zaiya/creatures/zaiya.cre~ ~override~
-	SAY NAME1 @27
-	SAY NAME2 @27
-	SAY BIO @28
-	// Soundset
-	SAY INITIAL_MEETING @91
-	SAY HAPPY @225
-	SAY UNHAPPY_ANNOYED @226
-	SAY UNHAPPY_SERIOUS @227
-	SAY UNHAPPY_BREAKING @228
-	SAY AREA_FOREST @105
-	SAY AREA_CITY @106
-	SAY AREA_DUNGEON @107
-	SAY AREA_DAY @108
-	SAY AREA_NIGHT @109
-	SAY SELECT_COMMON1 @97
-	PATCH_IF kz_custom BEGIN
-		SAY LEADER @93
-		SAY TIRED @94
-		SAY BORED @95
-		SAY BATTLE_CRY1 @92
-		SAY BATTLE_CRY2 @125
-		SAY BATTLE_CRY3 @126
-		SAY DAMAGE @96
-		SAY DYING @104
-		SAY HURT @103
-		SAY SELECT_COMMON2 @98
-		SAY SELECT_COMMON3 @99
-		// Isaya: since there were two INITIAL_MEETING, the second with "", I decided to assign it to COMMON4 and COMMON5
-		SAY SELECT_COMMON4 @128
-		SAY SELECT_COMMON5 @128
-		SAY SELECT_COMMON6 @127
-		SAY SELECT_ACTION1 @100
-		SAY SELECT_ACTION2 @101
-		SAY SELECT_ACTION3 @102
-		SAY SELECT_ACTION4 @110
-		SAY SELECT_ACTION5 @111
-		SAY SELECT_ACTION6 @112
-		SAY SELECT_ACTION7 @113
-		SAY REACT_TO_DIE_GENERAL @114
-		SAY SELECT_RARE1 @115
-		SAY SELECT_RARE2 @116
-		SAY CRITICAL_HIT @117
-		SAY CRITICAL_MISS @118
-		SAY TARGET_IMMUNE @119
-		SAY INVENTORY_FULL @120
-		SAY PICKED_POCKET @121
-		SAY HIDDEN_IN_SHADOWS @122
-		SAY SPELL_DISRUPTED @123
-		SAY SET_A_TRAP @124
-	END ELSE BEGIN
-		SAY LEADER @152
-		SAY TIRED @153
-		SAY BORED @154
-		SAY BATTLE_CRY1 @151
-		SAY BATTLE_CRY2 @184
-		SAY BATTLE_CRY3 @185
-		SAY DAMAGE @155
-		SAY DYING @163
-		SAY HURT @162
-		SAY SELECT_COMMON2 @157
-		SAY SELECT_COMMON3 @158
-		// Isaya: since there were two INITIAL_MEETING, the second with "I agree.", I decided to assign it to COMMON4 and COMMON5
-		SAY SELECT_COMMON4 @187
-		SAY SELECT_COMMON5 @187
-		SAY SELECT_COMMON6 @186
-		SAY SELECT_ACTION1 @159
-		SAY SELECT_ACTION2 @160
-		SAY SELECT_ACTION3 @161
-		SAY SELECT_ACTION4 @169
-		SAY SELECT_ACTION5 @170
-		SAY SELECT_ACTION6 @171
-		SAY SELECT_ACTION7 @172
-		SAY REACT_TO_DIE_GENERAL @173
-		SAY SELECT_RARE1 @174
-		SAY SELECT_RARE2 @175
-		SAY CRITICAL_HIT @176
-		SAY CRITICAL_MISS @177
-		SAY TARGET_IMMUNE @178
-		SAY INVENTORY_FULL @179
-		SAY PICKED_POCKET @180
-		SAY HIDDEN_IN_SHADOWS @181
-		SAY SPELL_DISRUPTED @182
-		SAY SET_A_TRAP @183
-	END
-
 // Poisonous Wyvern
 // ----------------
 COPY ~kiara-zaiya/creatures/kzwyvern.cre~ ~override~
-	SAY NAME1 @230
-	SAY NAME2 @230
+	SAY NAME1 @23
+	SAY NAME2 @23
 
 // Prax
 // ----
 COPY ~kiara-zaiya/creatures/prax.cre~ ~override~
-	SAY NAME1 @46
-	SAY NAME2 @46
+	SAY NAME1 @24
+	SAY NAME2 @24
 
 // Amaralis
 // --------
 COPY ~kiara-zaiya/creatures/amaevil.cre~ ~override~
      ~kiara-zaiya/creatures/c6ama.cre~   ~override~
-	SAY NAME1 @47
-	SAY NAME2 @47
+	SAY NAME1 @25
+	SAY NAME2 @25
 
 // Demon Lord
 // ----------
 COPY ~kiara-zaiya/creatures/delord.cre~ ~override~
-	SAY NAME1 @48
-	SAY NAME2 @48
+	SAY NAME1 @26
+	SAY NAME2 @26
 
 // Kiara Vampire
 // -------------
 COPY ~kiara-zaiya/creatures/vampkiar.cre~ ~override~
-	SAY NAME1 @49
-	SAY NAME2 @49
+	SAY NAME1 @27
+	SAY NAME2 @27
 
 // Horth'Kar
 // --------
 COPY ~kiara-zaiya/creatures/c6hroth.cre~ ~override~
-	SAY NAME1 @50
-	SAY NAME2 @50
+	SAY NAME1 @28
+	SAY NAME2 @28
 
 // Jerlia
 // ------
 COPY ~kiara-zaiya/creatures/jerlia.cre~ ~override~
-	SAY NAME1 @51
-	SAY NAME2 @51
+	SAY NAME1 @29
+	SAY NAME2 @29
 
 // Endragor
 // --------
 COPY ~kiara-zaiya/creatures/endragor.cre~ ~override~
-	SAY NAME1 @52
-	SAY NAME2 @52
+	SAY NAME1 @30
+	SAY NAME2 @30
 
 // Osan (ToB)
 // ----------
 COPY ~kiara-zaiya/creatures/osan.cre~ ~override~
-	SAY NAME1 @264
-	SAY NAME2 @264
+	SAY NAME1 @31
+	SAY NAME2 @31
 
 
 /* ----------------------------- *
@@ -315,82 +321,83 @@ COPY ~kiara-zaiya/creatures/osan.cre~ ~override~
 
 // Snake Stance!
 COPY ~kiara-zaiya/hla/snake01.spl~ ~override~
-	SAY NAME1 @5
+	SAY NAME1 @41
 
 // Winded
 COPY ~kiara-zaiya/hla/kslow01.spl~ ~override~
-	SAY NAME1 @6
+	SAY NAME1 @42
 
 // Lunar Stance!
 COPY ~kiara-zaiya/hla/lunar01.spl~ ~override~
-	SAY NAME1 @7
+	SAY NAME1 @43
 
 // Dragon Stance!
 COPY ~kiara-zaiya/hla/drago01.spl~ ~override~
-	SAY NAME1 @8
+	SAY NAME1 @44
 
 // Solar Stance!
 COPY ~kiara-zaiya/hla/solar01.spl~ ~override~
-	SAY NAME1 @9
+	SAY NAME1 @45
+	SAY UNIDENTIFIED_DESC @46
 
 // Shadow Stance!
 COPY ~kiara-zaiya/hla/shdst01.spl~ ~override~
-	SAY NAME1 @10
-	SAY UNIDENTIFIED_DESC @11
+	SAY NAME1 @47
+	SAY UNIDENTIFIED_DESC @48
 
 COPY ~kiara-zaiya/hla/boocha.spl~  ~override~
      ~kiara-zaiya/hla/boocha1.spl~ ~override~
 
 // Boo
 COPY ~kiara-zaiya/items/zachik.itm~ ~override~
-	SAY NAME1 @12
-	SAY NAME2 @12
-	SAY DESC @13
+	SAY NAME1 @51
+	SAY NAME2 @51
+	SAY DESC @52
 
 // Osan's Monk Robe
 COPY ~kiara-zaiya/items/clckk1.itm~ ~override~
-	SAY NAME1 @14
-	SAY NAME2 @14
-	SAY DESC @15
+	SAY NAME1 @53
+	SAY NAME2 @53
+	SAY DESC @54
 COPY ~kiara-zaiya/items/clckk2.itm~ ~override~
-	SAY NAME1 @14
-	SAY NAME2 @14
-	SAY DESC @16
+	SAY NAME1 @53
+	SAY NAME2 @53
+	SAY DESC @55
 
 // Kiara's body
 COPY ~kiara-zaiya/items/miscbki.itm~ ~override~
-	SAY NAME1 @17
-	SAY NAME2 @17
-	SAY DESC @18
+	SAY NAME1 @56
+	SAY NAME2 @56
+	SAY DESC @57
 
 // Jerlia's soul
 COPY ~kiara-zaiya/items/jerliahg.itm~ ~override~
-	SAY NAME1 @19
-	SAY NAME2 @19
-	SAY DESC @20
+	SAY NAME1 @58
+	SAY NAME2 @58
+	SAY DESC @59
 
 // Yellow Ioun Stone
 COPY ~kiara-zaiya/items/freehlm1.itm~ ~override~
-	SAY NAME1 @21
-	SAY NAME2 @22
-	SAY UNIDENTIFIED_DESC @23
-	SAY DESC @24
+	SAY NAME1 @60
+	SAY NAME2 @61
+	SAY UNIDENTIFIED_DESC @62
+	SAY DESC @63
 
 // Trade notes
 COPY ~kiara-zaiya/items/scrlpx.itm~ ~override~
-	SAY NAME1 @25
-	SAY NAME2 @25
-	SAY UNIDENTIFIED_DESC @26
+	SAY NAME1 @64
+	SAY NAME2 @64
+	SAY UNIDENTIFIED_DESC @65
 
 // Immunity: Alteration
 COPY ~kiara-zaiya/amaralis/alteimu.spl~ ~override~
 
 // The Divine Sword (BWP: Nightfarer's item description fix)
 COPY ~kiara-zaiya/items/amaswd.itm~ ~override~
-	SAY NAME1 @246
-	SAY NAME2 @247
-	SAY UNIDENTIFIED_DESC @248
-	SAY DESC @249
+	SAY NAME1 @66
+	SAY NAME2 @66
+	SAY UNIDENTIFIED_DESC @67
+	SAY DESC @68
 
 // Poisonous Wyvern: Stinking Cloud
 COPY ~kiara-zaiya/hla/kzwyvern.spl~   ~override~
@@ -404,8 +411,8 @@ COPY ~kiara-zaiya/hla/kzwyvern.spl~   ~override~
 // Handling journal entries for EE games
 // -------------------------------------
 ACTION_IF is_ee BEGIN
-	ADD_JOURNAL @353 @1468 @1586 @1592 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/dialogs.tra~ 
-	ADD_JOURNAL @29 @30 @31 @32 @33    USING ~%MOD_FOLDER%/lang/%LANGUAGE%/kzsetup.tra~ 
+	ADD_JOURNAL @353 @1468 @1586 @1592   USING ~%MOD_FOLDER%/lang/%LANGUAGE%/dialogs.tra~ 
+	ADD_JOURNAL @231 @232 @233 @234 @235 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/kzsetup.tra~ 
 END
 
 // Isaya: version 1.6.2

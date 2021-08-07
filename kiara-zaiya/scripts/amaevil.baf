@@ -8,7 +8,7 @@ THEN
     SetGlobal("AmeroeHurt","LOCALS",1)
     ReallyForceSpell(Myself,CLERIC_HEAL)
     ReallyForceSpell(Myself,WIZARD_SHADOW_DOOR)
-    DisplayString(Myself,@36)  // ~You may have won a battle but the war is not yet over!~
+    DisplayString(Myself,@243)  // ~You may have won a battle but the war is not yet over!~
     DestroyAllEquipment()
     DestroySelf()
 END

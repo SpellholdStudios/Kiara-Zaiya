@@ -760,7 +760,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("KQUEST","LOCALS",1)
-    AddJournalEntry(@30,QUEST)
+    AddJournalEntry(@232,QUEST)
 END
 
 IF
@@ -771,8 +771,8 @@ IF
   !See([ENEMY])
 THEN
   RESPONSE #100
-    EraseJournalEntry(@30)  // ~Kill Amaralis:Despite Kiara's treachery, I accepted the Demon Lord's offer to kill Amaralis. Amaralis, master slaver of Athkatla has currently set camp in the small teeth pass area and I have only ten days to do the bidding of the Demon Lord.~
-    AddJournalEntry(@30,QUEST_DONE)
+    EraseJournalEntry(@232)  // ~Kill Amaralis  Despite Kiara's treachery, I accepted the Demon Lord's offer to kill Amaralis. Amaralis, master slaver of Athkatla has currently set camp in the small teeth pass area and I have only ten days to do the bidding of the Demon Lord.~
+    AddJournalEntry(@232,QUEST_DONE)
     SetGlobal("P1DEAL","GLOBAL",2)
     FadeToColor([1.0],0)
     CreateCreatureObjectOffset("DELORD",Player1,[0.120])
@@ -808,7 +808,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("KQUEST1","LOCALS",1)
-    AddJournalEntry(@31,QUEST)
+    AddJournalEntry(@233,QUEST)
 END
 
 IF
@@ -821,8 +821,8 @@ IF
   !See([ENEMY])
 THEN
   RESPONSE #100
-    EraseJournalEntry(@31)  // ~Kill Prelate Wessalen:I have accepted the Demon Lord's request to kill prelate Wessalen of the Order of the Radiant Heart in the hope that it would save Kiara from a gruesome fate. The Demon Lord gave me three days to commit this monstrous act.~
-    AddJournalEntry(@32,QUEST_DONE)
+    EraseJournalEntry(@233)  // ~Kill Prelate Wessalen  I have accepted the Demon Lord's request to kill prelate Wessalen of the Order of the Radiant Heart in the hope that it would save Kiara from a gruesome fate. The Demon Lord gave me three days to commit this monstrous act.~
+    AddJournalEntry(@234,QUEST_DONE)
     SetGlobal("P2DEAL","GLOBAL",2)
     FadeToColor([1.0],0)
     CreateCreatureObjectOffset("DELORD",Player1,[0.120])
@@ -1007,7 +1007,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("J1","LOCALS",1)
-    AddJournalEntry(@29,QUEST)
+    AddJournalEntry(@231,QUEST)
 END
 
 IF
@@ -1016,7 +1016,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("J1","LOCALS",2)
-    AddJournalEntry(@29,QUEST_DONE)
-    EraseJournalEntry(@29)  // ~Jerlia's soul:I met a strange ghost named Jerlia in one of the graveyard crypts. She claims a demon stole her soul and she can not be put at rest until she gets it back. Although, she wasn't quite clear as to where I could find the demon, she said he could be hiding near a temple or in a cave.~
+    AddJournalEntry(@231,QUEST_DONE)
+    EraseJournalEntry(@231)  // ~Jerlia's soul  I met a strange ghost named Jerlia in one of the graveyard crypts. She claims a demon stole her soul and she can not be put at rest until she gets it back. Although, she wasn't quite clear as to where I could find the demon, she said he could be hiding near a temple or in a cave.~
 END
 

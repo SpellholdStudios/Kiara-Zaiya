@@ -148,15 +148,15 @@ COPY ~kiara-zaiya/hla/lumo0.2da~ ~override~
 // --------------
 ACTION_IF ((NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~0~)) AND (NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~1~))) BEGIN
 	COPY ~kiara-zaiya/hla/shdst01.spl~ ~override~
-		SAY NAME1 @10
-		SAY UNIDENTIFIED_DESC @11
+		SAY NAME1 @47
+		SAY UNIDENTIFIED_DESC @48
 END
 	
 // Dragon fist!
 // ------------
 COPY ~kiara-zaiya/hla/dragf01.spl~ ~override~
-	SAY NAME1 @130
-	SAY UNIDENTIFIED_DESC @131
+	SAY NAME1 @261
+	SAY UNIDENTIFIED_DESC @262
 COPY ~kiara-zaiya/hla/dragon1.eff~ ~override~
      ~kiara-zaiya/hla/dragon2.eff~ ~override~
      ~kiara-zaiya/hla/dragon3.eff~ ~override~
@@ -168,32 +168,32 @@ COPY ~kiara-zaiya/hla/dragon1.eff~ ~override~
 // Shadowless Kick!
 // ----------------
 COPY ~kiara-zaiya/hla/shadk01.spl~ ~override~
-	SAY NAME1 @132
-	SAY UNIDENTIFIED_DESC @133
+	SAY NAME1 @263
+	SAY UNIDENTIFIED_DESC @264
 
 // Tiger strike!
 // -------------
 COPY ~kiara-zaiya/hla/tiger01.spl~ ~override~
-	SAY NAME1 @134
-	SAY UNIDENTIFIED_DESC @135
+	SAY NAME1 @265
+	SAY UNIDENTIFIED_DESC @266
 
 // Chant!
 // ------
 COPY ~kiara-zaiya/hla/chant02.spl~ ~override~
-	SAY NAME1 @136
-	SAY UNIDENTIFIED_DESC @137
+	SAY NAME1 @267
+	SAY UNIDENTIFIED_DESC @268
 
 // Faster than the eye!
 // --------------------
 COPY ~kiara-zaiya/hla/faster2.spl~ ~override~
-	SAY NAME1 @138
-	SAY UNIDENTIFIED_DESC @140
+	SAY NAME1 @269
+	SAY UNIDENTIFIED_DESC @270
 
 // Solar Stance!
 ACTION_IF ((NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~0~)) AND (NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~1~))) BEGIN
 	COPY ~kiara-zaiya/hla/solar01.spl~ ~override~
-		SAY NAME1 @9
-		SAY UNIDENTIFIED_DESC @141
+		SAY NAME1 @45
+		SAY UNIDENTIFIED_DESC @46
 END
 
 
@@ -205,28 +205,28 @@ REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
 // Amaralis
 COPY ~kiara-zaiya\amaralis\c6ama.cre~ ~override~
-	SAY NAME1 @47
-	SAY NAME2 @47
+	SAY NAME1 @25
+	SAY NAME2 @25
 // Horth'Kar
 COPY ~kiara-zaiya\amaralis\c6hroth.cre~ ~override~
-	SAY NAME1 @50
-	SAY NAME2 @50
+	SAY NAME1 @28
+	SAY NAME2 @28
 // Fenilla
 COPY ~kiara-zaiya\amaralis\c6fenil.cre~ ~override~
-	SAY NAME1 @144
-	SAY NAME2 @144
+	SAY NAME1 @271
+	SAY NAME2 @271
 // Morticia
 COPY ~kiara-zaiya\amaralis\c6mortic.cre~ ~override~
-	SAY NAME1 @145
-	SAY NAME2 @145
+	SAY NAME1 @272
+	SAY NAME2 @272
 // Polgar
 COPY ~kiara-zaiya\amaralis\c6polgar.cre~ ~override~
-	SAY NAME1 @146
-	SAY NAME2 @146
+	SAY NAME1 @273
+	SAY NAME2 @273
 // Keria
 COPY ~kiara-zaiya\amaralis\c6keria.cre~ ~override~
-	SAY NAME1 @147
-	SAY NAME2 @147
+	SAY NAME1 @274
+	SAY NAME2 @274
 
 COMPILE ~kiara-zaiya\amaralis\amafight.baf~
         ~kiara-zaiya\amaralis\amafigt1.baf~
@@ -249,8 +249,8 @@ REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
 COMPILE ~kiara-zaiya/vampkia/vampkia.baf~
 COPY ~kiara-zaiya/vampkia/vampkiar.cre~ ~override~
-	SAY NAME1 @49
-	SAY NAME2 @49
+	SAY NAME1 @27
+	SAY NAME2 @27
 COPY ~kiara-zaiya/vampkia/vampk3.itm~ ~override~
 
 
@@ -282,14 +282,17 @@ COPY_EXISTING ~ar2807.are~ ~override~
 BUT_ONLY
 
 COPY ~kiara-zaiya/sulda/kz#dmlrd.cre~ ~override~
+COMPILE ~kiara-zaiya/sulda/kz#dmlrd.baf~
 
+// Lesser Demon Gaze
+// -----------------
 COPY ~kiara-zaiya/sulda/kzldlpo1.spl~ ~override~ // male polymorph into demon knights no save
      ~kiara-zaiya/sulda/kzldlpol.spl~ ~override~ // female polymorph into succubus no save
-	SAY NAME1 @263
-COMPILE ~kiara-zaiya/sulda/kz#dmlrd.baf~
+	SAY NAME1 @281
+
 // BWP fix: Lollorian's patched Revised Suldanessalar
-//      ~kiara-zaiya/sulda/uddeath.baf~
-//      ~kiara-zaiya/sulda/demsuc.baf~
+//COMPILE ~kiara-zaiya/sulda/uddeath.baf~
+//        ~kiara-zaiya/sulda/demsuc.baf~
 EXTEND_TOP ~uddeath.bcs~ ~kiara-zaiya/sulda/uddeath.baf~
 EXTEND_TOP ~demsuc.bcs~  ~kiara-zaiya/sulda/demsuc.baf~
 
@@ -337,20 +340,20 @@ REQUIRE_FILE ~Data/25Dialog.bif~ @2
 
 EXTEND_TOP ~ar0300.bcs~ ~kiara-zaiya/wu-je/appendme.baf~ EVALUATE_BUFFER
 COPY ~kiara-zaiya/wu-je/kzjao.cre~ ~override~
-	SAY NAME1 @251
-	SAY NAME2 @251
+	SAY NAME1 @291
+	SAY NAME2 @291
 COPY ~kiara-zaiya/wu-je/kzwuje.cre~ ~override~
-	SAY NAME1 @253
-	SAY NAME2 @253
-// Isaya: dialog "traified" and forced to use the appropriate translated tra file (instead of KZsetup.tra and Dialogs.tra)
+	SAY NAME1 @293
+	SAY NAME2 @293
+// Isaya: dialog "traified" and forced to use the appropriate translated tra file (instead of kzsetup.tra and dialogs.tra)
 // Gwendolyne: Useless with AUTO_TRA
 COMPILE ~kiara-zaiya/wu-je/kzjao1.d~ // USING ~kiara-zaiya/lang/%s/kzjao1.tra~
 COMPILE ~kiara-zaiya/wu-je/kzjao.baf~
         ~kiara-zaiya/wu-je/kzwuje.baf~
 COPY ~kiara-zaiya/wu-je/kzbrac1.itm~ ~override~
-	SAY NAME1 @254
-	SAY NAME2 @254
-	SAY DESC @255
+	SAY NAME1 @294
+	SAY NAME2 @294
+	SAY DESC @295
 
 
 /* ========================================== *

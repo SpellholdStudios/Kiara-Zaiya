@@ -1,30 +1,70 @@
 // Isaya: version information moved to the TP2 file (new VERSION field of WeiDU)
-@1 = ~Kiara-Zaiya pour BG2 SOA~
-@2 = ~Il semblerait que Throne of Bhaal ne soit pas installe sur votre ordinateur.~
-@3 = ~Kiara~
-@4 = ~Interrogée sur son passé, Kiara vous dit qu’elle est née à Koryo, terre de Kara-Tur, à l’extrême est de Féérune. Après la mort tragique de ses parents, elle fut élevée comme un moine. Elle passa là-bas la majeure partie de sa jeunesse et apprit quelques bases du combat, la préparation d’herbes et la méditation. Pour une obscure raison, et bien qu'aux larmes qui brillent dans ses yeux on devine un événement tragique, elle fut renvoyée du monastère alors qu’elle était encore jeune. Elle voyagea vers l’ouest et en chemin rencontra des marchands qu’elle escorta jusqu’à Medina al Afyal. C’est une aventure dont elle parle fièrement et d'un ton enthousiaste. En arrivant à Afyal, elle ajoute qu’elle rencontra Zaiya avant qu'elles ne soient toutes deux enlevées par des corsaires et vendues comme esclave à Athkatla. Vous voyez son visage devenir noir sous son capuchon de moine ; vous sentez qu’elle n’en dira pas plus.~
-@5 = ~Position du Serpent !~
-@6 = ~Essoufflée~
-@7 = ~Position du Lunaire !~
-@8 = ~Position du Dragon !~
-@9 = ~Position du Solaire !~
-@10 = ~Position de l’Ombre !~
-@11 = ~Position de l’Ombre !
+@1    = ~Kiara-Zaiya pour BG2~
+@150  = ~Pack de voix personnalisees pour Kiara et Zaiya (disponible separement)~
 
-En acquérant un contrôle total sur leur corps, les Moines expérimentés peuvent utiliser cette capacité pour se trouver dans un état éthéré où ils deviennent complètement invisibles et flous pour leurs ennemis. Si le Moine exécute une attaque, ou brise l’invisibilité par d’autres moyens, il/elle deviendra partiellement visible. Jusqu’à ce que la capacité expire, le Moine gagne 6 points de bonus à la CA, et 4 points supplémentaires de bonus à sa CA contre les projectiles. Cette capacité dure 5 rounds.~
-@12 = ~Bouh~
-@13 = ~La magie entropique de Zaiya a transformé Bouh en poulet. Son piaillement répétitif rend le pauvre Minsc complètement fou, comme s’il ne l’était pas déjà.~
-@14 = ~Robe de Moine d’Osan~
-@15 = ~Ce manteau appartenait au premier amour de Kiara, Osan.
+@129 = ~Capacites alternatives de haut niveau par TG Maestro~
+@142 = ~Salle du Golem de De Arnise pour SoA.~
+@143 = ~Combats originaux d'Amaralis~
+// Isaya: new texts moved from the TP2
+@261  = ~Kiara plus redoutable en vampire~
+@262  = ~Modification de Suldanessalar~ 
+// Isaya: end of new texts
+@250  = ~Jao et son equipe pour Shadows of Amn : un autre rude combat~
+@260  = ~Irenicus renforce a l'arbre de vie~
 
-PARAMETRES :
+@2    = ~Il semblerait que Throne of Bhaal ne soit pas installe sur votre ordinateur.~
+@188  = ~Avant que vous installiez, veuillez ouvrir le fichier Readme dans le repertoire Kiara-Zaiya et voyez quels composants vous souhaitez installer.~
+@189  = ~Il semble que vous n'ayez pas installe la voix personnalisee !!! Vous pouvez la trouver separement sur le site de Kiara-Zaiya.~
+
+
+/* =========== *
+ *  Creatures  *
+ * =========== */
+@21   = ~Kiara~
+@22   = ~Zaiya~
+@23   = ~Wyverne empoisonnée~
+@24   = ~Prax~
+@25   = ~Amaralis~
+@26   = ~Seigneur Démon~
+@27   = ~Kiara Vampirisée~
+@28   = ~Horth'Kar~
+@29   = ~Jerlia~
+@30   = ~Endragor~
+@31   = ~Osan~
+
+
+/* ================== *
+ *  Spells and Items  *
+ * ================== */
+@41   = ~Position du serpent !~
+@42   = ~Essoufflée~
+@43   = ~Position du lunaire !~
+@44   = ~Position du dragon !~
+@45   = ~Position du Solaire !~
+@46   = ~Position du solaire !
+
+Le moine gagne la capacité de concentrer l'énergie de son Ki et de la libérer tout d'un coup, une boule de feu explosant de son corps, causant 6d10 points de dégâts de feu et susceptible de projeter les adversaires à une distance considérable (jet de sauvegarde contre le souffle à –4), les rendant inconscients pour 1 round.
+
+Nécessite : Coup éclair.~
+@47   = ~Position de l'ombre !~
+@48   = ~Position de l'ombre !
+
+En acquérant un contrôle total sur leur corps, les Moines expérimentés peuvent utiliser cette capacité pour se trouver dans un état éthéré où ils deviennent complètement invisibles et flous pour leurs ennemis. Si le Moine exécute une attaque, ou brise l'invisibilité par d'autres moyens, il/elle deviendra partiellement visible. Jusqu'à ce que la capacité expire, le Moine gagne 6 points de bonus à la CA, et 4 points supplémentaires de bonus à sa CA contre les projectiles. Cette capacité dure 5 rounds.~
+
+@51   = ~Bouh~
+@52   = ~La magie entropique de Zaiya a transformé Bouh en poulet. Son piaillement répétitif rend le pauvre Minsc complètement fou, comme s'il ne l'était pas déjà.~
+
+@53   = ~Robe de moine d'Osan~
+@54   = ~Ce manteau appartenait au premier amour de Kiara, Osan.
+
+PARAMÈTRES :
 
 Résistance à la Magie : +10%
-Classe d’Armure : +1
+Classe d'armure : +1
 Jets de sauvegarde : +1~
-@16 = ~Ce manteau appartenait au premier amour de Kiara, Osan. Le Seigneur Démon, en scellant le destin de Kiara, imprégna cette robe d’une puissante magie.
+@55  = ~Ce manteau appartenait au premier amour de Kiara, Osan. Le Seigneur Démon, en scellant le destin de Kiara, imprégna cette robe d'une puissante magie.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Capacités spéciales :
  Le porteur est immunisé au drain de niveau
@@ -34,271 +74,31 @@ Capacité si équipée :
  Le porteur régénère 1 point de vie toutes les 6 secondes
 
 Résistance à la Magie : +15%
-Classe d’Armure : +2
+Classe d'armure : +2
 Jets de sauvegarde : +2~
-@17 = ~Corps de Kiara~
-@18 = ~Kiara a été enlevée par Bodhi et affectée par son vampirisme, ce qui vous a obligés à la tuer. Il existe peut-être une façon de la faire revivre bien que vous ne sachiez ce que ce pourrait être.~
-@19 = ~Ame de Jerlia~
-@20 = ~Il s’agit du coeur que le démon gardait, lequel empêchait l’esprit de Jerlia d’être libre.~
-@21 = ~Pierre d’Ioun~
-@22 = ~Pierre jaune d’Ioun~
-@23 = ~C’est une petite pierre qui flotte en orbite autour de la tête de son détenteur. Le simple fait d’équiper la pierre la place en orbite. Manifestement, ces pierres magiques ont des propriétés différentes dépendant de leur couleur.~
-@24 = ~Grandement convoitée, la Pierre d’Ioun rend son porteur immunisé à tout ce qui est magique ou dit autrement, elle protège sa mobilité. Cela inclut les sorts Hâte et Lenteur.
 
-Vous pouvez aussi voir clairement la forme d’un oeil sur un côté de la pierre et l’inscription AO, dessous.~
-@25 = ~Compte-rendus d’échange~
-@26 = ~Prax conservait la trace de ses transactions sur un parchemin et vous trouvez rapidement le nom de Kiara dessus. Apparemment, elle a été vendue à Amaralis et devait être livrée chez lui dans le Quartier du Gouvernement. Le reste de la note donne seulement les montants détaillés de ses transactions.~
-@27 = ~Zaiya~
-@28 = ~Interrogée sur son passé, Zaiya vous apprend qu’elle naquit dans les environs de Medina al Afyal, dans la terre de Zakhara, au sud-est de Féérune. En quittant ses parents et sa maison, elle devint la servante d’un puissant mage élémentaliste, spécialisé dans les poisons. Elle passa la majeure partie de sa jeunesse avec lui et fut rapidement attirée par une nouvelle forme de magie : l’entropie. Elle commença à l’étudier en secret à partir de la collection de livres du mage, bien qu’il lui ait interdit de les lire. Au cours d'une de ses lectures, elle trouva un remède. Elle n’en dira pas plus.~
-@29 = ~Ame de Jerlia :
+@56   = ~Corps de Kiara~
+@57   = ~Kiara a été enlevée par Bodhi et affectée par son vampirisme, ce qui vous a obligés à la tuer. Il existe peut-être une façon de la faire revivre bien que vous ne sachiez ce que ce pourrait être.~
 
-J’ai rencontré un étrange fantôme nommé Jerlia dans une des cryptes du cimetière. Elle prétend qu’un démon a volé son âme et qu'elle ne peut partir tant qu’elle ne la récupérera pas. Cependant, elle n’a pas été très claire quant à l'endroit où je pourrai trouver le démon. Elle a seulement dit qu’il devait être caché près d’un temple ou dans une grotte.~
-@30 = ~Tuer Amaralis :
+@58   = ~Ame de Jerlia~
+@59   = ~Il s'agit du cœur que le démon gardait, lequel empêchait l'esprit de Jerlia d'être libre.~
 
-En dépit de la trahison de Kiara, j’ai accepté l’offre du Seigneur Démon de tuer Amaralis. Amaralis, le maître esclavagiste d’Athkatla, a récemment établi son camp dans la Passe du Petit Croc et j’ai seulement dix jours pour accomplir la mission du Seigneur Démon.~
-@31 = ~Tuer le Prélat Wessalen :
+@60   = ~Pierre d'Ioun~
+@61   = ~Pierre jaune d'Ioun~
+@62   = ~C'est une petite pierre qui flotte en orbite autour de la tête de son détenteur. Le simple fait d'équiper la pierre la place en orbite. Manifestement, ces pierres magiques ont des propriétés différentes dépendant de leur couleur.~
+@63   = ~Grandement convoitée, la Pierre d'Ioun rend son porteur immunisé à tout ce qui est magique ou dit autrement, elle protège sa mobilité. Cela inclut les sorts Hâte et Lenteur.
 
-J’ai accepté la requête du Seigneur Démon de tuer le Prélat Wessalen, de l’Ordre du Coeur Radieux, dans l’espoir qu’il sauverait Kiara de son destin macabre. Le Seigneur Démon m’a donné trois jours pour commettre cet acte monstrueux.~
-@32 = ~Mort du Prélat Wessalen :
+Vous pouvez aussi voir clairement la forme d'un oeil sur un côté de la pierre et l'inscription AO, dessous.~
 
-J’ai tué le Prélat Wessalen et me suis fait l’ennemi de l’Ordre du Coeur Radieux. Prochainement, je devrais être considéré comme une force du mal dans Féérune. Sauver la vie de Kiara m’a coûté très cher.~
-@33 = ~Trouver l’amie de Zaiya :
+@64   = ~Compte-rendu d'échanges~
+@65   = ~Prax conservait la trace de ses transactions sur un parchemin et vous trouvez rapidement le nom de Kiara dessus. Apparemment, elle a été vendue à Amaralis et devait être livrée chez lui dans le Quartier du Gouvernement. Le reste de la note donne seulement les montants détaillés de ses transactions.~
 
-J’ai rencontré une jeune fille nommée Zaiya, qui semble souffrir d’une étrange affliction. Elle m’a dit que son amie Kiara est la seule capable de stabiliser son état. Nous devrions être capables de trouver des pistes sur l’endroit où se trouve Kiara en demandant à un homme nommé Prax, près du Cirque dans Athkatla. Elle m’a averti de son état et le fait que nous ne disposions que de quelques jours avant qu’elle ne meure.~
-@34 = ~Oh non ! De l’entropie ! Quelque chose d’horrible a dû arriver.~
-@35 = ~Si le mage a vraiment plus de cinq cents ans, il nous faudra être prudents. Il a dû avoir tout le temps d'affûter parfaitement ses talents magiques.~
-@36 = ~Tu as peut-être gagné une bataille mais pas encore remporté la guerre !~
-@37 = ~Chaîne de Contingences - Bouclier de sorts~
-@38 = ~Chaîne de Contingences - Manteau Amélioré~
-@39 = ~Chaîne de Contingences - Déviation~
-@40 = ~Pauvre mage... vous l'avez laissé sans protection, insouciant imbécile !~
-@41 = ~J'espère que ce cadavre était juste une connaissance et non pas un ami ?~
-@42 = ~Vous oseriez me défier à nouveau ?~
-@43 = ~Sachez que la mort attend ceux qui trahissent leur parole.~
-@44 = ~Mes compétences de combat restent sans effet !~
-@45 = ~Position du Dragon !~
-@46 = ~Prax~
-@47 = ~Amaralis~
-@48 = ~Seigneur Démon~
-@49 = ~Kiara Vampirisée~
-@50 = ~Horth'Kar~
-@51 = ~Jerlia~
-@52 = ~Endragor~
-@53 = ~Je suis si heureuse que vous m'ayez trouvée. Je dois retrouver une amie...~
-@54 = ~Craignez-moi ! Car c'est la mort que je tiens au creux de la main !~ [KIARAA]
-@55 = ~Je suis heureuse que vous en veniez à la même conclusion. J'avais peur que vous n'ayez pas remarqué que je suis une meneuse née.~ [KIARAB]
-@56 = ~Aaaaah... Je ne sens plus mes jambes... Quelqu’un aurait-il l’amabilité de me masser les pieds ?~ [KIARAC]
-@57 = ~Quelqu'un aurait-il lu un bon bouquin ces derniers temps, ou bien voudrait raconter une bonne histoire ? (soupir)... Peut-être que la méditation silencieuse serait une meilleure chose en définitive.~ [KIARAD]
-@58 = ~Non ! Je suis trop puissante pour mourir ainsi.~ [KIARAE]
-@59 = ~Quels sont vos désirs ?~ [KIARAF]
-@60 = ~Comment puis-je vous aider ?~ [KIARAG]
-@61 = ~Oui...~ [KIARAH]
-@62 = ~Puisque vous insistez.~ [KIARAI]
-@63 = ~J'ai déjà fait pire.~ [KIARAJ]
-@64 = ~Dois-je toujours rapporter ?~ [KIARAK]
-@65 = ~Aaaaah...~ [KIARAL]
-@66 = ~Arrrrgggh !~ [KIARAM]
-@67 = ~Je n'aime guère les forêts, j’ai l’impression qu’il y a un espion derrière chaque arbre.~ [KIARAN]
-@68 = ~Ah ! Finalement, nous avons atteint un endroit civilisé... Ne pourrions-nous pas nous arrêter dans une échoppe ? J'ai "vraiment" besoin de nouvelles chaussures. Regardez, les miennes sont trouées de partout.~ [KIARAO]
-@69 = ~Devons-nous vraiment ramper tout le long du chemin alors que cet endroit est « sale » ? Qu’est-ce que j’obtiendrai en échange, à part que tu me donnes des vêtements propres ?~ [KIARAP]
-@70 = ~Comment suis-je supposée voir ma cible avec le soleil dans les yeux ?~ [KIARAQ]
-@71 = ~Je préfère franchement l’étreinte chaleureuse de la nuit.~ [KIARAR]
-@72 = ~Très bien, puisque je suis la seule capable de faire ton sale travail.~ [KIARAS]
-@73 = ~Si tu dois me le demander, fais au moins en sorte d’être poli.~ [KIARAT] ~Si tu dois me le demander, fais au moins en sorte d’être polie.~ [KIARAT]
-@74 = ~Ne pousse pas ma patience trop loin.~ [KIARAU]
-@75 = ~Je suis vraiment trop généreuse avec toi.~ [KIARAV]
-@76 = ~Quel dommage ! Mais ça signifie plus pour nous autres.~ [KIARAW]
-@77 = ~Je peux combattre pour toi mais tu peux m’oublier pour la cuisine et le ménage.~ [KIARAX]
-@78 = ~Traite-moi avec tout le respect que je mérite et peut-être que j'y réfléchirai.~ [KIARAY]
-@79 = ~Je parie que tu pensais que les femmes étaient faibles.~ [KIARAZ]
-@80 = ~Comment pourrais-je laisser ma puissante attaque me faire défaut.~ [KIARA1]
-@81 = ~Ca ne peut pas arriver !~ [KIARA2]
-@82 = ~Désolée mais je ne peux pas le porter, si quelqu’un « daignait bien » ramasser cet « objet » par terre.~ [KIARA3]
-@83 = ~Hum... j’ai toujours été forte pour mettre ma main là où elle ne devrait pas.~ [KIARA4]
-@84 = ~Mmhhhh... je me sens tellement à l’aise quand je suis dissimulée dans la chaleur des ténébres.~ [KIARA5]
-@85 = ~On m’a déconcentrée.~ [KIARA6]
-@86 = ~Délicate et mortelle comme la soie de l’araignée.~ [KIARA7]
-@87 = ~Pas de quartier ! Pas de pitié ! Massacrez-les tous !~ [KIARA8]
-@88 = ~Kiaaiiiiii !~ [KIARA9]
-@89 = ~Tu as quelque chose à l’esprit ?~ [KIARA0]
-@90 = ~Je pense qu’un petit autre ne me fera pas de mal.~ [KIARA_]
-@91 = ~Rien.~
-@92 = ~Je les expédierai en enfer...~ [ZAYAA]
-@93 = ~Je ne suis pas sûre que ce soit bien ma place, mais j’essaierai de faire de mon mieux.~ [ZAYAB]
-@94 = ~Oh, on pourrait s’arrêter s’il vous plaît ? Je sens qu’on sera bien ici pour dormir.~ [ZAYAC]
-@95 = ~Allons-nous rester ici encore longtemps ? Peut-être que je peux reprendre ma lecture de cet excellent livre sur la polymorphie...~ [ZAYAD]
-@96 = ~Aïee !~ [ZAYAE]
-@97 = ~Oui ?~ [ZAYAF]
-@98 = ~Vous avez besoin d’une entropiste ?~ [ZAYAG]
-@99 = ~Vous m'avez appelée ?~ [ZAYAH]
-@100 = ~Je le fais tout de suite...~ [ZAYAI]
-@101 = ~Toujours prête à rendre service...~ [ZAYAJ]
-@102 = ~C’est bien trop facile...~ [ZAYAK]
-@103 = ~Aïe !~ [ZAYAL]
-@104 = ~Aaaaah...~ [ZAYAM]
-@105 = ~Ah ! Si la mémoire sert à quelque chose aux elfes, appelez cet arbre Calvernon... Ai-je dit quelque chose de mal ?... Arrêtez de me regarder comme ça s’il vous plaît !~ [ZAYAN]
-@106 = ~Je me demande si nous trouverons du temps pour visiter la bibliothèque.~ [ZAYAO]
-@107 = ~Je ne vois « rien » dans cet endroit sombre, quelqu’un pourrait me prêter une torche ?~ [ZAYAP]
-@108 = ~C’est encore une belle journée qui s’annonce.~ [ZAYAQ]
-@109 = ~Il commence à faire « vraiment » tard. Ne devrions-nous pas nous coucher à présent ?~ [ZAYAR]
-// Isaya : transfered from tp2 file: no translation required
-@110 = ~~ [ZAYAS] //ACTION4
-@111 = ~~ [ZAYAT] //ACTION5
-@112 = ~~ [ZAYAU] //ACTION6
-@113 = ~~ [ZAYAV] //ACTION7
-@114 = ~~ [ZAYAW] //DIE GENERAL
-// Isaya : end
-@115 = ~Pourrais-je finir de lire d’abord ? ~ [ZAYAX]
-// Isaya : transfered from tp2 file: no translation required
-@116 = ~~ [ZAYAY] //RARE2
-// Isaya : end
-@117 = ~*Oui!* Appelez-moi juste Drizzt ! ~ [ZAYAZ]
-@118 = ~Hum... encore une maladresse.~ [ZAYA1]
-@119 = ~Laissez-moi essayer un peu de magie entropique !~ [ZAYA2]
-@120 = ~Avec Kiara qui me demande de porter son équipement, désolée mais j’en ai déjà assez !~ [ZAYA3]
-// Isaya : transfered from tp2 file: no translation required
-@121 = ~~ [ZAYA4] //PICKED POCKET
-@122 = ~~ [ZAYA5] //HIDE IN SHADOWS
-// Isaya : end
-@123 = ~Mon sort a été interrompu...~ [ZAYA6]
-// Isaya : transfered from tp2 file: no translation required
-@124 = ~~ [ZAYA7] //SET A TRAP
-@125 = ~~ [ZAYA8] //BATTLE CRY2
-@126 = ~~ [ZAYA9] //BATTLE CRY3
-@127 = ~~ [ZAYA0] //COMMON6
-@128 = ~~ [ZAYA_] //ACTION8
-// Isaya : end
-@129 = ~Capacites alternatives de haut niveau par TG Maestro~
-@130 = ~Position du Dragon !~
-@131 = ~Position du Dragon !
+// Compléments au nouveau combat contre Amaralis
+// ---------------------------------------------
+@66   = ~Épée divine~
+@67   = ~Ces épées sont généralement appelées épées à double tranchant, épées de guerre ou épées militaires. Souvent, l'épée longue a une lame à simple tranchant. Le modèle et la longueur de l'épée varient d'un peuple à un autre, parfois même d'une époque à une autre. L'une des caractéristiques communes à toutes les épées de ce type est la longueur, comprise entre 90 cm et 1,20 m. Dans le cas des épées les plus longues, la lame couvre 1 m de la longueur totale. La plupart des épées longues ont une lame à double tranchant et un estoc pointu. Malgré son estoc, l'épée longue est une arme considérée comme tranchante, et non perforante.
 
-Les Moines de haut niveau ont la capacité de focaliser les énergies Ki dans leur corps de plusieurs façons. Quand ils utilisent cette capacité, toutes les attaques réalisées par le Moine dans le round suivant supprimeront les « protections spécifiques » des cibles (jet de sauvegarde contre les sorts à –2) et une « protection magique » supérieure au niveau 8 (pas de jet de sauvegarde). La victime doit faire un jet de sauvegarde contre le souffle pour éviter de perdre toutes ses « protections physiques ». Les créatures frappées par la Position du Dragon doivent aussi faire un jet de sauvegarde contre la mort à –4, ou leur “résistance à la magie” sera réduite de 19% pour 6 rounds. Cet effet est cumulatif. La Position du Dragon annule toujours le plus puissant sort de protection de la cible.~
-@132 = ~Coup éclair !~
-@133 = ~Coup éclair !
-
-Cette capacité confère au Moine une attaque en un temps. Cette attaque écrasante est toujours couronnée de succès, il n’y a pas besoin de jet de sauvegarde. La cible subit 5D8 points de dégâts contondants et s'effondre, inconsciente pour 1 round ( pas de jet de sauvegarde ). Si l’adversaire rate son jet de sauvegarde contre le souffle à –4, la puissance du coup est telle qu’elle le projettera à une distance considérable.~
-@134 = ~Attaque du Tigre !~
-@135 = ~Attaque du Tigre !
-
-Avec la capacité d’Attaque du Tigre, le moine gagne la capacité de frapper d’un coup puissant, projetant un adversaire à une distance considérable et l’étourdissant pour 1 round. Toutes les attaques faites dans le premier round sont des coups critiques. La capacité dure 2 rounds.
-
-Les grandes créatures telles que les dragons ou les géants ne seront ni projetées ni étourdies.
-
-Nécessite : Attaque en puissance, Attaque critique.~
-@136 = ~Mélopée !~
-@137 = ~Mélopée !
-
-Cette capacité confère au moine de puissantes protections – aussi bien physiques que magiques – pour un temps très court. Elle augmente les résistances contre les armes tranchantes, perçantes, contondantes et à projectiles de 60%, augmente les résistances contre le feu, le froid et la foudre de 20% et ajoute 10% à la résistance aux dégâts magiques. Les effets de cette capacité durent 2 rounds.~
-@138 = ~Plus vite que l’oeil !~
-@139 = ~Plus vite que l’oeil !~
-@140 = ~Plus vite que l’oeil !
-
-Le Moine gagne la capacité de bouger à une incroyable vitesse.~
-@141 = ~Position du Solaire !
-
-Le Moine gagne la capacité de concentrer l’énergie de son Ki et de la libérer tout d’un coup, une boule de feu explosant de son corps et causant 6D10 dégâts de feu et susceptible de projeter les adversaires à une distance considérable (jet de sauvegarde contre le souffle à –4), les rendant inconscients pour 1 round.
-
-Nécessite : Coup éclair.~
-@142 = ~Salle du Golem de De Arnise pour SoA.~
-@143 = ~Combats originaux d'Amaralis~
-@144 = ~Fenilla~
-@145 = ~Morticia~
-@146 = ~Polgar~
-@147 = ~Keria~
-@148 = ~Pauvre mage... Vous l'avez laissé sans protection, pauvre inconscient !~
-@149 = ~J'espère que ce cadavre était juste une connaissance et non pas un ami ?~
-@150 = ~Pack de voix personnalisees pour Kiara et Zaiya (disponible separement)~
-// Pack de voix de Zaiya en utilisant FEMALE4 (ce pack existe aussi sous ce nom en Français)
-@151 = ~Vous périrez de ma main.~ [FEMALE4A]
-@152 = ~Bien sûr, je suis le meilleur choix.~ [FEMALE4B]
-@153 = ~Je devrai bientôt me reposer, je me sens faible quand je suis fatiguée.~ [FEMALE4C]
-@154 = ~Il y a des choses bien mieux à faire que de s’asseoir et attendre.~ [FEMALE4D]
-@155 = ~Ah... J’ai besoin d’être soignée au plus vite.~ [FEMALE4E]
-@156 = ~Oui ?~ [FEMALE4F]
-@157 = ~De quoi s’agit-il ?~ [FEMALE4G]
-@158 = ~Parle !~ [FEMALE4H]
-@159 = ~Ce sera fait.~ [FEMALE4I]
-@160 = ~Certainement.~ [FEMALE4J]
-@161 = ~Sans aucun doute.~ [FEMALE4K]
-@162 = ~Aaah...~ [FEMALE4L]
-@163 = ~Arrrrgh !~ [FEMALE4M]
-@164 = ~Ah ! Si la mémoire sert à quelque chose aux elfes, appelez cet arbre Calvernon... Ai-je dit quelque chose de mal ?... Arrêtez de me regarder comme ça s’il vous plaît !~
-@165 = ~Je me demande si nous trouverons du temps pour visiter la bibliothèque.~
-@166 = ~Je ne vois “rien” dans cet endroit sombre, quelqu’un pourrait-il me prêter une torche ?~
-@167 = ~C’est encore une belle journée qui s’annonce.~
-@168 = ~Il commence à faire « vraiment » tard. Ne devrions-nous pas nous coucher à présent ?~
-@169 = ~Rapidement et avec précision.~ [FEMALE4S]
-@170 = ~Sans hésitation.~ [FEMALE4T]
-@171 = ~Ca ne prendra pas longtemps.~ [FEMALE4U]
-@172 = ~Si ce doit être fait.~ [FEMALE4V]
-// Isaya : transfered from tp2 file: no translation required
-@173 = ~~ [FEMALE4W]
-@174 = ~J’écoute.~ [FEMALE4X]
-@175 = ~Ordonne-moi ce que tu désires.~ [FEMALE4Y]
-@176 = ~Oui !~ [FEMALE4Z]
-@177 = ~Ah, la prochaine fois sans doute.~ [FEMALE41]
-@178 = ~Mon arme est inefficace.~ [FEMALE42]
-@179 = ~Désolée mais je ne peux pas le porter, si quelqu’un « daignait bien » ramasser cet « objet » par terre.~ [FEMALE43]
-@180 = ~Il n’a pas remarqué mon vol.~ [FEMALE44]
-@181 = ~Je suis cachée, nous pouvons continuer.~ [FEMALE45]
-@182 = ~Mon incantation a été interrompue.~ [FEMALE46]
-@183 = ~Fais attention, le piège est posé et prêt.~ [FEMALE47]
-@184 = ~La mort te prendra avec elle.~ [FEMALE48]
-@185 = ~Bats en retraite ou tu succomberas avant moi.~ [FEMALE49]
-@186 = ~J’attends tes instructions.~ [FEMALE40]
-@187 = ~Je suis d’accord.~ [FEMALE4_]
-
-@188 = ~Avant que vous installiez, veuillez ouvrir le fichier Readme dans le repertoire Kiara-Zaiya et voyez quels composants vous souhaitez installer.~
-
-// Pack de voix de Kiara en utilisant FEMME2 (puisque c'est le nom en Français)
-@189 = ~Il semble que vous n'ayez pas installe la voix personnalisee !!! Vous pouvez la trouver separement sur le site de Kiara-Zaiya.~
-@190 = ~Ha ha !~ [FEMME2a] //cri de guerre 1
-@191 = ~Chacun tirera bénéfice de mon commandement.~ [FEMME2b] //leader
-@192 = ~Oh, tu sais, je voudrais vraiment me reposer un peu.~ [FEMME2c] //fatiguée
-@193 = ~On n’avance pas, laisse-nous faire quelque chose.~ [FEMME2d] //ennuyée
-@194 = ~Mes blessures demandent un peu de ton attention.~ [FEMME2e] //blessée
-@195 = ~Hummm ?~ [FEMME2f] //Sélectionnée 1
-@196 = ~J’attends.~ [FEMME2g] //Sélectionnée 2
-@197 = ~Oui.~ [FEMME2h] //Sélectionnée 3
-@198 = ~Rien de plus facile.~ [FEMME2i] //Action1
-@199 = ~Très bien.~ [FEMME2j] //action2
-@200 = ~Tout ce que tu veux.~ [FEMME2k] //action3
-@201 = ~uh !~ [FEMME2l] //touchée
-@202 = ~Argggh !~ [FEMME2m] //mourante
-@203 = ~Si tu le dis.~ [FEMME2s] //action4
-@204 = ~Bien sûr.~ [FEMME2t] //action5
-@205 = ~Si c’est ce que tu veux.~ [FEMME2u] //action6
-@206 = ~Tout ce que tu souhaites.~ [FEMME2v] //action7
-@207 = ~Que désires-tu ?~ [FEMME2x] //rare1
-@208 = ~Dis-moi tout.~ [FEMME2y] //rare2
-@209 = ~Ca fait mal ?~ [FEMME2z] //coup critique
-@210 = ~Ah ! Diantre !~ [FEMME21] //raté
-@211 = ~Mon attaque n’a aucun effet.~ [FEMME22] //cible immunisée
-@212 = ~Désolée mais je ne peux pas le porter, si quelqu’un « daignait bien » ramasser cet « objet » par terre.~ [FEMME23] //Inventaire plein
-@213 = ~De l’intérieur à l’extérieur, et personne n’a rien remarqué.~ [FEMME24] //larcin
-@214 = ~Je me suis bien cachée.~ [FEMME25] //Cachée dans l’ombre
-@215 = ~Arf, mon sort a échoué.~ [FEMME26] //Sort interrompu
-@216 = ~Attention maintenant, mon piège est posé.~ [FEMME27] //Poser un piège
-@217 = ~Tu ne ferais pas de mal à une demoiselle, n’est-ce pas ?~ [FEMME28] //cri de guerre 2
-@218 = ~Ca devrait être amusant !~ [FEMME29] //cri de guerre 3
-@219 = ~Est-ce tout ?~ [FEMME2_] //Sélectionnée 6
-@220 = ~Tu n’as qu’à demander.~ [FEMME20] //action8
-@221 = ~J’ai passé des moments merveilleux et plaisants à tes côtés.~ [KHappy] //Kia contente
-@222 = ~Une telle bonté est insupportable. Je suis un moine, non une oeuvre de charité~ //pas contente ( ennuyée )
-@223 = ~Mon entraînement me permet d’endurer beaucoup, mais j’ai tout de même mes limites.~ //pas contente ( sérieuse )
-@224 = ~Change tes manières, ou je peindrai mes poings de pourpre avec ton sang.~ //pas content ( quitte le groupe )
-@225 = ~J’aime tellement voyager avec vous. Ca doit être à ça que ressemble la liberté.~ //Zai contente
-@226 = ~Mon temps pourrait être utilisé de manière beaucoup plus satisfaisante avec mes livres. Je n’aime pas ça.~ //pas contente ( ennuyée )
-@227 = ~Je ne peux approuver le chemin que nous sommes en train de suivre. Mon temps pourrait être mieux utilisé ailleurs.~ //pas contente ( sérieuse )
-@228 = ~J’en ai assez de toute cette douleur et de cette souffrance infligée aux autres. Soyez maudit <CHARNAME> !~ //pas contente ( quitte le groupe )
-@230 = ~Wyverne empoisonnée~
-
-//Compléments au nouveau combat contre Amaralis
-@246 = ~Epée divine~
-@247 = ~Epée divine~
-@248 = ~Ces épées sont généralement appelées épées à double tranchant, épées de guerre ou épées militaires. Souvent, l'épée longue a une lame à simple tranchant. Le modèle et la longueur de l'épée varient d'un peuple à un autre, parfois même d'une époque à une autre. L'une des caractéristiques communes à toutes les épées de ce type est la longueur, comprise entre 90 cm et 1,20 m. Dans le cas des épées les plus longues, la lame couvre 1 m de la longueur totale. La plupart des épées longues ont une lame à double tranchant et un estoc pointu. Malgré son estoc, l'épée longue est une arme considérée comme tranchante, et non perforante.
-
-PARAMETRES :
+PARAMÈTRES :
 
 Dégâts : 1D8
 Type de dégâts : tranchant
@@ -311,16 +111,16 @@ Non utilisable par :
  Druide
  Clerc
  Mage~
-@249 = ~L’épée divine est une des plus grandes énigmes dans les royaumes car elle peut fournir une immunité complète à la divination pendant 1 heure.
+@68   = ~L'épée divine est une des plus grandes énigmes dans les royaumes car elle peut fournir une immunité complète à la divination pendant 1 heure.
 
-PARAMETRES :
+PARAMÈTRES :
 
-Capacités d’équipement :
+Capacités d'équipement :
  +25% de résistance aux dégâts magiques
  Bonus de +2 à la classe d'armure
 
 Spécial :
- Invoque un sort d’immunité à la divination une fois par jour. L’immunité dure 1 heure.
+ Invoque un sort d'immunité à la divination une fois par jour. L'immunité dure 1 heure.
 
 TAC0 : +3
 Dégâts : 1D8 +3
@@ -335,28 +135,290 @@ Non utilisable par :
  Clerc
  Mage~
 
-@250 = ~Jao et son equipe pour Shadows of Amn : un autre rude combat~
-@251 = ~Jao~
-@252 = ~Ninja~
-@253 = ~Wuje~
+
+/* ================= *
+ *  Kiara soundsets  *
+ * ================= */
+@71   = ~Interrogée sur son passé, Kiara vous dit qu'elle est née à Koryo, terre de Kara-Tur, à l'extrême est de Féérune. Après la mort tragique de ses parents, elle fut élevée comme un moine. Elle passa là-bas la majeure partie de sa jeunesse et apprit quelques bases du combat, la préparation d'herbes et la méditation. Pour une obscure raison, et bien qu'aux larmes qui brillent dans ses yeux on devine un événement tragique, elle fut renvoyée du monastère alors qu'elle était encore jeune. Elle voyagea vers l'ouest et en chemin rencontra des marchands qu'elle escorta jusqu'à Medina al Afyal. C'est une aventure dont elle parle fièrement et d'un ton enthousiaste. En arrivant à Afyal, elle ajoute qu'elle rencontra Zaiya avant qu'elles ne soient toutes deux enlevées par des corsaires et vendues comme esclave à Athkatla. Vous voyez son visage devenir noir sous son capuchon de moine ; vous sentez qu'elle n'en dira pas plus.~
+
+// Kiara custom soundset
+// ---------------------
+@72   = ~Je suis si heureuse que vous m'ayez trouvée. Je dois retrouver une amie...~
+@73   = ~Craignez-moi ! Car c'est la mort que je tiens au creux de la main !~ [KIARAA]
+@74   = ~Je suis heureuse que vous en veniez à la même conclusion. J'avais peur que vous n'ayez pas remarqué que je suis une meneuse née.~ [KIARAB]
+@75   = ~Aaaaah... Je ne sens plus mes jambes... Quelqu'un aurait-il l'amabilité de me masser les pieds ?~ [KIARAC]
+@76   = ~Quelqu'un aurait-il lu un bon bouquin ces derniers temps, ou bien voudrait raconter une bonne histoire ? (soupir)... Peut-être que la méditation silencieuse serait une meilleure chose en définitive.~ [KIARAD]
+@77   = ~Non ! Je suis trop puissante pour mourir ainsi.~ [KIARAE]
+@78   = ~Quels sont vos désirs ?~ [KIARAF]
+@79   = ~Comment puis-je vous aider ?~ [KIARAG]
+@80   = ~Oui...~ [KIARAH]
+@81   = ~Puisque vous insistez.~ [KIARAI]
+@82   = ~J'ai déjà fait pire.~ [KIARAJ]
+@83   = ~Dois-je toujours rapporter ?~ [KIARAK]
+@84   = ~Aaaaah...~ [KIARAL]
+@85   = ~Arrrrgggh !~ [KIARAM]
+@86   = ~Je n'aime guère les forêts, j'ai l'impression qu'il y a un espion derrière chaque arbre.~ [KIARAN]
+@87   = ~Ah ! Finalement, nous avons atteint un endroit civilisé... Ne pourrions-nous pas nous arrêter dans une échoppe ? J'ai "vraiment" besoin de nouvelles chaussures. Regardez, les miennes sont trouées de partout.~ [KIARAO]
+@88   = ~Devons-nous vraiment ramper tout le long du chemin alors que cet endroit est « sale » ? Qu'est-ce que j'obtiendrai en échange, à part que tu me donnes des vêtements propres ?~ [KIARAP]
+@89   = ~Comment suis-je supposée voir ma cible avec le soleil dans les yeux ?~ [KIARAQ]
+@90   = ~Je préfère franchement l'étreinte chaleureuse de la nuit.~ [KIARAR]
+@91   = ~Très bien, puisque je suis la seule capable de faire ton sale travail.~ [KIARAS]
+@92   = ~Si tu dois me le demander, fais au moins en sorte d'être poli.~ [KIARAT] ~Si tu dois me le demander, fais au moins en sorte d'être polie.~ [KIARAT]
+@93   = ~Ne pousse pas ma patience trop loin.~ [KIARAU]
+@94   = ~Je suis vraiment trop généreuse avec toi.~ [KIARAV]
+@95   = ~Quel dommage ! Mais ça signifie plus pour nous autres.~ [KIARAW]
+@96   = ~Je peux combattre pour toi, mais tu peux m'oublier pour la cuisine et le ménage.~ [KIARAX]
+@97   = ~Traite-moi avec tout le respect que je mérite et peut-être que j'y réfléchirai.~ [KIARAY]
+@98   = ~Je parie que tu pensais que les femmes étaient faibles.~ [KIARAZ]
+@99   = ~Comment pourrais-je laisser ma puissante attaque me faire défaut ?~ [KIARA1]
+@100  = ~Ça ne peut pas arriver !~ [KIARA2]
+@101  = ~Désolée, mais je ne peux pas le porter, si quelqu'un « daignait bien » ramasser cet « objet » par terre.~ [KIARA3]
+@102  = ~Hum... j'ai toujours été forte pour mettre ma main là où elle ne devrait pas.~ [KIARA4]
+@103  = ~Mmhhhh... je me sens tellement à l'aise quand je suis dissimulée dans la chaleur des ténèbres.~ [KIARA5]
+@104  = ~On m'a déconcentrée.~ [KIARA6]
+@105  = ~Délicate et mortelle comme la soie de l'araignée.~ [KIARA7]
+@106  = ~Pas de quartier ! Pas de pitié ! Massacrez-les tous !~ [KIARA8]
+@107  = ~Kiaaiiiiii !~ [KIARA9]
+@108  = ~Tu as quelque chose à l'esprit ?~ [KIARA0]
+@109  = ~Je pense qu'un petit autre ne me fera pas de mal.~ [KIARA_]
+
+// Pack de voix de Kiara utilisant FEMME2 (puisque c'est le nom en Français)
+// -------------------------------------------------------------------------
+@110  = ~Ha ha !~ [FEMME2a] // Cri de guerre 1
+@111  = ~Chacun tirera bénéfice de mon commandement.~ [FEMME2b] // Leader
+@112  = ~Oh, tu sais, je voudrais vraiment me reposer un peu.~ [FEMME2c] // Fatiguée
+@113  = ~On n'avance pas, laisse-nous faire quelque chose.~ [FEMME2d] // Ennuyée
+@114  = ~Mes blessures demandent un peu de ton attention.~ [FEMME2e] // Blessée
+@115  = ~Hummm ?~ [FEMME2f] // Sélectionnée 1
+@116  = ~J'attends.~ [FEMME2g] // Sélectionnée 2
+@117  = ~Oui ?~ [FEMME2h] // Sélectionnée 3
+@118  = ~Rien de plus facile.~ [FEMME2i] // Action1
+@119  = ~Très bien.~ [FEMME2j] // Action2
+@120  = ~Tout ce que tu veux.~ [FEMME2k] // Action3
+@121  = ~Uh !~ [FEMME2l] // Touchée
+@122  = ~Argggh !~ [FEMME2m] // Mourante
+@123  = ~Si tu le dis.~ [FEMME2s] // Action4
+@124  = ~Bien sûr.~ [FEMME2t] // Action5
+@125  = ~Si c'est ce que tu veux.~ [FEMME2u] // Action6
+@126  = ~Tout ce que tu souhaites.~ [FEMME2v] // Action7
+@127  = ~Que désires-tu ?~ [FEMME2x] // Rare1
+@128  = ~Dis-moi tout.~ [FEMME2y] // Rare2
+@129  = ~Ça fait mal ?~ [FEMME2z] // Coup critique
+@130  = ~Ah ! Diantre !~ [FEMME21] // Raté
+@131  = ~Mon attaque n'a aucun effet.~ [FEMME22] // Cible immunisée
+@132  = ~Désolée, mais je ne peux pas le porter, si quelqu'un « daignait bien » ramasser cet « objet » par terre.~ [FEMME23] // Inventaire plein
+@133  = ~De l'intérieur à l'extérieur, et personne n'a rien remarqué.~ [FEMME24] // Larcin
+@134  = ~Je me suis bien cachée.~ [FEMME25] // Cachée dans l'ombre
+@135  = ~Arf, mon sort a échoué.~ [FEMME26] // Sort interrompu
+@136  = ~Attention maintenant, mon piège est posé.~ [FEMME27] // Poser un piège
+@137  = ~Tu ne ferais pas de mal à une demoiselle, n'est-ce pas ?~ [FEMME28] // Cri de guerre 2
+@138  = ~Ça devrait être amusant !~ [FEMME29] // Cri de guerre 3
+@139  = ~Est-ce tout ?~ [FEMME2_] // Sélectionnée 6
+@140  = ~Tu n'as qu'à demander.~ [FEMME20] // Action8
+@141  = ~J'ai passé des moments merveilleux et plaisants à tes côtés.~ [KHappy] // Contente
+@142  = ~Une telle bonté est insupportable. Je suis un moine, non une œuvre de charité~ // Pas contente (ennuyée)
+@143  = ~Mon entraînement me permet d'endurer beaucoup, mais j'ai tout de même mes limites.~ // Pas contente (sérieuse)
+@144  = ~Change tes manières, ou je peindrai mes poings de pourpre avec ton sang.~ // Pas contente (quitte le groupe)
+
+
+/* ================= *
+ *  Zaiya soundsets  *
+ * ================= */
+@145  = ~Interrogée sur son passé, Zaiya vous apprend qu'elle naquit dans les environs de Medina al Afyal, dans la terre de Zakhara, au sud-est de Féérune. En quittant ses parents et sa maison, elle devint la servante d'un puissant mage élémentaliste, spécialisé dans les poisons. Elle passa la majeure partie de sa jeunesse avec lui et fut rapidement attirée par une nouvelle forme de magie : l'entropie. Elle commença à l'étudier en secret à partir de la collection de livres du mage, bien qu'il lui ait interdit de les lire. Au cours d'une de ses lectures, elle trouva un remède. Elle n'en dira pas plus.~
+
+// Zaiya custom soundset
+// ---------------------
+@146  = ~Rien.~
+@147  = ~Je les expédierai en enfer...~ [ZAYAA]
+@148  = ~Je ne suis pas sûre que ce soit bien ma place, mais j'essaierai de faire de mon mieux.~ [ZAYAB]
+@149  = ~Oh, on pourrait s'arrêter s'il vous plaît ? Je sens qu'on sera bien ici pour dormir.~ [ZAYAC]
+@150  = ~Allons-nous rester ici encore longtemps ? Peut-être que je peux reprendre ma lecture de cet excellent livre sur la polymorphie...~ [ZAYAD]
+@151  = ~Aïee !~ [ZAYAE]
+@152  = ~Oui ?~ [ZAYAF]
+@153  = ~Vous avez besoin d'une entropiste ?~ [ZAYAG]
+@154  = ~Vous m'avez appelée ?~ [ZAYAH]
+@155  = ~Je le fais tout de suite...~ [ZAYAI]
+@156  = ~Toujours prête à rendre service...~ [ZAYAJ]
+@157  = ~C'est bien trop facile...~ [ZAYAK]
+@158  = ~Aïe !~ [ZAYAL]
+@159  = ~Aaaaah...~ [ZAYAM]
+@160  = ~Ah ! Si la mémoire sert à quelque chose aux elfes, appelez cet arbre Calvernon... Ai-je dit quelque chose de mal ?... Arrêtez de me regarder comme ça s'il vous plaît !~ [ZAYAN]
+@161  = ~Je me demande si nous trouverons du temps pour visiter la bibliothèque.~ [ZAYAO]
+@162  = ~Je ne vois « rien » dans cet endroit sombre. Quelqu'un pourrait-il me prêter une torche ?~ [ZAYAP]
+@163  = ~C'est encore une belle journée qui s'annonce.~ [ZAYAQ]
+@164  = ~Il commence à faire « vraiment » tard. Ne devrions-nous pas nous coucher à présent ?~ [ZAYAR]
+// Isaya: transfered from tp2 file - no translation required
+@165  = ~~ [ZAYAS] // ACTION4
+@166  = ~~ [ZAYAT] // ACTION5
+@167  = ~~ [ZAYAU] // ACTION6
+@168  = ~~ [ZAYAV] // ACTION7
+@169  = ~~ [ZAYAW] // DIE GENERAL
+@170  = ~~ [ZAYAY] // RARE2
+// Isaya: end of transfer
+@171  = ~Pourrais-je finir de lire d'abord ? ~ [ZAYAX]
+@172  = ~*Oui!* Appelez-moi juste Drizzt ! ~ [ZAYAZ]
+@173  = ~Hum... encore une maladresse.~ [ZAYA1]
+@174  = ~Laissez-moi essayer un peu de magie entropique !~ [ZAYA2]
+@175  = ~Avec Kiara qui me demande de porter son équipement, désolée mais j'en ai déjà assez !~ [ZAYA3]
+@176  = ~Mon sort a été interrompu...~ [ZAYA6]
+// Isaya: transfered from tp2 file - no translation required
+@177  = ~~ [ZAYA4] // PICKED POCKET
+@178  = ~~ [ZAYA5] // HIDE IN SHADOWS
+@179  = ~~ [ZAYA7] // SET A TRAP
+@180  = ~~ [ZAYA8] // BATTLE CRY2
+@181  = ~~ [ZAYA9] // BATTLE CRY3
+@182  = ~~ [ZAYA0] // COMMON6
+@183  = ~~ [ZAYA_] // ACTION8
+// Isaya: end of transfer
+
+// Pack de voix de Zaiya utilisant FEMALE4 (ce pack existe aussi sous ce nom en Français)
+// --------------------------------------------------------------------------------------
+@184  = ~Vous périrez de ma main !~ [FEMALE4A]
+@185  = ~Bien sûr, je suis le meilleur choix.~ [FEMALE4B]
+@186  = ~Je devrai bientôt me reposer, je me sens faible quand je suis fatiguée.~ [FEMALE4C]
+@187  = ~Il y a des choses bien mieux à faire que de s'asseoir et attendre.~ [FEMALE4D]
+@188  = ~Ah... J'ai besoin d'être soignée au plus vite.~ [FEMALE4E]
+@189  = ~Oui ?~ [FEMALE4F]
+@190  = ~De quoi s'agit-il ?~ [FEMALE4G]
+@191  = ~Parle !~ [FEMALE4H]
+@192  = ~Ce sera fait.~ [FEMALE4I]
+@193  = ~Certainement.~ [FEMALE4J]
+@194  = ~Sans aucun doute.~ [FEMALE4K]
+@195  = ~Aaah...~ [FEMALE4L]
+@196  = ~Arrrrgh !~ [FEMALE4M]
+@197  = ~Ah ! Si la mémoire sert à quelque chose aux elfes, appelez cet arbre Calvernon... Ai-je dit quelque chose de mal ?... Arrêtez de me regarder comme ça s'il vous plaît !~ // same as @160, but without sound clip
+@198  = ~Je me demande si nous trouverons du temps pour visiter la bibliothèque.~ // same as @161, but without sound clip
+@199  = ~Je ne vois « rien » dans cet endroit sombre Quelqu'un pourrait-il me prêter une torche ?~ // same as @162, but without sound clip
+@200  = ~C'est encore une belle journée qui s'annonce.~ // same as @163, but without sound clip
+@201  = ~Il commence à faire « vraiment » tard. Ne devrions-nous pas nous coucher à présent ?~ // same as @164, but without sound clip
+@202  = ~Rapidement et avec précision.~ [FEMALE4S]
+@203  = ~Sans hésitation.~ [FEMALE4T]
+@204  = ~Ça ne prendra pas longtemps.~ [FEMALE4U]
+@205  = ~Si ce doit être fait.~ [FEMALE4V]
+@206  = ~~ [FEMALE4W] // Isaya: transfered from tp2 file - no translation required
+@207  = ~J'écoute.~ [FEMALE4X]
+@208  = ~Ordonne-moi ce que tu désires.~ [FEMALE4Y]
+@209  = ~Oui !~ [FEMALE4Z]
+@210  = ~Ah, la prochaine fois sans doute.~ [FEMALE41]
+@211  = ~Mon arme est inefficace.~ [FEMALE42]
+@212  = ~Désolée mais je ne peux pas le porter, si quelqu'un « daignait bien » ramasser cet « objet » par terre.~ [FEMALE43]
+@213  = ~Il n'a pas remarqué mon vol.~ [FEMALE44]
+@214  = ~Je suis cachée, nous pouvons continuer.~ [FEMALE45]
+@215  = ~Mon incantation a été interrompue.~ [FEMALE46]
+@216  = ~Fais attention, le piège est posé et prêt.~ [FEMALE47]
+@217  = ~La mort te prendra avec elle.~ [FEMALE48]
+@218  = ~Bats en retraite ou tu succomberas avant moi.~ [FEMALE49]
+@219  = ~J'attends tes instructions.~ [FEMALE40]
+@220  = ~Je suis d'accord.~ [FEMALE4_]
+@221  = ~J'aime tellement voyager avec vous. Ca doit être à ça que ressemble la liberté.~ //Zai contente
+@222  = ~Mon temps pourrait être utilisé de manière beaucoup plus satisfaisante avec mes livres. Je n'aime pas ça.~ //pas contente ( ennuyée )
+@223  = ~Je ne peux approuver le chemin que nous sommes en train de suivre. Mon temps pourrait être mieux utilisé ailleurs.~ //pas contente ( sérieuse )
+@224  = ~J'en ai assez de toute cette douleur et de cette souffrance infligée aux autres. Soyez maudit <CHARNAME> !~ //pas contente ( quitte le groupe )
+
+
+/* ========= *
+ *  Journal  *
+ * ========= */
+@231  = ~Ame de Jerlia
+
+J'ai rencontré un étrange fantôme nommé Jerlia dans une des cryptes du cimetière. Elle prétend qu'un démon a volé son âme et qu'elle ne peut partir tant qu'elle ne la récupérera pas. Cependant, elle n'a pas été très claire quant à l'endroit où je pourrai trouver le démon. Elle a seulement dit qu'il devait être caché près d'un temple ou dans une grotte.~
+@232  = ~Tuer Amaralis
+
+En dépit de la trahison de Kiara, j'ai accepté l'offre du Seigneur Démon de tuer Amaralis. Amaralis, le maître esclavagiste d'Athkatla, a récemment établi son camp dans la Passe du Petit Croc et j'ai seulement dix jours pour accomplir la mission du Seigneur Démon.~
+@233  = ~Tuer le Prélat Wessalen
+
+J'ai accepté la requête du Seigneur Démon de tuer le Prélat Wessalen, de l'Ordre du Cœur Radieux, dans l'espoir qu'il sauverait Kiara de son destin macabre. Le Seigneur Démon m'a donné trois jours pour commettre cet acte monstrueux.~
+@234  = ~Mort du Prélat Wessalen
+
+J'ai tué le Prélat Wessalen et me suis fait l'ennemi de l'Ordre du Coeur Radieux. Prochainement, je devrais être considéré comme une force du mal dans Féérune. Sauver la vie de Kiara m'a coûté très cher.~
+@235  = ~Trouver l'amie de Zaiya
+
+J'ai rencontré une jeune fille nommée Zaiya, qui semble souffrir d'une étrange affliction. Elle m'a dit que son amie Kiara est la seule capable de stabiliser son état. Nous devrions être capables de trouver des pistes sur l'endroit où se trouve Kiara en demandant à un homme nommé Prax, près du Cirque dans Athkatla. Elle m'a averti de son état et le fait que nous ne disposions que de quelques jours avant qu'elle ne meure.~
+
+
+/* ========= *
+ *  Scripts  *
+ * ========= */
+@241  = ~Oh non ! De l'entropie ! Quelque chose d'horrible a dû arriver.~
+@242  = ~Si le mage a vraiment plus de cinq cents ans, il nous faudra être prudents. Il a dû avoir tout le temps d'affûter parfaitement ses talents magiques.~
+@243  = ~Tu as peut-être gagné une bataille, mais pas encore remporté la guerre !~
+@244  = ~Chaîne de contingence - Bouclier de sort~
+@245  = ~Chaîne de contingence - Manteau amélioré~
+@246  = ~Chaîne de contingence - Déviation des sorts~
+@247  = ~Pauvre mage... Vous l'avez laissé sans protection, pauvre inconscient !~
+@248  = ~J'espère que ce cadavre était juste une connaissance et non pas un ami ?~
+@249  = ~Vous oseriez me défier à nouveau ?~
+@43  = ~Sachez que la mort attend ceux qui trahissent leur parole.~
+@251  = ~Mes compétences de combat restent sans effet !~
+
+
+/* =================================================== *
+ *  Alternate Monk High level abilities by TG Maestro  *
+ * =================================================== */
+@261  = ~Position du dragon !~
+@262  = ~Position du dragon !
+
+Les moines de haut niveau ont la capacité de focaliser les énergies Ki dans leur corps de plusieurs façons. Quand ils utilisent cette capacité, toutes les attaques réalisées dans le round suivant supprimeront les « protections spécifiques » des cibles (jet de sauvegarde contre les sorts à –2) et une « protection magique » supérieure au niveau 8 (pas de jet de sauvegarde). La victime doit réussir un jet de sauvegarde contre le souffle pour éviter de perdre toutes ses « protections physiques ». Les créatures frappées par la Position du dragon doivent aussi réussir un jet de sauvegarde contre la mort à –4, ou leur “résistance à la magie” sera réduite de 19% pour 6 rounds. Cet effet est cumulatif. La Position du dragon annule toujours le plus puissant sort de protection de la cible.~
+@263  = ~Coup éclair !~
+@264  = ~Coup éclair !
+
+Cette capacité confère au moine une attaque en un temps. Cette attaque écrasante est toujours couronnée de succès, il n'y a pas besoin de jet de sauvegarde. La cible subit 5D8 points de dégâts contondants et s'effondre, inconsciente pour 1 round ( pas de jet de sauvegarde ). Si l'adversaire rate son jet de sauvegarde contre le souffle à –4, la puissance du coup est telle qu'elle le projettera à une distance considérable.~
+@265  = ~Attaque du tigre !~
+@266  = ~Attaque du tigre !
+
+Avec la capacité Attaque du tigre, le moine gagne la capacité de frapper d'un coup puissant, projetant un adversaire à une distance considérable et l'étourdissant pour 1 round. Toutes les attaques faites dans le premier round sont des coups critiques. La capacité dure 2 rounds.
+
+Les grandes créatures telles que les dragons ou les géants ne seront ni projetées ni étourdies.
+
+Nécessite : Attaque en puissance, Attaque critique.~
+@267  = ~Mélopée !~
+@268  = ~Mélopée !
+
+Cette capacité confère au moine de puissantes protections – aussi bien physiques que magiques – pour un temps très court. Elle augmente de 60 % ses résistances contre les armes tranchantes, perçantes, contondantes et à projectiles, de 20% ses résistances contre le feu, le froid et la foudre ; et ajoute 10% à sa résistance aux dégâts magiques. Ces effets durent 2 rounds.~
+@269  = ~Plus vite que l'œil !~
+@270  = ~Plus vite que l'œil !
+
+Le moine gagne la capacité de bouger à une vitesse incroyable.~
+
+
+/* =========================== *
+ *  Original Amaralis battles  *
+ * =========================== */
+@271  = ~Fenilla~
+@272  = ~Morticia~
+@273  = ~Polgar~
+@274  = ~Keria~
+
+@275  = ~J'espère que ce cadavre était juste une connaissance et non pas un ami ?~
+
+
+/* ======================= *
+ *  Revised Suldalanessar  *
+ * ======================= */
+@281  = ~Regard du Démon mineur~
+@282  = ~Irenicus said they would come for the cup. I shall not fail my master.~
+
+
+/* ============================================ *
+ *  Jao and party for SOA: another tough fight  *
+ * ============================================ */
+@291  = ~Jao~
+@292  = ~Ninja~
+@293  = ~Wuje~
 // Isaya: new texts moved from the TP2
-@254 = ~Bracelets "Protecteurs"~
-@255 = ~Bracelets de moine
+@294  = ~Bracelets protecteurs~
+@295  = ~Bracelets de moine
 
 Ces bracelets extraordinaires ont été forgés pour Wuje par sa guilde d'assassins.
 
-PARAMETRES :
+PARAMÈTRES :
 Bonus de +2 au TAC0 et aux dégâts
 A chaque tentative de frapper le porteur de ces bracelets, l'adversaire a 10 % de chance que les bracelets lui jettent les sorts Fatalité et Cécité.
 
 Utilisable uniquement par :
  Moine~
 // Isaya: end of new texts
-@260 = ~Irenicus renforce a l'arbre de vie~
-// Isaya: new texts moved from the TP2
-@261 = ~Kiara plus redoutable en vampire~
-@262 = ~Modification de Suldanessalar~ 
-// Isaya: end of new texts
+
 
 // WeiDU prompts
 @-1000= "Le mod %TP2_FILE_NAME% contient"

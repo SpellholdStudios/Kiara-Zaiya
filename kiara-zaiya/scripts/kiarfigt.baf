@@ -79,7 +79,7 @@ IF
   !Detect(SecondNearestEnemyOf(Myself))
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@44)  // ~My fighting skills are useless!~
+    DisplayStringHead(Myself,@251)  // ~My fighting skills are useless!~
     SetGlobal("KCActive","GLOBAL",0)
     Continue()
 END
@@ -236,7 +236,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("KiaPrep","LOCALS",1)
-    DisplayStringHead(Myself,@45)  // ~ Dragon Stance! ~
+    DisplayStringHead(Myself,@44)  // ~ Dragon Stance!~
     ActionOverride(Myself,SpellRES("DRAGO01",Myself))
     SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
     AttackReevaluate(NearestEnemyOf(Myself),12)
@@ -694,7 +694,7 @@ IF
   HaveSpellRES("DRAGO01")
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@45)  // ~ Dragon Stance! ~
+    DisplayStringHead(Myself,@44)  // ~ Dragon Stance!~
     ActionOverride(Myself,SpellRES("DRAGO01",Myself))  // ~Dragon Stance!~
     SetGlobalTimer("MONKTIMER","GLOBAL",ONE_ROUND)
     AttackReevaluate(NearestEnemyOf(Myself),12)
