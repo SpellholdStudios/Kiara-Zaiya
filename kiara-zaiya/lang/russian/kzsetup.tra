@@ -1,12 +1,10 @@
 // Version information moved to the TP2 file (new VERSION field of WeiDU)
 @1    = ~Kiara-Zaiya for BG2~
-@150  = ~Custom Kiara-Zaiya soundset (available separately).~
+@2    = ~Kiara-Zaiya for BG2 with vanilla soundsets~
+@3    = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
 
 @129  = ~Alternate High level abilities by TG Maestro~
-@142  = ~Golem room in De Arnise for SOA.~
 @143  = ~Original Amaralis battles~
-@188  = ~Перед установкой, пожалуйста, прочитайте файл readme в папке Kiara-Zaiya и выберите, какие компоненты вы хотите установить.~
-@189  = ~You do not seem to have the custom soundset installed!!! It can be found separately on the Kiara-Zaiya website.~
 // Isaya: new texts moved from the TP2
 @261  = ~Tougher Kiara vampire~
 @262  = ~Revised Suldalanessar~
@@ -14,7 +12,13 @@
 @250  = ~Jao and party for SOA: another tough fight~
 @260  = ~Tougher Irenicus at the Tree of life~
 
-@2    = ~You do not appear to have Throne of Bhaal installed.~
+@11   = ~You do not appear to have Throne of Bhaal installed.~
+/* DEPRECATED af of v2.0.0
+   -----------------------
+@142  = ~Golem room in De Arnise for SOA.~
+@188  = ~Перед установкой, пожалуйста, прочитайте файл readme в папке Kiara-Zaiya и выберите, какие компоненты вы хотите установить.~
+@189  = ~You do not seem to have the custom soundset installed!!! It can be found separately on the Kiara-Zaiya website.~
+*/
 
 
 /* =========== *

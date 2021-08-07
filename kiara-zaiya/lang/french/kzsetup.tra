@@ -1,10 +1,10 @@
 // Isaya: version information moved to the TP2 file (new VERSION field of WeiDU)
 @1    = ~Kiara-Zaiya pour BG2~
-@150  = ~Pack de voix personnalisees pour Kiara et Zaiya (disponible separement)~
+@2    = ~Kiara-Zaiya pour BG2 avec les packs de voix du jeu~
+@3    = ~Kiara-Zaiya pour BG2 avec un pack de voix personnalisees (disponible seulement en anglais)~
 
-@129 = ~Capacites alternatives de haut niveau par TG Maestro~
-@142 = ~Salle du Golem de De Arnise pour SoA.~
-@143 = ~Combats originaux d'Amaralis~
+@129  = ~Capacites alternatives de haut niveau par TG Maestro~
+@143  = ~Combats originaux d'Amaralis~
 // Isaya: new texts moved from the TP2
 @261  = ~Kiara plus redoutable en vampire~
 @262  = ~Modification de Suldanessalar~ 
@@ -12,9 +12,13 @@
 @250  = ~Jao et son equipe pour Shadows of Amn : un autre rude combat~
 @260  = ~Irenicus renforce a l'arbre de vie~
 
-@2    = ~Il semblerait que Throne of Bhaal ne soit pas installe sur votre ordinateur.~
+@11   = ~Il semblerait que Throne of Bhaal ne soit pas installe sur votre ordinateur.~
+/* DEPRECATED as of v2.0.0
+   -----------------------
+@142  = ~Salle du Golem du Château De Arnise pour SoA~
 @188  = ~Avant que vous installiez, veuillez ouvrir le fichier Readme dans le repertoire Kiara-Zaiya et voyez quels composants vous souhaitez installer.~
 @189  = ~Il semble que vous n'ayez pas installe la voix personnalisee !!! Vous pouvez la trouver separement sur le site de Kiara-Zaiya.~
+*/
 
 
 /* =========== *

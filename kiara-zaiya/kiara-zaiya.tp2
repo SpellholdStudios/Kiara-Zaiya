@@ -117,19 +117,20 @@ LANGUAGE ~Russian (Gingerrr & aerie.ru. Updated by Prowler)~
 /* ========================================== *
  *    Kiara-Zaiya for BG2 (main component)    *
  * ========================================== */
-BEGIN @1                                 // ~Kiara-Zaiya for BG2~
-REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @2 // ~You do not appear to have Throne of Bhaal installed.~
+BEGIN @2                                  // ~Kiara-Zaiya for BG2 with vanilla soundsets~
+DESIGNATED 0
+SUBCOMPONENT @1                           // ~Kiara-Zaiya for BG2~
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
 OUTER_SET kz_custom = 0
 
 INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
 
 
-/* ============================================================================ *
- *    Kiara-Zaiya mod with custom soundsets (English only)  (main component)    *
- * ============================================================================ */
-BEGIN @150                               // ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
-REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @2 // ~You do not appear to have Throne of Bhaal installed.~
+BEGIN @3                                  // ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
+DESIGNATED 1
+SUBCOMPONENT @1
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11
 
 OUTER_SET kz_custom = 1
 

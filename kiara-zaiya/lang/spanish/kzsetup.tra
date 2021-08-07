@@ -1,20 +1,25 @@
 // Isaya: version information moved to the TP2 file (new VERSION field of WeiDU)
 @1    = ~Kiara-Zaiya para BG2~
-@150  = ~Voces customizadas de Kiara-Zaiya (disponible por separado).~
+@2    = ~Kiara-Zaiya for BG2 with vanilla soundsets~
+@3    = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
+//@150  = ~Voces customizadas de Kiara-Zaiya (disponible por separado).~
 
 @129  = ~Aptitudes de clase de nivel elevado alternativas por TG Maestro~
-@142  = ~Habitación del Gólem en De'Arnise para SOA.~
 @143  = ~Batallas de Amaralis originales~
 // Isaya: new texts moved from the TP2
 @261  = ~Vampiresa Kiara mas fuerte~
 @262  = ~Suldanessalar revisado~
 // Isaya: end of new texts
-@250 = ~Jao y grupo para SOA: otra lucha difícil~
+@250  = ~Jao y grupo para SOA: otra lucha difícil~
 @260  = ~Irenicus Mejorado en el Árbol de la Vida~
 
-@2    = ~No tienes Throne of Bhaal instalado.~
+@11   = ~No tienes Throne of Bhaal instalado.~
+/* DEPRECATED as of v2.0.0
+   -----------------------
+@142  = ~Habitación del Gólem en De'Arnise para SOA.~
 @188  = ~Por favor, antes de la instalación abre el archivo readme de Kiara-Zaiya y elige los componentes que deseas instalar.~
 @189  = ~¡¡¡Parece ser que no tienes las voces customizadas instaladas!!! Puede encontrarse por separado en la web de Kiara-Zaiya.~
+*/
 
 
 /* =========== *

@@ -45,7 +45,8 @@ Baldur's Gate Trilogy and EET<h3>
 
 - Renamed *Setup-Kiara-Zaiya.tp2* -> *kiara-zaiya.tp2* and moved it into top mod folder to support AL|EN's "Project Infinity".
 - Replaced `REQUIRE_FILE` condition with `REQUIRE_PREDICATE` to avoid installing the mod in inaccurate games.
-- Added native EE and EET compatibility (thanks Austin!):.
+- Grouped custom and vanilla soundsets into main component `SUBCOMPONENTS`.
+- Added native EE and EET compatibility (thanks Austin!):
     - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
     - Added chapters continuity for EET games.
     - Added `ADD_JOURNAL` entries.

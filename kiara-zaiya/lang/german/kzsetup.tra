@@ -1,17 +1,22 @@
 @1    = ~Kiara-Zaiya fuer BG2~
-@150 = ~Kiara-Zaiya Soundset (seperat erhaeltlich)~
+@2    = ~Kiara-Zaiya for BG2 with vanilla soundsets~
+@3    = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
+//@150 = ~Kiara-Zaiya Soundset (seperat erhaeltlich)~
 
-@129 = ~Alternative Hochstufige Faehigkeiten von TG Maestro~
-@142 = ~Golem Raum in De Arnise für SvA.~
-@143 = ~Original Amaralis Kampf~
-@261 = ~Zaeherer Kiara Vampir~
-@262 = ~Ueberarbeitetes Suldalanessar~
-@250 = ~Jao und Gruppe fuer SvA: ein weiterer harter Kampf~
+@129  = ~Alternative Hochstufige Faehigkeiten von TG Maestro~
+@143  = ~Original Amaralis Kampf~
+@261  = ~Zaeherer Kiara Vampir~
+@262  = ~Ueberarbeitetes Suldalanessar~
+@250  = ~Jao und Gruppe fuer SvA: ein weiterer harter Kampf~
 @260  = ~Zaeherer Irenicus beim Baum des Lebens~
 
-@2    = ~Thron des Bhaal scheint nicht installiert zu sein.~
-@188 = ~Bevor Ihr installiert, oeffnet bitte die Readme-Datei im Kiara-Zaiya Ordner und seht, welche Komponenten Ihr installieren wollt.~
-@189 = ~Ihr scheint das Soundset nicht installiert zu haben!!! Es ist seperat auf der Webseite von Kiara-Zaiya zu finden.~
+@11   = ~Thron des Bhaal scheint nicht installiert zu sein.~
+/* DEPRECATED as of v2.0.0
+   -----------------------
+@142  = ~Golem Raum in De Arnise für SvA.~
+@188  = ~Bevor Ihr installiert, oeffnet bitte die Readme-Datei im Kiara-Zaiya Ordner und seht, welche Komponenten Ihr installieren wollt.~
+@189  = ~Ihr scheint das Soundset nicht installiert zu haben!!! Es ist seperat auf der Webseite von Kiara-Zaiya zu finden.~
+*/
 
 
 /* =========== *
