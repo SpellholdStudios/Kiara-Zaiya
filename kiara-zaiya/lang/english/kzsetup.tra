@@ -2,15 +2,14 @@
 @1    = ~Kiara-Zaiya for BG2~
 @2    = ~Kiara-Zaiya for BG2 with vanilla soundsets~
 @3    = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
-
-@129  = ~Alternate Monk High level abilities by TG Maestro~
-@143  = ~Original Amaralis battles~
-// Isaya: new texts moved from the TP2
-@261  = ~Tougher Kiara vampire~
-@262  = ~Revised Suldalanessar~
+@4    = ~Alternate Monk High level abilities by TG Maestro~
+@5    = ~Original Amaralis battles~
+// Isaya: new texts moved from the TP2 (as of v1.6.1)
+@6    = ~Tougher Kiara vampire~
+@7    = ~Revised Suldalanessar~
 // Isaya: end of new texts
-@250  = ~Jao and party for SOA: another tough fight~
-@260  = ~Tougher Irenicus at the tree of life~
+@8    = ~Jao and party for SOA: another tough fight~
+@9    = ~Tougher Irenicus at the Tree of life~
 
 @11   = ~You do not appear to have Throne of Bhaal installed.~
 /* DEPRECATED as of v2.0.0
@@ -61,15 +60,25 @@ Achieving absolute control over their bodies, experienced Monks can use this abi
 @54   = ~This cloak belonged to Kiara's first lover Osan.
 
 STATISTICS:
-Magic Resistance: +10%
-Armor Class: +1
-Saving Throws: +1~
+
+Equipped abilities:
+- Magic Resistance: +10%
+- Armor Class: +1
+- Saving Throws: +1
+
+Weight: 3
+
+Usable by:
+ Monk~
 @55   = ~This cloak belonged to Kiara's first lover Osan. The Demon Lord, sealing Kiara's fate, imbued this robe with powerful magic.
 
 STATISTICS:
-Magic Resistance: +10%
-Armor Class: +1
-Saving Throws: +1
+
+Equipped abilities:
+- Magic Resistance: +10%
+- Armor Class: +1
+- Saving Throws: +1
+
 Special Abilities:
 Wearer is immune to level drain
 Equipped Abilities:

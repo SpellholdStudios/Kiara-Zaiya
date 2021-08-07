@@ -2,15 +2,14 @@
 @1    = ~Kiara-Zaiya for BG2~
 @2    = ~Kiara-Zaiya for BG2 with vanilla soundsets~
 @3    = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
-
-@129  = ~Alternate High level abilities by TG Maestro~
-@143  = ~Original Amaralis battles~
-// Isaya: new texts moved from the TP2
-@261  = ~Tougher Kiara vampire~
-@262  = ~Revised Suldalanessar~
+@4    = ~Alternate Monk High level abilities by TG Maestro~
+@5    = ~Original Amaralis battles~
+// Isaya: new texts moved from the TP2 (as of v1.6.1)
+@6    = ~Tougher Kiara vampire~
+@7    = ~Revised Suldalanessar~
 // Isaya: end of new texts
-@250  = ~Jao and party for SOA: another tough fight~
-@260  = ~Tougher Irenicus at the Tree of life~
+@8    = ~Jao and party for SOA: another tough fight~
+@9    = ~Tougher Irenicus at the Tree of life~
 
 @11   = ~You do not appear to have Throne of Bhaal installed.~
 /* DEPRECATED af of v2.0.0
@@ -61,15 +60,23 @@
 @54   = ~Этот плащ принадлежал первому возлюбленному Киары, Осану.
 
 ПАРАМЕТРЫ:
-Сопротивление магии: +10%
-Класс брони: +1
-Спасброски: +1~
-@55   = ~Этот плащ принадлежал первому возлюбленному Киары, Осану. Демон-Лорд, скрепивший судьбу Киары, наполнил эту робу магической силой.
 
-ПАРАМЕТРЫ:
 Сопротивление магии: +10%
 Класс брони: +1
 Спасброски: +1
+
+Вес: 3
+
+Используется:
+ Монах~
+@55   = ~Этот плащ принадлежал первому возлюбленному Киары, Осану. Демон-Лорд, скрепивший судьбу Киары, наполнил эту робу магической силой.
+
+ПАРАМЕТРЫ:
+
+Сопротивление магии: +10%
+Класс брони: +1
+Спасброски: +1
+
 Специальные возможности:
 Владелец получает иммунитет к вытягиванию уровней
 Возможности экипировки:

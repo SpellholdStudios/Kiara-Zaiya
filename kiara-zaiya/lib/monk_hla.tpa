@@ -1,0 +1,64 @@
+/* =========================================================================================================================== *
+ *  v 2.0.0                                                                                                                    *
+ *           K I A R A - Z A I Y A    :    A l t e r n a t e    M o n k    H i g h    l e v e l    a b i l i t i e s           *
+ *                                               (b y    T G    M a e s t r o )                                                *
+ *                                                                                                                             *
+ * =========================================================================================================================== */
+
+SILENT
+
+// Remove later
+COPY ~kiara-zaiya/hla/lumo0.2da~ ~override~
+
+// Shadow Stance!
+// --------------
+ACTION_IF ((NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~0~)) AND (NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~1~))) BEGIN
+	COPY ~kiara-zaiya/hla/shdst01.spl~ ~override~
+		SAY NAME1 @47
+		SAY UNIDENTIFIED_DESC @48
+END
+	
+// Dragon fist!
+// ------------
+COPY ~kiara-zaiya/hla/dragf01.spl~ ~override~
+	SAY NAME1 @261
+	SAY UNIDENTIFIED_DESC @262
+COPY ~kiara-zaiya/hla/dragon1.eff~ ~override~
+     ~kiara-zaiya/hla/dragon2.eff~ ~override~
+     ~kiara-zaiya/hla/dragon3.eff~ ~override~
+     ~kiara-zaiya/hla/dragon4.eff~ ~override~
+     ~kiara-zaiya/hla/dragon5.eff~ ~override~
+     ~kiara-zaiya/hla/dragon6.eff~ ~override~
+     ~kiara-zaiya/hla/dragon7.eff~ ~override~
+
+// Shadowless Kick!
+// ----------------
+COPY ~kiara-zaiya/hla/shadk01.spl~ ~override~
+	SAY NAME1 @263
+	SAY UNIDENTIFIED_DESC @264
+
+// Tiger strike!
+// -------------
+COPY ~kiara-zaiya/hla/tiger01.spl~ ~override~
+	SAY NAME1 @265
+	SAY UNIDENTIFIED_DESC @266
+
+// Chant!
+// ------
+COPY ~kiara-zaiya/hla/chant02.spl~ ~override~
+	SAY NAME1 @267
+	SAY UNIDENTIFIED_DESC @268
+
+// Faster than the eye!
+// --------------------
+COPY ~kiara-zaiya/hla/faster2.spl~ ~override~
+	SAY NAME1 @269
+	SAY UNIDENTIFIED_DESC @270
+
+// Solar Stance!
+// -------------
+ACTION_IF ((NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~0~)) AND (NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~1~))) BEGIN
+	COPY ~kiara-zaiya/hla/solar01.spl~ ~override~
+		SAY NAME1 @45
+		SAY UNIDENTIFIED_DESC @46
+END

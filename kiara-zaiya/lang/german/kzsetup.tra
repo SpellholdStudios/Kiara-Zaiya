@@ -2,13 +2,15 @@
 @2    = ~Kiara-Zaiya for BG2 with vanilla soundsets~
 @3    = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
 //@150 = ~Kiara-Zaiya Soundset (seperat erhaeltlich)~
-
-@129  = ~Alternative Hochstufige Faehigkeiten von TG Maestro~
-@143  = ~Original Amaralis Kampf~
-@261  = ~Zaeherer Kiara Vampir~
-@262  = ~Ueberarbeitetes Suldalanessar~
-@250  = ~Jao und Gruppe fuer SvA: ein weiterer harter Kampf~
-@260  = ~Zaeherer Irenicus beim Baum des Lebens~
+@4    = ~Alternate Monk High level abilities by TG Maestro~
+//@129  = ~Alternative Hochstufige Faehigkeiten von TG Maestro~
+@5    = ~Original Amaralis Kampf~
+// Isaya: new texts moved from the TP2 (as of v1.6.1)
+@6    = ~Zaeherer Kiara Vampir~
+@7    = ~Ueberarbeitetes Suldalanessar~
+// Isaya: end of new texts
+@8    = ~Jao und Gruppe fuer SvA: ein weiterer harter Kampf~
+@9    = ~Zaeherer Irenicus beim Baum des Lebens~
 
 @11   = ~Thron des Bhaal scheint nicht installiert zu sein.~
 /* DEPRECATED as of v2.0.0
@@ -59,14 +61,19 @@ Mit dem Erreichen absoluter Kontrolle über ihren Körper können erfahrene Mönche 
 @53   = ~Osans Mönchsrobe~
 @54   = ~Diese Robe gehörte Kiaras erster Liebe Osan.
 
-SPEZIFISCHE EIGENSCHAFTEN:
+EIGENSCHAFTEN:
 
 Magieresistenz: +10%
-Rüstungsklasse: +1
-Rettungswürfe: +1~ 
+Rüstungsklasse-Bonus: +1
+Rettungswurf-Bonus: +1
+
+Gewicht: 3
+
+Kann nur verwendet werden von:
+ Mönch~ 
 @55   = ~Diese Robe gehörte Kiaras erster Liebe Osan. The Dämonenfürst besiegelte Kiaras Schicksal und durchtränkte diese Robe mit mächtiger Magie.
 
-SPEZIFISCHE EIGENSCHAFTEN:
+EIGENSCHAFTEN:
 
 Magieresistenz: +15%
 Rüstungsklasse: +2
@@ -95,7 +102,7 @@ Auf einer Seite des Steines lässt sich klar die Form eines Auges erkennen mit de
 // ----------------------------
 @67   = ~Diese Schwerter werden auch als zweischneidige Schwerter, Kriegsschwerter oder Militärschwerter bezeichnet. Es gibt keine einheitliche Form des Langschwertes. Seine Form und Länge sind von Kultur zu Kultur unterschiedlich und können selbst innerhalb einer Kultur je nach Zeitalter variieren. Das grundlegendste Merkmal aller Langschwerter ist ihre Länge, die zwischen 90 und 120 cm beträgt. Im letzteren Fall nimmt die Klinge 1 m der Gesamtlänge ein. Die meisten Langschwerter besitzen eine zweischneidige Klinge mit einer scharfen Spitze. Trotz dieser Spitze ist das Langschwert nicht zum Stoßen, sondern zum Schwingen vorgesehen. 
 
-SPEZIFISCHE EIGENSCHAFTEN:
+EIGENSCHAFTEN:
 
 Schaden: 1W8
 Schadenasrt: aufschlitzen
@@ -110,7 +117,7 @@ Kann nicht verwendet werden von:
  Magiern~
 @68   = ~Das Gottesschwert ist eines derer, über das man sich in den Reichen die meisten Gedanken macht, weil es völlige Immunität gegen die Wahrsagung für 1 Stunde bereitstellen kann.
 
-SPEZIFISCHE EIGENSCHAFTEN:
+EIGENSCHAFTEN:
 
 Thaco: +3
 Schaden: 1WD8+3

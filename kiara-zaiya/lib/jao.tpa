@@ -1,0 +1,46 @@
+/* ============================================================================= *
+ *  v 2.0.0                                                                      *
+ *           K I A R A - Z A I Y A    :    J a o    a n d    P a r t y           *
+ * ============================================================================= */
+
+SILENT
+
+/* ---------------------- *
+ *  Installing creatures  *
+ * ---------------------- */
+
+// Jao
+// ---
+COPY ~kiara-zaiya/wu-je/kzjao.cre~ ~override~
+	SAY NAME1 @291
+	SAY NAME2 @291
+
+// Wuje
+// ----
+COPY ~kiara-zaiya/wu-je/kzwuje.cre~ ~override~
+	SAY NAME1 @293
+	SAY NAME2 @293
+
+
+/* -------------------------------------- *
+ *  Installing SoA dialogues and scripts  *
+ * -------------------------------------- */
+
+EXTEND_TOP ~ar0300.bcs~ ~kiara-zaiya/wu-je/appendme.baf~ EVALUATE_BUFFER
+// Isaya: dialog "traified" and forced to use the appropriate translated tra file (instead of kzsetup.tra and dialogs.tra)
+// Gwendolyne: Useless with AUTO_TRA, as of v2.0.0
+COMPILE ~kiara-zaiya/wu-je/kzjao1.d~ // USING ~kiara-zaiya/lang/%s/kzjao1.tra~
+COMPILE ~kiara-zaiya/wu-je/kzjao.baf~
+        ~kiara-zaiya/wu-je/kzwuje.baf~
+
+
+/* ------------------ *
+ *  Installing items  *
+ * ------------------ */
+
+// Bracers: protectors
+// -------------------
+COPY ~kiara-zaiya/wu-je/kzbrac1.itm~ ~override~
+	SAY NAME1 @294
+	SAY NAME2 @294
+	SAY DESC @295

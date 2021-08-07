@@ -140,104 +140,21 @@ INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
 /* ======================================================= *
  *    Alternate Monk High level abilities by TG Maestro    *
  * ======================================================= */
-BEGIN @129 // ~Alternate Monk High level abilities by TG Maestro~
+BEGIN @4                                  // ~Alternate Monk High level abilities by TG Maestro~
+DESIGNATED 2
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
-// Remove later
-COPY ~kiara-zaiya/hla/lumo0.2da~ ~override~
-
-// Shadow Stance!
-// --------------
-ACTION_IF ((NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~0~)) AND (NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~1~))) BEGIN
-	COPY ~kiara-zaiya/hla/shdst01.spl~ ~override~
-		SAY NAME1 @47
-		SAY UNIDENTIFIED_DESC @48
-END
-	
-// Dragon fist!
-// ------------
-COPY ~kiara-zaiya/hla/dragf01.spl~ ~override~
-	SAY NAME1 @261
-	SAY UNIDENTIFIED_DESC @262
-COPY ~kiara-zaiya/hla/dragon1.eff~ ~override~
-     ~kiara-zaiya/hla/dragon2.eff~ ~override~
-     ~kiara-zaiya/hla/dragon3.eff~ ~override~
-     ~kiara-zaiya/hla/dragon4.eff~ ~override~
-     ~kiara-zaiya/hla/dragon5.eff~ ~override~
-     ~kiara-zaiya/hla/dragon6.eff~ ~override~
-     ~kiara-zaiya/hla/dragon7.eff~ ~override~
-
-// Shadowless Kick!
-// ----------------
-COPY ~kiara-zaiya/hla/shadk01.spl~ ~override~
-	SAY NAME1 @263
-	SAY UNIDENTIFIED_DESC @264
-
-// Tiger strike!
-// -------------
-COPY ~kiara-zaiya/hla/tiger01.spl~ ~override~
-	SAY NAME1 @265
-	SAY UNIDENTIFIED_DESC @266
-
-// Chant!
-// ------
-COPY ~kiara-zaiya/hla/chant02.spl~ ~override~
-	SAY NAME1 @267
-	SAY UNIDENTIFIED_DESC @268
-
-// Faster than the eye!
-// --------------------
-COPY ~kiara-zaiya/hla/faster2.spl~ ~override~
-	SAY NAME1 @269
-	SAY UNIDENTIFIED_DESC @270
-
-// Solar Stance!
-ACTION_IF ((NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~0~)) AND (NOT(MOD_IS_INSTALLED ~kiara-zaiya.tp2~ ~1~))) BEGIN
-	COPY ~kiara-zaiya/hla/solar01.spl~ ~override~
-		SAY NAME1 @45
-		SAY UNIDENTIFIED_DESC @46
-END
+INCLUDE ~%MOD_FOLDER%/lib/monk_hla.tpa~
 
 
 /* =================================================== *
  *    Original Amaralis battles in chapters 2 and 6    *
  * =================================================== */
-BEGIN @143 // ~Original Amaralis battles~
-REQUIRE_FILE ~Data/25Dialog.bif~ @2
+BEGIN @5                                  // ~Original Amaralis battles~
+DESIGNATED 3
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
-// Amaralis
-COPY ~kiara-zaiya\amaralis\c6ama.cre~ ~override~
-	SAY NAME1 @25
-	SAY NAME2 @25
-// Horth'Kar
-COPY ~kiara-zaiya\amaralis\c6hroth.cre~ ~override~
-	SAY NAME1 @28
-	SAY NAME2 @28
-// Fenilla
-COPY ~kiara-zaiya\amaralis\c6fenil.cre~ ~override~
-	SAY NAME1 @271
-	SAY NAME2 @271
-// Morticia
-COPY ~kiara-zaiya\amaralis\c6mortic.cre~ ~override~
-	SAY NAME1 @272
-	SAY NAME2 @272
-// Polgar
-COPY ~kiara-zaiya\amaralis\c6polgar.cre~ ~override~
-	SAY NAME1 @273
-	SAY NAME2 @273
-// Keria
-COPY ~kiara-zaiya\amaralis\c6keria.cre~ ~override~
-	SAY NAME1 @274
-	SAY NAME2 @274
-
-COMPILE ~kiara-zaiya\amaralis\amafight.baf~
-        ~kiara-zaiya\amaralis\amafigt1.baf~
-        ~kiara-zaiya\amaralis\morticia.baf~
-        ~kiara-zaiya\amaralis\c6drud.baf~
-        ~kiara-zaiya\amaralis\polgar.baf~
-        ~kiara-zaiya\amaralis\keriafit.baf~
-
-
-EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/amaralis/a2ma1700.baf~
+INCLUDE ~%MOD_FOLDER%/lib/amaralis_battles.tpa~
 
 
 /* ================================================================== *
@@ -245,8 +162,9 @@ EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/amaralis/a2ma1700.baf~
  *                                                                    *
  *  MONK LEVEL 20, DOES LEVEL DRAIN AND HAS SOME OTHER UNDEAD POWERS  *
  * ================================================================== */
-BEGIN @261 // ~Tougher Kiara vampire~
-REQUIRE_FILE ~Data/25Dialog.bif~ @2
+BEGIN @6                                  // ~Tougher Kiara vampire~
+DESIGNATED 4
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
 COMPILE ~kiara-zaiya/vampkia/vampkia.baf~
 COPY ~kiara-zaiya/vampkia/vampkiar.cre~ ~override~
@@ -258,110 +176,29 @@ COPY ~kiara-zaiya/vampkia/vampk3.itm~ ~override~
 /* =========================== *
  *    Revised Suldalanessar    *
  * =========================== */
-BEGIN @262 // ~Revised Suldalanessar~
-REQUIRE_FILE ~Data/25Dialog.bif~ @2
+BEGIN @7                                  // ~Revised Suldalanessar~
+DESIGNATED 5
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
-// Isaya's note:
-// although Hoppy suggested to use the demon lord only if Kiara and Zaiya were in the party
-// ( http://www.shsforums.net/topic/43574-suldanesselar-bugs/#entry470369 ),
-// I'll leave the demon lord as it is. If the player doesn't want the demon lord, the best way
-// is to avoid installing this component. Why skipping the demon lord only and not the other changes
-// brought to Suldalanessar?
-
-// RAKSHASA GUARDING TEMPLE - GOOD FIGHT
-COPY ~kiara-zaiya/sulda/kz#rakma.cre~ ~override~
-     ~kiara-zaiya/sulda/plyuddea.eff~ ~override~
-COMPILE ~kiara-zaiya/sulda/kz#rakma.baf~
-        ~kiara-zaiya/sulda/spwnrak.baf~
-
-// DEMON IN REPLACEMENT OF NIMZI: EXTREMELY TOUGH BUT FEASIBLE
-// BWP fix: Lollorian's patched Revised Suldanessalar
-//COPY ~kiara-zaiya/sulda/AR2807.are~ ~override~
-//COPY ~kiara-zaiya/sulda/AR2807.wed~ ~override~
-COPY_EXISTING ~ar2807.are~ ~override~
-	LPF ~ALTER_AREA_ACTOR~ STR_VAR actor_name = ~Black Dragon~ cre_file = ~KZ#DMLRD~ END
-BUT_ONLY
-
-COPY ~kiara-zaiya/sulda/kz#dmlrd.cre~ ~override~
-COMPILE ~kiara-zaiya/sulda/kz#dmlrd.baf~
-
-// Lesser Demon Gaze
-// -----------------
-COPY ~kiara-zaiya/sulda/kzldlpo1.spl~ ~override~ // male polymorph into demon knights no save
-     ~kiara-zaiya/sulda/kzldlpol.spl~ ~override~ // female polymorph into succubus no save
-	SAY NAME1 @281
-
-// BWP fix: Lollorian's patched Revised Suldanessalar
-//COMPILE ~kiara-zaiya/sulda/uddeath.baf~
-//        ~kiara-zaiya/sulda/demsuc.baf~
-EXTEND_TOP ~uddeath.bcs~ ~kiara-zaiya/sulda/uddeath.baf~
-EXTEND_TOP ~demsuc.bcs~  ~kiara-zaiya/sulda/demsuc.baf~
-
-// A LICH AND TWO VAMPIRE ILITHID INSTEAD OF UNDEAD = EASY
-// BWP fix: Lollorian's patched Revised Suldanessalar
-//COMPILE ~kiara-zaiya/sulda/suscene1.baf~
-COPY_EXISTING ~suscene1.bcs~ ~override~
-	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY ~CreateCreature("SUUNDEAD",\[1259\.2912\],8)~ ~CreateCreature("LICH01",[1259.2912],8)~
-		REPLACE_TEXTUALLY ~CreateCreature("SUUNDEAD",\[1394\.2900\],8)~ ~CreateCreature("KZ#FVAMP",[1394.2900],8)~
-		REPLACE_TEXTUALLY ~CreateCreature("SUUNDEAD",\[1132\.2892\],8)~ ~CreateCreature("KZ#FVAMP",[1132.2892],8)~
-	END
-BUT_ONLY
-COPY ~kiara-zaiya/sulda/kz#fvamp.cre~ ~override~
-COMPILE ~kiara-zaiya/sulda/kz#flayu.baf~
-
-// MARILITH INSTEAD OF TROLLS = EASY
-// BWP fix: Lollorian's patched Revised Suldanessalar
-// COMPILE ~kiara-zaiya/sulda/suscene3.baf~
-COPY_EXISTING ~suscene3.bcs~ ~override~
-	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY ~CreateCreature("SUTROLL",\[3549\.3349\],8)~ ~CreateCreature("DEMOSUM1",[3549.3349],8)~
-		REPLACE_TEXTUALLY ~CreateCreature("SUTROLL",\[3437\.3388\],8)~ ~CreateCreature("DEMOSUM1",[3437.3388],8)~
-	END
-BUT_ONLY
-
-// ASSASSIN-MAGE NEAR THE DRAGON - NOW REPLACED WITH DEMON!
-//COPY ~kiara-zaiya/sulda/kzninja.cre~ ~override~
-//COPY ~kiara-zaiya/sulda/Kzninja.itm~ ~override~
-//COPY ~kiara-zaiya/sulda/kzninja.bcs~ ~override~
-//REPLACE ~99999~ ~Irenicus said they would come for the cup. I shall not fail my master.~
-//EXTEND_TOP ~ar2807.bcs~ ~kiara-zaiya/sulda/kz#2807a.baf~
-
-COPY ~kiara-zaiya/sulda/kzninja.cre~ ~override~
-COPY ~kiara-zaiya/sulda/kzninja.itm~ ~override~
-COMPILE ~kiara-zaiya/sulda/kzninja.baf~
-EXTEND_TOP ~ar2807.bcs~ ~kiara-zaiya/sulda/kz#2807a.baf~
+INCLUDE ~%MOD_FOLDER%/lib/revised_suldalanessar.tpa~
 
 
 /* =========================== *
  *    Jao and party for SOA    *
  * =========================== */
-BEGIN @250 // ~Jao and party for SOA: another tough fight~
-REQUIRE_FILE ~Data/25Dialog.bif~ @2
+BEGIN @8                                  // ~Jao and party for SOA: another tough fight~
+DESIGNATED 6
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
-EXTEND_TOP ~ar0300.bcs~ ~kiara-zaiya/wu-je/appendme.baf~ EVALUATE_BUFFER
-COPY ~kiara-zaiya/wu-je/kzjao.cre~ ~override~
-	SAY NAME1 @291
-	SAY NAME2 @291
-COPY ~kiara-zaiya/wu-je/kzwuje.cre~ ~override~
-	SAY NAME1 @293
-	SAY NAME2 @293
-// Isaya: dialog "traified" and forced to use the appropriate translated tra file (instead of kzsetup.tra and dialogs.tra)
-// Gwendolyne: Useless with AUTO_TRA
-COMPILE ~kiara-zaiya/wu-je/kzjao1.d~ // USING ~kiara-zaiya/lang/%s/kzjao1.tra~
-COMPILE ~kiara-zaiya/wu-je/kzjao.baf~
-        ~kiara-zaiya/wu-je/kzwuje.baf~
-COPY ~kiara-zaiya/wu-je/kzbrac1.itm~ ~override~
-	SAY NAME1 @294
-	SAY NAME2 @294
-	SAY DESC @295
+INCLUDE ~%MOD_FOLDER%/lib/jao.tpa~
 
 
 /* ========================================== *
  *    Tougher Irenicus at the Tree of life    *
  * ========================================== */
-BEGIN @260 // ~Tougher Irenicus at the Tree of life~
-REQUIRE_FILE ~Data/25Dialog.bif~ @2
+BEGIN @9                                  // ~Tougher Irenicus at the Tree of life~
+DESIGNATED 7
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
 // TOUGH BUT STILL FEASIBLE
 COPY ~kiara-zaiya/irentree/sujon.cre~ ~override~

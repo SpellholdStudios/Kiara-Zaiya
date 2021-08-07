@@ -3,12 +3,13 @@ IF
   AreaType(OUTDOOR)
   AreaType(CITY)
   CombatCounter(0)
-  GlobalGT("Chapter","GLOBAL",5)
+  GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
 THEN
   RESPONSE #100
     Wait(5)
     IncrementGlobal("WUJESpawn","GLOBAL",1)
-    CreateCreatureObjectOffScreen("KZJao",Player1,0,0,0)  
-    CreateCreatureObjectOffScreen("KZWUJE",Player1,0,0,0)  
+    CreateCreatureObjectOffScreen("KZJao",Player1,0,0,0)
+    CreateCreatureObjectOffScreen("KZWUJE",Player1,0,0,0)
+    Continue()
 END
 

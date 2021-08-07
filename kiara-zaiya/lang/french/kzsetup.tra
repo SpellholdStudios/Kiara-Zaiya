@@ -2,15 +2,14 @@
 @1    = ~Kiara-Zaiya pour BG2~
 @2    = ~Kiara-Zaiya pour BG2 avec les packs de voix du jeu~
 @3    = ~Kiara-Zaiya pour BG2 avec un pack de voix personnalisees (disponible seulement en anglais)~
-
-@129  = ~Capacites alternatives de haut niveau par TG Maestro~
-@143  = ~Combats originaux d'Amaralis~
-// Isaya: new texts moved from the TP2
-@261  = ~Kiara plus redoutable en vampire~
-@262  = ~Modification de Suldanessalar~ 
+@4    = ~Capacites alternatives de haut niveau de moine par TG Maestro~
+@5    = ~Combats originaux d'Amaralis~
+// Isaya: new texts moved from the TP2 (as of v1.6.1)
+@6    = ~Kiara plus redoutable en vampire~
+@7    = ~Modification de Suldanessalar~ 
 // Isaya: end of new texts
-@250  = ~Jao et son equipe pour Shadows of Amn : un autre rude combat~
-@260  = ~Irenicus renforce a l'arbre de vie~
+@8    = ~Jao et son equipe pour Shadows of Amn : un autre rude combat~
+@9    = ~Irenicus plus fort a l'arbre de vie~
 
 @11   = ~Il semblerait que Throne of Bhaal ne soit pas installe sur votre ordinateur.~
 /* DEPRECATED as of v2.0.0
@@ -63,12 +62,23 @@ En acquérant un contrôle total sur leur corps, les Moines expérimentés peuvent u
 
 PARAMÈTRES :
 
-Résistance à la Magie : +10%
-Classe d'armure : +1
-Jets de sauvegarde : +1~
+Capacités d'équipement :
+- Résistance à la magie : +10 %
+- Classe d'armure : +1
+- Jets de sauvegarde : +1
+
+Poids : 3
+
+Utilisable uniquement par :
+ Moine~
 @55  = ~Ce manteau appartenait au premier amour de Kiara, Osan. Le Seigneur Démon, en scellant le destin de Kiara, imprégna cette robe d'une puissante magie.
 
 PARAMÈTRES :
+
+Capacités d'équipement :
+- Résistance à la magie : +15 %
+- Classe d'armure : +2
+- Jets de sauvegarde : +2
 
 Capacités spéciales :
  Le porteur est immunisé au drain de niveau
@@ -77,14 +87,15 @@ Capacités spéciales :
 Capacité si équipée :
  Le porteur régénère 1 point de vie toutes les 6 secondes
 
-Résistance à la Magie : +15%
-Classe d'armure : +2
-Jets de sauvegarde : +2~
+Poids : 3
+
+Utilisable uniquement par :
+ Moine~
 
 @56   = ~Corps de Kiara~
 @57   = ~Kiara a été enlevée par Bodhi et affectée par son vampirisme, ce qui vous a obligés à la tuer. Il existe peut-être une façon de la faire revivre bien que vous ne sachiez ce que ce pourrait être.~
 
-@58   = ~Ame de Jerlia~
+@58   = ~Âme de Jerlia~
 @59   = ~Il s'agit du cœur que le démon gardait, lequel empêchait l'esprit de Jerlia d'être libre.~
 
 @60   = ~Pierre d'Ioun~
@@ -92,7 +103,7 @@ Jets de sauvegarde : +2~
 @62   = ~C'est une petite pierre qui flotte en orbite autour de la tête de son détenteur. Le simple fait d'équiper la pierre la place en orbite. Manifestement, ces pierres magiques ont des propriétés différentes dépendant de leur couleur.~
 @63   = ~Grandement convoitée, la Pierre d'Ioun rend son porteur immunisé à tout ce qui est magique ou dit autrement, elle protège sa mobilité. Cela inclut les sorts Hâte et Lenteur.
 
-Vous pouvez aussi voir clairement la forme d'un oeil sur un côté de la pierre et l'inscription AO, dessous.~
+Vous pouvez aussi voir clairement la forme d'un œil sur un côté de la pierre et l'inscription AO, dessous.~
 
 @64   = ~Compte-rendu d'échanges~
 @65   = ~Prax conservait la trace de ses transactions sur un parchemin et vous trouvez rapidement le nom de Kiara dessus. Apparemment, elle a été vendue à Amaralis et devait être livrée chez lui dans le Quartier du Gouvernement. Le reste de la note donne seulement les montants détaillés de ses transactions.~

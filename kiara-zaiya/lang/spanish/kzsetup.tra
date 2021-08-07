@@ -3,15 +3,15 @@
 @2    = ~Kiara-Zaiya for BG2 with vanilla soundsets~
 @3    = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
 //@150  = ~Voces customizadas de Kiara-Zaiya (disponible por separado).~
-
-@129  = ~Aptitudes de clase de nivel elevado alternativas por TG Maestro~
-@143  = ~Batallas de Amaralis originales~
-// Isaya: new texts moved from the TP2
-@261  = ~Vampiresa Kiara mas fuerte~
-@262  = ~Suldanessalar revisado~
+@4    = ~Alternate Monk High level abilities by TG Maestro~
+//@129  = ~Aptitudes de clase de nivel elevado alternativas por TG Maestro~
+@5    = ~Batallas de Amaralis originales~
+// Isaya: new texts moved from the TP2 (as of v1.6.1)
+@6    = ~Vampiresa Kiara mas fuerte~
+@7    = ~Suldanessalar revisado~
 // Isaya: end of new texts
-@250  = ~Jao y grupo para SOA: otra lucha difícil~
-@260  = ~Irenicus Mejorado en el Árbol de la Vida~
+@8    = ~Jao y grupo para SOA: otra lucha difícil~
+@9    = ~Irenicus Mejorado en el Árbol de la Vida~
 
 @11   = ~No tienes Throne of Bhaal instalado.~
 /* DEPRECATED as of v2.0.0
@@ -62,22 +62,29 @@ Tras conseguir un control absoluto de sus cuerpos, los monjes experimentados pue
 
 ESTADÍSTICAS:
 
-Resistencia Mágica: +10%
-Clase de Armadura: +1
-Tiradas de Salvación: +1~
+Aptitudes poseidas:
+ Resistencia Mágica: +10%
+ Clase de armadura: +1
+ Tiradas de Salvación: +1
+
+Peso: 3
+
+Permitido a:
+ Monje~
 @55   = ~Este manto perteneció a Osan, el primer amor de Kiara. El Señor de los Demonios, sellando el destino de Kiara, imbuyó esta capa con una magia muy poderosa.
 
 ESTADÍSTICAS:
 
-Resistencia Mágica: +10%
-Clase de Armadura: +1
-Tiradas de Salvación: +1
+Aptitudes poseidas:
+ Resistencia Mágica: +10%
+ Clase de armadura: +1
+ Tiradas de Salvación: +1
 Aptitudes especiales:
 El usuario es inmune a la consunción de niveles.
 Aptitudes poseídas:
 El portador regenera 3 puntos de golpe cada 6 segundos.
 Uso especial:
-Lanza Vista Verdadera una vez al día ~
+Lanza Vista Verdadera una vez al día~
 
 @56   = ~Cadáver de Kiara~
 @57   = ~Kiara fue secuestrada por Bodhi y contagiada del vampirismo, lo cual te obligó a matarla. Quizá haya algún modo de revivirla, pero lo desconoces.~

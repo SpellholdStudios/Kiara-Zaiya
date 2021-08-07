@@ -1,0 +1,61 @@
+/* ===================================================================================================== *
+ *  v 2.0.0                                                                                              *
+ *           K I A R A - Z A I Y A    :    O r i g i n a l    A m a r a l i s    B a t t l e s           *
+ *                                                                                                       *
+ * ===================================================================================================== */
+
+SILENT
+
+/* ---------------------- *
+ *  Installing creatures  *
+ * ---------------------- */
+
+// Amaralis
+// --------
+COPY ~kiara-zaiya\amaralis\c6ama.cre~ ~override~
+	SAY NAME1 @25
+	SAY NAME2 @25
+
+// Horth'Kar
+// ---------
+COPY ~kiara-zaiya\amaralis\c6hroth.cre~ ~override~
+	SAY NAME1 @28
+	SAY NAME2 @28
+
+// Fenilla
+// -------
+COPY ~kiara-zaiya\amaralis\c6fenil.cre~ ~override~
+	SAY NAME1 @271
+	SAY NAME2 @271
+
+// Morticia
+// --------
+COPY ~kiara-zaiya\amaralis\c6mortic.cre~ ~override~
+	SAY NAME1 @272
+	SAY NAME2 @272
+
+// Polgar
+// ------
+COPY ~kiara-zaiya\amaralis\c6polgar.cre~ ~override~
+	SAY NAME1 @273
+	SAY NAME2 @273
+
+// Keria
+// -----
+COPY ~kiara-zaiya\amaralis\c6keria.cre~ ~override~
+	SAY NAME1 @274
+	SAY NAME2 @274
+
+
+/* -------------------- *
+ *  Installing scripts  *
+ * -------------------- */
+
+COMPILE ~kiara-zaiya\amaralis\amafight.baf~
+        ~kiara-zaiya\amaralis\amafigt1.baf~
+        ~kiara-zaiya\amaralis\morticia.baf~
+        ~kiara-zaiya\amaralis\c6drud.baf~
+        ~kiara-zaiya\amaralis\polgar.baf~
+        ~kiara-zaiya\amaralis\keriafit.baf~
+
+EXTEND_BOTTOM ~ar1700.bcs~ ~kiara-zaiya/amaralis/a2ma1700.baf~
