@@ -60,7 +60,7 @@ Tras conseguir un control absoluto de sus cuerpos, los monjes experimentados pue
 @53   = ~Manto del Monje Osan~
 @54   = ~Este manto perteneció a Osan, el primer amor de Kiara.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Aptitudes poseidas:
  Resistencia Mágica: +10%
@@ -73,31 +73,43 @@ Permitido a:
  Monje~
 @55   = ~Este manto perteneció a Osan, el primer amor de Kiara. El Señor de los Demonios, sellando el destino de Kiara, imbuyó esta capa con una magia muy poderosa.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
+
+Lanza: Vista verdadera una vez al día.
 
 Aptitudes poseidas:
  Resistencia Mágica: +10%
  Clase de armadura: +1
  Tiradas de Salvación: +1
-Aptitudes especiales:
-El usuario es inmune a la consunción de niveles.
-Aptitudes poseídas:
-El portador regenera 3 puntos de golpe cada 6 segundos.
-Uso especial:
-Lanza Vista Verdadera una vez al día~
+ Regenera un punto de golpe cada 2 segundos
+ Protección del Plano Negativo
+
+Peso: 3
+
+Permitido a:
+ Monje~
 
 @56   = ~Cadáver de Kiara~
-@57   = ~Kiara fue secuestrada por Bodhi y contagiada del vampirismo, lo cual te obligó a matarla. Quizá haya algún modo de revivirla, pero lo desconoces.~
+@57   = ~Kiara fue secuestrada por Bodhi y contagiada del vampirismo, lo cual te obligó a matarla. Quizá haya algún modo de revivirla, pero lo desconoces.
+
+Peso: 135~
 
 @58   = ~Alma de Jerlia~
-@59   = ~Este es el corazón que guardaba el demonio e impedía que el espíritu de Jerlia fuera libre.~
+@59   = ~Este es el corazón que guardaba el demonio e impedía que el espíritu de Jerlia fuera libre.
 
-@60   = ~Piedra ioun~
+Peso: 2~
+
+@60   = ~Piedra ioun~ // = #8181 (BG2EE)
 @61   = ~Piedra ioun amarilla~
-@62   = ~Es una pequeña piedra que gira alrededor de la cabeza del propietario. Sólo tienes que equiparte con ella para que ésta empiece a recorrer su órbita. Estas piedras, obviamente mágicas, tienen diferentes propiedades dependiendo de su color.~
+@62   = ~Es una pequeña piedra que gira alrededor de la cabeza del propietario. Sólo tienes que equiparte con ella para que ésta empiece a recorrer su órbita. Estas piedras, obviamente mágicas, tienen diferentes propiedades dependiendo de su color.~ // = #5770 (BG2EE)
 @63   = ~Muy codiciada, esta piedra ioun inmuniza a su portador contra cualquier cosa, mágica o de otro tipo, que afecte al movimiento de cualquier manera. Esto incluye los conjuros de Celeridad y Ralentizar.
 
-También puedes ver claramente el dibujo de un ojo en un lado de la piedra y la inscripción AO bajo el mismo.~
+También puedes ver claramente el dibujo de un ojo en un lado de la piedra y la inscripción AO bajo el mismo.
+
+Peso: 0
+
+No permitido a:
+ Asesino de magos~
 
 @64   = ~Notas de comercio~
 @65   = ~Prax guarda los registros de sus ventas en un pergamino y no te cuesta mucho encontrar el nombre de Kiara en él. Parece ser que fue vendida a Amaralis y que la entregaron en su hogar del distrito gubernamental. El resto del documento sólo informa detalladamente sobre sus ganancias.~
@@ -105,9 +117,9 @@ También puedes ver claramente el dibujo de un ojo en un lado de la piedra y la i
 // New Amaralis fight additions
 // ----------------------------
 @66   = ~La Espada Divina~
-@67   = ~Estas armas suelen recibir el nombre de "espadas de doble filo", "espadas de guerra" o "espadas militares". Muchas veces, la espada larga tiene una hoja de un solo filo. No existe una versión corriente de esta arma; su diseño y tamaño varía de una cultura a otra, e incluso puede cambiar dentro de una misma dependiendo de la época. Una de las características más comunes de las espadas largas es su tamaño, que va de los 90 centímetros hasta 1'20 metros. En este último caso, la hoja suele abarcar un torno a un metro de la longitud total. La mayoría de las espadas largas poseen una hoja con punta y doble filo. A pesar de la punta, el arma está diseñada para cortar, no para clavarla. 
+/*@67   = ~Estas armas suelen recibir el nombre de "espadas de doble filo", "espadas de guerra" o "espadas militares". Muchas veces, la espada larga tiene una hoja de un solo filo. No existe una versión corriente de esta arma; su diseño y tamaño varía de una cultura a otra, e incluso puede cambiar dentro de una misma dependiendo de la época. Una de las características más comunes de las espadas largas es su tamaño, que va de los 90 centímetros hasta 1'20 metros. En este último caso, la hoja suele abarcar un torno a un metro de la longitud total. La mayoría de las espadas largas poseen una hoja con punta y doble filo. A pesar de la punta, el arma está diseñada para cortar, no para clavarla. 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Daño: 1D8
 Tipo de daño: cortante
@@ -119,28 +131,36 @@ Requisitos: Fuerza 6
 No permitida a:
 Druida
 Clérigo
-Mago~
+Mago~*/
 @68   = ~La Espada Divina es una de las más buscadas en los Reinos al proporcionar inmunidad completa a la Adivinación durante una hora.
 
-STATISTICS:
+CARACTERÍSTICAS:
 
-TAC0: +3
+Lanza: Inmunidad a conjuros, Adivinación una vez al día. La inmunidad dura una hora.
+
+Aptitudes poseidas:
+ Resistencia al daño mágico: +25%
+ Clase de armadura: +2
+ -1 Al tiempo de lanzar hechizos
+
+GAC0: +3
 Daño: 1D8+3
-Tipo de daño: cortante
-Peso: 4
+Tipo de daño: Cortante
 Factor de velocidad: 2
-Talento marcial: Espada larga
-Tipo: 1 mano
-Requisitos: Fuerza 6
-Aptitudes poseídas:
-25% a la resistencia al daño mágico
-+2 C.A.
-Uso especial:
-Lanza Inmunidad a conjuros de Adivinación una vez al día. La inmunidad dura una hora.
-No permitida a:
-Druida
-Clérigo
-Mago~
+Talento marcial: Espada Larga
+Tipo: A una mano
+Requiere: 6 Fuerza
+
+Peso: 2
+
+No permitido a:
+ Druida
+ Clérigo
+ Mago
+ Paladin
+ Ladrón
+ Monje
+ Señor de las bestias~
 
 
 /* ================= *
@@ -413,15 +433,26 @@ El monje gana la aptitud de moverse a una velocidad increíble.~
 @293  = ~Wuje~
 // Isaya: new texts moved from the TP2
 @294  = ~Brazales: protectores~
-@295  = ~Brazales de monje
-Estos brazales extraordinarios fueron forjados por la cofradía de asesinos para Wuje.
+@295  = ~Estos brazales extraordinarios fueron forjados por la cofradía de asesinos para Wuje.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-THAC0: +2 cuando se ataca con los puños
-Daño: +2 cuando se ataca con los puños
-Especial:
- 10% de posibilidades de lanzar Fatalidad y Ceguera sobre el atacante cada vez que intente golpear al portador de estos brazales.
+Aptitudes poseidas:
+GAC0: bonificación +2 cuando se ataca con los puños
+Daño: bonificación +2 cuando se ataca con los puños
+10% de posibilidades de lanzar Fatalidad y Ceguera sobre el atacante cada vez que intente golpear al portador de estos brazales.
+
+Peso: 2
+
 Permitido a:
- Monje~
+ Monje~ // From #857 (BG2EE)
 // Isaya: end of new texts
+
+
+/* ============================================================================================================= *
+ *  Usability flags                                                                                              *
+ * ------------------------------------------------------------------------------------------------------------- *
+ * Note for translators: you will find usability flags REGEXP expressions in other items mods (Rolles, Ruad...)  *
+ * ============================================================================================================= */
+@9001 =~\([Ss][oó]lo[ %tab%]+\)?[Pp]ermitido[ %tab%]+[Aa][ %tab%]*:~
+@9002 =~[Nn]o[ %tab%]+[Pp]ermitido[ %tab%]+[Aa][ %tab%]*:~

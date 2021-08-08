@@ -1,6 +1,8 @@
-/* ===================================================================== *
- *         M A I N   C O M P O N E N T   I N S T A L L A T I O N         *
- * ===================================================================== */
+/* ============================================================================== *
+ *  v 2.0.0                                                                       *
+ *           K I A R A - Z A I Y A    :    M A I N    C O M P O N E N T           *
+ *                                                                                *
+ * ============================================================================== */
 
 SILENT
 
@@ -45,6 +47,14 @@ CLEAR_IDS_MAP
 COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/Spl~ ~override~
 COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/TobSpl~ ~override~
 COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/Ids~ ~override~
+
+
+/* -------------------------------- *
+ *    Loads macros and functions    *
+ * -------------------------------- */
+
+// Loads macros and functions library dealing with tooltip appending, specific EE items descriptions, and more...
+INCLUDE ~%MOD_FOLDER%/lib/gw_functions.tpa~
 
 
 /* -------------------------- *
@@ -358,11 +368,11 @@ COPY ~kiara-zaiya/items/zachik.itm~ ~override~
 COPY ~kiara-zaiya/items/clckk1.itm~ ~override~
 	SAY NAME1 @53
 	SAY NAME2 @53
-	SAY DESC @54
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@54" END
 COPY ~kiara-zaiya/items/clckk2.itm~ ~override~
 	SAY NAME1 @53
 	SAY NAME2 @53
-	SAY DESC @55
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@55" END
 
 // Kiara's body
 COPY ~kiara-zaiya/items/miscbki.itm~ ~override~
@@ -381,7 +391,10 @@ COPY ~kiara-zaiya/items/freehlm1.itm~ ~override~
 	SAY NAME1 @60
 	SAY NAME2 @61
 	SAY UNIDENTIFIED_DESC @62
-	SAY DESC @63
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@63" END
+	PATCH_IF (is_ee OR is_tobex) BEGIN
+		WRITE_LONG 0x18 THIS | BIT25  // add EE/TobEx Toggle critical hit aversion flag
+	END
 
 // Trade notes
 COPY ~kiara-zaiya/items/scrlpx.itm~ ~override~
@@ -397,11 +410,31 @@ COPY ~kiara-zaiya/items/amaswd.itm~ ~override~
 	SAY NAME1 @66
 	SAY NAME2 @66
 	SAY UNIDENTIFIED_DESC @67
-	SAY DESC @68
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@68" END
 
 // Poisonous Wyvern: Stinking Cloud
 COPY ~kiara-zaiya/hla/kzwyvern.spl~   ~override~
      ~kiara-zaiya/items/kzwyvern.itm~ ~override~
+
+
+/* --------------------- *
+ *  Installing tooltips  *
+ * --------------------- */
+
+// Read how many columns are in tooltip.2da file to append it accordingly.
+// -----------------------------------------------------------------------
+LAM ~GW_READ_COL_TOOLTIP~
+
+// Append tooltip.2da
+// ------------------
+LAF ~GW_ADD_ITEM_TOOLTIPS~ STR_VAR GW_objet = ~clckk2~ GW_tooltips = ~25633~ END       // Osan's Monk Robe : True Sight (once per day)
+LAF ~GW_ADD_ITEM_TOOLTIPS~ STR_VAR GW_objet = ~amaswd~ GW_tooltips = ~15529 31677~ END // The Divine Sword : Melee - Immunity: Divination (once per day)
+
+// Pure cosmetic, but so cool!
+// ---------------------------
+COPY_EXISTING ~tooltip.2da~ ~override~
+	PRETTY_PRINT_2DA
+BUT_ONLY
 
 
 /* -------------------------------------- *

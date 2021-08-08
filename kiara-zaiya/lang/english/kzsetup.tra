@@ -74,30 +74,42 @@ Usable by:
 
 STATISTICS:
 
+Charge abilities:
+- True Sight once per day
+
 Equipped abilities:
 - Magic Resistance: +10%
 - Armor Class: +1
 - Saving Throws: +1
+- Regenerates 1 HP every two seconds
+- Immunity to level drain
 
-Special Abilities:
-Wearer is immune to level drain
-Equipped Abilities:
-Wearer regenerates 3 hit points every 6 seconds.
-Special use:
-Cast spell: True Sight once per day~
+Weight: 3
+
+Usable by:
+ Monk~
 
 @56   = ~Kiara's body~
-@57   = ~Kiara was abducted by Bodhi and infected with vampirism, forcing you to slay her. There may be some way to revive though you don't know how what it would be.~
+@57   = ~Kiara was abducted by Bodhi and infected with vampirism, forcing you to slay her. There may be some way to revive though you don't know how what it would be.
+
+Weight: 135~
 
 @58   = ~Jerlia's soul~
-@59   = ~This is the heart the demon kept, which prevented Jerlia's spirit to be free.~
+@59   = ~This is the heart the demon kept, which prevented Jerlia's spirit to be free.
 
-@60   = ~Ioun Stone~
+Weight: 2~
+
+@60   = ~Ioun Stone~ // = #8181 (BG2EE)
 @61   = ~Yellow Ioun Stone~
-@62   = ~This is a small stone that floats in orbit around the owner's head. Simply equip the stone set it in its orbit. These obviously magical stones have different properties depending on their color.~
+@62   = ~This is a small stone that floats in orbit around the owner's head. Simply equip the stone set it in its orbit. These obviously magical stones have different properties depending on their color.~ // = #5770 (BG2EE)
 @63   = ~Highly sought, this Ioun Stone renders it's wearer immune to everything magical or otherwise, that affects mobility in any way. This includes haste and slow spells.
 
-You can also clearly see the shape an eye on one side of the stone and the inscription AO underneath.~
+You can also clearly see the shape an eye on one side of the stone and the inscription AO underneath.
+
+Weight: 0
+
+Not usable by:
+ Wizard Slayer~
 
 @64   = ~Trade notes~
 @65   = ~Prax kept records of his sales on a scroll and you quickly find the name of Kiara on it. She has apparently been sold to Amaralis and was to be delivered to his home in the government district. The rest of the note only gives detailed amounts of his proceeds.~
@@ -105,7 +117,7 @@ You can also clearly see the shape an eye on one side of the stone and the inscr
 // New Amaralis fight additions
 // ----------------------------
 @66   = ~The Divine Sword~
-@67   = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords.  In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all long swords is their length, which ranges from 35 inches to 47 inches.  In the latter case, the blade is known to take up 40 inches of the total length.  Most long swords have a double-edged blade and a sharp point at the tip.  Despite the tip, the long sword is designed for slashing, not thrusting. 
+/*@67   = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords.  In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all long swords is their length, which ranges from 35 inches to 47 inches.  In the latter case, the blade is known to take up 40 inches of the total length.  Most long swords have a double-edged blade and a sharp point at the tip.  Despite the tip, the long sword is designed for slashing, not thrusting. 
 
 STATISTICS:
 
@@ -119,28 +131,38 @@ Requires: 6 Strength
 Not usable by:
  Druid
  Cleric
- Mage~
-@68   = ~The Divine sword is one of the most thought after in the realms as it can provide complete immunity to divination for 1 hour.
+ Mage~*/
+@68   = ~The Divine sword is one of the most thought after in the Realms as it can provide complete immunity to divination for 1 hour.
 
 STATISTICS:
 
-Thaco: +3
-Damage:  1D8+3
+Equipped Abilities:
+- Magic damage Resistance: +25%
+- Armor Class: +2
+- Improves casting speed by 1
+
+Charge abilities:
+- Spell immunity: Divination once per day. The immunity lasts 1 hour. 
+
+THACO: +3
+Damage:  1d8+3
 Damage type:  slashing
-Weight: 4
 Speed Factor: 2
 Proficiency Type: Long Sword
-Type:  1-handed
-Requires: 6 Strength
-Equipped Abilities:
-25% Magic damage resistance
-+2 AC
-Special use:
-Cast spell immunity to divination once per day. The immunity lasts 1 hour. 
+Type:  One-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
 Not usable by:
- Druid
  Cleric
- Mage~
+ Druid
+ Mage
+ Paladin
+ Thief
+ Monk
+ Beast Master~
 
 
 /* ================= *
@@ -413,13 +435,26 @@ The monk gains the ability to move at an incredible speed.~
 @293  = ~Wuje~
 // Isaya: new texts moved from the TP2
 @294  = ~Bracers: protectors~
-@295  = ~Monk bracers
-These extraordinary bracers were forged by the assassins guild for Wuje.
+@295  = ~These extraordinary bracers were forged by the assassins guild for Wuje.
 
 STATISTICS:
-+2 to fist thaco and damage
-On each attempt to hit the wielder of these bracers, there is a 10% chance the bracers will cast doom and blindness on the attacker.
+
+Equipped abilities:
+- THAC0: +2 when attacking with fists
+- Damage: +2 when attacking with fists
+- Each time the wielder is hit, there is a 10% chance the bracers will cast Doom and Blindness on the opponent.
+
+Weight: 2
 
 Usable by:
- Monk~
+ Monk~ // From #857 (BG2EE)
 // Isaya: end of new texts
+
+
+/* ============================================================================================================= *
+ *  Usability flags                                                                                              *
+ * ------------------------------------------------------------------------------------------------------------- *
+ * Note for translators: you will find usability flags REGEXP expressions in other items mods (Rolles, Ruad...)  *
+ * ============================================================================================================= */
+@9001 = ~\([Oo]nly[ %tab%]+\)?[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
+@9002 = ~\(Not[ %tab%]+\|Un\)[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~

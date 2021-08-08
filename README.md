@@ -45,6 +45,8 @@ Baldur's Gate Trilogy and EET<h3>
 
 - Renamed *Setup-Kiara-Zaiya.tp2* -> *kiara-zaiya.tp2* and moved it into top mod folder to support AL|EN's "Project Infinity".
 - Replaced `REQUIRE_FILE` condition with `REQUIRE_PREDICATE` to avoid installing the mod in inaccurate games.
+- Externalized tp2 code into *.tpa* libraries for more comfortable readability and maintenance.
+- Commented code as much as possible.
 - Grouped custom and vanilla soundsets into main component `SUBCOMPONENTS`.
 - Added native EE and EET compatibility (thanks Austin!):
     - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
@@ -59,7 +61,7 @@ Baldur's Gate Trilogy and EET<h3>
     - *The Divine Sword* (amaswd.itm): Nightfarer's item description fix.
     - Lollorian's patched Revised Suldanessalar: patched "*ar2807.are*", "*uddeath.bcs*", "*demsuc.bcs*", "*suscene1.baf*" and "*suscene3.baf*" instead of overwriting them.
     - Fixed Ninja-To +1 wrong immunity to poison assignments: moved them from melee header to global effects.
-- kzninja.baf: fixed typos.
+- *kzninja.baf*: fixed typos.
 - Removed *pdialog.2da* appending for BG2 without ToB games (not supported).
 - Rewrote .bcs appending process (originally coded with so bad practice).
 - Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
@@ -67,6 +69,12 @@ Baldur's Gate Trilogy and EET<h3>
 - ...
 - Removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
 - Integrated custom soundset in the mod package.
+- ...
+- ...
+- ...
+- ...
+- Restored items usability restriction flags in descriptions for classic games and automatically removed them for EE games with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function.
+- Proofread kzsetup.tra files strrefs (Gwendolyne).
 - TRAIfied last missing tp2 strref.
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.
@@ -77,12 +85,18 @@ Baldur's Gate Trilogy and EET<h3>
 - Uploaded mod to official Spellhold Studios GitHub mirror account.
 
 
+- Fixed items descriptions.
+- Fixed items classes and kits restriction flags, and appended tooltip.2da whenever relevant.
+- Added EE and ToBEx *Toggle critical hit aversion* item flag (BIT25) whenever relevant.
+
 
 TODO
 - !StateCheck("Valygar",STATE_SLEEPING)
 - genfix.baf, kiaraadd.baf, zaiyad.baf ???
 - Zaiya INITIAL_MEETING soundset @91???
 - spwnrak.baf is overwriting vanilla file and is spawning KZ#raj01.cre which is not installed by the mod!
+- Original Amaralis battles in chapters 2 and 6: hrothfit.baf is not compiled.
+- Revised Suldalanessar: sujon.cre is not copied, nor used.
 
 
 ##### Version 1.6.2 &nbsp;(unknown)

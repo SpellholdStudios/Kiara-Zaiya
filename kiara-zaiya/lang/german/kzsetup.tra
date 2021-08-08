@@ -75,32 +75,49 @@ Kann nur verwendet werden von:
 
 EIGENSCHAFTEN:
 
-Magieresistenz: +15%
-Rüstungsklasse: +2
-Rettungswürfe: +2
+Magieresistenz: +10%
+Rüstungsklasse-Bonus: +1
+Rettungswurf-Bonus: +1
+Regeneration: 1 TP pro 2 Sekunden
+
 Besondere Fähigkeiten:
-Der Träger ist immun gegen Entzug von Lebenskraft und regeneriert alle 6 Sekunden 1 Trefferpunkt.
-Der Träger kann einmal täglich den Zauber "Wahrer Blick" einsetzen.~
+Der Träger ist immun gegen Entzug von Lebenskraft
+Der Träger kann einmal täglich den Zauber "Wahrer Blick" einsetzen.
+
+Gewicht: 3
+
+Kann nur verwendet werden von:
+ Mönch~
 
 @56   = ~Kiaras Leiche~
-@57   = ~Kiara wurde von Bodhi gefangen genommen und mit Vampirismus infiziert, so dass ihr gezwungen wart, sie zu töten. Es gibt vielleicht eine Möglichkeit, sie wieder zu erwecken, aber Ihr habt im Moment keine Ahnung, wie man das anstellen könnte.~
+@57   = ~Kiara wurde von Bodhi gefangen genommen und mit Vampirismus infiziert, so dass ihr gezwungen wart, sie zu töten. Es gibt vielleicht eine Möglichkeit, sie wieder zu erwecken, aber Ihr habt im Moment keine Ahnung, wie man das anstellen könnte.
+
+Gewicht: 135~
 
 @58   = ~Jerlias Seele~ 
-@59   = ~Dies ist das Herz, welches der Dämon behielt, um Jerlias Geist daran zu hindern, sich zu befreien.~
+@59   = ~Dies ist das Herz, welches der Dämon behielt, um Jerlias Geist daran zu hindern, sich zu befreien.
 
-@60   = ~Ionenstein~ 
-@61   = ~Gelber Ionenstein~ 
-@62   = ~Dieser kleine Stein schwebt in Bahnen um den Kopf des Eigentümers. Einfach ausrüsten, um ihn in seinen Orbit zu verstzen. Diese offensichtsich magischen Steine haben verschiedene Eigenschaften, je nach dem, welche Farbe der Stein hat.~
+Gewicht: 2~
+
+@60   = ~Ionenstein~ // = #8181 (BG2EE)
+@61   = ~Gelber Ionenstein~
+@62   = ~Dieser kleine Stein schwebt in Bahnen um den Kopf des Eigentümers. Einfach ausrüsten, um ihn in seinen Orbit zu verstzen. Diese offensichtsich magischen Steine haben verschiedene Eigenschaften, je nach dem, welche Farbe der Stein hat.~ // = #5770 (BG2EE)
 @63   = ~Dieser Ionenstein ist sehr begehrt und macht den Träger immun gegen sämtliche Einschränkungen seiner Beweglichkeit, sei sie magischer oder normaler Natur. Dies betrifft auch die Zauber "Hast" und "Verlangsamen".
 
-Auf einer Seite des Steines lässt sich klar die Form eines Auges erkennen mit der Aufschrift AO darunter.~ 
+Auf einer Seite des Steines lässt sich klar die Form eines Auges erkennen mit der Aufschrift AO darunter.
+
+Gewicht: 0
+
+Kann nicht verwendet werden von:
+ Magiertöter~ 
 
 @64   = ~Handelsnotizen~
 @65   = ~Prax führte gut Buch über seine Verkäufe und Ihr findet schnell den Namen Kiara darin. Wie es aussieht, wurde sie an Amaralis verkauft und in sein Haus im Regierungsviertel gebracht. Der Rest der Aufzeichnung gibt nur detailierte Beträge seine Einkünfte wieder.~
 
 // New Amaralis fight additions
 // ----------------------------
-@67   = ~Diese Schwerter werden auch als zweischneidige Schwerter, Kriegsschwerter oder Militärschwerter bezeichnet. Es gibt keine einheitliche Form des Langschwertes. Seine Form und Länge sind von Kultur zu Kultur unterschiedlich und können selbst innerhalb einer Kultur je nach Zeitalter variieren. Das grundlegendste Merkmal aller Langschwerter ist ihre Länge, die zwischen 90 und 120 cm beträgt. Im letzteren Fall nimmt die Klinge 1 m der Gesamtlänge ein. Die meisten Langschwerter besitzen eine zweischneidige Klinge mit einer scharfen Spitze. Trotz dieser Spitze ist das Langschwert nicht zum Stoßen, sondern zum Schwingen vorgesehen. 
+@66   = ~Das Gottesschwert~
+/*@67   = ~Diese Schwerter werden auch als zweischneidige Schwerter, Kriegsschwerter oder Militärschwerter bezeichnet. Es gibt keine einheitliche Form des Langschwertes. Seine Form und Länge sind von Kultur zu Kultur unterschiedlich und können selbst innerhalb einer Kultur je nach Zeitalter variieren. Das grundlegendste Merkmal aller Langschwerter ist ihre Länge, die zwischen 90 und 120 cm beträgt. Im letzteren Fall nimmt die Klinge 1 m der Gesamtlänge ein. Die meisten Langschwerter besitzen eine zweischneidige Klinge mit einer scharfen Spitze. Trotz dieser Spitze ist das Langschwert nicht zum Stoßen, sondern zum Schwingen vorgesehen. 
 
 EIGENSCHAFTEN:
 
@@ -114,28 +131,34 @@ Mindestkraft: 6
 Kann nicht verwendet werden von:
  Druiden
  Klerikern
- Magiern~
+ Magiern~*/
 @68   = ~Das Gottesschwert ist eines derer, über das man sich in den Reichen die meisten Gedanken macht, weil es völlige Immunität gegen die Wahrsagung für 1 Stunde bereitstellen kann.
 
 EIGENSCHAFTEN:
 
-Thaco: +3
-Schaden: 1WD8+3
-Schadensart: aufschlitzen
-Gewicht: 4
-Geschwindigkeitsfaktor: 2
-Fertigkeiten: Langschwert
-Typ: 1-händig
-Mindestkraft: 6
+Immunität gegen Erkenntniszauber (1x täglich). Die Immunität hält 1 Stunde an.
+
+Schaden: 1WD8 +3 (Klinge)
+ETW0-Bonus: +3
 Besondere Fähigkeiten:
 Magiewiderstand 25 %
-+2 Rüstungsklasse
-Besondere Verwendung:
-Kann einmal pro Tag den Zauber Immunität gegen Wahrsagung wirken. Die Immunität hält 1 Stunde an. 
+Rüstungsklasse-Bonus: +1
+Der Träger erhält auf die Initiative beim Zaubern einen Bonus von -1
+Initiativefaktor: 2
+Mindeststärke: 6
+Fertigkeiten: Langschwert
+Typ: 1-händig
+
+Gewicht: 2
+
 Kann nicht verwendet werden von:
- Druiden
- Klerikern
- Magiern~
+ Kleriker
+ Druide
+ Magier
+ Paladin
+ Dieb
+ Mönch
+ Tiermeister~
 
 
 /* ================= *
@@ -409,16 +432,25 @@ Der Mönch gewinnt die Fähigkeit, sich mit einer unglaublichen Geschwindigkeit zu
 @293  = ~Wuje~
 // Isaya: new texts moved from the TP2
 @294  = ~Armschützer~
-@295  = ~Mönch-Armschützer
-
-Diese außergewöhnlichen Armschützer wurden von der Mörder-Innung für Wuje geschmiedet.
+@295  = ~Diese außergewöhnlichen Armschützer wurden von der Mörder-Innung für Wuje geschmiedet.
 
 EIGENSCHAFTEN:
 
-+2 zu Faust ETW0 und Schaden
-Bei jedem Versuch, den Träger dieser Armschützer zu treffen, gibt es eine Chance von 10%, dass die Armschützer Verderben und Blindheit auf den Angreifer wirken.
+- ETW0-Bonus: +2 im waffenlosen Kampf
+- Schadensbonus: +2 im waffenlosen Kampf
+- Bei jedem Versuch, den Träger dieser Armschützer zu treffen, gibt es eine Chance von 10%, dass die Armschützer Verderben und Blindheit auf den Angreifer wirken.
+
+Gewicht: 2
 
 Kann nur verwendet werden von:
-
-Mönchen~
+ Mönch~ // From #857 (BG2EE)
 // Isaya: end of new texts
+
+
+/* ============================================================================================================= *
+ *  Usability flags                                                                                              *
+ * ------------------------------------------------------------------------------------------------------------- *
+ * Note for translators: you will find usability flags REGEXP expressions in other items mods (Rolles, Ruad...)  *
+ * ============================================================================================================= */
+@9001 =~[Kk]ann[ %tab%]+[Nn]ur[ %tab%]+[Vv]erwendet[ %tab%]+[Ww]erden[ %tab%]+[Vv]on[ %tab%]*:~
+@9002 =~[Kk]ann[ %tab%]+[Nn]icht[ %tab%]+[Vv]erwendet[ %tab%]+[Ww]erden[ %tab%]+[Vv]on[ %tab%]*:~
