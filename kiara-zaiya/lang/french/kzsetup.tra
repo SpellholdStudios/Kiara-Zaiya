@@ -6,12 +6,12 @@
 @5    = ~Combats originaux d'Amaralis~
 // Isaya: new texts moved from the TP2 (as of v1.6.1)
 @6    = ~Kiara plus redoutable en vampire~
-@7    = ~Modification de Suldanessalar~ 
+@7    = ~Modification de Suldanessalar~
 // Isaya: end of new texts
-@8    = ~Jao et son equipe pour Shadows of Amn : un autre rude combat~
-@9    = ~Irenicus plus fort a l'arbre de vie~
+@8    = ~Jao et son equipe pour Les Ombres d'Amn : un autre rude combat~
+@9    = ~Irenicus plus fort a l'Arbre de Vie~
 
-@11   = ~Il semblerait que Throne of Bhaal ne soit pas installe sur votre ordinateur.~
+@11   = ~Ce composant necessite l'installation de l'extension Le Trone de Bhaal.~
 /* DEPRECATED as of v2.0.0
    -----------------------
 @142  = ~Salle du Golem du Château De Arnise pour SoA~
@@ -25,11 +25,11 @@
  * =========== */
 @21   = ~Kiara~
 @22   = ~Zaiya~
-@23   = ~Wyverne empoisonnée~
+@23   = ~Wiverne venimeuse~
 @24   = ~Prax~
 @25   = ~Amaralis~
 @26   = ~Seigneur Démon~
-@27   = ~Kiara Vampirisée~
+@27   = ~Kiara vampirisée~
 @28   = ~Horth'Kar~
 @29   = ~Jerlia~
 @30   = ~Endragor~
@@ -43,7 +43,7 @@
 @42   = ~Essoufflée~
 @43   = ~Position du lunaire !~
 @44   = ~Position du dragon !~
-@45   = ~Position du Solaire !~
+@45   = ~Position du solaire !~
 @46   = ~Position du solaire !
 
 Le moine gagne la capacité de concentrer l'énergie de son Ki et de la libérer tout d'un coup, une boule de feu explosant de son corps, causant 6d10 points de dégâts de feu et susceptible de projeter les adversaires à une distance considérable (jet de sauvegarde contre le souffle à –4), les rendant inconscients pour 1 round.
@@ -100,9 +100,10 @@ Poids : 135~
 
 Poids : 2~
 
-@60   = ~Pierre ionique~ // = #8181 (BG2EE)
+// Gwendolyne fix: as of v2.0.0, general name and descriptions are hard-coded!
+//@60   = ~Pierre ionique~ // = #8181 (BG2EE)
 @61   = ~Pierre ionique jaune~
-@62   = ~Cette petite pierre flotte en orbite autour de la tête de son détenteur quand on l'équipe. Ces pierres évidemment magiques ont des propriétés différentes en fonction de leur couleur.~ // = #5770 (BG2EE)
+//@62   = ~Cette petite pierre flotte en orbite autour de la tête de son détenteur quand on l'équipe. Ces pierres évidemment magiques ont des propriétés différentes en fonction de leur couleur.~ // = #5770 (BG2EE)
 @63   = ~Grandement convoitée, cette pierre ionique immunisé son porteur à tout ce qui, magique ou non, pourrait affecter sa mobilité, y compris les sorts de rapidité et de ralentissement.
 Vous pouvez aussi voir clairement la forme d'un œil sur un côté de la pierre et l'inscription AO, dessous.
 
@@ -117,7 +118,8 @@ Non utilisable par :
 // Compléments au nouveau combat contre Amaralis
 // ---------------------------------------------
 @66   = ~Épée divine~
-/*@67   = ~Ces épées sont généralement appelées épées à double tranchant, épées de guerre ou épées militaires. Souvent, l'épée longue a une lame à simple tranchant. Le modèle et la longueur de l'épée varient d'un peuple à un autre, parfois même d'une époque à une autre. L'une des caractéristiques communes à toutes les épées de ce type est la longueur, comprise entre 90 cm et 1,20 m. Dans le cas des épées les plus longues, la lame couvre 1 m de la longueur totale. La plupart des épées longues ont une lame à double tranchant et un estoc pointu. Malgré son estoc, l'épée longue est une arme considérée comme tranchante, et non perforante.
+/* Gwendolyne fix: as of v2.0.0, general descriptions are hard-coded!
+@67   = ~Ces épées sont généralement appelées épées à double tranchant, épées de guerre ou épées militaires. Souvent, l'épée longue a une lame à simple tranchant. Le modèle et la longueur de l'épée varient d'un peuple à un autre, parfois même d'une époque à une autre. L'une des caractéristiques communes à toutes les épées de ce type est la longueur, comprise entre 90 cm et 1,20 m. Dans le cas des épées les plus longues, la lame couvre 1 m de la longueur totale. La plupart des épées longues ont une lame à double tranchant et un estoc pointu. Malgré son estoc, l'épée longue est une arme considérée comme tranchante, et non perforante.
 
 PARAMÈTRES :
 

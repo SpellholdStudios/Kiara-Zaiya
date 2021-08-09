@@ -1,8 +1,9 @@
-//FINAL EDIT BY WORD EDITOR – NOT FOOLPROOF BUT MUCH FASTER
-//SECOND EDIT JESSAYLA
-//FIRST EDIT SEIF
+// FINAL EDIT BY WORD EDITOR – NOT FOOLPROOF BUT MUCH FASTER
+// SECOND EDIT JESSAYLA
+// FIRST EDIT SEIF
 
-//KIARA.D: JOIN FILE
+// KIARA.D: JOIN FILE
+// ------------------
 @400 = ~Ich danke Euch, dass Ihr mich befreit habt, aber ich muss schnell meine Freundin Zaiya finden.~
 @401 = ~Ich bin so froh, dass Ihr mich gefunden habt, jedoch muss ich noch meine Freundin finden.~
 @402 = ~Sorgt Euch nicht um Eure Freundin, sie führte uns hierher. Mein Name ist <CHARNAME> und ich bin froh, Euch gefunden zu haben.~
@@ -16,9 +17,9 @@
 @410 = ~Nun, Kiara, im Moment habe ich kein besonderes Ziel. Vielleicht stoßen wir bald auf etwas.~
 @411 = ~Dann sollten wir Euch so gut es geht behilflich sein, <CHARNAME>.~
 
-// Isaya: numbers changed from [250..290] to [350..390] in order to avoid conflicts with
-// identical numbers in KZSetup.tra file, causing problems in the compiled dialog
-//KIARAP.D: LEAVE/REJOIN
+// Isaya: numbers changed from [250..290] to [350..390] in order to avoid conflicts with identical numbers in kzsetup.tra file, causing problems in the compiled dialog
+// KIARAP.D: LEAVE/REJOIN
+// ----------------------
 @350  = ~Ihr... Ihr habt mich gerettet... aber... Was ist mit Zaiya passiert? Nein! Ihr habt sie sterben lassen?!~
 @351  = ~Ihr habt... Ihr habt mich noch einmal gerettet. Ich stehe wirklich tief in Eurer Schuld, Liebster.~
         ~Ihr habt... Ihr habt mich noch einmal gerettet. Ich stehe wirklich tief in Eurer Schuld, Liebste.~
@@ -64,21 +65,22 @@ Während ich für einige Zeit fürchtete, dass Bodhis letzte Rache an mir war, mir 
 @389  = ~Ja, Zaiya. Auch Ihr seid willkommen.~
 @390  = ~Ich muss bei Kiara bleiben...~
 
-//VAMPKIA.D: KIARA VAMPIRE
+// VAMPKIA.D: KIARA VAMPIRE
+// ------------------------
 @450 = ~Jaa, Herrin. Wie Ihr wünscht.~
 
-//BKIARA.D: BANTER AND ROMANCE
-
-@494  = ~Könntet Ihr ein Loblied meiner Schönheit singen oder kann ich Euch vielleicht mit einem Liebeslied verlocken, mein lieber Tiefling?~ [MxKiaraB] 
+// BKIARA.D: BANTER AND ROMANCE
+// ----------------------------
+@494  = ~Könntet Ihr ein Loblied meiner Schönheit singen oder kann ich Euch vielleicht mit einem Liebeslied verlocken, mein lieber Tiefling?~ [MxKiaraB]
 @495  = ~Wie Ihr es gerne hättet, mein lieber Tiefling.~
-@496  = ~Also erzählt mir, Anomen, warum habt Ihr den Ritterorden gewählt, wenn Eure Fähgkeiten Euch ohne Eure rechtschaffene Beeinflussung hätten weiter bringen können?~ [MxKiaraB] 
+@496  = ~Also erzählt mir, Anomen, warum habt Ihr den Ritterorden gewählt, wenn Eure Fähgkeiten Euch ohne Eure rechtschaffene Beeinflussung hätten weiter bringen können?~ [MxKiaraB]
 @497  = ~Ich könnte nicht weniger mit Euch übereinstimmen, Anomen.~
-@498  = ~Ist diese dunkle Haut Eure natürliche Farbe oder vergaßt Ihr Euch zu waschen, während Ihr Euch in Eurem Jagdhaus verbargt, Waldläufer?~ [MxKiaraB] 
+@498  = ~Ist diese dunkle Haut Eure natürliche Farbe oder vergaßt Ihr Euch zu waschen, während Ihr Euch in Eurem Jagdhaus verbargt, Waldläufer?~ [MxKiaraB]
 @499  = ~Es gibt keinen Grund, aufgebracht zu sein... wirklich... stümperhafter Zauberer.~
 @500  = ~Korgan, ich hörte, dass Zwerge eindrucksvolle Familienjuwelen haben. Sicherlich müssen solche Wahrheiten übertrieben sein?~ [MxKiaraB]
-@501  = ~Nicht jetzt Korgan. Lasst uns die anderen einholen.~ 
+@501  = ~Nicht jetzt Korgan. Lasst uns die anderen einholen.~
 @502  = ~Edwin, ich hörte, dass Magie in Amn verboten ist... Ich nehme an, das ist ein schwieriger Ort für einen Zauberer.~ [MxKiaraB]
-@503  = ~Leider Edwin, wäret Ihr in eine Kröte verwandelt worden, hätte ich Euch für viel attraktiver gehalten. Lasst Euch das über Eure geschlechtliche Anziehungskraft sagen.~ 
+@503  = ~Leider Edwin, wäret Ihr in eine Kröte verwandelt worden, hätte ich Euch für viel attraktiver gehalten. Lasst Euch das über Eure geschlechtliche Anziehungskraft sagen.~
 @504  = ~<CHARNAME>, Ihr wisst, dass Amaralis "meinetwegen" zurückkommen wird, nicht wahr?~
 @505  = ~Wer war er überhaupt?~
 @506  = ~Warum sollte er zurückkommen? Dieser Narr hat sich beinahe selbst umgebracht.~
@@ -546,6 +548,7 @@ Während ich für einige Zeit fürchtete, dass Bodhis letzte Rache an mir war, mir 
 @967  = ~Ihr seid ein schlauer Kerl, mein Fürst des Mordes, und als ein solcher wißt Ihr wahrscheinlich bereits, dass eine Frau mit einem derartigen Verstand an Eurer Seite zu haben sich als nützlich erweisen könnte.~
 @968  = ~Ihr seid schnell damit, Eure Meinung zu ändern und ich werde schnell damit sein, dieser Herausforderung ein Ende zu setzen.~
 @969  = ~Die Herausforderung verbleibt bei Euch, <CHARNAME>. Ich habe lediglich darauf hingewiesen, daß ich mich zu Euch hingezogen fühle, und auf die Gründe, warum unser Bund ein mächtiger sein könnte.~
+
 @971  = ~So, sagt mir, welche Art Königreich sollt Ihr Eurer Geliebten zu Füßen legen?~
 @972  = ~Welche Art Königreich würdet Ihr Euch wünschen, Kiara?~
 @973  = ~Ich werde versuchen, jeden Eurer Wünsche zu erfüllen, meine Dame. Sagt mir, wie Ihr  die Dinge haben möchtet.~
@@ -1043,7 +1046,7 @@ Während ich für einige Zeit fürchtete, dass Bodhis letzte Rache an mir war, mir 
 @1465 = ~Nein! Ihr habt keine Wahl. Kommt, lasst uns kämpfen.~
 @1466 = ~Sterbt, Bhaalspross!~
 @1467 = ~Dieser Unterschlupf wird für mich nicht weiter wirken. Ich muss abreisen. Wenn Ihr Eure Meinung ändert, könnt Ihr mich durch meinen Diener in meinem Haus in Athkatla finden. Lebt wohl bis dahin!~
-@1468 = ~Die Jagd auf Valygar Corthala.
+@1468 = ~Die Jagd auf Valygar Corthala
 
 Ich traf Valygar Corthala in seinem Jagdhaus in den Umar Hügeln, sich vor den Verhüllten Magiern verbergend, die ihn jagen. Gemäß Valygar ist er mit Lavok, einem alten Nekromanten verwandt, der den Bereich fünfhundert Jahre zuvor erbaute... ein Bereich, der verschwand, kurz nachdem er vollendet wurde und jetzt wieder erschienen ist. Die Verhüllten Magier scheinen sicher, dass Valygar der Schlüssel für den Zugriff auf den Platz ist, der Grund dafür, dass sie ihn belästigen.
 
@@ -1165,7 +1168,7 @@ Ich habe Valygar seinen eigenen Weg gehen lassen, aber er kann nicht länger im J
 @1583 = ~Ihr folgt in der Hoffnung, etwas Wiederzubekommen, das Euch lieb ist. Ich sage, dass je länger Ihr das beibehaltet, desto mehr werdet Ihr verlieren.~
 @1584 = ~Nehmt die arme Kiara als Beispiel. Ich weiß, Ihr habt eine Art Beziehung zu einander aufgebaut. Es trifft Verliebte immer so hart, wenn dem anderen Leid widerfährt, seht Ihr das nicht auch so?~
 @1585 = ~Ahh, aber ich spreche nicht für ihn, Kiara. Ich spreche von Euch. Das ist eine Lehre, <CHARNAME>. Folgt mir, und Ihr werdet mehr verlieren, als Ihr Euch vorstellen könnt. Von jetzt an!~
-@1586 = ~Der Endkampf mit Bodhi.
+@1586 = ~Der Endkampf mit Bodhi
 
 Bodhi tauchte in einem Hinterhalt auf, kurz bevor ich ihren Zufluchtsort erreichte, und warnte mich, dass sie sich meiner Verfolgung bewusst war und sie mir die eine Person stahl, die meinem Herzen am liebsten ist: Kiara. Bevor sie verschwand und mehr von ihren untoten Geschöpfen auf mich losließ, warnte Bodhi mich, dass ich, wenn ich weitermache, sogar mehr verlieren würde, als ich für möglich hielte. Ich kann das Rynn-Lanthorne nicht aufgeben... aber jetzt steht das Leben und die unsterbliche Seele von derjenigen, die ich liebe, ebenso auf dem Spiel!~
 @1587 = ~Ihr habt schon genug genommen! Ihr werdet beides herausgeben, sowohl Imoens Seele, als auch Kiaras!~
@@ -1173,7 +1176,7 @@ Bodhi tauchte in einem Hinterhalt auf, kurz bevor ich ihren Zufluchtsort erreich
 @1589 = ~Ich hätte Euch für den bloßen Diebstahl von Kiara schon gejagt. Sie ist mir sehr wichtig.~
 @1590 = ~Ihr setzt zu viel Vertrauen in Gefühle. Der Diebstahl von Kiara wird Euch nicht schützen.~
 @1591 = ~Sie ist für Euch verloren, <CHARNAME>. Kiara war für meine List ziemlich empfänglich. Ich bezweifle, dass Euer Gefummel die Ergebenheit geweckt haben könnte, die ich mit einem Bissen und einem Blick erreicht habe.~
-@1592 = ~Der Endkampf mit Bodhi.
+@1592 = ~Der Endkampf mit Bodhi
 
 Bodhi hat Kiara in einen Vampir verwandelt! Oder... oder beinahe. Der Prozess wurde in der kurzen Zeitn, in der Bodhi sie hat, vielleicht nicht vollendet. Hoffentlich kann etwas getan werden, oder ich werde sie verlieren. Vielleicht könnte der Elfen-Kriegsweise einen Weg der Wiederherstellung wissen... oder Elhan...~
 @1593 = ~Kiaras und mein Leben sind eins!~
@@ -1185,11 +1188,13 @@ Bodhi hat Kiara in einen Vampir verwandelt! Oder... oder beinahe. Der Prozess wu
 @1599 = ~Ich besuchte fast alle Tempel in Medina und verwendete mehrere Arzneitränke, zubereitet von geschickten Kräuterkennern, aber keiner von ihnen wirkte und mein Zustand verschlechterte sich.~
 @1600 = ~Glücklicherweise traf ich Kiara in einem dieser Tempel, und sie sagte, dass sie im Stande sein könnte, zu helfen.~
 @1601 = ~Kiara hat machtvolle heilende Hände, und sie ist im Stande, meinen Zusatnd von Zeit zu Zeit zu stabilisieren, indem sie ihre Hände auf meinen Körper auflegt... Es entfernt nicht den Fluch, aber hilft mir zu leben. Seitdem blieb ich bei ihr als ihre Dienerin.~
+
 // KIARA - CERND BY BRI
+// --------------------
 @1650 = ~Cernd, ich muss Euch nach Euren Absichten fragen bezüglich... Zaiya...~ [MxKiaraB] //kiara
 @1651 = ~Was? Warum? Ist etwas falsch gelaufen?~ //cernd
-@1652 = ~Ihr nennt mich Druiden. Ich fühle, dass Ihr von Ihr geblendet seid, aber ich weiß nicht, ob ich Euch erlauben sollte, weiterhin in ihrer Gegenwart zu bleiben.~ //KIA 
-@1653 = ~Egal, was sonst noch geschehen kann, sie ist mein Mündel, und als solche ist sie unter meinem Schutz. Es bleibt abzuwarten, ob ich Eure Anwesenheit in Ihrer Nähe ertragen werde oder nicht.~ //KIA 
+@1652 = ~Ihr nennt mich Druiden. Ich fühle, dass Ihr von Ihr geblendet seid, aber ich weiß nicht, ob ich Euch erlauben sollte, weiterhin in ihrer Gegenwart zu bleiben.~ //KIA
+@1653 = ~Egal, was sonst noch geschehen kann, sie ist mein Mündel, und als solche ist sie unter meinem Schutz. Es bleibt abzuwarten, ob ich Eure Anwesenheit in Ihrer Nähe ertragen werde oder nicht.~ //KIA
 @1654 = ~Und was habt Ihr vor zu tun? Wie mich Zaiya selbst darauf hingewiesen hat, kann der geringste Gedanke, das zarteste Gefühl sogar unter den außergewöhnlichsten Verhältnissen wachsen, gedeihen und blühen. Sie ist eine schöne Frau, und in der Lage, ihre Entscheidungen zu treffen...~ //CERMD
 @1655 = ~Und sie ist noch durch ihre Krankheit gebunden, was Ihr niemals vergessen mögt, Druide, und jede... emotionale... Störung kann ihr weiteren Schaden zufügen. Denkt über diese Warnung nach, Cernd... nehmt auf die leichte Schulter nehmen, was Zaiya betrifft, oder sogar MAINCHARA wird Euch vor meinem Zorn retten.~ //KIARA
 @1656 = ~Ich finde Eure Bedenken unnötig, Kiara. Warum, ich dachte, dass die Ausbildung des Klosters die Anerkennung der Welt, so wie sie ist, einbezog... und ihre Grenzen zu überschreiten.~
@@ -1198,7 +1203,8 @@ Bodhi hat Kiara in einen Vampir verwandelt! Oder... oder beinahe. Der Prozess wu
 //KIA
 @1658 = ~Jedoch, die Welt ändert sich. Ein gebrochener Spiegel reflektiert nie wieder; abgefallene Blumen gehen nie an die alten Zweige zurück...~
 
-//KIARAJ.D: INGAME INTERJECTIONS KIARA
+// KIARAJ.D: INGAME INTERJECTIONS KIARA
+// ------------------------------------
 @2000 = ~Ich war mir sicher, Eure Neugierde würde einer solch exotischen Kreatur nicht standhalten können. Seid Ihr in Ordnung?~
 @2001 = ~Ihr habt einen zweifelsfrei erfreuten Ausdruck auf Eurem Gesicht, der mir erzählt, was für ein ungezogener Junge Ihr in der letzten Nacht gewesen sein müsst.~
 @2002 = ~Nehmt es gelassen, ich bin nicht beleidigt. Ich verstehe, dass Ihr dieses Opfer für unser aller Wohl gebracht habt.~
@@ -1327,10 +1333,11 @@ Bodhi hat Kiara in einen Vampir verwandelt! Oder... oder beinahe. Der Prozess wu
 @2125 = ~Meine schlimmsten Ängste haben sich erfüllt. Ihr schmutziger Handel hat Euch blind gemacht. Ich werde an Eurer Seite bleiben, um ein wachsames Auge auf Eure Taten zu haben.~
 @2126 = ~Ihre verführerische Sitten berwältigen Euch vor langer Zeit. Ihr habt Euch sicher in Euren schändlichen Taten unterschieden. Diese letzten schrecklichen Nachrichten kommen nicht überraschend.~
 @2127 = ~Ich fragte mich immer, warum Dummköpfe nur ihr blindes Auge offen hielten. Das Mädchen Methinks starrte Euch zu lange ins Gesicht.~
-@2128 = ~**ICH WERDE DIESES GEHEIMNIS OFFENBAREN, WENN IH EUCH BEREIT ERKLÄRT, DIE EIER ZU ÜBERGEBEN.**~ 
+@2128 = ~**ICH WERDE DIESES GEHEIMNIS OFFENBAREN, WENN IH EUCH BEREIT ERKLÄRT, DIE EIER ZU ÜBERGEBEN.**~
 @2129 = ~Hier nehmt die Eier.~
 
-//FLIRTPACK KIARA
+// KIARA FLIRTPACK
+// ---------------
 @2500 = ~Kiara ist mehr als ein exotisches Wesen aus einem fernen Land oder eine einfache Reisegefährtin. In den vergangenen Wochen fühltet Ihr Euch zu ihr hingezogen, Eure Augen sind hypnotisiert von ihrer Schönheit.~
 @2501 = ~Umarmt Kiara unterstützend.~
 @2502 = ~Macht Beckenstöße in Kiara's Richtung.~
@@ -1357,8 +1364,9 @@ Bodhi hat Kiara in einen Vampir verwandelt! Oder... oder beinahe. Der Prozess wu
 @2523 = ~(Das klatschende Geräusch und das Zeichen ist Eurern Begleitern nicht entgangen, die anfangen zu lachen.)~
 @2524 = ~TO BE DEVELOPED -NOT FUNCTIONAL-~
 
-//LOVESCENES KIARA -- Not proofed, til I get Bri's versions. -Jess
-@9000 = ~Kiaras Küsse wirken beinahe verzweifelt, während Ihr Euch auf den Weg zu Eurem Zimmer macht. Ihre einladenden Lippen flattern unter Euren wie verwundete Tauben. Ihr weicher Mund schließt sich perfekt um den Euren, jeder Atemzug passt sich Euch an. Sie verliert sich in Euren Küssen und klammert sich an Euch wie eine Ertrinkende an Treibholz. Ihr treibt nicht weniger in ihrer Umarmung und geht zusammen unter, in einem See geteilter Leidenschaft. Der Geschmack der Begierde an den Lippen Eurer Geliebten ist süß, und Vorfreude bebt bei jeder Berührung Eurer Münder. Kiaras Finger umklammern Eure, die Wärme ihrer Leidenschaft entzündet die Flammen der Begierde, die tief in Euch brennen. Das ansteigende Schnurren aus den Tiefen ihrer Kehle hallt in Eurer wider, entfacht ein wachsendes Stöhnen, welches Euch, trotz Eurer Versuche, es zu unterdrücken, entweicht. Dieses Gefühl scheint ein Leben lang anzuhalten, und doch ist es schnell vorbei. Der Druck, wieder atmen zu müssen, trennt Euch von einander.
+// KIARA LOVE SCENES -- Not proofed, til I get Bri's versions. -Jess
+// -----------------------------------------------------------------
+@8000 = ~Kiaras Küsse wirken beinahe verzweifelt, während Ihr Euch auf den Weg zu Eurem Zimmer macht. Ihre einladenden Lippen flattern unter Euren wie verwundete Tauben. Ihr weicher Mund schließt sich perfekt um den Euren, jeder Atemzug passt sich Euch an. Sie verliert sich in Euren Küssen und klammert sich an Euch wie eine Ertrinkende an Treibholz. Ihr treibt nicht weniger in ihrer Umarmung und geht zusammen unter, in einem See geteilter Leidenschaft. Der Geschmack der Begierde an den Lippen Eurer Geliebten ist süß, und Vorfreude bebt bei jeder Berührung Eurer Münder. Kiaras Finger umklammern Eure, die Wärme ihrer Leidenschaft entzündet die Flammen der Begierde, die tief in Euch brennen. Das ansteigende Schnurren aus den Tiefen ihrer Kehle hallt in Eurer wider, entfacht ein wachsendes Stöhnen, welches Euch, trotz Eurer Versuche, es zu unterdrücken, entweicht. Dieses Gefühl scheint ein Leben lang anzuhalten, und doch ist es schnell vorbei. Der Druck, wieder atmen zu müssen, trennt Euch von einander.
 
 Kiara lächelt Euch an und ein Hauch von Schüchternheit spiegelt sich in ihren leuchtenden Augen. Dann streicht sie sich eine Strähne ihres seidigen Haares aus dem Gesicht, die feurige Ranke mit dem Geruch der Erde, exotischer Hyazinthe, jungem Klee. Während sie an der Tür zu Eurem Zimmer lehnt, tasten ihre sonst anmutigen Hände ungeschickt nach dem Türknauf. Kiara lehnt sich an Euch, um noch einen Kuss von Euch zu stehlen, vereint ihren geschmeidigen Körper mit Eurem. Sie zieht Euch näher heran, neckt Eure Zunge mit der ihren, läd Euch wortlos ein, diesen herrlichen Kuss zu vertiefen, ihren Mund zu erforschen und die Tiefen ihrer Seele zu ergründen. Leider können solch ergreifende Augenblicke nicht für immer andauern und der Kuss bricht ab, als Kiara erfolgreich die Tür öffnet. Während sie rückwärts taumelt, zerplatzt auch der hypnotisierende Traum, den Ihr flüchtig geteilt habt. Kiara senkt ihren Blick und ihre vollen Lippen zittern leicht.
 
@@ -1368,7 +1376,7 @@ Sanft führt Kiara Eure rechte Hand zu ihren Lippen, ihre forschende Zunge schmec
 
 Kiara richtet ihre Aufmeksamkeit auf den Nacken, ihre Zähne ziehen an der empfindlichen Haut, ihr heißer Atem dringt durch das Haar, während sie sich langsam abwärts tastet. Als sie den Kragen Eures Hemdes erreicht, öffnet sie es langsam, möchte nichts mehr als Eure harte und muskulöse Brust an ihrer weichen Wange fühlen und auf das Klopfen Eures Herzes hören. Während die Leidenschaft immer heißer in Euch brennt, nehmt Ihr Kiaras Verlangen ebenso wahr wie Eures und zieht sie langsam wieder hoch. Ihr presst Eure strebenden Lippen fest auf ihre sanft neckenden Lippen und fordert Einlass in ihre warme Mundhöhle.
 
-Ihr fahrt mit Euren Fingern die Rückseite von Kiaras Hals hinauf und sie verfangen sich in dem vollen Haar in ihrem Nacken. Euer Griff zieht sanft ihren Kopf zurück. Eure Lippen und Eure Zunge wandern von ihrem Mund zu ihrer Kehle, überfluten sie mit warmen Küssen. Ein tiefes Stöhnen entweicht Kiara, dessen Vibration die Spitze Eurer Zunge kitzelt, als Ihr sie über ihren schönen Hals schlängelt. Ihr beginnt, ihre Robe zu öffnen und die satinzarte Haut darunter zu entblößen. Ihr zieht Euch zurück und haltet dabei inne, die Herrlichkeit ihres Körpers zu bewundern, der sich Euch im gedämpften Licht offenbart, ebenso rank und geschmeidig wie ein Panter, mit der ganzen unauffälligen Kraft und Eleganz dieses Wesens. Die Leidenschaft, die Ihr entzündet habt, bewirkt eine gewisse Anspannung bei jedem der klar umrissenen Muskeln. 
+Ihr fahrt mit Euren Fingern die Rückseite von Kiaras Hals hinauf und sie verfangen sich in dem vollen Haar in ihrem Nacken. Euer Griff zieht sanft ihren Kopf zurück. Eure Lippen und Eure Zunge wandern von ihrem Mund zu ihrer Kehle, überfluten sie mit warmen Küssen. Ein tiefes Stöhnen entweicht Kiara, dessen Vibration die Spitze Eurer Zunge kitzelt, als Ihr sie über ihren schönen Hals schlängelt. Ihr beginnt, ihre Robe zu öffnen und die satinzarte Haut darunter zu entblößen. Ihr zieht Euch zurück und haltet dabei inne, die Herrlichkeit ihres Körpers zu bewundern, der sich Euch im gedämpften Licht offenbart, ebenso rank und geschmeidig wie ein Panter, mit der ganzen unauffälligen Kraft und Eleganz dieses Wesens. Die Leidenschaft, die Ihr entzündet habt, bewirkt eine gewisse Anspannung bei jedem der klar umrissenen Muskeln.
 
 Ihr beugt Euren Kopf zu der unwiderstehlichen Wölbung ihrer Brüste und folgt mit Küssen entlang ihrer prallen Fülle. Ein Schauder schüttelt Kiaras Körper, und ihre Hand hebt sich scheinbar aus eigenem Antrieb zur Rückseite Eures Hauptes und drängt Euch enger an ihr junges, festes Fleisch. Ihr Atem beschleunigt sich, jeder Atemzug drückt ihre Brust vor in Euren begierigen Mund. Kiara zieht sich leicht von Euch zurück, um sich auf das Bett zu legen, und benutzt Euer Hemd, um Euch auf sie hinunter zu ziehen und klemmt Eure starken Arme gegen ihren weichen, nachgiebigen Körper. Ihr lest jeden Ihrer Gedanken, ahnt ihr Verlangen voraus und erlaubt ihr, das störende Hemd wegzuzerren, als sie ihre flinken Finger Eure Arme hochfahren lässt. Diese einfachste Berührung sendet Flammen der Begierde, die durch Ihren Körper schießen, und lässt Eure Männlichkeit vor Verlangen nach ihr anschwellen.
 
@@ -1382,11 +1390,11 @@ Als Ihr Kiaras Mund freigebt, wälzt Ihr Euch wieder herum und legt sie auf den R
 
 Jetzt nackt, langt Ihr wieder nach unten, um Kiara wieder in Eure Arme zu nehmen, sie nicht sanft küssend, sondern statt dessen gebt Ihr ihr einen flammenden Kuss mit den Feuern des leidenschaftlichen Begehrens. Ihr fühlt Euer Herz im Einklang mit ihrem schlagen, Eure ganze Seele verschmilzt mit ihrer. Kiara führt sanft ihre Füße an der Rückseite Eurer Waden entlang, ihre Bewegung erregt die Atmosphäre und kitzelt das Haar Eurer Beine. Ihre kleinen Hände massieren die straffen Muskeln Eures Rückens und der Schultern und arbeiten an der Verspannung in Eurem strammen Körper.  Fast träge erforschen Eure Hände ihre vollen, gerundeten Brüsten, sinken dann zu ihrem Bauch, liebkosen ihre Haut, kneten sie, und fühlen ihren Körper unter jeder Eurer Berührungen wogen. Ein Stöhnen der Lust steigt tief aus Kiaras Kehle, als Eure Finger eine Spur von der Rundung ihrer Hüfte zu ihrem inneren Schenkel nachzeichnen und sich langsam auf ihren süßen, weichen Hügel zubewegen. Als Eure Finger immer näher zum Zentrum ihres Vergnügens wandern, lässt ein plötzlicher Schauer der Begierde Kiara schreien, ihre Beine ziehen sich enger um Euch zusammen, jedes Stückchen ihres verführerischen Körpers bettelt um mehr von Euren intimen Berührungen.
 
-Zu sehen, wie vollständig Kiaras Körper antwortet, und die Feuchtigkeit zu spüren, die Eure Hand einhüllt, treibt Euch fast an den Rand der Leidenschaft, aber mit einiger Schwierigkeit haltet Ihr Eure Neigung zurück, Eure endgültige Erfüllung zu suchen. Ihr drückt Eure Lippen an den Treffpunkt von Kiaras Beinen, abwechselnd küssend und warme Luft über das empfindliche Knötchen atmend und liebkost sie mit Zunge und Mund. Plötzlich beginnt Kiaras Körper zu zittern, ihre Beine versteifen sichund umschließen Euch eng. Ihr Rücken biegt sich wie der einer Katze in Hitze und lässt ihre schönen Brüste hoch in die Luft emporstehen. Ihre Lustschreie sind süßer als jede Musik, an die Ihr Euch je erinnern könnt. 
- 
+Zu sehen, wie vollständig Kiaras Körper antwortet, und die Feuchtigkeit zu spüren, die Eure Hand einhüllt, treibt Euch fast an den Rand der Leidenschaft, aber mit einiger Schwierigkeit haltet Ihr Eure Neigung zurück, Eure endgültige Erfüllung zu suchen. Ihr drückt Eure Lippen an den Treffpunkt von Kiaras Beinen, abwechselnd küssend und warme Luft über das empfindliche Knötchen atmend und liebkost sie mit Zunge und Mund. Plötzlich beginnt Kiaras Körper zu zittern, ihre Beine versteifen sichund umschließen Euch eng. Ihr Rücken biegt sich wie der einer Katze in Hitze und lässt ihre schönen Brüste hoch in die Luft emporstehen. Ihre Lustschreie sind süßer als jede Musik, an die Ihr Euch je erinnern könnt.
+
 Ihr lasst Euren Körper der Länge nach auf Kiara gleiten und schmiegt Euch zwischen ihre geöffneten Beine. Ihr taucht Eure Zunge tief in ihren Mund, Euer Körper fühlt sich völlig entflammt von der Hitze der Leidenschaft und fordert seine eigene Befriedigung. So wie Eure Zunge ihren gewünschten Bestimmungsort in der honigsüßen Lieblichkeit ihres Mundes findet, findet Eure starre, angeschwollene Männlichkeit ihre einladende Wärme, als Ihr Euch tief in ihr mit einer intensiven Bewegung vergrabt, und Euch schnell durch das Hindernis drückt, das Euren Eingang zu ihr versperrt. Kiara schreit auf, Anzeichen des Vergnügens und Schmerzes vermischen sich in ihren leidenschaftlichen Tönen und ertrinken im bittersüßen Schmerz ihres Verlangens. Vergnügen siegt schnell über die anfängliche Woge des Schmerzes, und Kiaras Hüften stoßen hoch, um sich mit Euren zu treffen, Eure Körper gehen in einen wonnigen Rhythmus über, jeder gibt und nimmt vom anderen. Kiara beginnt wieder zu zittern, ein hoher summender Atemzug entkommt ihr, als sie ihre Nägel in Euren Rücken gräbt, Eure Haut zerkratzt und Euch herunter zieht, um Euren harten Brustkorb gegen die weiche, nachgebende Wärme ihrer Brüste zu spüren. Die Heftigkeit ihrer Reaktion gibt Eurem Körper den Rest, und Ihr fühlt Euch plötzlich, als ob Ihr fallt - nein, fliegt, verschränkt mit Eurer Geliebten in der süßen Vergessenheit der Leidenschaft. Kiara zieht Euch ein letztes Mal eng an sich, schaudernd, als Ihr sie mit Eurem Samen füllt. Als Ihr Euren Kopf auf ihre Schulter legt, beide keuchend vor Anstrengung, streicht Kiara über die Seite Eures Gesichtes und flüstert zärtlich "Ich liebe Dich..."~
 
-@9001 = ~Kiara führt Euch an der Hand die schmalen Stufen hoch ins Schlafzimmer. Sie bleibt außerhalb des Türrahmens stehen, das Oberlicht zeichnet den Umriss ihres geschmeidigen, gespannten Körpers ab, die Muskeln gewellt von den Jahren der Ausbildung zum Mönch. Ihr karminrotes Haar ringelt sich um ihr Gesicht wie eine fleischfarbene Krone und es kitzelt flüchtig Euer Gesicht und trägt einen Duft von Jasmin in Eure Nase. Kiara neigt sich vor und zwingt ihre Lippen auf Eure, der Kuss dauert an, bis Eure Lungen vor Gier nach mehr Sauerstoff brennen. Sie zieht sich zurück, ein sündhaftes Lächeln auf ihren salzigen roten Lippen, und sie winkt Euch ins Zimmer. Als Ihr vorwärts schlurft, gibt sie Eurem Hintern einen neckenden Schlag, der einen scharfen Stich durch Euren Körper sendet.
+@8001 = ~Kiara führt Euch an der Hand die schmalen Stufen hoch ins Schlafzimmer. Sie bleibt außerhalb des Türrahmens stehen, das Oberlicht zeichnet den Umriss ihres geschmeidigen, gespannten Körpers ab, die Muskeln gewellt von den Jahren der Ausbildung zum Mönch. Ihr karminrotes Haar ringelt sich um ihr Gesicht wie eine fleischfarbene Krone und es kitzelt flüchtig Euer Gesicht und trägt einen Duft von Jasmin in Eure Nase. Kiara neigt sich vor und zwingt ihre Lippen auf Eure, der Kuss dauert an, bis Eure Lungen vor Gier nach mehr Sauerstoff brennen. Sie zieht sich zurück, ein sündhaftes Lächeln auf ihren salzigen roten Lippen, und sie winkt Euch ins Zimmer. Als Ihr vorwärts schlurft, gibt sie Eurem Hintern einen neckenden Schlag, der einen scharfen Stich durch Euren Körper sendet.
 
 Kaum drinnen, schreitet Kiara vor Euch, nimmt langsam ihre Robe ab und offenbart ihren braun gebrannten Körper, ihre schwachen Narben schimmern im Mondlicht und heben sich von ihrer gebräunten Haut ab. Ihr bemerket ihre einladenden Brüste, darum bittend, liebkost zu werden, aber Kiara drückt ihre Hand gegen Eure Brust, um Euch abzuhalten. Sie geht um Euch herum und entfernt langsam Eure Kleidung, dabei streift sie Euren Körper mit den leichtesten Berührungen und spürt mit den Fingerspitzen die Ausprägung Eurer Muskeln nach. Kiara geht hinter Euch und bindet Eure Hände mit einem schwarzen Halstuch zusammen; den seidigen Stoff fest auf Eurer Haut. Sie nimmt ein anderes Halstuch und bindet es um Eure Augen; jetzt seid Ihr in erbärmlicher Finsternis. Ihr spürt Kiara vor Euch stehen, dann ist sie weg. Als Ihr blind nach Ihr sucht, spürt Ihr einen leichten Hauch die feinsten Haare kitzeln, die von der Luft kreisförmig bewegt werden. Der Luftwirbel stoppt, und das einzige, das Ihr hören könnt, ist der Ton sowohl Eures als auch Kiara Atems. Dann spürt Ihr, dass ihre Lippen leicht Euren Hals küssen, was Euch aus Vorfreude erzittern lässt. Ihr fühlt Kiaras feuchten Atem in Eurem Ohr, Euch sagend, dass Ihr Euch nicht bewegen sollt. Plötzlich werdet Ihr allein gelassen; Eure Ohren strengen sich an bei dem Versuch, sie in den anderen Teilen des Zimmers zu hören...
 
@@ -1402,17 +1410,17 @@ Kiara beugt sich vor und küsst sanft einen Eurer Nippel; Ihr schaudert bei der B
 
 Kiara kommt mit der Feder vorwärts, streicht über die Innenseite des Schenkels und berührt die empfindliche Haut an einer Hüfte mit ihrer anderen und lacht über Euren heftigen Sprung durch ihre Berührung.
 
-Sie entscheidet sich dafür, weiterzugehen und nett zu spielen. Die Feder geht langsam hinunter und erreicht die Hüftbeuge. Sie stichelt Euch dort mehrere Sekunden lang, bis Eure Hüften anfangen zu zucken. Sie zieht sich wieder zurück und lässt Euch mehrere Sekunden lang beruhigen. Eure Männlichkeit steht inzwischen hervor, und sie beginnt sie mit der Feder langsam ringsherum zu umherkreisen. 
+Sie entscheidet sich dafür, weiterzugehen und nett zu spielen. Die Feder geht langsam hinunter und erreicht die Hüftbeuge. Sie stichelt Euch dort mehrere Sekunden lang, bis Eure Hüften anfangen zu zucken. Sie zieht sich wieder zurück und lässt Euch mehrere Sekunden lang beruhigen. Eure Männlichkeit steht inzwischen hervor, und sie beginnt sie mit der Feder langsam ringsherum zu umherkreisen.
 
 "Willst Du mehr?" fragt sie. Ihr stöhnt. Sie schlägt eine Eurer Backen mit ihrer Hand, hart, und dann die andere Backe, und hinterlässt hellenrote Handabdrücke. "Ich habe Dich was gefragt."
 
-"Ja, ich will mehr," kommt die angespannte Antwort aus Euren Lippen. 
+"Ja, ich will mehr," kommt die angespannte Antwort aus Euren Lippen.
 
-Sie lässt die Feder fallen und sie andere Hand reibt Eure Hinterbacken. Sie fängt langsam an, Euren Bauch zu küssen, eine nasse Spur mit ihrem Mund hinterlassend, beisst leicht mit ihren Zähnen, und streicht dann über Eure Männlichkeit. Eure Hüften dehnen sich vor, als sie den Rhythmus ihrer Liebkosungen vergrößert, bis Kiara plötzlich aufhört und Euch mit flachem Atem rasch keuchend zurücklässt, Euren Kopf zurückgeworfen vor Wonne und die Gefühle übermannen Eure verdunkelte Welt. 
+Sie lässt die Feder fallen und sie andere Hand reibt Eure Hinterbacken. Sie fängt langsam an, Euren Bauch zu küssen, eine nasse Spur mit ihrem Mund hinterlassend, beisst leicht mit ihren Zähnen, und streicht dann über Eure Männlichkeit. Eure Hüften dehnen sich vor, als sie den Rhythmus ihrer Liebkosungen vergrößert, bis Kiara plötzlich aufhört und Euch mit flachem Atem rasch keuchend zurücklässt, Euren Kopf zurückgeworfen vor Wonne und die Gefühle übermannen Eure verdunkelte Welt.
 
-"Willst Du zu mir?" fragt sie. 
+"Willst Du zu mir?" fragt sie.
 
-Ihr versucht zu sprechen, aber kein Ton kommt heraus. Sie sieht Euch schlucken, und ein heiseres "Ja" kommt schließlich heraus. Sie lächelt und leckt ihren Weg Euren Körper hinauf, hört auf, um an jedem Nippel zu kneifen, und endet damit, Eure Lippen lange und wohlig zu küssen.  
+Ihr versucht zu sprechen, aber kein Ton kommt heraus. Sie sieht Euch schlucken, und ein heiseres "Ja" kommt schließlich heraus. Sie lächelt und leckt ihren Weg Euren Körper hinauf, hört auf, um an jedem Nippel zu kneifen, und endet damit, Eure Lippen lange und wohlig zu küssen.
 
 Sie zieht sich wieder zurück und stellt sich hinter Euch, das Halstuch an Euren Handgelenken aufknotend. Kiara reibt Eure Handgelenke, um die Durchblutung wieder herzustellen, das plötzliche Rauschen des Bluts sendet gleichermaßen köstlichen Schmerz und weiter gesteigertes Vergnügen in Eure Hände. Sie reicht hoch und knotet die Augenbinde auf, und Ihr blinzelt in das plötzliche Licht, schwarze Punkte flimmern vor Euren Augen, als Ihr einen köstlichen Schmerz auf Eurer Schulter fühlt, der Euch stöhnen lässt. Als Ihr hinschaut, erkennt Ihr Kiaras Abdruck, Bißspuren, hinterlassen von ihren küssbaren Lippen.
 
@@ -1422,7 +1430,7 @@ Kiara geht hinüber zum Bett und legt sich auf den Berg von Kissen. Ihre Hände fa
 
 "Komm her" befiehlt sie, als sie ihren Finger in ihrem Mund steckt.
 
-Ihr geht langsam hinüber zum Bett und Kiara führt Euch zwischen ihre Beine. Ihre Hände ergreifen Euch grob und ziehen Euch weiter auf das Bett herunter; sie begräbt Euren Kopf in ihrem Liebesnest und drängt Euch nach vorn. Kiara schreit auf und zuckt ihre Hüften hoch, um Eure Zunge zu treffen, ihre Beine schließen sich wie ein Schraubstock um Euren Kopf, der Druck in Eurer Stirn erzeugt. 
+Ihr geht langsam hinüber zum Bett und Kiara führt Euch zwischen ihre Beine. Ihre Hände ergreifen Euch grob und ziehen Euch weiter auf das Bett herunter; sie begräbt Euren Kopf in ihrem Liebesnest und drängt Euch nach vorn. Kiara schreit auf und zuckt ihre Hüften hoch, um Eure Zunge zu treffen, ihre Beine schließen sich wie ein Schraubstock um Euren Kopf, der Druck in Eurer Stirn erzeugt.
 
 Kiara fängt an, laut zu schreien, und jeder Schrei wird unterstrichen durch ein weiteres Rucken zwischen ihren Schaudern und dem rasselnden Atem.
 
@@ -1432,16 +1440,16 @@ Kiara packt dann Eure Härte in sich und schiebt sich selbst auf Euch. Sie stöhnt
 
 Jedoch kommt endlich der Moment, und Ihr explodiert zwischen Vergnügen und Schmerz in Kiaras Umarmung, als Ihr beide aufs Bett fallt, einen letzten Atemzug teilend. Kiara schickt ein Lächeln in Eure Richtung, stößt Euch dann von sich ab, rollt Euch auf die andere Seite des Betts, bevor sie sich selbst über Eure bronzefarbene Brust legt, ihre Augen halbgeschlossen, und zufrieden murmelt "Meines..."~
 
-@9002 = ~Kiara sieht hinreißend aus, wie sie dort am oberen Ende der Treppe steht. Ihr schwingendes rotes Haar fließt in wasserfallartigrn Ranken über ihre Schultern nach unten zu ihren teilweise bedeckten, vollen Brüsten, ihre Robe achtlos über ihren Körper gezogen. Ihre Haut gleicht etwas Ähnlichem wie Alabaster mit einer Röte knapp darunter, und ihre Augen glühen mit einer unheimlichen, smaragdgrünen Gleichheit. Ihr wundert Euch aber, dass sie zu dieser Stunde überhaupt glühen. Ihr tretet in den Schatten des Treppengeländers zurück und wartet darauf, zu sehen, was Kiaras nächster Schritt sein wird. Ihr seht, dass sie schwer atmet, ihre Brüste heben sich und senken sich ebenso schnell auf ihre normalen Höhe. Sie hat feine  Schweißtröpfchen über ihrer Braue, während Ihr die Feuchtigkeit riechen könnt, die von ihrem Haar ausgeht, zusammen mit einem schwachen Geruch nach Flieder, Beweis dafür, dass sie gerade ein Bad nahm. 
- 
-Ihr spürt die Eile, die von ihr ausstrahlt, als sie den unteren Boden absucht. Ihr fühlt ein Anschwellen in Eurer Hose und strengt Euch an, Eure Gedanken im Zaum zu halten. Wie sehr Euer Körper sie wollte, wie sehr Eure muskulösen Arme sie halten wollten, eine wachsende Steigerung der Begierde erfasst Euren Körper, als Eure Gedanken sich an das erste Mal erinnern, als Ihr Liebe gemacht habt. Jetzt ist Eure Braue feucht von Schweißtröpfchen, eine einzelne salzige Schweißperle rinnt Eure Wange hinab. Euer Herz pocht gegen Eure Brust, als Ihr aus dem Schatten heraus tretet. Kiara ringt nach Luft, als sie Euch sieht und zieht sich in ihr Zimmer zurück. 
+@8002 = ~Kiara sieht hinreißend aus, wie sie dort am oberen Ende der Treppe steht. Ihr schwingendes rotes Haar fließt in wasserfallartigrn Ranken über ihre Schultern nach unten zu ihren teilweise bedeckten, vollen Brüsten, ihre Robe achtlos über ihren Körper gezogen. Ihre Haut gleicht etwas Ähnlichem wie Alabaster mit einer Röte knapp darunter, und ihre Augen glühen mit einer unheimlichen, smaragdgrünen Gleichheit. Ihr wundert Euch aber, dass sie zu dieser Stunde überhaupt glühen. Ihr tretet in den Schatten des Treppengeländers zurück und wartet darauf, zu sehen, was Kiaras nächster Schritt sein wird. Ihr seht, dass sie schwer atmet, ihre Brüste heben sich und senken sich ebenso schnell auf ihre normalen Höhe. Sie hat feine  Schweißtröpfchen über ihrer Braue, während Ihr die Feuchtigkeit riechen könnt, die von ihrem Haar ausgeht, zusammen mit einem schwachen Geruch nach Flieder, Beweis dafür, dass sie gerade ein Bad nahm.
+
+Ihr spürt die Eile, die von ihr ausstrahlt, als sie den unteren Boden absucht. Ihr fühlt ein Anschwellen in Eurer Hose und strengt Euch an, Eure Gedanken im Zaum zu halten. Wie sehr Euer Körper sie wollte, wie sehr Eure muskulösen Arme sie halten wollten, eine wachsende Steigerung der Begierde erfasst Euren Körper, als Eure Gedanken sich an das erste Mal erinnern, als Ihr Liebe gemacht habt. Jetzt ist Eure Braue feucht von Schweißtröpfchen, eine einzelne salzige Schweißperle rinnt Eure Wange hinab. Euer Herz pocht gegen Eure Brust, als Ihr aus dem Schatten heraus tretet. Kiara ringt nach Luft, als sie Euch sieht und zieht sich in ihr Zimmer zurück.
 
 Ihr rast die Stufen hoch, ihr nachjagend, und wisst, dass sie nicht sehr weit vor Euch ist. Eure Augen passen sich leicht an die Dunkelheit an und sehen, dass der Eingang frei ist. Plötzlich fühlt Ihr einen Luftzug hinter Euch, von der Rückseite der geöffneten Tür, und Ihr streckt eine Hand aus, erfasst Kiara an ihrem Arm und schwingt sie herum, bis sie vor Euch steht. Ihr Mund öffnet sich, und Ihr fühlt den heißen Atem, der ihr entweicht, und sie leckt sich die Lippen, als sie wispert: "Seid Ihr meiner Aufmerksamkeit würdig?"
 
 Sie greift hervor und beginnt, Eure Finger zu küssen, und lässt ihre einladende Zunge  einem Finger entlang gleiten. Ihr verliert Euch fast vor Leidenschaft, als Ihr einen stechenden Schmerz fühlt und seht, dass Kiara Euch in die Hand gebissen hat. Sie lächelt, als sie fortfährt: "Seid... Euch... meiner... nicht... sicher..."
 Ihre Augen weiten sich, und Ihr könnt in die Tiefen jener smaragdgrünen Ringe sehen. Ihre Brust hebt sich mit ihrem Atmen. Ihr kommt näher und fühlt Euch wie im Himmel, als ihre festen Brüste mit Eurer Brust zusammenstoßen. Ihr fühlt ihre Nippel durch ihre Kleidung hindurch hart werden. Ihr findet Eure Selbstbeherrschung wieder, als Kiaras hypnotisierender Blick Euch bannt und Euch von allen außer den grundlegendsten Gedanken befreit. Der einzige Gedanke in Eurem Sinn ist, wie es sich anfühlen würde, wenn ihre Lippen sich auf Eure pressen. Ihr erliegt Euren Gelüsten und lehnt Euch vor.
 
-Als sich Eure Lippen um ihre schließen, hört Ihr ein Geräusch tief aus Kiaras Kehle aufsteigen, eines der Begierde und Vorfreude. Ihr fühlt den Widerstand von ihr schwinden, als Eure Lippen über ihre streifen und ihr Mund sich begierig öffnet. Eure Zunge erlangt Zugang zu den dunklen Ecken ihres Mundes, ihr Mund noch süß vom Wein, den sie zuvor an diesem Abend trank.  
+Als sich Eure Lippen um ihre schließen, hört Ihr ein Geräusch tief aus Kiaras Kehle aufsteigen, eines der Begierde und Vorfreude. Ihr fühlt den Widerstand von ihr schwinden, als Eure Lippen über ihre streifen und ihr Mund sich begierig öffnet. Eure Zunge erlangt Zugang zu den dunklen Ecken ihres Mundes, ihr Mund noch süß vom Wein, den sie zuvor an diesem Abend trank.
 
 So also schmeckt die Leidenschaft, denkt Ihr Euch, ein Geschmack des Himmels. Eure Hände kommen zu Kiaras feurigem Haar herauf, noch feucht von ihrem Bad, Ihr zieht ihren Kopf zurück und gierig ergötzt Ihr Euch an ihrem Hals. Eure Lippen können nicht genug Haut bedecken, können nicht genug von ihrem Samt verschlingen, können nicht genug von ihr kosten. Sie keucht, als Eure Zähne leicht in ihre Schulter beißen. Kiara zittert in Euren Armen, ihre Anwesenheit entfacht eine glühende Leidenschaft in Euch. Ihre Arme umgreifen Euren Rücken, die Finger bohren sich in Euren Hosenbund. Kiara drückt sich enger an, ihre Lippen naschen an an Euren Mundwinkeln. Die Hände in ihrem Haar ziehen sie leicht von Euch zurück, so dass sie Euch wieder ins Gesicht sieht.
 
@@ -1449,8 +1457,8 @@ So also schmeckt die Leidenschaft, denkt Ihr Euch, ein Geschmack des Himmels. Eu
 
 Sie knabbert an Euch mit ihrem herzförmigen Mund, und sagt gereizt: "Ich möchte eine Antwort von Euch..."
 
-Ihr seht, wie sich Ihre Mundwinkel verziehen, als sie auf eine Antwort wartet. Eure Gefühle entbrennen in einem Wirbelsturm aus Liebe und Begierde, und Ihr antwortet ihr, indem Ihr eine Hand aus ihrem Haar herauszieht und sie senkt, so dass Ihr freien Zugang zu ihrer Brust habt. Eure andere Hand befreit sich aus ihrem Haar und öffnet flink ihre Robe auf der Vorderseite und Ihr genießt die Ansicht. Cremeweiße Brüste mit sienafarbenen Nippeln, schmerzhaft hart, sind beinahe mehr, als Ihr zu sehen ertragen könnt. Ihr zieht Euren Mund zu einer geschwollene Spitze zusammen und beginnt zu saugen. Kiaras Kopf fällt nach hinten und ein weiches Stöhnen entkommt ihrem Mund. Eure Hand öffnet Kiaras Robe weiter, um es ermöglichen, nach unten zu gleiten und ihre geschmeidige Gestalt zu entblößen. Als sich Kiara unter Eurer Berührung krümmt, wünscht Ihr plötzlich, in die flüssige Jade von Kiaras Augen zu starren, so wie Ihr Euch selbst in sie ergießt. Ihr senkt sie zu Boden und nehmt Eure eigene Kleidung ab, das Mondlicht gibt Euren gut getönten Körper preis, die Dunkelheit verbirgt die schwachen Narben, die Ihr während Eurer Reisen erworben habt. Ihr streckt Euch neben ihr aus, Kiaras Hände wandern über Euren Körper, berühren dies und streicheln das, jede Liebkosung sendet einen elektrischen Impuls   durch Euren Körper. Ihr atmet in tiefen Zügen, als Kiara Eure Männlichkeit findet und liebkost und dadurch ein wildes, wellenartiges Beben durch Euren Körper und in ihrer Hand in bewirkt. 
- 
+Ihr seht, wie sich Ihre Mundwinkel verziehen, als sie auf eine Antwort wartet. Eure Gefühle entbrennen in einem Wirbelsturm aus Liebe und Begierde, und Ihr antwortet ihr, indem Ihr eine Hand aus ihrem Haar herauszieht und sie senkt, so dass Ihr freien Zugang zu ihrer Brust habt. Eure andere Hand befreit sich aus ihrem Haar und öffnet flink ihre Robe auf der Vorderseite und Ihr genießt die Ansicht. Cremeweiße Brüste mit sienafarbenen Nippeln, schmerzhaft hart, sind beinahe mehr, als Ihr zu sehen ertragen könnt. Ihr zieht Euren Mund zu einer geschwollene Spitze zusammen und beginnt zu saugen. Kiaras Kopf fällt nach hinten und ein weiches Stöhnen entkommt ihrem Mund. Eure Hand öffnet Kiaras Robe weiter, um es ermöglichen, nach unten zu gleiten und ihre geschmeidige Gestalt zu entblößen. Als sich Kiara unter Eurer Berührung krümmt, wünscht Ihr plötzlich, in die flüssige Jade von Kiaras Augen zu starren, so wie Ihr Euch selbst in sie ergießt. Ihr senkt sie zu Boden und nehmt Eure eigene Kleidung ab, das Mondlicht gibt Euren gut getönten Körper preis, die Dunkelheit verbirgt die schwachen Narben, die Ihr während Eurer Reisen erworben habt. Ihr streckt Euch neben ihr aus, Kiaras Hände wandern über Euren Körper, berühren dies und streicheln das, jede Liebkosung sendet einen elektrischen Impuls   durch Euren Körper. Ihr atmet in tiefen Zügen, als Kiara Eure Männlichkeit findet und liebkost und dadurch ein wildes, wellenartiges Beben durch Euren Körper und in ihrer Hand in bewirkt.
+
 Kiara blickt Euch in die Augen, öffnet ihren Mund, als ob sie etwas sagen wollte, aber Eure Lippen kommen genau dann auf ihre herunter und ersticken, was immer sie gerade sagen wollte. Eure Hand findet sie, süß nass und geschwollen. Sie wölbt sich gegen Eure Hand und fühlt ihre Gliedmaßen gefühllos werden. Kiaras Moschusgeruch wird in die Nachtluft getragen, und ihr Körper pocht unter Eurer Berührung. Ihr streichelt sie einmal, zweimal, und Ihr fühlt Kiara schaudern, als Wellen von Vergnügen durch sie hindurch jagen. Ihr beginnt, wieder über sie zu streicheln, und Kiara zittert gegen Euch, Stöhnen entkommt ihrem Mund, und bald wölbt sie sich gegen Euch und atmet flach, als Ihr plötzlich anhaltet. Kiaras Augen blitzen auf, und ein gefährlicher Schimmer steigt in ihren Schlitzaugen auf.
 
 Auf einmal ist etwas viel Weicheres an der Stelle ihrer Weiblichkeit. Besänftigt sie und gleitet mühelos in sie. Auf sie und in sie. Kiara schließt ihre Augen wieder, beugt ihren Kopf nach hinten, als Eure Zunge über ihr Herzstück streicht, wieder und immer wieder. Kiara Beine spannen sich, und ihre Beine umklammern Euch, und ein Schrei zerschneidet die Stille der Nacht, als die Welle des Vergnügens, das sie umgibt, sie in allen Gliedmaßen prickelnd zurücklasst, ihre Augen glasig, ihr Körper noch gespannt.
@@ -1459,8 +1467,8 @@ Auf einmal ist etwas viel Weicheres an der Stelle ihrer Weiblichkeit. Besänftigt
 
 Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, und ziehen Euch fest heran. Sie liebkost sanft Eure Wange, küsst die Schweißperlen fort und flüsternt: "Ich liebe Dich..."~
 
-//ZAIYA.D: ZAIYA JOIN DIALOGS
-
+// ZAIYA.D: ZAIYA JOIN DIALOGS
+// ---------------------------
 @3000 = ~Bitte helft mir, bitte... Diese Sklavenhändler scheinen nicht zu verstehen, oder es interessiert sie einfach nicht! Ich leide an einer Krankheit und nur meine Freundin Kiara kann mich heilen. Bitte helft mir, meine Freundin zu finden.~ [ZAYAL1]
 @3001 = ~Ich werde Euch helfen, aber die Geschichte scheint mir etwas verworren zu sein.  Könnt Ihr mir mehr über Eure Krankheit erzählen?~
 @3002 = ~Wer seid Ihr und woher kommt Ihr? Ich verstehe Eure Bitte nach Hilfe nicht.~
@@ -1484,7 +1492,8 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @3020 = ~Ich bin verloren. Eher bringe ich mich jetzt um, als diesen Schmerz und dieses Leid zu ertragen.~ [ZAYAL8]
 @3021 = ~Ich verstehe Euer Verlangen nach Rache, aber meine Aufgabe ist dringender, <CHARNAME>. Ich werde sterben, wenn wir meine Freundin nicht innerhalb von zehn Tagen finden.~
 
-//ZAIYAP.D ZAIYA LEAVE/REJOIN DIALOGS
+// ZAIYAP.D ZAIYA LEAVE/REJOIN DIALOGS
+// -----------------------------------
 @3200 = ~Es tut mir Leid <CHARNAME>, manchmal verstehe ich sie zwar auch nicht, aber ich muss bei ihr bleiben.~
 @3201 = ~Ich verstehe! Kiara wurde von Bodhi entführt, und nun wollt Ihr mich los werden. Wie verachtenswert von Euch!~
 @3202 = ~Ich danke Euch, <CHARNAME>, dass Ihr Kiara gefunden habt. Ich werde mit ihr gehen und wünsche Euch viel Glück, das Ihre Eure Schwester findet.~
@@ -1514,7 +1523,8 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @3226 = ~Um ehrlich zu sein, wartet hier. Es wird nicht lange dauern.~
 @3227 = ~Ihr habt endgültig Eure Meinung geändert~
 
-//ZAIYAJ.D: ZAIYA GAME INTERJECTIONS
+// ZAIYAJ.D: ZAIYA GAME INTERJECTIONS
+// ----------------------------------
 @3400 = ~<CHARNAME>, wir müssen einen Weg finden, Kiara zurückzuholen! Ich kann ohne sie nicht leben.~
 @3401 = ~Kiara ist tot und Ihr verlasst mich? Ihr seid wirklich verabscheuungswürdig, <CHARNAME>.~
 @3402 = ~NEIN! Wie konnte das passieren?... ,da Kiara tot ist, werde ich auch sterben und das bald!~
@@ -1575,7 +1585,8 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @3457 = ~Ich stimme Zaiya zu. Ihr seid nicht anders geworden, als die Männer, welche ich am meisten verachte.~
 @3458 = ~Hört auf zu brabbeln und bereitet Euch darauf vor, mich in den Tod zu begleiten.~
 
-//BZAIYA.D: ZAIYA'S BANTER FILE
+// BZAIYA.D: ZAIYA'S BANTER FILE
+// -----------------------------
 @3700 = ~Ihr habt auch meinen Tod zu verantworten, <CHARNAME>. Ich hoffe, es hinterlässt bei Euch einen faden Beigeschmack, lange nachdem Kiara und ich fort sind.~
 @3701 = ~Diese Reise erinnerte mich an die Reise von Afyal hierher, wo wir eingepfercht und angekettet in dem Sklavenschiff saßen. Ich schwöre, ich werde nie wieder einen Fuß auf ein Schiff setzen.~
 @3702 = ~Hier, lasst mich einen Zauber wirken, um es Euch zu zeigen.~
@@ -1676,7 +1687,7 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @3797 = ~Ich hoffe für Euch, Mädchen, das es das nicht ist. Was wir diesem Magier antaten, wollt Ihr nicht wissen.~
 @3798 = ~Was habt Ihr ihm angetan?~
 @3799 = ~Wir zerhackte den verdammten Zauberer in Stücke und verfütterten ihn an die Krähen. Seid gewarnt, Mädchen. Ihr könntet mich in ein Eichhörnchen verwandeln, aber bastelt nicht mit dem Gold herum.~
-@3800 = ~Ich liebe diese Bücher. Sie... sie sind alles, was ich habe.~ 
+@3800 = ~Ich liebe diese Bücher. Sie... sie sind alles, was ich habe.~
 @3801 = ~Ihr solltet Euch Zeit nehmen, um Mutter Natur zu bewundern und frische Luft zu atmen, es würde bestimmt Eure Gesundheit verbessern.~
 @3802 = ~Ich könnte eines Tages ein Heilmittel gegen meinem Fluch in einem dieser Bücher  finden.~
 @3803 = ~Ich bedauere Euch, Mädchen, und ich hoffe aufrichtig, dass Ihr einen Weg aus diesem Fluch finden werdet.~
@@ -1708,13 +1719,12 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @3829 = ~Zaiya, ich weiß, dass das nicht Euer Kampf ist, aber Ihr wollt jetzt nicht abspringen, stimmt's?~
 @3830 = ~Zaiya, Ihr miese Frau, was habt Ihr Boo angetan! Warum sieht er wie ein Huhn aus und spricht so? ~ [MxZaiyaA]
 @3831 = ~Minsk, warum beklagt IhEuch? Dieser Hamster von Euch war nutzlos. Jetzt wenigstens können wir jeden Morgen frische Eier haben.~
-@3832 = ~Eier? Nein. Das macht mir Appetit. Ich sage, lasst uns das Vöglein jetzt braten...~ 
+@3832 = ~Eier? Nein. Das macht mir Appetit. Ich sage, lasst uns das Vöglein jetzt braten...~
 @3833 = ~Sagt mir, Minsk, irre ich mich, oder sehe ich ein riesiges Weltraumhuhn?~
 @3834 = ~Minsk wird Euch allen in Eure bösen Ärsche treten, Euch allen. Ich will Boo zurück!!!~
 @3835 = ~Sein Gackern treibt mich waaaaahnsinnig...~
 
-
-//Zaiya Cernd romance banter 1
+// Zaiya Cernd romance banter 1
 @3850 = ~Cernd, ich möchte Euch etwas fragen.~ [MxZaiyaA]
 @3851 = ~Sicherlich, Zaiya. Was wollt Ihr wissen?~
 @3852 = ~Warum prallet Ihr nicht aus Entsetzen vor mir zurück? Es gibt viele, die wilde Magier rundheraus hassen, aber Ihr tut es nicht. Eher scheint Ihr mit meiner Anwesenheit durchaus einverstanden zu sein.~
@@ -1729,7 +1739,7 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @3861 = ~Das kann sein, aber sogar Ihr müsst zugeben, dass, wenn meine Magie fehlschlägt und jemand zum Stück Geflügel wird, das dem Gleichgewicht nicht wirklich hilft, oder? ~
 @3862 = ~Nein, aber es nimmt ihm auch nichts davon weg.~
 @3863 = ~(Plötzlich bemerkt Zaiya, dass Cernds Hand auf ihrer ist, und sie zieht sie schnell weg.)~ //Zai
-//Second Scene for Cernd-Zaiya
+// Second Scene for Cernd-Zaiya
 @3864 = ~Ich glaube, dass ich Euch eine Entschuldigung schulde, Cernd.~ [MxZaiyaA]
 @3865 = ~Oh, hallo Zaiya. Es tut mir Leid, dass; Ihr habt mich ganz geistesabwesend erwischt. Vielleicht würdet Ihr gerne Eure Gedanken zu erklären, aber wofür müsst Ihr Euch entschuldigen? ~
 @3866 = ~Ich fürchte ich habe das letzte Mal als wir redeten etwas falsches gesagt. Es war nicht meine Absicht, zu versuchen den Lebenslauf, den Ihr wähltet, in Zweifel zu ziehen, weil ich die Feinheiten der druidischen Hierarchie nicht kenne. Es scheint mir, dass Ihr nicht der Natur dient, sondern eher den Bedürfnissen derer, die sich herausnehmen, für die Natur zu sprechen.~
@@ -1739,13 +1749,13 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @3870 = ~Muss ich darauf hinweisen, dass alle Verhaltensweisen von Wesen einer Rangordnung treu sind? Was ist mit Wölfen in einem Rudel, oder Bienen in einem Bienenstock?~
 @3871 = ~Ich muss einige Gefühl berührt haben, weil Eure Analogien nicht klar durchdacht sind... denn Tiere sind anders als Menschen vom Instinkt treu, und ihre Bindung ist von der ursprünglichsten, wenn nicht stärksten Art... die Bindung zur eigenen Familie, zur eigenen Gattung...~
 
-//Cernd-Zaiya third scene
+// Cernd-Zaiya third scene
 @3872 = ~Cernd ...~ [MxZaiyaA]
 @3873 = ~Was ist es jetzt, Zaiya? Kommt Ihr jetzt, um eine meiner grundlegendenen Überzeugungen zu untergraben und mich von meinem Inneren zu beschneiden so wie ein Holzbohrer-Käfer die mächtigste Eiche fällen kann? ~
 @3874 = ~Nein Cernd, ich komme nicht, um so etwas zu machen. Ich dachte bloß, um mich für meine Vermutung zu entschuldigen, aber ich sehe, dass Ihr noch über meine Worte böse seid. Entschuldigt, ich werde Euch so bleiben lassen. Ich hätte überhaupt nichts sagen sollen.~
 @3875 = ~Warum beschäftigt Ihr Euch dann überhaupt mit meinen Angelegenheiten, Zaiya? ~
 @3876 = ~Ich... Ich weiß es nicht, Cernd.~
-//cernd-zaiya fourth scene
+// Cernd-Zaiya fourth scene
 @3877 = ~Wem verantwortet Ihr Euch, Cernd?~ [MxZaiyaA]
 @3878 = ~Entschuldigt, Zaiya? Ich fürchte, dass ich Eure Frage missverstanden haben kann.~
 @3879 = ~Wem verantwortet Ihr Euch, Cernd, für Eure Taten? ~
@@ -1754,7 +1764,7 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @3883 = ~Es kann sein, dass wir Druiden uns selbst in unserer Vorstellung der Natur täuschen, obwohl ich es bezweifle. Gleichgewicht muss aufrechterhalten werden, aber die Leute sind nicht notwendigerweise Geschöpfe des Gleichgewichtes, also müssen wir Druiden es selbst geltend machen. Jedoch muss ich zugeben, dass ich neugierig bin auf den Grund hinter dieser Fragestellung.~
 @3884 = ~Einfach. Was hat mit der Natur eins zu sein damit zu tun, den Zielen eines anderen zu dienen? Besonders, wenn es Euch außerhalb des dem Gleichgewichts stellt.~
 @3885 = ~Zaiya, wir müssen reden... ~ [MxZaiyaA]
-//Cernd-Zaiya no 5
+// Cernd-Zaiya no 5
 @3886 = ~(Zaiyas Stimme ist leise, kleinlaut.) Ja, Cernd, was ist es? Seid Ihr gekommen, um endlich Eurem Ärger Luft zu machen, der sich bestimmt in Eurer Brust aufgestaut hat? Seid Ihr gekommen, um mich für das Halten Eurer Hand zu schelten? Nun gut, da habt Ihr's.~
 @3887 = ~Ich will nicht lügen, Zaiya, die Worte, die Ihr spracht, verursachten wirklich einen Aufruhr in meines Geistes und Herzens. Immerhin, wer mag das Fundament, auf das sie ihren Glauben bauen, auseinander brechen? Aber bei alledem habe ich etwas begriffen.~ @3888 = ~Ja, Cernd, was ist es? ~
 @3889 = ~Eure Worte fanden fruchtbaren Boden. Wwohlgemerkt, ich denke immer noch, dass es Pflichten gibt, um die ich mich kümmern muss, aber hinsichtlich meines Sohns habt Ihr völlig Recht.~
@@ -1766,15 +1776,17 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @3895 = ~Genauer gesagt, es könnte etwas in der druidischen Überlieferung geben, das Euren Kummer heilen könnte.~
 @3896 = ~(Nicht ohne etwas Widerwillen zieht Zaiya ihre Hand aus Cernds zurück.) Ich... Cernd... Ich... Ich bin beeindruckt, dass Ihr so etwas für mich tun würdet, aber...~
 @3897 = ~(Zaiya lässt ihren Kopf hängen, ein Funke stiller Verzweiflung glänzt in ihren mitTränen gefüllten Augen.) Ich hatte zu viele Beispiele von falscher Hoffnung. Ich bin nicht... Ich werde nicht gehen... verscwindet... Oh Cernd, geht einfach weg, ja?~
-//END SOA Cernd-Zaiya banter
+// END SOA Cernd-Zaiya banter
 
-//AMAEVIL.D: AMARALIS IN CHAPTER 2
+// AMAEVIL.D: AMARALIS IN CHAPTER 2
+// --------------------------------
 @5000 = ~Ah, <CHARNAME>! Ich habe von Euch gehört! Ihr kommt wegen dem Flittchen, nicht wahr?~
 @5001 = ~Ja, Sklavenhändler. Seid gewarnt: Wenn Ihr sie nicht sofort freilasst, bin ich gezwungen, Euch zu töten.~
 @5002 = ~Ich gebe Euch einen Rat, Sklavenhändler. Lasst sie jetzt frei und Ihr kommt hier vielleicht unverletzt raus.~
 @5003 = ~Ihr habt keine Ahnung, mit wem Ihr sprecht. Ihr seid weder eine Bedrohung für einen Kobold, noch für mich. Eure lächerliche Gruppe von Vagabunden und Raufbolden wird schon bald um Gnade winseln... Bereitet Euch auf Euren Tod vor!~
 
-//C6AMA.D: AMARALIS IN CHAPTER 6
+// C6AMA.D: AMARALIS IN CHAPTER 6
+// ------------------------------
 @5100 = ~Ah! Der Welpe hat sich in einen grimmigen Hund verwandelt, wie ich sehe! Ich wünschte, ich könnte sagen, dass es mir leid tut, Euch zu töten, aber das kann ich nicht!~
 @5101 = ~Ihr seid konsequent in Eurer Arroganz, Sklavenhändler. Ich werde Euren Kopf auf einem Teller servieren.~
 @5102 = ~Schaltet einen Gang zurück, Lakai. Ihr seid ein Ärgernis, das ich gerne unter meinem Stiefel zerquetsche.~
@@ -1783,7 +1795,8 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @5105 = ~Dann eben auf Eure Weise... Sterbt mit den anderen Dummköpfen.~
 @5106 = ~Ein verlockendes Angebot, aber... nein danke!~
 
-//DELORD.D: DEMON LORD
+// DELORD.D: DEMON LORD
+// --------------------
 @5200 = ~**KIARA IHR SEID DER GRUND FÜR UNSER VERSAGEN. ES IST ZEIT FÜR EUCH, DEN ABYSS KENNENZULERNEN..**~ [DELORDL1]
 @5201 = ~Wartet~
 @5202 = ~(Bleibt still.)~
@@ -1798,17 +1811,17 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @5211 = ~Nun, da Ihr das bekommen habt, weswegen Ihr gekommen seid, Dämon, wünsche ich mehr über diesen Handel zu erfahren.~
 @5212 = ~Warum habt Ihr diese Konfrontation erzwungen?~
 @5213 = ~**VOR LANGER zEIT WAREN WIR FASZINIERT VON KIARAS BITTE UM RACHE AN EINEM MÄCHTIGEN BHAALSPROSS, BALTHAZAR.** ~
-@5214 = ~**BHAAL HAT EINEN LEEREN THRON ZURÜCKGELASSEN, UND VIELE MEINER ART SIND ZUNEHMEND AUF DER HUT, DASS JEMAND OHNE RECHTMÄSSIGEN MAKEL EINES TAGES ÜBER UNS HERRSCHEN WÜRDE.**~  
+@5214 = ~**BHAAL HAT EINEN LEEREN THRON ZURÜCKGELASSEN, UND VIELE MEINER ART SIND ZUNEHMEND AUF DER HUT, DASS JEMAND OHNE RECHTMÄSSIGEN MAKEL EINES TAGES ÜBER UNS HERRSCHEN WÜRDE.**~
 @5215 = ~**VIELE BHAALSPROSSE WURDEN GEBOREN, ABER WAHRSCHEINLICH WERDEN WENIGE DEN VON ALAUNDO PROPHEZEITEN KRIEG ÜBERLEBEN. NUR DIEJENIGEN MIT BETRÄCHTLICHEN MÄCHTEN WERDEN UNSERER PRÜFUNG UNTERZOGEN.**~
 @5216 = ~**WIR ENTSCHIEDEN, DASS KIARA ZU HELFEN UNSERE AUFMERKSAMKEIT WERT WAR. IST SCHLIESSLICH NICHT EIN MÄCHTIGER BHAALSPROSS WENIGER AUCH EINE BEDROHUNG WENIGER GEGEN UNSERE SACHE?**~
-@5217 = ~**IHR SEID STARK GEWORDEN, <CHARNAME>, UND HABT VIELE ENTWEDER KALTBLÜTIG GETÖTET ODER AUF DEN SCHLACHTFELDERN. EURE TATEN HABEN EUCH EINIGEN RESPEKT IN MEINER SIPPE EINGEBRACHT.**~ 
-@5218 = ~**ABER EURE SEELE STINKT NACH RECHTSCHAFFENHEIT UND EUREM BESTREBEN, GERECHTIGKEIT WALTEN ZU LASSEN UND MORALISCHE WERTE HOCHZUHALTEN, EINE BEHINDERUNG UNSERER WAHREN MOTIVE UND NATUR.**~ 
+@5217 = ~**IHR SEID STARK GEWORDEN, <CHARNAME>, UND HABT VIELE ENTWEDER KALTBLÜTIG GETÖTET ODER AUF DEN SCHLACHTFELDERN. EURE TATEN HABEN EUCH EINIGEN RESPEKT IN MEINER SIPPE EINGEBRACHT.**~
+@5218 = ~**ABER EURE SEELE STINKT NACH RECHTSCHAFFENHEIT UND EUREM BESTREBEN, GERECHTIGKEIT WALTEN ZU LASSEN UND MORALISCHE WERTE HOCHZUHALTEN, EINE BEHINDERUNG UNSERER WAHREN MOTIVE UND NATUR.**~
 @5219 = ~**WAS, WENN EINES TAGES UND IN EINER UNWAHRSCHEINLICHEN WENDE DES SCHICKSALS EUCH DER THRON DES MORDES ÜBERLASSEN WERDEN WÜRDE?**~
 @5220 = ~Ich sehe. Ihr wolltet vermeiden, dass vielleicht eine gute Seele vom Thron des Mordes herrscht.~
 @5221 = ~**KIARA ERWIES SICH ALS EINE WERTVOLLE GELEGENHEIT, SOLCHE BEDROHUNG ZU VERMEIDEN, SEITDEM AO, DER ÜBERVATER, JEDES EINGREIFEN VERBOT. JEDOCH VERSAGTE SIE, UND SIE SOLL JETZT MIT UNS KOMMEN MÜSSEN.**~
 @5222 = ~Ich möchte, dass Kiara an meiner Seite bleibt. Könnte ich Euch nicht mit einem Vorschlag locken?~
 @5223 = ~Sie verdient sicherlich, für diesen Verrat zu sterben. Sie seid frei zu tun, was immer Ihr mit ihr tun wollt.~
-@5224 = ~**IHR HABT NICHTS, WAS ICH WIRKLICH WILL... ABER WENN IHR KIARA EIN BISSCHEN LÄNGER BEHALTEN MÖGT, KONNTET IHR EINE WEITERE TAT DURCHFÜHREN, DIE EUEN WERT BEWEISEN WIRD.**~ 
+@5224 = ~**IHR HABT NICHTS, WAS ICH WIRKLICH WILL... ABER WENN IHR KIARA EIN BISSCHEN LÄNGER BEHALTEN MÖGT, KONNTET IHR EINE WEITERE TAT DURCHFÜHREN, DIE EUEN WERT BEWEISEN WIRD.**~
 @5225 = ~Welche Art von Tat?~
 @5226 = ~Nein, das werde ich nicht tun!~
 @5227 = ~**SEHR GUT ABER ZUERST WILL ICH, DASS IHR AMARALIS FÜR MICH LOSWERDET. WIR HATTEN EINE ABMACHUNG, DIE ER NICHT EINGEHALTEN HAT. SOLCHER VERRAT VERDIENT DEN TOD. IHR WERDET IHN IM KLEINEN ZAHN-PASS FINDEN. IHR HABT ZEHN TAGE ZEIT. WENN IHR ERFOLGREICH SEID, GEBE ICH EUCH EINEN LETZTEN AUFTRAG.**~
@@ -1821,7 +1834,7 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @5234 = ~Nun gut, eine teufliche Aufgabe soll es ein.~
 @5235 = ~**IHR SEID BETRÜGERISCH, BHAALBRUT. OFFENSICHTLICH HABT IHR KEINERLEI INTERESSE DARAN, DAS MÄDCHEN AN EURER SEITE ZU BEHALTEN.**~
 @5236 = ~*WIRKLICH AUSGEZEICHNET. ES SCHEINT, KIARA WAR LETZTENDLICH ERFOLGREICH.**~
-@5237 = ~**IHR ERSTER TEST SOLLTE EINEM ANDEREN BHAALSPROSS EINEN SCHLECHTEN MAKEL GEBEN. IHR MISSERFOLG HÄTTE EIN GRAUSAMERES SCHICKSAL BEDEUTET ALS SELBST DER TOD. DIE ABYSS IST BEI MISSERFOLGEN UNVERZEIHLICH.**~ 
+@5237 = ~**IHR ERSTER TEST SOLLTE EINEM ANDEREN BHAALSPROSS EINEN SCHLECHTEN MAKEL GEBEN. IHR MISSERFOLG HÄTTE EIN GRAUSAMERES SCHICKSAL BEDEUTET ALS SELBST DER TOD. DIE ABYSS IST BEI MISSERFOLGEN UNVERZEIHLICH.**~
 @5238 = ~Ihr hättet viele andere wählen können. Sind die Kinder Bhaals nicht unzählig?~
 @5239 = ~Warum ich?~
 @5240 = ~**IHR SEID STARK GEWORDEN, <CHARNAME>, UND HABT VIELE FEINDE KALTBLÜTIG GETÖTET, WAS EUCH EINIGEN RESPEKT IN MEINER SIPPE EINGEBRACHT HAT.**~
@@ -1856,7 +1869,8 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @5269 = ~Wenn der Bhaalspross sich nicht den Kräften des Bösen anschließen mag, werde ich <PRO_HIMHER> mit Freuden für Euch töten!~
 @5270 = ~**ICH WERDE EUCH IN DREI TAGEN TREFFEN, BHAALBRUT.**~
 
-//JERLIA.D: JERLIA
+// JERLIA.D: JERLIA
+// ----------------
 @5400 = ~Bitte helft! (Schluchzen) Er stahl meine Seele... (Schluchzen), ich bitte Euch... (Schluchzen)... helft mir, meine Seele zu finden...~
 @5401 = ~Habt keine Angst. Ich werde Euch zur Ruhe bringen. Sterbt, Geist!~
 @5402 = ~Ich wäre froh, Euch zu helfen, wenn Ihr mir mehr erzählen würdet...~
@@ -1868,7 +1882,7 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @5408 = ~Oh nein, bitte... (Schluchzen)... Ich brauche Eure Hilfe... (Schluchzen)~
 @5409 = ~Also gut dann, erzählt mir, wie ich Euch helfen kann.~
 @5410 = ~Findet einen anderen Handlanger, um Eure Seele zu finden. Ich kann Euch nicht helfen.~
-@5411 = ~Sein Name ist Endragor... (Schluchzen)... Aber ich weiß nicht, wo er jetzt ist...~ 
+@5411 = ~Sein Name ist Endragor... (Schluchzen)... Aber ich weiß nicht, wo er jetzt ist...~
 @5412 = ~Wo denkt Ihr würde sich das stinkende Biest verbergen?~
 @5413 = ~Vergesst es, ich werde nicht quer über das Land nach einem Dämon suchen.~
 @5414 = ~Er könnte sich in einem alten Tempel im Norden verbergen... (Schluchzen)... vielleicht in einer Höhle... Ich... Ich weiß nicht... (Schluchzen)... Ich bin hier schon so lange gefangen. ~
@@ -1890,7 +1904,8 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @5430 = ~Am Ende bewies sich Eure Liebe als die stärkste und ich kann fühlen, dass sich Kiara an Eurer Seite geändert hat, wie sie Euch an ihrer geändert hätte. Ich wünsche Euch alles Gute...~
 @5431 = ~Lebt wohl, <CHARNAME>.~
 
-//PRAX.D: PRAX
+// PRAX.D: PRAX
+// ------------
 @5600 = ~Hier drüben, lieber <PRO_SIRMAAM>! Seid Ihr vielleicht am Erwerb einiger Sklaven interessiert?~
 @5601 = ~Ah! Ich erkenne diese Dame dort. Ich hatte sie an einen Freund von mir verkauft.~
 @5602 = ~Oh... das lässt darauf schließen, dass Ihr ihn getötet habt!?~
@@ -1933,26 +1948,25 @@ Ihr brecht auf Kiara zusammen, und ihre Arme kommen nach oben, umringen Euch, un
 @5639 = ~Habt Ihr das Geld?~
 @5640 = ~Ich werde nicht kampflos aufgeben.~
 @5641 = ~Nein... Ich bin zu jung zu sterben... Hilfe...~
-//TOB Ends
 
-
-//TOB Ends
+// Epilogues: TOB Ends
+// -------------------
 @9100 = ~Nachdem die Ereignisse der Zeit der Bhaalbrut hinter ihnen lagen, bewiesen Kiara und <CHARNAME> eine Verbindung, die im Himmel geschlossen wurde. Für eine Weile richteten sie sich in Athkatla ein und versuchten, ein einfaches, aber bequemes Leben zu führen. <CHARNAME> wurde bald nach dem plötzlichen Tod des Meisarch ein Platz im Rat der sechs angeboten, lehnte aber auf Kiaras Drängen ab. Sie konnte sich nicht mit der vorstellung anfreunden, eine einfache Hausfrau zu werden und schleppte <CHARNAME> wieder auf die Straße und verlockte ihn mit einem Besuch in ihrem Heimatland Kara Tur.
 Die Legende behauptet, dass während eines Aufenthalts in Afyal der Dämonfürst Kiara noch einmal besuchte, nur um sein Versprechen zu verleugnen und Kiara in den Abgrund zu bringen. <CHARNAME> verfolgte dem Dämonenfürsten mit Hilfe von Cyric, dem herrschenden Gott des Mords, der lange auf eine Gelegenheit gewartet hatte, Rache an dem Dämonenfürsten für seinen Verrat zu nehmen. Nachdem sich die beiden in den schattigen Tiefen der Ebene des Dämons vereinigten, besagt die Legende weiter, dass das folgende Gemetzel den Abgrund eintausend Jahre lang narbenbedeckt zurückgelassen hat. Kiara und <CHARNAME> bekämpften und töteten selbständig  unzählige Dämonen einschließlich eines wilden Dämonenprinzen, bevor sie unverletzt durch den Schicksalsberg entkamen. Ein beharrliches Gerücht spricht davon, dass Ardic Kiara und <CHARNAME> versprach, sie würden über die Abyss nach dem Ende ihrer sterblichen Existenz herrschen. Jedoch bestätigten weder Kiara noch <CHARNAME> jemals jene Berichte, und danach gefragt, starren sie einfach einander an und fangen an zu lachen.
-Nach dem Schicksalsberg gingen sie nach Kara Tur weiter, und Kiara führte <CHARNAME> zu ihrem alten Kloster, wieder ein friedliebender und erholsamer Ort, frei von Balthazars Faustherrschaft. Ein Ort, an dem Kiara bald einen männlichen Erben zur Welt bringen sollte, der den Namen und das Erbe seines Vaters stolz tragen würde und im Laufe der Jahre zu einem wilden und berühmten Mönch aufwuchs. Kiara starb jedoch bei der Entbindung trotz der Versuche der Mönche, sie zu heilen. Eine lange Prozession von Trauernden von soweit entfernt wie Afyal kam zum Kloster, um der Legende von Kiara Achtung zu bezeugen, dem Mönch, der die Abyss besiegte. 
-<CHARNAME> erholte sich nie wieder ganz, fand aber viel Stolz im Erziehen seines Sohns. Ihre Reise zurück nach Athkatla erwies sich für den jungen Mönch als bemerkenswertes Abenteuer, als sie mit Banditen, Kreischlingen und anderen kleineren Feinden kämpften, die <CHARNAME> alleine durch die bloße Nennung seines Namens leicht hätte verjagen können. Statt dessen saß er ruhig da und beobachtete seinen Sohn, der die armen Wesen ebenso leicht wie er selbst erledigte, ein zufriedenes Lächeln auf seinem Gesicht und eine Träne in seinem Auge, als Erinnerungen seiner eigenen Vergangenheit auftauchten, sich an den jungen Abenteurer erinnernd, der er einst war, sich erinnernd, wie all das begann, irgendwo in der Nähe von Kerzenburg, an der Schwertküste.~ 
-@9101 = ~<CHARNAME>s Vormachtstellung als Gottheit prägte Kiara stark. Sie versuchte, Tost in der Meditation zu finden, als der Mönchsorden von Amkethran sie einholte, aber die Wunde in ihrem Herzen würde offensichtlich niemals heilen. Statt dessen wurde sie langsam überwältigt von einen heimtückischen Wahnsinn, teils wegen eines tot geborenen Sohns. Eine ihrer engsten und vertrautesten Freundinen, Zaiya, erzählt, sie wollte ihrer einzigen Liebe zu Ehren, dem Gott des Mords, ein Geschenk des Bluts machen, eines, das man nie vergessen soll. 
-Ein Jahr später und ohne Grund begann sie einen Krieg mit Amn, der die blutigen Ereignisse der Zeit der Bhaalbrut übertreffen und überleben würde. Amn, das einer Armee von eintausend Mönchen und Söldnern gegenüberstand, angeführt von ihrer schrecklichen und verrückten Führerin Kiara, sammelte das größte Bündnis, das Faerûn möglicherweise ermessen konnte in einem Versuch, sich der Bedrohung entgegenzustellen. 
-Rote Thay Zauberer, Paladine vom Orden des Strahlenden Herzens, Harfner, Diebe, Verhüllte Magier und Elfen, an der Spitze deren Königin Ellesime selbst, alle legten ihren Groll bei und schlossen sich den Elitetruppen von Amn an, um der Armee von Kiara gegenüberzutreten. Der folgende Kampf war von epischem Ausmaß. Kiara und ihre Armee eilten in den Kampf, Tod wie ein wildes Feuer ausbreitend, ein Viertel der Kräfte von Amn bei ihrem ersten Angriff zerstörend. Offensichtlich durch Magie und Tod durch Handflächen aussendend schien Kiaras Armee von Mönchen fast unbesiegbar. Viele in den Reihen von Amn fingen an, den Glauben zu verlieren, als gemäß zahlreichen Zeugen an diesem Tag etwas Außergewöhnliches geschah. Die Legende sagt, dass das grauenhafte Schicksal von Amn durch Kiaras frühen Tod im Kampf durch die Hand eines unbekannten Feinds gerettet wurde. Einige murmeln, dass die schwarze verhüllte Gestalt, die plötzlich auf dem Schlachtfeld erschien und den Todesstoß versetzte, einer der Götter war, der von Kiaras Wahnsinn verärgert war oder vielleicht ein größerer Dämon, noch ein beharrliches Gerücht spricht vom Herrn des Mordes selbst. 
+Nach dem Schicksalsberg gingen sie nach Kara Tur weiter, und Kiara führte <CHARNAME> zu ihrem alten Kloster, wieder ein friedliebender und erholsamer Ort, frei von Balthazars Faustherrschaft. Ein Ort, an dem Kiara bald einen männlichen Erben zur Welt bringen sollte, der den Namen und das Erbe seines Vaters stolz tragen würde und im Laufe der Jahre zu einem wilden und berühmten Mönch aufwuchs. Kiara starb jedoch bei der Entbindung trotz der Versuche der Mönche, sie zu heilen. Eine lange Prozession von Trauernden von soweit entfernt wie Afyal kam zum Kloster, um der Legende von Kiara Achtung zu bezeugen, dem Mönch, der die Abyss besiegte.
+<CHARNAME> erholte sich nie wieder ganz, fand aber viel Stolz im Erziehen seines Sohns. Ihre Reise zurück nach Athkatla erwies sich für den jungen Mönch als bemerkenswertes Abenteuer, als sie mit Banditen, Kreischlingen und anderen kleineren Feinden kämpften, die <CHARNAME> alleine durch die bloße Nennung seines Namens leicht hätte verjagen können. Statt dessen saß er ruhig da und beobachtete seinen Sohn, der die armen Wesen ebenso leicht wie er selbst erledigte, ein zufriedenes Lächeln auf seinem Gesicht und eine Träne in seinem Auge, als Erinnerungen seiner eigenen Vergangenheit auftauchten, sich an den jungen Abenteurer erinnernd, der er einst war, sich erinnernd, wie all das begann, irgendwo in der Nähe von Kerzenburg, an der Schwertküste.~
+@9101 = ~<CHARNAME>s Vormachtstellung als Gottheit prägte Kiara stark. Sie versuchte, Tost in der Meditation zu finden, als der Mönchsorden von Amkethran sie einholte, aber die Wunde in ihrem Herzen würde offensichtlich niemals heilen. Statt dessen wurde sie langsam überwältigt von einen heimtückischen Wahnsinn, teils wegen eines tot geborenen Sohns. Eine ihrer engsten und vertrautesten Freundinen, Zaiya, erzählt, sie wollte ihrer einzigen Liebe zu Ehren, dem Gott des Mords, ein Geschenk des Bluts machen, eines, das man nie vergessen soll.
+Ein Jahr später und ohne Grund begann sie einen Krieg mit Amn, der die blutigen Ereignisse der Zeit der Bhaalbrut übertreffen und überleben würde. Amn, das einer Armee von eintausend Mönchen und Söldnern gegenüberstand, angeführt von ihrer schrecklichen und verrückten Führerin Kiara, sammelte das größte Bündnis, das Faerûn möglicherweise ermessen konnte in einem Versuch, sich der Bedrohung entgegenzustellen.
+Rote Thay Zauberer, Paladine vom Orden des Strahlenden Herzens, Harfner, Diebe, Verhüllte Magier und Elfen, an der Spitze deren Königin Ellesime selbst, alle legten ihren Groll bei und schlossen sich den Elitetruppen von Amn an, um der Armee von Kiara gegenüberzutreten. Der folgende Kampf war von epischem Ausmaß. Kiara und ihre Armee eilten in den Kampf, Tod wie ein wildes Feuer ausbreitend, ein Viertel der Kräfte von Amn bei ihrem ersten Angriff zerstörend. Offensichtlich durch Magie und Tod durch Handflächen aussendend schien Kiaras Armee von Mönchen fast unbesiegbar. Viele in den Reihen von Amn fingen an, den Glauben zu verlieren, als gemäß zahlreichen Zeugen an diesem Tag etwas Außergewöhnliches geschah. Die Legende sagt, dass das grauenhafte Schicksal von Amn durch Kiaras frühen Tod im Kampf durch die Hand eines unbekannten Feinds gerettet wurde. Einige murmeln, dass die schwarze verhüllte Gestalt, die plötzlich auf dem Schlachtfeld erschien und den Todesstoß versetzte, einer der Götter war, der von Kiaras Wahnsinn verärgert war oder vielleicht ein größerer Dämon, noch ein beharrliches Gerücht spricht vom Herrn des Mordes selbst.
 Seitdem war ihr Name eine der Schanden, die in den Geschichtsbüchern unerwähnt bleibt, sogar Volo dazu veranlassend, alle Berichte von Kiara aus seinem eigenen Buch über den großen Bhaalspross auszuradieren. Aber Volkslegenden ersetzen häufig schriftliche Manuskripte, und viele Bürger von Faerûn sprechen noch von der rachsüchtigen Faust des Herrn des Mords, und wie Ao, der Übervater selbst, gezwungen wurde, einzuschreiten, dem Herrn des Mords befehlend, seinen mörderischen Arm abzutrennen. Einige ergänzten, dass der Herr des Mords Kiara an seine rechten Seite nahm, denn ihr Körper wurde nie auf dem Schlachtfeld gefunden, andere platzieren sie im Abyss, wo ihre schwarze Seele ewige Folter erleidet.~
-@9102 = ~<CHARNAME>s Vormachtstellung als Gottheit prägte Kiara stark. Sie versuchte, Tost in der Meditation zu finden, als der Mönchsorden von Amkethran sie einholte, aber die Wunde in ihrem Herzen würde offensichtlich niemals heilen. Statt dessen wurde sie langsam überwältigt von einen heimtückischen Wahnsinn, teils wegen eines tot geborenen Sohns. Eine ihrer engsten und vertrautesten Freundinen, Zaiya, erzählt, sie wollte ihrer einzigen Liebe zu Ehren, dem Gott des Mords, ein Geschenk des Bluts machen, eines, an das man nie vergessen soll. 
-Ein Jahr später und ohne Grund veranlasste sie einen Krieg mit Amn, der die blutigen Ereignisse der Zeit der Bhaalbrut übertreffen und überleben würde. Amn, das einer Armee von eintausend Mönchen und Söldnern gegenüberstand, angeführt von ihrer schrecklichen und verrückten Führerin Kiara, sammelte das größte Bündnis, die Faerûn möglicherweise ausloten konnte in einem Versuch, sich der Bedrohung entgegenzustellen. 
-Rote Thay Zauberer, Paladine vom Orden des Strahlenden Herzens, Harfner, Diebe, Verhüllte Magier und der Elfen, an der Spitze deren Königin Ellesime selbst, alle legten ihren Groll bei und schlossen sich den Elitetruppen von Amn an, um der Armee von Kiara gegenüberzutreten. Der folgende Kampf war von epischem Ausmaß. Kiara und ihre Armee eilten in den Kampf, Tod wie ein wildes Feuer ausbreitend, ein Viertel der Kräfte von Amn bei ihrem ersten Angriff zerstörend. Offensichtlich durch Magie und Tod durch Handflächen ausübend schien Kiaras Armee von Mönchen fast unbesiegbar. Viele in den Reihen von Amn fingen an, den Glauben zu verlieren, als gemäß zahlreichen Zeugen an diesem Tag etwas Außergewöhnliches geschah. Die Legende sagt, dass das grauenhafte Schicksal von Amn durch Kiaras frühen Tod im Kampf durch die Hand eines unbekannten Feinds gerettet wurde. Einige murmeln, dass die schwarze verhüllte Gestalt, die plötzlich auf dem Schlachtfeld erschien und den Todesstoß versetzte, einer der Götter war, der von Kiaras Wahnsinn verärgert war oder vielleicht ein größerer Dämon, ein weiteres beharrliches Gerücht spricht vom Herrn des Mordes selbst. 
+@9102 = ~<CHARNAME>s Vormachtstellung als Gottheit prägte Kiara stark. Sie versuchte, Tost in der Meditation zu finden, als der Mönchsorden von Amkethran sie einholte, aber die Wunde in ihrem Herzen würde offensichtlich niemals heilen. Statt dessen wurde sie langsam überwältigt von einen heimtückischen Wahnsinn, teils wegen eines tot geborenen Sohns. Eine ihrer engsten und vertrautesten Freundinen, Zaiya, erzählt, sie wollte ihrer einzigen Liebe zu Ehren, dem Gott des Mords, ein Geschenk des Bluts machen, eines, an das man nie vergessen soll.
+Ein Jahr später und ohne Grund veranlasste sie einen Krieg mit Amn, der die blutigen Ereignisse der Zeit der Bhaalbrut übertreffen und überleben würde. Amn, das einer Armee von eintausend Mönchen und Söldnern gegenüberstand, angeführt von ihrer schrecklichen und verrückten Führerin Kiara, sammelte das größte Bündnis, die Faerûn möglicherweise ausloten konnte in einem Versuch, sich der Bedrohung entgegenzustellen.
+Rote Thay Zauberer, Paladine vom Orden des Strahlenden Herzens, Harfner, Diebe, Verhüllte Magier und der Elfen, an der Spitze deren Königin Ellesime selbst, alle legten ihren Groll bei und schlossen sich den Elitetruppen von Amn an, um der Armee von Kiara gegenüberzutreten. Der folgende Kampf war von epischem Ausmaß. Kiara und ihre Armee eilten in den Kampf, Tod wie ein wildes Feuer ausbreitend, ein Viertel der Kräfte von Amn bei ihrem ersten Angriff zerstörend. Offensichtlich durch Magie und Tod durch Handflächen ausübend schien Kiaras Armee von Mönchen fast unbesiegbar. Viele in den Reihen von Amn fingen an, den Glauben zu verlieren, als gemäß zahlreichen Zeugen an diesem Tag etwas Außergewöhnliches geschah. Die Legende sagt, dass das grauenhafte Schicksal von Amn durch Kiaras frühen Tod im Kampf durch die Hand eines unbekannten Feinds gerettet wurde. Einige murmeln, dass die schwarze verhüllte Gestalt, die plötzlich auf dem Schlachtfeld erschien und den Todesstoß versetzte, einer der Götter war, der von Kiaras Wahnsinn verärgert war oder vielleicht ein größerer Dämon, ein weiteres beharrliches Gerücht spricht vom Herrn des Mordes selbst.
 Seitdem war ihr Name eine der Schanden, die in den Geschichtsbüchern unerwähnt bleibt, sogar Volo dazu veranlassend, alle Berichte von Kiara aus seinem eigenen Buch über den großen Bhaalspross auszuradieren. Aber Volkslegenden ersetzen häufig schriftliche Manuskripte, und viele Bürger von Faerûn sprechen noch von der rachsüchtigen Faust des Herrn des Mords, und wie Ao, der Übervater selbst, gezwungen wurde, einzuschreiten, dem Herrn des Mords befehlend, seine mörderische Waffen abzutrennen. Einige ergänzten, dass der Herr des Mords Kiara an seine rechte Seite nahm, denn ihr Körper wurde nie auf dem Schlachtfeld gefunden, andere siedeln sie im Abyss an, wo ihre schwarze Seele ewige Folter erleidet.~
 
-@9103 = ~Nachdem die Ereignisse der Zeit der Bhaalbrut endeten, nahm Zaiya das erste Schiff, das von Amn nach Afyal segelte. Auf halben Weg über das Meer begann ein Schiff, ihnen in einiger Entfernung zu folgen, und es wurde allen an Bord klar, dass es Piraten oder Sklavenhändler sein mussten. Zaiya zeigte Mut und Entschlossenheit und scheuchte im Handumdrehen jeden zur Sicherheit in den Frachtraum des Schiff, während sie fest auf dem Deck stehen würde, um das Entern der Piraten zu erwarten. Piraten, die die Zaiyas Wut überlebten, um die Sage zu erzählen, sprechen von ihrer Überraschung, eine zerbrechliche Frau am Ruder des Schiffs zu sehen, das Hauptdeck verlassen. Nahezu sicher, dass das Schiff ebenso wie die Frau ihnen sicher sei, riefen sie verächtliche Beleidigungen Zaiya zu, aber die Frau behauptete ihre Stellung. Zaiya rief zurück, nicht zu versuchen zu entern, wenn sie nicht alle sterben wollten, was viel Gelächter in der Meute von Piraten hervorrief, während einige bereits auf das Deck eilten. Ein paar Minuten später war alles vorbei. Die Piraten wurden von Angst erfüllt und sprangen über Bord, sich an den restlichen Holzplanken ihres nicht mehr bestehenden Schiffs festklammernd. 
+@9103 = ~Nachdem die Ereignisse der Zeit der Bhaalbrut endeten, nahm Zaiya das erste Schiff, das von Amn nach Afyal segelte. Auf halben Weg über das Meer begann ein Schiff, ihnen in einiger Entfernung zu folgen, und es wurde allen an Bord klar, dass es Piraten oder Sklavenhändler sein mussten. Zaiya zeigte Mut und Entschlossenheit und scheuchte im Handumdrehen jeden zur Sicherheit in den Frachtraum des Schiff, während sie fest auf dem Deck stehen würde, um das Entern der Piraten zu erwarten. Piraten, die die Zaiyas Wut überlebten, um die Sage zu erzählen, sprechen von ihrer Überraschung, eine zerbrechliche Frau am Ruder des Schiffs zu sehen, das Hauptdeck verlassen. Nahezu sicher, dass das Schiff ebenso wie die Frau ihnen sicher sei, riefen sie verächtliche Beleidigungen Zaiya zu, aber die Frau behauptete ihre Stellung. Zaiya rief zurück, nicht zu versuchen zu entern, wenn sie nicht alle sterben wollten, was viel Gelächter in der Meute von Piraten hervorrief, während einige bereits auf das Deck eilten. Ein paar Minuten später war alles vorbei. Die Piraten wurden von Angst erfüllt und sprangen über Bord, sich an den restlichen Holzplanken ihres nicht mehr bestehenden Schiffs festklammernd.
 Nach der Ankunft in Afyal breiteten sich die Nachrichten über Zaiyas Großtaten an Bord der Schiffes wie verheerendes Feuer aus und die Gerüchte erreichten bald alle einflussreichen Adligen der Stadt. Sie luden Zaiya an ihre Tafeln ein, um ihre Geschichten des großen Bhaalsprosses zu hören. Ihrer Berühmtheit müde kaufte Zaiya Monate später das Haus ihres ehemaligen Meisters und lebte ein ruhiges Leben. Auf die Nachrichten über den Kiaras Tod hin eilte sie nach Kyoro und versuchte <CHARNAME> zu trösten, so sehr sie konnte. Sie blieb einige Zeit und passte auf die Nachkommenschaft Kiaras auf, aber es wurde offensichtlich, dass <CHARNAME> alt geworden war, und sein Wunsch, nach Amn abzureisen, veranlasste Zaiya, die Rückreise in ihr eigenes Heimatland anzutreten, wo sie sich wieder in ihren Gewohnheiten und ihrem eigenem Heim einrichtete. ~
-@9104 = ~Nachdem die Ereignisse der Zeit der Bhaalbrut endeten, nahm Zaiya das erste Schiff, das von Amn nach Afyal segelte. Auf halben Weg über das Meer, begann ein Schiff, ihnen in einiger Entfernung zu folgen, und es wurde allen an Bord klar, dass es Piraten oder Sklavenhändler sein mussten. Zaiya zeigte Mut und Entschlossenheit und scheuchte im Handumdrehen jeden zur Sicherheit in den Frachtraum des Schiff, während sie fest auf dem Deck stehen würde, um das Entern der Piraten zu erwarten. Piraten, die die Zaiyas Wut überlebten, um die Sage zu erzählen, sprechen von ihrer Überraschung, eine zerbrechliche Frau am Ruder des Schiffs zu sehen, das Hauptdeck verlassen. Nahezu sicher, dass das Schiff ebenso wie die Frau ihnen sicher sei, riefen sie verächtliche Beleidigungen Zaiya zu, aber die Frau behauptete ihre Stellung. Zaiya rief zurück, nicht zu versuchen zu entern, wenn sie nicht alle sterben wollten, was viel Gelächter in der Meute von Piraten hervorrief, während einige bereits auf das Deck eilten. Ein paar Minuten später war alles vorbei. Die Piraten wurden von Angst erfüllt und sprangen über Bord, sich an den restlichen Holzplanken ihres nicht mehr bestehenden Schiffs festklammernd. 
+@9104 = ~Nachdem die Ereignisse der Zeit der Bhaalbrut endeten, nahm Zaiya das erste Schiff, das von Amn nach Afyal segelte. Auf halben Weg über das Meer, begann ein Schiff, ihnen in einiger Entfernung zu folgen, und es wurde allen an Bord klar, dass es Piraten oder Sklavenhändler sein mussten. Zaiya zeigte Mut und Entschlossenheit und scheuchte im Handumdrehen jeden zur Sicherheit in den Frachtraum des Schiff, während sie fest auf dem Deck stehen würde, um das Entern der Piraten zu erwarten. Piraten, die die Zaiyas Wut überlebten, um die Sage zu erzählen, sprechen von ihrer Überraschung, eine zerbrechliche Frau am Ruder des Schiffs zu sehen, das Hauptdeck verlassen. Nahezu sicher, dass das Schiff ebenso wie die Frau ihnen sicher sei, riefen sie verächtliche Beleidigungen Zaiya zu, aber die Frau behauptete ihre Stellung. Zaiya rief zurück, nicht zu versuchen zu entern, wenn sie nicht alle sterben wollten, was viel Gelächter in der Meute von Piraten hervorrief, während einige bereits auf das Deck eilten. Ein paar Minuten später war alles vorbei. Die Piraten wurden von Angst erfüllt und sprangen über Bord, sich an den restlichen Holzplanken ihres nicht mehr bestehenden Schiffs festklammernd.
 Nach der Ankunft in Afyal breiteten sich die Nachrichten über Zaiyas Großtaten an Bord der Schiffes wie verheerendes Feuer aus und die Gerüchte erreichten bald alle einflussreichen Adligen der Stadt. Sie luden Zaiya an ihre Tafeln ein, um ihre Geschichten des großen Bhaalsprosses zu hören. Ihrer Berühmtheit müde kaufte Zaiya Monate später das Haus ihres ehemaligen Meisters und lebte ein ruhiges Leben bis zu ihrem Ende. Häufig kamen Leute zu ihr wegen Zauber, Tränken und magischen Schmuckstücken, die sie verkaufte, um ihren Lebesunterhalt zu bestreiten. Häufig fragte sie sich, was mit ihrer alten Freundin Kiara geschehen war, aber versuchte niemals, es wirklich herauszufinden.~
-@9105 = ~Nachdem die Ereignisse der Zeit der Bhaalbrut endeten, nahm Zaiya das erste Schiff, das von Amn nach Afyal segelte. Auf halben Weg über das Meer, begann ein Schiff, ihnen in einiger Entfernung zu folgen, und es wurde allen an Bord klar, dass es Piraten oder Sklavenhändler sein mussten. Zaiya zeigte Mut und Entschlossenheit und scheuchte im Handumdrehen jeden zur Sicherheit in den Frachtraum des Schiff, während sie fest auf dem Deck stehen würde, um das Entern der Piraten zu erwarten. Piraten, die die Zaiyas Wut überlebten, um die Sage zu erzählen, sprechen von ihrer Überraschung, eine zerbrechliche Frau am Ruder des Schiffs zu sehen, das Hauptdeck verlassen. Nahezu sicher, dass das Schiff ebenso wie die Frau ihnen sicher sei, riefen sie verächtliche Beleidigungen Zaiya zu, aber die Frau behauptete ihre Stellung. Zaiya rief zurück, nicht zu versuchen zu entern, wenn sie nicht alle sterben wollten, was viel Gelächter in der Meute von Piraten hervorrief, während einige bereits auf das Deck eilten. Ein paar Minuten später war alles vorbei. Die Piraten wurden von Angst erfüllt und sprangen über Bord, sich an den restlichen Holzplanken ihres nicht mehr bestehenden Schiffs festklammernd. 
+@9105 = ~Nachdem die Ereignisse der Zeit der Bhaalbrut endeten, nahm Zaiya das erste Schiff, das von Amn nach Afyal segelte. Auf halben Weg über das Meer, begann ein Schiff, ihnen in einiger Entfernung zu folgen, und es wurde allen an Bord klar, dass es Piraten oder Sklavenhändler sein mussten. Zaiya zeigte Mut und Entschlossenheit und scheuchte im Handumdrehen jeden zur Sicherheit in den Frachtraum des Schiff, während sie fest auf dem Deck stehen würde, um das Entern der Piraten zu erwarten. Piraten, die die Zaiyas Wut überlebten, um die Sage zu erzählen, sprechen von ihrer Überraschung, eine zerbrechliche Frau am Ruder des Schiffs zu sehen, das Hauptdeck verlassen. Nahezu sicher, dass das Schiff ebenso wie die Frau ihnen sicher sei, riefen sie verächtliche Beleidigungen Zaiya zu, aber die Frau behauptete ihre Stellung. Zaiya rief zurück, nicht zu versuchen zu entern, wenn sie nicht alle sterben wollten, was viel Gelächter in der Meute von Piraten hervorrief, während einige bereits auf das Deck eilten. Ein paar Minuten später war alles vorbei. Die Piraten wurden von Angst erfüllt und sprangen über Bord, sich an den restlichen Holzplanken ihres nicht mehr bestehenden Schiffs festklammernd.
 Nach der Ankunft in Afyal breiteten sich die Nachrichten über Zaiyas Großtaten an Bord der Schiffes wie verheerendes Feuer aus und die Gerüchte erreichten bald alle einflussreichen Adligen der Stadt. Sie luden Zaiya an ihre Tafeln ein, um ihre Geschichten des großen Bhaalsprosses zu hören. Ihrer Berühmtheit müde kaufte Zaiya Monate später das Haus ihres ehemaligen Meisters und lebte ein ruhiges Leben bis zu ihrem Ende. Häufig kamen Leute zu ihr wegen Zauber, Tränken und magischen Schmuckstücken, die sie verkaufte, um ihren Lebesunterhalt zu bestreiten. Häufig fragte sie sich, was mit ihrer alten Freundin Kiara geschehen war, aber versuchte niemals, es wirklich herauszufinden.~

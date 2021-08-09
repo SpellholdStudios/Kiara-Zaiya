@@ -14,9 +14,9 @@ Baldur's Gate Trilogy and EET<h3>
 
 </div><br>
 
-**Authors:** <a href="http://www.shsforums.net/user/701-seifer/">Seifer</a> and Jesara  
+**Authors:** <a href="http://www.shsforums.net/user/701-seifer">Seifer</a> and Jesara  
 **Mod Website:** <a href="">Spellhold Studios</a>  
-**Mod Forum:** <a href="http://www.shsforums.net/forum/127-mod-resurrections/">Mods Resurrections</a>
+**Mod Forum:** <a href="http://www.shsforums.net/forum/127-mod-resurrections">Mods Resurrections</a>
 
 ## 
 
@@ -66,14 +66,21 @@ Baldur's Gate Trilogy and EET<h3>
 - Rewrote .bcs appending process (originally coded with so bad practice).
 - Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
 - Spells installation: removed useless `SAY NAME2` patches.
+- *dialogs.tra* files: modified Lovetalks cutscenes entry to avoid duplicated strrefs entries with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function.
+- <ins>Bracers: protectors</ins> (kzbrac1.itm): Added missing restriction flags (only usable by monks).
+- <ins>The Divine Sword</ins> (amaswd.itm):
+    - Hard-coded general name and description.
+    - Added missing Beast master kits restriction flags.
+    - Fixed wrong Immunity to Divination spells duration (restored right 1 hour duration : 300. Was one day : 7200!).
 - ...
 - Removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
-- Integrated custom soundset in the mod package.
+- Integrated custom soundsets in the mod package.
 - ...
-- ...
-- ...
-- ...
+- Added EE and ToBEx *Toggle critical hit aversion* item flag (BIT25) whenever relevant.
+- Fixed items classes and kits restriction flags, and appended tooltip.2da whenever relevant.
+- Fixed items descriptions.
 - Restored items usability restriction flags in descriptions for classic games and automatically removed them for EE games with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function.
+- Hard-coded general items names and description whenever relevant.
 - Proofread kzsetup.tra files strrefs (Gwendolyne).
 - TRAIfied last missing tp2 strref.
 - Removed useless :file_folder: "*backup*" folder.
@@ -83,11 +90,6 @@ Baldur's Gate Trilogy and EET<h3>
 - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
 - Updated WeiDU installer to v247.
 - Uploaded mod to official Spellhold Studios GitHub mirror account.
-
-
-- Fixed items descriptions.
-- Fixed items classes and kits restriction flags, and appended tooltip.2da whenever relevant.
-- Added EE and ToBEx *Toggle critical hit aversion* item flag (BIT25) whenever relevant.
 
 
 TODO

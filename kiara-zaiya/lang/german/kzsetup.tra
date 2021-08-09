@@ -56,7 +56,7 @@ Erfordert: schattenloser Stoß~
 Mit dem Erreichen absoluter Kontrolle über ihren Körper können erfahrene Mönche die Fähigkeit nutzen, sich in einen ätherischen Zustand zu versetzen und so ihren Feinden komplett unsichtbar und verschwommen zu erscheinen. Wenn der Mönch angreifen oder auf andere Weise auf sich aufmerksam machen sollte, so wird er teilweise sichtbar. Bis die Fähigkeit aufgehoben wird, erhält der Mönch -6 auf seine Rüstungsklasse, und weitere -4 auf die Rüstungsklasse gegen Geschoßwaffen. Die Fähigkeit hält 5 Runden lang an.~
 
 @51   = ~Boo~
-@52   = ~Zaiyas unglückliche Unbändige Woge verwandelte Boo in ein Huhn. Sein ständiges Gegluckse macht den armen Minsk noch völlig verrückt, wenn er das nicht schon vorher war.~ 
+@52   = ~Zaiyas unglückliche Unbändige Woge verwandelte Boo in ein Huhn. Sein ständiges Gegluckse macht den armen Minsk noch völlig verrückt, wenn er das nicht schon vorher war.~
 
 @53   = ~Osans Mönchsrobe~
 @54   = ~Diese Robe gehörte Kiaras erster Liebe Osan.
@@ -70,7 +70,7 @@ Rettungswurf-Bonus: +1
 Gewicht: 3
 
 Kann nur verwendet werden von:
- Mönch~ 
+ Mönch~
 @55   = ~Diese Robe gehörte Kiaras erster Liebe Osan. The Dämonenfürst besiegelte Kiaras Schicksal und durchtränkte diese Robe mit mächtiger Magie.
 
 EIGENSCHAFTEN:
@@ -94,14 +94,15 @@ Kann nur verwendet werden von:
 
 Gewicht: 135~
 
-@58   = ~Jerlias Seele~ 
+@58   = ~Jerlias Seele~
 @59   = ~Dies ist das Herz, welches der Dämon behielt, um Jerlias Geist daran zu hindern, sich zu befreien.
 
 Gewicht: 2~
 
-@60   = ~Ionenstein~ // = #8181 (BG2EE)
+// Gwendolyne fix: as of v2.0.0, general name and descriptions are hard-coded!
+//@60   = ~Ionenstein~ // = #8181 (BG2EE)
 @61   = ~Gelber Ionenstein~
-@62   = ~Dieser kleine Stein schwebt in Bahnen um den Kopf des Eigentümers. Einfach ausrüsten, um ihn in seinen Orbit zu verstzen. Diese offensichtsich magischen Steine haben verschiedene Eigenschaften, je nach dem, welche Farbe der Stein hat.~ // = #5770 (BG2EE)
+//@62   = ~Dieser kleine Stein schwebt in Bahnen um den Kopf des Eigentümers. Einfach ausrüsten, um ihn in seinen Orbit zu verstzen. Diese offensichtsich magischen Steine haben verschiedene Eigenschaften, je nach dem, welche Farbe der Stein hat.~ // = #5770 (BG2EE)
 @63   = ~Dieser Ionenstein ist sehr begehrt und macht den Träger immun gegen sämtliche Einschränkungen seiner Beweglichkeit, sei sie magischer oder normaler Natur. Dies betrifft auch die Zauber "Hast" und "Verlangsamen".
 
 Auf einer Seite des Steines lässt sich klar die Form eines Auges erkennen mit der Aufschrift AO darunter.
@@ -109,7 +110,7 @@ Auf einer Seite des Steines lässt sich klar die Form eines Auges erkennen mit de
 Gewicht: 0
 
 Kann nicht verwendet werden von:
- Magiertöter~ 
+ Magiertöter~
 
 @64   = ~Handelsnotizen~
 @65   = ~Prax führte gut Buch über seine Verkäufe und Ihr findet schnell den Namen Kiara darin. Wie es aussieht, wurde sie an Amaralis verkauft und in sein Haus im Regierungsviertel gebracht. Der Rest der Aufzeichnung gibt nur detailierte Beträge seine Einkünfte wieder.~
@@ -117,7 +118,8 @@ Kann nicht verwendet werden von:
 // New Amaralis fight additions
 // ----------------------------
 @66   = ~Das Gottesschwert~
-/*@67   = ~Diese Schwerter werden auch als zweischneidige Schwerter, Kriegsschwerter oder Militärschwerter bezeichnet. Es gibt keine einheitliche Form des Langschwertes. Seine Form und Länge sind von Kultur zu Kultur unterschiedlich und können selbst innerhalb einer Kultur je nach Zeitalter variieren. Das grundlegendste Merkmal aller Langschwerter ist ihre Länge, die zwischen 90 und 120 cm beträgt. Im letzteren Fall nimmt die Klinge 1 m der Gesamtlänge ein. Die meisten Langschwerter besitzen eine zweischneidige Klinge mit einer scharfen Spitze. Trotz dieser Spitze ist das Langschwert nicht zum Stoßen, sondern zum Schwingen vorgesehen. 
+/* Gwendolyne fix: as of v2.0.0, general descriptions are hard-coded!
+@67   = ~Diese Schwerter werden auch als zweischneidige Schwerter, Kriegsschwerter oder Militärschwerter bezeichnet. Es gibt keine einheitliche Form des Langschwertes. Seine Form und Länge sind von Kultur zu Kultur unterschiedlich und können selbst innerhalb einer Kultur je nach Zeitalter variieren. Das grundlegendste Merkmal aller Langschwerter ist ihre Länge, die zwischen 90 und 120 cm beträgt. Im letzteren Fall nimmt die Klinge 1 m der Gesamtlänge ein. Die meisten Langschwerter besitzen eine zweischneidige Klinge mit einer scharfen Spitze. Trotz dieser Spitze ist das Langschwert nicht zum Stoßen, sondern zum Schwingen vorgesehen.
 
 EIGENSCHAFTEN:
 

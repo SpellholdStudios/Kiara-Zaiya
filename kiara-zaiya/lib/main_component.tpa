@@ -366,11 +366,9 @@ COPY ~kiara-zaiya/items/zachik.itm~ ~override~
 
 // Osan's Monk Robe
 COPY ~kiara-zaiya/items/clckk1.itm~ ~override~
-	SAY NAME1 @53
 	SAY NAME2 @53
 	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@54" END
 COPY ~kiara-zaiya/items/clckk2.itm~ ~override~
-	SAY NAME1 @53
 	SAY NAME2 @53
 	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@55" END
 
@@ -388,9 +386,7 @@ COPY ~kiara-zaiya/items/jerliahg.itm~ ~override~
 
 // Yellow Ioun Stone
 COPY ~kiara-zaiya/items/freehlm1.itm~ ~override~
-	SAY NAME1 @60
 	SAY NAME2 @61
-	SAY UNIDENTIFIED_DESC @62
 	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@63" END
 	PATCH_IF (is_ee OR is_tobex) BEGIN
 		WRITE_LONG 0x18 THIS | BIT25  // add EE/TobEx Toggle critical hit aversion flag
@@ -407,9 +403,7 @@ COPY ~kiara-zaiya/amaralis/alteimu.spl~ ~override~
 
 // The Divine Sword (BWP: Nightfarer's item description fix)
 COPY ~kiara-zaiya/items/amaswd.itm~ ~override~
-	SAY NAME1 @66
 	SAY NAME2 @66
-	SAY UNIDENTIFIED_DESC @67
 	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@68" END
 
 // Poisonous Wyvern: Stinking Cloud
@@ -553,7 +547,7 @@ EXTEND_TOP ~kiara.bcs~ ~kiara-zaiya/scripts/kiarfigt.baf~
 // Isaya (as of v1.6.2): For custom soundsets, several texts differ from those of the basic soundsets.
 // Since I integrated the texts inside the baf files, I had to create two alternate baf files for the custom soundsets (in the sounds directory).
 ACTION_IF kz_custom BEGIN
-	// Isaya: this scripts only differ from kiafix.baf and zaifix.baf in /scripts by some texts of the custom soundset
+	// Isaya: this scripts only differ from kiafix.baf and zaifix.baf in /scripts by some texts of the custom soundsets
 	COMPILE ~kiara-zaiya/sounds/kiafix.baf~
 	        ~kiara-zaiya/sounds/zaifix.baf~
 END ELSE BEGIN
@@ -603,29 +597,29 @@ EXTEND_TOP ~ar6200.bcs~ ~kiara-zaiya/scripts/kiar6200.baf~
  *  Kiara Love Scenes  *
  * ------------------- */
 COPY ~kiara-zaiya/2da/kiaral1.2da~ ~override~
-	REPLACE ~76011~ @9000
+	REPLACE ~76011~ @8000
 COPY ~kiara-zaiya/2da/kiaral2.2da~ ~override~
-	REPLACE ~76012~ @9001
+	REPLACE ~76012~ @8001
 COPY ~kiara-zaiya/2da/kiaral3.2da~ ~override~
-	REPLACE ~76013~ @9002
+	REPLACE ~76013~ @8002
 
 
 /* ----------- *
  *  Epilogues  *
  * ----------- */
-COPY ~kiara-zaiya/2da/zaiend1.2da~ ~override~
-	REPLACE ~99997~ @9103
-COPY ~kiara-zaiya/2da/zaiend2.2da~ ~override~
-	REPLACE ~99998~ @9104
-COPY ~kiara-zaiya/2da/zaiend3.2da~ ~override~
-	REPLACE ~99999~ @9105
-
 COPY ~kiara-zaiya/2da/kiarend1.2da~ ~override~
 	REPLACE ~99997~ @9100
 COPY ~kiara-zaiya/2da/kiarend2.2da~ ~override~
 	REPLACE ~99998~ @9101
 COPY ~kiara-zaiya/2da/kiarend3.2da~ ~override~
 	REPLACE ~99999~ @9102
+
+COPY ~kiara-zaiya/2da/zaiend1.2da~ ~override~
+	REPLACE ~99997~ @9103
+COPY ~kiara-zaiya/2da/zaiend2.2da~ ~override~
+	REPLACE ~99998~ @9104
+COPY ~kiara-zaiya/2da/zaiend3.2da~ ~override~
+	REPLACE ~99999~ @9105
 
 
 /* ------------------------------------------------------ *

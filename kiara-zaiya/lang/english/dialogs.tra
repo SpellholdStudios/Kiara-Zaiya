@@ -1,8 +1,9 @@
-//FINAL EDIT BY WORD EDITOR – NOT FOOLPROOF BUT MUCH FASTER
-//SECOND EDIT JESSAYLA
-//FIRST EDIT SEIF
+// FINAL EDIT BY WORD EDITOR – NOT FOOLPROOF BUT MUCH FASTER
+// SECOND EDIT JESSAYLA
+// FIRST EDIT SEIF
 
-//KIARA.D: JOIN FILE
+// KIARA.D: JOIN FILE
+// ------------------
 @400  = ~Thank you for releasing me, but I have to quickly find my friend Zaiya.~
 @401  = ~I am so glad you found me but please, I need to find my friend.~
 @402  = ~Don't worry about your friend, she led us here. My name is <CHARNAME> and I am pleased we found you.~
@@ -16,13 +17,13 @@
 @410  = ~Well Kiara, I have no certain destination for now. Perhaps we shall encounter something soon.~
 @411  = ~We shall help you as best as we can, <CHARNAME>.~
 
-// Isaya: numbers changed from [250..290] to [350..390] in order to avoid conflicts with
-// identical numbers in KZSetup.tra file, causing problems in the compiled dialog
-//KIARAP.D: LEAVE/REJOIN
+// Isaya: numbers changed from [250..290] to [350..390] in order to avoid conflicts with identical numbers in kzsetup.tra file, causing problems in the compiled dialog
+// KIARAP.D: LEAVE/REJOIN
+// ----------------------
 @350  = ~You... you have saved me... but... What happened to Zaiya? No! You let her die?!~
 @351  = ~You have... you have saved me once again. I am truly in your debt, my love.~
 @352  = ~No, I am in *your* debt. You restored my spirit with your beguiling ways long ago.~
-@353  = ~The Final Battle with Bodhi.
+@353  = ~The final battle with Bodhi
 
 While I had feared for some time that Bodhi's final revenge on me would be to take away Kiara forever, it seems that the information in the lorebook was right... Amaunator's idol has not only restored Kiara to life, but has removed the vampire curse from her, as well.~
 @354  = ~Your weakness nearly cost us all our lives. I trust this will not happen again.~
@@ -63,11 +64,12 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @389  = ~Yes, Zaiya. You're welcome too.~
 @390  = ~I have to follow Kiara...~
 
-//VAMPKIA.D: KIARA VAMPIRE
+// VAMPKIA.D: KIARA VAMPIRE
+// ------------------------
 @450  = ~Yesss, Mistress. Very well.~
 
-//BKIARA.D: BANTER AND ROMANCE
-
+// BKIARA.D: BANTER AND ROMANCE
+// ----------------------------
 @494  = ~Could you sing a hymn to my beauty or can I perhaps entice you with a love song, my dear tiefling?~ [MxKiaraB]
 @495  = ~As you would have it, my dear tiefling.~
 @496  = ~So tell me Anomen, why did you choose the Knight's order when your skills could have taken you further without their righteous interference?~ [MxKiaraB]
@@ -1042,7 +1044,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @1465 = ~No! You don't have a choice. Come, let's fight.~
 @1466 = ~Die Bhaalspawn!~
 @1467 = ~This hiding place will work for me no further. I must leave. If you change your mind, you may find me through my servant at my home in Athkatla. Fare you well until then.~
-@1468 = ~The hunt for Valygar Corthala.
+@1468 = ~The hunt for Valygar Corthala
 
 I have met Valygar Corthala in his cabin in the Umar Hills, hiding away from the Cowled Wizards who are hunting him. According to Valygar, he is related to Lavok, an ancient necromancer who built the sphere five hundred years before... a sphere that disappeared shortly after it was completed and has just re-appeared. The Cowled Wizards seem sure that Valygar is the key to accessing the place, the reason for their harassment of him.
 
@@ -1164,7 +1166,7 @@ I have let Valygar go his own way, but he cannot stay any longer at the cabin no
 @1583 = ~You follow in the hopes of retrieving something dear to you. I say that the longer you keep this up, the more you will lose.~
 @1584 = ~Take poor Kiara here. I understand you have developed a relationship of sorts. It's so hard on couples when something happens to one of them, don't you agree? ~
 @1585 = ~Ahh, but I do not speak for him, Kiara. I speak of you. This is a lesson, <CHARNAME>. Follow me and you will lose more than you could imagine. Starting now!~
-@1586 = ~The Final Battle with Bodhi.
+@1586 = ~The final battle with Bodhi
 
 Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Kiara. Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible. I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
 @1587 = ~You have taken too much already! You will return both Imoen's soul and Kiara!~
@@ -1172,7 +1174,7 @@ Bodhi appeared in an ambush shortly before I reached her haven, warning me that 
 @1589 = ~I would have hunted you for your theft of Kiara alone. She is very important to me.~
 @1590 = ~You place too much confidence in sentiment. The theft of Kiara will not save you.~
 @1591 = ~She is lost to you, <CHARNAME>. Kiara has been quite receptive to my wiles. I doubt your fumbling could have inspired the loyalty I have taken with a bite and a gaze. ~
-@1592 = ~The Final Battle with Bodhi.
+@1592 = ~The final battle with Bodhi
 
 Bodhi has turned Kiara into a vampire! Or... or very nearly. The process may not have been completed in the short time Bodhi has had her. Hopefully something can be done or I will have lost her. Perhaps the elven war sage might know some way of restoration... or Elhan...~
 @1593 = ~My life and Kiara are one!~
@@ -1184,20 +1186,22 @@ Bodhi has turned Kiara into a vampire! Or... or very nearly. The process may not
 @1599 = ~I visited nearly all the temples in Medina and used several potions prepared by skilful herbalists, but none of them worked and my condition worsened.~
 @1600 = ~Fortunately, I met Kiara in one of these temples, and she said she might be able to assist.~
 @1601 = ~Kiara has powerful healing hands and she is able to stabilize my condition from time to time by applying her hands over my body... It does not remove the curse but helps me live. Ever since, I stayed with her as her servant.~
+
 // KIARA - CERND BY BRI
-@1650 = ~Cernd, I must ask you about your intentions toward... Zaiya...~ [MxKiaraB] //kiara
-@1651 = ~What? Why? Has something gone amiss?~ //cernd
-@1652 = ~You tell me druid. I sense that you are infatuated with her, but I don't know whether I should allow you to continue to stand in her presence.~//KIA 
-@1653 = ~No matter what else may happen, she is my ward, and as such, is under my protection. It remains to be seen whether I will suffer your presence around her or not~ //KIA
-@1654 = ~And what do you propose to do? As Zaiya has pointed out to me, the smallest thought, the tiniest emotion, may grow, flourish, and blossom under even the most extreme circumstances. She is a fine woman, and fit to make her decisions...~ //CERND
-@1655 = ~And she is still bound by her illness, lest you forget, druid, and any... emotional... disruption may cause her further harm. Consider this a warning, Cernd... tread lightly where Zaiya is concerned, or even MAINCHARA will save you from my wrath.~ //KIARA
-@1656 = ~I find your concern unnecessary, Kiara. Why, I thought the training of the monasteries included acceptance of the world as it is... and to transcend its boundaries.~ //CERND
-@1657 = ~I abandoned that portion of my life long ago, Cernd. Just remember, until a cure is discovered for Zaiya, I am the totality of her world... and you may be part of hers as well.~ //KIA 
-@1658 = ~However, the world changes. A broken mirror never reflects again; fallen flowers never go back to the old branches...~ //KIA
+// --------------------
+@1650 = ~Cernd, I must ask you about your intentions toward... Zaiya...~ [MxKiaraB] // Kiara
+@1651 = ~What? Why? Has something gone amiss?~ // Cernd
+@1652 = ~You tell me druid. I sense that you are infatuated with her, but I don't know whether I should allow you to continue to stand in her presence.~ // Kiara
+@1653 = ~No matter what else may happen, she is my ward, and as such, is under my protection. It remains to be seen whether I will suffer your presence around her or not~ // Kiara
+@1654 = ~And what do you propose to do? As Zaiya has pointed out to me, the smallest thought, the tiniest emotion, may grow, flourish, and blossom under even the most extreme circumstances. She is a fine woman, and fit to make her decisions...~ // Cernd
+@1655 = ~And she is still bound by her illness, lest you forget, druid, and any... emotional... disruption may cause her further harm. Consider this a warning, Cernd... tread lightly where Zaiya is concerned, or even MAINCHARA will save you from my wrath.~ // Kiara
+@1656 = ~I find your concern unnecessary, Kiara. Why, I thought the training of the monasteries included acceptance of the world as it is... and to transcend its boundaries.~ // Cernd
+@1657 = ~I abandoned that portion of my life long ago, Cernd. Just remember, until a cure is discovered for Zaiya, I am the totality of her world... and you may be part of hers as well.~ // Kiara
+@1658 = ~However, the world changes. A broken mirror never reflects again; fallen flowers never go back to the old branches...~ // Kiara
 
 
-
-//KIARAJ.D: INGAME INTERJECTIONS KIARA
+// KIARAJ.D: INGAME INTERJECTIONS KIARA
+// ------------------------------------
 @2000 = ~I was sure your curiosity wouldn't resist such an exotic creature. Are you all right?~
 @2001 = ~You certainly have a pleased look on your face that tells me what a naughty boy you must have been last night.~
 @2002 = ~Don't worry, I am not offended. I understand your sacrifice was for the benefit of us all.~
@@ -1359,7 +1363,7 @@ Bodhi has turned Kiara into a vampire! Or... or very nearly. The process may not
 
 // KIARA LOVE SCENES -- Not proofed, til I get Bri's versions. -Jess
 // -----------------------------------------------------------------
-@9000 =~Kiara's kisses feel almost desperate as you make your way to your room, her welcoming lips fluttering beneath yours like wounded doves. Her soft mouth forms a perfect seal around yours, her every breath merging with yours. She becomes lost in your kisses, clinging to you like a drowning woman would cling to a bit of driftwood. You find yourself no less adrift in her embrace, drowning together in the sea of shared passion. The taste of eagerness on your beloved's lips is sweet, anticipation quivering in every touch of mouth to mouth. Kiara's hands entwine her fingers with yours, the warmth of her passion ardently matching the flames of desire burning deep within you. The rising purr in the back of her throat reverberates against yours, matching the growing moan that quickly escapes your attempts to suppress it. The moment seems to last a lifetime, and yet is over all too quickly, the pressure of needing to breathe finally separating the two of you. 
+@8000 = ~Kiara's kisses feel almost desperate as you make your way to your room, her welcoming lips fluttering beneath yours like wounded doves. Her soft mouth forms a perfect seal around yours, her every breath merging with yours. She becomes lost in your kisses, clinging to you like a drowning woman would cling to a bit of driftwood. You find yourself no less adrift in her embrace, drowning together in the sea of shared passion. The taste of eagerness on your beloved's lips is sweet, anticipation quivering in every touch of mouth to mouth. Kiara's hands entwine her fingers with yours, the warmth of her passion ardently matching the flames of desire burning deep within you. The rising purr in the back of her throat reverberates against yours, matching the growing moan that quickly escapes your attempts to suppress it. The moment seems to last a lifetime, and yet is over all too quickly, the pressure of needing to breathe finally separating the two of you. 
 
 Kiara smiles up at you, a hint of shyness present in her luminescent eyes, then brushes back a loose strand of silken hair from her face, the fiery tendril smelling of the earth, of exotic hyacinth, of young clover. As she leans back against the door to your room, her normally graceful hands suddenly fumbling as they attempt to turn the knob, Kiara leans against you to steal one more kiss, melding her sinuous body against yours. She pulls you closer, teasing your tongue with her own, inviting you wordlessly to deepen the exquisite kiss, to explore her mouth and learn every bit of it, to search out the very depths of her soul. Alas, such poignant moments cannot last forever, and the kiss breaks as Kiara successfully opens the door. Her backward momentum pulls her away from you and breaks the mesmerizing dream you briefly shared. Kiara lowers her eyelashes, her full, luscious lips trembling slightly.
 
@@ -1387,8 +1391,7 @@ Seeing how totally Kiara's body responds and feeling the wetness engulfing your 
 
 You slide your body up the length of Kiara's then, fitting yourself between her open legs. You plunge your tongue deep into her mouth, your body feeling completely aflame with the heat of passion, demanding its own satiation. As your tongue finds its desired destination in the honeyed sweetness of her mouth, your rigid, swollen manhood finds the welcoming warmth of her as you bury yourself deep within her in one intense motion, pressing swiftly through the barrier obstructing your entrance to her. Kiara cries out, notes of pleasure and pain mingled in her passionate tones, drowning in the bittersweet agony of her desire. Pleasure quickly wins out over the initial surge of pain, and Kiara's hips thrust up to meet yours, your bodies settling into a blissful rhythm, each giving and taking from the other. Kiara starts to vibrate once more, a high crooning gasp escaping her as she digs her nails into your back, scoring your skin and pulling you down to feel your hard chest pressed against the soft, giving warmth of her breasts. The intensity of her reaction sends your body over the edge, and you feel suddenly as if you were falling -- no, flying, entwined with your lover in passion's sweet oblivion. Kiara pulls you tight a final time, shuddering as you fill her with your seed. As you lay your head on her shoulder, both panting with the exertion, Kiara strokes the side of your face, whispering tenderly "I love you..."~
 
-
-@9001 = ~Kiara leads you by the hand into the bedroom up the narrow stairs. She stops outside the door frame, the overhead light silhouetting her lithe, taut body, the muscles rippling from years of training as a monk. Her crimson hair wreathes her face like an incarnadine crown, and it briefly tickles your face, carrying a hint of jasmine into your nostrils. Kiara leans in and forces her lips to yours, the kiss lasting until your lungs burn in yearning for more oxygen. She pulls back, a wicked smile on her salty red lips, and she motions you into the room. As you shuffle forward, she gives your backside a teasing slap, sending a sharp sting through your body.
+@8001 = ~Kiara leads you by the hand into the bedroom up the narrow stairs. She stops outside the door frame, the overhead light silhouetting her lithe, taut body, the muscles rippling from years of training as a monk. Her crimson hair wreathes her face like an incarnadine crown, and it briefly tickles your face, carrying a hint of jasmine into your nostrils. Kiara leans in and forces her lips to yours, the kiss lasting until your lungs burn in yearning for more oxygen. She pulls back, a wicked smile on her salty red lips, and she motions you into the room. As you shuffle forward, she gives your backside a teasing slap, sending a sharp sting through your body.
 
 Once inside, Kiara strides before you, slowly taking off her robe, revealing her tanned body, her light scars gleaming in the moonlight, contrasting with her browned skin. You notice her inviting breasts, begging to be caressed, but Kiara presses her hand to your chest, making you stop. She walks around you, slowly removing your clothes, grazing your body with the lightest of touches, her fingertips tracing the definition of your muscles. Kiara goes behind you and ties your hands together with a black scarf; the silky fabric smooth against your skin. She takes another scarf and ties it around your eyes; now you're in abject darkness. You sense Kiara standing in front of you then she is gone. As you blindly look for her, you feel a slight breeze tickle the finest of your hairs the air moving in a circular fashion. The swirl of air stops, and the only thing you can hear is the sound of both yours and Kiara's breath. Then you feel her light lips kiss your neck, causing you to shiver in anticipation. You feel Kiara's moist breath in your ear, telling you not to move. Suddenly, you are left alone; your ears strain trying to hear her in the other parts of the room...
 
@@ -1434,7 +1437,7 @@ Kiara then grabs your hardness into her and thrust herself onto you. She moans, 
 
 However, the moment finally comes, and you explode between pleasure and pain in Kiara's embrace, when you both fall to the bed, sharing a last ragged breath. Kiara gives a smile in your direction, then pushes you off of her, rolling you to the other side of the bed, before draping herself across your bronzed chest, her eyes half-lidded, murmuring pleasantly, "Mine..."~
 
-@9002 = ~Kiara looks ravishing, standing there at the top of the stairs. Her vibrant red hair flows in waterfall-like tendrils over her shoulders and down to her partially covered, full breasts, her robe haphazardly drawn across her body. Her skin resembles something akin to alabaster with a blush that was present just beneath it and her eyes glow with an eerie, emerald likeness. At this hour, though, you are amazed that they are even glowing at all. You step back, in the shadow of the banister, and wait to see what Kiara's next step will be. You see that she is breathing heavily, her heaving bosom raising upwards and just as quickly, lowering to its normal level. She has a fine sprinkling of perspiration over her brow, while you can smell dampness arising from her hair along with a faint lilac scent, evidence she just took a bath. 
+@8002 = ~Kiara looks ravishing, standing there at the top of the stairs. Her vibrant red hair flows in waterfall-like tendrils over her shoulders and down to her partially covered, full breasts, her robe haphazardly drawn across her body. Her skin resembles something akin to alabaster with a blush that was present just beneath it and her eyes glow with an eerie, emerald likeness. At this hour, though, you are amazed that they are even glowing at all. You step back, in the shadow of the banister, and wait to see what Kiara's next step will be. You see that she is breathing heavily, her heaving bosom raising upwards and just as quickly, lowering to its normal level. She has a fine sprinkling of perspiration over her brow, while you can smell dampness arising from her hair along with a faint lilac scent, evidence she just took a bath. 
 
 You sense urgency radiating from her, as she scans the bottom floor. You feel a rise in your britches and struggle to keep your thoughts tame. How your body wanted her, how your muscular arms wanted to hold her, a growing crescendo of desire subsuming your body as your mind remembers the first time you made love. Now your brow is the one damp with sweat, a single, salty bead of perspiration rolls down your cheek. Your heart thuds against your chest as you step out from the shadows. Kiara gasps when she sees you him and takes off retreating into her room. 
 
@@ -1462,8 +1465,8 @@ All of a sudden, something much softer is in place over her womanhood. Smoothing
 
 You collapse onto Kiara, and her arms come up, surrounding you, and pulling you close. She softly caresses your cheek, kissing away the beads of sweat, and whispers, "I love you..."~
 
-//ZAIYA.D: ZAIYA JOIN DIALOGS
-
+// ZAIYA.D: ZAIYA JOIN DIALOGS
+// ---------------------------
 @3000 = ~Please help me, please... These slavers did not seem understand or they simply didn't care! I suffer from an affliction and only my friend Kiara can heal me. Please help me find my friend.~ [ZAYAL1]
 @3001 = ~I'm ready to help but your story seems a bit confused. Could you tell me more about your affliction?~
 @3002 = ~Who are you and where do you come from? I don't understand your plea for help.~
@@ -1487,7 +1490,8 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3020 = ~I am doomed. I'd rather kill myself now rather than endure all this pain and suffering.~ [ZAYAL8]
 @3021 = ~I understand your desire for revenge but my quest is really urgent, <CHARNAME>. I will die unless we find my friend within ten days.~ 
 
-//ZAIYAP.D ZAIYA LEAVE/REJOIN DIALOGS
+// ZAIYAP.D ZAIYA LEAVE/REJOIN DIALOGS
+// -----------------------------------
 @3200 = ~Sorry <CHARNAME>, sometimes I fail to understand her too but I have to follow her.~
 @3201 = ~I see! Kiara was abducted by Bodhi and you wish to get rid of me. How despicable of you!~
 @3202 = ~Thank you so much, <CHARNAME>, for helping me to find Kiara. I will follow her and wish you good luck finding your sister.~
@@ -1517,7 +1521,8 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3226 = ~Actually, please wait right here. I won't be long.~
 @3227 = ~You finally changed your mind.~
 
-//ZAIYAJ.D: ZAIYA GAME INTERJECTIONS
+// ZAIYAJ.D: ZAIYA GAME INTERJECTIONS
+// ----------------------------------
 @3400 = ~<CHARNAME>, we must find a way of getting Kiara back! I can not live without her.~
 @3401 = ~Kiara is dead and you abandon me? You are truly despicable, <CHARNAME>.~
 @3402 = ~NO! How could this happen?... With Kiara dead, I, too, will die, and soon!~
@@ -1578,7 +1583,8 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3457 = ~I agree with Zaiya. You have become no different from the man I most despise.~
 @3458 = ~Stop this babble and prepare to join me in death.~
 
-//BZAIYA.D: ZAIYA'S BANTER FILE
+// BZAIYA.D: ZAIYA'S BANTER FILE
+// -----------------------------
 @3700 = ~You surely signed my death too, <CHARNAME>. I'm sure it will leave a sour taste in your mouth long after Kiara and I have gone.~
 @3701 = ~This trip reminded me of our long journey from Afyal and our time cramped and chained in the corsair's ship hold. I swear I'll never set foot on a ship again.~
 @3702 = ~Here let me cast one spell to show you.~
@@ -1689,7 +1695,7 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3807 = ~She shows far more kindness than most people think she would. She has a dark secret she won't reveal, even to a trusted servant such as me. I suspect her evilness derives from it as else, she is a likeable person.~
 @3808 = ~You seem quite fond of her.~
 @3809 = ~She is my caretaker and I am her servant but we have become friend and confidant. We were both lost children when we met, with no friends and no real family. Kiara naturally became like an elder sister to me and we've helped each other mutually.~
-@3810 = ~I had a sister too, and I wished I could have helped her. Her death fills my heart with guilt..~
+@3810 = ~I had a sister too, and I wished I could have helped her. Her death fills my heart with guilt.~
 @3811 = ~I am truly sorry, Anomen. I wish I hadn't stirred such dreadful and painful memories. I overheard the accounts of this tragedy, but it seems you are not to blame for your family's fate.~
 @3812 = ~Your father's hatred for this rival merchant has blinded him and brought his own downfall.~
 @3813 = ~What makes you think my father is wrong, Zaiya, and that this merchant is blameless?~
@@ -1716,70 +1722,72 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @3834 = ~Minsc will kick your evil butts, all of you. I want Boo back!!!~
 @3835 = ~His clucking is driving me maaaaad...~
 
-//Zaiya Cernd romance banter 1
-@3850 = ~Cernd, I would like to ask you something.~ [MxZaiyaA] //zai
-@3851 = ~Certainly, Zaiya. What is it that you wish to know?~ //cernd
-@3852 = ~Why do you not recoil in horror around me? There are plenty who outright hate wild mages, yet you do not. If anything, you are quite accepting of my presence.~//zai
-@3853 = ~I find that very strange, considering how many other people look at me with fear.~ //zai
-@3854 = ~Why should I feel horror? It is true that your passage seems to presage chaos, but no more so than that of our Bhaalspawn companion. If one wishes to travel the ways of Balance, then one must accept the extremes as well as the middle-ground.~ //Cernd
-@3855 = ~Even if those extremes are... hazardous?~ //Zai
-@3856 = ~(Cernd reaches into a pocket and pulls out a handful of seeds. The druid closes his eyes, and the seeds quickly sprout and blossom, flowering into bright yellow blooms, and then hands them to Zaiya.)~ //Cernd
+// Zaiya Cernd romance banter 1
+@3850 = ~Cernd, I would like to ask you something.~ [MxZaiyaA] // Zaiya
+@3851 = ~Certainly, Zaiya. What is it that you wish to know?~ // Cernd
+@3852 = ~Why do you not recoil in horror around me? There are plenty who outright hate wild mages, yet you do not. If anything, you are quite accepting of my presence.~ // Zaiya
+@3853 = ~I find that very strange, considering how many other people look at me with fear.~ // Zaiya
+@3854 = ~Why should I feel horror? It is true that your passage seems to presage chaos, but no more so than that of our Bhaalspawn companion. If one wishes to travel the ways of Balance, then one must accept the extremes as well as the middle-ground.~ // Cernd
+@3855 = ~Even if those extremes are... hazardous?~ // Zaiya
+@3856 = ~(Cernd reaches into a pocket and pulls out a handful of seeds. The druid closes his eyes, and the seeds quickly sprout and blossom, flowering into bright yellow blooms, and then hands them to Zaiya.)~ // Cernd
 @3857 = ~Consider the yellow dandelion. Pretty, no?~ // Cernd
 @3858 = ~(Cernd places a hand on the dandelions, encompassing Zaiya's small hand with his larger one. The yellow sprouts then turn into white puff-balls.)~ // Cernd
 @3859 = ~And yet for the next generation, the seeds of the present must be blown away by the chaos of the storm... (Cernd lowers his head, and takes a deep breath, blowing half of the seeds away. He then beckons for Zaiya to do the rest.)~ // Cernd
 @3860 = ~Many people forget that chaos is nature's way of redressing an imbalance. Whether it is the fire that guts an overcrowded forest or a fierce storm that flattens a field, chaos may have a salubrious effect.~ 
 // Cernd
-@3861 = ~That may be, but even you have to admit that when my magic backfires and someone becomes a piece of poultry, that doesn't exactly aid the balance, now does it?~ // Zai
+@3861 = ~That may be, but even you have to admit that when my magic backfires and someone becomes a piece of poultry, that doesn't exactly aid the balance, now does it?~ // Zaiya
 @3862 = ~No, but neither does it take away from it.~ // Cernd
-@3863 = ~(Zaiya suddenly realizes Cernd's hand is on hers, and she rapidly pulls it away.)~ // Zai
+@3863 = ~(Zaiya suddenly realizes Cernd's hand is on hers, and she rapidly pulls it away.)~ // Zaiya
 // Second Scene for Cernd-Zaiya
-@3864 = ~I believe I owe you an apology, Cernd.~ [MxZaiyaA] // Zai
+@3864 = ~I believe I owe you an apology, Cernd.~ [MxZaiyaA] // Zaiya
 @3865 = ~Oh, hello Zaiya. I'm sorry; you caught me with my head in the clouds. Maybe you would care to clarify your thoughts, but what do you need to apologize for?~ // Cernd
-@3866 = ~I fear I spoke out of turn the last time we talked. It was not my intent to try and cast doubt on the course your life chose, for I do not know the intricacies of the druidic hierarchy. It seems to me that you do not serve nature, but rather the needs of those who presume to speak for nature.~ // Zai
+@3866 = ~I fear I spoke out of turn the last time we talked. It was not my intent to try and cast doubt on the course your life chose, for I do not know the intricacies of the druidic hierarchy. It seems to me that you do not serve nature, but rather the needs of those who presume to speak for nature.~ // Zaiya
 @3867 = ~Indeed, and I will readily agree that your insight has been like the rain that falls in the desert, bringing life to the parched earth.~ 
 // Cernd
 @3868 = ~Though the terrain may lie barren, the seeds of life lie underneath, ready to sprout to life with proper nourishment. However, your motives are still obscured like the gathered rain clouds overhead..~ // Cernd
-@3869 = ~Cernd, for one who serves nature, it seems you... what is that phrase? Ah yes, you don't see the forest for the trees. You left your son behind. You left your wife, Cernd, because of duty, which is a concept of humanity, not of nature. I can think of no stronger natural bond than that of family.~ // Zai
+@3869 = ~Cernd, for one who serves nature, it seems you... what is that phrase? Ah yes, you don't see the forest for the trees. You left your son behind. You left your wife, Cernd, because of duty, which is a concept of humanity, not of nature. I can think of no stronger natural bond than that of family.~ // Zaiya
 @3870 = ~Need I point out that all manners of creatures do display loyalty to a hierarchy? What of wolves in a pack, or bees in a hive?~
 @3871 = ~I must have touched some emotion, for your analogies aren't clearly thought out... for animals, unlike humans, are loyal from instinct, and their bond is among the most primal, if strongest sort... the bond to one's family, to one's kind...~
 
 // Cernd-Zaiya third scene
-@3872 = ~Cernd...~ [MxZaiyaA] //zai
-@3873 = ~What is it now, Zaiya? Come you now to undermine one of my fundamental beliefs and cut me from the inside much as a wood bore fells the mightiest oak?~ //cernd
-@3874 = ~No Cernd, I come to do no such thing. I thought merely to apologize for my presumption, but I see that you are still angry at my words. Pardon, I will leave you be. I should have said nothing at all.~ //zai
-@3875 = ~Then why did you concern yourself with my affairs at all, Zaiya?~ //cernd
-@3876 = ~I... I don’t know Cernd.~ //zai
-//cernd-zaiya fourth scene
-@3877 = ~To whom do you answer, Cernd?~ [MxZaiyaA] //zai
-@3878 = ~Pardon Zaiya? I fear I may have missed your question.~ //cernd
-@3879 = ~To whom do you answer, Cernd, for your actions?~ //zai
-@3880 = ~What do you mean, to whom do I answer? If you are asking about my responsibilities, and how I accomplish them, then I guess I ultimately answer to the Grand Druid, and beyond that, Nature herself.~ //cernd
-@3882 = ~(Zaiya nods.) Just as I answer to Kiara for my own course of action. Very well. This is the question that bothers me. If you ultimately serve the needs of nature, then by following the dictates of this 'Grand Druid' and whomever else, aren't you just putting a human conceit on the face of an unknowable force?~ //zai
-@3883 = ~It may be that we druids are deluding ourselves in our concept of nature, though I doubt it. Balance must be maintained, but people are not necessarily creatures of Balance, so we must enforce it ourselves, as druids. However, I must admit that I am curious as for the reason behind this line of questioning.~ //cernd
-@3884 = ~Simple. What does being one with nature have to do with serving the aims of another? Especially when it places yourself out of balance…~//zai
-//Cernd-Zaiya no 5
-@3885 = ~Zaiya, we must talk…~ [MxZaiyaA] //Cernd
-@3886 = ~(Zaiya's voice is quiet, subdued.) Yes, Cernd, what is it? Come to finally vent the rage that was surely building in your breast? Come to chastise me for the holding of your hand? Very well, have at it.~ //Zaiya
-@3887 = ~I will not lie, Zaiya, the words you spoke did cause an upheaval within my mind and heart. After all, who likes to have the firmament they build their beliefs upon thrown asunder? But within all of that, I realized something…~ //cernd
-@3888 = ~Yes, Cernd, what is it?~ //zai
+@3872 = ~Cernd...~ [MxZaiyaA] // Zaiya
+@3873 = ~What is it now, Zaiya? Come you now to undermine one of my fundamental beliefs and cut me from the inside much as a wood bore fells the mightiest oak?~ // Cernd
+@3874 = ~No Cernd, I come to do no such thing. I thought merely to apologize for my presumption, but I see that you are still angry at my words. Pardon, I will leave you be. I should have said nothing at all.~ // Zaiya
+@3875 = ~Then why did you concern yourself with my affairs at all, Zaiya?~ // Cernd
+@3876 = ~I... I don’t know Cernd.~ // Zaiya
+// Cernd-Zaiya fourth scene
+@3877 = ~To whom do you answer, Cernd?~ [MxZaiyaA] // Zaiya
+@3878 = ~Pardon Zaiya? I fear I may have missed your question.~ // Cernd
+@3879 = ~To whom do you answer, Cernd, for your actions?~ // Zaiya
+@3880 = ~What do you mean, to whom do I answer? If you are asking about my responsibilities, and how I accomplish them, then I guess I ultimately answer to the Grand Druid, and beyond that, Nature herself.~ // Cernd
+@3882 = ~(Zaiya nods.) Just as I answer to Kiara for my own course of action. Very well. This is the question that bothers me. If you ultimately serve the needs of nature, then by following the dictates of this 'Grand Druid' and whomever else, aren't you just putting a human conceit on the face of an unknowable force?~ // Zaiya
+@3883 = ~It may be that we druids are deluding ourselves in our concept of nature, though I doubt it. Balance must be maintained, but people are not necessarily creatures of Balance, so we must enforce it ourselves, as druids. However, I must admit that I am curious as for the reason behind this line of questioning.~ // Cernd
+@3884 = ~Simple. What does being one with nature have to do with serving the aims of another? Especially when it places yourself out of balance...~ // Zaiya
+// Cernd-Zaiya no 5
+@3885 = ~Zaiya, we must talk...~ [MxZaiyaA] // Cernd
+@3886 = ~(Zaiya's voice is quiet, subdued.) Yes, Cernd, what is it? Come to finally vent the rage that was surely building in your breast? Come to chastise me for the holding of your hand? Very well, have at it.~ // Zaiya
+@3887 = ~I will not lie, Zaiya, the words you spoke did cause an upheaval within my mind and heart. After all, who likes to have the firmament they build their beliefs upon thrown asunder? But within all of that, I realized something...~ // Cernd
+@3888 = ~Yes, Cernd, what is it?~ // Zaiya
 @3889 = ~Your words found fertile ground. Mind you, I still think that there are responsibilities to which I must attend, but in the matter of my son, you are entirely correct.~ //cend
-@3890 = ~Just as a pack of wolves raises the next generation, so too should I raise my son,…but that is not what I came to discuss.~//Cernd
-@3891 = ~(A smile slowly spreads across Zaiya's face) And what is it that you wish to talk about? I must admit that our conversations have proven an interesting…undertaking…~ //zai
-@3892 = ~(Cernd grasps her hand, for a moment pausing to admire the soft, white delicacy of it against his own nut-brown palm.) Just as your words have me made re-evaluate certain…responsibilities,…they have also brought me further insight.~ //cernd
-@3893 = ~Do I have to drag this out of you, Cernd?~ //zai
-@3894 = ~I have been contemplating your illness. I know that you and Kiara searched throughout the lands of the east for a cure, but have you scoured the lands of the west?~ //cernd
-@3895 = ~More specifically, there may be something in druidic lore that could cure your affliction.~ //cernd
-@3896 = ~(Not without a touch of reluctance, Zaiya pulls her hand from Cernd's.) I..…Cernd... I... I am impressed that you would do such for me…but...~//zai
+@3890 = ~Just as a pack of wolves raises the next generation, so too should I raise my son,... but that is not what I came to discuss.~ // Cernd
+@3891 = ~(A smile slowly spreads across Zaiya's face) And what is it that you wish to talk about? I must admit that our conversations have proven an interesting... undertaking...~ // Zaiya
+@3892 = ~(Cernd grasps her hand, for a moment pausing to admire the soft, white delicacy of it against his own nut-brown palm.) Just as your words have me made re-evaluate certain... responsibilities... they have also brought me further insight.~ // Cernd
+@3893 = ~Do I have to drag this out of you, Cernd?~ // Zaiya
+@3894 = ~I have been contemplating your illness. I know that you and Kiara searched throughout the lands of the east for a cure, but have you scoured the lands of the west?~ // Cernd
+@3895 = ~More specifically, there may be something in druidic lore that could cure your affliction.~ // Cernd
+@3896 = ~(Not without a touch of reluctance, Zaiya pulls her hand from Cernd's.) I... Cernd... I... I am impressed that you would do such for me... but...~ // Zaiya
 @3897 = ~(Zaiya hangs her head, a gleam of quiet desperation shining in her tear-filled eyes.) I have had too many instances of false hope. I am not... I won’t go... dash... Oh Cernd, just go away, would you?~
-//END SOA Cernd-Zaiya banter
+// END SOA Cernd-Zaiya banter
 
-//AMAEVIL.D: AMARALIS IN CHAPTER 2
+// AMAEVIL.D: AMARALIS IN CHAPTER 2
+// --------------------------------
 @5000 = ~Ah <CHARNAME>! I've heard of you! You *have* come for the tramp, have you?~
 @5001 = ~Yes slaver, I have. Be warned, unless you release her immediately I shall be forced to kill you.~
 @5002 = ~I'll give you some advice slaver. Free her now and you might get out of here unharmed.~
 @5003 = ~You have no idea of whom you face. Your threats would mean nothing to a kobold, much less to me. I'll have your party of vagabonds and ruffians begging for mercy in no time. Prepare for your ultimate demise!~
 
-//C6AMA.D: AMARALIS IN CHAPTER 6
+// C6AMA.D: AMARALIS IN CHAPTER 6
+// ------------------------------
 @5100 = ~Ah! The puppy has grown into a fierce dog, I see! I wish I could say that I'll be sorry to kill you, but alas, I cannot!~
 @5101 = ~You are persistent in your arrogance, slaver. I shall have your head on a plate~
 @5102 = ~Back off lackey. You are a nuisance that I'll gladly crush under my boot.~
@@ -1862,7 +1870,8 @@ You collapse onto Kiara, and her arms come up, surrounding you, and pulling you 
 @5269 = ~If the Bhaalspawn does not wish to join the forces of evil, I shall gladly kill <PRO_HIMHER> for you!~
 @5270 = ~**I SHALL MEET YOU IN THREE DAYS BHAALSPAWN.**~
 
-//JERLIA.D: JERLIA
+// JERLIA.D: JERLIA
+// ----------------
 @5400 = ~Please help! (sob) He stole my soul... (sob) I beg of you... (sob)... help me find my soul...~
 @5401 = ~Have no fear. I will put you at rest. Die ghost!~
 @5402 = ~I'd be glad to help if you'd tell me more...~

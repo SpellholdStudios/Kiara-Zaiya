@@ -99,9 +99,10 @@ Peso: 135~
 
 Peso: 2~
 
-@60   = ~Piedra ioun~ // = #8181 (BG2EE)
+// Gwendolyne fix: as of v2.0.0, general name and descriptions are hard-coded!
+//@60   = ~Piedra ioun~ // = #8181 (BG2EE)
 @61   = ~Piedra ioun amarilla~
-@62   = ~Es una pequeña piedra que gira alrededor de la cabeza del propietario. Sólo tienes que equiparte con ella para que ésta empiece a recorrer su órbita. Estas piedras, obviamente mágicas, tienen diferentes propiedades dependiendo de su color.~ // = #5770 (BG2EE)
+//@62   = ~Es una pequeña piedra que gira alrededor de la cabeza del propietario. Sólo tienes que equiparte con ella para que ésta empiece a recorrer su órbita. Estas piedras, obviamente mágicas, tienen diferentes propiedades dependiendo de su color.~ // = #5770 (BG2EE)
 @63   = ~Muy codiciada, esta piedra ioun inmuniza a su portador contra cualquier cosa, mágica o de otro tipo, que afecte al movimiento de cualquier manera. Esto incluye los conjuros de Celeridad y Ralentizar.
 
 También puedes ver claramente el dibujo de un ojo en un lado de la piedra y la inscripción AO bajo el mismo.
@@ -117,7 +118,8 @@ No permitido a:
 // New Amaralis fight additions
 // ----------------------------
 @66   = ~La Espada Divina~
-/*@67   = ~Estas armas suelen recibir el nombre de "espadas de doble filo", "espadas de guerra" o "espadas militares". Muchas veces, la espada larga tiene una hoja de un solo filo. No existe una versión corriente de esta arma; su diseño y tamaño varía de una cultura a otra, e incluso puede cambiar dentro de una misma dependiendo de la época. Una de las características más comunes de las espadas largas es su tamaño, que va de los 90 centímetros hasta 1'20 metros. En este último caso, la hoja suele abarcar un torno a un metro de la longitud total. La mayoría de las espadas largas poseen una hoja con punta y doble filo. A pesar de la punta, el arma está diseñada para cortar, no para clavarla. 
+/* Gwendolyne fix: as of v2.0.0, general descriptions are hard-coded!
+@67   = ~Estas armas suelen recibir el nombre de "espadas de doble filo", "espadas de guerra" o "espadas militares". Muchas veces, la espada larga tiene una hoja de un solo filo. No existe una versión corriente de esta arma; su diseño y tamaño varía de una cultura a otra, e incluso puede cambiar dentro de una misma dependiendo de la época. Una de las características más comunes de las espadas largas es su tamaño, que va de los 90 centímetros hasta 1'20 metros. En este último caso, la hoja suele abarcar un torno a un metro de la longitud total. La mayoría de las espadas largas poseen una hoja con punta y doble filo. A pesar de la punta, el arma está diseñada para cortar, no para clavarla.
 
 CARACTERÍSTICAS:
 

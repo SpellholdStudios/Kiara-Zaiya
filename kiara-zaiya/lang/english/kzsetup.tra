@@ -99,9 +99,10 @@ Weight: 135~
 
 Weight: 2~
 
-@60   = ~Ioun Stone~ // = #8181 (BG2EE)
+// Gwendolyne fix: as of v2.0.0, general name and descriptions are hard-coded!
+//@60   = ~Ioun Stone~ // = #8181 (BG2EE)
 @61   = ~Yellow Ioun Stone~
-@62   = ~This is a small stone that floats in orbit around the owner's head. Simply equip the stone set it in its orbit. These obviously magical stones have different properties depending on their color.~ // = #5770 (BG2EE)
+//@62   = ~This is a small stone that floats in orbit around the owner's head. Simply equip the stone set it in its orbit. These obviously magical stones have different properties depending on their color.~ // = #5770 (BG2EE)
 @63   = ~Highly sought, this Ioun Stone renders it's wearer immune to everything magical or otherwise, that affects mobility in any way. This includes haste and slow spells.
 
 You can also clearly see the shape an eye on one side of the stone and the inscription AO underneath.
@@ -117,7 +118,8 @@ Not usable by:
 // New Amaralis fight additions
 // ----------------------------
 @66   = ~The Divine Sword~
-/*@67   = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords.  In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all long swords is their length, which ranges from 35 inches to 47 inches.  In the latter case, the blade is known to take up 40 inches of the total length.  Most long swords have a double-edged blade and a sharp point at the tip.  Despite the tip, the long sword is designed for slashing, not thrusting. 
+/* Gwendolyne fix: as of v2.0.0, general descriptions are hard-coded!
+@67   = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords.  In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all long swords is their length, which ranges from 35 inches to 47 inches.  In the latter case, the blade is known to take up 40 inches of the total length.  Most long swords have a double-edged blade and a sharp point at the tip.  Despite the tip, the long sword is designed for slashing, not thrusting.
 
 STATISTICS:
 
@@ -142,7 +144,7 @@ Equipped Abilities:
 - Improves casting speed by 1
 
 Charge abilities:
-- Spell immunity: Divination once per day. The immunity lasts 1 hour. 
+- Spell immunity: Divination once per day. The immunity lasts 1 hour.
 
 THACO: +3
 Damage:  1d8+3
@@ -387,7 +389,7 @@ I met a young girl named Zaiya, who seems to suffer from a strange affliction. S
 @261  = ~Dragon fist!~
 @262  = ~Dragon fist!
 
-High level Monks have the ability to focus Ki energies in their bodies in many ways. When using this ability all attacks made by the Monk in the next round will remove the targets Specific Protection (save vs. spell at -2) and one Magical Protection up to 8. level (no save). The victim must save vs. breath to avoid losing all Physical Protections. Creatures hit by Dragon Fist must also save vs. death at -4, or their Magic Resistance will be reduced by 19% for 6 rounds. This effect is cumulative. Dragon Fist always removes the strongest Protection spell from the target.~
+High level Monks have the ability to focus Ki energies in their bodies in many ways. When using this ability all attacks made by the Monk in the next round will remove the targets Specific Protection (save vs. spell at -2) and one magical protection up to 8. level (no save). The victim must save vs. breath to avoid losing all physical protections. Creatures hit by Dragon Fist must also save vs. death at -4, or their Magic Resistance will be reduced by 19% for 6 rounds. This effect is cumulative. Dragon Fist always removes the strongest Protection spell from the target.~
 @263  = ~Shadowless Kick!~
 @264  = ~Shadowless Kick
 
@@ -402,7 +404,7 @@ Requires: Power Attack, Critical Strike~
 @267  = ~Chant!~
 @268  = ~Chant!
 
-This ability gives the Monk powerful protections - both physical and magical - for a very short time. It increases Slashing, Piercing, Crushing and Missile resistances to 60%, increases Fire, Cold, Lightning resistances by 20% and gives 10% Magic Damage resistance. The effects of this ability last for 2 rounds.~
+This ability gives the Monk powerful protections - both physical and magical - for a very short time. It increases slashing, piercing, crushing and missile resistances to 60%, increases Fire, Cold, Lightning resistances by 20% and gives 10% Magic Damage resistance. The effects of this ability last for 2 rounds.~
 @269  = ~Faster than the eye!~
 @270  = ~Faster than the eye!
 
@@ -431,7 +433,7 @@ The monk gains the ability to move at an incredible speed.~
  *  Jao and party for SOA: another tough fight  *
  * ============================================ */
 @291  = ~Jao~
-@292  = ~Ninja~
+@292  = ~Ninja~ // Seems to be unused
 @293  = ~Wuje~
 // Isaya: new texts moved from the TP2
 @294  = ~Bracers: protectors~

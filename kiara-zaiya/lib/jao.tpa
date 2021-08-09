@@ -41,6 +41,5 @@ COMPILE ~kiara-zaiya/wu-je/kzjao.baf~
 // Bracers: protectors
 // -------------------
 COPY ~kiara-zaiya/wu-je/kzbrac1.itm~ ~override~
-	SAY NAME1 @294
 	SAY NAME2 @294
-	SAY DESC @295
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@295" END

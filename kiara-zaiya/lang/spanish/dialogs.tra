@@ -1,8 +1,9 @@
-//FINAL EDIT BY WORD EDITOR – NOT FOOLPROOF BUT MUCH FASTER
-//SECOND EDIT JESSAYLA
-//FIRST EDIT SEIF
+// FINAL EDIT BY WORD EDITOR – NOT FOOLPROOF BUT MUCH FASTER
+// SECOND EDIT JESSAYLA
+// FIRST EDIT SEIF
 
-//KIARA.D: JOIN FILE
+// KIARA.D: JOIN FILE
+// ------------------
 @400  = ~Gracias por liberarme, pero tengo que encontrar a mi amiga Zaiya lo antes posible.~
 @401  = ~Me alegra mucho que me encontrarais, pero por favor, necesito encontrar a mi amiga.~
 @402  = ~No te preocupes por tu amiga, ella nos trajo hasta aquí. Mi nombre es <CHARNAME> y me alegra haberte encontrado.~
@@ -16,13 +17,13 @@
 @410  = ~Bien Kiara, por ahora no tengo ningún objetivo. Quizás encontremos algo pronto.~
 @411  = ~Te ayudaremos lo mejor que podamos, <CHARNAME>.~
 
-// Isaya: numbers changed from [250..290] to [350..390] in order to avoid conflicts with
-// identical numbers in KZSetup.tra file, causing problems in the compiled dialog
-//KIARAP.D: LEAVE/REJOIN
+// Isaya: numbers changed from [250..290] to [350..390] in order to avoid conflicts with identical numbers in kzsetup.tra file, causing problems in the compiled dialog
+// KIARAP.D: LEAVE/REJOIN
+// ----------------------
 @350  = ~Tú... me has salvado... pero... ¿Qué le ha pasado a Zaiya? ¡No! ¡¿Dejaste que muriera?!~
 @351  = ~Me... me has salvado una vez más. Estoy en deuda contigo, mi amor.~
 @352  = ~No, *yo* estoy en deuda contigo. Tú restauraste mi espíritu con tu seductor estilo mucho antes.~
-@353  = ~El Combate Final con Bodhi.
+@353  = ~El combate final con Bodhi.
 
 Aunque durante algún tiempo temí que la venganza de Bodhi fuera arrebatarme a Kiara para siempre, parece que la información del libro era correcta... El ídolo de Amaunator no sólo ha devuelto la vida a Kiara, sino que también le ha quitado la maldición.~
 @354  = ~Tu debilidad casi nos cuesta la vida a todos. Espero que esto no vuelva a suceder.~
@@ -63,11 +64,12 @@ Aunque durante algún tiempo temí que la venganza de Bodhi fuera arrebatarme a Ki
 @389  = ~Sí, Zaiya. Tú también eres bienvenida.~
 @390  = ~Debo seguir a Kiara...~
 
-//VAMPKIA.D: KIARA VAMPIRE
+// VAMPKIA.D: KIARA VAMPIRE
+// ------------------------
 @450  = ~Sssí, mi Señora. Muy bien.~
 
-//BKIARA.D: BANTER AND ROMANCE
-
+// BKIARA.D: BANTER AND ROMANCE
+// ----------------------------
 @494  = ~¿Podrías cantar un himno a mi belleza o quizás yo te pueda tentar con una canción de amor, mi querido tiefling?~ [MxKiaraB]
 @495  = ~Como desees, mi querido tiefling.~
 @496  = ~Bien, dime Anomen, ¿por qué elegiste la Orden de los Caballeros cuando tus aptitudes podrían haberte llevado más lejos sin su virtuosa intromisión?~ [MxKiaraB]
@@ -1042,7 +1044,7 @@ Aunque durante algún tiempo temí que la venganza de Bodhi fuera arrebatarme a Ki
 @1465 = ~¡No! No tienes elección. Ven, lucha conmigo.~
 @1466 = ~¡Muere, hijo de Bhaal!~ ~¡Muere, hija de Bhaal!~
 @1467 = ~Este escondite ya no me servirá. Debo irme. Si cambias de opinión, me podrás encontrar a través de mi sirviente de mi casa de Athkatla. Me despido de ti hasta entonces.~
-@1468 = ~La persecución de Valygar Corthala.
+@1468 = ~La caza de Valygar Corthala.
 
 He encontrado a Valygar Corthala en su cabaña de las Colinas de Umar, donde se oculta de los Magos Encapuchados que le persiguen. Según Valygar, él es pariente de Lavok, un antiguo nigromante que fabricó la esfera hace quinientos años... una esfera que desapareció al poco de ser terminada y que simplemente ha reaparecido. Los Magos Encapuchados creen que Valygar es la clave para entrar en ella, que es la razón por la que le acosan.
 
@@ -1164,7 +1166,7 @@ He dejado que Valygar siga su camino, pero no puede continuar en la cabaña ahora
 @1583 = ~Mantienes la esperanza de recuperar algo muy importante para ti. Pero cuanto más prolongues esto, más perderás.~
 @1584 = ~Tráeme a la pobre Kiara. Entiendo que habéis desarrollado una especie de relación. Es muy duro para la pareja cuando le sucede algo a uno de ellos, ¿no crees?~
 @1585 = ~Ahh, pero yo no me refiero a él, Kiara. Me refiero a ti. Te voy a dar una lección, <CHARNAME>. Sigue persiguiéndome y perderás más de lo que jamás soñaste posible. ¡Empezando ahora!~
-@1586 = ~El Combate Final con Bodhi.
+@1586 = ~El combate final con Bodhi.
 
 Bodhi apareció por sorpresa poco antes de llegar a su guarida, avisándome de que conocía mis intenciones y arrebatándome a la persona a la que más quiero: Kiara. Antes de desaparecer y soltarme a más de sus criaturas, Bodhi me avisó de que si sigo adelante perderé más de lo que pueda imaginar. No puedo abandonar la Lintherna Rhynn... ¡pero ahora también están en juego la vida y el alma inmortal de mi amada!~
 @1587 = ~¡Ya has usurpado demasiado! ¡Devuelve las almas de Imoen y de Kiara!~
@@ -1172,7 +1174,7 @@ Bodhi apareció por sorpresa poco antes de llegar a su guarida, avisándome de que
 @1589 = ~Te hubiera cazado sólo por robarme a Kiara. Ella es muy importante para mí.~
 @1590 = ~Confías demasiado en el sentimentalismo. Robarme a Kiara no te salvará.~
 @1591 = ~La has perdido, <CHARNAME>. Kiara ha reaccionado bastante bien a mis artimañas. Dudo que tus titubeos hubiesen podido inspirar la lealtad que yo he logrado con un mordisco y una mirada.~
-@1592 = ~El Combate Final con Bodhi.
+@1592 = ~El combate final con Bodhi.
 
 ¡Bodhi ha transformado a Kiara en vampiresa! O... o casi. El proceso no se debe haber completado en el poco tiempo que Bodhi la poseyó. Espero que se pueda hacer algo o la habré perdido para siempre. Quizás el sabio de la guerra elfo conozca alguna forma de devolverla a su estado normal... o Elhan...~
 @1593 = ~¡Mi vida y Kiara son una!~
@@ -1184,23 +1186,24 @@ Bodhi apareció por sorpresa poco antes de llegar a su guarida, avisándome de que
 @1599 = ~Visité casi todos los templos de Medina y usé muchas pociones preparadas por los mejores herbolarios, pero ninguna funcionó y mi estado seguía empeorando.~
 @1600 = ~Afortunadamente, conocí a Kiara en uno de aquellos templos, y me dijo que podía ayudarme.~
 @1601 = ~La imposición de manos de Kiara es muy poderosa y es capaz de estabilizar mi estado durante cierto tiempo al imponer sus manos sobre mi cuerpo... No elimina la maldición, pero me permite seguir viviendo. Desde entonces he permanecido a su lado como su sirviente.~
+
 // KIARA - CERND BY BRI
-@1650 = ~Cernd, debo preguntarte cuáles son tus intenciones con... Zaiya...~ 
-[MxKiaraB] //kiara
+// --------------------
+@1650 = ~Cernd, debo preguntarte cuáles son tus intenciones con... Zaiya...~ [MxKiaraB] //kiara
 @1651 = ~¿Qué? ¿Por qué? ¿Me he perdido algo?~ //cernd
-@1652 = ~Dímelo tú, druida. Percibo que te has encaprichado de ella, pero no sé si debería consentir que os continuéis viendo.~//KIA
-@1653 = ~No importa lo que pueda pasar, es mi protegida, y como tal debo cuidar de ella. Falta ver si toleraré tu presencia a su alrededor o no.~ 
+@1652 = ~Dímelo tú, druida. Percibo que te has encaprichado de ella, pero no sé si debería consentir que os continuéis viendo.~ //KIA
+@1653 = ~No importa lo que pueda pasar, es mi protegida, y como tal debo cuidar de ella. Falta ver si toleraré tu presencia a su alrededor o no.~
 //KIA
 @1654 = ~¿Y qué es lo que te propones? Tal y como me ha dicho Zaiya, el más leve pensamiento, la más mínima emoción puede crecer, florecer y madurar incluso en las circunstancias más extremas. Es una mujer inteligente, capaz de tomar sus propias decisiones...~ //CERMD
-@1655 = ~Y todavía está limitada por su dolencia, por si lo has olvidado, druida, y cualquier... alteración... emocional puede incluso hacerle más daño. Considéralo una advertencia, Cernd... anda con pies de plomo en todo lo referente a Zaiya, o ni siquiera <CHARNAME> podrá salvarte de mi ira.~ 
+@1655 = ~Y todavía está limitada por su dolencia, por si lo has olvidado, druida, y cualquier... alteración... emocional puede incluso hacerle más daño. Considéralo una advertencia, Cernd... anda con pies de plomo en todo lo referente a Zaiya, o ni siquiera <CHARNAME> podrá salvarte de mi ira.~
 //KIARA
 @1656 = ~Creo que no es necesario que te preocupes, Kiara. No lo entiendo, creía que el entrenamiento de los monasterios incluía aprender a aceptar del mundo tal y como es... y a superar sus limitaciones.~ //CERND
 @1657 = ~Dejé atrás esa parte de mi vida hace mucho tiempo, Cernd. Sólo recuerda que hasta que no descubramos una cura para Zaiya, yo soy todo su mundo... y puede que más adelante tú lo seas también.~ //KIA
 @1658 = ~Sin embargo, el mundo cambia. Un espejo roto jamás volverá a reflejar; las flores caídas no volverán a sus ramas...~ //KIA
 
 
-
-//KIARAJ.D: INGAME INTERJECTIONS KIARA
+// KIARAJ.D: INGAME INTERJECTIONS KIARA
+// ------------------------------------
 @2000 = ~Estaba convencida de que tu curiosidad no podría resistirse a una criatura tan exótica. ¿Te encuentras bien?~
 @2001 = ~Sin duda la satisfacción que refleja tu cara me dice que has sido un chico muy malo esta noche.~
 @2002 = ~No te preocupes, no estoy ofendida. Entiendo que tuviste que sacrificarte para beneficiarnos a todos.~
@@ -1332,7 +1335,8 @@ Bodhi apareció por sorpresa poco antes de llegar a su guarida, avisándome de que
 @2128 = ~**SÓLO TE REVELARÉ ESE SECRETO SI ME ENTREGAS LOS HUEVOS.**~
 @2129 = ~De acuerdo, aquí tienes los huevos.~
 
-//FLIRTPACK KIARA
+// KIARA FLIRTPACK
+// ---------------
 @2500 = ~Kiara es más que una criatura exótica venida de tierras lejanas o que una simple compañera. Durante las semanas pasadas has sentido una gran atracción por ella, su belleza te ha hipnotizado.~
 @2501 = ~Das un abrazo de apoyo a Kiara.~
 @2502 = ~Realizas movimientos de pelvis hacia Kiara.~
@@ -1359,8 +1363,9 @@ Bodhi apareció por sorpresa poco antes de llegar a su guarida, avisándome de que
 @2523 = ~(El sonido de la bofetada y la marca no han pasado desapercibidos para tus compañeros, que empiezan a reír.)~
 @2524 = ~TO BE DEVELOPED -NOT FUNCTIONAL-~
 
-//LOVESCENES KIARA -- Not proofed, til I get Bri's versions. -Jess
-@9000 =~Los besos de Kiara parecen desesperados mientras os dirigís a tu habitación, sus acogedores labios se agitan ante los tuyos como palomas heridas. Su cálida boca forma un sello perfecto con la tuya, cada aliento suyo se fusiona con el tuyo. Ella se pierde entre tus besos, aferrándose a ti como una mujer que se ahoga en el mar se aferra a un tablón para sobrevivir. Tú no te sientes menos ahogado al abrazarla, ambos os sumergís en un mar de pasión conjunta. El sabor del ansia en los labios de tu amada es dulce, percibes cómo se estremece al imaginar lo que os aguarda cada vez que vuestras bocas entran en contacto. Los dedos de Kiara se entrecruzan con los tuyos, el calor de su ardiente pasión se equipara a las llamas del deseo que prende en tu interior. El creciente ronroneo de su garganta se refleja en la tuya, equiparando al gemido que rápidamente se te escapa pese a tus fútiles intentos de reprimirlo. El momento parece durar toda una vida, pero finalmente todo acaba con demasiada rapidez, la urgente necesidad de tomar aire termina por separaros. Kiara te sonríe con un indicio de timidez en sus brillantes ojos, luego se aparta un sedoso mechón de pelo de la cara, el delicado aroma a zarcillos de la tierra, a exótico jacinto, a verde trébol. Al recostarse sobre la puerta de tu habitación, sus gráciles manos buscan de repente el pomo de la puerta, Kiara se acerca a ti para robarte un beso más, su sinuoso cuerpo se funde con el tuyo. Se acerca a ti aún más, su lengua juega con la tuya, invitándote sin palabras a intensificar el exquisito beso, a explorar su boca y a recorrer toda parte de ella, a indagar en lo más profundo de su alma. Por desgracia, un momento así no puede ser eterno, y el beso se interrumpe mientras Kiara logra abrir la puerta. Su impulso hacia atrás te separa de ella y rompe el mágico sueño que habéis compartido brevemente. Kiara baja los párpados, sus suculentos labios tiemblan ligeramente.
+// KIARA LOVE SCENES -- Not proofed, til I get Bri's versions. -Jess
+// -----------------------------------------------------------------
+@8000 =~Los besos de Kiara parecen desesperados mientras os dirigís a tu habitación, sus acogedores labios se agitan ante los tuyos como palomas heridas. Su cálida boca forma un sello perfecto con la tuya, cada aliento suyo se fusiona con el tuyo. Ella se pierde entre tus besos, aferrándose a ti como una mujer que se ahoga en el mar se aferra a un tablón para sobrevivir. Tú no te sientes menos ahogado al abrazarla, ambos os sumergís en un mar de pasión conjunta. El sabor del ansia en los labios de tu amada es dulce, percibes cómo se estremece al imaginar lo que os aguarda cada vez que vuestras bocas entran en contacto. Los dedos de Kiara se entrecruzan con los tuyos, el calor de su ardiente pasión se equipara a las llamas del deseo que prende en tu interior. El creciente ronroneo de su garganta se refleja en la tuya, equiparando al gemido que rápidamente se te escapa pese a tus fútiles intentos de reprimirlo. El momento parece durar toda una vida, pero finalmente todo acaba con demasiada rapidez, la urgente necesidad de tomar aire termina por separaros. Kiara te sonríe con un indicio de timidez en sus brillantes ojos, luego se aparta un sedoso mechón de pelo de la cara, el delicado aroma a zarcillos de la tierra, a exótico jacinto, a verde trébol. Al recostarse sobre la puerta de tu habitación, sus gráciles manos buscan de repente el pomo de la puerta, Kiara se acerca a ti para robarte un beso más, su sinuoso cuerpo se funde con el tuyo. Se acerca a ti aún más, su lengua juega con la tuya, invitándote sin palabras a intensificar el exquisito beso, a explorar su boca y a recorrer toda parte de ella, a indagar en lo más profundo de su alma. Por desgracia, un momento así no puede ser eterno, y el beso se interrumpe mientras Kiara logra abrir la puerta. Su impulso hacia atrás te separa de ella y rompe el mágico sueño que habéis compartido brevemente. Kiara baja los párpados, sus suculentos labios tiemblan ligeramente.
 
 Sus ojos se abren lentamente, encontrándose con tu mirada fijada en ella. Con la delicadeza de una pluma, te coge la mano con la suya y la dirige hacia su cara, acariciando su mejilla, suave como pétalos de amapola, con el dorso de tu mano. Un maravilloso escalofrío recorre su cuerpo, su languidez indica sus silenciosos gemidos de deseo. De nuevo te acercas más a ella, rodeándola con tus brazos, cubriendo una vez más su sensual boca con la tuya. Este beso, aunque no dura mucho, es muy intenso, coloreando las mejillas de Kiara de un rosa cálido. Casi puedes saborear su ansia; su deseo de ser una contigo es más dulce que la miel. Al acercarte a ella de nuevo, buscando sus labios, Kiara apoya su mano contra tu pecho, sus ojos te suplican que pares un momento.
 
@@ -1386,8 +1391,7 @@ Ver cómo el cuerpo de Kiara reacciona por completo y sentir la humedad que anega
 
 En ese instante, deslizas todo tu ser sobre Kiara, introduciéndote entre sus anhelantes piernas. Hundes tu lengua en el interior de su boca, sientes un intenso calor que recorre tu cuerpo por el fuego de la pasión, que exige ser saciado. Mientras tu lengua encuentra su ansiado destino en la dulce miel de su boca, tu rígida y dura virilidad encuentra su acogedora calidez al enterrarte en lo más profundo de su ser con un intenso movimiento, golpeando rápidamente la barrera que obstruye tu entrada a ella. Kiara grita, notas de placer y dolor se entremezclan en sus apasionados tonos, ahogándose en la agridulce agonía de su deseo. El placer se impone rápidamente sobre la fuente de dolor inicial, y las caderas de Kiara se alzan para encontrarse con las tuyas, vuestros cuerpos adquieren un maravilloso ritmo, ambos dando y recibiendo del otro. Kiara se estremece una vez más, se le escapa un hondo jadeo y hunde sus uñas en tu espalda, marcando tu piel y recostándote sobre ella para sentir tu duro torso contra la suave y apetecible calidez de sus pechos. La intensidad de su reacción lleva a tu cuerpo al límite, y de repente sientes como si estuvieras cayendo -- no, volando, entrelazado con tu amante en el dulce olvido de la pasión. Kiara te agarra con fuerza una última vez, estremeciéndose al llenarla con tu semilla. Al reposar tu cabeza sobre su hombro, ambos jadeando por el esfuerzo, Kiara apoya su mejilla contra la tuya, susurrando tiernamente "Te amo..."~
 
-
-@9001 = ~Kiara te lleva cogido de la mano a la habitación por las estrechas escaleras. Se detiene en el umbral de la puerta, la luz del interior perfila su esbelto y firme cuerpo, los músculos logrados por los años de entrenamiento como monje. Su cabello carmesí corona su rostro como una aureola encarnada, y brevemente roza tu cara, estimulando tu olfato con un suave olor a jazmín. Antes de entrar, Kiara impone sus labios sobre los tuyos, el beso dura hasta que tus pulmones te queman pidiendo oxígeno. Se aparta con una sonrisa maliciosa en sus salados labios rojos, y te hace un gesto para que entres en la habitación. Al adentrarte perezosamente te da un manotazo travieso en el trasero, un intenso dolor recorre tu cuerpo.
+@8001 = ~Kiara te lleva cogido de la mano a la habitación por las estrechas escaleras. Se detiene en el umbral de la puerta, la luz del interior perfila su esbelto y firme cuerpo, los músculos logrados por los años de entrenamiento como monje. Su cabello carmesí corona su rostro como una aureola encarnada, y brevemente roza tu cara, estimulando tu olfato con un suave olor a jazmín. Antes de entrar, Kiara impone sus labios sobre los tuyos, el beso dura hasta que tus pulmones te queman pidiendo oxígeno. Se aparta con una sonrisa maliciosa en sus salados labios rojos, y te hace un gesto para que entres en la habitación. Al adentrarte perezosamente te da un manotazo travieso en el trasero, un intenso dolor recorre tu cuerpo.
 
 Una vez dentro, Kiara se te adelanta, quitándose la túnica lentamente, descubriendo su bronceado cuerpo, sus pequeñas cicatrices brillan bajo la luz de la luna, en contraste con su piel morena. Percibes sus apetitosos pechos, suplicando ser acariciados, pero Kiara te detiene al poner su mano contra tu pecho. Camina a tu alrededor, quitándote lentamente la ropa, rozando tu cuerpo con gran suavidad, delimitando tus músculos con sus dedos. Kiara se sitúa detrás de ti y te ata las muñecas con una bufanda negra; el sedoso y suave tejido contra tu piel. Coge otra bufanda y la ata alrededor de tus ojos; ahora estás en las más profundas tinieblas. Percibes a Kiara ante ti, pero poco después desaparece. Al buscarla a ciegas, sientes una leve brisa meciendo tu más fino vello, el viento se mueve de manera circular. El remolino de aire se detiene, y lo único que puedes oír es el sonido de la respiración de ambos. Después sientes cómo sus ligeros labios besan tu cuello, un escalofrío recorre tu cuerpo al imaginar lo que te aguarda. Sientes el húmedo aliento de Kiara en tu oreja, diciéndote que no te muevas. De repente, te quedas solo; tus oídos se agudizan para averiguar dónde se encuentra ella...
 
@@ -1433,7 +1437,7 @@ Después, Kiara introduce tu dureza en ella y se asienta sobre ti. Gimiendo, apre
 
 Sin embargo, el momento finalmente llega, y sientes una explosión de placer y dolor entre el abrazo de Kiara, ambos caéis sobre la cama, compartiendo un último jadeo entrecortado. Kiara te sonríe, después te empuja hacia el otro lado de la cama, antes de ponerse sobre tu bronceado pecho, con los ojos entrecerrados, susurrando cálidamente, "Mío..."~
 
-@9002 = ~Kiara está radiante, de pie en lo alto de las escaleras. Su brillante cabello rojizo resbala como una cascada sobre sus hombros y sus redondeados pechos, cubiertos en parte por la túnica que oculta su cuerpo. Su piel parece alabastro con un rubor sólo presente bajo sus ojos, que brillan con un asombroso parecido a la esmeralda. Aunque ahora incluso te sorprende que todavía brillen. Das un paso atrás, sumergiéndote en la sombra de la barandilla, y aguardas al siguiente paso de Kiara. Notas que su respiración es pesada, su jadeante pecho asciende aceleradamente y desciende hasta recuperar su posición inicial. Percibes un fino rocío de sudor sobre su frente, y hueles la humedad de su cabello junto a un tenue aroma a lilas, evidenciando que acaba de darse un baño.
+@8002 = ~Kiara está radiante, de pie en lo alto de las escaleras. Su brillante cabello rojizo resbala como una cascada sobre sus hombros y sus redondeados pechos, cubiertos en parte por la túnica que oculta su cuerpo. Su piel parece alabastro con un rubor sólo presente bajo sus ojos, que brillan con un asombroso parecido a la esmeralda. Aunque ahora incluso te sorprende que todavía brillen. Das un paso atrás, sumergiéndote en la sombra de la barandilla, y aguardas al siguiente paso de Kiara. Notas que su respiración es pesada, su jadeante pecho asciende aceleradamente y desciende hasta recuperar su posición inicial. Percibes un fino rocío de sudor sobre su frente, y hueles la humedad de su cabello junto a un tenue aroma a lilas, evidenciando que acaba de darse un baño.
 
 Percibes la necesidad que ella irradia mientras echa un vistazo a la planta baja. Sientes un aumento en tu ropa interior e intentas controlar tus pensamientos. Cómo tu cuerpo la deseaba, cómo tus musculosos brazos ansiaban abrazarla, un creciente deseo que somete a tu cuerpo cuando tu mente recuerda la primera vez que hicisteis el amor. Ahora es tu frente la que está húmeda, una única y salada gota de sudor desciende por tu mejilla. Tu corazón palpita contra tu pecho al salir de las sombras. Kiara se asusta al verte aparecer y huye a su habitación a toda prisa.
 
@@ -1461,9 +1465,9 @@ De pronto, algo mucho más blando se sitúa sobre su feminidad. Algo que resbala s
 
 Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fuerza. Acaricia suavemente tu mejilla, apartando con besos las gotas de sudor, y susurra, "Te amo..."~
 
-//ZAIYA.D: ZAIYA JOIN DIALOGS
-
-@3000 = ~Por favor ayúdame, por favor... ¡Esos esclavistas no parecieron entenderlo o quizás simplemente no les importó! Padezco una dolencia y sólo mi amiga Kiara puede sanarme. Por favor, ayúdame a encontrar a mi amiga.~ 
+// ZAIYA.D: ZAIYA JOIN DIALOGS
+// ---------------------------
+@3000 = ~Por favor ayúdame, por favor... ¡Esos esclavistas no parecieron entenderlo o quizás simplemente no les importó! Padezco una dolencia y sólo mi amiga Kiara puede sanarme. Por favor, ayúdame a encontrar a mi amiga.~
 [ZAYAL1]
 @3001 = ~Quiero ayudarte, pero tu historia parece un poco confusa. ¿Puedes hablarme un poco más de tu dolencia?~
 @3002 = ~¿Quién eres tú y de dónde eres? No entiendo tu petición de ayuda.~
@@ -1487,7 +1491,8 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @3020 = ~Estoy condenada. Preferiría suicidarme a tener que soportar todo este dolor y sufrimiento.~ [ZAYAL8]
 @3021 = ~Entiendo tu ansia de venganza pero mi misión es muy urgente, <CHARNAME>. Moriré si no encontramos a mi amiga en diez días.~
 
-//ZAIYAP.D ZAIYA LEAVE/REJOIN DIALOGS
+// ZAIYAP.D ZAIYA LEAVE/REJOIN DIALOGS
+// -----------------------------------
 @3200 = ~Lo siento <CHARNAME>, a veces no la comprendo pero tengo que ir con ella.~
 @3201 = ~¡Entiendo! Kiara ha sido secuestrada por Bodhi y ahora deseas deshacerte de mí. ¡Eres despreciable!~
 @3202 = ~<CHARNAME>, muchas gracias por ayudarme a encontrar a Kiara. Me voy con ella, te deseo buena suerte en la búsqueda de tu hermana.~
@@ -1517,7 +1522,8 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @3226 = ~En realidad, por favor, espérame aquí. No tardaré mucho.~
 @3227 = ~Por fin cambiaste de opinión.~
 
-//ZAIYAJ.D: ZAIYA GAME INTERJECTIONS
+// ZAIYAJ.D: ZAIYA GAME INTERJECTIONS
+// ----------------------------------
 @3400 = ~¡<CHARNAME>, debemos encontrar la manera de recuperar a Kiara! No puedo vivir sin ella.~
 @3401 = ~¿Kiara ha muerto y tú me abandonas? Eres despreciable, <CHARNAME>.~
 @3402 = ~¡NO! ¿Cómo ha podido pasar?... ¡Ahora que ha muerto Kiara, yo, también, moriré, y pronto!~
@@ -1578,7 +1584,8 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @3457 = ~Estoy de acuerdo con Zaiya. No eres muy diferente al hombre que más detesto de este mundo.~
 @3458 = ~Basta de cháchara, ha llegado la hora de tu muerte.~
 
-//BZAIYA.D: ZAIYA'S BANTER FILE
+// BZAIYA.D: ZAIYA'S BANTER FILE
+// -----------------------------
 @3700 = ~También has firmado mi sentencia de muerte, <CHARNAME>. Estoy segura de que cuando Kiara y yo nos marchemos te quedará un mal sabor de boca.~
 @3701 = ~Este viaje me ha recordado a la larga travesía desde Afyal y los momentos que estuvimos encadenadas en la bodega del barco corsario. Juro que jamás volveré a pisar un barco.~
 @3702 = ~De acuerdo, déjame lanzar un hechizo para demostrártelo.~
@@ -1716,7 +1723,7 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @3834 = ~Minsc pateará vuestros malvados traseros, a todos vosotros. ¡¡¡Quiero que me devuelvas a mi Bubú!!!~
 @3835 = ~Ese cloqueo me está volviendo locooooo...~
 
-//Zaiya Cernd romance banter 1
+// Zaiya Cernd romance banter 1
 @3850 = ~Cernd, querría preguntarte algo.~ [MxZaiyaA] //zai
 @3851 = ~Desde luego, Zaiya. ¿Qué es lo que deseas saber?~ //cernd
 @3852 = ~¿Por qué no te apartas de mi por miedo? Mucha gente detesta a los magos salvajes, pero tú no. Es como si aceptaras mi presencia.~//zai
@@ -1732,7 +1739,7 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @3861 = ~Quizás, pero incluso tú debes admitir que cuando mi magia sale mal y alguien se convierte en un ave de corral, eso no ayuda precisamente al equilibrio, ¿verdad?~ //Zai
 @3862 = ~No, pero tampoco lo perjudica.~ //Cernd
 @3863 = ~(De repente, Zaiya se da cuenta de que la mano de Cernd cubre la suya, y rápidamente la aparta.)~ //Zai
-//Second Scene for Cernd-Zaiya
+// Second Scene for Cernd-Zaiya
 @3864 = ~Creo que te debo una disculpa, Cernd.~ [MxZaiyaA] //Zai
 @3865 = ~Oh, hola Zaiya. Lo siento, me has pillado con la cabeza en las nubes. Si no te importa aclararme tus pensamientos, ¿de qué quieres disculparte?~ //Cernd
 @3866 = ~Me temo que hablé más de la cuenta la última vez. No fue mi intención poner en duda la forma de vida que has elegido, ya que no conozco la estructura de la jerarquía druídica. Me parece que no sirves a la naturaleza, sino a las necesidades de aquéllos que dicen hablar en nombre de ella.~ //Zai
@@ -1743,13 +1750,13 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @3870 = ~¿Necesito señalar las numerosas maneras de las criaturas de mostrar lealtad a una jerarquía? ¿Qué me dices de una manada de lobos, o de una colmena de abejas?~
 @3871 = ~Debo haberte tocado hondo, ya que tus analogías no son muy precisas... los animales, a diferencia de los humanos, son leales por instinto, y su vínculo es de los más primarios, si no el más fuerte... el vínculo con tu familia, con los tuyos...~
 
-//Cernd-Zaiya third scene
+// Cernd-Zaiya third scene
 @3872 = ~Cernd...~ [MxZaiyaA] //zai
 @3873 = ~¿Qué quieres, Zaiya? ¿Ahora pretendes socavar alguna de mis creencias fundamentales y acabar conmigo por dentro al igual que una Implosión derriba al más vigoroso roble?~ //cernd
 @3874 = ~No Cernd, no pretendo nada de eso. Simplemente quería disculparme por mi atrevimiento, pero ya veo que aún estás enfadado por mis palabras. Perdón, te dejaré en paz. No debería haber dicho nada.~ //zai
 @3875 = ~¿Entonces por qué te entrometiste en mis asuntos, Zaiya?~ //cernd
 @3876 = ~No... no lo sé, Cernd.~ //zai
-//cernd-zaiya fourth scene
+// Cernd-Zaiya fourth scene
 @3877 = ~¿A quién respondes, Cernd?~ [MxZaiyaA] //zai
 @3878 = ~¿Perdona, Zaiya? Me temo que no he entendido tu pregunta.~ //cernd
 @3879 = ~¿A quién respondes, Cernd, por tus acciones?~ //zai
@@ -1757,7 +1764,7 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @3882 = ~(Zaiya asiente) Al igual que yo respondo a Kiara por mis propias acciones. Muy bien. Esta es la pregunta que me inquieta. Si en última instancia sirves a las necesidades de la naturaleza, entonces al seguir los mandatos de ese 'Gran Druida' o de quien sea, ¿no estás mezclando la vanidad humana con una fuerza superior?~ //zai
 @3883 = ~Será que los druidas nos engañamos con nuestro concepto de la naturaleza, aunque lo dudo. El equilibrio debe mantenerse, pero la gente no son necesariamente criaturas del Equilibrio, por lo que como druidas debemos mantenerlo. Sin embargo, debo admitir que siento curiosidad por el motivo de este interrogatorio.~ //cernd
 @3884 = ~Es muy simple. ¿Qué tiene que ver ser uno con la naturaleza con servir a los propósitos de otro? Sobre todo cuando te sitúa fuera del equilibrio.~//zai
-//Cernd-Zaiya no 5
+// Cernd-Zaiya no 5
 @3885 = ~Zaiya, tenemos que hablar...~ [MxZaiyaA] //Cernd
 @3886 = ~(La voz de Zaiya es suave, tranquila.) ¿Sí, Cernd, qué quieres? ¿Por fin vas a descargar la rabia que sin duda se ha formado en tu pecho? ¿Vas a castigarme por haber cogido tu mano? Muy bien, sírvete.~ //Zaiya
 @3887 = ~No te mentiré, Zaiya, las palabras que me dijiste causaron un gran daño en mi mente y en mi corazón. Después de todo, ¿a quién le gusta que desmoronen las creencias en las que ha basado toda su vida? Pero gracias a eso, me he dado cuenta de algo...~ //cernd
@@ -1771,15 +1778,17 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @3895 = ~Más concretamente, podría haber algo en la sabiduría druídica que pueda curar tu dolencia.~ //cernd
 @3896 = ~(No sin cierta reticencia, Zaiya aparta su mano de la de Cernd.) Yo... Cernd... yo... estoy impresionada por todo lo que haces por mí... pero...~//zai
 @3897 = ~(Zaiya sacude la cabeza, un destello de silenciosa desesperación brilla en sus ojos llenos de lágrimas.) He albergado falsas esperanzas en demasiadas ocasiones. Yo no... no me... quiero hacer ilusiones... Oh Cernd, déjame sola, ¿vale?~
-//END SOA Cernd-Zaiya banter
+// END SOA Cernd-Zaiya banter
 
-//AMAEVIL.D: AMARALIS IN CHAPTER 2
+// AMAEVIL.D: AMARALIS IN CHAPTER 2
+// --------------------------------
 @5000 = ~¡Ah <CHARNAME>! ¡He oído hablar de ti! Has venido a rescatar a la zorra, ¿me equivoco?~
 @5001 = ~Sí esclavista, así es. Te lo advierto, si no la liberas de inmediato me veré obligado a matarte.~ ~Sí esclavista, así es. Te lo advierto, si no la liberas de inmediato me veré obligada a matarte.~
 @5002 = ~Te daré un consejo, esclavista. Libérala ahora mismo y puede que salgas ileso de aquí.~
 @5003 = ~No tienes ni idea de a quién te enfrentas. Tus amenazas no significarían nada para un kobold, y mucho menos para mí. Tu grupo de vagabundos y rufianes estarán pidiendo clemencia dentro de nada. ¡Prepárate para morir!~
 
-//C6AMA.D: AMARALIS IN CHAPTER 6
+// C6AMA.D: AMARALIS IN CHAPTER 6
+// ------------------------------
 @5100 = ~¡Ah! ¡Ya veo que el cachorro se ha convertido en un perro feroz! ¡Me gustaría poder decir que voy a lamentar matarte, pero desafortunadamente no es así!~
 @5101 = ~Veo que persistes en tu arrogancia, esclavista. Muy pronto tendré tu cabeza en una bandeja.~
 @5102 = ~Déjame en paz, escoria. Sólo eres un estorbo al que aplastaré con mi bota con mucho gusto.~
@@ -1788,7 +1797,8 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @5105 = ~Entonces, como quieras... Muere junto a los otros imbéciles.~
 @5106 = ~Una oferta tentadora pero... ¡no, gracias!~
 
-//DELORD.D: DEMON LORD
+// DELORD.D: DEMON LORD
+// --------------------
 @5200 = ~**KIARA, HAS FRACASADO EN TU MISIÓN. ES LA HORA DE QUE TE UNAS AL ABISSMOOooooo...**~ [DELORDL1]
 @5201 = ~Espera.~
 @5202 = ~(Permanece en silencio.)~
@@ -1860,8 +1870,9 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @5268 = ~¡Espera Demonio! Concédeme un último favor.~
 @5269 = ~¡Si el hijo de Bhaal no desea unirse a las fuerzas del mal, yo lo mataré con mucho gusto por ti!~ ~¡Si la hija de Bhaal no desea unirse a las fuerzas del mal, yo la mataré con mucho gusto por ti!~
 @5270 = ~**NOS VEREMOS EN TRES DÍAS, ENGENDRO DE BHAAL.**~
-//JERLIA.D: JERLIA
 
+// JERLIA.D: JERLIA
+// ----------------
 @5400 = ~¡Por favor, ayuda! (sollozo) Él robó mi alma... (sollozo) Te lo ruego... (sollozo)... ayúdame a encontrar mi alma...~
 @5401 = ~No temas. Te daré el descanso eterno. ¡Muere, fantasma!~
 @5402 = ~Me encantaría ayudarte si me explicas más...~
@@ -1895,7 +1906,8 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @5430 = ~Finalmente vuestro amor ha demostrado ser más fuerte y siento que Kiara ha cambiado a tu lado al igual que ella pretendía cambiarte estando a su lado... Os deseo lo mejor...~
 @5431 = ~Adiós, <CHARNAME>.~
 
-//PRAX.D: PRAX
+// PRAX.D: PRAX
+// ------------
 @5600 = ~¡Aquí, <PRO_SIRMAAM>! Quizás te interese comprar algunos esclavos.~
 @5601 = ~¡Ah! Reconozco esa mercancía. Se la vendí a un amigo mío.~
 @5602 = ~Euh... eso quiere decir que probablemente lo MATASTE.~
@@ -1939,7 +1951,8 @@ Te desplomas sobre Kiara, y sus brazos se alzan, rodeándote, apretándote con fue
 @5640 = ~No moriré sin luchar.~
 @5641 = ~No... Soy demasiado joven para morir... Ayuda...~
 
-//TOB Ends
+// Epilogues: TOB Ends
+// -------------------
 @9100 = ~Tras dejar atrás los sucesos de la saga de los engendros de Bhaal, Kiara y <CHARNAME> demostraron ser una pareja perfecta. Durante un tiempo se quedaron en Athkatla e intentaron vivir una vida sencilla aunque aburrida. Pronto le ofrecieron a <CHARNAME> un asiento en el Consejo de los Seis tras la repentina muerte del Meisarca, pero rechazó la oferta ante la insistencia de Kiara. No podía aceptar la idea de convertirse en una simple ama de casa y convenció a <CHARNAME> para volver a la aventura de nuevo, tentándole con una visita a su patria de Kara-Tur.
 Según la leyenda, durante una parada en Afyal el Señor de los Demonios visitó a Kiara una vez más con la única finalidad de romper su palabra y llevarse a Kiara al Abismo. <CHARNAME> persiguió al Señor de los Demonios con la ayuda de Cyric, el actual Dios del Asesinato, quien había esperado durante mucho tiempo una oportunidad para vengarse del Señor de los Demonios por su traición. Tras viajar unidos a las sombrías profundidades del plano de los demonios, la leyenda dice que la matanza resultante dejó al Abismo maltrecho para mil años. Kiara y <CHARNAME> lucharon juntos sin ayuda y mataron a innumerables demonios, incluyendo a un poderoso Príncipe de los Demonios, antes de escapar ilesos por el Monte del Destino. Hay un rumor que dice que Árdic prometió a Kiara y a <CHARNAME> que gobernarían el Abismo tras el fin de su existencia mortal. Sin embargo, ni Kiara ni <CHARNAME> han confirmado jamás estos hechos, y cuando se les pregunta sólo se miran el uno al otro y se echan a reír.
 Tras abandonar el Monte del Destino, ambos viajaron a Kara-Tur y Kiara condujo a <CHARNAME> a su antiguo monasterio, de nuevo un lugar tranquilo y pacífico, libre del estricto mandato de Balthazar. Un lugar en el que Kiara no tardó en dar a luz a un heredero varón que llevaría con orgullo el nombre y la herencia de su padre, y que con el paso de los años se convertiría en un poderoso y famoso monje. No obstante, Kiara murió al dar a luz a pesar de todos los esfuerzos de los monjes por salvarla. Una larga procesión de plañideras que llegaba casi hasta Afyal llegó al monasterio para rendir homenaje a la leyenda de Kiara, la monje que venció al Abismo.
