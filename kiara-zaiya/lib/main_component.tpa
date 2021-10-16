@@ -44,17 +44,20 @@ CLEAR_IDS_MAP
 // Isaya: end of additional code
 
 
-COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/Spl~ ~override~
-COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/TobSpl~ ~override~
-COPY ~Kiara-Zaiya/DetectableSpells/build1.2.3/Ids~ ~override~
-
-
-/* -------------------------------- *
- *    Loads macros and functions    *
- * -------------------------------- */
+/* ---------------------------- *
+ *  Loads macros and functions  *
+ * ---------------------------- */
 
 // Loads macros and functions library dealing with tooltip appending, specific EE items descriptions, and more...
 INCLUDE ~%MOD_FOLDER%/lib/gw_functions.tpa~
+INCLUDE ~%MOD_FOLDER%/ds/ds.tph~
+
+
+/* -------------------------------------------------------- *
+ *  Update Detectable Spells v 4.01 (August 2020 - DavidW)  *
+ - -------------------------------------------------------- */
+SILENT
+LAF ~detectable_spells~ END
 
 
 /* -------------------------- *
@@ -71,7 +74,12 @@ COPY ~%MOD_FOLDER%/portraits_others~   ~override~
 
 // Installing music
 // ----------------
-// Isaya note: Kiara.baf and Kiar25.baf must be compiled AFTER ADD_MUSIC in order to update the music code assigned at installation
+COPY ~kiara-zaiya/music/kz#blank.mus~ ~music~
+
+COPY_EXISTING ~songlist.2da~ ~override~
+	SET_2DA_ENTRY 0 2 3 ~kz#blank.mus~
+
+// Isaya note: kiara.baf and kiar25.baf must be compiled AFTER ADD_MUSIC in order to update the music code assigned at installation
 MKDIR ~music/mxkiara~
 COPY ~kiara-zaiya/music/mxkiara.mus~ ~music~
 ADD_MUSIC ~Kiara~ ~music/mxkiara.mus~
