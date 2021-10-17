@@ -24,11 +24,25 @@ COMPILE ~kiara-zaiya/sulda/kz#rakma.baf~
  *  DEMON IN REPLACEMENT OF NIMZI: EXTREMELY TOUGH BUT FEASIBLE  *
  * ------------------------------------------------------------- */
 
-// BWP fix: Lollorian's patched Revised Suldanessalar
+/* DEPRECATED as of v2.0.0
+   -----------------------
+   BWP fix: Lollorian's patched Revised Suldanessalar
 //COPY ~kiara-zaiya/sulda/AR2807.are~ ~override~
 //COPY ~kiara-zaiya/sulda/AR2807.wed~ ~override~
 COPY_EXISTING ~ar2807.are~ ~override~
-	LPF ~ALTER_AREA_ACTOR~ STR_VAR actor_name = ~Black Dragon~ cre_file = ~KZ#DMLRD~ END
+//	LPF ~ALTER_AREA_ACTOR~ STR_VAR actor_name = ~Black Dragon~ cre_file = ~KZ#DMLRD~ END
+*/
+// Gwen fix: Replaced ALTER_AREA_ACTOR function with old school coding to insure compatibility with oBG2 (actor's name is Nizidramanii'yt in oBG2 and Black Dragon in EE games)
+COPY_EXISTING ~ar2807.are~ ~override~
+	READ_LONG  0x54 cre_off
+	READ_SHORT 0x58 cre_num
+	FOR (index = 0 ; index < cre_num ; ++index) BEGIN
+		READ_ASCII (cre_off + (index * 0x110) + 0x80) cre_file (8) NULL
+		PATCH_IF ("%cre_file%" STRING_COMPARE_CASE "DRAGBLAC" = 0) BEGIN
+			WRITE_ASCII (cre_off + (index * 0x110) + 0x80) ~KZ#DMLRD~ #8
+			SET index = cre_num
+		END
+	END
 BUT_ONLY
 
 COPY ~kiara-zaiya/sulda/kz#dmlrd.cre~ ~override~
@@ -51,7 +65,9 @@ EXTEND_TOP ~demsuc.bcs~  ~kiara-zaiya/sulda/demsuc.baf~
  *  A LICH AND TWO VAMPIRE ILITHID INSTEAD OF UNDEAD = EASY  *
  * --------------------------------------------------------- */
 
-// BWP fix: Lollorian's patched Revised Suldanessalar
+/* DEPRECATED as of v2.0.0
+   -----------------------
+   BWP fix: Lollorian's patched Revised Suldanessalar
 //COMPILE ~kiara-zaiya/sulda/suscene1.baf~
 COPY_EXISTING ~suscene1.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -59,7 +75,16 @@ COPY_EXISTING ~suscene1.bcs~ ~override~
 		REPLACE_TEXTUALLY ~CreateCreature("SUUNDEAD",\[1394\.2900\],8)~ ~CreateCreature("KZ#FVAMP",[1394.2900],8)~
 		REPLACE_TEXTUALLY ~CreateCreature("SUUNDEAD",\[1132\.2892\],8)~ ~CreateCreature("KZ#FVAMP",[1132.2892],8)~
 	END
+BUT_ONLY*/
+// Gwen fix: Used REGEXP to insure compatibility with EE games.
+COPY_EXISTING ~suscene1.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~\(SUUNDEAD",\)\(\[1259\.2912\].+\)~ ~LICH01",\2~
+		REPLACE_TEXTUALLY ~\(SUUNDEAD",\)\(\[1394\.2900\].+\)~ ~KZ#FVAMP",\2~
+		REPLACE_TEXTUALLY ~\(SUUNDEAD",\)\(\[1132\.2892\].+\)~ ~KZ#FVAMP",\2~
+	END
 BUT_ONLY
+
 COPY ~kiara-zaiya/sulda/kz#fvamp.cre~ ~override~
 COMPILE ~kiara-zaiya/sulda/kz#flayu.baf~
 
@@ -68,12 +93,21 @@ COMPILE ~kiara-zaiya/sulda/kz#flayu.baf~
  *  MARILITH INSTEAD OF TROLLS = EASY  *
  * ----------------------------------- */
 
-// BWP fix: Lollorian's patched Revised Suldanessalar
+/* DEPRECATED as of v2.0.0
+   -----------------------
+   BWP fix: Lollorian's patched Revised Suldanessalar
 // COMPILE ~kiara-zaiya/sulda/suscene3.baf~
 COPY_EXISTING ~suscene3.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY ~CreateCreature("SUTROLL",\[3549\.3349\],8)~ ~CreateCreature("DEMOSUM1",[3549.3349],8)~
 		REPLACE_TEXTUALLY ~CreateCreature("SUTROLL",\[3437\.3388\],8)~ ~CreateCreature("DEMOSUM1",[3437.3388],8)~
+	END
+BUT_ONLY*/
+// Gwen fix: Used REGEXP to insure compatibility with EE games.
+COPY_EXISTING ~suscene3.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~\(SUTROLL",\)\(\[3549\.3349\].+\)~ ~DEMOSUM1",\2~
+		REPLACE_TEXTUALLY ~\(SUTROLL",\)\(\[3437\.3388\].+\)~ ~DEMOSUM1",\2~
 	END
 BUT_ONLY
 
