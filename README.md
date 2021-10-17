@@ -46,6 +46,7 @@ Baldur's Gate Trilogy and EET<h3>
 - Added *kiara-zaiya.ini* metadata file (including dynamic install order syntax and global `LABELS`) to support AL|EN's "Project Infinity".
 - Renamed *Setup-Kiara-Zaiya.tp2* -> *kiara-zaiya.tp2* and moved it into top mod folder to support AL|EN's "Project Infinity".
 - Replaced `AUTHOR` keyword with `SUPPORT`.
+- Added Immutability concept.
 - Replaced `REQUIRE_FILE` condition with `REQUIRE_PREDICATE` to avoid installing the mod in inaccurate games.
 - Added components `DESIGNATED` numbers.
 - Externalized tp2 code into specific components *.tpa* libraries for more comfortable readability and maintenance.
@@ -55,24 +56,22 @@ Baldur's Gate Trilogy and EET<h3>
     - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
     - Added chapters continuity for EET games.
     - Added `ADD_JOURNAL` entries.
-    - Rewrote sound set installation procedure to use WeiDU's built-in `HANDLE_AUDIO` function, and converted music file to .acm.
-    - ...
-    - Provided accurate sized NPC portraits for EE games.
-- Updated outdated Detectable Spells v2.3 with less intrusive v4.0.1 that does not overwrite files any more.
+    - Rewrote sound sets installation procedure to use WeiDU's built-in `HANDLE_AUDIO` function, and converted music file to .acm.
+    - Provided accurate sized NPCs portraits for EE games.
+- Updated outdated Detectable Spells v2.3 with less intrusive v4.0.1 that does not overwrite files any more; and does not install it if it has been already installed.
 - Included all BWP Fixpack fixes:
     - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
     - <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-49#entry587224">micbaldur's Zaiya epilogue fix</a>: fixed a typo in "*zai6200.baf*" causing one of Zaiya's epilogues not to show up.
     - *The Divine Sword* (amaswd.itm): Nightfarer's item description fix.
     - Lollorian's patched Revised Suldanessalar: patched "*ar2807.are*", "*uddeath.bcs*", "*demsuc.bcs*", "*suscene1.baf*" and "*suscene3.baf*" instead of overwriting them.
     - Fixed Ninja-To +1 wrong immunity to poison assignments: moved them from melee header to global effects.
-    - Gwendolyne fixes for better '*Revised Suldalanessar*' component compatibility: Replaced `ALTER_AREA_ACTOR` function with old school coding to insure compatibility with oBG2 (actor's name is Nizidramanii'yt in oBG2 and Black Dragon in EE games); used REGEXP in`DECOMPILE_AND_PATCH` commands to insure compatibility with EE games.
+    - Gwendolyne's fixes for better '*Revised Suldalanessar*' component compatibility: Replaced `ALTER_AREA_ACTOR` function with old school coding to insure compatibility with oBG2 (actor's name is Nizidramanii'yt in oBG2 and Black Dragon in EE games); used REGEXP in `DECOMPILE_AND_PATCH` commands to insure compatibility with EE games.
 - Removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
 - Removed *pdialog.2da* appending for BG2 without ToB games (not supported).
 - *kzninja.baf*: fixed typos.
 - Rewrote .bcs appending process (originally coded with so bad practice).
 - Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
 - Spells installation: removed useless `SAY NAME2` patches.
-- ...
 - *dialogs.tra* files: modified Lovetalks cutscenes entry to avoid duplicated strrefs entries with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function.
 - <ins>Bracers: protectors</ins> (kzbrac1.itm): Added missing restriction flags (only usable by monks).
 - <ins>The Divine Sword</ins> (amaswd.itm):
@@ -90,6 +89,7 @@ Baldur's Gate Trilogy and EET<h3>
 - Proofread English tra files and updated French translation (Gwendolyne).
 - TODO Lowercased sound references to fix issues on Linux.
 - TRAIfied last missing tp2 strref.
+- Re-formated, updated and renamed readme file to "*kiara-zaiya-readme-english.html*, then moved it into new :file_folder: "*readme*" folder.
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.
 - Lower cased files.
