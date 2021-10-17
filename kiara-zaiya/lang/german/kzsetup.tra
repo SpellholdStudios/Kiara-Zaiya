@@ -20,6 +20,9 @@
 @189  = ~Ihr scheint das Soundset nicht installiert zu haben!!! Es ist seperat auf der Webseite von Kiara-Zaiya zu finden.~
 */
 
+@15   = ~Installiere Detectable Spells...~
+@16   = ~Detectable Spells erkannt. Es wird übersprungen, weil es bereits installiert ist...~
+
 
 /* =========== *
  *  Creatures  *

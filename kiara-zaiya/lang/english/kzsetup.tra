@@ -19,6 +19,9 @@
 @189  = ~You do not seem to have the custom soundset installed!!! It can be found separately on the Kiara-Zaiya website.~
 */
 
+@15   = ~Installing Detectable Spells...~
+@16   = ~Detectable Spells detected. Skipping, as it is already installed.~
+
 
 /* =========== *
  *  Creatures  *

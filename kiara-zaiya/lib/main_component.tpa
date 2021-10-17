@@ -8,7 +8,7 @@ SILENT
 
 /* ---------------------------------------------------------------- *
  *  Isaya: additional code as of v1.6.1, retrieved from BG2Fixpack  *
-/* ---------------------------------------------------------------- */
+ * ---------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------------------------------------------------------- *
  *   	ADDs CamDawg's custom state needed to fix Dead() triggers that don't use DVs. Thanks Cam!                         *
@@ -44,26 +44,27 @@ CLEAR_IDS_MAP
 // Isaya: end of additional code
 
 
-/* ---------------------------- *
- *  Loads macros and functions  *
- * ---------------------------- */
-
-// Loads macros and functions library dealing with tooltip appending, specific EE items descriptions, and more...
-INCLUDE ~%MOD_FOLDER%/lib/gw_functions.tpa~
-INCLUDE ~%MOD_FOLDER%/ds/ds.tph~
-
-
 /* -------------------------------------------------------- *
  *  Update Detectable Spells v 4.01 (August 2020 - DavidW)  *
- - -------------------------------------------------------- */
-SILENT
-LAF ~detectable_spells~ END
+ * -------------------------------------------------------- */
+
+ACTION_IF (!FILE_EXISTS "%ds_marker_name%") BEGIN
+	PRINT @15 // ~Installing Detectable Spells...~
+	INCLUDE ~%MOD_FOLDER%/ds/ds.tph~
+	SILENT
+	COPY ~.../kiarazaiya-inlined/blank~ ~%ds_marker_name%~
+	LAF detectable_spells END
+	CLEAR_IDS_MAP // make sure any DS changes to splstate/stats are logged
+END ELSE BEGIN
+	PRINT @16 // ~Detectable Spells detected. Skipping, as it is already installed.~
+END
 
 
 /* -------------------------- *
  *  Installing NPC portraits  *
  * -------------------------- */
 
+SILENT
 COPY ~%MOD_FOLDER%/portraits%ee_file%~ ~override~
 COPY ~%MOD_FOLDER%/portraits_others~   ~override~
 
@@ -446,8 +447,8 @@ BUT_ONLY
 // Handling journal entries for EE games
 // -------------------------------------
 ACTION_IF is_ee BEGIN
-	ADD_JOURNAL @353 @1468 @1586 @1592   USING ~%MOD_FOLDER%/lang/%LANGUAGE%/dialogs.tra~ 
-	ADD_JOURNAL @231 @232 @233 @234 @235 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/kzsetup.tra~ 
+	ADD_JOURNAL @353 @1468 @1586 @1592   USING ~%ext_lang_loc%/%LANGUAGE%/dialogs.tra~ 
+	ADD_JOURNAL @231 @232 @233 @234 @235 USING ~%ext_lang_loc%/%LANGUAGE%/kzsetup.tra~ 
 END
 
 // Isaya: version 1.6.2

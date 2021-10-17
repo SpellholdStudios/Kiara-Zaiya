@@ -19,6 +19,9 @@
 @189  = ~Il semble que vous n'ayez pas installe la voix personnalisee !!! Vous pouvez la trouver separement sur le site de Kiara-Zaiya.~
 */
 
+@15   = ~Installation de Detectable Spells en cours...~
+@16   = ~Installation de Detectable Spells detectee. Passe...~
+
 
 /* =========== *
  *  Creatures  *

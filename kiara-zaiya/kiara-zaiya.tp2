@@ -1,4 +1,4 @@
-BACKUP ~kiara-zaiya/backup~
+BACKUP ~weidu_external/backup/kiara-zaiya~
 AUTHOR ~olryx2@yahoo.co.uk~
 ASK_EVERY_COMPONENT
 
@@ -10,85 +10,13 @@ README ~kiara-zaiya/readme_KZ.chm~
 
 ALWAYS
 
-	ACTION_IF NOT VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once per install!
+	INCLUDE ~kiara-zaiya/lib/always.tph~
 
-// Isaya: the IDS files included in the mod are identical to those of ToB with the latest patch. In principle, they should not be overwritten unless the official ToB patch is not installed.
-/* Gwendolyne: removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
-		ACTION_IF NOT FILE_EXISTS ~override/action.ids~ THEN BEGIN
-			COPY ~Kiara-Zaiya/ids/action.ids~ ~override/action.ids~
-		END
-		ACTION_IF NOT FILE_EXISTS ~override/trigger.ids~ THEN BEGIN
-			COPY ~Kiara-Zaiya/ids/trigger.ids~ ~override/trigger.ids~
-		END
-		ACTION_IF NOT FILE_EXISTS ~override/spell.ids~ THEN BEGIN
-			COPY ~Kiara-Zaiya/ids/spell.ids~ ~override/spell.ids~
-		END
-*/
-		/* ----------------------------------------- *
-		 *    Determines which game is installed.    *
-		 * ----------------------------------------- */
-
-		OUTER_SET is_tob   = (GAME_IS ~bgt tob tutu tutu_totsc~) ? 1 : 0     // based on vanilla ToB engine
-		OUTER_SET is_bg2ee = (GAME_IS "bg2ee") ? 1 : 0                       // b2gee
-		OUTER_SET is_eet   = (GAME_IS "eet") ? 1 : 0                         // eet
-		OUTER_SET is_ee    = (GAME_IS ~bg2ee eet~) ? 1 : 0                   // EE game
-
-		/* ------------------------ *
-		 *    Detects other mods    *
-		 * ------------------------ */
-
-		OUTER_SET is_tobex = (FILE_EXISTS ~tobex_ini/tobexcore.ini~) ? 1 : 0  // Detects ToBEx
-
-		/* ------------------------------------------------------- *
-		 *    Sets default variables if they're not set already    *
-		 * ------------------------------------------------------- */
-
-		// Variable used to properly install specific EE games ressources
-		ACTION_IF (is_ee) BEGIN
-			OUTER_SPRINT ee_file "_ee"
-		END ELSE BEGIN
-			OUTER_SPRINT ee_file ""
-		END
-
-		/* ------------------------------------------- *
-		 *    EET chapters continuity compatibility    *
-		 * ------------------------------------------- */
-		ACTION_IF is_eet BEGIN
-			OUTER_SET bg2_chapter = 12
-		END ELSE BEGIN
-			OUTER_SET bg2_chapter = 0
-		END
-		OUTER_FOR (i = 1 ; i <= 10 ; ++i) BEGIN
-			OUTER_SET bg2_chapter = bg2_chapter + 1
-			OUTER_SPRINT name_source ~bg2_chapter_%i%~
-			OUTER_SET EVAL ~%name_source%~ = bg2_chapter
-		END
-
-		/* --------------------------------------------------------------------------------------------- *
-		 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
-		 *    No exception, everything needs to be converted                                             *
-		 *    setup.tra contains in game texts as well as installation texts and needs to be converted   *
-		 * --------------------------------------------------------------------------------------------- */
-		ACTION_DEFINE_ARRAY kz#noconvert BEGIN END
-		// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
-		ACTION_DEFINE_ARRAY kz#reload BEGIN dialogs kzsetup END
-
-		LAF HANDLE_CHARSETS
-			INT_VAR
-				infer_charsets = 1
-			STR_VAR
-				tra_path = EVAL ~%MOD_FOLDER%/lang~
-				noconvert_array = kz#noconvert
-				reload_array = kz#reload
-		END
-
-	END
-
-END
+END	// of ALWAYS block
 
 // AUTO_TRA tells WeiDU to use by default the TRA file having the same name as dialog or script being compiled in the kiara-zaiya/%LANGUAGE% directory, where %LANGUAGE% is the name of the language selected by the user (second word in the LANGUAGE definition below).
 // This removes the need to use COMPILE-USING directive for the COMPILE action when the .d and .tra files have the same name
-AUTO_TRA ~kiara-zaiya/lang/%s~
+AUTO_TRA ~weidu_external/lang/kiara-zaiya/%s~
 
 
 //////////////////////////////////////
@@ -97,28 +25,33 @@ AUTO_TRA ~kiara-zaiya/lang/%s~
 
 LANGUAGE ~American English~
          ~english~
-         ~kiara-zaiya/lang/english/dialogs.tra~
          ~kiara-zaiya/lang/english/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/english/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/english/dialogs.tra~
 
 LANGUAGE ~Francais (par Elgaern, Bloody.Mary et Lothringen des d'Oghmatiques)~
          ~french~
-         ~kiara-zaiya/lang/french/dialogs.tra~
          ~kiara-zaiya/lang/french/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/french/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/french/dialogs.tra~
 
 LANGUAGE ~Espanol (traduccion por Saemon)~
          ~spanish~
-         ~kiara-zaiya/lang/spanish/dialogs.tra~
          ~kiara-zaiya/lang/spanish/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/spanish/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/spanish/dialogs.tra~
 
 LANGUAGE ~Deutsch (Uebersetzung von Leonardo Watson)~
          ~german~
-         ~kiara-zaiya/lang/german/dialogs.tra~
          ~kiara-zaiya/lang/german/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/german/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/german/dialogs.tra~
 
 LANGUAGE ~Russian (Gingerrr & aerie.ru. Updated by Prowler)~
          ~russian~
-         ~kiara-zaiya/lang/russian/dialogs.tra~
          ~kiara-zaiya/lang/russian/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/russian/kzsetup.tra~
+         ~weidu_external/lang/kiara-zaiya/russian/dialogs.tra~
 
 
 /* ========================================== *
