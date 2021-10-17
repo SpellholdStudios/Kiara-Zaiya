@@ -52,7 +52,7 @@ ACTION_IF (!FILE_EXISTS "%ds_marker_name%") BEGIN
 	PRINT @15 // ~Installing Detectable Spells...~
 	INCLUDE ~%MOD_FOLDER%/ds/ds.tph~
 	SILENT
-	COPY ~.../kiarazaiya-inlined/blank~ ~%ds_marker_name%~
+	COPY ~.../kiara-zaiya-inlined/blank~ ~%ds_marker_name%~
 	LAF detectable_spells END
 	CLEAR_IDS_MAP // make sure any DS changes to splstate/stats are logged
 END ELSE BEGIN

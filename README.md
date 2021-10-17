@@ -89,7 +89,7 @@ Baldur's Gate Trilogy and EET<h3>
 - Proofread English tra files and updated French translation (Gwendolyne).
 - TODO Lowercased sound references to fix issues on Linux.
 - TRAIfied last missing tp2 strref.
-- Re-formated, updated and renamed readme file to "*kiara-zaiya-readme-english.html*, then moved it into new :file_folder: "*readme*" folder.
+- Re-formated, updated and renamed readme file to "*kiara-zaiya-readme-english.html*", then moved it into new :file_folder: "*readme*" folder.
 - Removed useless :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created folders to sort files according to their types.
 - Lower cased files.
