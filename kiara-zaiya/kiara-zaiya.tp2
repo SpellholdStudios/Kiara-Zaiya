@@ -37,7 +37,7 @@ ALWAYS
 		 *    Detects other mods    *
 		 * ------------------------ */
 
-		OUTER_SET is_tobex      = (FILE_EXISTS ~tobex_ini/tobexcore.ini~) ? 1 : 0  // Detects ToBEx
+		OUTER_SET is_tobex = (FILE_EXISTS ~tobex_ini/tobexcore.ini~) ? 1 : 0  // Detects ToBEx
 
 		/* ------------------------------------------------------- *
 		 *    Sets default variables if they're not set already    *
@@ -86,13 +86,14 @@ ALWAYS
 
 END
 
-// AUTO_TRA tells WeiDU to use by default the TRA file having the same name as
-// dialog or script being compiled in the kiara-zaiya/<language> directory,
-// where <language> is the name of the language selected by the user (second word
-// in the LANGUAGE definition below).
-// This removes the need to use COMPILE-USING directive for the COMPILE action
-// when the .d and .tra file have the same name
+// AUTO_TRA tells WeiDU to use by default the TRA file having the same name as dialog or script being compiled in the kiara-zaiya/%LANGUAGE% directory, where %LANGUAGE% is the name of the language selected by the user (second word in the LANGUAGE definition below).
+// This removes the need to use COMPILE-USING directive for the COMPILE action when the .d and .tra files have the same name
 AUTO_TRA ~kiara-zaiya/lang/%s~
+
+
+//////////////////////////////////////
+//          CHOSE LANGUAGE          //
+//////////////////////////////////////
 
 LANGUAGE ~American English~
          ~english~
@@ -124,22 +125,20 @@ LANGUAGE ~Russian (Gingerrr & aerie.ru. Updated by Prowler)~
  *    Kiara-Zaiya for BG2 (main component)    *
  * ========================================== */
 BEGIN @2                                  // ~Kiara-Zaiya for BG2 with vanilla soundsets~
-DESIGNATED 0
+DESIGNATED 0 LABEL ~kiara-zaiya_main~
 SUBCOMPONENT @1                           // ~Kiara-Zaiya for BG2~
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
 OUTER_SET kz_custom = 0
-
 INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
 
 
 BEGIN @3                                  // ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
-DESIGNATED 1
+DESIGNATED 1 LABEL ~kiara-zaiya_main_cutom_soundsets~
 SUBCOMPONENT @1
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11
 
 OUTER_SET kz_custom = 1
-
 INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
 
 
@@ -147,7 +146,7 @@ INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
  *    Alternate Monk High level abilities by TG Maestro    *
  * ======================================================= */
 BEGIN @4                                  // ~Alternate Monk High level abilities by TG Maestro~
-DESIGNATED 2
+DESIGNATED 2 LABEL ~kiara-zaiya_alternate_monk_hla~
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
 INCLUDE ~%MOD_FOLDER%/lib/monk_hla.tpa~
@@ -157,7 +156,7 @@ INCLUDE ~%MOD_FOLDER%/lib/monk_hla.tpa~
  *    Original Amaralis battles in chapters 2 and 6    *
  * =================================================== */
 BEGIN @5                                  // ~Original Amaralis battles~
-DESIGNATED 3
+DESIGNATED 3 LABEL ~kiara-zaiya_tougher_amaralis~
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
 INCLUDE ~%MOD_FOLDER%/lib/amaralis_battles.tpa~
@@ -169,9 +168,10 @@ INCLUDE ~%MOD_FOLDER%/lib/amaralis_battles.tpa~
  *  MONK LEVEL 20, DOES LEVEL DRAIN AND HAS SOME OTHER UNDEAD POWERS  *
  * ================================================================== */
 BEGIN @6                                  // ~Tougher Kiara vampire~
-DESIGNATED 4
+DESIGNATED 4 LABEL ~kiara-zaiya_tougher_kiara_vampire~
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
+SILENT
 COMPILE ~kiara-zaiya/vampkia/vampkia.baf~
 COPY ~kiara-zaiya/vampkia/vampkiar.cre~ ~override~
 	SAY NAME1 @27
@@ -183,7 +183,7 @@ COPY ~kiara-zaiya/vampkia/vampk3.itm~ ~override~
  *    Revised Suldalanessar    *
  * =========================== */
 BEGIN @7                                  // ~Revised Suldalanessar~
-DESIGNATED 5
+DESIGNATED 5 LABEL ~kiara-zaiya_revised_suldalanessar~
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
 INCLUDE ~%MOD_FOLDER%/lib/revised_suldalanessar.tpa~
@@ -193,7 +193,7 @@ INCLUDE ~%MOD_FOLDER%/lib/revised_suldalanessar.tpa~
  *    Jao and party for SOA    *
  * =========================== */
 BEGIN @8                                  // ~Jao and party for SOA: another tough fight~
-DESIGNATED 6
+DESIGNATED 6 LABEL ~kiara-zaiya_tougher_jao~
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
 INCLUDE ~%MOD_FOLDER%/lib/jao.tpa~
@@ -203,9 +203,10 @@ INCLUDE ~%MOD_FOLDER%/lib/jao.tpa~
  *    Tougher Irenicus at the Tree of life    *
  * ========================================== */
 BEGIN @9                                  // ~Tougher Irenicus at the Tree of life~
-DESIGNATED 7
+DESIGNATED 7 LABEL ~kiara-zaiya_tougher_irenicus_at_tree_of_life~
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @11 // ~You do not appear to have Throne of Bhaal installed.~
 
 // TOUGH BUT STILL FEASIBLE
+SILENT
 COPY ~kiara-zaiya/irentree/sujon.cre~ ~override~
 COMPILE ~kiara-zaiya/irentree/sujon.baf~

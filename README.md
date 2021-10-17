@@ -48,7 +48,7 @@ Baldur's Gate Trilogy and EET<h3>
 - Replaced `AUTHOR` keyword with `SUPPORT`.
 - Replaced `REQUIRE_FILE` condition with `REQUIRE_PREDICATE` to avoid installing the mod in inaccurate games.
 - Added components `DESIGNATED` numbers.
-- Externalized tp2 code into *.tpa* libraries for more comfortable readability and maintenance.
+- Externalized tp2 code into specific components *.tpa* libraries for more comfortable readability and maintenance.
 - Commented code as much as possible.
 - Grouped custom and vanilla sound sets into two main `SUBCOMPONENTS`.
 - Added native EE and EET compatibility (thanks Austin!):
@@ -65,7 +65,7 @@ Baldur's Gate Trilogy and EET<h3>
     - *The Divine Sword* (amaswd.itm): Nightfarer's item description fix.
     - Lollorian's patched Revised Suldanessalar: patched "*ar2807.are*", "*uddeath.bcs*", "*demsuc.bcs*", "*suscene1.baf*" and "*suscene3.baf*" instead of overwriting them.
     - Fixed Ninja-To +1 wrong immunity to poison assignments: moved them from melee header to global effects.
-    - Gwendolyne fixes for better '*Revised Suldalanessar*' component compatibility: Replaced `ALTER_AREA_ACTOR` function with old school coding to insure compatibility with oBG2 (actor's name is Nizidramanii'yt in oBG2 and Black Dragon in EE games); Used REGEXP in`DECOMPILE_AND_PATCH` commands to insure compatibility with EE games.
+    - Gwendolyne fixes for better '*Revised Suldalanessar*' component compatibility: Replaced `ALTER_AREA_ACTOR` function with old school coding to insure compatibility with oBG2 (actor's name is Nizidramanii'yt in oBG2 and Black Dragon in EE games); used REGEXP in`DECOMPILE_AND_PATCH` commands to insure compatibility with EE games.
 - Removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
 - Removed *pdialog.2da* appending for BG2 without ToB games (not supported).
 - *kzninja.baf*: fixed typos.
