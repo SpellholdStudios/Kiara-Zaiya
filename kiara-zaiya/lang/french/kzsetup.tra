@@ -104,7 +104,7 @@ Poids : 2~
 //@60   = ~Pierre ionique~ // = #8181 (BG2EE)
 @61   = ~Pierre ionique jaune~
 //@62   = ~Cette petite pierre flotte en orbite autour de la tête de son détenteur quand on l'équipe. Ces pierres évidemment magiques ont des propriétés différentes en fonction de leur couleur.~ // = #5770 (BG2EE)
-@63   = ~Grandement convoitée, cette pierre ionique immunisé son porteur à tout ce qui, magique ou non, pourrait affecter sa mobilité, y compris les sorts de rapidité et de ralentissement.
+@63   = ~Grandement convoitée, cette pierre ionique immunise son porteur à tout ce qui, magique ou non, pourrait affecter sa mobilité, y compris les sorts de rapidité et de ralentissement.
 Vous pouvez aussi voir clairement la forme d'un œil sur un côté de la pierre et l'inscription AO, dessous.
 
 Poids : 0
@@ -378,7 +378,7 @@ J'ai rencontré une jeune fille nommée Zaiya, qui semble souffrir d'une étrange a
 @247  = ~Pauvre mage... Vous l'avez laissé sans protection, pauvre inconscient !~
 @248  = ~J'espère que ce cadavre était juste une connaissance et non pas un ami ?~
 @249  = ~Vous oseriez me défier à nouveau ?~
-@43  = ~Sachez que la mort attend ceux qui trahissent leur parole.~
+//@43  = ~Sachez que la mort attend ceux qui trahissent leur parole.~
 @251  = ~Mes compétences de combat restent sans effet !~
 
 

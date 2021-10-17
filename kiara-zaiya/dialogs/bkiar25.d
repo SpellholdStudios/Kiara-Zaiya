@@ -223,7 +223,7 @@ END
 
 /* ========================= *
  *  AFTER SARADUSH MASSACRE  *
-/* ========================= */
+ * ========================= */
 
 IF ~Global("ExpLoveTalk","LOCALS",8)
 Global("KiaraRomanceActive","GLOBAL",2)~ THEN BEGIN 29
@@ -275,7 +275,8 @@ SAY @120 /* ~I am glad to have found such a remarkable person as you. I am glad 
 IF ~~ THEN EXIT
 END
 
-//Short romance story - picnic and small talk
+// Short romance story - picnic and small talk
+// -------------------------------------------
 IF ~Global("ExpLoveTalk","LOCALS",10)
 Global("KiaraRomanceActive","GLOBAL",2)~ THEN BEGIN 37
 SAY @122 /* ~Don't you think this a perfect place for a picnic? Just you and I...~ */
@@ -347,6 +348,7 @@ IF ~~ THEN REPLY @153 /* ~You are not serious, are you?.~ */ GOTO 44
 END
 
 // The question comes back. Followed by the love scene if a child is agreed upon
+// -----------------------------------------------------------------------------
 IF ~Global("ExpLoveTalk","LOCALS",12)
 Global("KiaraRomanceActive","GLOBAL",2)~ THEN BEGIN 48
 SAY @154 /* ~Since it is bedtime, have you made up your mind my love?~ */

@@ -1,27 +1,27 @@
-//Banter avec Korgan
+// Banter avec Korgan
 @0 = ~T'as eu de la chance jusqu'ici, gamine. Notre coffre n'a pas été vidé par un de tes stupides sorts, sinon je t'aurais ouvert le ventre pour répandre ton sang.~
 @1 = ~Dites-moi, Korgan, l'argent, est-ce là tout ce qui vous importe ? N'avez-vous pas des vues sur une femme de votre clan ?~
 @2 = ~Ouais. Mais comment tu crois qu'elle m'accueillera si j'ai pas une pièce d'or en poche ?~
 
 
-//Banter avec Edwin
+// Banter avec Edwin
 @3 = ~Votre gamme de sorts est assez impressionnante et je me demande si tous les magiciens rouges sont aussi doués.~
-@4 = ~ça alors, mais tu me flattes ! (la demoiselle a les yeux rivés sur moi.)~
+@4 = ~Ça alors, mais tu me flattes ! (la demoiselle a les yeux rivés sur moi.)~
 @5 = ~Ce n'était pas fait exprès, Edwin.~
 @6 = ~Hé bien, tu aurais du mal à trouver deux Thayens tels que moi. Je pourrais te montrer certains de mes livres et te donner quelques leçons, si tu voulais passer dans ma chambre cette nuit.~
 @7 = ~(murmure à Zaiya) Je te conseille vivement de rejeter l'offre d'Edwin, Zaiya. Je doute que te montrer ses livres soit sa réelle motivation.~
 
 
-//Banter avec Edwin et Kiara
+// Banter avec Edwin et Kiara
 @8 = ~Zaiya, la soirée est encore peu avancée et je n'ai pas renié mon offre. Je serais ravi si tu me rejoignais ce soir pour quelques nouvelles expériences.~
 @9 = ~Vous avez aiguisé ma curiosité. Sur quel genre d'expérience travaillez-vous, Edwin ?~
-@10 = ~(murmure à Zaiya). Zaiya, ne l'écoute pas. *Tu* es probablement *son* sujet d'expérience.~
+@10 = ~(murmure à Zaiya) Zaiya, ne l'écoute pas. *Tu* es probablement *son* sujet d'expérience.~
 @11 = ~Sur des enchantements puissants, mais je pourrais avoir besoin d'aide.~
 @12 = ~Bien, je serai heureuse d'apporter mon aide et de voir comment vous travaillez sur vos sorts, Edwin.~
-@13 = ~(murmure à Zaiya). Tu es folle, et inutile de m'appeler à l'aide cette nuit. J'ai mieux à faire que de venir à ton secours.~
+@13 = ~(murmure à Zaiya) Tu es folle, et inutile de m'appeler à l'aide cette nuit. J'ai mieux à faire que de venir à ton secours.~
 
 
-//Autre banter avec Edwin et Kiara
+// Autre banter avec Edwin et Kiara
 @14 = ~En fait, tu avais raison quant aux intentions d'Edwin, la nuit dernière. Cet homme est ignoble et pervers.~
 @15 = ~Alors pourquoi souris-tu, Zaiya ?~
 @16 = ~Pendant que je lisais son livre d'enchantement, il a eu l'effronterie de venir me caresser les seins...~
