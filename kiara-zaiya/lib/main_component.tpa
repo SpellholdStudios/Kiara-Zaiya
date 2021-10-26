@@ -96,13 +96,13 @@ LAF HANDLE_AUDIO END
  *  Installing creatures  *
  * ---------------------- */
 
-// Kaira - Isaya (version 1.6.2): Add the default soundset using FEMALE2
-// ---------------------------------------------------------------------
+// Kaira - Isaya (version 1.6.2): Add the default sound set using FEMALE2
+// ----------------------------------------------------------------------
 COPY ~kiara-zaiya/creatures/kiara.cre~ ~override~
 	SAY NAME1 @21
 	SAY NAME2 @21
 	SAY BIO @71
-	// Soundset
+	// Sound set
 	SAY INITIAL_MEETING @72
 	SAY HAPPY @141
 	SAY UNHAPPY_ANNOYED @142
@@ -184,13 +184,13 @@ COPY ~kiara-zaiya/creatures/kiara.cre~ ~override~
 		SAY SET_A_TRAP @136
 	END
 
-// Zaiya - Isaya (version 1.6.2): Add the default soundset using FEMALE4
-// ---------------------------------------------------------------------
+// Zaiya - Isaya (version 1.6.2): Add the default sound set using FEMALE4
+// ----------------------------------------------------------------------
 COPY ~kiara-zaiya/creatures/zaiya.cre~ ~override~
 	SAY NAME1 @22
 	SAY NAME2 @22
 	SAY BIO @145
-	// Soundset
+	// Sound set
 	SAY INITIAL_MEETING @146
 	SAY HAPPY @221
 	SAY UNHAPPY_ANNOYED @222
@@ -551,17 +551,17 @@ EXTEND_TOP ~vampamb.bcs~  ~kiara-zaiya/scripts/kvampamb.baf~
 //COMPILE ~kiara-zaiya/scripts/kiarfigt.baf~
 EXTEND_TOP ~kiara.bcs~ ~kiara-zaiya/scripts/kiarfigt.baf~
 
-// Kiara and Zaiya soundsets
-// -------------------------
-// Isaya (as of v1.6.2): For custom soundsets, several texts differ from those of the basic soundsets.
-// Since I integrated the texts inside the baf files, I had to create two alternate baf files for the custom soundsets (in the sounds directory).
+// Kiara and Zaiya sound sets
+// --------------------------
+// Isaya (as of v1.6.2): For custom soundsets, several texts differ from those of the basic sound sets.
+// Since I integrated the texts inside the baf files, I had to create two alternate baf files for the custom sound sets (in the sounds directory).
 ACTION_IF kz_custom BEGIN
-	// Isaya: this scripts only differ from kiafix.baf and zaifix.baf in /scripts by some texts of the custom soundsets
+	// Isaya: this scripts only differ from kiafix.baf and zaifix.baf in /scripts by some texts of the custom sound sets
 	COMPILE ~kiara-zaiya/sounds/kiafix.baf~
 	        ~kiara-zaiya/sounds/zaifix.baf~
 END ELSE BEGIN
-	COMPILE ~kiara-zaiya/scripts/kiafix.baf~ // Kiara soundset with FEMALE2 clip sounds
-	        ~kiara-zaiya/scripts/zaifix.baf~ // Zaiya soundset with FEMALE4 clip sounds
+	COMPILE ~kiara-zaiya/scripts/kiafix.baf~ // Kiara sound set with FEMALE2 clip sounds
+	        ~kiara-zaiya/scripts/zaifix.baf~ // Zaiya sound set with FEMALE4 clip sounds
 END
 
 
