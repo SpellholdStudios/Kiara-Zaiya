@@ -1,7 +1,7 @@
-// Isaya: version information moved to the TP2 file (new VERSION field of WeiDU)
+// Isaya: version information moved to the TP2 file (new VERSION flag of WeiDU)
 @1    = ~Kiara-Zaiya para BG2~
-@2    = ~Kiara-Zaiya for BG2 with vanilla soundsets~
-@3    = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
+@2    = ~Kiara-Zaiya for BG2 with vanilla sound sets~
+@3    = ~Kiara-Zaiya for BG2 with custom sound sets (English only)~
 //@150  = ~Voces customizadas de Kiara-Zaiya (disponible por separado).~
 @4    = ~Alternate Monk High level abilities by TG Maestro~
 //@129  = ~Aptitudes de clase de nivel elevado alternativas por TG Maestro~
@@ -168,13 +168,13 @@ No permitido a:
  Señor de las bestias~
 
 
-/* ================= *
- *  Kiara soundsets  *
- * ================= */
+/* ================== *
+ *  Kiara sound sets  *
+ * ================== */
 @71   = ~Cuando le preguntas sobre su pasado, Kiara te dice que nació en Koryo, en el lejano país de Kara Tur, muy al este de Faerun. Tras la trágica muerte de sus padres, fue acogida en un monasterio local y aunque es muy raro en una chica, fue entrenada como monje. Pasó la mayor parte de su juventud allí y aprendió algunas aptitudes de combate básicas, preparaciones con hierbas y meditación. Por una oscura razón, aunque por la lágrima de su ojo supones que fue algo trágico, fue expulsada del monasterio a una edad temprana. Viajó al oeste y se encontró a unos comerciantes en el camino a los que escoltó hasta Tu Lung antes de embarcarse hacia la ciudad de Medina al Afyal. Esta es una aventura de la que habla mucho con un tono de voz entusiasta. Al llegar a Afyal, dice que conoció a Zaiya y que luego fueron secuestradas por corsarios y vendidas como esclavas en Athkatla. Kiara oculta su cara bajo su capucha; sabes que ya no dirá más.~
 
-// Kiara custom soundset
-// ---------------------
+// Kiara custom sound set
+// ----------------------
 @72   = ~Me alegra que me encontraras. Necesito encontrar a una amiga...~
 @73   = ~¡Témeme! ¡La palma de mi mano es la portadora de la muerte!~ [KIARAA]
 @74   = ~Me alegra que tú también hayas llegado a esa conclusión. Me preocupaba que no te dieras cuenta de que soy una líder innata.~ [KIARAB]
@@ -214,8 +214,8 @@ No permitido a:
 @108  = ~¿Te preocupa algo?~ [KIARA0]
 @109  = ~Creo que una cosita más no me perjudicará.~ [KIARA_]
 
-// Kiara soundset using Female2!
-// -----------------------------
+// Kiara sound set using Female2!
+// ------------------------------
 @110  = ~Ja ja ja jaaa~ [Female2a] //battle cry1
 @111  = ~Todos se beneficiarán bajo mi liderazgo.~ [Female2b] //leader
 @112  = ~Oh ya sabes que tengo la manía de descansar.~ [Female2c] //Tired
@@ -253,13 +253,13 @@ No permitido a:
 @144  = ~Cambia tu actitud, o teñiré mis puños de carmesí con tu sangre.~ // Unhappy breaking
 
 
-/* ================= *
- *  Zaiya soundsets  *
- * ================= */
+/* ================== *
+ *  Zaiya sound sets  *
+ * ================== */
 @145  = ~Cuando le preguntas sobre su pasado, Zaiya te dice que nació en las cercanías de Medina al Afyal en la tierra de Zakhara, al sureste de Faerun. Dejando atrás a sus padres, se convirtió en la ayudante de un poderoso mago elemental especializado en venenos. Pasó la mayor parte de su juventud con él y pronto se sintió atraída por una nueva forma de magia: la magia salvaje. Empezó a estudiar en secreto la colección de libros del mago, aunque éste se lo había prohibido. Durante una de sus lecturas contrajo su dolencia, y a pesar de numerosos intentos todavía no ha encontrado una cura. No dirá más.~
 
-// Zaiya custom soundset
-// ---------------------
+// Zaiya custom sound set
+// ----------------------
 @146  = ~Nada.~
 @147  = ~Los enviaré al infierno...~ [ZAYAA]
 @148  = ~Creo que este no es mi sitio, pero lo haré lo mejor que pueda.~ [ZAYAB]
@@ -303,8 +303,8 @@ No permitido a:
 @183  = ~~ [ZAYA_] // ACTION8
 // Isaya: end of transfer
 
-// Zaiya soundset using Female4!
-// -----------------------------
+// Zaiya sound set using Female4!
+// ------------------------------
 @184  = ~Caerás bajo mi mano.~ [FEMALE4A]
 @185  = ~Por supuesto, soy la mejor elección.~ [FEMALE4B]
 @186  = ~Debo descansar pronto, soy débil cuando estoy cansada.~ [FEMALE4C]
@@ -461,3 +461,96 @@ Permitido a:
  * ============================================================================================================= */
 @9001 =~\([Ss][oó]lo[ %tab%]+\)?[Pp]ermitido[ %tab%]+[Aa][ %tab%]*:~
 @9002 =~[Nn]o[ %tab%]+[Pp]ermitido[ %tab%]+[Aa][ %tab%]*:~
+
+
+/* =============== *
+ *  WeiDU prompts  *
+ * =============== */
+@-1000 = ~El mod %TP2_FILE_NAME% tiene~
+@-1001 = ~distintos componentes opcionales.
+Puedes elegir que hacer con ellos a la vez o de uno en uno.
+~
+@-1002 = ~Que hacer con todos los componentes que NO estan instalados?
+[I]Instalar, [S]Ignorar, [A]Preguntar uno por uno. ~
+@-1003 = ~Que hacer con todos los componentes que SI estan instalados?
+[R]Reinstalar, [U]Desinstalar, [S]Ignorar, [A]Preguntar uno por uno. ~
+
+@-1004 = ~Por favor, envia el archivo~
+@-1005 = ~a~
+
+@-1006 = ~Instalar Componente [~
+@-1007 = ~]?
+[R]Reinstalar, [N]No Modificar, [U]Desinstalar o [Q]Salir. ~
+@-1008 = ~]?
+[I]Instalar, [N]No Instalar o [Q]Salir. ~
+
+@-1009 = ~Introduce parte del nombre de un modulo: ~
+
+@-1010 = ~Reinstalando el componente [~
+@-1011 = ~] ~
+@-1012 = ~Reinstalando usando el idioma~
+
+@-1013 = ~Eliminando instalacion antigua de [~
+@-1014 = ~] ...~
+@-1015 = ~ELIMINADO CORRECTAMENTE~
+
+@-1016 = ~Instalando~
+@-1017 = ~ERROR Instalando [~
+@-1018 = ~], revirtiendo a estado anterior~
+@-1019 = ~INSTALADO CORRECTAMENTE ~
+@-1020 = ~Ignorando~
+@-1021 = ~Eliminando [~
+@-1022 = ~] (componente #~
+@-1023 = ~)~
+@-1024 = ~ELIMINADO CORRECTAMENTE [~
+
+@-1025 = ~]?
+[R]Reinstalar, [N]No Modificar, [U]Desinstalar, [Q]Salir o elegir:~
+@-1026 = ~]?
+[N]No, [Q]Salir o elegir:~
+@-1027 = ~ (instalado)~
+
+@-1028 = ~Quieres que se muestren los componentes de [~
+@-1029 = ~]?
+[Y]Si, [N]No. ~
+
+@-1030 = ~]?
+elegir:~
+@-1031 = ~]?
+[R]Reinstalar, [N]No Modificar, [Q]Salir o elegir:~
+@-1032 = ~NO INSTALADO DEBIDO A ERRORES~
+@-1033 = ~INSTALADO CON ADVERTENCIAS ~
+@-1034 = ~Quieres que se muestre el readme? [Y]Si, [N]No. ~
+@-1035 = ~Usando idioma~
+
+@-1036 = ~Ignorando GRUPO [~
+@-1037 = ~] por no cumplir los requisitos.~
+
+@-1038 = ~[A]Preguntar por cada componente, [S]Ignorar todo, o elegir una seleccion predefinida:~
+@-1039 = ~[A]Preguntar por cada componente, [R]Reinstalar la configuracion actual, [U]Desinstalar todo, [S]Ignorar todo, o elegir una seleccion predefinida:~
+
+@-1040 = ~
+Por favor, elige el idioma en que deseas jugar el juego.
+Si quieres cambiar el idioma del juego mas adelante, tendras que editar el archivo weidu.conf y reinstalar tus mods.
+~
+@-1041 = ~Checo~
+@-1042 = ~Aleman~
+@-1043 = ~Ingles~
+@-1044 = ~Espanol~
+@-1045 = ~Frances~
+@-1046 = ~Italiano~
+@-1047 = ~Polaco~
+@-1048 = ~Portugues~
+@-1049 = ~Turco~
+@-1050 = ~Japones~
+@-1051 = ~Coreano~
+@-1052 = ~Chino simplificado~
+
+@-1060 = ~
+Este juego esta disponible en muchos idiomas, pero WeiDU no sabe que idioma se ha usado durante la instalacion de este mod.
+
+Por favor, indica que idioma usaste durante la instalacion del mod. Tu eleccion se usara hasta que WeiDU termine, pero no se guardara.
+~
+@-1061 = ~
+Usando~
+@-1062 = ~ y ~

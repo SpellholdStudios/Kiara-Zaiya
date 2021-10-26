@@ -1,7 +1,7 @@
 // Version information moved to the TP2 file (new VERSION flag of WeiDU)
 @1    = ~Kiara-Zaiya for BG2~
-@2    = ~Kiara-Zaiya for BG2 with vanilla soundsets~
-@3    = ~Kiara-Zaiya for BG2 with custom soundsets (English only)~
+@2    = ~Kiara-Zaiya for BG2 with vanilla sound sets~
+@3    = ~Kiara-Zaiya for BG2 with custom sound sets (English only)~
 @4    = ~Alternate Monk High level abilities by TG Maestro~
 @5    = ~Original Amaralis battles~
 // Isaya: new texts moved from the TP2 (as of v1.6.1)
@@ -16,7 +16,7 @@
    -----------------------
 @142  = ~Golem room in De Arnise for SOA~
 @188  = ~Before you install, please open the readme file in the Kiara-Zaiya and see which components you want installed.~
-@189  = ~You do not seem to have the custom soundset installed!!! It can be found separately on the Kiara-Zaiya website.~
+@189  = ~You do not seem to have the custom sound set installed!!! It can be found separately on the Kiara-Zaiya website.~
 */
 
 @15   = ~Installing Detectable Spells...~
@@ -170,13 +170,13 @@ Not usable by:
  Beast Master~
 
 
-/* ================= *
- *  Kiara soundsets  *
- * ================= */
+/* ================== *
+ *  Kiara sound sets  *
+ * ================== */
 @71   = ~When asked about her past, Kiara tells you that she was born in the Kara Turian land of Koryo, far east of Faerûn. After the tragic death of her parents, she was rescued by a local monastery and although extremely rare for a girl, raised as a monk. She spent most of her youth there and learnt some basic fighting skills, herbal preparations and meditation. For an obscure reason, although from the tear in her eye you guess a tragic event, she was expelled from the monastery at an early age. She traveled to the west and met some merchants along the road which she escorted first to Tu Lung before embarking aboard a ship to the city of Medina al Afyal. This is an adventure she highly speaks of with an enthusiastic tone in her voice. On arrival at Afyal, she mentions she met Zaiya before being abducted by corsairs and sold as slaves in Athkatla. You see her face darken under her monk's hood; you know she will say no more.~
 
-// Kiara custom soundset
-// ---------------------
+// Kiara custom sound set
+// ----------------------
 @72   = ~I am so glad you found me. I need to find a friend...~
 @73   = ~Fear me! For I wield death at the palm of my hand!~ [KIARAA]
 @74   = ~I am glad you came to that conclusion too. I was worried you wouldn't notice I was a natural leader~ [KIARAB]
@@ -216,8 +216,8 @@ Not usable by:
 @107  = ~Something on your mind?~ [KIARA0]
 @109  = ~I suppose one more little thing won't hurt.~ [KIARA_]
 
-// Kiara soundset using Female2!
-// -----------------------------
+// Kiara sound set using Female2!
+// ------------------------------
 @110  = ~Hahaha!~ [female2a] // Battle cry1
 @111  = ~Everyone will benefit under my leadership.~ [female2b] // Leader
 @112  = ~Oh, you know, I could really use some rest.~ [female2c] // Tired
@@ -255,13 +255,13 @@ Not usable by:
 @144  = ~Change your ways, or I shall paint my fists crimson with your blood.~ // Unhappy breaking
 
 
-/* ================= *
- *  Zaiya soundsets  *
- * ================= */
+/* ================== *
+ *  Zaiya sound sets  *
+ * ================== */
 @145  = ~When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerun. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.~
 
-// Zaiya custom soundset
-// ---------------------
+// Zaiya custom sound set
+// ----------------------
 	@146  = ~Nothing~
 @147  = ~I'll ex-spell them to hell...~ [ZAYAA]
 @148  = ~I'm not so sure this is my place, but I am willing to try my best~ [ZAYAB]
@@ -305,8 +305,8 @@ Not usable by:
 @183  = ~~ [ZAYA_] // COMMON4 and COMMON5
 // Isaya: end of transfer
 
-// Zaiya soundset using Female4!
-// -----------------------------
+// Zaiya sound set using Female4!
+// ------------------------------
 @184  = ~You will fall by my hand!~ [FEMALE4A]
 @185  = ~Of course. I'm the best choice.~ [FEMALE4B]
 @186  = ~I must rest soon. I am weak when I am tired.~ [FEMALE4C]

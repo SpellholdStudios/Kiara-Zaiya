@@ -1,4 +1,4 @@
-// Isaya: version information moved to the TP2 file (new VERSION field of WeiDU)
+// Isaya: version information moved to the TP2 file (new VERSION flag of WeiDU)
 @1    = ~Kiara-Zaiya pour BG2~
 @2    = ~Kiara-Zaiya pour BG2 avec les packs de voix du jeu~
 @3    = ~Kiara-Zaiya pour BG2 avec un pack de voix personnalisees (disponible seulement en anglais)~
@@ -169,13 +169,13 @@ Non utilisable par :
  Belluaire~
 
 
-/* ================= *
- *  Kiara soundsets  *
- * ================= */
+/* ================== *
+ *  Kiara sound sets  *
+ * ================== */
 @71   = ~Interrogée sur son passé, Kiara vous dit qu'elle est née à Koryo, terre de Kara-Tur, à l'extrême est de Féérune. Après la mort tragique de ses parents, elle fut élevée comme un moine. Elle passa là-bas la majeure partie de sa jeunesse et apprit quelques bases du combat, la préparation d'herbes et la méditation. Pour une obscure raison, et bien qu'aux larmes qui brillent dans ses yeux on devine un événement tragique, elle fut renvoyée du monastère alors qu'elle était encore jeune. Elle voyagea vers l'ouest et en chemin rencontra des marchands qu'elle escorta jusqu'à Medina al Afyal. C'est une aventure dont elle parle fièrement et d'un ton enthousiaste. En arrivant à Afyal, elle ajoute qu'elle rencontra Zaiya avant qu'elles ne soient toutes deux enlevées par des corsaires et vendues comme esclave à Athkatla. Vous voyez son visage devenir noir sous son capuchon de moine ; vous sentez qu'elle n'en dira pas plus.~
 
-// Kiara custom soundset
-// ---------------------
+// Kiara custom sound set
+// ----------------------
 @72   = ~Je suis si heureuse que vous m'ayez trouvée. Je dois retrouver une amie...~
 @73   = ~Craignez-moi ! Car c'est la mort que je tiens au creux de la main !~ [KIARAA]
 @74   = ~Je suis heureuse que vous en veniez à la même conclusion. J'avais peur que vous n'ayez pas remarqué que je suis une meneuse née.~ [KIARAB]
@@ -254,13 +254,13 @@ Non utilisable par :
 @144  = ~Change tes manières, ou je peindrai mes poings de pourpre avec ton sang.~ // Pas contente (quitte le groupe)
 
 
-/* ================= *
- *  Zaiya soundsets  *
- * ================= */
+/* ================== *
+ *  Zaiya sound sets  *
+ * ================== */
 @145  = ~Interrogée sur son passé, Zaiya vous apprend qu'elle naquit dans les environs de Medina al Afyal, dans la terre de Zakhara, au sud-est de Féérune. En quittant ses parents et sa maison, elle devint la servante d'un puissant mage élémentaliste, spécialisé dans les poisons. Elle passa la majeure partie de sa jeunesse avec lui et fut rapidement attirée par une nouvelle forme de magie : l'entropie. Elle commença à l'étudier en secret à partir de la collection de livres du mage, bien qu'il lui ait interdit de les lire. Au cours d'une de ses lectures, elle trouva un remède. Elle n'en dira pas plus.~
 
-// Zaiya custom soundset
-// ---------------------
+// Zaiya custom sound set
+// ----------------------
 @146  = ~Rien.~
 @147  = ~Je les expédierai en enfer...~ [ZAYAA]
 @148  = ~Je ne suis pas sûre que ce soit bien ma place, mais j'essaierai de faire de mon mieux.~ [ZAYAB]
@@ -466,7 +466,9 @@ Utilisable uniquement par :
 @9002 = ~\([Nn]on[ %tab%]+\|[Ii]n\)[Uu]tilisable[ %tab%]+[Pp]ar[ %tab%]*:~
 
 
-// WeiDU prompts
+/* =============== *
+ *  WeiDU prompts  *
+ * =============== */
 @-1000= "Le mod %TP2_FILE_NAME% contient"
 @-1001= "composants optionnels distincts.
 Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
@@ -514,7 +516,7 @@ Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
 
 @-1028= "Souhaitez-vous afficher les composants de ["
 @-1029= "] ?
-[Y]Oui, [N]on? "
+[Y]Oui, [N]on ? "
 
 @-1030= "] ?
 choisir un parmi :"
@@ -524,3 +526,42 @@ choisir un parmi :"
 @-1033= "INSTALLATION AVEC DES ALERTES"
 @-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
 @-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
+
+@-1040= "
+Veuillez choisir la langue dans laquelle vous souhaitez jouer au jeu.
+Si par la suite vous desirez jouer au jeu dans une langue differente, il vous
+faudra editer le fichier weidu.conf et reinstaller vos mods.
+"
+@-1041= "Tcheque"
+@-1042= "Allemand"
+@-1043= "Anglais"
+@-1044= "Espagnol"
+@-1045= "Francais"
+@-1046= "Italien"
+@-1047= "Polonais"
+@-1048= "Portugais"
+@-1049= "Turc"
+@-1050= "Japonais"
+@-1051= "Coreen"
+@-1052= "Chinois simplifie"
+@-1053= "Russe"
+@-1054= "Ukrainien"
+
+@-1060= "
+Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ete choisie quand ce mod a ete installe.
+
+Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe ce mod. Votre choix servira jusqu'a ce que WeiDU s'arrete mais ne sera pas memorise.
+"
+@-1061= "
+Utilisation de"
+@-1062= " et "
+
+@-1063= "INSTALLATION ABANDONNEE"
+@-1064= "Abandon de l'installation de ["
+@-1065= "], retour a l'etat anterieur"
