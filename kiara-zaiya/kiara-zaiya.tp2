@@ -1,5 +1,7 @@
 BACKUP ~weidu_external/backup/kiara-zaiya~
-AUTHOR ~olryx2@yahoo.co.uk~
+//AUTHOR ~olryx2@yahoo.co.uk~
+SUPPORT ~SHS STAFF at http://www.shsforums.net/forum/127-mod-resurrections~
+
 ASK_EVERY_COMPONENT
 
 // Isaya: version information removed from the tra files and set here (using a new WeiDU feature)
