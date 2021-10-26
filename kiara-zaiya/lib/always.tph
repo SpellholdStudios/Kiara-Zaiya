@@ -30,6 +30,7 @@ ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once 
 	/* -------------------------------------------------------------------------------- *
 	 *    Determines which game is installed and if the game is an Enhanced Edition.    *
 	 * -------------------------------------------------------------------------------- */
+
 	OUTER_SET is_tob   = (GAME_IS ~bgt tob~) ? 1 : 0     // based on vanilla ToB engine
 	OUTER_SET is_bg2ee = (GAME_IS "bg2ee") ? 1 : 0       // b2gee
 	OUTER_SET is_eet   = (GAME_IS "eet") ? 1 : 0         // eet
@@ -47,7 +48,7 @@ ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once 
 	 *    Sets default variables if they're not set already    *
 	 * ------------------------------------------------------- */
 
-	// Variable used to properly install specific EE games resources
+	// Variable used to properly install specific EE games ressources
 	ACTION_IF (is_ee) BEGIN
 		OUTER_SPRINT ee_file "_ee"
 	END ELSE BEGIN
@@ -61,17 +62,19 @@ ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once 
 	OUTER_SPRINT tra_base       "lang"
 	OUTER_SPRINT marker_loc     "weidu_external/markers"
 	OUTER_SPRINT ext_lang_loc   EVAL "weidu_external/lang/%MOD_FOLDER%"
-	OUTER_SPRINT marker_name    EVAL "%marker_loc%/%MOD_FOLDER%_languages_installed.mrk"
+	OUTER_SPRINT marker_name    EVAL "%marker_loc%/kz#%MOD_FOLDER%_languages_installed.mrk"
 	OUTER_SPRINT ds_marker_name EVAL "%marker_loc%/ds-detectable_spells.mrk"
 
 
 	/* ---------------------------------- *
 	 *    Creates the external folders    *
 	 * ---------------------------------- */
-	MKDIR "weidu_external"
-	MKDIR "weidu_external/markers"
-	MKDIR "weidu_external/lang"
-	MKDIR "weidu_external/lang/%MOD_FOLDER%"
+
+	ACTION_FOR_EACH folder IN ~weidu_external~ ~%marker_loc%~ ~weidu_external/lang~ ~%ext_lang_loc%~ BEGIN
+		ACTION_IF (NOT DIRECTORY_EXISTS ~%folder%~) BEGIN
+			MKDIR ~%folder%~
+		END
+	END
 
 
 	/* ------------------------------------------- *
@@ -117,7 +120,7 @@ ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once 
 		COPY ~.../kiara-zaiya-inlined/blank~ ~%marker_name%~
 
 		MKDIR "%ext_lang_loc%/%LANGUAGE%"
-		COPY ~%MOD_FOLDER%/lang/%LANGUAGE%~	~%ext_lang_loc%/%LANGUAGE%~
+		COPY ~%MOD_FOLDER%/lang/%LANGUAGE%~ ~%ext_lang_loc%/%LANGUAGE%~
 
 		/* Converts tra files to UTF-8 */
 		ACTION_IF is_ee BEGIN  // Do conversions (EE only)
@@ -127,17 +130,17 @@ ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once 
 			LAF HANDLE_CHARSETS 
 				INT_VAR infer_charsets  = 1
 				STR_VAR tra_path        = EVAL ~%MOD_FOLDER%/lang~
-                        out_path        = EVAL ~%ext_lang_loc%~
-                        iconv_path      = EVAL ~%MOD_FOLDER%/lang/iconv~
-                        noconvert_array = kz#noconvert
-                        reload_array    = kz#reload
+				        out_path        = EVAL ~%ext_lang_loc%~
+				        iconv_path      = EVAL ~%MOD_FOLDER%/lang/iconv~
+				        noconvert_array = kz#noconvert
+				        reload_array    = kz#reload
 			END
 
 		END
 
 	END // of ACTION_IF (!FILE_EXISTS "%marker_name%")
 
-	/* TRAs declared in LANGUAGE must be reloaded - by hand, because of the copying (for non-EE version */
+	// TRAs declared in LANGUAGE must be reloaded - by hand, because of the copying (for non-EE version)
 	LOAD_TRA "%ext_lang_loc%/%LANGUAGE%/kzsetup.tra" "%ext_lang_loc%/%LANGUAGE%/dialogs.tra"
 
 END	// of ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN
