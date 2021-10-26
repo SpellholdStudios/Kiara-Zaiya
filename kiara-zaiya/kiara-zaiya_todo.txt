@@ -1,0 +1,7 @@
+
+- Replace all !StateCheck("xxxxx",STATE_SLEEPING) with CD_STATE_NOTVALID
+- genfix.baf, kiaraadd.baf, zaiyad.baf are not used, nor compiled: temporarily moved to /legacy folder.
+- Zaiya INITIAL_MEETING soundset @91 is very weird!!!
+- spwnrak.baf is overwriting vanilla file and is spawning KZ#raj01.cre which is not installed by the mod!
+- Original Amaralis battles in chapters 2 and 6 component: hrothfit.baf is not compiled.
+- Revised Suldalanessar component:: sujon.cre is not copied, nor used.
