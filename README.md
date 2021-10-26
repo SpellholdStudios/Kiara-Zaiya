@@ -1,13 +1,13 @@
 
-![Latest Release](https://img.shields.io/github/v/release/GwendolyneFreddy/Kiara-Zaiya?include_prereleases&color=darkred)<a name="top" id="top"> </a>
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Kiara-Zaiya?color=gold)
+![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/Kiara-Zaiya?include_prereleases&color=darkred)<a name="top" id="top"> </a>
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/SpellholdStudios/Kiara-Zaiya?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macOS%20%7C%20linux%20%7C%20Project%20Infinity&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Russian%20%7C%20Spanish&color=limegreen)
 
 ![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BGII:ToB%20%7C%20BGT%20%7C%20BG2%3AEE%20%7C%20EET&color=dodgerblue)
 
 
-<div align="center"><h1>Kiara Zaiya NPCs (WIP)</h1>
+<div align="center"><h1>Kiara Zaiya NPCs</h1>
 
 <h3>A mod hosted at Spellhold Studios for Baldur's Gate II:ToB (original and EE games),<br>
 Baldur's Gate Trilogy and EET<h3>
@@ -15,152 +15,32 @@ Baldur's Gate Trilogy and EET<h3>
 </div><br>
 
 **Authors:** Alan M.C., Seifer and Jesara  
-**Mod Website:** <a href="">Spellhold Studios</a>  
 **Mod Forum:** <a href="http://www.shsforums.net/forum/127-mod-resurrections">Mods Resurrections</a>
 
 ## 
 
-[![Created Badge](https://badges.pufler.dev/created/GwendolyneFreddy/Kiara-Zaiya?style=plastic)](https://badges.pufler.dev)
-![GitHub repo size](https://img.shields.io/github/repo-size/GwendolyneFreddy/Kiara-Zaiya?style=plastic)
-[![Visits Badge](https://badges.pufler.dev/visits/GwendolyneFreddy/Kiara-Zaiya?color=cyan&style=plastic)](https://badges.pufler.dev) 
-![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
-![GitHub contributors](https://img.shields.io/github/contributors/GwendolyneFreddy/Kiara-Zaiya?color=blueviolet&style=plastic) [![Contributors Display](https://badges.pufler.dev/contributors/GwendolyneFreddy/Kiara-Zaiya?size=30&padding=5&bots=true)](https://badges.pufler.dev)
+**Note:** This mod was first released at <a href="http://forums.fwstudios.net/">FWS</a> and has been officially mirrored at <a href="https://www.baldursgateworld.fr/lacouronne/la-zone-de-telechargement/24005-mods-traduits-personnage-non-joueur-kiara-zaiya-v1-62-a.html">La Couronne de Cuivre</a> when it was not actively maintained. If you might encounter issues to download it at SHS GitHub account, you could still download it at this French forum!
 
 ## 
 
-:page_facing_up: <br>
+[![Created Badge](https://badges.pufler.dev/created/SpellholdStudios/Kiara-Zaiya?style=plastic)](https://badges.pufler.dev)
+![GitHub repo size](https://img.shields.io/github/repo-size/SpellholdStudios/Kiara-Zaiya?style=plastic)
+[![Visits Badge](https://badges.pufler.dev/visits/SpellholdStudios/Kiara-Zaiya?color=cyan&style=plastic)](https://badges.pufler.dev) 
+![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
+![GitHub contributors](https://img.shields.io/github/contributors/SpellholdStudios/Kiara-Zaiya?color=blueviolet&style=plastic) [![Contributors Display](https://badges.pufler.dev/contributors/SpellholdStudios/Kiara-Zaiya?size=30&padding=5&bots=true)](https://badges.pufler.dev)
+
+## 
+
+:page_facing_up: [Read the mod's readme](https://spellholdstudios.github.io/readmes/kiara_zaiya-readme-english.html)<br>
 
 ## 
 
 <div align="center">
-<a href="#intro">Overview</a> &#8226; <a href="#compat">Compatibility</a> &#8226; <a href="#installation">Installation</a> &#8226; <a href="#details">Details</a> &#8226; <a href="#components">Components</a> &#8226; <a href="#faq">FAQ</a> &#8226; <a href="#credits">Credits and Acknowledgements</a> &#8226; <a href="#versions">Version History</a></br>
+<a href="#intro">Overview</a> &#8226; <a href="#compat">Compatibility</a> &#8226; <a href="#installation">Installation</a> &#8226; <a href="#details">Details</a> &#8226; <a href="#components">Components</a> &#8226; <a href="#faq">FAQ</a> &#8226; <a href="#credits">Credits and Acknowledgements</a> &#8226; <a href="#versions">Version History</a><br>
 </div>
 
+
 <hr>
-
-
-## <a name="versions" id="versions"></a>Version History
-
-##### Version 2.0.0 &nbsp;(October nn, 2021)
-
-- Added *kiara-zaiya.ini* metadata file (including dynamic install order syntax and global `LABELS`) to support AL|EN's "Project Infinity".
-- Renamed *Setup-Kiara-Zaiya.tp2* -> *kiara-zaiya.tp2* and moved it into top mod folder to support AL|EN's "Project Infinity".
-- Replaced `AUTHOR` keyword with `SUPPORT`.
-- Added Immutability concept.
-- Replaced `REQUIRE_FILE` condition with `REQUIRE_PREDICATE` to avoid installing the mod in inaccurate games.
-- Added components `DESIGNATED` numbers.
-- Externalized tp2 code into specific components *.tpa* libraries for more comfortable readability and maintenance.
-- Commented code as much as possible.
-- Grouped custom and vanilla sound sets into two main `SUBCOMPONENTS`.
-- Added native EE and EET compatibility (thanks Austin!):
-    - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
-    - Added chapters continuity for EET games.
-    - Added `ADD_JOURNAL` entries.
-    - Rewrote sound sets installation procedure to use WeiDU's built-in `HANDLE_AUDIO` function, and converted music file to .acm.
-    - Provided accurate sized NPCs portraits for EE games.
-- Updated outdated Detectable Spells v2.3 with less intrusive v4.0.1 that does not overwrite files any more; and does not install it if it has been already installed.
-- Included all BWP Fixpack fixes:
-    - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
-    - <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-49#entry587224">micbaldur's Zaiya epilogue fix</a>: fixed a typo in "*zai6200.baf*" causing one of Zaiya's epilogues not to show up.
-    - *The Divine Sword* (amaswd.itm): Nightfarer's item description fix.
-    - Lollorian's patched Revised Suldanessalar: patched "*ar2807.are*", "*uddeath.bcs*", "*demsuc.bcs*", "*suscene1.baf*" and "*suscene3.baf*" instead of overwriting them.
-    - Fixed Ninja-To +1 wrong immunity to poison assignments: moved them from melee header to global effects.
-    - Gwendolyne's fixes for better '*Revised Suldalanessar*' component compatibility: Replaced `ALTER_AREA_ACTOR` function with old school coding to insure compatibility with oBG2 (actor's name is Nizidramanii'yt in oBG2 and Black Dragon in EE games); used REGEXP in `DECOMPILE_AND_PATCH` commands to insure compatibility with EE games.
-- Removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
-- Removed *pdialog.2da* appending for BG2 without ToB games (not supported).
-- *kzninja.baf*: fixed typos.
-- Rewrote .bcs appending process (originally coded with so bad practice).
-- Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
-- Spells installation: removed useless `SAY NAME2` patches.
-- *dialogs.tra* files: modified Lovetalks cutscenes entry to avoid duplicated strrefs entries with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function.
-- <ins>Bracers: protectors</ins> (kzbrac1.itm): Added missing restriction flags (only usable by monks).
-- <ins>The Divine Sword</ins> (amaswd.itm):
-    - Hard-coded general name and description.
-    - Added missing Beast master kits restriction flags.
-    - Fixed wrong Immunity to Divination spells duration (restored right 1 hour duration: 300. Was one day: 7200!).
-- ...
-- Added EE and ToBEx *Toggle critical hit aversion* item flag (BIT25) whenever relevant.
-- Fixed items classes and kits restriction flags, and appended tooltip.2da whenever relevant.
-- Fixed items descriptions.
-- Restored items usability restriction flags in descriptions for classic games and automatically removed them for EE games with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function.
-- Hard-coded general items names and description whenever relevant.
-- Integrated custom sound sets in the mod package.
-- Added full Russian translation (earlier some lines remained in English, updated by Arcanecoast Team).
-- Proofread English tra files and updated French translation (Gwendolyne).
-- TODO Lowercased sound references to fix issues on Linux.
-- TRAIfied last missing tp2 strref.
-- Re-formated, updated and renamed readme file to "*kiara-zaiya-readme-english.html*", then moved it into new :file_folder: "*readme*" folder.
-- Removed useless :file_folder: "*backup*" folder.
-- Reorganized mod architecture tree: created folders to sort files according to their types.
-- Lower cased files.
-- Updated OggDec to v1.9.7 and added sox v14.4.1 for mac.
-- Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
-- Updated WeiDU installer to v247.
-- Uploaded mod to official Spellhold Studios GitHub mirror account.
-
-## 
-
-##### Version 1.6.2 &nbsp;(December 12, 2010)
-
-- Used a normal version identification.
-- Converted all bcs to baf, allowing the direct use of text references in the scripts and facilitating maintenance.
-- Reworked tp2 to compile them instead of copying the bcs.
-- Exploited the music variable in Kiara.baf directly (using `EVALUATE_BUFFER` when compiling).
-- Fixed the romance music in ToB (couldn't be played as the song number was not properly set).
-- Duplicated soundset fix patch scripts, for normal or custom soundsets.
-- Included soundset in CRE file (dialog fix not required now, although still available).
-- Included <a href="http://www.shsforums.net/topic/46469-bwp-and-mod-bugs-not-yet-fixed/?p=501418">Hoppy's suggested fixes for the Amaralis group in Small Teeth Pass</a> (Morticia, ...).
-- Replaced `Dead("Myself")` and `Dead("Player1")` with `StateCheck(...,STATE_REALLY_DEAD)` in many scripts (generalisation of Lollorian's work).
-- Fixed many warning in scripts, hopefully improving Kiara's fighting skills as well as opponents' and also a few cutscenes.
-- Updated WeiDU installer to v224.
-
-## 
-
-##### Version 1.6.1 &nbsp;(April 25, 2010)
-
-- Moved *Setup-Kiara-Zaiya.tp2* into the mod folder.
-- Added `VERSION` flag.
-- Changed to `README` command.
-- Fixed text conflicts between the two main tra files causing Kiara leaving dialog to use several component names instead of the proper line.
-- Fixed typo causing the absence of a dialog line.
-- Sulda/KZ#Qilkw.BAF,KZNINJA.BAF and WU-JE/KZJAO.BAF: <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483485">Fixed `Myself` and `!Dead(Myself)`</a>.
-- <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483525">Fixed Sulda/KZ#DMLRD.BAF</a>.
-- Fixed several warnings during installation.
-- Added French, Spanish, German and Russian translations.
-- TRAIfied dialogs and TP2 files for hardcoded English strings.
-- Updated WeiDU installer to v215.
-
-## 
-
-##### Version 1.6 &nbsp;(January 12, 2010)
-
-- Added Russian translation.
-
-## 
-
-##### Version 1.5 &nbsp;(September 11, 2009)
-
-- Added German translation.
-
-## 
-
-##### Version 1.4 &nbsp;(June 14, 2009)
-
-- Added French and Spanish translations.
-- Fixed installation bugs.
-
-## 
-
-##### Version 1.3 &nbsp;(January 04, 2004)
-
-- Unknown.
-
-## 
-
-##### Version 1 &nbsp;(Unknown)
-
-- Initial release.
-<div align="right"><a href="#top">Back to top</a></div>
 
 
 ## <a name="intro" id="intro"></a>Overview
@@ -175,11 +55,13 @@ Zaiya DIES PERMANENTLY if you can't find Kiara in the allocated time (she will t
 
 Save often until quest resolved! The battles will be hard if you are at a low level (below 300,000 XP point per party member) but that's the fun about it! Other possibility you come back and pick up Zaiya at a higher level, which means you'll miss on good scenes that have been planted throughout the game or YOU can't find her anymore!
 </p>
-</details>
+</details><br>
 
 They leave the party for good:
 - if one or the other is killed *permanently* (out of party - this is not a bug). Though, they won't leave if one is showing dead in the party slot.
 - in Brynnlaw if you have not done enough quests around Athklata (this is not a bug). The reason is: it serves the general story.
+
+&nbsp;
 
 &#9755; :warning: **ADULT CONTENT:** Note that this mod contains some love scenes between the main character and Kiara, and some <em>sex jokes</em>. I would categorize none of these as adult material though it may hurt the sensibility of some of you. If you object to it, DO NOT PLAY THE MOD. :wink:
 
@@ -195,13 +77,14 @@ They leave the party for good:
 
 &nbsp;
 
-**Never forget:
+**Never forget:**
 - **Watcher's keep is hidden in SoA** (<ins>this is not a bug</ins>).
 - Some of you may want to cheat: changing equipment, adding a bit of XP... may be fine. Once you reach the fundamentals of this mod (alignment and variables), you will find bugs beyond my control...<br>
 Another cheat example: you can try to have only Zaiya or Kiara in the game. There are so many cross variables in Kiara-Zaiya (including Kiara's AI script) that using CLUAConsole or ShadowKeeper and cheat will result in bugs everywhere! That includes changing fundamental variables for your characters like alignment and such.<br>
 **&#9755;** DO NOT TRY and then tell me you found a bug!!!
 
 <div align="right"><a href="#top">Back to top</a></div>
+
 
 <hr>
 
@@ -210,22 +93,27 @@ Another cheat example: you can try to have only Zaiya or Kiara in the game. Ther
 
 #### Games supported
 
-This mod is designed to work on the following Infinity Engine games: the original Baldur's Gate II (BG2 or just SoA) with the Throne of Bhaal (ToB) expansion, Baldur's Gate II: Enhanced Edition (BG2EE), the conversion projects <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a> and <a href="https://github.com/Gibberlings3/EET/releases">Enhanced Edition Trilogy (EET)</a>.
+This mod is designed to work on the following Infinity Engine games:
+
+- Baldur's Gate II: Enhanced Edition (BG2EE).
+- The original Baldur's Gate II (BG2, or just SoA) with the Throne of Bhaal (ToB) expansion. **Make sure you have Throne of Bhaal patched to version 26498.** Check the ReadMe files related to your patch in your game folder and the <a href="http://www.bioware.com/games/throne_bhaal/support/patches/">BioWare</a> website if necessary.
+- The conversion projects based on ToB: <a href="http://www.shsforums.net/forum/261-bgt-weidu">Baldur's Gate Trilogy (BGT)</a> and <a href="https://github.com/Gibberlings3/EET/releases">Enhanced Edition Trilogy</a> (EET).
 
 ## 
 
 #### Other Mods Compatibility
 
-The Kiara-Zaiya mod is a WeiDU mod, and therefore should be compatible with all WeiDU mods. However, we cannot test every single one. If you do encounter an error, please let us know by <a href="">reporting it on the forum</a>.<br>
+This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. However, we cannot test every single one. If you encounter any bugs, please <a href="http://www.shsforums.net/forum/127-mod-resurrections">report them on the mod forum!</a>.<br>
 
 Though we are striving to make Kiara-Zaiya compatible with as many other mods as possible, there is always a chance that incompatibilities will arise. Below are the ones discovered thus far:
+
 - Valen: not all Valen dialogs will appear (unresolved issue).
 
 ## 
 
 #### Installation Order
 
->Although it is not required for the Kiara-Zayia mod to function properly, original game players are strongly recommended to download and install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
+>Original game players are strongly recommended to download and install the latest version of the <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
 
 Here is the recommended installation order:
 - Please install Kiara-Zaiya after TobEx, BG2 Fixpack, and EET.
@@ -241,17 +129,19 @@ Here is the recommended installation order:
 
 #### Notes
 
-*If you've previously installed the mod, remove it before extracting the new version. To do this, run __`setup-kiara-zaiya.exe`__, un-install the previously installed main component and delete the :file_folder: kiara-zaiya folder.*
+*If you've previously installed the mod, remove it before extracting the new version. To do this, run __`setup-kiara-zaiya.exe`__, un-install all previously installed components and delete the :file_folder: __kiara-zaiya__ folder.*
 
 *When installing or un-installing, __do not close the DOS window__ by clicking on the __X__ button! Instead, press the __Enter__ key whenever instructed to do so.*
 
 *__Disable any antivirus__ or other memory-resident software before installing this or any other mod. Some (particularly avast and Norton!) have a tendency to report false positives with mod activity, resulting in failed installs.*
 
+You can extract files from the archive using <a href="https://www.7-zip.org/download.html">7zip</a>, <a href="https://www.rarlab.com/download.htm">WinRAR</a>, <a href="https://zipgenius.com/">ZipGenius</a> or another file compression utility that handles .zip files.
+
 ## 
 
 #### Enhanced Editions Note
 
-The Enhanced Editions are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update (if possible) as even after reinstalling the mods, you might not be able to continue with your old savegames. Alternatively, copy the whole game's folder into a new one that can be modded and will stay untouched by game patches. It is important that you install the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
+The Enhanced Editions are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update (if possible) as even after reinstalling the mods, you might not be able to continue with your old save games. Alternatively, copy the whole game's folder into a new one that can be modded and will stay untouched by game patches. It is important that you install the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
 
 ## 
 
@@ -259,9 +149,9 @@ The Enhanced Editions are actively supported games. Please note that every patch
 
 Kiara-Zaiya for Windows is distributed as an extractable compressed archive and includes a WeiDU installer.
 
-Extract the contents of the mod archive into the folder of the game you wish to modify (*the folder which contains the "CHITIN.KEY" file*), using <a href="https://www.7-zip.org/download.html">7zip</a>, <a href="https://www.rarlab.com/download.htm">WinRAR</a>, or another file compression utility that handles .zip files. On successful extraction, there should be a :file_folder: kiara-zaiya folder and a setup-kiara-zaiya.exe file in your game folder. To install, simply double-click **`setup-kiara-zaiya.exe`** and follow the instructions on screen.
+Extract the contents of the mod archive into the folder of the game you wish to modify (*the folder which contains the "CHITIN.KEY" file*). On successful extraction, there should be a :file_folder: kiara-zaiya folder and a setup-kiara-zaiya.exe file in your game folder. To install, simply double-click **`setup-kiara-zaiya.exe`** and follow the instructions on screen.
 
-Run **`setup-kiara-zaiya.exe`** in your game folder to reinstall, un-install or otherwise change the component settings.
+Run **`setup-kiara-zaiya.exe`** in your game folder to reinstall, un-install or otherwise change components.
 
 ## 
 
@@ -271,7 +161,7 @@ Kiara-Zaiya for Mac OS is distributed in the same compressed archive and include
 
 First, extract the files from the archive into your game directory. On successful extraction, there should be a :file_folder: kiara-zaiya folder, setup-kiara-zaiya and setup-kiara-zaiya.command files in your game folder. To install, simply double-click **`setup-kiara-zaiya.command`** and follow the instructions on screen.
 
-Run **`setup-kiara-zaiya.command`** in your game folder to reinstall, un-install or otherwise change the components settings.
+Run **`setup-kiara-zaiya.command`** in your game folder to reinstall, un-install or otherwise change components.
 
 ## 
 
@@ -289,7 +179,7 @@ To install, run **`weinstall setup-kiara-zaiya`** in your game folder. Then run 
 
 #### Note for Complete Un-installation
 
-In addition to the methods above for removing individual components, you can completely un-install the mod using **`setup-kiara-zaiya --uninstall`** at the command line to remove all components without wading through prompts.</br>
+In addition to the methods above for removing individual components, you can completely un-install the mod using **`setup-kiara-zaiya --uninstall`** at the command line to remove all components without wading through prompts.<br>
 <div align="right"><a href="#top">Back to top</a></div>
 
 
@@ -298,7 +188,7 @@ In addition to the methods above for removing individual components, you can com
 
 ## <a name="details" id="details"></a>Details
 
-#### PNJs characteristics
+#### NPCs characteristics
 
 <table cellpadding=0 cellspacing=0 style="margin-top: 1%; margin-left: 80px">
 	<tr style= "line-height: 170%;">
@@ -311,7 +201,7 @@ In addition to the methods above for removing individual components, you can com
 		<th>Charisma</th>
 	</tr>
 	<tr>
-		<td><img src="kiara-zaiya/readme/images/zaiyam.jpg" title="Zaiya"><br>Zaiya</td>
+		<td><div align="center"><img src="kiara-zaiya/readme/images/zaiyam.jpg" title="Zaiya"><br>Zaiya</div></td>
 		<td><div align="center">9</div></td>
 		<td><div align="center">16</div></td>
 		<td><div align="center">16</div></td>
@@ -324,7 +214,7 @@ In addition to the methods above for removing individual components, you can com
 		When asked about her past, Zaiya tells you that she born in the vicinity of Medina al Afyal in the land of Zakhara, south east of Faerûn. Leaving her parents home, she became servant to a powerful elemental mage, specializing in poisons. She spent most of her youth with him and was soon attracted to a new form of magic: wild magic. She started secretly studying it from the mage's book collection, although he prohibited such learning. During one of her reading, she contracted her affliction and despite numerous attempts never truly found a cure. She will no say more.</td>
 	</tr>
 	<tr>
-		<td><img src="kiara-zaiya/readme/images/kiaram.jpg" title="Kiara"><br>Kiara</td>
+		<td><div align="center"><img src="kiara-zaiya/readme/images/kiaram.jpg" title="Kiara"><br>Kiara</div></td>
 		<td><div align="center">14</div></td>
 		<td><div align="center">17</div></td>
 		<td><div align="center">12</div></td>
@@ -350,20 +240,20 @@ As a monk, Kiara has learned special fighting proficiencies:
 - 10th Level: Snake Stance (modified improved haste modified: attacks are doubled minus one, up to a maximum of 7 attacks per round at level 18+). This ability lasts 6 rounds and can be combined with stunning blow, quivering palm or any other special abilities she may have. Kiara gets penalties for using this spell. Gains another use at 16th level.
 - 19th Level: Solar Stance (Fireball explodes away from her body and blows away enemies. A modified Balthazar spell.)
 
-** Other Special ability on occasion**
+**Other Special ability on occasion**
 
 Dragon Stance: with this spell, Kiara acquires for a short time some of the dragon's innate strength and resistances. Critical strike in the first round, her Strength is set at 25 for 3 rounds, 25% resistance to slashing, crushing, piercing..., protection from wing buffet (can not be blown back for a considerable distance) and unconsciousness for a full turn.
 
-** Special items**
+**Special items**
 
 She comes with a special monk robe that adds 10% magic resistance (+1 AC Bonus, +1 to all saving throws) and the guardian's ring (+2 AC Bonus, +2 to all saving throws).<br>
-An improved monk robe (+2 AC, +2 saving throws, Immune to level drain and Regenerate 1HP every 6 seconds. True sight once day) <em>may</em> be added in one particular circumstances.
+An improved monk robe (+2 AC, +2 saving throws, Immune to level drain and Regenerate 1 HP every 6 seconds. True sight once day) *may* be added in one particular circumstances.
 
 **Special bonuses**
 
-Strength, Hit points and experience points <em>may</em> be gained in one particular circumstance.
+Strength, Hit points and experience points *may* be gained in one particular circumstance.
 
-** Notes on flirting with Kiara and enabling her battle script**
+**Notes on flirting with Kiara and enabling her battle script**
 
 <strong>&#9755;</strong> Talk to her to enable her battle script or flirt with her:
 - Enable: "*Kiara, time to show us your fighting skills.*"
@@ -392,12 +282,12 @@ As of v2.0.0, the installer offers two main sub-components, letting the players 
 Tougher fights optional components increase a few encounters difficulties.
 
 :warning: DO NOT INSTALL THEM IF YOU ARE NOT FAMILIAR WITH THE TACTICS MOD AND THE LIKE. 
-			
+
 ## 
 
 **[0-1] Kiara-Zaiya for BG2** (Main component)
-&nbsp;&nbsp;&nbsp;**[0]** Kiara-Zaiya for BG2 with vanilla soundsets<br>
-&nbsp;&nbsp;&nbsp;**[1]** Kiara-Zaiya for BG2 with custom soundsets (English only)<br>
+&nbsp;&nbsp;&nbsp;**[0]** Kiara-Zaiya for BG2 with vanilla sound sets<br>
+&nbsp;&nbsp;&nbsp;**[1]** Kiara-Zaiya for BG2 with custom sound sets (English only)<br>
 
 &#10173; This is the main component that adds Kiara and Zaiya to the game.
 
@@ -430,7 +320,7 @@ This option was developed in the spirit of Ascension and Tactics.<br>
 
 ## 
 
-**[5] Revised Suldalanessar<**
+**[5] Revised Suldalanessar**
 
 &#10173; This optional component makes Suldalanessar Demon tougher.
 
@@ -503,6 +393,7 @@ A: Yes. Though, she will be extremely hard to get. Only those who search Amn tho
 Editing, proofreading, ideas, website construction, portrait editing (including sending his own for Amaralis), voicing (well Amaralis again), testing..: I can't thank you enough for helping me out on this MOD. What can I say?
 
 - <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).
+- <a href="https://www.baldursgateworld.fr">La Couronne de Cuivre</a> team ('*The Copper Coronet*') for having hosted the mod (<a href="https://www.baldursgateworld.fr/lacouronne/la-zone-de-telechargement/24005-mods-traduits-personnage-non-joueur-kiara-zaiya-v1-62-a.html">thread</a>) when it was not actively maintained.
 - Deprecated link: <a href="http://forums.fwstudios.net/">FWS</a> for hosting this project when the mod was at the early development stage. I never quite found the time to thank the webmaster! Thanks Neil Sharp for first opening the forum.
 - Mod's romance and plot improvement: Seifer and Jesara. I can't stress how important their help has been in improving both the romance but also the general plot. It led to the complete rewriting of 10 love talks, revisiting the entire romance (including some partial rewriting and merging) and the creation of 8 new dialogs with the PC whether in romance or not.
 - New dialogs: I'd like to thank Bri (Brianna) for her invaluable contribution towards this mod, mainly the new erotic stories and the Cernd-Zaiya short romance.
@@ -545,4 +436,131 @@ I wouldn't have even started modding without it. So, a BIG thank to Wes.
 ###### All mod content is &copy;Alan M.C., Steven D Andrews (Seifer) and Jesara.
 ###### Baldur's Gate II: Shadows of Amn and Baldur's Gate II: Throne of Bhaal &copy; TSR, Inc. The BioWare Infinity Engine is &copy; BioWare Corp. All other trademarks and copyrights are property of their respective owners.
 ###### This mod was created to be freely enjoyed by all Baldur's Gate II players, and its content is free of rights. However, it should not be sold, published, compiled or redistributed in any form without the consent of its authors.<br>
+<div align="right"><a href="#top">Back to top</a></div>
+
+
+<hr>
+
+
+## <a name="versions" id="versions"></a>Version History
+
+##### Version 2.0.0 &nbsp;(October 26, 2021)
+
+- Added *kiara-zaiya.ini* metadata file (including dynamic installation order syntax and global `LABELS`) to support AL|EN's "Project Infinity".
+- Renamed *Setup-Kiara-Zaiya.tp2* -> *kiara-zaiya.tp2* and moved it into top mod folder to support AL|EN's "Project Infinity".
+- Replaced `AUTHOR` keyword with `SUPPORT`.
+- Added Immutability concept.
+- Replaced `REQUIRE_FILE` condition with `REQUIRE_PREDICATE` to avoid installing the mod in inaccurate games.
+- Added components `DESIGNATED` numbers.
+- Externalized tp2 code into specific components *.tpa* libraries for more comfortable readability and maintenance.
+- Commented code as much as possible.
+- Grouped custom and vanilla sound sets into two main `SUBCOMPONENTS`.
+- Added native EE and EET compatibility (thanks Austin and Gwendolyne!):
+    - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
+    - Added chapters continuity for EET games.
+    - Added `ADD_JOURNAL` entries.
+    - Rewrote sound sets installation procedure to use WeiDU's built-in `HANDLE_AUDIO` function, and converted music file to .acm.
+    - Provided accurate sized NPCs portraits for EE games.
+- Updated outdated Detectable Spells v2.3 with less intrusive v4.0.1 that does not overwrite files any more; and does not install it if it has been already installed.
+- Included all BWP Fixpack fixes:
+    - Lollorian's patched "*ar0807.are*" (Crypt) instead of overwriting it.
+    - <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-49#entry587224">micbaldur's Zaiya epilogue fix</a>: fixed a typo in "*zai6200.baf*" causing one of Zaiya's epilogues not to show up.
+    - *The Divine Sword* (amaswd.itm): Nightfarer's item description fix.
+    - Lollorian's patched Revised Suldanessalar: patched "*ar2807.are*", "*uddeath.bcs*", "*demsuc.bcs*", "*suscene1.baf*" and "*suscene3.baf*" instead of overwriting them.
+    - Fixed Ninja-To +1 wrong immunity to poison assignments: moved them from melee header to global effects.
+    - Gwendolyne's fixes for better '*Revised Suldalanessar*' component compatibility: Replaced `ALTER_AREA_ACTOR` function with old school coding to insure compatibility with oBG2 (actor's name is Nizidramanii'yt in oBG2 and Black Dragon in EE games); used REGEXP in `DECOMPILE_AND_PATCH` commands to insure compatibility with EE games.
+- Removed action, trigger and spell .ids files overwriting and patching as ToB has been set as a prerequisite.
+- Removed *pdialog.2da* appending for BG2 without ToB games (not supported).
+- *kzninja.baf*: fixed typos.
+- Rewrote .bcs appending process (originally coded with so bad practice).
+- Added *Continue()* action when appending are .bcs files with `EXTEND_TOP` command.
+- Spells installation: removed useless `SAY NAME2` patches.
+- *dialogs.tra* files: modified Lovetalks cutscenes entry to avoid duplicated strrefs entries with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function.
+- <ins>Bracers: protectors</ins> (kzbrac1.itm): Added missing restriction flags (only usable by monks).
+- <ins>The Divine Sword</ins> (amaswd.itm):
+    - Hard-coded general name and description.
+    - Added missing Beast master kits restriction flags.
+    - Fixed wrong Immunity to Divination spells duration (restored right 1 hour duration: 300. Was one day: 7200!).
+- Added EE and ToBEx *Toggle critical hit aversion* item flag (BIT25) whenever relevant.
+- Fixed items classes and kits restriction flags, and appended tooltip.2da whenever relevant.
+- Fixed items descriptions.
+- Restored items usability restriction flags in descriptions for original games and automatically removed them for EE games with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function.
+- Hard-coded general items names and description whenever relevant.
+- Integrated custom sound sets in the mod package.
+- Added foreign languages WeiDU prompts when available.
+- Added full Russian translation (earlier some lines remained in English, updated by Arcanecoast Team).
+- Proofread English tra files and updated French translation (Gwendolyne).
+- TRAIfied last missing tp2 strrefs.
+- Re-formated, updated and renamed readme file to "*kiara-zaiya-readme-english.html*", then moved it into new :file_folder: "*readme*" folder.
+- Removed useless :file_folder: "*backup*" folder.
+- Reorganized mod architecture tree: created folders to sort files according to their types.
+- Lower cased files.
+- Included Linux and mac OS versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
+- Updated OggDec to v1.9.7 and added sox v14.4.1 for mac.
+- Added archive libiconv-1.9.2-1-src.7z with iconv license info.
+- Updated WeiDU installer to v247.
+- Uploaded mod to official Spellhold Studios GitHub mirror account.
+
+## 
+
+##### Version 1.6.2 &nbsp;(December 12, 2010)
+
+- Used a normal version identification.
+- Converted all bcs to baf, allowing the direct use of text references in the scripts and facilitating maintenance.
+- Reworked tp2 to compile them instead of copying the bcs.
+- Exploited the music variable in Kiara.baf directly (using `EVALUATE_BUFFER` when compiling).
+- Fixed the romance music in ToB (couldn't be played as the song number was not properly set).
+- Duplicated sound set fix patch scripts, for normal or custom sound sets.
+- Included sound set in CRE file (dialog fix not required now, although still available).
+- Included <a href="http://www.shsforums.net/topic/46469-bwp-and-mod-bugs-not-yet-fixed/?p=501418">Hoppy's suggested fixes for the Amaralis group in Small Teeth Pass</a> (Morticia, ...).
+- Replaced `Dead("Myself")` and `Dead("Player1")` with `StateCheck(...,STATE_REALLY_DEAD)` in many scripts (generalisation of Lollorian's work).
+- Fixed many warning in scripts, hopefully improving Kiara's fighting skills as well as opponents' and also a few cutscenes.
+- Updated WeiDU installer to v224.
+
+## 
+
+##### Version 1.6.1 &nbsp;(April 25, 2010)
+
+- Moved *Setup-Kiara-Zaiya.tp2* into the mod folder.
+- Added `VERSION` flag.
+- Changed to `README` command.
+- Fixed text conflicts between the two main tra files causing Kiara leaving dialog to use several component names instead of the proper line.
+- Fixed typo causing the absence of a dialog line.
+- Sulda/KZ#Qilkw.BAF,KZNINJA.BAF and WU-JE/KZJAO.BAF: <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483485">Fixed `Myself` and `!Dead(Myself)`</a>.
+- <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-10#entry483525">Fixed Sulda/KZ#DMLRD.BAF</a>.
+- Fixed several warnings during installation.
+- Added French, Spanish, German and Russian translations.
+- TRAIfied dialogs and TP2 files for hardcoded English strings.
+- Updated WeiDU installer to v215.
+
+## 
+
+##### Version 1.6 &nbsp;(January 12, 2010)
+
+- Added Russian translation.
+
+## 
+
+##### Version 1.5 &nbsp;(September 11, 2009)
+
+- Added German translation.
+
+## 
+
+##### Version 1.4 &nbsp;(June 14, 2009)
+
+- Added French and Spanish translations.
+- Fixed installation bugs.
+
+## 
+
+##### Version 1.3 &nbsp;(January 04, 2004)
+
+- Unknown.
+
+## 
+
+##### Version 1 &nbsp;(Unknown)
+
+- Initial release.
 <div align="right"><a href="#top">Back to top</a></div>
