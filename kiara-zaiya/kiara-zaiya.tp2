@@ -6,7 +6,7 @@ ASK_EVERY_COMPONENT
 
 // Isaya: version information removed from the tra files and set here (using a new WeiDU feature)
 // Version of the mod, appearing in the WeiDU.log
-VERSION ~v2.0.0~
+VERSION ~v2.0.1~
 
 README ~kiara-zaiya/readme/kiara_zaiya-readme-english.html~
 

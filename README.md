@@ -444,6 +444,12 @@ I wouldn't have even started modding without it. So, a BIG thank to Wes.
 
 ## <a name="versions" id="versions"></a>Version History
 
+##### Version 2.0.1 &nbsp;(November 1, 2021)
+
+- Fixed incorrectly numbered references in English Kiara custom sound set.
+
+## 
+
 ##### Version 2.0.0 &nbsp;(October 26, 2021)
 
 - Added *kiara-zaiya.ini* metadata file (including dynamic installation order syntax and global `LABELS`) to support AL|EN's "Project Infinity".
