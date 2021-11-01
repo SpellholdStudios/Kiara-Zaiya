@@ -446,7 +446,7 @@ I wouldn't have even started modding without it. So, a BIG thank to Wes.
 
 ##### Version 2.0.1 &nbsp;(November 1, 2021)
 
-- Fixed incorrectly numbered references in English Kiara custom sound set.
+- Fixed incorrectly numbered references in English Kiara and Zaiya custom sound sets.
 
 ## 
 
